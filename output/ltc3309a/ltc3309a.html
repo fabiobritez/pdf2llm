@@ -1,0 +1,6281 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+ </head>
+ <body>
+  <div class="page" data-page-id="0">
+   <h1>
+    5V, 6A Synchronous Step-Down Silent Switcher in 2mm x 2mm LQFN
+   </h1>
+   <h2>
+    FEATURES
+   </h2>
+   <ul style="list-style-type: none">
+    <li>
+     ■ Pin Compatible with LTC3307(3A) and LTC3308(4A)
+    </li>
+    <li>
+     ■ High Efficiency: 8mΩ NMOS, 31mΩ PMOS
+    </li>
+    <li>
+     ■ Programmable Frequency 1MHz to 3MHz
+     <ul style="list-style-type: none">
+      <li>
+       ■ Tiny Inductor and Capacitors
+      </li>
+     </ul>
+    </li>
+    <li>
+     ■ Peak Current Mode Control
+     <ul style="list-style-type: none">
+      <li>
+       ■ 22ns Minimum On-Time
+      </li>
+      <li>
+       ■ Wide Bandwidth, Fast Transient Response
+      </li>
+     </ul>
+    </li>
+    <li>
+     ■ Silent Switcher® Architecture
+     <ul style="list-style-type: none">
+      <li>
+       ■ Ultralow EMI Emissions
+      </li>
+     </ul>
+    </li>
+    <li>
+     ■ Low Ripple Burst Mode® Operation with
+     <math>
+      I_Q
+     </math>
+     of 40μA
+    </li>
+    <li>
+     ■ Safely Tolerates Inductor Saturation in Overload
+    </li>
+    <li>
+     ■
+     <math>
+      V_{IN}
+     </math>
+     Range: 2.25V to 5.5V
+    </li>
+    <li>
+     ■
+     <math>
+      V_{OUT}
+     </math>
+     Range: 0.5V to
+     <math>
+      V_{IN}
+     </math>
+    </li>
+    <li>
+     ■
+     <math>
+      V_{OUT}
+     </math>
+     Accuracy:
+     <math>
+      \pm 1\%
+     </math>
+     Over Temperature Range
+    </li>
+    <li>
+     ■ Precision 400mV Enable Threshold, 1μA in Shutdown
+    </li>
+    <li>
+     ■ Power Good, Internal Compensation and Soft Start
+    </li>
+    <li>
+     ■ Thermally Enhanced 2mm × 2mm LQFN Package
+    </li>
+    <li>
+     ■ AEC-Q100 Qualified for Automotive Applications
+    </li>
+   </ul>
+   <h2>
+    DESCRIPTION
+   </h2>
+   <p>
+    The LTC®3309A is a very small, high efficiency, low noise, monolithic synchronous 6A step-down DC/DC converter operating from a 2.25V to 5.5V input supply. Using constant frequency, peak current mode control at switching frequencies 1MHz to 3MHz and minimum on-time as low as 22ns, this regulator achieves fast transient response with small external components. Silent Switcher architecture minimizes EMI emissions.
+   </p>
+   <p>
+    The LTC3309A operates in forced continuous or pulse skip mode for low noise, or the low-ripple Burst Mode operation for high efficiency at light loads, ideal for battery-powered systems. The IC regulates output voltages as low as 500mV. Other features include output overvoltage protection, short-circuit protection, thermal shutdown, clock synchronization, and up to 100% duty cycle operation for low dropout. The device is available in a low profile 12-lead 2mm × 2mm × 0.74mm LQFN package with exposed pad for low thermal resistance.
+   </p>
+   <p>
+    For applications that require a faster power on, the LTC3309A-7 has a reduced power on and soft-start time.
+   </p>
+   <p>
+    <small>
+     All registered trademarks and trademarks are the property of their respective owners.
+    </small>
+   </p>
+   <h2>
+    APPLICATIONS
+   </h2>
+   <ul style="list-style-type: none">
+    <li>
+     ■ Optical Networking, Servers, Telecom
+    </li>
+    <li>
+     ■ Automotive, Industrial, Communications
+    </li>
+    <li>
+     ■ Distributed DC Power Systems (POL)
+    </li>
+    <li>
+     ■ FPGA, ASIC, μP Core Supplies
+    </li>
+    <li>
+     ■ Battery Operated Systems
+    </li>
+   </ul>
+   <h2>
+    TYPICAL APPLICATION
+   </h2>
+   <p>
+    High Efficiency, 2MHz, 1.2V 6A Step-Down Converter
+   </p>
+   <img alt="Circuit diagram of a high efficiency, 2MHz, 1.2V 6A step-down converter using the LTC3309A. The input voltage is 2.5V to 5.5V. The output is 1.2V at 6A. The circuit includes a 220nH inductor, a 33μF capacitor, and a 10μF capacitor. The LTC3309A is shown in a 12-lead LQFN package. The diagram also shows the connection to a 3309A TA01a board." src="24029b85683e6c5b14e96022cd9b6ff6_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Circuit diagram of a high efficiency, 2MHz, 1.2V 6A step-down converter using the LTC3309A. The input voltage is 2.5V to 5.5V. The output is 1.2V at 6A. The circuit includes a 220nH inductor, a 33μF capacitor, and a 10μF capacitor. The LTC3309A is shown in a 12-lead LQFN package. The diagram also shows the connection to a 3309A TA01a board.
+    </div>
+   </div>
+   <p>
+    Efficiency and Power Loss in Burst Mode Operation
+   </p>
+   <img alt="Graph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for the LTC3309A in Burst Mode Operation. The efficiency curve (red) starts at approximately 80% at 0.001A and rises to about 90% at 1A. The power loss curve (blue) starts at approximately 0.001W at 0.001A and rises to about 0.5W at 1A. The graph is labeled with V_IN = 3.3V, V_OUT = 1.2V, f_SW = 2 MHz, and COILCRAFT XEL3515-221. The x-axis is Load Current (A) on a log scale from 0.001 to 6. The left y-axis is Efficiency (%) from 0 to 100. The right y-axis is Power Loss (W) on a log scale from 0.0001 to 10." src="207c4bf0dce180461dfd17ac04bb84bc_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Graph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for the LTC3309A in Burst Mode Operation. The efficiency curve (red) starts at approximately 80% at 0.001A and rises to about 90% at 1A. The power loss curve (blue) starts at approximately 0.001W at 0.001A and rises to about 0.5W at 1A. The graph is labeled with V_IN = 3.3V, V_OUT = 1.2V, f_SW = 2 MHz, and COILCRAFT XEL3515-221. The x-axis is Load Current (A) on a log scale from 0.001 to 6. The left y-axis is Efficiency (%) from 0 to 100. The right y-axis is Power Loss (W) on a log scale from 0.0001 to 10.
+    </div>
+   </div>
+   <p>
+    3309A TA01b
+   </p>
+   <p>
+    Rev. B
+   </p>
+  </div>
+  <div class="page" data-page-id="1">
+   <h2>
+    LTC3309A
+   </h2>
+   <h2>
+    ABSOLUTE MAXIMUM RATINGS
+   </h2>
+   <p>
+    (Note 1)
+   </p>
+   <table>
+    <tr>
+     <td>
+      <math>
+       V_{IN}
+      </math>
+      .....
+     </td>
+     <td>
+      –0.3V to 6V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      EN .....
+     </td>
+     <td>
+      –0.3V to Lesser of
+      <math>
+       (V_{IN} + 0.3V)
+      </math>
+      or 6V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      FB .....
+     </td>
+     <td>
+      –0.3V to Lesser of
+      <math>
+       (V_{IN} + 0.3V)
+      </math>
+      or 6V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      MODE/SYNC .....
+     </td>
+     <td>
+      –0.3V to Lesser of
+      <math>
+       (V_{IN} + 0.3V)
+      </math>
+      or 6V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      RT .....
+     </td>
+     <td>
+      –0.3V to Lesser of
+      <math>
+       (V_{IN} + 0.3V)
+      </math>
+      or 6V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      AGND to PGND .....
+     </td>
+     <td>
+      –0.3V to +0.3V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      PGOOD .....
+     </td>
+     <td>
+      –0.3V to 6V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <math>
+       I_{PGOOD}
+      </math>
+      .....
+     </td>
+     <td>
+      5mA
+     </td>
+    </tr>
+   </table>
+   <p>
+    Operating Junction Temperature Range (Note 2):
+   </p>
+   <table>
+    <tr>
+     <td>
+      LTC3309AE .....
+     </td>
+     <td>
+      –40°C to +125°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AI .....
+     </td>
+     <td>
+      –40°C to +125°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AJ .....
+     </td>
+     <td>
+      –40°C to +150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AH .....
+     </td>
+     <td>
+      –40°C to +150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AMP .....
+     </td>
+     <td>
+      –55°C to +150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AJ-7 .....
+     </td>
+     <td>
+      –40°C to +150°C
+     </td>
+    </tr>
+   </table>
+   <p>
+    Storage Temperature Range ..... –65°C to +150°C
+   </p>
+   <p>
+    Maximum Reflow (Package Body) Temperature ... 260°C
+   </p>
+   <h2>
+    PIN CONFIGURATION
+   </h2>
+   <img alt="Pin configuration diagram for the LTC3309A in LQFN 12-lead package. The diagram shows a top view of the package with pins numbered 1 through 13. Pin 13 is the exposed pad (PGND). The pins are labeled as follows: Pin 1: AGND, Pin 2: EN, Pin 3: VIN, Pin 4: PGND, Pin 5: SW, Pin 6: SW, Pin 7: PGND, Pin 8: VIN, Pin 9: MODE/SYNC, Pin 10: RT, Pin 11: PGND, Pin 12: AGND. The package dimensions are 2mm x 2mm x 0.74mm. The maximum junction temperature is 150°C, the junction-to-lead temperature is 51°C/W, the junction-to-body temperature is 12°C/W, the junction-to-case bottom temperature is 8.6°C/W, the junction-to-case top temperature is 73°C/W, and the junction-to-junction temperature is 0.6°C/W. The exposed pad (Pin 13) is PGND and must be soldered to PCB." src="22b2fd4b8672ad8b02cf6cd4de5809cd_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     TOP VIEW
+    </p>
+    <p>
+     12 11 10 RT
+    </p>
+    <p>
+     13 PGND
+    </p>
+    <p>
+     9 MODE/SYNC
+    </p>
+    <p>
+     8 VIN
+    </p>
+    <p>
+     7 PGND
+    </p>
+    <p>
+     6 SW SW
+    </p>
+    <p>
+     5 PGND
+    </p>
+    <p>
+     4 PGND
+    </p>
+    <p>
+     3 VIN
+    </p>
+    <p>
+     2 EN
+    </p>
+    <p>
+     1 AGND
+    </p>
+    <p>
+     LQFN PACKAGE
+     <br/>
+     12-LEAD (2mm × 2mm × 0.74mm)
+    </p>
+    <p>
+     <math>
+      T_{JMAX} = 150^{\circ}C
+     </math>
+     ,
+     <math>
+      \theta_{JA} = 51^{\circ}C/W
+     </math>
+     ,
+     <math>
+      \theta_{JB} = 12^{\circ}C/W
+     </math>
+     ,
+     <br/>
+     <math>
+      \theta_{JCBOTTOM} = 8.6^{\circ}C/W
+     </math>
+     ,
+     <math>
+      \theta_{JCTOP} = 73^{\circ}C/W
+     </math>
+     ,
+     <math>
+      \Psi_{JT} = 0.6^{\circ}C/W
+     </math>
+     <br/>
+     <math>
+      \theta
+     </math>
+     AND
+     <math>
+      \Psi
+     </math>
+     VALUES DETERMINED PER JESD51-7 ON A JEDEC 2S2P PCB,
+     <br/>
+     EXPOSED PAD (PIN 13) IS PGND, MUST BE SOLDERED TO PCB
+    </p>
+    <div class="img-alt">
+     Pin configuration diagram for the LTC3309A in LQFN 12-lead package. The diagram shows a top view of the package with pins numbered 1 through 13. Pin 13 is the exposed pad (PGND). The pins are labeled as follows: Pin 1: AGND, Pin 2: EN, Pin 3: VIN, Pin 4: PGND, Pin 5: SW, Pin 6: SW, Pin 7: PGND, Pin 8: VIN, Pin 9: MODE/SYNC, Pin 10: RT, Pin 11: PGND, Pin 12: AGND. The package dimensions are 2mm x 2mm x 0.74mm. The maximum junction temperature is 150°C, the junction-to-lead temperature is 51°C/W, the junction-to-body temperature is 12°C/W, the junction-to-case bottom temperature is 8.6°C/W, the junction-to-case top temperature is 73°C/W, and the junction-to-junction temperature is 0.6°C/W. The exposed pad (Pin 13) is PGND and must be soldered to PCB.
+    </div>
+   </div>
+   <h2>
+    ORDER INFORMATION
+   </h2>
+   <table>
+    <tr>
+     <th>
+      TAPE AND REEL
+     </th>
+     <th>
+      TAPE AND REEL MINI
+     </th>
+     <th>
+      PART MARKING*
+     </th>
+     <th>
+      PACKAGE TYPE
+     </th>
+     <th>
+      TEMPERATURE RANGE
+     </th>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AEV#TRPBF
+     </td>
+     <td>
+      LTC3309AEV#TRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td rowspan="6">
+      LQFN
+      <br/>
+      (Laminate Package with QFN Footprint)
+     </td>
+     <td>
+      –40°C to 125°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AIV#TRPBF
+     </td>
+     <td>
+      LTC3309AIV#TRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –40°C to 125°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AJV#TRPBF
+     </td>
+     <td>
+      LTC3309AJV#TRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AHV#TRPBF
+     </td>
+     <td>
+      LTC3309AHV#TRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AMPV#TRPBF
+     </td>
+     <td>
+      LTC3309AMPV#TRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –55°C to 150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AJV-7#TRPBF
+     </td>
+     <td>
+      LTC3309AJV-7#TRMPBF
+     </td>
+     <td>
+      LHQH
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+   </table>
+   <h2>
+    AUTOMOTIVE PRODUCTS**
+   </h2>
+   <table>
+    <tr>
+     <td>
+      LTC3309AEV#WTRPBF
+     </td>
+     <td>
+      LTC3309AEV#WTRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td rowspan="6">
+      LQFN
+      <br/>
+      (Laminate Package with QFN Footprint)
+     </td>
+     <td>
+      –40°C to 125°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AIV#WTRPBF
+     </td>
+     <td>
+      LTC3309AIV#WTRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –40°C to 125°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AJV#WTRPBF
+     </td>
+     <td>
+      LTC3309AJV#WTRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AHV#WTRPBF
+     </td>
+     <td>
+      LTC3309AHV#WTRMPBF
+     </td>
+     <td>
+      LHFP
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309AJV-7#WTRPBF
+     </td>
+     <td>
+      LTC3309AJV-7#WTRMPBF
+     </td>
+     <td>
+      LHQH
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      –40°C to 150°C
+     </td>
+    </tr>
+   </table>
+   <p>
+    Contact the factory for parts specified with wider operating temperature ranges. *The temperature grade is identified by a label on the shipping container.
+   </p>
+   <p>
+    <a href="#">Tape and reel specifications</a>
+    . Some packages are available in 500 unit reels through designated sales channels with #TRMPBF suffix.
+   </p>
+   <p>
+    **Versions of this part are available with controlled manufacturing to support the quality and reliability requirements of automotive applications. These models are designated with a #W suffix. Only the automotive grade products shown are available for use in automotive applications. Contact your local Analog Devices account representative for specific product ordering information and to obtain the specific Automotive Reliability reports for these models.
+   </p>
+  </div>
+  <div class="page" data-page-id="2">
+   <h2>
+    <p>
+     <b>
+      ELECTRICAL CHARACTERISTICS
+     </b>
+     The ● denotes the specifications which apply over the specified operating junction temperature range (Note 2), otherwise specifications are at T
+     <sub>
+      A
+     </sub>
+     = 25°C; V
+     <sub>
+      IN
+     </sub>
+     = 3.3V, V
+     <sub>
+      EN
+     </sub>
+     = V
+     <sub>
+      IN
+     </sub>
+     , unless otherwise noted.
+    </p>
+   </h2>
+   <table>
+    <tr>
+     <th>
+      PARAMETER
+     </th>
+     <th>
+      CONDITIONS
+     </th>
+     <th>
+     </th>
+     <th>
+      MIN
+     </th>
+     <th>
+      TYP
+     </th>
+     <th>
+      MAX
+     </th>
+     <th>
+      UNITS
+     </th>
+    </tr>
+    <tr>
+     <td colspan="7">
+      <b>
+       Input Supply
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Operating Supply Voltage (V
+      <sub>
+       IN
+      </sub>
+      )
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      2.25
+     </td>
+     <td>
+     </td>
+     <td>
+      5.5
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      Undervoltage Lockout
+     </td>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      Rising
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      2.0
+     </td>
+     <td>
+      2.1
+     </td>
+     <td>
+      2.2
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      Undervoltage Lockout Hysteresis
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      150
+     </td>
+     <td>
+     </td>
+     <td>
+      mV
+     </td>
+    </tr>
+    <tr>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      Quiescent Current in Shutdown
+     </td>
+     <td>
+      V
+      <sub>
+       EN
+      </sub>
+      = 0.1V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      2
+     </td>
+     <td>
+      μA
+     </td>
+    </tr>
+    <tr>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      Quiescent Current (Note 3)
+     </td>
+     <td>
+      Burst Mode Operation, Sleeping
+      <br/>
+      All Modes, Not Sleeping
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      40
+      <br/>
+      1.2
+     </td>
+     <td>
+      60
+      <br/>
+      2
+     </td>
+     <td>
+      μA
+      <br/>
+      mA
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Enable Threshold
+     </td>
+     <td>
+      V
+      <sub>
+       EN
+      </sub>
+      Rising
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      0.375
+     </td>
+     <td>
+      0.4
+     </td>
+     <td>
+      0.425
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Enable Threshold Hysteresis
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      50
+     </td>
+     <td>
+     </td>
+     <td>
+      mV
+     </td>
+    </tr>
+    <tr>
+     <td>
+      EN Pin Leakage
+     </td>
+     <td>
+      V
+      <sub>
+       EN
+      </sub>
+      = 0.5V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      ±20
+     </td>
+     <td>
+      nA
+     </td>
+    </tr>
+    <tr>
+     <td colspan="7">
+      <b>
+       Voltage Regulation
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Regulated Feedback Voltage (V
+      <sub>
+       FB
+      </sub>
+      )
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      0.495
+     </td>
+     <td>
+      0.5
+     </td>
+     <td>
+      0.505
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Feedback Voltage Line Regulation
+     </td>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      = 2.25V to 5.5V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      0.015
+     </td>
+     <td>
+      0.05
+     </td>
+     <td>
+      %/V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      FB Pin Input Current
+     </td>
+     <td>
+      V
+      <sub>
+       FB
+      </sub>
+      = 0.5V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      ±20
+     </td>
+     <td>
+      nA
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Minimum On Time (t
+      <sub>
+       ON,min
+      </sub>
+      )
+     </td>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      = 5.5V
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+     </td>
+     <td>
+      22
+     </td>
+     <td>
+      42
+     </td>
+     <td>
+      ns
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Maximum Duty Cycle
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      100
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      %
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Top Switch ON-Resistance
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      31
+     </td>
+     <td>
+     </td>
+     <td>
+      mΩ
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Bottom Switch ON-Resistance
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      8
+     </td>
+     <td>
+     </td>
+     <td>
+      mΩ
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Top Switch Current Limit (I
+      <sub>
+       PEAKMAX
+      </sub>
+      )
+     </td>
+     <td>
+      V
+      <sub>
+       OUT
+      </sub>
+      /V
+      <sub>
+       IN
+      </sub>
+      ≤ 0.2
+     </td>
+     <td>
+     </td>
+     <td>
+      9.1
+     </td>
+     <td>
+      9.6
+     </td>
+     <td>
+      10.1
+     </td>
+     <td>
+      A
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Bottom Switch Current Limit (I
+      <sub>
+       VALLEYMAX
+      </sub>
+      )
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      7.8
+     </td>
+     <td>
+     </td>
+     <td>
+      A
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Bottom Switch Reverse Current Limit (I
+      <sub>
+       REVMAX
+      </sub>
+      )
+     </td>
+     <td>
+      Forced Continuous Mode
+     </td>
+     <td>
+     </td>
+     <td>
+      -1.5
+     </td>
+     <td>
+      -3.0
+     </td>
+     <td>
+      -4.5
+     </td>
+     <td>
+      A
+     </td>
+    </tr>
+    <tr>
+     <td>
+      SW Leakage Current
+     </td>
+     <td>
+      V
+      <sub>
+       EN
+      </sub>
+      = 0.1V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      ±100
+     </td>
+     <td>
+     </td>
+     <td>
+      nA
+     </td>
+    </tr>
+    <tr>
+     <td colspan="7">
+      <b>
+       Power Good and Soft-Start
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      PGOOD Rising Threshold
+     </td>
+     <td>
+      As a Percentage of the Regulated V
+      <sub>
+       OUT
+      </sub>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      97
+     </td>
+     <td>
+      98
+     </td>
+     <td>
+      99
+     </td>
+     <td>
+      %
+     </td>
+    </tr>
+    <tr>
+     <td>
+      PGOOD Hysteresis
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      0.7
+     </td>
+     <td>
+      1.2
+     </td>
+     <td>
+      1.7
+     </td>
+     <td>
+      %
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Overvoltage Rising Threshold
+     </td>
+     <td>
+      As a Percentage of the Regulated V
+      <sub>
+       OUT
+      </sub>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      107
+     </td>
+     <td>
+      110
+     </td>
+     <td>
+      114
+     </td>
+     <td>
+      %
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Overvoltage Hysteresis
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      2.2
+     </td>
+     <td>
+      3.5
+     </td>
+     <td>
+      %
+     </td>
+    </tr>
+    <tr>
+     <td>
+      PGOOD Delay
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      120
+     </td>
+     <td>
+     </td>
+     <td>
+      μs
+     </td>
+    </tr>
+    <tr>
+     <td>
+      PGOOD Pull Down Resistance
+     </td>
+     <td>
+      V
+      <sub>
+       PGOOD
+      </sub>
+      = 0.1V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      10
+     </td>
+     <td>
+      20
+     </td>
+     <td>
+      Ω
+     </td>
+    </tr>
+    <tr>
+     <td>
+      PGOOD Leakage Current
+     </td>
+     <td>
+      V
+      <sub>
+       PGOOD
+      </sub>
+      = 5.5V
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      20
+     </td>
+     <td>
+      nA
+     </td>
+    </tr>
+    <tr>
+     <td rowspan="2">
+      Soft-Start Duration
+     </td>
+     <td>
+      LTC3309A
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      0.25
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      3
+     </td>
+     <td>
+      ms
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3309A-7
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      0.3
+     </td>
+     <td>
+      0.5
+     </td>
+     <td>
+      0.7
+     </td>
+     <td>
+      ms
+     </td>
+    </tr>
+    <tr>
+     <td colspan="7">
+      <b>
+       Oscillator and MODE/SYNC
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Default Oscillator Frequency
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      1.9
+     </td>
+     <td>
+      2
+     </td>
+     <td>
+      2.1
+     </td>
+     <td>
+      MHz
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Oscillator Frequency with R
+      <sub>
+       T
+      </sub>
+      = 34.8kΩ
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      1.9
+     </td>
+     <td>
+      2
+     </td>
+     <td>
+      2.1
+     </td>
+     <td>
+      MHz
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Frequency Range
+     </td>
+     <td>
+      R
+      <sub>
+       T
+      </sub>
+      Programming and Synchronization
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+     </td>
+     <td>
+      3
+     </td>
+     <td>
+      MHz
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Minimum SYNC High or Low Pulse Width
+     </td>
+     <td>
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      40
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      ns
+     </td>
+    </tr>
+    <tr>
+     <td rowspan="2">
+      SYNC Pulse Voltage Levels
+     </td>
+     <td>
+      Level High
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      1.2
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Level Low
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      0.4
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      MODE/SYNC No Clock Detect Time
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      10
+     </td>
+     <td>
+     </td>
+     <td>
+      μs
+     </td>
+    </tr>
+    <tr>
+     <td rowspan="3">
+      MODE/SYNC Pin Threshold
+     </td>
+     <td>
+      For Programming Pulse Skip Mode
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      0.1
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      For Programming Forced Continuous Mode
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      1.0
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      - 1.0
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+    <tr>
+     <td>
+      For Programming Burst Mode Operation
+     </td>
+     <td>
+      ●
+     </td>
+     <td>
+      V
+      <sub>
+       IN
+      </sub>
+      - 0.1
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      V
+     </td>
+    </tr>
+   </table>
+  </div>
+  <div class="page" data-page-id="3">
+   <h2>
+    ELECTRICAL CHARACTERISTICS
+   </h2>
+   <p>
+    <b>
+     Note 1:
+    </b>
+    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. Exposure to any Absolute Maximum Rating condition for extended periods may affect device reliability and lifetime.
+   </p>
+   <p>
+    <b>
+     Note 2:
+    </b>
+    The LTC3309A is tested under pulsed load conditions such that
+    <math>
+     T_J \approx T_A
+    </math>
+    . The LTC3309AE is guaranteed to meet specifications from 0°C to 85°C junction temperature. Specifications over the –40°C to 125°C operating junction temperature range are assured by design, characterization, and correlation with statistical process controls. The LTC3309AI is guaranteed over the –40°C to 125°C operating junction temperature range. The LTC3309AJ/LTC3309AJ-7 and LTC3309AH are guaranteed over the –40°C to 150°C operating junction temperature range. The LTC3309AMP is guaranteed over the –55°C to 150°C operating junction temperature range. High junction temperatures degrade operating lifetimes; operating lifetime is derated for junction temperatures above 125°C. Note that the maximum ambient temperature consistent with
+   </p>
+   <p>
+    these specifications is determined by specific operating conditions in conjunction with board layout, the rated package thermal impedance, and other environmental factors. The junction temperature (
+    <math>
+     T_J
+    </math>
+    in °C) is calculated from ambient temperature (
+    <math>
+     T_A
+    </math>
+    in °C) and power dissipation (
+    <math>
+     P_D
+    </math>
+    in Watts) according to the formula:
+   </p>
+   <p>
+    <math display="block">
+     T_J = T_A + (P_D \cdot \theta_{JA}), \text{ where } \theta_{JA} \text{ (in } ^\circ\text{C/W) is the package thermal impedance. See High Temperature Considerations section for more details.}
+    </math>
+   </p>
+   <p>
+    The LTC3309A includes overtemperature protection that protects the device during momentary overload conditions. Junction temperatures will exceed 150°C when overtemperature protection is engaged. Continuous operation above the specified maximum operating junction temperature may impair device reliability.
+   </p>
+   <p>
+    <b>
+     Note 3:
+    </b>
+    Supply current specification does not include switching currents. Actual supply currents will be higher.
+   </p>
+  </div>
+  <div class="page" data-page-id="4">
+   <h2>
+    <p>
+     <b>
+      TYPICAL PERFORMANCE CHARACTERISTICS
+     </b>
+     <math>
+      V_{IN} = 3.3V, T_A = 25^{\circ}C
+     </math>
+     , unless otherwise noted.
+    </p>
+   </h2>
+   <img alt="Feedback Voltage vs. Temperature graph" src="7a3561af571faf036baa93f5f4b1bdb9_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Feedback Voltage
+     </b>
+    </p>
+    <p>
+     Graph showing Feedback Voltage (mV) vs. Temperature (°C). The feedback voltage is relatively stable around 500 mV from -50°C to 75°C, then decreases to approximately 498 mV at 150°C.
+    </p>
+    <div class="img-alt">
+     Feedback Voltage vs. Temperature graph
+    </div>
+   </div>
+   <img alt="Minimum On-Time vs. Input Voltage graph" src="6de7dcb072cef2388026fb0f504084b2_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Minimum On-Time
+     </b>
+    </p>
+    <p>
+     Graph showing Minimum On-Time (ns) vs. Input Voltage (V) for three temperatures: 150°C (dashed red), 25°C (solid green), and -50°C (dashed blue). All curves show a decreasing trend as input voltage increases from 2V to 5.5V.
+    </p>
+    <div class="img-alt">
+     Minimum On-Time vs. Input Voltage graph
+    </div>
+   </div>
+   <img alt="Minimum On-Time vs. Temperature graph" src="b15e3860e0c96ed16ce77f032da6f107_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Minimum On-Time
+     </b>
+    </p>
+    <p>
+     Graph showing Minimum On-Time (ns) vs. Temperature (°C) for three input voltages: 5.5V (solid red), 3.3V (dashed blue), and 2.25V (dashed green). All curves show an increasing trend as temperature increases from -50°C to 150°C.
+    </p>
+    <div class="img-alt">
+     Minimum On-Time vs. Temperature graph
+    </div>
+   </div>
+   <img alt="Switch On Resistance vs. Input Voltage graph" src="6bbc398f520a7bcc5491cab18d3e4cac_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Switch On Resistance
+     </b>
+    </p>
+    <p>
+     Graph showing
+     <math>
+      R_{DS(ON)}
+     </math>
+     (m
+     <math>
+      \Omega
+     </math>
+     ) vs. Input Voltage (V) for PMOS (solid red) and NMOS (dashed blue) switches. Both show a decreasing trend as input voltage increases from 2V to 5.5V.
+    </p>
+    <div class="img-alt">
+     Switch On Resistance vs. Input Voltage graph
+    </div>
+   </div>
+   <img alt="Switch On Resistance vs. Temperature graph" src="6f1efa91fb9b476380af7a35db4f14bf_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Switch On Resistance
+     </b>
+    </p>
+    <p>
+     Graph showing
+     <math>
+      R_{DS(ON)}
+     </math>
+     (m
+     <math>
+      \Omega
+     </math>
+     ) vs. Temperature (°C) for PMOS (solid red) and NMOS (dashed blue) switches at
+     <math>
+      V_{IN} = 3.3V
+     </math>
+     . Both show an increasing trend as temperature increases from -50°C to 150°C.
+    </p>
+    <div class="img-alt">
+     Switch On Resistance vs. Temperature graph
+    </div>
+   </div>
+   <img alt="Default Switching Frequency vs. Input Voltage graph" src="3ef2266eb61ae3929cdae1742c1f526e_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Default Switching Frequency
+     </b>
+    </p>
+    <p>
+     Graph showing Default Frequency (MHz) vs. Input Voltage (V). The frequency increases linearly from approximately 1.96 MHz at 2V to 2.06 MHz at 5.5V.
+    </p>
+    <div class="img-alt">
+     Default Switching Frequency vs. Input Voltage graph
+    </div>
+   </div>
+   <img alt="Default Switching Frequency vs. Temperature graph" src="bc04d002fc79e8a3637b1552ac3361e6_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Default Switching Frequency
+     </b>
+    </p>
+    <p>
+     Graph showing Default Frequency (MHz) vs. Temperature (°C) for three input voltages: 5.5V (solid red), 3.3V (dashed blue), and 2.25V (dashed green). All curves show a slight decreasing trend as temperature increases from -50°C to 150°C.
+    </p>
+    <div class="img-alt">
+     Default Switching Frequency vs. Temperature graph
+    </div>
+   </div>
+   <img alt="Switching Frequency vs. RT graph" src="bec3b1d6f15b643228b0da0a7d47bdbd_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Switching Frequency
+     </b>
+    </p>
+    <p>
+     Graph showing Frequency (MHz) vs.
+     <math>
+      R_T
+     </math>
+     (k
+     <math>
+      \Omega
+     </math>
+     ). The frequency decreases sharply as
+     <math>
+      R_T
+     </math>
+     increases from 20 k
+     <math>
+      \Omega
+     </math>
+     to 75 k
+     <math>
+      \Omega
+     </math>
+     .
+    </p>
+    <div class="img-alt">
+     Switching Frequency vs. RT graph
+    </div>
+   </div>
+   <img alt="RT Switching Frequency vs. Temperature graph" src="1a6d75c94d3fd49936527eadd25e9278_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      <math>
+       R_T
+      </math>
+      Switching Frequency
+     </b>
+    </p>
+    <p>
+     Graph showing Frequency (MHz) vs. Temperature (°C) for three input voltages: 5.5V (solid red), 3.3V (dashed blue), and 2.25V (dashed green) with
+     <math>
+      R_T = 34.8 k\Omega
+     </math>
+     . All curves show a slight decreasing trend as temperature increases from -50°C to 150°C.
+    </p>
+    <div class="img-alt">
+     RT Switching Frequency vs. Temperature graph
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="5">
+   <h2>
+    TYPICAL PERFORMANCE CHARACTERISTICS
+    <small>
+     <math>
+      V_{IN} = 3.3V, T_A = 25^{\circ}C
+     </math>
+     , unless otherwise noted.
+    </small>
+   </h2>
+   <img alt="Graph of Switch Current Limits vs Temperature. PMOS IPEAKMAX increases from ~9.0A to ~10.0A. NMOS IVALLEYMAX decreases from ~7.8A to ~7.5A." src="55d2bfe1c3d04e86df8d7a104d802172_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     Switch Current Limits
+    </h3>
+    <p>
+     <math>
+      V_{OUT}/V_{IN} = 0.2
+     </math>
+    </p>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        PMOS
+        <math>
+         I_{PEAKMAX}
+        </math>
+        (A)
+       </th>
+       <th>
+        NMOS
+        <math>
+         I_{VALLEYMAX}
+        </math>
+        (A)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        9.0
+       </td>
+       <td>
+        7.8
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        9.4
+       </td>
+       <td>
+        7.7
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        9.7
+       </td>
+       <td>
+        7.6
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        9.9
+       </td>
+       <td>
+        7.5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        10.0
+       </td>
+       <td>
+        7.5
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G10
+    </p>
+    <div class="img-alt">
+     Graph of Switch Current Limits vs Temperature. PMOS IPEAKMAX increases from ~9.0A to ~10.0A. NMOS IVALLEYMAX decreases from ~7.8A to ~7.5A.
+    </div>
+   </div>
+   <img alt="Graph of PMOS Current Limit vs Input Voltage. Curves for 150°C (red dashed), 25°C (green solid), and -60°C (blue dashed)." src="46f43cb4ffd47565e7c0ca306d461435_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     PMOS Current Limit
+    </h3>
+    <p>
+     <math>
+      V_{OUT}/V_{IN} = 0.2
+     </math>
+    </p>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        INPUT VOLTAGE (V)
+       </th>
+       <th>
+        150°C (A)
+       </th>
+       <th>
+        25°C (A)
+       </th>
+       <th>
+        -60°C (A)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        2.5
+       </td>
+       <td>
+        5.0
+       </td>
+       <td>
+        7.0
+       </td>
+       <td>
+        8.5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        3.0
+       </td>
+       <td>
+        10.0
+       </td>
+       <td>
+        9.5
+       </td>
+       <td>
+        9.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        4.0
+       </td>
+       <td>
+        9.8
+       </td>
+       <td>
+        9.2
+       </td>
+       <td>
+        8.5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        5.0
+       </td>
+       <td>
+        9.5
+       </td>
+       <td>
+        9.0
+       </td>
+       <td>
+        8.3
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G11
+    </p>
+    <div class="img-alt">
+     Graph of PMOS Current Limit vs Input Voltage. Curves for 150°C (red dashed), 25°C (green solid), and -60°C (blue dashed).
+    </div>
+   </div>
+   <img alt="Graph of PMOS Current Limit vs Duty Cycle. Curves for VIN = 5V (red solid), VIN = 2.5V (blue dashed), and VIN = 3.3V (green dashed)." src="ac99eff233b8fe51d30f499e7413c345_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     PMOS Current Limit
+    </h3>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        DUTY CYCLE (%)
+       </th>
+       <th>
+        VIN = 5V (A)
+       </th>
+       <th>
+        VIN = 2.5V (A)
+       </th>
+       <th>
+        VIN = 3.3V (A)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        10
+       </td>
+       <td>
+        9.2
+       </td>
+       <td>
+        9.5
+       </td>
+       <td>
+        9.5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        9.0
+       </td>
+       <td>
+        9.2
+       </td>
+       <td>
+        9.2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        90
+       </td>
+       <td>
+        7.5
+       </td>
+       <td>
+        7.5
+       </td>
+       <td>
+        7.5
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G12
+    </p>
+    <div class="img-alt">
+     Graph of PMOS Current Limit vs Duty Cycle. Curves for VIN = 5V (red solid), VIN = 2.5V (blue dashed), and VIN = 3.3V (green dashed).
+    </div>
+   </div>
+   <img alt="Graph of VIN Shutdown Current vs Temperature. Current increases exponentially from ~0.8µA to ~2.5µA." src="0ad3f61f997eb05afb341fc46024bf2b_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     VIN Shutdown Current
+    </h3>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        VIN CURRENT (µA)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        0.8
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        0.8
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        0.9
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        1.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        2.5
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G13
+    </p>
+    <div class="img-alt">
+     Graph of VIN Shutdown Current vs Temperature. Current increases exponentially from ~0.8µA to ~2.5µA.
+    </div>
+   </div>
+   <img alt="Graph of VIN Quiescent Current vs Temperature for VIN = 5.5V (red solid), VIN = 3.3V (blue dashed), and VIN = 2.25V (green dashed)." src="e1dda754c2c88a8ad0b968aea4fc0786_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     VIN Quiescent Current, Burst Mode Operation, Sleeping
+    </h3>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        VIN = 5.5V (µA)
+       </th>
+       <th>
+        VIN = 3.3V (µA)
+       </th>
+       <th>
+        VIN = 2.25V (µA)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        38
+       </td>
+       <td>
+        35
+       </td>
+       <td>
+        34
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        40
+       </td>
+       <td>
+        37
+       </td>
+       <td>
+        36
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        43
+       </td>
+       <td>
+        40
+       </td>
+       <td>
+        39
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        48
+       </td>
+       <td>
+        45
+       </td>
+       <td>
+        44
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        62
+       </td>
+       <td>
+        58
+       </td>
+       <td>
+        55
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G14
+    </p>
+    <div class="img-alt">
+     Graph of VIN Quiescent Current vs Temperature for VIN = 5.5V (red solid), VIN = 3.3V (blue dashed), and VIN = 2.25V (green dashed).
+    </div>
+   </div>
+   <img alt="Graph of VIN Quiescent Current vs Temperature for VIN = 5.5V (red solid), VIN = 3.3V (blue dashed), and VIN = 2.25V (green dashed)." src="ed2fa033a401564314cdc32fe9732935_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     VIN Quiescent Current All Modes, Not Sleeping
+    </h3>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        VIN = 5.5V (mA)
+       </th>
+       <th>
+        VIN = 3.3V (mA)
+       </th>
+       <th>
+        VIN = 2.25V (mA)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        1.23
+       </td>
+       <td>
+        1.16
+       </td>
+       <td>
+        1.11
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        1.23
+       </td>
+       <td>
+        1.16
+       </td>
+       <td>
+        1.12
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        1.22
+       </td>
+       <td>
+        1.15
+       </td>
+       <td>
+        1.11
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        1.21
+       </td>
+       <td>
+        1.14
+       </td>
+       <td>
+        1.10
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        1.21
+       </td>
+       <td>
+        1.13
+       </td>
+       <td>
+        1.09
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G15
+    </p>
+    <div class="img-alt">
+     Graph of VIN Quiescent Current vs Temperature for VIN = 5.5V (red solid), VIN = 3.3V (blue dashed), and VIN = 2.25V (green dashed).
+    </div>
+   </div>
+   <img alt="Graph of Switch Leakage Current vs Temperature. PMOS (red solid) and NMOS (blue dashed) both increase exponentially above 100°C." src="80530169c7b6298ce012a85b906caeb3_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     Switch Leakage
+    </h3>
+    <p>
+     <math>
+      V_{IN} = 5.5V
+     </math>
+    </p>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        PMOS (µA)
+       </th>
+       <th>
+        NMOS (µA)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        0.1
+       </td>
+       <td>
+        0.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        0.1
+       </td>
+       <td>
+        0.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        0.2
+       </td>
+       <td>
+        0.2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        0.5
+       </td>
+       <td>
+        0.5
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        2.5
+       </td>
+       <td>
+        5.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G16
+    </p>
+    <div class="img-alt">
+     Graph of Switch Leakage Current vs Temperature. PMOS (red solid) and NMOS (blue dashed) both increase exponentially above 100°C.
+    </div>
+   </div>
+   <img alt="Graph of EN Threshold (mV) vs Temperature. EN RISING is ~400mV, EN FALLING is ~350mV." src="92c6488dfdf125bc1b7bb6a235394652_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     EN Threshold
+    </h3>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        EN RISING (mV)
+       </th>
+       <th>
+        EN FALLING (mV)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        400
+       </td>
+       <td>
+        350
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        400
+       </td>
+       <td>
+        350
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        400
+       </td>
+       <td>
+        350
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        398
+       </td>
+       <td>
+        348
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        395
+       </td>
+       <td>
+        345
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G17
+    </p>
+    <div class="img-alt">
+     Graph of EN Threshold (mV) vs Temperature. EN RISING is ~400mV, EN FALLING is ~350mV.
+    </div>
+   </div>
+   <img alt="Graph of VIN UVLO Threshold (V) vs Temperature. RISING is ~2.1V, FALLING is ~1.95V." src="29ac39bfd74e57a92045649f83cad949_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <h3>
+     VIN UVLO Threshold
+    </h3>
+    <table border="1">
+     <thead>
+      <tr>
+       <th>
+        TEMPERATURE (°C)
+       </th>
+       <th>
+        RISING (V)
+       </th>
+       <th>
+        FALLING (V)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        -50
+       </td>
+       <td>
+        2.10
+       </td>
+       <td>
+        1.95
+       </td>
+      </tr>
+      <tr>
+       <td>
+        0
+       </td>
+       <td>
+        2.10
+       </td>
+       <td>
+        1.95
+       </td>
+      </tr>
+      <tr>
+       <td>
+        50
+       </td>
+       <td>
+        2.10
+       </td>
+       <td>
+        1.95
+       </td>
+      </tr>
+      <tr>
+       <td>
+        100
+       </td>
+       <td>
+        2.09
+       </td>
+       <td>
+        1.94
+       </td>
+      </tr>
+      <tr>
+       <td>
+        150
+       </td>
+       <td>
+        2.08
+       </td>
+       <td>
+        1.92
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     3309A G18
+    </p>
+    <div class="img-alt">
+     Graph of VIN UVLO Threshold (V) vs Temperature. RISING is ~2.1V, FALLING is ~1.95V.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="6">
+   <h2>
+    <p>
+     <b>
+      TYPICAL PERFORMANCE CHARACTERISTICS
+     </b>
+     <math>
+      V_{IN} = 3.3V
+     </math>
+     ,
+     <math>
+      T_A = 25^{\circ}C
+     </math>
+     , unless otherwise noted.
+    </p>
+   </h2>
+   <img alt="Graph showing UV and OV PGOOD thresholds as a percentage of the regulated VOUT versus temperature. The x-axis is Temperature (°C) from -50 to 150. The y-axis is Percentage of the Regulated VOUT (%) from 96 to 112. Four curves are shown: UV, VOUT RISING (solid red), UV, VOUT FALLING (dashed blue), OV, VOUT RISING (dashed green), and OV, VOUT FALLING (dotted orange)." src="c0843c6d138705289960d9f53a6e72a1_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      UV, OV PGOOD Thresholds
+     </b>
+    </p>
+    <p>
+     PERCENTAGE OF THE REGULATED
+     <math>
+      V_{OUT}
+     </math>
+     (%)
+    </p>
+    <p>
+     TEMPERATURE (
+     <math>
+      ^{\circ}C
+     </math>
+     )
+    </p>
+    <p>
+     3309A G19
+    </p>
+    <div class="img-alt">
+     Graph showing UV and OV PGOOD thresholds as a percentage of the regulated VOUT versus temperature. The x-axis is Temperature (°C) from -50 to 150. The y-axis is Percentage of the Regulated VOUT (%) from 96 to 112. Four curves are shown: UV, VOUT RISING (solid red), UV, VOUT FALLING (dashed blue), OV, VOUT RISING (dashed green), and OV, VOUT FALLING (dotted orange).
+    </div>
+   </div>
+   <img alt="Graph showing VOUT load regulation in a 1.2V application. The x-axis is ILOAD (A) from 0 to 6. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different VIN values: VIN = 2.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 5V (dotted green)." src="a6a8016b231533e7f34b550f4676afc6_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      <math>
+       V_{OUT}
+      </math>
+      Load Regulation in
+      <math>
+       V_{OUT} = 1.2V
+      </math>
+      Application
+     </b>
+    </p>
+    <p>
+     <math>
+      V_{OUT}
+     </math>
+     (V)
+    </p>
+    <p>
+     <math>
+      I_{LOAD}
+     </math>
+     (A)
+    </p>
+    <p>
+     3309A G20
+    </p>
+    <div class="img-alt">
+     Graph showing VOUT load regulation in a 1.2V application. The x-axis is ILOAD (A) from 0 to 6. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different VIN values: VIN = 2.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 5V (dotted green).
+    </div>
+   </div>
+   <img alt="Graph showing VOUT line regulation in a 1.2V application. The x-axis is INPUT VOLTAGE (V) from 2.5 to 5.5. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different ILOAD values: ILOAD = 0A (solid red), ILOAD = 3A (dashed blue), and ILOAD = 6A (dotted green)." src="c64e9e9f3b0b828a5f6ac70441877764_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      <math>
+       V_{OUT}
+      </math>
+      Line Regulation in
+      <math>
+       V_{OUT} = 1.2V
+      </math>
+      Application
+     </b>
+    </p>
+    <p>
+     <math>
+      V_{OUT}
+     </math>
+     (V)
+    </p>
+    <p>
+     INPUT VOLTAGE (V)
+    </p>
+    <p>
+     3309A G21
+    </p>
+    <div class="img-alt">
+     Graph showing VOUT line regulation in a 1.2V application. The x-axis is INPUT VOLTAGE (V) from 2.5 to 5.5. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different ILOAD values: ILOAD = 0A (solid red), ILOAD = 3A (dashed blue), and ILOAD = 6A (dotted green).
+    </div>
+   </div>
+   <img alt="Graph showing efficiency versus ILOAD for VIN = 2.5V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221." src="4279c8be6ec4ed56f4b3349be98bb426_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Efficiency,
+      <math>
+       V_{IN} = 2.5V
+      </math>
+      Burst Mode Operation
+     </b>
+    </p>
+    <p>
+     Efficiency (%)
+    </p>
+    <p>
+     <math>
+      I_{LOAD}
+     </math>
+     (A)
+    </p>
+    <p>
+     3309A G22
+    </p>
+    <div class="img-alt">
+     Graph showing efficiency versus ILOAD for VIN = 2.5V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.
+    </div>
+   </div>
+   <img alt="Graph showing efficiency versus ILOAD for VIN = 3.3V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221." src="01da0d212fb571933f10f96556157745_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Efficiency,
+      <math>
+       V_{IN} = 3.3V
+      </math>
+      Burst Mode Operation
+     </b>
+    </p>
+    <p>
+     Efficiency (%)
+    </p>
+    <p>
+     <math>
+      I_{LOAD}
+     </math>
+     (A)
+    </p>
+    <p>
+     3309A G23
+    </p>
+    <div class="img-alt">
+     Graph showing efficiency versus ILOAD for VIN = 3.3V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.
+    </div>
+   </div>
+   <img alt="Graph showing efficiency versus ILOAD for VIN = 5.0V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 1.0V (solid red), 1.2V (dashed blue), 1.8V (dotted green), 2.5V (dash-dot orange), and 3.3V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221." src="84e2ac543ffc4145dc85b05a48ec62e3_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Efficiency,
+      <math>
+       V_{IN} = 5.0V
+      </math>
+      Burst Mode Operation
+     </b>
+    </p>
+    <p>
+     Efficiency (%)
+    </p>
+    <p>
+     <math>
+      I_{LOAD}
+     </math>
+     (A)
+    </p>
+    <p>
+     3309A G24
+    </p>
+    <div class="img-alt">
+     Graph showing efficiency versus ILOAD for VIN = 5.0V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 1.0V (solid red), 1.2V (dashed blue), 1.8V (dotted green), 2.5V (dash-dot orange), and 3.3V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.
+    </div>
+   </div>
+   <img alt="Graph showing efficiency versus switching frequency for VIN = 3.3V to VOUT = 1.2V, ILOAD = 3A. The x-axis is SWITCHING FREQUENCY (MHz) from 1 to 3.0. The y-axis is Efficiency (%) from 87 to 92. Curves are shown for L = 150nH (solid red), 220nH (dashed blue), and 350nH (dotted green). COILCRAFT XEL3515 SERIES." src="023b142f90e1253702ac88b18380d3ec_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Efficiency vs
+      <math>
+       f_{SW}
+      </math>
+      ,
+      <math>
+       3.3V_{IN}
+      </math>
+      to
+      <math>
+       1.2V_{OUT}
+      </math>
+      ,
+      <math>
+       I_{LOAD} = 3A
+      </math>
+     </b>
+    </p>
+    <p>
+     Efficiency (%)
+    </p>
+    <p>
+     SWITCHING FREQUENCY (MHz)
+    </p>
+    <p>
+     3309A G25
+    </p>
+    <div class="img-alt">
+     Graph showing efficiency versus switching frequency for VIN = 3.3V to VOUT = 1.2V, ILOAD = 3A. The x-axis is SWITCHING FREQUENCY (MHz) from 1 to 3.0. The y-axis is Efficiency (%) from 87 to 92. Curves are shown for L = 150nH (solid red), 220nH (dashed blue), and 350nH (dotted green). COILCRAFT XEL3515 SERIES.
+    </div>
+   </div>
+   <img alt="Graph showing efficiency versus VIN for VOUT = 1.2V, fSW = 2MHz, burst mode. The x-axis is VIN (V) from 2 to 5.5. The y-axis is Efficiency (%) from 80 to 92. Curves are shown for 6A (CONTINUOUS) (solid red) and 0.1A (BURSTING) (dashed blue). COILCRAFT XEL3515-221." src="797231cfee084ca299de599340240401_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Efficiency vs
+      <math>
+       V_{IN}
+      </math>
+      ,
+      <math>
+       V_{OUT} = 1.2V
+      </math>
+      ,
+      <math>
+       f_{SW} = 2MHz
+      </math>
+      , Burst Mode Operation
+     </b>
+    </p>
+    <p>
+     Efficiency (%)
+    </p>
+    <p>
+     <math>
+      V_{IN}
+     </math>
+     (V)
+    </p>
+    <p>
+     3309A G26
+    </p>
+    <div class="img-alt">
+     Graph showing efficiency versus VIN for VOUT = 1.2V, fSW = 2MHz, burst mode. The x-axis is VIN (V) from 2 to 5.5. The y-axis is Efficiency (%) from 80 to 92. Curves are shown for 6A (CONTINUOUS) (solid red) and 0.1A (BURSTING) (dashed blue). COILCRAFT XEL3515-221.
+    </div>
+   </div>
+   <img alt="Graph showing efficiency versus ILOAD for VIN = 3.3V to VOUT = 1.2V, fSW = 2MHz. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 0 to 100. Curves are shown for BURST (solid red), PULSE SKIP (dashed blue), and FC (dotted green). conditions: COILCRAFT XEL3515-221." src="112f3fc5dde002caf1c91da443844204_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     <b>
+      Efficiency vs Load,
+      <math>
+       3.3V
+      </math>
+      to
+      <math>
+       1.2V
+      </math>
+      ,
+      <math>
+       f_{SW} = 2MHz
+      </math>
+     </b>
+    </p>
+    <p>
+     Efficiency (%)
+    </p>
+    <p>
+     <math>
+      I_{LOAD}
+     </math>
+     (A)
+    </p>
+    <p>
+     3309A G27
+    </p>
+    <div class="img-alt">
+     Graph showing efficiency versus ILOAD for VIN = 3.3V to VOUT = 1.2V, fSW = 2MHz. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 0 to 100. Curves are shown for BURST (solid red), PULSE SKIP (dashed blue), and FC (dotted green). conditions: COILCRAFT XEL3515-221.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="7">
+   <h2>
+    TYPICAL PERFORMANCE CHARACTERISTICS
+    <math>
+     V_{IN} = 3.3V
+    </math>
+    ,
+    <math>
+     T_A = 25^{\circ}C
+    </math>
+    , unless otherwise noted.
+   </h2>
+   <h3>
+    Start-Up Waveforms
+    <br/>
+    Forced Continuous Mode
+   </h3>
+   <img alt="Start-Up Waveforms, Forced Continuous Mode. Waveforms for EN, VOUT, IL, and PGOOD. EN is high. VOUT ramps up from 0V to 1.2V. IL shows a纹波 current. PGOOD is low until VOUT is stable, then goes high. Timebase: 200µs/DIV." src="d864789b0d8384da1d22fd6a5d76bbdf_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Start-Up Waveforms, Forced Continuous Mode. Waveforms for EN, VOUT, IL, and PGOOD. EN is high. VOUT ramps up from 0V to 1.2V. IL shows a纹波 current. PGOOD is low until VOUT is stable, then goes high. Timebase: 200µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    R
+    <sub>
+     LOAD
+    </sub>
+    = 120Ω. LTC3309A is shown. The time scale for the LTC3309A-7 is different
+   </p>
+   <h3>
+    Start-Up Waveforms
+    <br/>
+    Pulse Skip Mode
+   </h3>
+   <img alt="Start-Up Waveforms, Pulse Skip Mode. Similar to Forced Continuous Mode, but IL shows a more irregular, bursty纹波 current pattern during start-up. Timebase: 200µs/DIV." src="27b22513fc27a0ff5f230b062ad3112f_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Start-Up Waveforms, Pulse Skip Mode. Similar to Forced Continuous Mode, but IL shows a more irregular, bursty纹波 current pattern during start-up. Timebase: 200µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    R
+    <sub>
+     LOAD
+    </sub>
+    = 120Ω. LTC3309A is shown. The time scale for the LTC3309A-7 is different
+   </p>
+   <h3>
+    Start-Up Waveforms
+    <br/>
+    Burst Mode Operation
+   </h3>
+   <img alt="Start-Up Waveforms, Burst Mode Operation. Similar to Pulse Skip Mode, but the纹波 current bursts are more distinct and spaced out. Timebase: 200µs/DIV." src="f5e70cbe66e71e65b4ae4aa7816d266a_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Start-Up Waveforms, Burst Mode Operation. Similar to Pulse Skip Mode, but the纹波 current bursts are more distinct and spaced out. Timebase: 200µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    R
+    <sub>
+     LOAD
+    </sub>
+    = 120Ω. LTC3309A is shown. The time scale for the LTC3309A-7 is different
+   </p>
+   <h3>
+    Switching Waveforms,
+    <br/>
+    Forced Continuous Mode
+   </h3>
+   <img alt="Switching Waveforms, Forced Continuous Mode. SW is a square wave. IL is a triangular纹波 current. VOUT shows纹波 voltage. Timebase: 200ns/DIV." src="68aa26525c9346e4590a15c75d394e9d_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Switching Waveforms, Forced Continuous Mode. SW is a square wave. IL is a triangular纹波 current. VOUT shows纹波 voltage. Timebase: 200ns/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    I
+    <sub>
+     LOAD
+    </sub>
+    = 1A
+   </p>
+   <h3>
+    Switching Waveforms,
+    <br/>
+    Pulse Skip Mode
+   </h3>
+   <img alt="Switching Waveforms, Pulse Skip Mode. SW shows pulses with gaps. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 4µs/DIV." src="dba42063d2ba87f5d6f4fab4882b5d0d_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Switching Waveforms, Pulse Skip Mode. SW shows pulses with gaps. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 4µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    I
+    <sub>
+     LOAD
+    </sub>
+    = 10mA
+   </p>
+   <h3>
+    Switching Waveforms,
+    <br/>
+    Burst Mode Operation
+   </h3>
+   <img alt="Switching Waveforms, Burst Mode Operation. SW shows bursts of pulses. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 800ns/DIV." src="94539a6c0424ca8abd75262d22d4a608_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Switching Waveforms, Burst Mode Operation. SW shows bursts of pulses. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 800ns/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    I
+    <sub>
+     LOAD
+    </sub>
+    = 100mA
+   </p>
+   <h3>
+    Load Transient Response,
+    <br/>
+    Forced Continuous Mode
+   </h3>
+   <img alt="Load Transient Response, Forced Continuous Mode. ILOAD steps up from 0.1A to 4.5A. IL shows纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV." src="369fa00356358d757792cacc5786be85_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Load Transient Response, Forced Continuous Mode. ILOAD steps up from 0.1A to 4.5A. IL shows纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    C
+    <sub>
+     OUT
+    </sub>
+    = 66µF, L = 220nH
+    <br/>
+    LOAD STEP: 0.1A TO 4.5A IN 1µs
+   </p>
+   <h3>
+    Load Transient Response,
+    <br/>
+    Pulse Skip Mode
+   </h3>
+   <img alt="Load Transient Response, Pulse Skip Mode. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV." src="96d29b0ac179fb5dc3fa8d11437920d0_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Load Transient Response, Pulse Skip Mode. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    C
+    <sub>
+     OUT
+    </sub>
+    = 66µF, L = 220nH
+    <br/>
+    LOAD STEP: 0.1A TO 4.5A IN 1µs
+   </p>
+   <h3>
+    Load Transient Response,
+    <br/>
+    Burst Mode Operation
+   </h3>
+   <img alt="Load Transient Response, Burst Mode Operation. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波电压纹波. Timebase: 10µs/DIV." src="919328e26d6288b6f05d9973100e5734_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Load Transient Response, Burst Mode Operation. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波电压纹波. Timebase: 10µs/DIV.
+    </div>
+   </div>
+   <p>
+    3.3V
+    <sub>
+     IN
+    </sub>
+    to 1.2V
+    <sub>
+     OUT
+    </sub>
+    , 2MHz TYPICAL APPLICATION
+    <br/>
+    C
+    <sub>
+     OUT
+    </sub>
+    = 66µF, L = 220nH
+    <br/>
+    LOAD STEP: 0.1A TO 4.5A IN 1µs
+   </p>
+  </div>
+  <div class="page" data-page-id="8">
+   <h2>
+    PIN FUNCTIONS
+   </h2>
+   <p>
+    <b>
+     AGND (Pin 1):
+    </b>
+    The AGND pin is the output voltage remote ground sense. Connect the AGND pin directly to the negative terminal of the output capacitor at the load. The AGND pin is also the ground reference for the internal analog circuitry. Place a small analog bypass 0201 or 0402 ceramic capacitor as close as possible to the
+    <math>
+     V_{IN}
+    </math>
+    (Pin 3) and AGND pins. Connect RT and FB returns to AGND as well.
+   </p>
+   <p>
+    <b>
+     EN (Pin 2):
+    </b>
+    The EN pin has a precision IC enable threshold with hysteresis. An external resistor divider, from
+    <math>
+     V_{IN}
+    </math>
+    or from another supply, can be used to program the threshold below which the LTC3309A will shut down. If the precision threshold is not required, tie EN directly to
+    <math>
+     V_{IN}
+    </math>
+    . When the EN pin is low the LTC3309A enters a low current shutdown mode where all internal circuitry is disabled. Do not float this pin.
+   </p>
+   <p>
+    <b>
+     <math>
+      V_{IN}
+     </math>
+     (Pins 3, 8):
+    </b>
+    The
+    <math>
+     V_{IN}
+    </math>
+    pins supply current to internal circuitry and topside power switch. Connect both
+    <math>
+     V_{IN}
+    </math>
+    pins together with short wide traces and bypass to PGND and AGND with low ESR capacitors located as close as possible to the pins.
+   </p>
+   <p>
+    <b>
+     PGND (Pins 4, 7, Exposed Pad Pin 13):
+    </b>
+    The PGND pins are the return path of the internal bottom side power switch. Connect the negative terminal of the input capacitors as close to the PGND pins as possible. For low parasitic inductance and good thermal performance, connect Pin 4 and Pin 7 to a large continuous ground plane on the printed circuit board directly under the LTC3309A. The PGND exposed pad is the main electrical and thermal highway and should be connected to large PCB ground plane(s) with many vias.
+   </p>
+   <p>
+    <b>
+     SW (Pins 5, 6):
+    </b>
+    The SW pins are the switching outputs of the internal power switches. Connect these pins together and to the inductor with a short, wide trace.
+   </p>
+   <p>
+    <b>
+     MODE/SYNC (Pin 9):
+    </b>
+    The MODE/SYNC pin is a mode selection and external clock synchronization input. Ground this pin to enable Pulse Skip mode at light loads. For higher efficiency at light loads, tie this pin to
+    <math>
+     V_{IN}
+    </math>
+    to enable the low-ripple Burst Mode operation. For faster transient response, lower noise and full frequency operation over a wide load range, float this pin to enable forced continuous mode. Drive MODE/SYNC with an external clock to synchronize the switcher to the applied frequency. While synchronizing, the part operates in the forced continuous mode. The slope compensation is automatically adapted to the external clock frequency. In the absence of an external clock the switching frequency is determined by the RT pin.
+   </p>
+   <p>
+    <b>
+     RT (Pin 10):
+    </b>
+    The RT pin sets the switching frequency with an external resistor to AGND. If this pin is tied to
+    <math>
+     V_{IN}
+    </math>
+    , the buck will switch at the default oscillator frequency. If the external clock is driving the MODE/SYNC pin, the RT pin is ignored.
+   </p>
+   <p>
+    <b>
+     PGOOD (Pin 11):
+    </b>
+    The PGOOD pin is the open drain output of an internal power good comparator. When the regulated output voltage falls below the PGOOD threshold or rises above the overvoltage threshold, this pin is pulled low. When
+    <math>
+     V_{IN}
+    </math>
+    is above
+    <math>
+     V_{IN}
+    </math>
+    UVLO and the part is in shutdown, this pin is also pulled low.
+   </p>
+   <p>
+    <b>
+     FB (Pin 12):
+    </b>
+    Program the output voltage and close the control loop by connecting this pin to the middle node of a resistor divider between the
+    <math>
+     V_{OUT}
+    </math>
+    and AGND. The LTC3309A regulates FB to 500mV (typical). A phase lead capacitor connected between FB and
+    <math>
+     V_{OUT}
+    </math>
+    may be used to optimize transient response.
+   </p>
+  </div>
+  <div class="page" data-page-id="9">
+   <h2>
+    BLOCK DIAGRAM
+   </h2>
+   <img alt="Block diagram of the LTC3309A buck converter showing internal components and pin connections." src="cfda9df1319e04207eb28bcefd1dab7b_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     The diagram illustrates the internal architecture of the LTC3309A buck converter. Key components and their connections are as follows:
+    </p>
+    <ul style="list-style-type: none">
+     <li>
+      <b>
+       EN (Pin 2):
+      </b>
+      Connected to a voltage divider (R1, R2) from
+      <math>
+       V_{IN}
+      </math>
+      . The signal passes through a 0.4V reference and an internal reference block (providing 0.55V, 0.5V, and 0.49V references).
+     </li>
+     <li>
+      <b>
+       MODE/SYNC (Pin 9):
+      </b>
+      Receives a square wave input and feeds into the MODE DETECT block and the OSCILLATOR.
+     </li>
+     <li>
+      <b>
+       RT (Pin 10):
+      </b>
+      Connected to a resistor
+      <math>
+       R_T
+      </math>
+      and feeds into the OSCILLATOR.
+     </li>
+     <li>
+      <b>
+       AGND (Pin 1):
+      </b>
+      Ground connection for the analog section.
+     </li>
+     <li>
+      <b>
+       MODE DETECT:
+      </b>
+      Generates control signals for BURST, FORCED CONTINUOUS, and PULSE SKIP modes.
+     </li>
+     <li>
+      <b>
+       OSCILLATOR:
+      </b>
+      Generates a clock signal for the SLOPE COMP and the S Q R flip-flop.
+     </li>
+     <li>
+      <b>
+       SLOPE COMP:
+      </b>
+      Compares the oscillator signal with a slope to control the S Q R flip-flop.
+     </li>
+     <li>
+      <b>
+       S Q R Flip-Flop:
+      </b>
+      Controls the SWITCH LOGIC AND ANTI-SHOOT THROUGH block.
+     </li>
+     <li>
+      <b>
+       SWITCH LOGIC AND ANTI-SHOOT THROUGH:
+      </b>
+      Controls the power switches (MOSFETs) connected to the SW pin.
+     </li>
+     <li>
+      <b>
+       BURST DETECT:
+      </b>
+      Monitors the output for burst mode conditions.
+     </li>
+     <li>
+      <b>
+       PGND ( Pins 4, 7, and 13):
+      </b>
+      Ground connection for the power section.
+     </li>
+     <li>
+      <b>
+       SW ( Pins 5, 6):
+      </b>
+      Output to the power switch node, connected to an inductor
+      <math>
+       L
+      </math>
+      and output capacitor
+      <math>
+       C_{OUT}
+      </math>
+      .
+     </li>
+     <li>
+      <b>
+       FB (Pin 12):
+      </b>
+      Feedback pin connected to a resistor divider (
+      <math>
+       R_A
+      </math>
+      ,
+      <math>
+       R_B
+      </math>
+      ) from
+      <math>
+       V_{OUT}
+      </math>
+      to the error amplifier.
+     </li>
+     <li>
+      <b>
+       PGOOD (Pin 11):
+      </b>
+      Output of a fault detection circuit (NAND gate) to a P-channel MOSFET.
+     </li>
+     <li>
+      <b>
+       FAULT:
+      </b>
+      Output of a fault detection circuit (NAND gate) to a P-channel MOSFET.
+     </li>
+     <li>
+      <b>
+       SS (Pin 14):
+      </b>
+      Source sense pin connected to a current sense resistor
+      <math>
+       R_C
+      </math>
+      and a capacitor
+      <math>
+       C_{SS}
+      </math>
+      .
+     </li>
+     <li>
+      <b>
+       IC (Pin 15):
+      </b>
+      Input current sense pin connected to a current sense resistor
+      <math>
+       R_C
+      </math>
+      and a capacitor
+      <math>
+       C_{SS}
+      </math>
+      .
+     </li>
+     <li>
+      <b>
+       IC (Pin 15):
+      </b>
+      Input current sense pin connected to a current sense resistor
+      <math>
+       R_C
+      </math>
+      and a capacitor
+      <math>
+       C_{SS}
+      </math>
+      .
+     </li>
+    </ul>
+    <p>
+     3309A BD
+    </p>
+    <div class="img-alt">
+     Block diagram of the LTC3309A buck converter showing internal components and pin connections.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="10">
+   <h2>
+    OPERATION
+   </h2>
+   <h3>
+    Voltage Regulation
+   </h3>
+   <p>
+    The LTC3309A is a 5V, 6A monolithic, constant frequency, peak current mode control, step-down DC/DC converter. The synchronous buck switching regulators are internally compensated and require only external feedback resistors to set the output voltage. An internal oscillator, with the frequency set using a resistor on the RT pin or synchronized to an external clock, turns on the internal top power switch at the beginning of each clock cycle. Current in the inductor ramps up until the top switch current comparator trips and turns off the top power switch. The peak inductor current at which the top switch turns off is controlled by an internal
+    <math>
+     V_C
+    </math>
+    voltage. The error amplifier regulates
+    <math>
+     V_C
+    </math>
+    by comparing the voltage on the FB pin with an internal 500mV reference. An increase in the load current causes a reduction in the feedback voltage relative to the reference, causing the error amplifier to raise the
+    <math>
+     V_C
+    </math>
+    voltage until the average inductor current matches the new load current. When the top power switch turns off, the synchronous power switch turns on and ramps down the inductor current for the remainder of the clock cycle or, if in pulse skip or Burst mode, until the inductor current falls to zero. If an overload condition results in excessive current flowing through the bottom switch, the next clock cycle will be skipped until switch current returns to a safe level.
+   </p>
+   <p>
+    The enable pin has a precision 400mV threshold to provide event-based power-up sequencing by connecting the EN pin to the output of another buck through a resistor divider. If the EN pin is low, the device is shut down and in a low quiescent current state. When the EN pin is above its threshold, the switching regulator will be enabled.
+   </p>
+   <p>
+    The LTC3309A has forward and reverse inductor current limiting, short-circuit protection, output over-voltage protection, and soft-start to limit inrush current during start-up or recovery from a short-circuit.
+   </p>
+   <h3>
+    Mode Selection
+   </h3>
+   <p>
+    The LTC3309A operates in three different modes set by the MODE/SYNC pin: pulse skip mode (when the MODE/SYNC pin is set low), forced continuous mode (when the MODE/SYNC pin is floating) and Burst Mode operation (when the MODE/SYNC pin is set high).
+   </p>
+   <p>
+    In pulse skip mode, the oscillator operates continuously and positive SW transitions are aligned to the clock. Negative inductor current is disallowed and, during light loads, switch pulses are skipped to regulate the output voltage.
+   </p>
+   <p>
+    In forced continuous mode, the oscillator operates continuously. The top switch turns on every cycle and regulation is maintained by allowing the inductor current to reverse at light load. This mode allows the buck to run at a fixed frequency with minimal output ripple. In forced continuous mode, if the inductor current reaches
+    <math>
+     I_{REVMAX}
+    </math>
+    (into the SW pin), the bottom switch will turn off for the remainder of the cycle to limit the current.
+   </p>
+   <p>
+    In Burst Mode operation at light loads, the output capacitor is charged to a voltage slightly higher than its regulation point. The regulator then goes into a sleep state, during which time the output capacitor provides the load current. In sleep, most of the regulator's circuitry is powered down, helping conserve input power. When the output voltage drops below its programmed value, the circuitry is powered on and another burst cycle begins. The sleep time decreases as load current increases. In Burst Mode operation, the regulator will burst at light loads whereas at higher loads it will operate in constant frequency PWM mode.
+   </p>
+  </div>
+  <div class="page" data-page-id="11">
+   <h2>
+    OPERATION
+   </h2>
+   <h3>
+    Synchronizing the Oscillator to an External Clock
+   </h3>
+   <p>
+    The LTC3309A's internal oscillator can be synchronized through an internal PLL circuit to an external frequency by applying a square wave clock signal to the MODE/SYNC pin.
+   </p>
+   <p>
+    During synchronization, the top power switch turn-on is locked to the rising edge of the external frequency source. While synchronizing, the switcher operates in forced continuous mode. The slope compensation is automatically adapted to the external clock frequency. The synchronization frequency range is 1MHz to 3MHz.
+   </p>
+   <p>
+    After detecting an external clock on the first rising edge of the MODE/SYNC pin, the internal PLL gradually adjusts its operating frequency to match the frequency and phase of the signal on the MODE/SYNC pin. When the external clock is removed, the LTC3309A will detect the absence of the external clock within approximately 10
+    <math>
+     \mu
+    </math>
+    s. During this time, the PLL will continue to provide clock cycles. Once the external clock removal has been detected, the oscillator will gradually adjust its operating frequency to the one programmed by the RT pin.
+   </p>
+   <h3>
+    Output Power Good
+   </h3>
+   <p>
+    When the LTC3309A's output voltage is within the
+    <math>
+     -2\%/+10\%
+    </math>
+    window of the nominal regulation voltage the output is considered good and the open-drain PGOOD pin goes high impedance and is typically pulled high with an external resistor. Otherwise, the internal pull-down device will pull the PGOOD pin low. The PGOOD pin is also pulled low during the following fault conditions: EN pin is low,
+    <math>
+     V_{IN}
+    </math>
+    is too low or thermal shutdown. To filter noise and short duration output voltage transients, the lower threshold has a hysteresis of 1.2%, the upper threshold has a hysteresis of 2.2%, and both have a built-in time delay to report PGOOD, typically 120
+    <math>
+     \mu
+    </math>
+    s.
+   </p>
+   <h3>
+    Output Overvoltage Protection
+   </h3>
+   <p>
+    During an output overvoltage event, when the FB pin voltage is greater than 110% of nominal, the LTC3309A top power switch will be turned off. If the output remains out of regulation for more than 120
+    <math>
+     \mu
+    </math>
+    s, the PGOOD pin will be pulled low.
+   </p>
+   <p>
+    An output overvoltage event should not happen under normal operating conditions.
+   </p>
+   <h4>
+    Overtemperature Protection
+   </h4>
+   <p>
+    To prevent thermal damage to the LTC3309A and its surrounding components, the device incorporates an overtemperature (OT) function. When the die temperature reaches 165°C (typical, not tested) the switcher is shut down and remains in shutdown until the die temperature falls to 160°C (typical, not tested).
+   </p>
+   <h3>
+    Output Voltage Soft-Start
+   </h3>
+   <p>
+    Soft starting the output prevents current surge on the input supply and/or output voltage overshoot. During the soft-start, the output voltage will proportionally track the internal node voltage ramp. An active pull-down circuit discharges that internal node in the case of fault conditions. The ramp will restart when the fault is cleared. Fault conditions that initiate the soft-start ramp are the EN pin transitioning low,
+    <math>
+     V_{IN}
+    </math>
+    voltage falling too low, or thermal shutdown.
+   </p>
+   <h3>
+    Dropout Operation
+   </h3>
+   <p>
+    As the input supply voltage approaches the output voltage, the duty cycle increases toward 100%. Further reduction of the supply voltage forces the main switch to remain on for more than one cycle, eventually reaching 100% duty cycle. The output voltage will then be determined by the input voltage minus the DC voltage drop across the internal P-channel MOSFET and the inductor.
+   </p>
+  </div>
+  <div class="page" data-page-id="12">
+   <h3>
+    <p>
+     <b>
+      Low Supply Operation
+     </b>
+    </p>
+   </h3>
+   <p>
+    The LTC3309A is designed to operate down to an input supply voltage of 2.25V. One important consideration at low input supply voltages is that the
+    <math>
+     R_{DS(ON)}
+    </math>
+    of the internal power switches increases. Calculate the worst case LTC3309A power dissipation and die junction temperature at the lowest input voltages.
+   </p>
+   <h3>
+    <p>
+     <b>
+      Output Short-Circuit Protection and Recovery
+     </b>
+    </p>
+   </h3>
+   <p>
+    The peak inductor current level, at which the current comparator shuts off the top power switch, is controlled by the internal
+    <math>
+     V_C
+    </math>
+    voltage. When the output current increases, the error amplifier raises
+    <math>
+     V_C
+    </math>
+    until the average inductor current matches the load current. The LTC3309A clamps the maximum
+    <math>
+     V_C
+    </math>
+    voltage, thereby limiting the peak inductor current.
+   </p>
+   <p>
+    When the output is shorted to ground, the inductor current decays very slowly when the bottom power switch is on because the voltage across the inductor is low. To keep the inductor current in control, a secondary limit is imposed on the valley of the inductor current. If the inductor current measured through the bottom power switch remains greater than
+    <math>
+     I_{VALLEYMAX}
+    </math>
+    at the end of the cycle, the top power switch will be held off. Subsequent switching cycles will be skipped until the inductor current falls below
+    <math>
+     I_{VALLEYMAX}
+    </math>
+    .
+   </p>
+   <p>
+    Recovery from an output short circuit may involve a soft-start cycle if
+    <math>
+     V_{FB}
+    </math>
+    falls more than approximately 100mV below regulation. During such a recovery,
+    <math>
+     V_{FB}
+    </math>
+    will quickly charge up by that ~100mV and then follow the soft-start ramp until regulation is reached.
+   </p>
+   <h2>
+    <p>
+     <b>
+      APPLICATIONS INFORMATION
+     </b>
+    </p>
+   </h2>
+   <p>
+    Refer to the Block Diagram for reference.
+   </p>
+   <h3>
+    <p>
+     <b>
+      Output Voltage and Feedback Network
+     </b>
+    </p>
+   </h3>
+   <p>
+    The output voltage is programmed by a resistor divider between the output and the FB pin. Choose the resistor values according to:
+   </p>
+   <p>
+    <math display="block">
+     R_A = R_B \left( \frac{V_{OUT}}{500mV} - 1 \right) \quad (1)
+    </math>
+   </p>
+   <p>
+    as shown in Figure 1:
+   </p>
+   <img alt="Circuit diagram of the feedback resistor network for the LTC3309A. It shows a block diagram of the 'BUCK SWITCHING REGULATOR' with VOUT and FB pins. A resistor divider consisting of RA and RB is connected between VOUT and FB. An optional phase lead capacitor CFF is connected in parallel with RA. The output capacitor COUT is also shown." src="f20786b603b41e24b5d5899f710b5947_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Circuit diagram of the feedback resistor network for the LTC3309A. It shows a block diagram of the 'BUCK SWITCHING REGULATOR' with VOUT and FB pins. A resistor divider consisting of RA and RB is connected between VOUT and FB. An optional phase lead capacitor CFF is connected in parallel with RA. The output capacitor COUT is also shown.
+    </div>
+   </div>
+   <p>
+    <b>
+     Figure 1. Feedback Resistor Network
+    </b>
+   </p>
+   <p>
+    Reference designators refer to the Block Diagram. Typical values for
+    <math>
+     R_B
+    </math>
+    range from 40k
+    <math>
+     \Omega
+    </math>
+    to 400k
+    <math>
+     \Omega
+    </math>
+    . 0.1% resistors are recommended to maintain output voltage accuracy. The buck regulator transient response may improve with an optional phase lead capacitor
+    <math>
+     C_{FF}
+    </math>
+    that helps cancel the pole created by the feedback resistors and the input capacitance of the FB pin. Experimentation with capacitor values between 2pF and 22pF may improve transient response. The values used in the typical application circuits are a good starting point.
+   </p>
+   <h3>
+    <p>
+     <b>
+      Operating Frequency Selection and Trade-Offs
+     </b>
+    </p>
+   </h3>
+   <p>
+    Selection of the operating frequency is a trade-off between efficiency, component size, transient response and input voltage range.
+   </p>
+   <p>
+    The advantage of high frequency operation is that smaller inductor and capacitor values may be used. Higher switching frequencies allow for higher control loop bandwidth and, therefore, faster transient response. The
+   </p>
+  </div>
+  <div class="page" data-page-id="13">
+   <h2>
+    APPLICATIONS INFORMATION
+   </h2>
+   <p>
+    disadvantages of higher switching frequencies are lower efficiency, because of increased switching losses, and a smaller input voltage range, because of minimum switch on-time limitations.
+   </p>
+   <p>
+    The minimum on-time of the buck regulator imposes a minimum operating duty cycle. The highest switching frequency (
+    <math>
+     f_{SW(MAX)}
+    </math>
+    ) for a given application can be calculated as follows:
+   </p>
+   <p>
+    <math display="block">
+     f_{SW(MAX)} = \frac{V_{OUT}}{t_{ON(MIN)} \cdot V_{IN(MAX)}} \quad (2)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     V_{IN(MAX)}
+    </math>
+    is the maximum input voltage,
+    <math>
+     V_{OUT}
+    </math>
+    is the output voltage and
+    <math>
+     t_{ON(MIN)}
+    </math>
+    is the minimum top switch on-time. This equation shows that a slower switching frequency is necessary to accommodate a high
+    <math>
+     V_{IN(MAX)}/V_{OUT}
+    </math>
+    ratio.
+   </p>
+   <p>
+    The LTC3309A is capable of a maximum duty cycle of 100%, therefore, the
+    <math>
+     V_{IN}
+    </math>
+    -to-
+    <math>
+     V_{OUT}
+    </math>
+    dropout is limited by the
+    <math>
+     R_{DS(ON)}
+    </math>
+    of the top switch, the inductor DCR and the load current.
+   </p>
+   <h3>
+    Setting the Switching Frequency
+   </h3>
+   <p>
+    The LTC3309A uses a constant frequency peak current mode control architecture. There are three methods to set the switching frequency.
+   </p>
+   <p>
+    The first method, connecting the
+    <math>
+     R_T
+    </math>
+    pin to
+    <math>
+     V_{IN}
+    </math>
+    , sets the switching frequency to the internal default with a nominal value of 2MHz.
+   </p>
+   <p>
+    The second method is with a resistor (
+    <math>
+     R_T
+    </math>
+    ) tied from the
+    <math>
+     R_T
+    </math>
+    pin to ground. The frequency can be programmed from 1MHz to 3MHz. Table 1 and the Equation 3 show the necessary
+    <math>
+     R_T
+    </math>
+    value for a desired switching frequency:
+   </p>
+   <p>
+    <math display="block">
+     R_T = \frac{73.4}{f_{SW}} - 1.9 \quad (3)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     R_T
+    </math>
+    is in
+    <math>
+     k\Omega
+    </math>
+    and
+    <math>
+     f_{SW}
+    </math>
+    is the desired switching frequency in MHz, ranging from 1MHz to 3MHz.
+   </p>
+   <p>
+    <b>
+     Table 1.
+     <math>
+      R_T
+     </math>
+     Value vs Switching Frequency
+    </b>
+   </p>
+   <table>
+    <tr>
+     <th>
+      <math>
+       f_{SW}
+      </math>
+      (MHz)
+     </th>
+     <th>
+      <math>
+       R_T
+      </math>
+      (k
+      <math>
+       \Omega
+      </math>
+      )
+     </th>
+    </tr>
+    <tr>
+     <td>
+      1.0
+     </td>
+     <td>
+      71.5
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1.2
+     </td>
+     <td>
+      59.0
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1.4
+     </td>
+     <td>
+      49.9
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1.6
+     </td>
+     <td>
+      43.2
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1.8
+     </td>
+     <td>
+      38.3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      2.0
+     </td>
+     <td>
+      34.8
+     </td>
+    </tr>
+    <tr>
+     <td>
+      2.2
+     </td>
+     <td>
+      30.9
+     </td>
+    </tr>
+    <tr>
+     <td>
+      2.4
+     </td>
+     <td>
+      28.7
+     </td>
+    </tr>
+    <tr>
+     <td>
+      2.6
+     </td>
+     <td>
+      26.1
+     </td>
+    </tr>
+    <tr>
+     <td>
+      2.8
+     </td>
+     <td>
+      24.3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      3.0
+     </td>
+     <td>
+      22.6
+     </td>
+    </tr>
+   </table>
+   <p>
+    The third method to set the switching frequency is by synchronizing the internal PLL circuit to an external square wave clock applied to the MODE/SYNC pin. The synchronization frequency range is 1MHz to 3MHz. The square wave amplitude should have valleys that are below 0.4V and peaks above 1.2V. High and low pulse widths should both be at least 40ns.
+   </p>
+   <h3>
+    Inductor Selection and Maximum Output Current
+   </h3>
+   <p>
+    Considerations in choosing an inductor are inductance, RMS current rating, saturation current rating, DCR and core loss.
+   </p>
+   <p>
+    Select the inductor value based on the following equation:
+   </p>
+   <p>
+    <math display="block">
+     L \approx \frac{V_{OUT}}{1.8A \cdot f_{SW}} \cdot \left( 1 - \frac{V_{OUT}}{V_{IN(MAX)}} \right) \text{ for } \frac{V_{OUT}}{V_{IN(MAX)}} \leq 0.5 \quad (4)
+    </math>
+   </p>
+   <p>
+    <math display="block">
+     L \approx \frac{0.25 \cdot V_{IN(MAX)}}{1.8A \cdot f_{SW}} \text{ for } \frac{V_{OUT}}{V_{IN(MAX)}} &gt; 0.5 \quad (5)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     f_{SW}
+    </math>
+    is the switching frequency,
+    <math>
+     V_{IN(MAX)}
+    </math>
+    is the maximum input voltage.
+   </p>
+   <p>
+    To avoid overheating of the inductor choose an inductor with an RMS current rating that is greater than the maximum expected output load of the application. Overload and short-circuit conditions need to be taken into consideration.
+   </p>
+  </div>
+  <div class="page" data-page-id="14">
+   <h2>
+    APPLICATIONS INFORMATION
+   </h2>
+   <p>
+    In addition, ensure that the saturation current rating (typically labeled
+    <math>
+     I_{SAT}
+    </math>
+    ) of the inductor is higher than the maximum expected load current plus half the inductor ripple current:
+   </p>
+   <p>
+    <math display="block">
+     I_{SAT} &gt; I_{LOAD(MAX)} + \frac{1}{2} \Delta I_L \quad (6)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     I_{LOAD(MAX)}
+    </math>
+    is the maximum output load current for a given application and
+    <math>
+     \Delta I_L
+    </math>
+    is the inductor ripple current calculated as:
+   </p>
+   <p>
+    <math display="block">
+     \Delta I_L = \frac{V_{OUT}}{L \cdot f_{SW}} \cdot \left( 1 - \frac{V_{OUT}}{V_{IN}} \right) \quad (7)
+    </math>
+   </p>
+   <p>
+    A more conservative choice would be to use an inductor with an
+    <math>
+     I_{SAT}
+    </math>
+    rating higher than the maximum current limit of the LTC3309A.
+   </p>
+   <p>
+    To keep the efficiency high, choose an inductor with the lowest series resistance (DCR). The core material should be intended for high frequency applications. Table 2 shows recommended inductors from several manufacturers.
+   </p>
+   <p>
+    <b>
+     Table 2. Recommended Inductors with Typical Specifications
+    </b>
+   </p>
+   <table>
+    <tr>
+     <th>
+      Inductance (nH)
+     </th>
+     <th>
+      <math>
+       I_{TEMP}
+      </math>
+      (A)*
+     </th>
+     <th>
+      <math>
+       I_{SAT}
+      </math>
+      (A)
+     </th>
+     <th>
+      DCR (mΩ)
+     </th>
+     <th>
+      W×L×H (mm)
+     </th>
+     <th>
+      Manufacturer
+     </th>
+     <th>
+      Manufacturer's Part Number
+     </th>
+    </tr>
+    <tr>
+     <td>
+      220-560
+     </td>
+     <td>
+      9.3-5.1
+     </td>
+     <td>
+      9.3-6.7
+     </td>
+     <td>
+      9.5-18.7
+     </td>
+     <td>
+      3.0×3.0×1.2
+     </td>
+     <td>
+      Vishay
+     </td>
+     <td>
+      IHLP-1212AB-11
+     </td>
+    </tr>
+    <tr>
+     <td>
+      330
+     </td>
+     <td>
+      5.2
+     </td>
+     <td>
+      6.8
+     </td>
+     <td>
+      16
+     </td>
+     <td>
+      2.7×2.2×1.0
+     </td>
+     <td>
+      Sumida
+     </td>
+     <td>
+      252010CDMCCDS-R33MC
+     </td>
+    </tr>
+    <tr>
+     <td>
+      330, 470
+     </td>
+     <td>
+      6.0, 4.9
+     </td>
+     <td>
+      8.5, 6.7
+     </td>
+     <td>
+      14, 23
+     </td>
+     <td>
+      2.5×2.0×1.2
+     </td>
+     <td>
+      Murata
+     </td>
+     <td>
+      DFE252012F
+     </td>
+    </tr>
+    <tr>
+     <td>
+      330
+     </td>
+     <td>
+      5.6
+     </td>
+     <td>
+      7.6
+     </td>
+     <td>
+      16
+     </td>
+     <td>
+      2.5×2.0×1.0
+     </td>
+     <td>
+      Murata
+     </td>
+     <td>
+      DFE252010F-R33M
+     </td>
+    </tr>
+    <tr>
+     <td>
+      330
+     </td>
+     <td>
+      6.4
+     </td>
+     <td>
+      7.5
+     </td>
+     <td>
+      14
+     </td>
+     <td>
+      2.5×2.0×1.2
+     </td>
+     <td>
+      Cyntec
+     </td>
+     <td>
+      HMLQ25201B-R33MSR-87
+     </td>
+    </tr>
+    <tr>
+     <td>
+      330
+     </td>
+     <td>
+      5.5
+     </td>
+     <td>
+      7.3
+     </td>
+     <td>
+      16
+     </td>
+     <td>
+      2.5×2.0×1.0
+     </td>
+     <td>
+      Cyntec
+     </td>
+     <td>
+      HMLQ25201T-R33MSR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      330
+     </td>
+     <td>
+      5.5
+     </td>
+     <td>
+      8.3
+     </td>
+     <td>
+      14
+     </td>
+     <td>
+      3.0×3.0×2.0
+     </td>
+     <td>
+      Wurth Elektronik
+     </td>
+     <td>
+      744383360033
+     </td>
+    </tr>
+    <tr>
+     <td>
+      250
+     </td>
+     <td>
+      5.5
+     </td>
+     <td>
+      12
+     </td>
+     <td>
+      10
+     </td>
+     <td>
+      3.2×2.5×1.5
+     </td>
+     <td>
+      Wurth Elektronik
+     </td>
+     <td>
+      74479290125
+     </td>
+    </tr>
+    <tr>
+     <td>
+      240
+     </td>
+     <td>
+      6
+     </td>
+     <td>
+      9.5
+     </td>
+     <td>
+      18
+     </td>
+     <td>
+      2.5×2.0×1.0
+     </td>
+     <td>
+      NIC
+     </td>
+     <td>
+      NPIM20LP
+     </td>
+    </tr>
+    <tr>
+     <td>
+      240
+     </td>
+     <td>
+      6.5
+     </td>
+     <td>
+      7.5
+     </td>
+     <td>
+      15
+     </td>
+     <td>
+      2.0×1.6×1.0
+     </td>
+     <td>
+      NIC
+     </td>
+     <td>
+      NPIM26LP
+     </td>
+    </tr>
+    <tr>
+     <td>
+      240
+     </td>
+     <td>
+      5.2
+     </td>
+     <td>
+      6.5
+     </td>
+     <td>
+      19
+     </td>
+     <td>
+      2.2×1.8×1.0
+     </td>
+     <td>
+      Sumida
+     </td>
+     <td>
+      201610CDMCCDS-R24MC
+     </td>
+    </tr>
+    <tr>
+     <td>
+      240
+     </td>
+     <td>
+      6
+     </td>
+     <td>
+      7.8
+     </td>
+     <td>
+      13
+     </td>
+     <td>
+      2.0×1.6×1.2
+     </td>
+     <td>
+      Murata
+     </td>
+     <td>
+      DFE201612E-R24M
+     </td>
+    </tr>
+    <tr>
+     <td>
+      240
+     </td>
+     <td>
+      5.5
+     </td>
+     <td>
+      7
+     </td>
+     <td>
+      16
+     </td>
+     <td>
+      2.0×1.6×1.0
+     </td>
+     <td>
+      Murata
+     </td>
+     <td>
+      DFE201610E-R24M
+     </td>
+    </tr>
+    <tr>
+     <td>
+      220
+     </td>
+     <td>
+      5.9
+     </td>
+     <td>
+      7.0
+     </td>
+     <td>
+      9.4
+     </td>
+     <td>
+      2.5×2.0×1.0
+     </td>
+     <td>
+      Cyntec
+     </td>
+     <td>
+      HMLB25201T-R22MSR-01
+     </td>
+    </tr>
+    <tr>
+     <td>
+      220
+     </td>
+     <td>
+      7.4
+     </td>
+     <td>
+      7.1
+     </td>
+     <td>
+      8.4
+     </td>
+     <td>
+      2.5×2.0×1.2
+     </td>
+     <td>
+      Vishay
+     </td>
+     <td>
+      IHHP1008ABERR22M01
+     </td>
+    </tr>
+    <tr>
+     <td>
+      220
+     </td>
+     <td>
+      8.0
+     </td>
+     <td>
+      7.0
+     </td>
+     <td>
+      13(max)
+     </td>
+     <td>
+      2.5×2.0×1.2
+     </td>
+     <td>
+      XFRMS
+     </td>
+     <td>
+      XFHCL43LT-R22M
+     </td>
+    </tr>
+    <tr>
+     <td>
+      72-560
+     </td>
+     <td>
+      23.6-8.1
+     </td>
+     <td>
+      16.0-6.5
+     </td>
+     <td>
+      2.85-21.5
+     </td>
+     <td>
+      3.2×3.5×1.5
+     </td>
+     <td>
+      Coilcraft
+     </td>
+     <td>
+      XEL3515
+     </td>
+    </tr>
+    <tr>
+     <td>
+      150
+     </td>
+     <td>
+      5.2
+     </td>
+     <td>
+      6.2
+     </td>
+     <td>
+      18(max)
+     </td>
+     <td>
+      2.0×1.6×1.2
+     </td>
+     <td>
+      Murata
+     </td>
+     <td>
+      DFE201612PD-R15M
+     </td>
+    </tr>
+    <tr>
+     <td>
+      110
+     </td>
+     <td>
+      6.8
+     </td>
+     <td>
+      8.8
+     </td>
+     <td>
+      10
+     </td>
+     <td>
+      2.0×1.2×0.8
+     </td>
+     <td>
+      TDK
+     </td>
+     <td>
+      TFM201208BLD-R11MTCA
+     </td>
+    </tr>
+    <tr>
+     <td>
+      110
+     </td>
+     <td>
+      6.3
+     </td>
+     <td>
+      11
+     </td>
+     <td>
+      8
+     </td>
+     <td>
+      2.0×1.2×1.0
+     </td>
+     <td>
+      Murata
+     </td>
+     <td>
+      DFE201210S-R11M
+     </td>
+    </tr>
+    <tr>
+     <td>
+      100
+     </td>
+     <td>
+      7.7
+     </td>
+     <td>
+      12.8
+     </td>
+     <td>
+      9
+     </td>
+     <td>
+      2.5×2.0×1.2
+     </td>
+     <td>
+      Cyntec
+     </td>
+     <td>
+      VCTA25201B-R10MSG-87
+     </td>
+    </tr>
+    <tr>
+     <td>
+      100
+     </td>
+     <td>
+      11.5
+     </td>
+     <td>
+      12.9
+     </td>
+     <td>
+      7.35
+     </td>
+     <td>
+      3.3×3.3×1.0
+     </td>
+     <td>
+      Vishay
+     </td>
+     <td>
+      IHLP1212AZEER10M5A
+     </td>
+    </tr>
+    <tr>
+     <td>
+      100
+     </td>
+     <td>
+      6
+     </td>
+     <td>
+      11
+     </td>
+     <td>
+      6
+     </td>
+     <td>
+      2.5×2.0×2.0
+     </td>
+     <td>
+      XFRMS
+     </td>
+     <td>
+      XF2520A-R10M
+     </td>
+    </tr>
+   </table>
+   <p>
+    *Strongly depends on the PCB thermal properties
+   </p>
+  </div>
+  <div class="page" data-page-id="15">
+   <h2>
+    APPLICATIONS INFORMATION
+   </h2>
+   <h3>
+    Input Capacitors
+   </h3>
+   <p>
+    Bypass the input of the LTC3309A with at least two ceramic capacitors close to the part, one on each side from
+    <math>
+     V_{IN}
+    </math>
+    to PGND, for best performance. These capacitors should be 0603 or 0805 in size. Smaller, optional 0201 capacitors can also be placed as close as possible to the LTC3309A directly on the traces leading from
+    <math>
+     V_{IN}
+    </math>
+    (Pin 3) and PGND (Pin 4) and on the traces leading from
+    <math>
+     V_{IN}
+    </math>
+    (Pin 8) and PGND (Pin 7) for better performance with minimal (if at all) increase in application footprint. See the layout section for more detail. X7R or X5R capacitors are recommended for best performance across temperature and input voltage variations (see Table 3). Note that larger input capacitance is required when a lower switching frequency is used. If the input power source has high impedance, or there is significant inductance due to long wires or cables, additional bulk capacitance may be necessary. This can be provided with an electrolytic capacitor.
+   </p>
+   <p>
+    A ceramic input capacitor combined with trace or cable inductance forms a high quality (under damped) tank circuit. If the LTC3309A circuit is plugged into a live supply, the input voltage can ring to twice its nominal value, possibly exceeding the LTC3309A's voltage rating. This situation is easily avoided (see Application Note
+    <a href="#">AN88</a>
+    ).
+   </p>
+   <p>
+    <b>
+     Table 3. Ceramic Capacitor Manufacturers
+    </b>
+   </p>
+   <table>
+    <tr>
+     <th>
+      VENDOR
+     </th>
+     <th>
+      URL
+     </th>
+    </tr>
+    <tr>
+     <td>
+      AVX
+     </td>
+     <td>
+      www.avxcorp.com
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Murata
+     </td>
+     <td>
+      www.murata.com
+     </td>
+    </tr>
+    <tr>
+     <td>
+      TDK
+     </td>
+     <td>
+      www.tdk.com
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Taiyo Yuden
+     </td>
+     <td>
+      www.t-yuden.com
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Samsung
+     </td>
+     <td>
+      www.samsungsem.com
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Wurth Elektronik
+     </td>
+     <td>
+      www.we-online.com
+     </td>
+    </tr>
+   </table>
+   <h3>
+    Output Capacitor, Output Ripple and Transient Response
+   </h3>
+   <p>
+    The output capacitor has two essential functions. Along with the inductor, it filters the square wave generated by the LTC3309A at the SW pin to produce the DC output. In this role, it determines the output ripple; thus, low impedance at the switching frequency is important. The
+   </p>
+   <p>
+    second function is to store energy in order to satisfy transient loads and stabilize the LTC3309A's control loop. The LTC3309A is internally compensated and has been designed to operate at a high bandwidth for fast transient response capability. The selection of
+    <math>
+     C_{OUT}
+    </math>
+    affects the bandwidth of the system, but the transient response is also affected by
+    <math>
+     V_{OUT}
+    </math>
+    ,
+    <math>
+     V_{IN}
+    </math>
+    ,
+    <math>
+     f_{SW}
+    </math>
+    and other factors. A good place to start is with the output capacitance value of approximately:
+   </p>
+   <p>
+    <math display="block">
+     C_{OUT} = 20 \cdot \frac{I_{MAX}}{f_{SW}} \sqrt{\frac{0.5}{V_{OUT}}} \quad (8)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     C_{OUT}
+    </math>
+    is the recommended output capacitor value in
+    <math>
+     \mu F
+    </math>
+    ,
+    <math>
+     f_{SW}
+    </math>
+    is the switching frequency in MHz,
+    <math>
+     I_{MAX} = 6A
+    </math>
+    is the rated output current in Amps, and
+    <math>
+     V_{OUT}
+    </math>
+    is in Volts.
+   </p>
+   <p>
+    A lower value output capacitor saves space and cost but transient performance will suffer and loop stability must be verified.
+   </p>
+   <p>
+    Ceramic capacitors have very low equivalent series resistance (ESR) and provide the best output ripple and transient performance. Use X5R or X7R ceramic capacitors (see Table 3). Even better output ripple and transient performance can be achieved by using low-ESL reverse geometry or three-terminal ceramic capacitors.
+   </p>
+   <p>
+    During a load step, the output capacitor must instantaneously supply the current to support the load until the feedback loop increases the switch current enough to support the load. The time required for the feedback loop to respond is dependent on the compensation components and the output capacitor size. Typically, 3 to 4 cycles are required to respond to a load step, but only in the first cycle does the output drop linearly. Although affected by
+    <math>
+     V_{OUT}
+    </math>
+    ,
+    <math>
+     V_{IN}
+    </math>
+    ,
+    <math>
+     f_{SW}
+    </math>
+    ,
+    <math>
+     t_{ON(MIN)}
+    </math>
+    , the equivalent series inductance (ESL) of the output capacitor, and other factors, the output droop,
+    <math>
+     V_{DROOP}
+    </math>
+    , is usually about 3 times the linear drop of the first cycle:
+   </p>
+   <p>
+    <math display="block">
+     V_{DROOP} = \frac{3 \cdot \Delta I_{OUT}}{C_{OUT} \cdot f_{SW}} \quad (9)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     \Delta I_{OUT}
+    </math>
+    is the load step.
+   </p>
+  </div>
+  <div class="page" data-page-id="16">
+   <h2>
+    APPLICATIONS INFORMATION
+   </h2>
+   <p>
+    Transient performance and control loop stability can be improved with a higher
+    <math>
+     C_{OUT}
+    </math>
+    and/or the addition of a feedforward capacitor
+    <math>
+     C_{FF}
+    </math>
+    placed between
+    <math>
+     V_{OUT}
+    </math>
+    and FB. Capacitor
+    <math>
+     C_{FF}
+    </math>
+    provides phase lead compensation by creating a high frequency zero which improves the phase margin and the high-frequency response. The values used in the typical application circuits are a good starting point. LTpowerCAD
+    <sup>
+     ®
+    </sup>
+    is a useful tool to help optimize
+    <math>
+     C_{FF}
+    </math>
+    and
+    <math>
+     C_{OUT}
+    </math>
+    for a desired transient performance.
+   </p>
+   <p>
+    Applying a load transient and monitoring the response of the system or using a network analyzer to measure the actual loop response are two ways to experimentally verify transient performance and control loop stability, and to optimize
+    <math>
+     C_{FF}
+    </math>
+    and
+    <math>
+     C_{OUT}
+    </math>
+    .
+   </p>
+   <p>
+    When using the load transient response method to stabilize the control loop apply an output current pulse of 20% to 100% of full load current having a very fast rise time. This will produce a transient on the output voltage. Monitor
+    <math>
+     V_{OUT}
+    </math>
+    for overshoot or ringing that might indicate a stability problem (see
+    <a href="#">Application Note AN149</a>
+    ).
+   </p>
+   <h3>
+    Output Voltage Sensing
+   </h3>
+   <p>
+    The LTC3309A's AGND pin is the ground reference for the internal analog circuitry, including the bandgap voltage reference. To achieve good load regulation connect the AGND pin to the negative terminal of the output capacitor (
+    <math>
+     C_{OUT}
+    </math>
+    ) at the load. Any drop in the high current power ground return path will be compensated. The AGND node carries very little current and, therefore, can be a minimal size trace. Place a small analog bypass 0201 or 0402 ceramic capacitor as close as possible to the LTC3309A directly on the traces leading from
+    <math>
+     V_{IN}
+    </math>
+    (Pin 3) and AGND pin. All of the signal components, such as the FB resistor dividers and the
+    <math>
+     R_T
+    </math>
+    resistor, should be referenced to the AGND node. See the example PCB Layout for more information.
+   </p>
+   <h3>
+    Enable Threshold Programming
+   </h3>
+   <p>
+    The LTC3309A has a precision threshold enable pin to enable or disable the switching. When forced low, the device enters a low current shutdown mode.
+   </p>
+   <p>
+    The rising threshold of the EN comparator is 400mV, with 50mV of hysteresis. The EN pin can be tied to
+    <math>
+     V_{IN}
+    </math>
+    if the shutdown feature is not used. Adding a resistor divider from
+    <math>
+     V_{IN}
+    </math>
+    to EN programs the LTC3309A to regulate the output only when
+    <math>
+     V_{IN}
+    </math>
+    is above a desired voltage (see Figure 2). Typically, this threshold,
+    <math>
+     V_{IN(EN)}
+    </math>
+    , is used in situations where the input supply is current limited, or has a relatively high source resistance. A switching regulator draws near constant power from its input source, so source current increases as source voltage drops. This looks like a negative resistance load to the source and can cause the source to current limit or latch low under low source voltage conditions. The
+    <math>
+     V_{IN(EN)}
+    </math>
+    threshold prevents the regulator from operating at source voltages where problems may occur. This threshold can be adjusted by setting the values
+    <math>
+     R1
+    </math>
+    and
+    <math>
+     R2
+    </math>
+    such that they satisfy the following equation:
+   </p>
+   <p>
+    <math display="block">
+     V_{IN(EN)} = \left( \frac{R1}{R2} + 1 \right) \cdot 400\text{mV} \quad (10)
+    </math>
+   </p>
+   <p>
+    as shown in Figure 2:
+   </p>
+   <img alt="Figure 2: EN Divider circuit diagram. A block diagram of the LTC3309A shows the BUCK SWITCHING REGULATOR. Pin 3 is labeled VIN and is connected to a resistor divider consisting of R1 and R2. The junction between R1 and R2 is connected to the EN pin. R2 is connected to ground, which is labeled 3309A F02." src="9b62a616c7a1097c5da57f001ab6dd64_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Figure 2: EN Divider circuit diagram. A block diagram of the LTC3309A shows the BUCK SWITCHING REGULATOR. Pin 3 is labeled VIN and is connected to a resistor divider consisting of R1 and R2. The junction between R1 and R2 is connected to the EN pin. R2 is connected to ground, which is labeled 3309A F02.
+    </div>
+   </div>
+   <p>
+    Figure 2. EN Divider
+   </p>
+   <p>
+    The LTC3309A will remain off until
+    <math>
+     V_{IN}
+    </math>
+    is above
+    <math>
+     V_{IN(EN)}
+    </math>
+    . The buck regulator will remain enabled until
+    <math>
+     V_{IN}
+    </math>
+    falls to
+    <math>
+     0.875 \cdot V_{IN(EN)}
+    </math>
+    and EN is 350mV typical.
+   </p>
+   <p>
+    Alternatively, a resistor divider from an output of an upstream regulator to the EN pin of the LTC3309A provides event-based power-up sequencing, enabling the LTC3309A when the output of the upstream regulator reaches a predetermined level (e.g. 90% of the regulated output). Replace
+    <math>
+     V_{IN(EN)}
+    </math>
+    in Equation 10 with that predetermined level.
+   </p>
+  </div>
+  <div class="page" data-page-id="17">
+   <h2>
+    APPLICATIONS INFORMATION
+   </h2>
+   <h3>
+    Low EMI PCB Layout
+   </h3>
+   <p>
+    The LTC3309A is specifically designed to minimize EMI/EMC emissions and also to maximize efficiency and improve transient response when switching at high frequencies.
+   </p>
+   <p>
+    See Figure 3 for a recommended PCB layout.
+   </p>
+   <p>
+    For optimal performance the LTC3309A requires that both input supply
+    <math>
+     V_{IN}
+    </math>
+    pins (Pins 3, 8) each have a local decoupling capacitor with their ground terminals soldered directly to the ground plane on the top layer near PGND pins (Pins 4, 7). These capacitors provide the AC current to the internal power MOSFETs and their drivers. Large, switched currents flow in the
+    <math>
+     V_{IN}
+    </math>
+    and PGND pins and the input capacitors. The loops formed by the input capacitors should be as small as possible by placing the capacitors adjacent to the
+    <math>
+     V_{IN}
+    </math>
+    and PGND pins. Capacitors with small case size such as 0603 are optimal due to lowest parasitic inductance. Even smaller 0201 capacitors can additionally be placed right next to the respective
+    <math>
+     V_{IN}
+    </math>
+    and PGND pins for better performance with minimal (if at all) increase in application footprint. In addition, place a local, unbroken
+   </p>
+   <p>
+    ground plane under the application circuit on the layer closest to the surface layer.
+   </p>
+   <p>
+    Decoupling AGND is also very important. Place a small analog bypass 0201 or 0402 capacitor as close as possible to the LTC3309A directly on the traces leading from
+    <math>
+     V_{IN}
+    </math>
+    (Pin 3) and AGND (Pin 1).
+   </p>
+   <p>
+    Place the inductor on the same side of the circuit board. The trace connecting SW pins (Pins 5, 6) to the inductor should be as short as possible to reduce radiated EMI and parasitic coupling.
+   </p>
+   <p>
+    Keep the FB and RT nodes small and far away or shielded from the noisy SW node.
+   </p>
+   <p>
+    In the recommended layout, five 5mil vias are used to provide the best conductivity to the GND plane within the EPAD. For layouts where 5mil vias are not allowed, it is recommended to use either four 8mil vias or a single (filled or tented) 12mil diameter via. Refer to the Thermal Via Design section of the Analog Devices Application Note,
+    <a href="#">Application Notes for Thermally Enhanced Leaded Plastic Packages</a>
+    for more information on thermal via recommendations.
+   </p>
+   <img alt="PCB layout diagram (a) for the LTC3309A showing a small solution size. The diagram illustrates the placement of components including input capacitors (CIN1, CIN2, CIN3, CIN4), output capacitors (COUT1, COUT2), an inductor (L), and various resistors (RT, RA, RB, CBYP). It highlights the ground plane on layer 2 and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND." src="e928f4874ed492d3ad4c6fa2d29aedbc_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     PCB layout diagram (a) for the LTC3309A showing a small solution size. The diagram illustrates the placement of components including input capacitors (CIN1, CIN2, CIN3, CIN4), output capacitors (COUT1, COUT2), an inductor (L), and various resistors (RT, RA, RB, CBYP). It highlights the ground plane on layer 2 and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND.
+    </div>
+   </div>
+   <p>
+    (a) Small Solution Size. Five 5mil Vias Are Used within the EPAD. For Layouts Where 5mil Vias Are Not Allowed, It Is Recommended to Use Either Four 8mil Vias or a Single (Filled or Tented) 12mil Diameter Via.
+   </p>
+   <img alt="PCB layout diagram (b) for the LTC3309A showing a layout with rotated output capacitors. This diagram shows the same components as diagram (a) but with COUT1 and COUT2 rotated by 90 degrees. It also shows optional capacitors COUT3 and COUT4. The diagram emphasizes the reduction of high-frequency output ripple through this configuration and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND." src="7b8b192e2853ef28d28eff0241ebe86b_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     PCB layout diagram (b) for the LTC3309A showing a layout with rotated output capacitors. This diagram shows the same components as diagram (a) but with COUT1 and COUT2 rotated by 90 degrees. It also shows optional capacitors COUT3 and COUT4. The diagram emphasizes the reduction of high-frequency output ripple through this configuration and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND.
+    </div>
+   </div>
+   <p>
+    (b) With Capacitors
+    <math>
+     C_{OUT1}
+    </math>
+    and
+    <math>
+     C_{OUT2}
+    </math>
+    Rotated by 90°, Which Reduces High Frequency Output Ripple. Optional 0201 Capacitors
+    <math>
+     C_{OUT3}
+    </math>
+    and
+    <math>
+     C_{OUT4}
+    </math>
+    Further Improve the High Frequency Output Ripple. Five 5mil Vias Are Used within the EPAD. For Layouts Where 5mil Vias Are Not Allowed, It Is Recommended to Use Either Four 8mil Vias or a Single (Filled or Tented) 12mil Diameter Via.
+   </p>
+   <p>
+    Figure 3. Recommended PCB Layout for the LTC3309A
+   </p>
+  </div>
+  <div class="page" data-page-id="18">
+   <h2>
+    APPLICATIONS INFORMATION
+   </h2>
+   <h3>
+    High Temperature Considerations
+   </h3>
+   <p>
+    Care should be taken in the layout of the PCB to ensure good heat sinking of the LTC3309A. Connect the exposed pad on the bottom of the package (Pin 13) to a large, unbroken ground plane under the application circuit on the layer closest to the surface layer. Place many vias to minimize thermal and electrical impedance. Solder the PGND pins (Pins 4, 7) directly to a ground plane on the top layer. Connect the top layer ground plane to ground plane(s) on lower levels with many thermal vias. These layers will spread heat dissipated by the LTC3309A. Figure 4 is a simplified thermal representation of a thermally enhanced LQFN package with exposed pad, with the silicon die and thermal metrics identified. The current source represents power loss
+    <math>
+     P_D
+    </math>
+    on the die; node voltages represent temperatures; electrical impedances represent conductive thermal impedances
+    <math>
+     \theta_{JCBOTTOM}
+    </math>
+    ,
+    <math>
+     \theta_{JCTOP}
+    </math>
+    ,
+    <math>
+     \theta_{VIA}
+    </math>
+    ,
+    <math>
+     \theta_{CB}
+    </math>
+    , and convective thermal impedances
+    <math>
+     \theta_{BA}
+    </math>
+    and
+    <math>
+     \theta_{CA}
+    </math>
+    . The junction temperature,
+    <math>
+     T_J
+    </math>
+    , is calculated from the ambient temperature,
+    <math>
+     T_A
+    </math>
+    , as:
+   </p>
+   <p>
+    <math display="block">
+     T_J = T_A + P_D \cdot \theta_{JA} \quad (11)
+    </math>
+   </p>
+   <p>
+    where, neglecting the
+    <math>
+     \theta_{JCTOP} + \theta_{CA}
+    </math>
+    path:
+   </p>
+   <p>
+    <math display="block">
+     \theta_{JA} \approx \theta_{JCBOTTOM} + \left( \frac{\theta_{CB} + \theta_{BA}}{2} \right) \parallel \left( \frac{\theta_{CB} + \theta_{BA}}{2} + \theta_{VIA} \right) \quad (12)
+    </math>
+   </p>
+   <p>
+    where
+    <math>
+     \theta_{JCBOTTOM} = 8.6^\circ\text{C/W}
+    </math>
+    . The value of
+    <math>
+     \theta_{JA} = 51^\circ\text{C/W}
+    </math>
+    reported in the Pin Configuration section corresponds to JEDEC standard 2S2P test PCB, which does not have good thermal vias, i.e.,
+    <math>
+     \theta_{VIA}
+    </math>
+    is relatively
+   </p>
+   <p>
+    high. Assuming, somewhat arbitrarily but not unreasonably, that
+    <math>
+     \theta_{VIA} \sim (\theta_{CB} + \theta_{BA})/2
+    </math>
+    , we back calculate
+    <math>
+     (\theta_{CB} + \theta_{BA})/2 = \theta_{VIA} \approx 60^\circ\text{C/W}
+    </math>
+    for such a board. The importance of thermal vias becomes clear once we observe that if the test PCB had low-thermal-resistance vias, the
+    <math>
+     \theta_{JA}
+    </math>
+    would have been reduced by up to
+    <math>
+     10^\circ\text{C/W}
+    </math>
+    , which is an improvement of up to 20%. Similarly, having more ground planes that are larger, uninterrupted and higher-copper-weight improves
+    <math>
+     \theta_{CB} + \theta_{BA}
+    </math>
+    , which has a dominant effect on
+    <math>
+     \theta_{JA}
+    </math>
+    , given the low value of
+    <math>
+     \theta_{JCBOTTOM}
+    </math>
+    of the package. See the Application Note,
+    <a href="#">Application Notes for Thermally Enhanced Leaded Plastic Packages</a>
+    , for the proper size and layout of the thermal vias and solder stencils. The maximum load current should be derated as the ambient temperature approaches the maximum junction rating. Power dissipation within the LTC3309A is estimated by calculating the total power loss from an efficiency measurement and subtracting the inductor loss.
+   </p>
+   <img alt="Figure 4: Multi-Layer PCB with Thermal Vias Acts as a Heat Sink. The diagram shows a cross-section of an LQFN package mounted on a multi-layer PCB. The package substrate contains a silicon die with power loss P_D and junction temperature T_J. Thermal paths are shown with impedances: theta_JCTOP from the die to the top PCB layer, theta_VIA through thermal vias between PCB layers, and theta_JCBOTTOM from the bottom PCB layer to the package substrate. Convective paths to ambient T_A are shown with impedances theta_CA and theta_BA. The PCB itself has thermal impedances theta_CB and theta_CV between its layers." src="04f51626e2e10a16e3eb2c4b33cb2742_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Figure 4: Multi-Layer PCB with Thermal Vias Acts as a Heat Sink. The diagram shows a cross-section of an LQFN package mounted on a multi-layer PCB. The package substrate contains a silicon die with power loss P_D and junction temperature T_J. Thermal paths are shown with impedances: theta_JCTOP from the die to the top PCB layer, theta_VIA through thermal vias between PCB layers, and theta_JCBOTTOM from the bottom PCB layer to the package substrate. Convective paths to ambient T_A are shown with impedances theta_CA and theta_BA. The PCB itself has thermal impedances theta_CB and theta_CV between its layers.
+    </div>
+   </div>
+   <p>
+    Figure 4. Multi-Layer PCB with Thermal Vias Acts as a Heat Sink
+   </p>
+  </div>
+  <div class="page" data-page-id="19">
+   <h2>
+    TYPICAL APPLICATIONS
+   </h2>
+   <p>
+    <b>
+     V
+     <sub>
+      IN
+     </sub>
+     UVLO 3.0V, 1MHz, 1.8V, 6A, Pulse Skip Mode
+    </b>
+   </p>
+   <img alt="Circuit diagram for LTC3309A in Pulse Skip Mode." src="81a4cbf0b3c4cbc065efdf8f800dadde_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     This circuit diagram shows the LTC3309A configured for Pulse Skip Mode. The input voltage range is V
+     <sub>
+      IN
+     </sub>
+     = 3.0V TO 5.5V. The output is V
+     <sub>
+      OUT
+     </sub>
+     = 1.8V, 6A. The circuit includes an input capacitor (10µF), a 1µF 0201 capacitor, a 1.3MΩ resistor, a 200kΩ resistor, and a 71.5kΩ resistor. The LTC3309A is connected to a 470nH inductor, a 15pF capacitor, a 261kΩ resistor, a 100kΩ resistor, and a 68µF x2 capacitor. The output is connected to a 10µF capacitor. The LTC3309A is labeled with pins: EN, V
+     <sub>
+      IN
+     </sub>
+     , V
+     <sub>
+      IN
+     </sub>
+     , SW, SW, VFB, AGND, PGND, PGOOD, and MODE/SYNC. The oscillation frequency is f
+     <sub>
+      OSC
+     </sub>
+     = 1MHz. The diagram is labeled 3309A TA02.
+    </p>
+    <div class="img-alt">
+     Circuit diagram for LTC3309A in Pulse Skip Mode.
+    </div>
+   </div>
+   <p>
+    <b>
+     Small Solution Size, 3MHz, 1.2V, 6A, Forced Continuous Mode
+    </b>
+   </p>
+   <img alt="Circuit diagram for LTC3309A in Forced Continuous Mode." src="3da1a07cb87051bf616c9876db958cf0_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     This circuit diagram shows the LTC3309A configured for Forced Continuous Mode. The input voltage range is V
+     <sub>
+      IN
+     </sub>
+     = 2.5V TO 5.5V. The output is V
+     <sub>
+      OUT
+     </sub>
+     = 1.2V, 6A. The circuit includes an input capacitor (10µF), a 1µF 0201 capacitor, a 10µF capacitor, a 150nH inductor, a 10pF capacitor, a 140kΩ resistor, a 100kΩ resistor, and a 22µF x2 capacitor. The output is connected to a 10µF capacitor. The LTC3309A is labeled with pins: EN, V
+     <sub>
+      IN
+     </sub>
+     , V
+     <sub>
+      IN
+     </sub>
+     , SW, SW, VFB, AGND, PGND, PGOOD, and MODE/SYNC. The oscillation frequency is f
+     <sub>
+      OSC
+     </sub>
+     = 3MHz. The diagram is labeled 3309A TA03.
+    </p>
+    <div class="img-alt">
+     Circuit diagram for LTC3309A in Forced Continuous Mode.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="20">
+   <h2>
+    TYPICAL APPLICATIONS
+   </h2>
+   <p>
+    <b>
+     V
+     <sub>
+      IN
+     </sub>
+     UVLO 3.0V, 2.5V, 6A, Syncing to 1MHz, Forced Continuous Mode
+    </b>
+   </p>
+   <img alt="Circuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V&lt;sub&gt;IN&lt;/sub&gt; = 3.0V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is driven by a 1MHz square wave (f&lt;sub&gt;SYNC&lt;/sub&gt; = 1MHz) through a 10nF capacitor. The RT pin is connected to V&lt;sub&gt;IN&lt;/sub&gt;. The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 402kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V&lt;sub&gt;OUT&lt;/sub&gt; through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 680nH inductor, and a 10µF capacitor. The output voltage is V&lt;sub&gt;OUT&lt;/sub&gt; = 2.5V, 6A. The output capacitor is a 47µF capacitor x2. The diagram is labeled 3309A TA04." src="79e1709a7317ead45379cbb8ff3ba802_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Circuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V
+     <sub>
+      IN
+     </sub>
+     = 3.0V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is driven by a 1MHz square wave (f
+     <sub>
+      SYNC
+     </sub>
+     = 1MHz) through a 10nF capacitor. The RT pin is connected to V
+     <sub>
+      IN
+     </sub>
+     . The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 402kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V
+     <sub>
+      OUT
+     </sub>
+     through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 680nH inductor, and a 10µF capacitor. The output voltage is V
+     <sub>
+      OUT
+     </sub>
+     = 2.5V, 6A. The output capacitor is a 47µF capacitor x2. The diagram is labeled 3309A TA04.
+    </div>
+   </div>
+   <p>
+    <b>
+     High Efficiency, 2MHz, 6A, 5V to 3.3V, Burst Mode Operation
+    </b>
+   </p>
+   <img alt="Circuit diagram for burst mode operation of the LTC3309A. The input voltage is V&lt;sub&gt;IN&lt;/sub&gt; = 4.5V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is connected to the input rail. The RT pin is connected to V&lt;sub&gt;IN&lt;/sub&gt;. The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 562kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V&lt;sub&gt;OUT&lt;/sub&gt; through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 330nH inductor, and a 10µF capacitor. The output voltage is V&lt;sub&gt;OUT&lt;/sub&gt; = 3.3V, 6A. The output capacitor is a 22µF capacitor x2. The diagram is labeled 3309A TA05." src="a24e89a6fe9bb70c83f8bf5202baba95_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Circuit diagram for burst mode operation of the LTC3309A. The input voltage is V
+     <sub>
+      IN
+     </sub>
+     = 4.5V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is connected to the input rail. The RT pin is connected to V
+     <sub>
+      IN
+     </sub>
+     . The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 562kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V
+     <sub>
+      OUT
+     </sub>
+     through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 330nH inductor, and a 10µF capacitor. The output voltage is V
+     <sub>
+      OUT
+     </sub>
+     = 3.3V, 6A. The output capacitor is a 22µF capacitor x2. The diagram is labeled 3309A TA05.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="21">
+   <h2>
+    TYPICAL APPLICATIONS
+   </h2>
+   <h3>
+    High Efficiency, 2MHz, 6A, 2.5V, Burst Mode Operation
+   </h3>
+   <img alt="Circuit diagram for 2.5V, 6A output using LTC3309A." src="e180f2b5fcbe8001554a7c0677cd3f82_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     This circuit diagram shows the LTC3309A configured for a 2.5V, 6A output. The input voltage range is
+     <math>
+      V_{IN} = 3V \text{ TO } 5.5V
+     </math>
+     . The input capacitors are two
+     <math>
+      10\mu F
+     </math>
+     capacitors in parallel, with a
+     <math>
+      1\mu F
+     </math>
+     0201 capacitor in series. The output filter consists of a
+     <math>
+      330nH
+     </math>
+     inductor and two
+     <math>
+      22\mu F
+     </math>
+     capacitors in parallel. The feedback network consists of a
+     <math>
+      100k
+     </math>
+     resistor from the output to ground and a
+     <math>
+      402k
+     </math>
+     resistor from the output to the FB pin, with a
+     <math>
+      6.8pF
+     </math>
+     capacitor in parallel. The SW pin is connected to the SW pin of the LTC3309A. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the V
+     <sub>
+      OUT
+     </sub>
+     pin through a
+     <math>
+      511k
+     </math>
+     resistor. The f
+     <sub>
+      OSC
+     </sub>
+     is set to 2MHz. The output voltage is
+     <math>
+      V_{OUT} = 2.5V
+     </math>
+     and the output current is
+     <math>
+      I_{OUT} = 6A
+     </math>
+     . The part number 3309A TA06 is indicated.
+    </p>
+    <div class="img-alt">
+     Circuit diagram for 2.5V, 6A output using LTC3309A.
+    </div>
+   </div>
+   <h3>
+    High Efficiency, 2MHz, 6A, 1.8V, Burst Mode Operation
+   </h3>
+   <img alt="Circuit diagram for 1.8V, 6A output using LTC3309A." src="7d3d5fb5d09c0cd35a9d637be241651e_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     This circuit diagram shows the LTC3309A configured for a 1.8V, 6A output. The input voltage range is
+     <math>
+      V_{IN} = 2.5V \text{ TO } 5.5V
+     </math>
+     . The input capacitors are two
+     <math>
+      10\mu F
+     </math>
+     capacitors in parallel, with a
+     <math>
+      1\mu F
+     </math>
+     0201 capacitor in series. The output filter consists of a
+     <math>
+      220nH
+     </math>
+     inductor and two
+     <math>
+      33\mu F
+     </math>
+     capacitors in parallel. The feedback network consists of a
+     <math>
+      100k
+     </math>
+     resistor from the output to ground and a
+     <math>
+      261k
+     </math>
+     resistor from the output to the FB pin, with a
+     <math>
+      15pF
+     </math>
+     capacitor in parallel. The SW pin is connected to the SW pin of the LTC3309A. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the V
+     <sub>
+      OUT
+     </sub>
+     pin through a
+     <math>
+      511k
+     </math>
+     resistor. The f
+     <sub>
+      OSC
+     </sub>
+     is set to 2MHz. The output voltage is
+     <math>
+      V_{OUT} = 1.8V
+     </math>
+     and the output current is
+     <math>
+      I_{OUT} = 6A
+     </math>
+     . The part number 3309A TA07 is indicated.
+    </p>
+    <div class="img-alt">
+     Circuit diagram for 1.8V, 6A output using LTC3309A.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="22">
+   <h2>
+    TYPICAL APPLICATIONS
+   </h2>
+   <h3>
+    High Efficiency, 2MHz, 6A, 1.0V, Burst Mode Operation
+   </h3>
+   <img alt="Circuit diagram for 1.0V output configuration." src="eb03559a4d92ea9ebd63ea9be663c50a_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     This circuit diagram shows the LTC3309A configured for a 1.0V output. The input voltage
+     <math>
+      V_{IN}
+     </math>
+     is 2.5V to 5.5V. The output voltage
+     <math>
+      V_{OUT}
+     </math>
+     is 1.0V at 6A. The circuit includes an input capacitor bank with two 10µF capacitors and one 1µF 0201 capacitor. The LTC3309A is connected to a 180nH inductor. The feedback network consists of two 200k resistors in series, with a 10pF capacitor connected from the node between them to the FB pin. A 10nF capacitor is connected from the FB pin to AGND. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the
+     <math>
+      V_{OUT}
+     </math>
+     pin through a 511k resistor. The f
+     <sub>
+      OSC
+     </sub>
+     is 2MHz. The diagram is labeled 3309A TA08.
+    </p>
+    <div class="img-alt">
+     Circuit diagram for 1.0V output configuration.
+    </div>
+   </div>
+   <h3>
+    High Efficiency, 2MHz, 6A, 0.75V, Burst Mode Operation
+   </h3>
+   <img alt="Circuit diagram for 0.75V output configuration." src="d9c0a780cd22626253dab4aa41699e2f_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     This circuit diagram shows the LTC3309A configured for a 0.75V output. The input voltage
+     <math>
+      V_{IN}
+     </math>
+     is 2.5V to 5.5V. The output voltage
+     <math>
+      V_{OUT}
+     </math>
+     is 0.75V at 6A. The circuit includes an input capacitor bank with two 10µF capacitors and one 1µF 0201 capacitor. The LTC3309A is connected to a 150nH inductor. The feedback network consists of two 200k resistors in series, with a 10pF capacitor connected from the node between them to the FB pin. A 10nF capacitor is connected from the FB pin to AGND. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the
+     <math>
+      V_{OUT}
+     </math>
+     pin through a 511k resistor. The f
+     <sub>
+      OSC
+     </sub>
+     is 2MHz. The diagram is labeled 3309A TA09.
+    </p>
+    <div class="img-alt">
+     Circuit diagram for 0.75V output configuration.
+    </div>
+   </div>
+  </div>
+  <div class="page" data-page-id="23">
+   <h2>
+    PACKAGE DESCRIPTION
+   </h2>
+   <p>
+    <b>
+     LQFN Package
+     <br/>
+     12-Lead (2mm × 2mm × 0.74mm)
+    </b>
+    <br/>
+    (Reference LTC DWG # 05-08-1530 Rev B)
+   </p>
+   <img alt="PACKAGE BOTTOM VIEW showing a 12-lead LQFN package with leads numbered 1-12. It includes a 'DETAIL A' callout for a lead end and a 'PIN 1 NOTCH 0.14 x 45°' feature. Datums X, Y, and Z are indicated with associated symbols." src="ae53f90bb87d6d09e2d6b5278d7c338f_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     PACKAGE BOTTOM VIEW
+    </p>
+    <div class="img-alt">
+     PACKAGE BOTTOM VIEW showing a 12-lead LQFN package with leads numbered 1-12. It includes a 'DETAIL A' callout for a lead end and a 'PIN 1 NOTCH 0.14 x 45°' feature. Datums X, Y, and Z are indicated with associated symbols.
+    </div>
+   </div>
+   <img alt="PACKAGE TOP VIEW showing the package footprint with a shaded area for 'PIN 1 CORNER'. Dimensions D, E, and X are shown. Datums X, Y, and Z are indicated. Below this is DETAIL B, showing the package profile with height H1 and H2, and DETAIL C, showing a side view of the package with height A1 and lead thickness 12b. DETAIL A shows a lead end with length L and width 0.25." src="4b87467ad9642943235f48f7d4b59449_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     PACKAGE TOP VIEW
+    </p>
+    <p>
+     DETAIL B
+    </p>
+    <p>
+     DETAIL C
+    </p>
+    <p>
+     DETAIL A
+    </p>
+    <div class="img-alt">
+     PACKAGE TOP VIEW showing the package footprint with a shaded area for 'PIN 1 CORNER'. Dimensions D, E, and X are shown. Datums X, Y, and Z are indicated. Below this is DETAIL B, showing the package profile with height H1 and H2, and DETAIL C, showing a side view of the package with height A1 and lead thickness 12b. DETAIL A shows a lead end with length L and width 0.25.
+    </div>
+   </div>
+   <table>
+    <thead>
+     <tr>
+      <th colspan="5">
+       DIMENSIONS
+      </th>
+     </tr>
+     <tr>
+      <th>
+       SYMBOL
+      </th>
+      <th>
+       MIN
+      </th>
+      <th>
+       NOM
+      </th>
+      <th>
+       MAX
+      </th>
+      <th>
+       NOTES
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       A
+      </td>
+      <td>
+       0.65
+      </td>
+      <td>
+       0.74
+      </td>
+      <td>
+       0.83
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       A1
+      </td>
+      <td>
+       0.01
+      </td>
+      <td>
+       0.02
+      </td>
+      <td>
+       0.03
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       L
+      </td>
+      <td>
+       0.30
+      </td>
+      <td>
+       0.40
+      </td>
+      <td>
+       0.50
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       b
+      </td>
+      <td>
+       0.22
+      </td>
+      <td>
+       0.25
+      </td>
+      <td>
+       0.28
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       D
+      </td>
+      <td>
+      </td>
+      <td>
+       2.00
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       E
+      </td>
+      <td>
+      </td>
+      <td>
+       2.00
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       D1
+      </td>
+      <td>
+      </td>
+      <td>
+       0.70
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       E1
+      </td>
+      <td>
+      </td>
+      <td>
+       0.70
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       e
+      </td>
+      <td>
+      </td>
+      <td>
+       0.50
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       H1
+      </td>
+      <td>
+      </td>
+      <td>
+       0.24 REF
+      </td>
+      <td>
+      </td>
+      <td>
+       SUBSTRATE THK
+      </td>
+     </tr>
+     <tr>
+      <td>
+       H2
+      </td>
+      <td>
+      </td>
+      <td>
+       0.50 REF
+      </td>
+      <td>
+      </td>
+      <td>
+       MOLD CAP HT
+      </td>
+     </tr>
+     <tr>
+      <td>
+       aaa
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       0.10
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       bbb
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       0.10
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       ccc
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       0.10
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       ddd
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       0.10
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       eee
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       0.15
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       fff
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       0.08
+      </td>
+      <td>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <img alt="SUGGESTED PCB LAYOUT TOP VIEW showing the recommended placement of the LQFN package on a PCB. It includes dimensions for pitch (2.50 ± 0.05), lead width (0.25 ± 0.05), and lead spacing (0.70 ± 0.05)." src="171115f072e42b379238ed0dd438e9d7_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <p>
+     SUGGESTED PCB LAYOUT
+     <br/>
+     TOP VIEW
+    </p>
+    <div class="img-alt">
+     SUGGESTED PCB LAYOUT TOP VIEW showing the recommended placement of the LQFN package on a PCB. It includes dimensions for pitch (2.50 ± 0.05), lead width (0.25 ± 0.05), and lead spacing (0.70 ± 0.05).
+    </div>
+   </div>
+   <ol style="list-style-type: none">
+    <li>
+     NOTES:
+    </li>
+    <li>
+     1. DIMENSIONING AND TOLERANCING PER ASME Y14.5M-1994
+    </li>
+    <li>
+     2. ALL DIMENSIONS ARE IN MILLIMETERS
+    </li>
+    <li>
+     3. PRIMARY DATUM -Z- IS SEATING PLANE
+    </li>
+    <li>
+     4. METAL FEATURES UNDER THE SOLDER MASK OPENING N
+     <br/>
+     SO AS NOT TO OBSCURE THESE TERMINALS AND HEAT F
+    </li>
+    <li>
+     5. DETAILS OF PIN 1 IDENTIFIER ARE OPTIONAL, BUT MUST
+     <br/>
+     LOCATED WITHIN THE ZONE INDICATED. THE PIN 1 IDENT
+     <br/>
+     MAY BE EITHER A MOLD OR MARKED FEATURE
+    </li>
+    <li>
+     6. THE EXPOSED HEAT FEATURE MAY HAVE OPTIONAL CORN
+    </li>
+   </ol>
+   <p>
+    LQFN 12 0618 REV B
+   </p>
+  </div>
+  <div class="page" data-page-id="24">
+   <h2>
+    REVISION HISTORY
+   </h2>
+   <table>
+    <tr>
+     <th>
+      REV
+     </th>
+     <th>
+      DATE
+     </th>
+     <th>
+      DESCRIPTION
+     </th>
+     <th>
+      PAGE NUMBER
+     </th>
+    </tr>
+    <tr>
+     <td rowspan="5">
+      A
+     </td>
+     <td rowspan="5">
+      11/19
+     </td>
+     <td>
+      Add AEC-Q100 Qualified
+     </td>
+     <td>
+      1
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Add J-grade and #W parts
+     </td>
+     <td>
+      2
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Modify Top + Bottom Switch Current Limit descriptors
+     </td>
+     <td>
+      3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Note 2: Add J-grade
+     </td>
+     <td>
+      4
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Capacitor changes in various app circuits
+     </td>
+     <td>
+      18-26
+     </td>
+    </tr>
+    <tr>
+     <td rowspan="13">
+      B
+     </td>
+     <td rowspan="13">
+      02/21
+     </td>
+     <td>
+      Updated Feature List
+     </td>
+     <td>
+      1
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Added “Battery Powered Systems” to Application List
+     </td>
+     <td>
+      1
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Added new part numbers and references for LTC3309A-7
+     </td>
+     <td>
+      1, 2, 4
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Added new spec for Soft-Start Duration for LTC3309A-7
+     </td>
+     <td>
+      3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Corrected default conditions for Electrical Characteristics Table
+     </td>
+     <td>
+      3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Updated load and line regulation typical curves
+     </td>
+     <td>
+      7
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Added LTC3309A-7 info to descriptors of start-up waveforms
+     </td>
+     <td>
+      8
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Corrected PGOOD upper threshold hysteresis typical value
+     </td>
+     <td>
+      12
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Changed inductor value formula to approximate value
+     </td>
+     <td>
+      14
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Updated Recommended Inductor Table
+     </td>
+     <td>
+      15
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Added description of allowable modifications to EPAD vias
+     </td>
+     <td>
+      18
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Added mode of operation descriptors to all typical apps
+     </td>
+     <td>
+      21-23, 26
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Updated allowed input voltages in typical apps
+     </td>
+     <td>
+      1, 20-23, 26
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      Updated Related Parts Table
+     </td>
+     <td>
+      26
+     </td>
+    </tr>
+   </table>
+  </div>
+  <div class="page" data-page-id="25">
+   <h2>
+    TYPICAL APPLICATION
+   </h2>
+   <h3>
+    High Efficiency, 2MHz, 0.5V, 6A, Burst Mode Operation
+   </h3>
+   <img alt="Typical application circuit diagram for the LTC3309A. The diagram shows the LTC3309A in a 2mm x 2mm LQFN package. The input voltage is V&lt;sub&gt;IN&lt;/sub&gt; = 2.5V TO 5.5V. The input capacitors are 10µF and 1µF 0201. The output voltage is V&lt;sub&gt;OUT&lt;/sub&gt; = 0.5V, 6A. The output capacitors are 10µF and 1µF 0201. The output inductor is 110nH. The output filter is a 68µF x2 capacitor. The output is connected to a 1MΩ (OPT) resistor. The output is also connected to a 511kΩ resistor. The output is labeled V&lt;sub&gt;OUT&lt;/sub&gt; = 0.5V, 6A. The output is also labeled f&lt;sub&gt;OSC&lt;/sub&gt; = 2MHz. The output is also labeled 3309A TA08." src="90ddb84c323b956e2d50a54d3f870566_img.jpg"/>
+   <div class="img-description" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="img-alt">
+     Typical application circuit diagram for the LTC3309A. The diagram shows the LTC3309A in a 2mm x 2mm LQFN package. The input voltage is V
+     <sub>
+      IN
+     </sub>
+     = 2.5V TO 5.5V. The input capacitors are 10µF and 1µF 0201. The output voltage is V
+     <sub>
+      OUT
+     </sub>
+     = 0.5V, 6A. The output capacitors are 10µF and 1µF 0201. The output inductor is 110nH. The output filter is a 68µF x2 capacitor. The output is connected to a 1MΩ (OPT) resistor. The output is also connected to a 511kΩ resistor. The output is labeled V
+     <sub>
+      OUT
+     </sub>
+     = 0.5V, 6A. The output is also labeled f
+     <sub>
+      OSC
+     </sub>
+     = 2MHz. The output is also labeled 3309A TA08.
+    </div>
+   </div>
+   <h2>
+    RELATED PARTS
+   </h2>
+   <table>
+    <tr>
+     <th>
+      PART NUMBER
+     </th>
+     <th>
+      DESCRIPTION
+     </th>
+     <th>
+      COMMENTS
+     </th>
+    </tr>
+    <tr>
+     <td>
+      LTC3309B
+     </td>
+     <td>
+      5V, 6A Synchronous Step-Down Silent Switcher in 2mm × 2mm LQFN
+     </td>
+     <td>
+      Monolithic Synchronous Step-Down DC/DC Capable of Supplying 6A at Switching Frequencies up to 10MHz. Silent Switcher Architecture for Ultralow EMI Emissions. 2.25V to 5.5V Input Operating Range. 0.5V to V
+      <sub>
+       IN
+      </sub>
+      Output Voltage Range with ±1% Accuracy. PGOOD Indication, RT Programming, SYNC Input. 2mm x 2mm LQFN.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3307A/
+      <br/>
+      LTC3307B
+     </td>
+     <td>
+      5V, 3A Synchronous Step-Down Silent Switcher in 2mm × 2mm LQFN
+     </td>
+     <td>
+      Monolithic Synchronous Step-Down DC/DC Capable of Supplying 3A at Switching Frequencies up to 3MHz/10MHz. Silent Switcher Architecture for Ultralow EMI Emissions. 2.25V to 5.5V Input Operating Range. 0.5V to V
+      <sub>
+       IN
+      </sub>
+      Output Voltage Range with ±1% Accuracy. PGOOD Indication, RT Programming, SYNC Input. 2mm x 2mm LQFN.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3308A/
+      <br/>
+      LTC3308B
+     </td>
+     <td>
+      5V, 4A Synchronous Step-Down Silent Switcher in 2mm × 2mm LQFN
+     </td>
+     <td>
+      Monolithic Synchronous Step-Down DC/DC Capable of Supplying 4A at Switching Frequencies up to 3MHz/10MHz. Silent Switcher Architecture for Ultralow EMI Emissions. 2.25V to 5.5V Input Operating Range. 0.5V to V
+      <sub>
+       IN
+      </sub>
+      Output Voltage Range with ±1% Accuracy. PGOOD Indication, RT Programming, SYNC Input. 2mm x 2mm LQFN.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3315A/
+      <br/>
+      LTC3315B
+     </td>
+     <td>
+      Dual 5V, 2A Synchronous Step-Down DC/DCs in 2mm × 2mm LQFN
+     </td>
+     <td>
+      Dual Monolithic Synchronous Step-Down Voltage Regulators each Capable of Supplying 2A at Switching Frequencies up to 3MHz/10MHz. 2.25V to 5.5V Input Operating Range. 0.5V to V
+      <sub>
+       IN
+      </sub>
+      Output Voltage Range with ±1% Accuracy. PGOOD Indication, SYNC Input. 2mm x 2mm LQFN.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3310/
+      <br/>
+      LTC3310S
+      <br/>
+      LTC3311/
+      <br/>
+      LTC3311S
+     </td>
+     <td>
+      5V, 10A/12.5A Synchronous Step-Down Silent Switcher/Silent Switcher 2 in 3mm × 3mm LQFN
+     </td>
+     <td>
+      Monolithic Synchronous Step-Down DC/DC Capable of Supplying 10A/12.5A at Switching Frequencies up to 5MHz. Silent Switcher Architecture for Ultralow EMI Emissions. 2.25V to 5.5V Input Operating Range. 0.5V to V
+      <sub>
+       IN
+      </sub>
+      Output Voltage Range with ±1% Accuracy. PGOOD Indication, RT Programming, SYNC Input. Configurable for Paralleling Power Stages. 3mm x 3mm LQFN.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3370/
+      <br/>
+      LTC3371
+     </td>
+     <td>
+      4-Channel 8A Configurable 1A Buck DC/DCs
+     </td>
+     <td>
+      Four Synchronous Buck Regulators with 8 × 1A Power Stages. Can Connect Up to Four Power Stages in Parallel to Make a High Current Output (4A Maximum) with a Single Inductor, 8 Output Configurations Possible, Precision PGOOD Indication. LTC3371 Has a Watchdog Timer. LTC3370: 32-Lead 5mm × 5mm QFN. LTC3371: 38-Lead 5mm × 7mm QFN and TSSOP
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3374A
+     </td>
+     <td>
+      8-Channel Parallelable 1A Buck DC/DCs
+     </td>
+     <td>
+      Eight 1A Synchronous Buck Regulators. Can Connect Up to Four Power Stages in Parallel to Make a High Current Output (4A Maximum) with a Single Inductor, 15 Output Configurations Possible. Precision Enable inputs and PGOOD_ALL reporting. 38-Lead 5mm × 7mm QFN and TSSOP
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3375
+     </td>
+     <td>
+      8-Channel Parallelable 1A Buck DC/DCs
+     </td>
+     <td>
+      Eight 1A Synchronous Buck Regulators. Can Connect Up to Four Power Stages in Parallel to Make a High Current Output (4A Maximum) with a Single Inductor, 15 Output Configurations Possible. Precision Enable Inputs and PGOOD_ALL Reporting. I
+      <sup>
+       2
+      </sup>
+      C Programming with a Watchdog Timer and Pushbutton. 48-Lead 7mm × 7mm QFN
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3616
+     </td>
+     <td>
+      5.5V, 6A, 4MHz, Synchronous Step-Down DC/DC Converter
+     </td>
+     <td>
+      95% Efficiency, V
+      <sub>
+       IN
+      </sub>
+      : 2.25 to 5.5V, V
+      <sub>
+       OUT(MIN)
+      </sub>
+      = 0.6V, I
+      <sub>
+       Q
+      </sub>
+      = 75µA, I
+      <sub>
+       SD
+      </sub>
+      &lt; 1µA, 3mm × 5mm QFN-24 Package
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LTC3412A
+     </td>
+     <td>
+      3A, 4MHz, Monolithic Synchronous Step-Down Regulator
+     </td>
+     <td>
+      95% Efficiency, V
+      <sub>
+       IN
+      </sub>
+      : 2.25 to 5.5V, V
+      <sub>
+       OUT(MIN)
+      </sub>
+      = 0.8V, I
+      <sub>
+       Q
+      </sub>
+      = 64µA, I
+      <sub>
+       SD
+      </sub>
+      &lt; 1µA, 4mm × 4mm QFN-16 Package
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>
