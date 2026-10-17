@@ -1,0 +1,29 @@
+{
+ "tables": 42,
+ "rows": 169,
+ "ok": 147,
+ "loose": 19,
+ "issues": [
+  {
+   "line": 1800,
+   "page": 40,
+   "status": "unpaired",
+   "tokens": [],
+   "row": "0x11|INTERFACE_STATUS_A|[7:0]|NOT_READY_ERR|RESERVED||CLOCK_COUNT_ERR|CRC_ERR|RESERVED|REGISTER_PARTIAL_ACCESS_ERR|RESERVED|0x00|R/W||||||||||||"
+  },
+  {
+   "line": 1819,
+   "page": 41,
+   "status": "unpaired",
+   "tokens": [],
+   "row": "0xD2 to 0xE0 by 2|DAC_CHn|[15:8]|DAC_VAL[15:8]||||||||0x0000|R/W|||||||"
+  },
+  {
+   "line": 1829,
+   "page": 41,
+   "status": "unpaired",
+   "tokens": [],
+   "row": "0xEA to 0xF8 by 2|INPUT_CHn|[15:8]|INPUT_VAL[15:8]||||||||0x0000|R/W|||||||"
+  }
+ ]
+}
