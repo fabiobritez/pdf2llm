@@ -1335,5 +1335,44 @@
       "pdf-word-geometry"
     ],
     "severity": "high"
+  },
+  {
+    "id": "ts3a5018-p8-table1-conditions",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 8,
+    "old": "| PARAMETER                                      | TEST CONDITIONS                  | T <sub>A</sub> | V <sub>+</sub> | MIN   | TYP  | MAX  | UNIT |\n|------------------------------------------------|----------------------------------|----------------|----------------|-------|------|------|------|\n| I <sub>NC(OFF)</sub> ,<br>I <sub>NO(OFF)</sub> | NC, NO<br>OFF leakage<br>current | 25°C           | 1.95 V         | –0.25 | 0.03 | 0.25 | μA   |\n|                                                |                                  |                |                | –4.5  |      | 4.5  |      |\n|                                                |                                  | Full           | 0 V            | –0.4  | 0.01 | 0.4  |      |\n|                                                |                                  |                |                | –6.5  |      | 6.5  |      |\n| I <sub>COM(OFF)</sub>                          | COM<br>OFF leakage<br>current    | 25°C           | 1.95 V         | –0.4  | 0.02 | 0.4  | μA   |\n|                                                |                                  |                |                | –0.9  |      | 0.9  |      |\n|                                                |                                  | Full           | 0 V            | –0.4  | 0.02 | 0.4  |      |\n|                                                |                                  |                |                | –4.5  |      | 4.5  |      |\n| I <sub>NC(ON)</sub> ,<br>I <sub>NO(ON)</sub>   | NC, NO<br>ON leakage<br>current  | 25°C           | 1.95 V         | –2.   | 0.02 | 2    | μA   |\n|                                                |                                  | Full           |                | –2    | 0.02 | 2    |      |\n| I <sub>COM(ON)</sub>                           | COM<br>ON leakage<br>current     | 25°C           | 1.95 V         | –4.5  |      | 4.5  | μA   |\n|                                                |                                  | Full           |                |       |      |      |      |\n| V <sub>IH</sub>                                | Input logic high                 | Full           | 1.95 V         | 1     |      | 3.6  | V    |\n| V <sub>IL</sub>                                | Input logic low                  | Full           | 1.95 V         | 0     |      | 0.4  | V    |\n| I <sub>IH</sub> , I <sub>IL</sub>              | Input leakage<br>current         | 25°C           | 1.95 V         | –0.1  | 0.01 | 0.1  | μA   |\n|                                                |                                  | Full           |                | –2.1  |      | 2.1  |      |",
+    "new": "| PARAMETER | | TEST CONDITIONS | T <sub>A</sub> | V <sub>+</sub> | MIN | TYP | MAX | UNIT |\n|-|-|-|-|-|-|-|-|-|\n| I <sub>NC(OFF)</sub> ,<br>I <sub>NO(OFF)</sub> | NC, NO<br>OFF leakage<br>current | V <sub>NC</sub> or V <sub>NO</sub> = 0.3 V, V <sub>COM</sub> = 1.65 V, or V <sub>NC</sub> or V <sub>NO</sub> = 1.65 V, V <sub>COM</sub> = 0.3 V, Switch OFF, see Figure 18 | 25°C | 1.95 V | –0.25 | 0.03 | 0.25 | μA |\n|  |  |  | Full |  | –4.5 |  | 4.5 |  |\n|  |  | V <sub>NC</sub> or V <sub>NO</sub> = 1.95 V to 0 V, V <sub>COM</sub> = 0 V to 1.95 V, or V <sub>NC</sub> or V <sub>NO</sub> = 0 V to 1.95 V, V <sub>COM</sub> = 1.95 V to 0 V, Switch OFF, see Figure 18 | 25°C | 0 V | –0.4 | 0.01 | 0.4 |  |\n|  |  |  | Full |  | –6.5 |  | 6.5 |  |\n| I <sub>COM(OFF)</sub> | COM<br>OFF leakage<br>current | V <sub>COM</sub> = 1.65 V, V <sub>NC</sub> or V <sub>NO</sub> = 0.3 V, or V <sub>COM</sub> = 0.3 V, V <sub>NC</sub> or V <sub>NO</sub> = 1.65 V, Switch OFF, see Figure 18 | 25°C | 1.95 V | –0.4 | 0.02 | 0.4 | μA |\n|  |  |  | Full |  | –0.9 |  | 0.9 |  |\n|  |  | V <sub>COM</sub> = 0 V to 1.95 V, V <sub>NC</sub> or V <sub>NO</sub> = 1.95 V to 0 V, or V <sub>COM</sub> = 1.95 V to 0, V <sub>NC</sub> or V <sub>NO</sub> = 0 to 1.95 V, Switch OFF, see Figure 18 | 25°C | 0 V | –0.4 | 0.02 | 0.4 |  |\n|  |  |  | Full |  | –4.5 |  | 4.5 |  |\n| I <sub>NC(ON)</sub> ,<br>I <sub>NO(ON)</sub> | NC, NO<br>ON leakage<br>current | V <sub>NC</sub> or V <sub>NO</sub> = 0.3 V, V <sub>COM</sub> = Open, or V <sub>NC</sub> or V <sub>NO</sub> = 1.65 V, V <sub>COM</sub> = Open, Switch ON, see Figure 19 | 25°C | 1.95 V | –2. | 0.02 | 2 | μA |\n|  |  |  | Full |  | –2 | 0.02 | 2 |  |\n| I <sub>COM(ON)</sub> | COM<br>ON leakage<br>current | V <sub>COM</sub> = 0.3 V, V <sub>NC</sub> or V <sub>NO</sub> = Open, or V <sub>COM</sub> = 1.65 V, V <sub>NC</sub> or V <sub>NO</sub> = Open, Switch ON, see Figure 19 | 25°C | 1.95 V | –4.5 |  | 4.5 | μA |\n|  |  |  | Full |  |  |  |  |  |\n| V <sub>IH</sub> | Input logic high | V <sub>I</sub> = V <sub>+</sub> or GND | Full | 1.95 V | 1 |  | 3.6 | V |\n| V <sub>IL</sub> | Input logic low |  | Full | 1.95 V | 0 |  | 0.4 | V |\n| I <sub>IH</sub> , I <sub>IL</sub> | Input leakage<br>current | V <sub>I</sub> = V <sub>+</sub> or 0 | 25°C | 1.95 V | –0.1 | 0.01 | 0.1 | μA |\n|  |  |  | Full |  | –2.1 |  | 2.1 |  |",
+    "evidence": "PDF p8 word geometry (TEST CONDITIONS at x≈180/278, TA x≈372, V+ x≈401): md had no conditions column, so the parameter description sat in TEST CONDITIONS and every condition was lost; the 0 V rows were tagged 'Full' instead of 25°C (Full rows follow each 25°C row). Values unchanged except row assignment.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ts3a5018-p8-table2-conditions",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 8,
+    "old": "| PARAMETER        | TEST CONDITIONS | T <sub>A</sub> | V <sub>+</sub> | MIN | TYP | MAX | UNIT |\n|------------------|-----------------|----------------|----------------|-----|-----|-----|------|\n| t <sub>ON</sub>  | Turnon time     | 25°C           | 3.3 V          | 2.5 | 3.5 | 8   | ns   |\n|                  |                 | Full           | 3 V to 3.6 V   | 2.5 |     | 9   |      |\n| t <sub>OFF</sub> | Turnoff time    | 25°C           | 3.3 V          | 0.5 | 2   | 6.5 | ns   |\n|                  |                 | Full           | 3 V to 3.6 V   | 0.5 |     | 7   |      |",
+    "new": "| PARAMETER | | TEST CONDITIONS | T <sub>A</sub> | V <sub>+</sub> | MIN | TYP | MAX | UNIT |\n|-|-|-|-|-|-|-|-|-|\n| t <sub>ON</sub> | Turnon time | V <sub>COM</sub> = 2 V, R <sub>L</sub> = 300 Ω, C <sub>L</sub> = 35 pF, see Figure 21 | 25°C | 3.3 V | 2.5 | 3.5 | 8 | ns |\n|  |  |  | Full | 3 V to 3.6 V | 2.5 |  | 9 |  |\n| t <sub>OFF</sub> | Turnoff time | V <sub>COM</sub> = 2 V, R <sub>L</sub> = 300 Ω, C <sub>L</sub> = 35 pF, see Figure 21 | 25°C | 3.3 V | 0.5 | 2 | 6.5 | ns |\n|  |  |  | Full | 3 V to 3.6 V | 0.5 |  | 7 |  |",
+    "evidence": "PDF p8: Switching Characteristics 3.3-V: conditions 'VCOM = 2 V, RL = 300 Ω, CL = 35 pF, see Figure 21' were lost; parameter description moved out of TEST CONDITIONS.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ts3a5018-p8-table3-conditions",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 8,
+    "old": "| PARAMETER        | TEST CONDITIONS | T <sub>A</sub> | V <sub>+</sub> | MIN | TYP | MAX  | UNIT |\n|------------------|-----------------|----------------|----------------|-----|-----|------|------|\n| t <sub>ON</sub>  | Turnon time     | 25°C           | 2.5 V          | 2.5 | 5   | 9.5  | ns   |\n|                  |                 | Full           | 2.3 V to 2.7 V | 2.5 |     | 10.5 |      |\n| t <sub>OFF</sub> | Turnoff time    | 25°C           | 2.5 V          | 0.5 | 3   | 7.5  | ns   |\n|                  |                 | Full           | 2.3 V to 2.7 V | 0.5 |     | 9    |      |",
+    "new": "| PARAMETER | | TEST CONDITIONS | T <sub>A</sub> | V <sub>+</sub> | MIN | TYP | MAX | UNIT |\n|-|-|-|-|-|-|-|-|-|\n| t <sub>ON</sub> | Turnon time | V <sub>COM</sub> = 1.5 V, R <sub>L</sub> = 300 Ω, C <sub>L</sub> = 35 pF, see Figure 21 | 25°C | 2.5 V | 2.5 | 5 | 9.5 | ns |\n|  |  |  | Full | 2.3 V to 2.7 V | 2.5 |  | 10.5 |  |\n| t <sub>OFF</sub> | Turnoff time | V <sub>COM</sub> = 1.5 V, R <sub>L</sub> = 300 Ω, C <sub>L</sub> = 35 pF, see Figure 21 | 25°C | 2.5 V | 0.5 | 3 | 7.5 | ns |\n|  |  |  | Full | 2.3 V to 2.7 V | 0.5 |  | 9 |  |",
+    "evidence": "PDF p8: Switching Characteristics 2.5-V: conditions 'VCOM = 1.5 V, RL = 300 Ω, CL = 35 pF, see Figure 21' were lost; parameter description moved out of TEST CONDITIONS.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
   }
 ]
