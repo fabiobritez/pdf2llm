@@ -3,20 +3,26 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
+import math
+import unicodedata
 from decimal import Decimal, InvalidOperation
 import html
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
-import subprocess
 import sys
 
 import pymupdf
 
 ROOT = Path(__file__).resolve().parents[1]
-WORD_THRESHOLD = 0.85
-NUMBER_THRESHOLD = 0.80
+WORD_THRESHOLD = NUMBER_THRESHOLD = 0.90
+MIN_MISSING_WORDS, MIN_MISSING_NUMBERS = 8, 3
+MARGIN_FRACTION, RECURRENCE_FRACTION = 0.07, 0.40
+BAD_TEXT_FRACTION, BAD_MIN_TEXT_PAGES = 0.20, 3
+BAD_TABLE_ROWS = 8
+WORD_LIST_LIMIT = 30
 ALIGNMENT_MARGIN = 0.18
 LIST_LIMIT = 40
 ISSUE_TYPES = ("missing unit", "unit in wrong column", "column shift", "ordering", "ragged row")
@@ -28,16 +34,34 @@ UNIT = re.compile(r"(?<![A-Za-z])(?:ppm/degC|[mun]?V/[mun]?s|[mun]?V/V|V/V|[mun]
 
 def normalize(text: str) -> str:
     """Flatten common Markdown, HTML and LaTeX typography on either side."""
-    text = html.unescape(text)
+    text = unicodedata.normalize("NFKC", html.unescape(text))
+    text = re.sub(r"(?<=\w)\u00ad\s*\n\s*(?=\w)", "", text)
+    text = re.sub(r"\s*<(?:sub|sup)>\s*", "", text, flags=re.I)
+    text = re.sub(r"\s*</(?:sub|sup)>", "", text, flags=re.I)
+    greek = {"α": "alpha", "β": "beta", "γ": "gamma", "δ": "delta",
+             "Δ": "delta", "θ": "theta", "λ": "lambda", "π": "pi", "τ": "tau", "φ": "phi",
+             "ε": "epsilon", "η": "eta", "σ": "sigma", "ρ": "rho", "ω": "omega",
+             "ζ": "zeta", "κ": "kappa", "ν": "nu", "ξ": "xi", "ψ": "psi"}
+    for symbol, name in greek.items():
+        text = text.replace(symbol, name)
+        text = text.replace("\\" + name.capitalize(), name).replace("\\" + name, name)
+    for command, symbol in (("leq", "<="), ("geq", ">="), ("le", "<="),
+                            ("ge", ">="), ("approx", "~"), ("sim", "~"), ("cdot", "*")):
+        text = re.sub(r"\\" + command + r"\b", lambda m: symbol, text)
+    text = text.translate(str.maketrans({"≤": "<=", "≥": ">=", "≈": "~", "∼": "~",
+                                        "‘": "'", "’": "'", "“": '\"', "”": '\"'}))
     text = re.sub(r"<br\s*/?>", " ", text, flags=re.I)
     text = re.sub(r"</?[A-Za-z][^>]*>", " ", text)
     for old, new in ((r"\mu", "u"), ("μ", "u"), ("µ", "u"),
                      (r"\pm", "+-"), ("±", "+-"), (r"\circ", "deg"),
                      ("°", "deg"), (r"\times", "x"), ("×", "x"),
-                     (r"\Omega", "ohm"), ("Ω", "ohm")):
+                     (r"\Omega", "ohm"), ("Ω", "ohm"), ("Ω", "ohm")):
         text = text.replace(old, new)
+    text = re.sub(r"\.{2,}", " ", text)
     text = text.translate(str.maketrans({"–": "-", "−": "-", "‑": "-", "\u00ad": ""}))
-    text = re.sub(r"([A-Za-z])-\s*\n\s*([a-z])", r"\1\2", text)
+    text = re.sub(r"([A-Za-z])-\s*\n\s*([A-Za-z])", r"\1\2", text)
+    text = re.sub(r"(?<=[A-Za-z])-(?=[A-Za-z])", "", text)
+    text = re.sub(r"(?<=\d)[ \t]+\.[ \t]+(?=\d)", ".", text)
     text = re.sub(r"\\(?:text|mathrm|mathbf|mathit|operatorname)\s*", "", text)
     text = re.sub(r"\\(?:left|right|quad|qquad)\b|\\[,;!]", " ", text)
     text = re.sub(r"[\^_{}$]", "", text)
@@ -70,7 +94,8 @@ def numbers(text: str) -> set[str]:
 
 def tokens(text: str) -> tuple[set[str], set[str]]:
     text = normalize(text)
-    return set(re.findall(r"[a-z]{3,}", text.lower())), numbers(text)
+    numeric_text = re.sub(r"(?<=\d)\s*\|\s*(?=%)", " ", text)
+    return set(re.findall(r"[a-z]{3,}", text.lower())), {n.rstrip("%") for n in numbers(numeric_text)}
 
 
 def coverage(source: set[str], target: set[str]) -> float:
@@ -95,21 +120,91 @@ def split_pages(text: str) -> tuple[dict[int, str], list[str]]:
     return pages, warnings
 
 
-def pdf_text(page: pymupdf.Page, path: Path, index: int) -> str:
-    text = page.get_text()
-    # Poppler only for empty/broken extraction, keeping ordinary runs fast.
-    if len(re.findall(r"[A-Za-z0-9]", text)) < 30:
-        binary = Path.home() / ".local/bin/pdftotext"
-        if binary.is_file():
-            try:
-                other = subprocess.run([str(binary), "-layout", "-f", str(index + 1),
-                                        "-l", str(index + 1), str(path), "-"],
-                                       capture_output=True, text=True, timeout=15, check=True).stdout
-                if len(other.strip()) > len(text.strip()):
-                    text = other
-            except (OSError, subprocess.SubprocessError):
-                pass
-    return text
+def line_key(text: str) -> str:
+    return re.sub(r"\d", "#", normalize(text).lower())
+
+
+def figure_regions(page, lines):
+    """Cluster vector paths; reject table grids using headers and long rules."""
+    drawings = page.get_drawings()
+    regions = []
+    for rect in page.cluster_drawings(drawings=drawings):
+        if rect.width < 35 or rect.height < 30:
+            continue
+        inside = [text for box, text in lines if rect.intersects(box)]
+        labels = set(re.findall(r"\b(?:MIN|TYP|MAX|NOM|UNIT|UNITS|SYMBOL|PARAMETER|CONDITIONS|MANUFACTURER|CAPACITANCE|SEL|FIELD)\b", " ".join(inside).upper()))
+        if len(labels & {"MIN", "TYP", "MAX", "NOM", "UNIT", "UNITS", "SYMBOL", "PARAMETER", "CONDITIONS", "MANUFACTURER", "CAPACITANCE", "SEL", "FIELD"}) >= 2:
+            continue
+        horizontal, vertical = 0, 0
+        for drawing in drawings:
+            if not rect.intersects(drawing['rect']):
+                continue
+            for item in drawing['items']:
+                if item[0] == 'l':
+                    a, b = item[1:3]
+                    horizontal += abs(a.y - b.y) < 1 and abs(a.x - b.x) > rect.width * .70
+                    vertical += abs(a.x - b.x) < 1 and abs(a.y - b.y) > rect.height * .70
+        if horizontal >= 3 and vertical >= 2 and sum(len(t.split()) >= 4 for t in inside) >= 3:
+            continue
+        regions.append(rect + (-42, -28, 42, 28))
+    regions.extend(pymupdf.Rect(item['bbox']) for item in page.get_image_info()
+                   if pymupdf.Rect(item['bbox']).get_area() > 900)
+    return regions
+
+
+def extract_document(document):
+    """Keep geometry until boilerplate and figure assignment are complete.
+
+    Counts are token occurrences, unlike unique-token coverage denominators.
+    Removal categories are exclusive: margin, recurrence, boilerplate, figure, text.
+    """
+    all_lines = []
+    for page in document:
+        lines = []
+        for block in page.get_text("dict")["blocks"]:
+            for line in block.get('lines', []):
+                lines.append((pymupdf.Rect(line['bbox']), ''.join(s['text'] for s in line['spans'])))
+        all_lines.append(lines)
+    counts = Counter(key for lines in all_lines for key in {line_key(t) for _, t in lines} if key)
+    repeated = {key for key, count in counts.items()
+                if len(document) >= 3 and count >= math.ceil(len(document) * RECURRENCE_FRACTION)}
+    result = []
+    for page, lines in zip(document, all_lines):
+        regions = figure_regions(page, lines)
+        page_words = page.get_text('words')
+        buckets = {key: [] for key in ('margin', 'repeated', 'boilerplate', 'figure', 'text')}
+        for box, text in lines:
+            if box.y0 < page.rect.height * MARGIN_FRACTION or box.y1 > page.rect.height * (1 - MARGIN_FRACTION):
+                kind = 'margin'
+            elif line_key(text) in repeated:
+                kind = 'repeated'
+            elif re.search(r'(?:www\.(?:ti|analog|linear)\.com|submit document(?:ation)? feedback|product folder links|copyright.*(?:texas instruments|analog devices))', text, re.I):
+                kind = 'boilerplate'
+            else:
+                kind = 'text'
+            if kind != 'text':
+                buckets[kind].append(text)
+                continue
+            # Assign individual words so nearby captions/prose remain visible.
+            for word in page_words:
+                if not (word[0] >= box.x0 - .1 and word[1] >= box.y0 - .1
+                        and word[2] <= box.x1 + .1 and word[3] <= box.y1 + .1):
+                    continue
+                center = pymupdf.Rect(word[:4]).tl + (pymupdf.Rect(word[:4]).br - pymupdf.Rect(word[:4]).tl) * .5
+                target = 'figure' if any(center in r for r in regions) else 'text'
+                if len(re.findall(r'[A-Za-z]{2,}', text)) >= 8 or re.match(r'^(?:Figure|Table)\s+\d', text):
+                    target = 'text'
+                buckets[target].append(word[4])
+            buckets['text'].append('\n')
+        removed = {}
+        for kind in ('margin', 'repeated', 'boilerplate', 'figure'):
+            value = normalize(' '.join(buckets[kind]))
+            removed[kind] = dict(words=len(re.findall(r"[a-z]{3,}", value.lower())),
+                                 numbers=len(list(NUMBER.finditer(value))))
+        result.append(dict(text=' '.join(buckets['text']).replace(' \n ', '\n'),
+                           figure=' '.join(buckets['figure']), removed=removed,
+                           figure_regions=[list(r) for r in regions]))
+    return result
 
 
 def figure_reasons(pdf: str, md: str) -> list[str]:
@@ -233,7 +328,7 @@ def symbolic(cell: str) -> bool:
     # VREF, V_IN, V+ and GND are legitimate limits. An equals sign, device
     # selector (A1), range prose or an unknown word remains a shift candidate.
     expression = re.sub(r"(?:[A-Z]*V[A-Za-z0-9]*|[IRCTf][A-Z][A-Za-z0-9]*|t\d+|GND)", "1", compact)
-    return expression != compact and bool(re.fullmatch(r"[\d.()+*/x+-]+", expression))
+    return expression != compact and bool(re.fullmatch(r"[\d.()+*/x+%\-]+", expression))
 
 
 def table_issues(text: str) -> list[dict]:
@@ -243,7 +338,7 @@ def table_issues(text: str) -> list[dict]:
     def emit(kind, row, detail):
         line, cells = row
         page = next((p for n, p in reversed(marker_lines) if n <= line), 1)
-        issues.append(dict(type=kind, page=page, line=line, detail=detail,
+        issues.append(dict(type=kind, confidence="high" if kind in ("column shift", "unit in wrong column") else "review", page=page, line=line, detail=detail,
                            row=(" | ".join(cells))[:240]))
 
     for block in table_blocks(text):
@@ -266,8 +361,8 @@ def table_issues(text: str) -> list[dict]:
             # Build parameter groups before checking units: a later continuation
             # can carry the shared unit. Conditions do not define a parameter.
             parameter_cols = [0] if min(value_cols) > 0 else []
-            if min(value_cols) > 1 and not labels[1]:
-                parameter_cols.append(1)
+            # First column defines the parameter; blank continuation rows inherit
+            # units even when a condition column changes.
             parameter_groups, group, previous = [], [], None
             for row, cells in rows:
                 if len(cells) != width:
@@ -284,12 +379,19 @@ def table_issues(text: str) -> list[dict]:
                 parameter_groups.append(group)
             for group in parameter_groups:
                 has_unit = any(cells[i] for _, cells in group for i in unit_cols)
+                inline_unit = any(UNIT.search(cells[i]) for _, cells in group for i in value_cols)
+                # Entire timing tables often share the first printed unit.
+                shared_unit = any(cells[i] for _, cells in rows for i in unit_cols)
+                has_unit = has_unit or inline_unit or (shared_unit and all(
+                    not any(cells[j] for j in parameter_cols) or
+                    re.match(r"t[A-Z]", cells[0]) for _, cells in group))
                 for row, cells in group:
                     values = [cells[i] for i in value_cols]
                     if unit_cols and not has_unit and any(numbers(v) for v in values):
                         emit("missing unit", row, "No unit in this parameter group")
                     misplaced = [labels[i] for i in value_cols
-                                 if UNIT.search(cells[i]) and not symbolic(cells[i])]
+                                 if UNIT.search(cells[i]) and not symbolic(cells[i])
+                                 and not re.fullmatch(r"[+\-\d.% ]+", cells[i])]
                     misplaced += [labels[i] for i in unit_cols
                                   if re.search(r"(?<![A-Za-z])[-+]?\d", re.sub(r"<su[bp]>.*?</su[bp]>", "", row[1][i], flags=re.I))]
                     if misplaced:
@@ -336,7 +438,8 @@ def validate(name: str) -> dict:
     text = md_path.read_text(encoding="utf-8")
     md_pages, warnings = split_pages(text)
     with pymupdf.open(ROOT / f"{name}.pdf") as document:
-        pdf_pages = [pdf_text(page, ROOT / f"{name}.pdf", i) for i, page in enumerate(document)]
+        extracted = extract_document(document)
+        pdf_pages = [p["text"] for p in extracted]
     pdf_tokens = [tokens(page) for page in pdf_pages]
     pages = []
     for index in sorted(set(range(len(pdf_pages))) | set(md_pages)):
@@ -353,9 +456,9 @@ def validate(name: str) -> dict:
             reasons = []
         if index >= len(pdf_pages):
             flags.append("Markdown page has no PDF page")
-        if not source_words and not source_nums:
+        if index < len(extracted) and not any(extracted[index]["removed"][k][t] for k in extracted[index]["removed"] for t in ("words", "numbers")) and not source_words and not source_nums:
             flags.append("no extractable PDF tokens")
-        if source_words or source_nums:
+        if len(source_words) >= 20:
             own_score = (wc + nc) / 2
             for neighbor in (index - 1, index + 1):
                 if 0 <= neighbor < len(pdf_tokens):
@@ -363,12 +466,23 @@ def validate(name: str) -> dict:
                     score = (coverage(nw, words) + coverage(nn, nums)) / 2
                     if len(nw) >= 10 and score >= 0.65 and score > own_score + ALIGNMENT_MARGIN:
                         flags.append(f"alignment: Markdown matches PDF page {neighbor + 1} better ({score:.0%} vs {own_score:.0%})")
-        low = wc < WORD_THRESHOLD or nc < NUMBER_THRESHOLD
-        classification = "figure" if reasons else "text loss" if low else "text"
-        if flags and not reasons:
-            classification = "text loss"
+        missing_words, missing_nums = source_words - words, source_nums - nums
+        low = ((wc < WORD_THRESHOLD and len(missing_words) >= MIN_MISSING_WORDS)
+               or (nc < NUMBER_THRESHOLD and len(missing_nums) >= MIN_MISSING_NUMBERS))
+        classification = "text loss" if low else "text" if source_words or source_nums else "figure"
+        geometry = extracted[index] if index < len(extracted) else dict(figure='', removed={}, figure_regions=[])
+        fw, fn = tokens(geometry['figure'])
+        aw, an = tokens(' '.join(m[1] for m in IMAGE.finditer(raw)))
+        if "no extractable PDF tokens" in flags:
+            classification = "unextractable"
         pages.append(dict(page=index + 1, word_coverage=wc, number_coverage=nc,
                           pdf_word_tokens=len(source_words), pdf_number_tokens=len(source_nums),
+                          missing_words=sorted(missing_words)[:WORD_LIST_LIMIT], missing_word_count=len(missing_words),
+                          removed_tokens=geometry['removed'], figure_regions=geometry['figure_regions'],
+                          figure_word_tokens=len(fw), figure_number_tokens=len(fn),
+                          figure_alt_word_coverage=coverage(fw, aw), figure_alt_number_coverage=coverage(fn, an),
+                          figure_missing_words=sorted(fw - aw)[:WORD_LIST_LIMIT],
+                          figure_missing_numbers=sorted(fn - an)[:LIST_LIMIT],
                           missing_numbers=sorted(source_nums - nums)[:LIST_LIMIT],
                           missing_number_count=len(source_nums - nums),
                           extra_numbers=sorted(nums - source_nums)[:LIST_LIMIT],
@@ -378,14 +492,16 @@ def validate(name: str) -> dict:
     issues = table_issues(text)
     nonfigure = [p for p in pages if p['classification'] != "figure"]
     low_count = sum(p['classification'] == "text loss" for p in nonfigure)
-    severe = sum(min(p['word_coverage'], p['number_coverage']) < 0.50 for p in nonfigure)
-    status = "BAD" if severe or low_count >= max(3, len(nonfigure) * 0.20) else "REVIEW" if low_count or issues or warnings or any(p['flags'] for p in pages) else "OK"
+    high_rows = len({i['line'] for i in issues if i['confidence'] == 'high'})
+    status = ("BAD" if low_count >= max(BAD_MIN_TEXT_PAGES, len(pages) * BAD_TEXT_FRACTION)
+              or high_rows >= BAD_TABLE_ROWS else "REVIEW"
+              if low_count or issues or warnings or any(p['flags'] for p in pages) else "OK")
     mean = lambda items, key: sum(p[key] for p in items) / len(items) if items else None
     return dict(name=name, markdown=str(md_path.relative_to(ROOT)), pdf_pages=len(pdf_pages),
                 markdown_pages=len(md_pages), warnings=warnings, pages=pages, table_issues=issues,
                 summary=dict(pages=len(pdf_pages), mean_word_coverage=mean(pages, 'word_coverage'),
                              mean_number_coverage=mean(nonfigure, 'number_coverage'),
-                             low_coverage_text_pages=low_count,
+                             low_coverage_text_pages=low_count, high_confidence_table_rows=high_rows,
                              table_issue_counts={kind: sum(i['type'] == kind for i in issues) for kind in ISSUE_TYPES},
                              status=status))
 
@@ -397,21 +513,24 @@ def percent(value):
 def report_md(result: dict) -> str:
     summary = result['summary']
     lines = [f"# {result['name']} validation", "", f"Status: **{summary['status']}**. PDF pages: {result['pdf_pages']}; Markdown pages: {result['markdown_pages']}.",
-             f"Mean word coverage: {percent(summary['mean_word_coverage'])}; mean number coverage (non-figure): {percent(summary['mean_number_coverage'])}.",
+             f"Mean word coverage: {percent(summary['mean_word_coverage'])}; mean number coverage (filtered text): {percent(summary['mean_number_coverage'])}.",
              f"Low-coverage text pages: {summary['low_coverage_text_pages']}. Table issues: {len(result['table_issues'])}.", "",
-             "Coverage uses unique normalized token sets. Page numbers below are 1-based; Markdown markers are 0-based. Figure classification is heuristic. Extra numbers are possible OCR errors, not proof of hallucination.", ""]
+             "Coverage uses unique normalized token sets. Page numbers below are 1-based; Markdown markers are 0-based. Figure regions are heuristic; text loss on mixed pages still counts. Extra numbers are possible OCR errors, not proof of hallucination.", ""]
     lines += [f"- {w}" for w in result['warnings']]
-    lines += ["", "| Page | Words | Numbers | Classification | Alt-only numbers | Missing / extra | Flags |",
-              "| --- | --- | --- | --- | --- | --- | --- |"]
+    lines += ["", "| Page | Words | Numbers | Classification | Alt-only numbers | Missing / extra | Removed margin/repeated/boilerplate/figure (words,numbers) | Flags |",
+              "| --- | --- | --- | --- | --- | --- | --- | --- |"]
     for page in result['pages']:
         flags = "; ".join(page['flags'] + page['figure_reasons'])
-        lines.append(f"| {page['page']} | {percent(page['word_coverage'])} | {percent(page['number_coverage'])} | {page['classification']} | {page['alt_only_number_count']} | {page['missing_number_count']} / {page['extra_number_count']} | {flags} |")
-    lines += ["", "## Number differences", "", "Lists are sorted and capped at 40 per page; counts above are uncapped.", ""]
+        removed = ' / '.join(f"{v['words']},{v['numbers']}" for v in page['removed_tokens'].values())
+        lines.append(f"| {page['page']} | {percent(page['word_coverage'])} | {percent(page['number_coverage'])} | {page['classification']} | {page['alt_only_number_count']} | {page['missing_number_count']} / {page['extra_number_count']} | {removed} | {flags} |")
+    lines += ["", "## Token differences", "", "Lists are sorted; words capped at 30, numbers at 40. Counts are uncapped. Removed counts are occurrences; coverage uses unique tokens.", ""]
     for page in result['pages']:
-        if page['missing_numbers'] or page['extra_numbers'] or page['alt_only_numbers']:
+        if page['missing_words'] or page['missing_numbers'] or page['extra_numbers'] or page['alt_only_numbers']:
             lines += [f"### Page {page['page']}", "",
-                      "Missing: " + (", ".join(page['missing_numbers']) or "none"), "",
+                      "Missing words: " + (", ".join(page["missing_words"]) or "none"), "",
+                      "Missing numbers: " + (", ".join(page['missing_numbers']) or "none"), "",
                       "Extra: " + (", ".join(page['extra_numbers']) or "none"), "",
+                      f"Figure tokens: {page['figure_word_tokens']} words, {page['figure_number_tokens']} numbers; alt coverage {percent(page['figure_alt_word_coverage'])} / {percent(page['figure_alt_number_coverage'])}.", "",
                       "Only in image alt text: " + (", ".join(page['alt_only_numbers']) or "none"), ""]
     lines += ["## Table issues", ""]
     for issue in result['table_issues']:
@@ -452,8 +571,8 @@ def main() -> int:
         (out / f"{name}.md").write_text(report_md(result), encoding="utf-8")
         results.append(result)
         print(f"{name}: {result['summary']['status']} ({result['pdf_pages']} pages, {len(result['table_issues'])} table issues)", flush=True)
-    lines = ["# Datasheet validation summary", "", "Means use unique normalized token sets; number means exclude figure pages.",
-             f"Low coverage: words < {WORD_THRESHOLD:.0%} or numbers < {NUMBER_THRESHOLD:.0%} on non-figure pages.", "",
+    lines = ["# Datasheet validation summary", "", "Means use unique normalized token sets after margin, recurring-line and figure removal.",
+             f"Text loss: words < {WORD_THRESHOLD:.0%} with ≥{MIN_MISSING_WORDS} missing, or numbers < {NUMBER_THRESHOLD:.0%} with ≥{MIN_MISSING_NUMBERS} missing. BAD: ≥20% text-loss pages (minimum 3), or ≥8 high-confidence table rows.", "",
              "| Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Status |",
              "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     for result in results:
