@@ -1994,5 +1994,29 @@
       "pdf-geometry"
     ],
     "severity": "high"
+  },
+  {
+    "id": "ad5711r-ad5710r-p27-figure57-caption",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 27,
+    "old": "{27}------------------------------------------------\n\n# DAC CORE FUNCTIONS",
+    "new": "Figure 57. MUX_OUT Configuration for Four Devices with Different Device Addresses\n\n{27}------------------------------------------------\n\n# DAC CORE FUNCTIONS",
+    "evidence": "PDF text p27 (pymupdf block y=426): 'Figure 57. MUX_OUT Configuration for Four Devices with Different Device Addresses'. The page is one vector figure; the md had its image but no caption.",
+    "sources": [
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p55-figure10-26-caption",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 55,
+    "old": "{55}------------------------------------------------\n\n#### 10.4.1 Design Requirements For Two Stacked Devices",
+    "new": "**Figure 10-26. Stacking Two Devices for up to 50 A**\n\n{55}------------------------------------------------\n\n#### 10.4.1 Design Requirements For Two Stacked Devices",
+    "evidence": "PDF text p55 (pymupdf block y=681): 'Figure 10-26. Stacking Two Devices for up to 50 A'. The md had the figure image but no caption.",
+    "sources": [
+      "pdf-text"
+    ],
+    "severity": "low"
   }
 ]
