@@ -10648,10 +10648,13 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 29,
       "out_of_scope": 1218,
-      "unverifiable": 34,
+      "unverifiable": 5,
+      "unverifiable_no_match": 4,
+      "unverifiable_prose_ambiguous": 1,
       "value_matched": 47,
-      "verified_ok": 126
+      "verified_ok": 155
     },
     "high_confidence_table_rows": 1,
     "low_coverage_text_pages": 0,

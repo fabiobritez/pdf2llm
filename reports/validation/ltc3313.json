@@ -2790,10 +2790,11 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 2,
       "out_of_scope": 122,
-      "unverifiable": 2,
+      "unverifiable": 0,
       "value_matched": 6,
-      "verified_ok": 42
+      "verified_ok": 44
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,

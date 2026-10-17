@@ -6195,10 +6195,15 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 16,
       "out_of_scope": 296,
-      "unverifiable": 55,
+      "unverifiable": 39,
+      "unverifiable_no_match": 1,
+      "unverifiable_no_schema": 31,
+      "unverifiable_prose_ambiguous": 4,
+      "unverifiable_value_ambiguous": 3,
       "value_matched": 39,
-      "verified_ok": 151
+      "verified_ok": 167
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 2,

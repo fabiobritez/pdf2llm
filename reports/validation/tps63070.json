@@ -3545,10 +3545,12 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 4,
       "out_of_scope": 115,
-      "unverifiable": 26,
+      "unverifiable": 22,
+      "unverifiable_no_schema": 22,
       "value_matched": 29,
-      "verified_ok": 67
+      "verified_ok": 71
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,

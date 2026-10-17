@@ -2570,10 +2570,11 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 8,
       "out_of_scope": 153,
-      "unverifiable": 8,
+      "unverifiable": 0,
       "value_matched": 31,
-      "verified_ok": 55
+      "verified_ok": 63
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,

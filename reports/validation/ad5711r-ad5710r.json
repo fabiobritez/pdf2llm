@@ -5653,10 +5653,14 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 30,
       "out_of_scope": 254,
-      "unverifiable": 48,
+      "unverifiable": 18,
+      "unverifiable_no_match": 14,
+      "unverifiable_prose_ambiguous": 3,
+      "unverifiable_value_ambiguous": 1,
       "value_matched": 46,
-      "verified_ok": 122
+      "verified_ok": 152
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 2,

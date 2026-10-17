@@ -4394,10 +4394,13 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
+      "order_matched": 23,
       "out_of_scope": 262,
-      "unverifiable": 29,
+      "unverifiable": 6,
+      "unverifiable_no_match": 4,
+      "unverifiable_value_ambiguous": 2,
       "value_matched": 17,
-      "verified_ok": 108
+      "verified_ok": 131
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,
