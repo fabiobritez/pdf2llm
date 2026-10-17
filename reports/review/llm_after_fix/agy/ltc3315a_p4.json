@@ -1,0 +1,10 @@
+{
+  "datasheet": "ltc3315a",
+  "page": 4,
+  "checked_sections": [
+    "ELECTRICAL CHARACTERISTICS",
+    "Power Good/Soft-Start",
+    "Oscillator and MODE/SYNC"
+  ],
+  "discrepancies": []
+}

@@ -1,0 +1,12 @@
+{
+  "datasheet": "ltc3309a",
+  "page": 2,
+  "checked_sections": [
+    "Absolute Maximum Ratings",
+    "Pin Configuration",
+    "Thermal Resistances",
+    "Order Information",
+    "Automotive Products"
+  ],
+  "discrepancies": []
+}

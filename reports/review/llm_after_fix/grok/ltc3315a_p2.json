@@ -1,0 +1,10 @@
+{
+  "datasheet": "ltc3315a",
+  "page": 2,
+  "checked_sections": [
+    "Absolute Maximum Ratings",
+    "Pin Configuration",
+    "Package Thermal Resistances"
+  ],
+  "discrepancies": []
+}

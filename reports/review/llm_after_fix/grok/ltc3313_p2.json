@@ -1,0 +1,11 @@
+{
+  "datasheet": "ltc3313",
+  "page": 2,
+  "checked_sections": [
+    "Absolute Maximum Ratings",
+    "Pin Configuration",
+    "Thermal Resistances",
+    "Order Information"
+  ],
+  "discrepancies": []
+}
