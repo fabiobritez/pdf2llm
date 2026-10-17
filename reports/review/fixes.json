@@ -2681,5 +2681,434 @@
       "pdf-words"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p19-both-and-input",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 19,
+    "old": "Each of the eight I/O<sub>x</sub> pins can be configured as a general-purpose digital input by programming the GPIO read configuration register or output pin by programming the GPIO write configuration register. When an I/O<sub>x</sub> pin is configured as an output, the pin can be set high or low by programming the GPIO write data register. Logic levels for general-purpose outputs are relative to V<sub>DD</sub> and GND. When an I/O<sub>x</sub> pin is configured as an input, its status can be determined by setting the pointer byte to 0b01100000. When an I/O<sub>x</sub> pin is set as an output, it is possible to read its status by also setting it as an input pin. When reading the status of the I/O<sub>x</sub> pins set as inputs the status of an I/O<sub>x</sub> pin set as both an input and output pin is also returned.",
+    "new": "Each of the eight I/O<sub>x</sub> pins can be configured as a general-purpose digital input by programming the GPIO read configuration register or output pin by programming the GPIO write configuration register. When an I/O<sub>x</sub> pin is configured as an output, the pin can be set high or low by programming the GPIO write data register. Logic levels for general-purpose outputs are relative to V<sub>DD</sub> and GND. When an I/O<sub>x</sub> pin is configured as an input, its status can be determined by setting the pointer byte to 0b01100000. When an I/O<sub>x</sub> pin is set as an output, it is possible to read its status by also setting it as an input pin. When reading the status of the I/O<sub>x</sub> pins set as inputs the status of an I/O<sub>x</sub> pin set as both and input and output pin is also returned.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p19 'set as both and input and output pin' (typo printed in the PDF; kept verbatim).",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p27-esi",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 27,
+    "old": "The AD5593R must have ample supply bypassing of 10 μF in parallel with 0.1 μF on each supply, located as close to the package as possible, ideally right up against the device. The 10 μF capacitors are the tantalum bead type. The 0.1 μF capacitor must have low effective series resistance (ESR) and low effective series inductance (ESL) such as the common ceramic types, which provide a low impedance path to ground at high frequencies to handle transient currents due to internal logic switching.",
+    "new": "The AD5593R must have ample supply bypassing of 10 μF in parallel with 0.1 μF on each supply, located as close to the package as possible, ideally right up against the device. The 10 μF capacitors are the tantalum bead type. The 0.1 μF capacitor must have low effective series resistance (ESR) and low effective series inductance (ESI) such as the common ceramic types, which provide a low impedance path to ground at high frequencies to handle transient currents due to internal logic switching.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p27 'low effective series inductance (ESI)' (as printed).",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p36-explicitly-clearly",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 36,
+    "old": "The AD5711R/AD5710R have an INTERFACE\\_STATUS\\_A register that contains all the status bits related to the digital interface. These status bits are set based on the actions related to the SPI transactions, until explicitly cleared by writing a 1 to the bit location to clear the status bit.",
+    "new": "The AD5711R/AD5710R have an INTERFACE\\_STATUS\\_A register that contains all the status bits related to the digital interface. These status bits are set based on the actions related to the SPI transactions, until explicitly clearly by writing a 1 to the bit location to clear the status bit.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p36 'until explicitly clearly by writing a 1' (as printed).",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-parallel-caps",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "| AVDD     | 0.1µF    10µF capacitor per pin to AGND |\n| PVDDx    | 0.1µF    10µF capacitor per pin to AGND |",
+    "new": "| AVDD     | 0.1µF \\|\\| 10µF capacitor per pin to AGND |\n| PVDDx    | 0.1µF \\|\\| 10µF capacitor per pin to AGND |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p38 Table 15 '0.1µF || 10µF capacitor per pin to AGND' (AVDD and PVDDx); the parallel sign was lost.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p13-current-limit",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "Like many IC power regulators, the LT1965 has safe operating area protection. The safe area protection decreases current limits as input-to-output voltage increases and keeps the power transistor inside a safe operating region for all values of input-to-output voltage. The protective design provides some output current at all values of input-to-output voltage up to the device breakdown.",
+    "new": "Like many IC power regulators, the LT1965 has safe operating area protection. The safe area protection decreases current limit as input-to-output voltage increases and keeps the power transistor inside a safe operating region for all values of input-to-output voltage. The protective design provides some output current at all values of input-to-output voltage up to the device breakdown.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p13 'The safe area protection decreases current limit as input-to-output voltage increases'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p1-ltpowerplay",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 1,
+    "old": "- Supported by LtpowerPlay® GUI",
+    "new": "- Supported by LTpowerPlay® GUI",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p1 'Supported by LTpowerPlay® GUI'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p20-af-exponent-sign",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 20,
+    "old": "$$AF = e^{-\\left[\\left(\\frac{E_a}{k}\\right) \\cdot \\left(\\frac{1}{T_{USE}+273} - \\frac{1}{T_{STRESS}+273}\\right)\\right]}$$",
+    "new": "$$AF = e^{\\left[\\left(\\frac{E_a}{k}\\right) \\cdot \\left(\\frac{1}{T_{USE}+273} - \\frac{1}{T_{STRESS}+273}\\right)\\right]}$$",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF p20 AF equation: spans 'AF = e' followed by the bracketed exponent with no leading minus (the only '–' is between the two fractions); checked on a 300 dpi render.",
+    "sources": [
+      "codex",
+      "pdf-text+image"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p86-viin-sns",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "To help choose the  $R_{SENSE}$  value and `Mfr_ein_config_iin_range` setting for your application, use the Electrical Characteristics table for `TUE_IIN`, along with Figures 26 and 27. Figures 26 and 27 serve as extrapolated guides while the Electrical Characteristics table shows tested `TUE_IIN` conditions. After selecting  $R_{SENSE}$ , write its value in  $\\text{m}\\Omega$  to the `MFR_IIN_CAL_GAIN` register, and `READ_IIN` will return the sensed current in amps. Figures 26 and 27 show absolute value of the expected worst case `READ_IIN` Total Unadjusted Error, `TUE_IIN`, in  $\\mu\\text{V}$  and in relative % of current sense input voltage reading,  $V_{IN\\_SNS}$ , as a function of  $V_{IN\\_SNS}$  ( $V_{IN\\_SNSP} - V_{IN\\_SNSM}$ ) for high range, medium range and low range settings.",
+    "new": "To help choose the  $R_{SENSE}$  value and `Mfr_ein_config_iin_range` setting for your application, use the Electrical Characteristics table for `TUE_IIN`, along with Figures 26 and 27. Figures 26 and 27 serve as extrapolated guides while the Electrical Characteristics table shows tested `TUE_IIN` conditions. After selecting  $R_{SENSE}$ , write its value in  $\\text{m}\\Omega$  to the `MFR_IIN_CAL_GAIN` register, and `READ_IIN` will return the sensed current in amps. Figures 26 and 27 show absolute value of the expected worst case `READ_IIN` Total Unadjusted Error, `TUE_IIN`, in  $\\mu\\text{V}$  and in relative % of current sense input voltage reading,  $V_{IIN\\_SNS}$ , as a function of  $V_{IIN\\_SNS}$  ( $V_{IIN\\_SNSP} - V_{IIN\\_SNSM}$ ) for high range, medium range and low range settings.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p86 'input voltage reading, VIIN_SNS, as a function of VIIN_SNS (VIIN_SNSP – VIIN_SNSM)'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p89-ton-delays",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "An automatic restart sequence can be initiated by driving the CONTROL pin to the off state for >10 $\\mu$ s and then releasing it. The automatic restart disables all VOUT\\_EN pins that are mapped to a particular CONTROL pin for a time period = MFR\\_RESTART\\_DELAY and then starts all DC/DC Converters according to their respective TON\\_DELAYS. (see Figure 30). VOUT\\_EN pins are mapped to one of the CONTROL pins by the MFR\\_CONFIG\\_LTC2975 command. This feature allows a host that is about to reset to restart the power in a controlled manner after it has recovered.",
+    "new": "An automatic restart sequence can be initiated by driving the CONTROL pin to the off state for >10 $\\mu$ s and then releasing it. The automatic restart disables all VOUT\\_EN pins that are mapped to a particular CONTROL pin for a time period = MFR\\_RESTART\\_DELAY and then starts all DC/DC Converters according to their respective TON\\_DELAYs. (see Figure 30). VOUT\\_EN pins are mapped to one of the CONTROL pins by the MFR\\_CONFIG\\_LTC2975 command. This feature allows a host that is about to reset to restart the power in a controlled manner after it has recovered.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p89 'according to their respective TON_DELAYs'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p92-control-line",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 92,
+    "old": "- All VIN\\_SNS lines should be tied together in a star type connection at the point where VIN is to be sensed. This will minimize timing errors for the case where the ON\\_OFF\\_CONFIG is configured to start the LTC2975 based on VIN and ignore the CONTROL0 line and the OPERATION command. In multi-part applications that are sensitive to timing differences, it is recommended that the Vin\\_share\\_enable bit of the MFR\\_CONFIG\\_ALL\\_LTC2975 register be set high in order to allow SHARE\\_CLK to synchronize on/off sequencing in response to the VIN\\_ON and VIN\\_OFF thresholds.",
+    "new": "- All VIN\\_SNS lines should be tied together in a star type connection at the point where VIN is to be sensed. This will minimize timing errors for the case where the ON\\_OFF\\_CONFIG is configured to start the LTC2975 based on VIN and ignore the CONTROL line and the OPERATION command. In multi-part applications that are sensitive to timing differences, it is recommended that the Vin\\_share\\_enable bit of the MFR\\_CONFIG\\_ALL\\_LTC2975 register be set high in order to allow SHARE\\_CLK to synchronize on/off sequencing in response to the VIN\\_ON and VIN\\_OFF thresholds.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p92 'based on VIN and ignore the CONTROL line and the OPERATION command'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p102-tsensen-p102",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "Connect all unused ADC sense inputs ( $V_{SENSEP_n}$ ,  $V_{SENSEM_n}$ ,  $T_{SENSEP_n}$ ,  $I_{SENSEP_n}$  or  $I_{SENSEM_n}$ ) to GND. In a system where the inputs are connected to removable cards and may be left floating in certain situations, connect the inputs to GND using 100k resistors. Place the 100k resistors before any filter components, as shown in Figure 47, to prevent loading of the filter.",
+    "new": "Connect all unused ADC sense inputs ( $V_{SENSEP_n}$ ,  $V_{SENSEM_n}$ ,  $T_{SENSE_n}$ ,  $I_{SENSEP_n}$  or  $I_{SENSEM_n}$ ) to GND. In a system where the inputs are connected to removable cards and may be left floating in certain situations, connect the inputs to GND using 100k resistors. Place the 100k resistors before any filter components, as shown in Figure 47, to prevent loading of the filter.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p102 '(VSENSEPn, VSENSEMn, TSENSEn, ISENSEPn or ISENSEMn)'; the pin is TSENSEn.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p103-tsensen-p103",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "- Connect all unused V<sub>SENSEP<sub>n</sub></sub>, V<sub>SENSEM<sub>n</sub></sub>, I<sub>SENSEP<sub>n</sub></sub>, I<sub>SENSEM<sub>n</sub></sub>, and T<sub>SENSEP<sub>n</sub></sub> pins to GND. Do not float unused inputs. Refer to Unused ADC Sense Inputs in the Applications Information section.",
+    "new": "- Connect all unused V<sub>SENSEP<sub>n</sub></sub>, V<sub>SENSEM<sub>n</sub></sub>, I<sub>SENSEP<sub>n</sub></sub>, I<sub>SENSEM<sub>n</sub></sub>, and T<sub>SENSE<sub>n</sub></sub> pins to GND. Do not float unused inputs. Refer to Unused ADC Sense Inputs in the Applications Information section.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p103 'ISENSEMn, and TSENSEn pins to GND'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p8-dxn",
+    "file": "output/max31730/max31730.md",
+    "page": 8,
+    "old": "The device starts the conversion sequence by measuring the temperature on remote channel 1, followed by remote channel 2, remote channel 3, and the local channel. The conversion result for each enabled channel is stored in the corresponding temperature data register. No conversion is performed on any remote channel that does not have a diode connected, whose DXP\\_ - DXP\\_ inputs are shorted together, or that has a short between DXP\\_ and V<sub>DD</sub>, DXP\\_ and GND, or DXP\\_ and V<sub>DD</sub>, or if the channel is not enabled in the Highest Temperature Enable register. See the [Register 36h: Diode Fault Status](#) section for additional details.",
+    "new": "The device starts the conversion sequence by measuring the temperature on remote channel 1, followed by remote channel 2, remote channel 3, and the local channel. The conversion result for each enabled channel is stored in the corresponding temperature data register. No conversion is performed on any remote channel that does not have a diode connected, whose DXP\\_ - DXN\\_ inputs are shorted together, or that has a short between DXP\\_ and V<sub>DD</sub>, DXP\\_ and GND, or DXN\\_ and V<sub>DD</sub>, or if the channel is not enabled in the Highest Temperature Enable register. See the [Register 36h: Diode Fault Status](#) section for additional details.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF text p8 'whose DXP_ - DXN_ inputs are shorted together, or that has a short between DXP_ and VDD, DXP_ and GND, or DXN_ and VDD'.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ad5593r-p25-fig42-binary-L1088",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "![Figure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b000000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b000000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write to the ADC sequence register (0b010000000) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and",
+    "new": "![Figure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b00000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b00000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write to the ADC sequence register (0b01000000) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: Figure 42 (p25, raster figure) prints 8-bit values 0b00000100 (STEP1 pointer), 0b00000010 (STEP2 pointer and MSB), 0b01000000 (STEP3 pointer); md had 9 digits. Checked visually on the page render.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p25-fig42-binary-L1090",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "|       | S   | SLAVE ADDRESS + $\\overline{W}$ | A | POINTER BYTE<br>0b000000100 | A  | MOST SIGNIFICANT DATA BYTE<br>0b00000000 | A | LEAST SIGNIFICANT DATA BYTE<br>0b10000001 | A | P   |",
+    "new": "|       | S   | SLAVE ADDRESS + $\\overline{W}$ | A | POINTER BYTE<br>0b00000100 | A  | MOST SIGNIFICANT DATA BYTE<br>0b00000000 | A | LEAST SIGNIFICANT DATA BYTE<br>0b10000001 | A | P   |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: Figure 42 (p25, raster figure) prints 8-bit values 0b00000100 (STEP1 pointer), 0b00000010 (STEP2 pointer and MSB), 0b01000000 (STEP3 pointer); md had 9 digits. Checked visually on the page render.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p25-fig42-binary-L1092",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "| STEP1 | S   | SLAVE ADDRESS + $\\overline{W}$ | A | 0b000000100                 | A  | 0b00000000                               | A | 0b10000001                                | A | P   |",
+    "new": "| STEP1 | S   | SLAVE ADDRESS + $\\overline{W}$ | A | 0b00000100                 | A  | 0b00000000                               | A | 0b10000001                                | A | P   |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: Figure 42 (p25, raster figure) prints 8-bit values 0b00000100 (STEP1 pointer), 0b00000010 (STEP2 pointer and MSB), 0b01000000 (STEP3 pointer); md had 9 digits. Checked visually on the page render.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p25-fig42-binary-L1093",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "| STEP2 | S   | SLAVE ADDRESS + $\\overline{W}$ | A | 0b000000010                 | A  | 0b000000010                              | A | 0b10000001                                | A | P   |",
+    "new": "| STEP2 | S   | SLAVE ADDRESS + $\\overline{W}$ | A | 0b00000010                 | A  | 0b00000010                              | A | 0b10000001                                | A | P   |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: Figure 42 (p25, raster figure) prints 8-bit values 0b00000100 (STEP1 pointer), 0b00000010 (STEP2 pointer and MSB), 0b01000000 (STEP3 pointer); md had 9 digits. Checked visually on the page render.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p25-fig42-binary-L1094",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "| STEP3 | S   | SLAVE ADDRESS + $\\overline{W}$ | A | 0b010000000                 | A  | P                                        |   |                                           |   |     |",
+    "new": "| STEP3 | S   | SLAVE ADDRESS + $\\overline{W}$ | A | 0b01000000                 | A  | P                                        |   |                                           |   |     |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: Figure 42 (p25, raster figure) prints 8-bit values 0b00000100 (STEP1 pointer), 0b00000010 (STEP2 pointer and MSB), 0b01000000 (STEP3 pointer); md had 9 digits. Checked visually on the page render.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p25-fig42-binary-L1104",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "\nFigure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b000000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b000000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write to the ADC sequence register (0b010000000) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and then reading ADC7. The diagram shows the SCL line with start (S), stop (P), and acknowledge (A) conditions. A legend defines S as Start Condition, P as Stop Condition, A as Acknowledge, and A̅ as Not Acknowledge.",
+    "new": "\nFigure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b00000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b00000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write to the ADC sequence register (0b01000000) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and then reading ADC7. The diagram shows the SCL line with start (S), stop (P), and acknowledge (A) conditions. A legend defines S as Start Condition, P as Stop Condition, A as Acknowledge, and A̅ as Not Acknowledge.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: Figure 42 (p25, raster figure) prints 8-bit values 0b00000100 (STEP1 pointer), 0b00000010 (STEP2 pointer and MSB), 0b01000000 (STEP3 pointer); md had 9 digits. Checked visually on the page render.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p91-dac0-L4263",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "V_PWR, V_DACO, V_SENS",
+    "new": "V_PWR, V_DAC0, V_SENS",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p91-dac0-L4265",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "Figure 31: Application Circuit with Crowbar Protection on Intermediate Bus. This schematic shows a power supply system. An input bus (4.5V < VIBUS < 15V) feeds into a DC/DC converter. A sense resistor (RSENSE = 0.007Ω) is placed between the input and the converter. The LTC2975\\* IC is used for monitoring and control. It has pins for VIN\\_SNS, V\\_PWR, V\\_DACO, V\\_SENSEP0, V\\_SENSEM0, V\\_OUT\\_EN0, REFP, REFM, GND, AUXFAULTB, VDD33, VDD25, and VDD25. A MOSFET (Q1, Si4894BDY) is used for crowbar protection, controlled by the LTC2975. A timer IC (LTC4210-1) is also present, with pins for VCC, SENSE, GATE, ON, TIMER, and GND. Other components include a BAT54 diode, a 10k resistor, a 0.22µF capacitor, a 24.3k resistor, a 100Ω resistor, a 68Ω resistor, a 0.01µF capacitor, a 10k resistor, a 4.99k resistor, a 1k resistor, a 1/4W resistor, a 10k resistor, a 0.1µF capacitor, and a 0.01µF capacitor. A note states: '\\*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.",
+    "new": "Figure 31: Application Circuit with Crowbar Protection on Intermediate Bus. This schematic shows a power supply system. An input bus (4.5V < VIBUS < 15V) feeds into a DC/DC converter. A sense resistor (RSENSE = 0.007Ω) is placed between the input and the converter. The LTC2975\\* IC is used for monitoring and control. It has pins for VIN\\_SNS, V\\_PWR, V\\_DAC0, V\\_SENSEP0, V\\_SENSEM0, V\\_OUT\\_EN0, REFP, REFM, GND, AUXFAULTB, VDD33, VDD25, and VDD25. A MOSFET (Q1, Si4894BDY) is used for crowbar protection, controlled by the LTC2975. A timer IC (LTC4210-1) is also present, with pins for VCC, SENSE, GATE, ON, TIMER, and GND. Other components include a BAT54 diode, a 10k resistor, a 0.22µF capacitor, a 24.3k resistor, a 100Ω resistor, a 68Ω resistor, a 0.01µF capacitor, a 10k resistor, a 4.99k resistor, a 1k resistor, a 1/4W resistor, a 10k resistor, a 0.1µF capacitor, and a 0.01µF capacitor. A note states: '\\*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p95-dac0-L4382",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "O, V_SENSEPO, V_SENSEMO, and V_OUT_ENO",
+    "new": "0, V_SENSEP0, V_SENSEM0, and V_OUT_EN0",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p95-dac0-L4384",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "Figure 36: Application Circuit for DC/DC Converters with Trim Pin. The diagram shows an LTC2975\\* IC connected to a DC/DC converter. The LTC2975\\* has pins for V\\_PWR, V\\_DDS33, V\\_DDS3, V\\_DDS25, GND, V\\_IN\\_SNS, V\\_DACO, V\\_SENSEPO, V\\_SENSEMO, and V\\_OUT\\_ENO. The DC/DC converter has pins for V\\_IN, V\\_O+, TRIM, V\\_SENSE+, V\\_SENSE-, ON/OFFB, and V\\_O-. A resistor R30 is connected between the TRIM pin and the V\\_SENSE+ pin. A load is connected between the V\\_O+ and ground pins of the DC/DC converter. Input voltage is specified as 4.5V < V\\_IBUS < 15V. Two 0.1µF capacitors are connected to the V\\_DDS33 and V\\_DDS25 pins. A note states: \\* SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS AND NO INPUT CURRENT SENSE SHOWN.",
+    "new": "Figure 36: Application Circuit for DC/DC Converters with Trim Pin. The diagram shows an LTC2975\\* IC connected to a DC/DC converter. The LTC2975\\* has pins for V\\_PWR, V\\_DDS33, V\\_DDS3, V\\_DDS25, GND, V\\_IN\\_SNS, V\\_DAC0, V\\_SENSEP0, V\\_SENSEM0, and V\\_OUT\\_EN0. The DC/DC converter has pins for V\\_IN, V\\_O+, TRIM, V\\_SENSE+, V\\_SENSE-, ON/OFFB, and V\\_O-. A resistor R30 is connected between the TRIM pin and the V\\_SENSE+ pin. A load is connected between the V\\_O+ and ground pins of the DC/DC converter. Input voltage is specified as 4.5V < V\\_IBUS < 15V. Two 0.1µF capacitors are connected to the V\\_DDS33 and V\\_DDS25 pins. A note states: \\* SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS AND NO INPUT CURRENT SENSE SHOWN.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p95-dac0-L4396",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "2. Calculate the maximum required output voltage for V<sub>DACO</sub>:",
+    "new": "2. Calculate the maximum required output voltage for V<sub>DAC0</sub>:",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p95-dac0-L4398",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "$$V_{DACO} \\geq \\left( 1 + \\frac{\\Delta_{UP}\\%}{\\Delta_{DOWN}\\%} \\right) \\cdot V_{REF} \\quad (11)$$",
+    "new": "$$V_{DAC0} \\geq \\left( 1 + \\frac{\\Delta_{UP}\\%}{\\Delta_{DOWN}\\%} \\right) \\cdot V_{REF} \\quad (11)$$",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p97-dac0-L4468",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "V_PWR, V_IN_SNS, V_DACO, V_SENSEP0,",
+    "new": "V_PWR, V_IN_SNS, V_DAC0, V_SENSEP0,",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p97-dac0-L4470",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "Figure 40: Anti-Aliasing Filter on VSENSE Lines. This circuit diagram shows the LTC2975\\* connected to a DC/DC converter. The LTC2975\\* has pins V\\_PWR, V\\_IN\\_SNS, V\\_DACO, V\\_SENSEP0, V\\_SENSEM0, V\\_OUT\\_EN0, and GND. The DC/DC converter has pins V\\_IN, V\\_OUT, V\\_FB, SGND, RUN/SS, and GND. The anti-aliasing filter consists of resistors R40, R50, R20, R30, and R10, and capacitors C10, C20, and 0.1µF capacitors on the V\\_PWR and V\\_DAC0 pins. A note states: '\\*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.",
+    "new": "Figure 40: Anti-Aliasing Filter on VSENSE Lines. This circuit diagram shows the LTC2975\\* connected to a DC/DC converter. The LTC2975\\* has pins V\\_PWR, V\\_IN\\_SNS, V\\_DAC0, V\\_SENSEP0, V\\_SENSEM0, V\\_OUT\\_EN0, and GND. The DC/DC converter has pins V\\_IN, V\\_OUT, V\\_FB, SGND, RUN/SS, and GND. The anti-aliasing filter consists of resistors R40, R50, R20, R30, and R10, and capacitors C10, C20, and 0.1µF capacitors on the V\\_PWR and V\\_DAC0 pins. A note states: '\\*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed: PDF has no 'DACO'/'SENSEPO'/'SENSEMO': pin names are VDAC0, VSENSEP0, VSENSEM0, VOUT_EN0 with digit zero (PDF text p91/p95/p97, e.g. p95 'output voltage for VDAC0: VDAC0 ≥').",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p35-L1308-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 35,
+    "old": "| 24h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 | Bit 0          |                |                |                |                |                |                |",
+    "new": "| 24h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed by PDF word geometry: in every register diagram on p35/p42-44 'Bit 7' is at x=144 (first data column) and 'Bit 0' at x=522 (last column, under D0/D8); md put 'Bit 0' in the second column.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p35-L1322-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 35,
+    "old": "| 25h           | D7              | D6              | D5              | D4              | D3  | D2  | D1  | D0  |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0   | 0   | 0   | 0   |\n|               | Bit 7           | Bit 0           |                 |                 |     |     |     |     |",
+    "new": "| 25h           | D7              | D6              | D5              | D4              | D3  | D2  | D1  | D0  |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0   | 0   | 0   | 0   |\n|               | Bit 7           |                 |                 |                 |     |     |     | Bit 0|",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed by PDF word geometry: in every register diagram on p35/p42-44 'Bit 7' is at x=144 (first data column) and 'Bit 0' at x=522 (last column, under D0/D8); md put 'Bit 0' in the second column.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p35-L1336-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 35,
+    "old": "| 26h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 | Bit 0          |                |                |                |                |                |                |",
+    "new": "| 26h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed by PDF word geometry: in every register diagram on p35/p42-44 'Bit 7' is at x=144 (first data column) and 'Bit 0' at x=522 (last column, under D0/D8); md put 'Bit 0' in the second column.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p43-L1563-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 43,
+    "old": "| 44h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 | Bit 0          |                |                |                |                |                |                |",
+    "new": "| 44h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed by PDF word geometry: in every register diagram on p35/p42-44 'Bit 7' is at x=144 (first data column) and 'Bit 0' at x=522 (last column, under D0/D8); md put 'Bit 0' in the second column.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p43-L1578-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 43,
+    "old": "| 45h           | D7              | D6              | D5              | D4              | D3  | D2  | D1  | D0  |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0   | 0   | 0   | 0   |\n|               | Bit 7           | Bit 0           |                 |                 |     |     |     |     |",
+    "new": "| 45h           | D7              | D6              | D5              | D4              | D3  | D2  | D1  | D0  |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0   | 0   | 0   | 0   |\n|               | Bit 7           |                 |                 |                 |     |     |     | Bit 0|",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed by PDF word geometry: in every register diagram on p35/p42-44 'Bit 7' is at x=144 (first data column) and 'Bit 0' at x=522 (last column, under D0/D8); md put 'Bit 0' in the second column.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p43-L1593-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 43,
+    "old": "| 46h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 | Bit 0          |                |                |                |                |                |                |",
+    "new": "| 46h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |",
+    "evidence": "Flagged by codex (gpt-6.1-sol) prose/struct page review; confirmed by PDF word geometry: in every register diagram on p35/p42-44 'Bit 7' is at x=144 (first data column) and 'Bit 0' at x=522 (last column, under D0/D8); md put 'Bit 0' in the second column.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
   }
 ]
