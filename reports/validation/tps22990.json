@@ -2798,219 +2798,26 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "unverifiable": 173,
-      "value_matched": 44,
-      "verified_ok": 63
+      "unverifiable": 165,
+      "value_matched": 47,
+      "verified_ok": 71
     },
-    "high_confidence_table_rows": 12,
+    "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 1,
     "mean_number_coverage": 0.9300420168067226,
     "mean_word_coverage": 0.9827829886382125,
     "pages": 34,
-    "status": "BAD",
+    "status": "REVIEW",
     "table_issue_counts": {
-      "column shift": 12,
+      "column shift": 0,
       "geometry column mismatch": 0,
       "geometry missing value": 0,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
-      "unit in wrong column": 12
+      "unit in wrong column": 0
     }
   },
-  "table_issues": [
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 258,
-      "page": 5,
-      "row": "I <sub>SD, VIN</sub> V <sub>IN</sub> shutdown current | V <sub>ON</sub> = 0 V,<br>V <sub>OUT</sub> = 0 V | V <sub>IN</sub> = 5 V | –40°C to +85°C | 0.004 | 4 | μA",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 258,
-      "page": 5,
-      "row": "I <sub>SD, VIN</sub> V <sub>IN</sub> shutdown current | V <sub>ON</sub> = 0 V,<br>V <sub>OUT</sub> = 0 V | V <sub>IN</sub> = 5 V | –40°C to +85°C | 0.004 | 4 | μA",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 259,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 10 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 259,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 10 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 260,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 3.3 V | –40°C to +85°C | 0.003 | 3 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 260,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 3.3 V | –40°C to +85°C | 0.003 | 3 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 261,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 7 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 261,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 7 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 262,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 2.5 V | –40°C to +85°C | 0.002 | 2 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 262,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 2.5 V | –40°C to +85°C | 0.002 | 2 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 263,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 5 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 263,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 5 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 264,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 1.8 V | –40°C to +85°C | 0.002 | 2 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 264,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 1.8 V | –40°C to +85°C | 0.002 | 2 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 265,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 4 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 265,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 4 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 266,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 1.05 V | –40°C to +85°C | 0.001 | 1 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 266,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 1.05 V | –40°C to +85°C | 0.001 | 1 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 267,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 3 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 267,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 3 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 268,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 0.6 V | –40°C to +85°C | 0.001 | 1 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 268,
-      "page": 5,
-      "row": " |  | V <sub>IN</sub> = 0.6 V | –40°C to +85°C | 0.001 | 1 | ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 269,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 2 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 269,
-      "page": 5,
-      "row": " |  |  | –40°C to +105°C |  | 2 | ",
-      "type": "unit in wrong column"
-    }
-  ],
+  "table_issues": [],
   "warnings": []
 }

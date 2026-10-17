@@ -57,7 +57,8 @@ def headers(words, right):
         group['words'].append((name, (word[0] + word[2]) / 2, word[4] == word[4].upper()))
     result = []
     for group in groups:
-        if not all(upper for _, _, upper in group['words']) and len(group['words']) < 3:
+        if not all(upper for _, _, upper in group['words']) and not {'MIN', 'MAX'}.issubset(
+                {name for name, _, _ in group['words']}):
             continue  # Title-case labels only count as a header in a full Min/Typ/Max row.
         cols = sorted(((n, x) for n, x, _ in group['words']), key=lambda item: item[1])
         if len(cols) < 2 or not any(n in VALUES for n, _ in cols):
@@ -69,7 +70,7 @@ def headers(words, right):
         edges += [(a + b) / 2 for a, b in zip(centers, centers[1:])]
         prose_right = None
         tail = [w for w in words if abs((w[1] + w[3]) / 2 - group['y']) <= 3 and w[0] > centers[-1] + 5
-                and re.match(r'(?i)(test|conditions?|comments?)', w[4])]
+                and re.fullmatch(r'(?i)(?:test|conditions?|comments?)(?:/(?:conditions?|comments?))*[:.]?', w[4])]
         if tail:
             prose_right = min(w[0] for w in tail) - 4
         edges.append(prose_right or right)
@@ -354,13 +355,22 @@ def check_tables(text, document, table_blocks, normalize):
                 target = next((counts for counts in remaining.values() if counts[token]), None)
                 if target is not None:
                     target[token] -= 1
-            row_text = normalize(' '.join(raw))
+            row_lower = normalize(' '.join(raw)).lower()
+            row_numbers = set(re.findall(r'\d+(?:\.\d+)?', normalize(' '.join(raw))))
             for name, counts in remaining.items():
                 if any(count > 0 for count in counts.values()):
                     pdf_cell = found['cells'][name]
                     # Formula cells (e.g. "20 + 0.1CB") are often transcribed into
                     # another column as LaTeX; only flag them if their numbers are absent.
-                    if re.search(r'[A-Za-z]', pdf_cell) and all(t.lstrip('+-') in row_text for t in counts if counts[t] > 0):
+                    # A formula needs an operator between operands ("5 V" is not one) and
+                    # every number must appear as a whole token, not a substring ("5" in "15").
+                    op = r'[\w)]\s*[+•×*/–-]\s*[\w(]'
+                    letters = re.findall(r'[A-Za-z]{2,}', pdf_cell)
+                    # the formula may be split over two PDF columns ("20 + 0.1 ×" | "CB")
+                    formula = re.search(r'[A-Za-z]', pdf_cell) and (re.search(op, pdf_cell) or (
+                        letters and any(re.search(op, normalize(c)) and all(l in normalize(c) for l in letters) for c in raw)))
+                    if formula and all((t.lstrip('+-–') in row_numbers) if re.search(r'\d', t) else (t.lower() in row_lower)
+                                       for t in counts if counts[t] > 0):
                         continue
                     emit('geometry missing value', pdf_cell, 'MISSING', name)
             # Blank units can be shared over many rows. Compare printed units
