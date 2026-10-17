@@ -1828,8 +1828,8 @@
     "file": "output/ltc2975/ltc2975.md",
     "page": 59,
     "old": "A non-zero write to the MFR WATCHDOG\\_T register will reset the watchdog timer. Low-to-high transitions on the WDI/RESETB pin also reset the watchdog timer. If the timer expires, ALERTB is asserted and the PWRGD output is optionally de-asserted and then reasserted after MFR\\_PWRGD\\_ASSERTION\\_DELAY ms. Writing 0 to either the MFR WATCH DOG\\_T or MFR WATCHDOG\\_T\\_FIRST registers will disable the timer.",
-    "new": "A non-zero write to the MFR\\_WATCHDOG\\_T register will reset the watchdog timer. Low-to-high transitions on the WDI/RESETB pin also reset the watchdog timer. If the timer expires, ALERTB is asserted and the PWRGD output is optionally de-asserted and then reasserted after MFR\\_PWRGD\\_ASSERTION\\_DELAY ms. Writing 0 to either the MFR WATCH DOG\\_T or MFR\\_WATCHDOG\\_T\\_FIRST registers will disable the timer.",
-    "evidence": "pdftotext: the PDF always writes MFR_WATCHDOG_T / MFR_WATCHDOG_T_FIRST (13 occurrences, 0 with a space); md dropped the first underscore.",
+    "new": "A non-zero write to the MFR\\_WATCHDOG\\_T register will reset the watchdog timer. Low-to-high transitions on the WDI/RESETB pin also reset the watchdog timer. If the timer expires, ALERTB is asserted and the PWRGD output is optionally de-asserted and then reasserted after MFR\\_PWRGD\\_ASSERTION\\_DELAY ms. Writing 0 to either the MFR\\_WATCHDOG\\_T or MFR\\_WATCHDOG\\_T\\_FIRST registers will disable the timer.",
+    "evidence": "pdftotext: the PDF always writes MFR_WATCHDOG_T / MFR_WATCHDOG_T_FIRST (13 occurrences, 0 with a space); md dropped the first underscore. Same line: 'MFR WATCH DOG\\_T' -> 'MFR\\_WATCHDOG\\_T'.",
     "sources": [
       "codex",
       "pdf-text"
@@ -1931,14 +1931,15 @@
     "severity": "high"
   },
   {
-    "id": "ltc2975-mfr-watchdog-split-word",
-    "file": "output/ltc2975/ltc2975.md",
-    "page": 59,
-    "old": "Writing 0 to either the MFR WATCH DOG\\_T or MFR\\_WATCHDOG\\_T\\_FIRST",
-    "new": "Writing 0 to either the MFR\\_WATCHDOG\\_T or MFR\\_WATCHDOG\\_T\\_FIRST",
-    "evidence": "pdftotext: 'MFR_WATCHDOG_T' (no space, underscore) in the same sentence.",
+    "id": "lt1965fb-p5-note3-cong",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 5,
+    "old": "$T_J \\equiv T_A$",
+    "new": "$T_J \\cong T_A$",
+    "evidence": "PDF p5 Note 3: Symbol-font 0x40 glyph (congruent, approx. equal) between TJ and TA; rendered crop shows the approx-equal sign, not identical-to.",
     "sources": [
-      "pdf-text"
+      "codex",
+      "pdf-glyph"
     ],
     "severity": "low"
   }
