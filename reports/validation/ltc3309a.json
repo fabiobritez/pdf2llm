@@ -115,14 +115,19 @@
         "8.6",
         "9"
       ],
-      "figure_alt_number_coverage": 0.6666666666666666,
-      "figure_alt_word_coverage": 0.3404255319148936,
+      "figure_alt_number_coverage": 0.3333333333333333,
+      "figure_alt_word_coverage": 0.2553191489361702,
       "figure_missing_numbers": [
         "-40",
         "-55",
         "-7",
         "0.3",
-        "125"
+        "0.6",
+        "125",
+        "150",
+        "51",
+        "73",
+        "8.6"
       ],
       "figure_missing_words": [
         "aev",
@@ -130,7 +135,9 @@
         "aiv",
         "ajv",
         "ampv",
+        "and",
         "automotive",
+        "degc",
         "footprint",
         "information",
         "laminate",
@@ -139,22 +146,20 @@
         "marking",
         "mini",
         "order",
+        "package",
         "part",
-        "pgood",
         "products",
         "qfn",
         "range",
         "reel",
         "tape",
+        "temperature",
         "thetaja",
         "thetajb",
         "thetajcbottom",
         "thetajctop",
         "tjmax",
-        "trmpbf",
-        "trpbf",
-        "type",
-        "wtrmpbf"
+        "trmpbf"
       ],
       "figure_number_tokens": 15,
       "figure_reasons": [],
@@ -2552,6 +2557,11 @@
   ],
   "pdf_pages": 26,
   "summary": {
+    "geometry_rows": {
+      "mismatched": 0,
+      "unverifiable": 139,
+      "verified_ok": 36
+    },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,
     "mean_number_coverage": 1.0,
@@ -2560,6 +2570,8 @@
     "status": "OK",
     "table_issue_counts": {
       "column shift": 0,
+      "geometry column mismatch": 0,
+      "geometry missing value": 0,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,

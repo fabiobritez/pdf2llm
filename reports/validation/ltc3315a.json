@@ -92,7 +92,7 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 20,
+      "extra_number_count": 19,
       "extra_numbers": [
         "-16",
         "0.5",
@@ -102,7 +102,6 @@
         "10",
         "11",
         "12",
-        "14",
         "14.8",
         "15",
         "16",
@@ -2545,29 +2544,27 @@
   ],
   "pdf_pages": 26,
   "summary": {
-    "high_confidence_table_rows": 1,
+    "geometry_rows": {
+      "mismatched": 0,
+      "unverifiable": 101,
+      "verified_ok": 34
+    },
+    "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,
     "mean_number_coverage": 0.9984000000000001,
     "mean_word_coverage": 0.9982003320001523,
     "pages": 26,
-    "status": "REVIEW",
+    "status": "OK",
     "table_issue_counts": {
       "column shift": 0,
+      "geometry column mismatch": 0,
+      "geometry missing value": 0,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
-      "unit in wrong column": 1
+      "unit in wrong column": 0
     }
   },
-  "table_issues": [
-    {
-      "confidence": "high",
-      "detail": "Check UNITS",
-      "line": 167,
-      "page": 3,
-      "row": "PMOS Current Limit (I <sub>LIM</sub> ) | Current out of SW, V <sub>OUT</sub> /V <sub>IN</sub> ≤ 0.2 |  | 2.9 | 3.2 | 3.5 A",
-      "type": "unit in wrong column"
-    }
-  ],
+  "table_issues": [],
   "warnings": []
 }

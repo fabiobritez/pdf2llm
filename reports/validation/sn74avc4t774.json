@@ -3388,7 +3388,12 @@
   ],
   "pdf_pages": 43,
   "summary": {
-    "high_confidence_table_rows": 0,
+    "geometry_rows": {
+      "mismatched": 4,
+      "unverifiable": 276,
+      "verified_ok": 19
+    },
+    "high_confidence_table_rows": 4,
     "low_coverage_text_pages": 2,
     "mean_number_coverage": 0.8775844871163109,
     "mean_word_coverage": 0.944036525064841,
@@ -3396,12 +3401,93 @@
     "status": "REVIEW",
     "table_issue_counts": {
       "column shift": 0,
+      "geometry column mismatch": 0,
+      "geometry missing value": 6,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
       "unit in wrong column": 0
     }
   },
-  "table_issues": [],
+  "table_issues": [
+    {
+      "confidence": "high",
+      "detail": "4.6: Markdown MISSING, PDF MAX",
+      "line": 259,
+      "md_column": "MISSING",
+      "md_line": 259,
+      "page": 6,
+      "parameter": "VCCA / Supply voltage",
+      "pdf_column": "MAX",
+      "row": "VCCA | Supply voltage |  |  |  | 1.1 | 3.6 | V",
+      "type": "geometry missing value",
+      "value": "4.6"
+    },
+    {
+      "confidence": "high",
+      "detail": "–0.5: Markdown MISSING, PDF MIN",
+      "line": 259,
+      "md_column": "MISSING",
+      "md_line": 259,
+      "page": 6,
+      "parameter": "VCCA / Supply voltage",
+      "pdf_column": "MIN",
+      "row": "VCCA | Supply voltage |  |  |  | 1.1 | 3.6 | V",
+      "type": "geometry missing value",
+      "value": "–0.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.6: Markdown MISSING, PDF MAX",
+      "line": 260,
+      "md_column": "MISSING",
+      "md_line": 260,
+      "page": 6,
+      "parameter": "VCCB / Supply voltage",
+      "pdf_column": "MAX",
+      "row": "VCCB | Supply voltage |  |  |  | 1.1 | 3.6 | V",
+      "type": "geometry missing value",
+      "value": "4.6"
+    },
+    {
+      "confidence": "high",
+      "detail": "–0.5: Markdown MISSING, PDF MIN",
+      "line": 260,
+      "md_column": "MISSING",
+      "md_line": 260,
+      "page": 6,
+      "parameter": "VCCB / Supply voltage",
+      "pdf_column": "MIN",
+      "row": "VCCB | Supply voltage |  |  |  | 1.1 | 3.6 | V",
+      "type": "geometry missing value",
+      "value": "–0.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "–8: Markdown MISSING, PDF MAX",
+      "line": 285,
+      "md_column": "MISSING",
+      "md_line": 285,
+      "page": 7,
+      "parameter": "IOH / Highlevel output current / 1.1V to 1.3V",
+      "pdf_column": "MAX",
+      "row": "IOH | Highlevel output current |  |  | 1.1V to 1.3V |  | -3 | mA",
+      "type": "geometry missing value",
+      "value": "–8"
+    },
+    {
+      "confidence": "high",
+      "detail": "8: Markdown MISSING, PDF MAX",
+      "line": 290,
+      "md_column": "MISSING",
+      "md_line": 290,
+      "page": 7,
+      "parameter": "IOL / Lowlevel output current / 1.1V to 1.3V",
+      "pdf_column": "MAX",
+      "row": "IOL | Lowlevel output current |  |  | 1.1V to 1.3V |  | 3 | mA",
+      "type": "geometry missing value",
+      "value": "8"
+    }
+  ],
   "warnings": []
 }

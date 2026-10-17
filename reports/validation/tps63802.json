@@ -2916,6 +2916,11 @@
   ],
   "pdf_pages": 38,
   "summary": {
+    "geometry_rows": {
+      "mismatched": 0,
+      "unverifiable": 105,
+      "verified_ok": 42
+    },
     "high_confidence_table_rows": 4,
     "low_coverage_text_pages": 1,
     "mean_number_coverage": 0.9270787262273331,
@@ -2924,6 +2929,8 @@
     "status": "REVIEW",
     "table_issue_counts": {
       "column shift": 4,
+      "geometry column mismatch": 0,
+      "geometry missing value": 0,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,

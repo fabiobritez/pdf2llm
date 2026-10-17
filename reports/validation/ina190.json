@@ -3721,117 +3721,27 @@
   ],
   "pdf_pages": 47,
   "summary": {
-    "high_confidence_table_rows": 12,
+    "geometry_rows": {
+      "mismatched": 0,
+      "unverifiable": 184,
+      "verified_ok": 32
+    },
+    "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,
     "mean_number_coverage": 0.9342704118684511,
     "mean_word_coverage": 0.9456722915914337,
     "pages": 47,
-    "status": "BAD",
+    "status": "OK",
     "table_issue_counts": {
-      "column shift": 12,
+      "column shift": 0,
+      "geometry column mismatch": 0,
+      "geometry missing value": 0,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
       "unit in wrong column": 0
     }
   },
-  "table_issues": [
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 196,
-      "page": 4,
-      "row": "V <sub>IN+</sub> , V <sub>IN-</sub> | Analog inputs | Differential (V <sub>IN+</sub> ) – (V <sub>IN-</sub> ) <sup>(2)</sup> | –42 | V",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 197,
-      "page": 4,
-      "row": " |  | V <sub>IN+</sub> , V <sub>IN-</sub> , with respect to GND <sup>(3)</sup> | 42 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 267,
-      "page": 5,
-      "row": "$E_G$ | Gain error | $V_{\\text{OUT}} = 0.1\\text{ V to } V_S - 0.1\\text{ V}$ | A1 devices | -0.04% | ±0.2% | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 268,
-      "page": 5,
-      "row": " |  |  | A2, A3, A4 devices | -0.06% | ±0.3% | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 269,
-      "page": 5,
-      "row": " |  |  | A5 devices | -0.08% | ±0.4% | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 272,
-      "page": 5,
-      "row": "RVRR | Reference voltage rejection ratio | $V_{\\text{REF}} = 100\\text{ mV to } V_S - 100\\text{ mV}$ ,<br>$T_A = -40^\\circ\\text{C to } +125^\\circ\\text{C}$ | A1 devices | ±2 | ±10 | µV/V",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 273,
-      "page": 5,
-      "row": " |  |  | A2 devices | ±1 | ±6 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 274,
-      "page": 5,
-      "row": " |  |  | A3 devices | ±0.5 | ±4 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 275,
-      "page": 5,
-      "row": " |  |  | A4, A5 devices | ±0.25 | ±3 | ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 280,
-      "page": 5,
-      "row": "$V_{\\text{ZL}}$ | Zero current output voltage | $V_S = 1.8\\text{ V}$ , $R_L = 10\\text{ k}\\Omega$ to GND,<br>$T_A = -40^\\circ\\text{C to } +125^\\circ\\text{C}$ , $V_{\\text{SENSE}} = 0\\text{ mV}$ ,<br>$V_{\\text{REF}} = 0\\text{ V}$ | A1, A2, A3 ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 281,
-      "page": 5,
-      "row": " |  |  | A4 devices | $(V_{\\text{GND}}) + 2$ | $(V_{\\text{GND}}) + 4$ | mV",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 282,
-      "page": 5,
-      "row": " |  |  | A5 devices | $(V_{\\text{GND}}) + 3$ | $(V_{\\text{GND}}) + 9$ | mV",
-      "type": "column shift"
-    }
-  ],
+  "table_issues": [],
   "warnings": []
 }

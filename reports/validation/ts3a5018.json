@@ -3317,7 +3317,12 @@
   ],
   "pdf_pages": 41,
   "summary": {
-    "high_confidence_table_rows": 2,
+    "geometry_rows": {
+      "mismatched": 5,
+      "unverifiable": 183,
+      "verified_ok": 34
+    },
+    "high_confidence_table_rows": 5,
     "low_coverage_text_pages": 2,
     "mean_number_coverage": 0.9079313952783076,
     "mean_word_coverage": 0.9513016922471864,
@@ -3325,6 +3330,8 @@
     "status": "REVIEW",
     "table_issue_counts": {
       "column shift": 2,
+      "geometry column mismatch": 6,
+      "geometry missing value": 3,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
@@ -3342,6 +3349,19 @@
     },
     {
       "confidence": "high",
+      "detail": "-50: Markdown UNIT, PDF MIN",
+      "line": 189,
+      "md_column": "UNIT",
+      "md_line": 189,
+      "page": 4,
+      "parameter": "IK / Analog port diode current",
+      "pdf_column": "MIN",
+      "row": "IK | Analog port diode current | VNC , VNO , VCOM < 0 |  | -50 mA",
+      "type": "geometry column mismatch",
+      "value": "-50"
+    },
+    {
+      "confidence": "high",
       "detail": "Check UNIT",
       "line": 189,
       "page": 4,
@@ -3358,11 +3378,115 @@
     },
     {
       "confidence": "high",
+      "detail": "-50: Markdown UNIT, PDF MIN",
+      "line": 194,
+      "md_column": "UNIT",
+      "md_line": 194,
+      "page": 4,
+      "parameter": "IIK / Digital input clamp current",
+      "pdf_column": "MIN",
+      "row": "IIK | Digital input clamp current | VI < 0 |  | -50 mA",
+      "type": "geometry column mismatch",
+      "value": "-50"
+    },
+    {
+      "confidence": "high",
       "detail": "Check UNIT",
       "line": 194,
       "page": 4,
       "row": "I <sub>IK</sub> | Digital input clamp current | V <sub>I</sub> < 0 |  | -50 mA",
       "type": "unit in wrong column"
+    },
+    {
+      "confidence": "high",
+      "detail": "+-2000: Markdown UNIT, PDF VALUE",
+      "line": 208,
+      "md_column": "UNIT",
+      "md_line": 208,
+      "page": 4,
+      "parameter": "V(ESD) / Electrostatic discharge",
+      "pdf_column": "VALUE",
+      "row": "V(ESD) | Electrostatic discharge | Humanbody model (HBM), per ANSI/ESDA/JEDEC JS-001(1) | +-2000",
+      "type": "geometry column mismatch",
+      "value": "+-2000"
+    },
+    {
+      "confidence": "high",
+      "detail": "Humanbody model (HBM), per ANSI/ESDA/JEDEC JS-001(1): Markdown VALUE, PDF CONDITIONS",
+      "line": 208,
+      "md_column": "VALUE",
+      "md_line": 208,
+      "page": 4,
+      "parameter": "V(ESD) / Electrostatic discharge",
+      "pdf_column": "CONDITIONS",
+      "row": "V(ESD) | Electrostatic discharge | Humanbody model (HBM), per ANSI/ESDA/JEDEC JS-001(1) | +-2000",
+      "type": "geometry column mismatch",
+      "value": "Humanbody model (HBM), per ANSI/ESDA/JEDEC JS-001(1)"
+    },
+    {
+      "confidence": "high",
+      "detail": "+-1000: Markdown UNIT, PDF VALUE",
+      "line": 209,
+      "md_column": "UNIT",
+      "md_line": 209,
+      "page": 4,
+      "parameter": "Chargeddevice model (CDM), per JEDEC specification JESD22-C101(2)",
+      "pdf_column": "VALUE",
+      "row": " |  | Chargeddevice model (CDM), per JEDEC specification JESD22-C101(2) | +-1000",
+      "type": "geometry column mismatch",
+      "value": "+-1000"
+    },
+    {
+      "confidence": "high",
+      "detail": "Chargeddevice model (CDM), per JEDEC specification JESD22-C101(2): Markdown VALUE, PDF CONDITIONS",
+      "line": 209,
+      "md_column": "VALUE",
+      "md_line": 209,
+      "page": 4,
+      "parameter": "Chargeddevice model (CDM), per JEDEC specification JESD22-C101(2)",
+      "pdf_column": "CONDITIONS",
+      "row": " |  | Chargeddevice model (CDM), per JEDEC specification JESD22-C101(2) | +-1000",
+      "type": "geometry column mismatch",
+      "value": "Chargeddevice model (CDM), per JEDEC specification JESD22-C101(2)"
+    },
+    {
+      "confidence": "high",
+      "detail": "0.01: Markdown MISSING, PDF TYP",
+      "line": 381,
+      "md_column": "MISSING",
+      "md_line": 381,
+      "page": 8,
+      "parameter": "INC(OFF) , INO(OFF) / NC, NO OFF leakage current / 25degC / 1.95 V",
+      "pdf_column": "TYP",
+      "row": "INC(OFF) , INO(OFF) | NC, NO OFF leakage current | 25degC | 1.95 V | -0.25 | 0.03 | 0.25 | uA",
+      "type": "geometry missing value",
+      "value": "0.01"
+    },
+    {
+      "confidence": "high",
+      "detail": "0.4: Markdown MISSING, PDF MAX",
+      "line": 381,
+      "md_column": "MISSING",
+      "md_line": 381,
+      "page": 8,
+      "parameter": "INC(OFF) , INO(OFF) / NC, NO OFF leakage current / 25degC / 1.95 V",
+      "pdf_column": "MAX",
+      "row": "INC(OFF) , INO(OFF) | NC, NO OFF leakage current | 25degC | 1.95 V | -0.25 | 0.03 | 0.25 | uA",
+      "type": "geometry missing value",
+      "value": "0.4"
+    },
+    {
+      "confidence": "high",
+      "detail": "–0.4: Markdown MISSING, PDF MIN",
+      "line": 381,
+      "md_column": "MISSING",
+      "md_line": 381,
+      "page": 8,
+      "parameter": "INC(OFF) , INO(OFF) / NC, NO OFF leakage current / 25degC / 1.95 V",
+      "pdf_column": "MIN",
+      "row": "INC(OFF) , INO(OFF) | NC, NO OFF leakage current | 25degC | 1.95 V | -0.25 | 0.03 | 0.25 | uA",
+      "type": "geometry missing value",
+      "value": "–0.4"
     }
   ],
   "warnings": []
