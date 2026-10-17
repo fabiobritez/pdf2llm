@@ -3301,11 +3301,11 @@
       "mismatched": 0,
       "order_matched": 45,
       "out_of_scope": 97,
-      "unverifiable": 4,
-      "unverifiable_no_match": 3,
+      "table_matched": 3,
+      "unverifiable": 1,
       "unverifiable_value_ambiguous": 1,
       "value_matched": 44,
-      "verified_ok": 121
+      "verified_ok": 124
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 1,

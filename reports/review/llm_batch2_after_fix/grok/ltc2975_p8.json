@@ -1,0 +1,114 @@
+{
+ "datasheet": "ltc2975",
+ "page": 8,
+ "checked_sections": [
+  "Electrical Characteristics",
+  "External Temperature Sensor Characteristics (READ_TEMPERATURE_1)",
+  "Internal Temperature Sensor Characteristics (READ_TEMPERATURE_2)",
+  "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+  "General Purpose Output (AUXFAULTB) Characteristics",
+  "Energy Meter Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output High Voltage symbol",
+   "column": "other",
+   "md_text": "V <sub>OUT_ENn</sub>",
+   "pdf_text": "V_VOUT_ENn",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output High Voltage, I=−5μA, V_DD33=3.13V",
+   "column": "CONDITIONS",
+   "md_text": "I <sub>OUT_ENn</sub> = -5μA, V <sub>DD33</sub> = 3.13V",
+   "pdf_text": "I_VOUT_ENn = −5μA, V_DD33 = 3.13V",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output Sourcing Current symbol",
+   "column": "other",
+   "md_text": "I <sub>OUT_ENn</sub>",
+   "pdf_text": "I_VOUT_ENn",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output Sourcing Current, pull-up enabled, V=1V",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>OUT_ENn</sub> Pull-Up Enabled, V <sub>OUT_ENn</sub> = 1V",
+   "pdf_text": "V_VOUT_ENn Pull-Up Enabled, V_VOUT_ENn = 1V",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output Sinking Current, Strong Pull-Down Enabled, V=0.4V",
+   "column": "CONDITIONS",
+   "md_text": "Strong Pull-Down Enabled, V <sub>OUT_ENn</sub> = 0.4V",
+   "pdf_text": "Strong Pull-Down Enabled, V_VOUT_ENn = 0.4V",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output Sinking Current, Weak Pull-Down Enabled, V=0.4V",
+   "column": "CONDITIONS",
+   "md_text": "Weak Pull-Down Enabled, V <sub>OUT_ENn</sub> = 0.4V",
+   "pdf_text": "Weak Pull-Down Enabled, V_VOUT_ENn = 0.4V",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Output Leakage Current, internal pull-up disabled, 0V to 15V",
+   "column": "CONDITIONS",
+   "md_text": "Internal Pull-Up Disabled, 0V ≤ V <sub>OUT_ENn</sub> ≤ 15V",
+   "pdf_text": "Internal Pull-Up Disabled, 0V ≤ V_VOUT_ENn ≤ 15V",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Minimum V_DD33 when output valid symbol",
+   "column": "other",
+   "md_text": "V <sub>OUT_VALID</sub>",
+   "pdf_text": "V_VOUT_VALID",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Minimum V_DD33 when VOUT_ENn Valid",
+   "column": "other",
+   "md_text": "Minimum V <sub>DD33</sub> when V <sub>OUT_ENn</sub> Valid",
+   "pdf_text": "Minimum V_DD33 when V_VOUT_ENn Valid",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output (VOUT_EN[3:0]) Characteristics",
+   "parameter": "Minimum V_DD33 when output valid, V≤0.4V",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>OUT_ENn</sub> ≤ 0.4V",
+   "pdf_text": "V_VOUT_ENn ≤ 0.4V",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

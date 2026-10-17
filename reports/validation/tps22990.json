@@ -2798,14 +2798,14 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "order_matched": 31,
+      "order_matched": 45,
       "out_of_scope": 75,
-      "unverifiable": 59,
-      "unverifiable_no_match": 18,
+      "table_matched": 18,
+      "unverifiable": 27,
       "unverifiable_no_schema": 24,
-      "unverifiable_prose_ambiguous": 17,
+      "unverifiable_prose_ambiguous": 3,
       "value_matched": 47,
-      "verified_ok": 102
+      "verified_ok": 134
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 1,

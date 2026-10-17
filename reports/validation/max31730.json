@@ -3988,11 +3988,11 @@
       "mismatched": 0,
       "order_matched": 4,
       "out_of_scope": 333,
-      "unverifiable": 9,
+      "table_matched": 1,
+      "unverifiable": 8,
       "unverifiable_mapping": 8,
-      "unverifiable_no_match": 1,
       "value_matched": 9,
-      "verified_ok": 41
+      "verified_ok": 42
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,

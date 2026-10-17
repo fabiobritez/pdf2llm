@@ -1942,5 +1942,57 @@
       "pdf-glyph"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p8-25C-typ-max-shift-L340",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 8,
+    "old": "| I <sub>I</sub>                      | Control inputs | V <sub>I</sub> = V <sub>CCA</sub> or GND                                                                              |                                  | 1.1V to 3.6V     | 1.1V to 3.6V     | ±0.025    | ±0.25 |     |                        |     | ±1   | μA   |",
+    "new": "| I <sub>I</sub>                      | Control inputs | V <sub>I</sub> = V <sub>CCA</sub> or GND                                                                              |                                  | 1.1V to 3.6V     | 1.1V to 3.6V     |           | ±0.025| ±0.25|                        |     | ±1   | μA   |",
+    "evidence": "PDF words p8: TA=25C header MIN@352 TYP@385 MAX@416; values ±0.025 / ±0.25 are right-aligned under TYP / MAX (x-centres ~388/~424), MIN blank. md had them in MIN/TYP.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "sn74avc4t774-p8-25C-typ-max-shift-L341",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 8,
+    "old": "| I <sub>off</sub>                    | A or B port    | V <sub>I</sub> or V <sub>O</sub> = 0 to 3.6V                                                                          |                                  | 0V               | 0V to 3.6V       | ±0.1      | ±1    |     |                        |     | ±5   | μA   |",
+    "new": "| I <sub>off</sub>                    | A or B port    | V <sub>I</sub> or V <sub>O</sub> = 0 to 3.6V                                                                          |                                  | 0V               | 0V to 3.6V       |           | ±0.1  | ±1  |                        |     | ±5   | μA   |",
+    "evidence": "PDF words p8: TA=25C header MIN@352 TYP@385 MAX@416; values ±0.1 / ±1 are right-aligned under TYP / MAX (x-centres ~388/~424), MIN blank. md had them in MIN/TYP.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "sn74avc4t774-p8-25C-typ-max-shift-L342",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 8,
+    "old": "|                                     |                |                                                                                                                       |                                  | 0V to 3.6V       | 0V               | ±0.1      | ±1    |     |                        |     | ±5   |      |",
+    "new": "|                                     |                |                                                                                                                       |                                  | 0V to 3.6V       | 0V               |           | ±0.1  | ±1  |                        |     | ±5   |      |",
+    "evidence": "PDF words p8: TA=25C header MIN@352 TYP@385 MAX@416; values ±0.1 / ±1 are right-aligned under TYP / MAX (x-centres ~388/~424), MIN blank. md had them in MIN/TYP.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "sn74avc4t774-p8-25C-typ-max-shift-L343",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 8,
+    "old": "| I <sub>OZ</sub>                     | A or B port    | V <sub>O</sub> = V <sub>CCO</sub> or GND, V <sub>I</sub> = V <sub>CCI</sub> or GND, $\\overline{OE}$ = V <sub>IH</sub> |                                  | 3.6V             | 3.6V             | ±0.5      | ±2.5  |     |                        |     | ±5   | μA   |",
+    "new": "| I <sub>OZ</sub>                     | A or B port    | V <sub>O</sub> = V <sub>CCO</sub> or GND, V <sub>I</sub> = V <sub>CCI</sub> or GND, $\\overline{OE}$ = V <sub>IH</sub> |                                  | 3.6V             | 3.6V             |           | ±0.5  | ±2.5|                        |     | ±5   | μA   |",
+    "evidence": "PDF words p8: TA=25C header MIN@352 TYP@385 MAX@416; values ±0.5 / ±2.5 are right-aligned under TYP / MAX (x-centres ~388/~424), MIN blank. md had them in MIN/TYP.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "high"
   }
 ]
