@@ -1,0 +1,10 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 4,
+ "checked_sections": [
+  "DC Specifications: operating conditions",
+  "Table 2. DC Specifications: VDAC Static Performance",
+  "Table 2. DC Specifications: VDAC Output Characteristics"
+ ],
+ "discrepancies": []
+}

@@ -1,0 +1,29 @@
+{
+ "datasheet": "tps6287b20",
+ "page": 9,
+ "checked_sections": [
+  "6.5 Electrical Characteristics (continued)"
+ ],
+ "discrepancies": [
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "Phase shift at SYNC_OUT with reference to internal CLK or external CLK (0b0)",
+   "column": "CONDITIONS",
+   "md_text": "CONTROL2:SYNC_OUT_PHASE = 0b0",
+   "pdf_text": "CONTROL2:SYNCH_OUT_PHASE = 0b0",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "Phase shift at SYNC_OUT with reference to internal CLK or external CLK (0b1)",
+   "column": "CONDITIONS",
+   "md_text": "CONTROL2:SYNC_OUT_PHASE = 0b1",
+   "pdf_text": "CONTROL2:SYNCH_OUT_PHASE = 0b1",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

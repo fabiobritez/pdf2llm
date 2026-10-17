@@ -1,0 +1,9 @@
+{
+ "datasheet": "tps22990",
+ "page": 6,
+ "checked_sections": [
+  "Electrical Characteristics—VBIAS = 5 V (continued)",
+  "7.6 Electrical Characteristics—VBIAS = 3.3 V"
+ ],
+ "discrepancies": []
+}

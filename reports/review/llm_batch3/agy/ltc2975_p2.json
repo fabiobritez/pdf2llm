@@ -1,0 +1,19 @@
+{
+ "datasheet": "ltc2975",
+ "page": 2,
+ "checked_sections": [
+  "TABLE OF CONTENTS"
+ ],
+ "discrepancies": [
+  {
+   "section": "TABLE OF CONTENTS",
+   "parameter": "MFR_WATCHDOG_T_FIRST and MFR_WATCHDOG_T",
+   "column": "other",
+   "md_text": "MFR_WATCHDOG_T_FIRST and MFR WATCHDOG_T .....",
+   "pdf_text": "MFR_WATCHDOG_T_FIRST and MFR_WATCHDOG_T",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

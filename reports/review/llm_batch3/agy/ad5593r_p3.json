@@ -1,0 +1,21 @@
+{
+ "datasheet": "ad5593r",
+ "page": 3,
+ "checked_sections": [
+  "SPECIFICATIONS - Table 2 (TEMPERATURE RANGE)",
+  "SPECIFICATIONS - Table 2 (ADC PERFORMANCE)",
+  "SPECIFICATIONS - Table 2 (DAC PERFORMANCE)"
+ ],
+ "discrepancies": [
+  {
+   "section": "SPECIFICATIONS - Table 2 (ADC PERFORMANCE)",
+   "parameter": "ADC PERFORMANCE / Resolution",
+   "column": "CONDITIONS",
+   "md_text": "| <b>ADC PERFORMANCE</b> | | | | | |\n| Resolution | | 12 | | Bits | f <sub>IN</sub> = 10 kHz sine wave |",
+   "pdf_text": "f_IN = 10 kHz sine wave is on the ADC PERFORMANCE header row, while the Resolution row has an empty Test Conditions/Comments cell",
+   "type": "wrong_row",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "datasheet": "ltc2975",
+ "page": 2,
+ "checked_sections": [
+  "Table of Contents"
+ ],
+ "discrepancies": [
+  {
+   "section": "Table of Contents — Watchdog Timer and Power Good",
+   "parameter": "MFR_WATCHDOG_T_FIRST and MFR_WATCHDOG_T",
+   "column": "other",
+   "md_text": "MFR_WATCHDOG_T_FIRST and MFR WATCHDOG_T",
+   "pdf_text": "MFR_WATCHDOG_T_FIRST and MFR_WATCHDOG_T",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

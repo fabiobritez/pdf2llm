@@ -1,0 +1,69 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 10,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS — Figure 4. LDAC Operation Timing"
+ ],
+ "discrepancies": [
+  {
+   "section": "Figure 4. LDAC Operation Timing",
+   "parameter": "SDI X states",
+   "column": "other",
+   "md_text": "a high-impedance state (X)",
+   "pdf_text": "X; the diagram does not identify these intervals as high impedance.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Figure 4. LDAC Operation Timing",
+   "parameter": "LDAC pulse position",
+   "column": "other",
+   "md_text": "The LDAC signal is a pulse that coincides with the second BYTE0.",
+   "pdf_text": "Two low pulses are shown. The first begins during the first BYTE1 and ends during the first BYTE0; the second begins during the second BYTE1 and ends during the second BYTE0.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Figure 4. LDAC Operation Timing",
+   "parameter": "t_L1",
+   "column": "other",
+   "md_text": "is the time from the falling edge of LDAC to the start of the output transition",
+   "pdf_text": "t_L1 spans the falling edge to the rising edge of the first LDAC low pulse.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Figure 4. LDAC Operation Timing",
+   "parameter": "t_L2",
+   "column": "other",
+   "md_text": "is the time from the falling edge of LDAC to the end of the output transition",
+   "pdf_text": "t_L2 spans the first LDAC falling edge to the boundary between the first BYTE0 and the second BYTE1.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Figure 4. LDAC Operation Timing",
+   "parameter": "t_L3",
+   "column": "other",
+   "md_text": "is the time from the rising edge of LDAC to the start of the output transition",
+   "pdf_text": "t_L3 spans the boundary between the first BYTE0 and the second BYTE1 to the second LDAC falling edge.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Figure 4. LDAC Operation Timing",
+   "parameter": "t_L4",
+   "column": "other",
+   "md_text": "is the time from the rising edge of LDAC to the end of the output transition",
+   "pdf_text": "Each t_L4 spans an LDAC falling edge to the start of the corresponding OUTn transition.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 11,
+ "checked_sections": [
+  "Absolute Maximum Ratings (Table 6)",
+  "Thermal Resistance (Table 7)",
+  "ESD Caution"
+ ],
+ "discrepancies": []
+}

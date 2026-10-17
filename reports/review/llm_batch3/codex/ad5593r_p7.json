@@ -1,0 +1,11 @@
+{
+ "datasheet": "ad5593r",
+ "page": 7,
+ "checked_sections": [
+  "Absolute Maximum Ratings (Table 4)",
+  "Thermal Resistance (Table 5)",
+  "Electrostatic Discharge (ESD) Ratings (Table 6)",
+  "ESD Caution"
+ ],
+ "discrepancies": []
+}

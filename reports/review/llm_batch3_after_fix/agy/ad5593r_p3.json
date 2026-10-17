@@ -1,0 +1,11 @@
+{
+ "datasheet": "ad5593r",
+ "page": 3,
+ "checked_sections": [
+  "SPECIFICATIONS",
+  "Table 2: TEMPERATURE RANGE (TA)",
+  "Table 2: ADC PERFORMANCE",
+  "Table 2: DAC PERFORMANCE"
+ ],
+ "discrepancies": []
+}

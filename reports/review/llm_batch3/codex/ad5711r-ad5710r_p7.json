@@ -1,0 +1,19 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 7,
+ "checked_sections": [
+  "Electrical Characteristics — Table 3. AC Specifications (Continued), including IDAC Specifications"
+ ],
+ "discrepancies": [
+  {
+   "section": "Table 3. AC Specifications (Continued)",
+   "parameter": "Output Noise Spectral Density — 131 nV/√Hz",
+   "column": "CONDITIONS",
+   "md_text": "Range = 0 to 2 × VREF and internal reference",
+   "pdf_text": "Range = 0 to 2 × VREF and ixternal reference",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

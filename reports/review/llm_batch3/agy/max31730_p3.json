@@ -1,0 +1,9 @@
+{
+ "datasheet": "max31730",
+ "page": 3,
+ "checked_sections": [
+  "Electrical Characteristics (continued)",
+  "I2C AC Electrical Characteristics"
+ ],
+ "discrepancies": []
+}

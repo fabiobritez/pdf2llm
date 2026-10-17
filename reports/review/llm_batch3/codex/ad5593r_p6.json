@@ -1,0 +1,12 @@
+{
+ "datasheet": "ad5593r",
+ "page": 6,
+ "checked_sections": [
+  "Specifications footnotes",
+  "Timing Characteristics conditions",
+  "Table 3: Timing Characteristics",
+  "Table 3 footnotes",
+  "Figure 2: 2-Wire Serial Interface Timing Diagram"
+ ],
+ "discrepancies": []
+}

@@ -113,8 +113,34 @@ lt1965fb p4, ltc2975 p5-p10, tps6287b20 p7/p10, ts3a5018 p4/p8, tps22990 p5, tps
 
 - **agy:** 13/13 pages with 0 high/medium discrepancies. Only low: the ltc2975 p10 t_TIMEOUT_BUS ● sits in MIN, which is the repo convention (● alone in MIN when the row has no MIN value; the values are 25/35 ms TYP/MAX, as the PDF words confirm).
 - **codex** (now allowed without sandbox, images passed with `-i`): 13/13 with 0 high. One medium on ltc2975 p7 I_IIN is a false positive (pdftotext: `VIIN_SNSP = VIIN_SNSM = VIIN_SNS`, matching the md). The p6/p8 symbol-name lows were fixed (`ltc2975-p6-symbol-*`, `ltc2975-p8-symbol-vout-en-*`).
-- **grok:** lt1965fb p4 and ltc2975 p10 are clean (0 high/medium). The other pages were still running when this was written (about 5-8 min per page).
+- **grok:** 13/13 done; 0 new real errors (see batch 3 note).
 
 Earlier rounds (run4/run5) found the absolute-value bars, the _H subscripts and the V_FS_VDAC shared condition, which are now fixed.
 `fixes.json` replays exactly: applying it to the original Datalab md (commit 6439792) reproduces every corrected file byte for byte.
 Raw outputs: `reports/review/llm_batch2_after_fix/{agy,codex,grok}/`.
+
+### Batch 3: spec pages no LLM had reviewed
+
+Inventory: every EC / Abs Max / Recommended / switching page of the 15 converted datasheets that had no earlier review (37 pages: ad5593r p3-7, ad5711r p4-11, lt1965fb p2/p5, ltc2975 p2/p4, max31730 p2-4, tps22990 p4/6-8, tps6287b20 p8/9/11/12, tps63070 p4-7, tps63802 p5/7, ts3a5018 p6/7/9), plus sn74avc4t774 p8-11 (switching tables, found by a coverage scan). agy and codex reviewed all 41 pages. grok was slower and covered a subset (see below).
+
+| Datasheet | Page | Problem (Datalab) | Evidence | Fix ids (prefix) | Rows |
+|---|---|---|---|---|---|
+| sn74avc4t774 | 8 | TA = 25°C group: TYP/MAX values put in MIN/TYP (I_I, I_off ×2, I_OZ) | codex + agy + words (x-centres under TYP/MAX) | `sn74avc4t774-p8-25C-typ-max-shift-` | 4 |
+| ad5711r | 8 | 65 µA continuation row (IDAC-to-IDAC DAC-to-DAC, from p7) merged into the VDAC-to-IDAC Analog row; the header condition was glued to it | codex + agy + words | `ad5711r-p8-65uA-continuation-row` | 3 |
+| ad5593r | 3 | f_IN = 10 kHz condition belongs to the ADC PERFORMANCE header row, not to Resolution | agy + codex + words | `ad5593r-p3-fin-on-adc-header` | 2 |
+| ltc2975 | 2 and text | MFR WATCHDOG_T → MFR_WATCHDOG_T (8 lines, including "WATCH DOG") | agy + codex + pdftotext (13×, never with a space) | `ltc2975-mfr-watchdog-` | 8 |
+| tps6287b20 | 9 | EC condition prints CONTROL2:SYNCH_OUT_PHASE (a PDF typo, kept as printed) | agy + codex + pdftotext | `tps6287b20-p9-synch-out-phase-` | 2 |
+| lt1965fb | 5 | Note 3: T_J ≅ T_A (Symbol 0x40), md had ≡ | codex + glyph/crop | `lt1965fb-p5-note3-cong` | 1 |
+| lt1965fb, max31730 | 2, 5 / 3 | overbars on SHDN/THERM dropped | codex | not changed: Datalab drops overbars throughout; repo-wide convention decision | 0 |
+| ad5711r | 7 | PDF prints "ixternal reference" (131 nV/√Hz); md says internal | words | left as is (the ext/ext/int/int pattern implies internal); flagged | 0 |
+| ad5711r | 10 | Figure 4 LDAC timing prose descriptions (codex) | codex only | figure description, not a spec; not changed | 0 |
+
+All other pages: 0 high/medium findings from both agy and codex.
+After-fix re-review (agy + codex, `~/work/pdf2llm-run9`) of ad5593r p3, ad5711r p8, sn74avc4t774 p8, tps6287b20 p9 and lt1965fb p5 found 0 discrepancies.
+grok after-fix batch 2 (13 pages) is complete. The only remaining items are stale findings from a pre-fix snapshot (ltc2975 p8 V_VOUT_ENn, already fixed) and one layout note (tps22990 p5: a shared V_ON/V_OUT condition written on the first row only).
+
+Validator changes in this batch: unverifiable reasons are recorded. Repeated sub-rows are resolved by row order: an md row that follows an anchored row takes the next PDF band, but only when that band is among the tied candidates. Each md row picks its PDF table from its own values (the Abs Max and Recommended tables share labels). Identical value rows in two tables are accepted.
+Totals: verified 1059 → 1300, mismatched 0 → 0, unverifiable 393 → 152.
+Most of the remaining unverifiable rows are outside spec tables: scope-readout tables on the tps22990 p13/14 plots, and the tps6287b20 / tps63070 design-example "VALUE" tables.
+Known gap: TI tables with two MIN/TYP/MAX groups (TA = 25°C and full range, e.g. sn74avc4t774 p8) are out of validator scope. The p8 shift above was found by the LLMs, not by geometry.
+Raw outputs: `reports/review/llm_batch3/` and `reports/review/llm_batch3_after_fix/`.

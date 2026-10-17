@@ -1,0 +1,9 @@
+{
+ "datasheet": "sn74avc4t774",
+ "page": 10,
+ "checked_sections": [
+  "5.8 Switching Characteristics: VCCA = 1.8V ± 0.15V",
+  "5.9 Switching Characteristics: VCCA = 2.5V ± 0.2V"
+ ],
+ "discrepancies": []
+}

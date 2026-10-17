@@ -1,0 +1,12 @@
+{
+ "datasheet": "ad5593r",
+ "page": 7,
+ "checked_sections": [
+  "ABSOLUTE MAXIMUM RATINGS",
+  "THERMAL RESISTANCE",
+  "ELECTROSTATIC DISCHARGE (ESD) RATINGS",
+  "ESD Ratings for AD5593R",
+  "ESD CAUTION"
+ ],
+ "discrepancies": []
+}

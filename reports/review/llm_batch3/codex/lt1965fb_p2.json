@@ -1,0 +1,41 @@
+{
+ "datasheet": "lt1965fb",
+ "page": 2,
+ "checked_sections": [
+  "Absolute Maximum Ratings",
+  "Pin Configuration (including thermal ratings)",
+  "Order Information"
+ ],
+ "discrepancies": [
+  {
+   "section": "Absolute Maximum Ratings",
+   "parameter": "Shutdown pin voltage",
+   "column": "other",
+   "md_text": "SHDN Pin Voltage .....",
+   "pdf_text": "SHDN has an overbar, indicating active-low shutdown; voltage is ±22V.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Pin Configuration",
+   "parameter": "DD and MS8E packages, pin 6",
+   "column": "PIN",
+   "md_text": "6 is SHDN",
+   "pdf_text": "Pin 6 is SHDN with an overbar (active-low shutdown).",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Pin Configuration",
+   "parameter": "Q and T packages, pin 1",
+   "column": "PIN",
+   "md_text": "Pin 1 is SHDN",
+   "pdf_text": "Pin 1 is SHDN with an overbar (active-low shutdown).",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

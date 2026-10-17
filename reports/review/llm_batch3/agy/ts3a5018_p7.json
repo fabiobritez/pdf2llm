@@ -1,0 +1,10 @@
+{
+ "datasheet": "ts3a5018",
+ "page": 7,
+ "checked_sections": [
+  "Electrical Characteristics for 2.5-V Supply (continued)",
+  "6.7 Electrical Characteristics for 2.1-V Supply",
+  "6.8 Electrical Characteristics for 1.8-V Supply"
+ ],
+ "discrepancies": []
+}

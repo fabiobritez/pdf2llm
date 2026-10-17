@@ -1,0 +1,9 @@
+{
+ "datasheet": "tps63070",
+ "page": 6,
+ "checked_sections": [
+  "7.5 Electrical Characteristics — SUPPLY",
+  "7.5 Electrical Characteristics — LOGIC SIGNALS: EN, PS/SYNC, PG, VSEL"
+ ],
+ "discrepancies": []
+}

@@ -1,0 +1,60 @@
+{
+ "datasheet": "lt1965fb",
+ "page": 5,
+ "checked_sections": [
+  "Electrical Characteristics",
+  "Notes 1–13"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "SHDN Pin Current (Note 10)",
+   "column": "PIN",
+   "md_text": "SHDN Pin Current (Note 10)",
+   "pdf_text": "SHDN has an overbar (active-low shutdown).",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "SHDN Pin Current, both voltage conditions",
+   "column": "CONDITIONS",
+   "md_text": "V_{\\text{SHDN}}",
+   "pdf_text": "The SHDN subscript has an overbar in both the 0V and 20V conditions.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "Quiescent Current in Shutdown",
+   "column": "CONDITIONS",
+   "md_text": "V_{\\text{SHDN}} = 0\\text{V}",
+   "pdf_text": "V_SHDN = 0V, with an overbar over SHDN.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Note 3",
+   "parameter": "Pulse load test conditions",
+   "column": "other",
+   "md_text": "T_J \\equiv T_A",
+   "pdf_text": "T_J ≅ T_A",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Note 10",
+   "parameter": "Shutdown pin current direction",
+   "column": "PIN",
+   "md_text": "SHDN pin current flows into the SHDN pin.",
+   "pdf_text": "SHDN has an overbar in both occurrences.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

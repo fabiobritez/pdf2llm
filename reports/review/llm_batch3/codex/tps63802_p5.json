@@ -1,0 +1,11 @@
+{
+ "datasheet": "tps63802",
+ "page": 5,
+ "checked_sections": [
+  "8.1 Absolute Maximum Ratings",
+  "8.2 ESD Ratings",
+  "8.3 Recommended Operating Conditions",
+  "8.4 Thermal Information"
+ ],
+ "discrepancies": []
+}

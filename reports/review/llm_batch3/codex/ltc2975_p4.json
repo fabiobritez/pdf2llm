@@ -1,0 +1,13 @@
+{
+ "datasheet": "ltc2975",
+ "page": 4,
+ "checked_sections": [
+  "Absolute Maximum Ratings",
+  "Operating Junction Temperature Range",
+  "Storage Temperature Range",
+  "Maximum Junction Temperature",
+  "Pin Configuration",
+  "Package Dimensions and Thermal Ratings"
+ ],
+ "discrepancies": []
+}

@@ -1,0 +1,10 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 9,
+ "checked_sections": [
+  "Table 4. Digital Interface Timing Specifications (Continued)",
+  "Table 4 footnotes",
+  "Table 5. DAC Update Timing Specifications"
+ ],
+ "discrepancies": []
+}

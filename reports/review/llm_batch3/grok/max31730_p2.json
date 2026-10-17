@@ -1,0 +1,12 @@
+{
+ "datasheet": "max31730",
+ "page": 2,
+ "checked_sections": [
+  "Absolute Maximum Ratings",
+  "ESD Protection",
+  "Package Thermal Characteristics",
+  "Recommended Operating Conditions",
+  "Electrical Characteristics"
+ ],
+ "discrepancies": []
+}

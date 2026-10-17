@@ -1,0 +1,89 @@
+{
+ "datasheet": "sn74avc4t774",
+ "page": 8,
+ "checked_sections": [
+  "5.5 Electrical Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_I (Control inputs, V_I = V_CCA or GND, V_CCA = 1.1V to 3.6V, V_CCB = 1.1V to 3.6V, TA = 25°C)",
+   "column": "TYP",
+   "md_text": "| ±0.025 | ±0.25 | | (in MIN, TYP)",
+   "pdf_text": "±0.025 in TYP (MIN is empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_I (Control inputs, V_I = V_CCA or GND, V_CCA = 1.1V to 3.6V, V_CCB = 1.1V to 3.6V, TA = 25°C)",
+   "column": "MAX",
+   "md_text": "| ±0.025 | ±0.25 | | (in MIN, TYP)",
+   "pdf_text": "±0.25 in MAX (TYP is ±0.025)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off (A or B port, V_I or V_O = 0 to 3.6V, V_CCA = 0V, V_CCB = 0V to 3.6V, TA = 25°C)",
+   "column": "TYP",
+   "md_text": "| ±0.1 | ±1 | | (in MIN, TYP)",
+   "pdf_text": "±0.1 in TYP (MIN is empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off (A or B port, V_I or V_O = 0 to 3.6V, V_CCA = 0V, V_CCB = 0V to 3.6V, TA = 25°C)",
+   "column": "MAX",
+   "md_text": "| ±0.1 | ±1 | | (in MIN, TYP)",
+   "pdf_text": "±1 in MAX (TYP is ±0.1)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off (A or B port, V_I or V_O = 0 to 3.6V, V_CCA = 0V to 3.6V, V_CCB = 0V, TA = 25°C)",
+   "column": "TYP",
+   "md_text": "| ±0.1 | ±1 | | (in MIN, TYP)",
+   "pdf_text": "±0.1 in TYP (MIN is empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off (A or B port, V_I or V_O = 0 to 3.6V, V_CCA = 0V to 3.6V, V_CCB = 0V, TA = 25°C)",
+   "column": "MAX",
+   "md_text": "| ±0.1 | ±1 | | (in MIN, TYP)",
+   "pdf_text": "±1 in MAX (TYP is ±0.1)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_OZ (A or B port, V_O = V_CCO or GND, V_I = V_CCI or GND, /OE = V_IH, V_CCA = 3.6V, V_CCB = 3.6V, TA = 25°C)",
+   "column": "TYP",
+   "md_text": "| ±0.5 | ±2.5 | | (in MIN, TYP)",
+   "pdf_text": "±0.5 in TYP (MIN is empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_OZ (A or B port, V_O = V_CCO or GND, V_I = V_CCI or GND, /OE = V_IH, V_CCA = 3.6V, V_CCB = 3.6V, TA = 25°C)",
+   "column": "MAX",
+   "md_text": "| ±0.5 | ±2.5 | | (in MIN, TYP)",
+   "pdf_text": "±2.5 in MAX (TYP is ±0.5)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

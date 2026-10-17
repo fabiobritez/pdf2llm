@@ -1,0 +1,13 @@
+{
+ "datasheet": "ad5593r",
+ "page": 4,
+ "checked_sections": [
+  "Table 2 (continued): DAC DC specifications",
+  "DAC AC specifications",
+  "Reference input",
+  "Reference output",
+  "GPIO output",
+  "GPIO input"
+ ],
+ "discrepancies": []
+}

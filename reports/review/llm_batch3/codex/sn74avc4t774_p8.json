@@ -1,0 +1,89 @@
+{
+ "datasheet": "sn74avc4t774",
+ "page": 8,
+ "checked_sections": [
+  "5.5 Electrical Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_I, Control inputs, V_I = V_CCA or GND",
+   "column": "TYP",
+   "md_text": "±0.025",
+   "pdf_text": "±0.025 is in TA = 25°C TYP; MIN is blank",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_I, Control inputs, V_I = V_CCA or GND",
+   "column": "MAX",
+   "md_text": "±0.25",
+   "pdf_text": "±0.25 is in TA = 25°C MAX",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off, A or B port, V_CCA = 0V, V_CCB = 0V to 3.6V",
+   "column": "TYP",
+   "md_text": "±0.1",
+   "pdf_text": "±0.1 is in TA = 25°C TYP; MIN is blank",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off, A or B port, V_CCA = 0V, V_CCB = 0V to 3.6V",
+   "column": "MAX",
+   "md_text": "±1",
+   "pdf_text": "±1 is in TA = 25°C MAX",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off, A or B port, V_CCA = 0V to 3.6V, V_CCB = 0V",
+   "column": "TYP",
+   "md_text": "±0.1",
+   "pdf_text": "±0.1 is in TA = 25°C TYP; MIN is blank",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_off, A or B port, V_CCA = 0V to 3.6V, V_CCB = 0V",
+   "column": "MAX",
+   "md_text": "±1",
+   "pdf_text": "±1 is in TA = 25°C MAX",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_OZ, A or B port, V_CCA = V_CCB = 3.6V",
+   "column": "TYP",
+   "md_text": "±0.5",
+   "pdf_text": "±0.5 is in TA = 25°C TYP; MIN is blank",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "5.5 Electrical Characteristics",
+   "parameter": "I_OZ, A or B port, V_CCA = V_CCB = 3.6V",
+   "column": "MAX",
+   "md_text": "±2.5",
+   "pdf_text": "±2.5 is in TA = 25°C MAX",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

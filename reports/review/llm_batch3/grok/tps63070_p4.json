@@ -1,0 +1,10 @@
+{
+ "datasheet": "tps63070",
+ "page": 4,
+ "checked_sections": [
+  "Absolute Maximum Ratings",
+  "ESD Ratings",
+  "Recommended Operating Conditions"
+ ],
+ "discrepancies": []
+}

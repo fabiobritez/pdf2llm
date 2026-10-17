@@ -1,0 +1,30 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 8,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS - Table 3. AC Specifications (Continued)",
+  "DIGITAL INTERFACE TIMING - Table 4. Digital Interface Timing Specifications"
+ ],
+ "discrepancies": [
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Table 3. AC Specifications (Continued)",
+   "parameter": "Continuation row from previous page (OUT1 and OUT5 as victim channels, with OUT0 and OUT4 as attackers respectively) and VDAC-to-IDAC Crosstalk (Current Peak)",
+   "column": "other",
+   "md_text": "| VDAC-to-IDAC Crosstalk (Current Peak)<br>Analog | | 65 | | μA | OUT1 and OUT5 as victim channels, with OUT0 and OUT4 as attackers respectively<br>Internal reference and range = 0 to VREF |",
+   "pdf_text": "Row 1: [blank parameter] | Typ: 65 | Unit: μA | Test Conditions: OUT1 and OUT5 as victim channels, with OUT0 and OUT4 as attackers respectively; Row 2: VDAC-to-IDAC Crosstalk (Current Peak) | Test Conditions: Internal reference and range = 0 to VREF",
+   "type": "wrong_row",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Table 3. AC Specifications (Continued)",
+   "parameter": "VDAC-to-IDAC Crosstalk (Current Peak) - Analog (OUT0, OUT2 , OUT3, OUT4, OUT6, and OUT7 as victim channels)",
+   "column": "other",
+   "md_text": "| | | 6.5 | | μA | OUT0, OUT2 , OUT3, OUT4, OUT6, and OUT7 as victim channels |",
+   "pdf_text": "Parameter: Analog | Typ: 6.5 | Unit: μA | Test Conditions: OUT0, OUT2 , OUT3, OUT4, OUT6, and OUT7 as victim channels (the 'Analog' parameter label was shifted up into the preceding 65 μA row)",
+   "type": "wrong_row",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

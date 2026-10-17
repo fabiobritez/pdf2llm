@@ -1,0 +1,20 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 10,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS",
+  "Figure 4. LDAC Operation Timing"
+ ],
+ "discrepancies": [
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Figure 4",
+   "parameter": "Figure 4 timing diagram description (t_L1, t_L2, t_L3, t_L4 and LDAC pulses)",
+   "column": "other",
+   "md_text": "The LDAC signal is a pulse that coincides with the second BYTE0... t_L1 is the time from the falling edge of LDAC to the start of the output transition; t_L2 is the time from the falling edge of LDAC to the end of the output transition; t_L3 is the time from the rising edge of LDAC to the start of the output transition; and t_L4 is the time from the rising edge of LDAC to the end of the output transition.",
+   "pdf_text": "Diagram shows two active-low LDAC pulses (first during first BYTE0, second across the boundary of second BYTE1 and second BYTE0); t_L1 is from falling edge to rising edge of first LDAC pulse; t_L2 is from first LDAC falling edge to the end of first BYTE0; t_L3 is from second LDAC falling edge to the end of second BYTE1; t_L4 is to the end of the OUTn transition.",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

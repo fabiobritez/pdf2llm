@@ -1,0 +1,22 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 8,
+ "checked_sections": [
+  "Table 3. AC Specifications (Continued)",
+  "Table 3 footnotes",
+  "Digital Interface Timing conditions",
+  "Table 4. Digital Interface Timing Specifications"
+ ],
+ "discrepancies": [
+  {
+   "section": "Table 3. AC Specifications (Continued)",
+   "parameter": "VDAC-to-IDAC Crosstalk (Current Peak), Analog",
+   "column": "other",
+   "md_text": "VDAC-to-IDAC Crosstalk (Current Peak)<br>Analog |     | 65",
+   "pdf_text": "The 65 μA entry is an unlabeled continuation row above VDAC-to-IDAC Crosstalk (Current Peak). The VDAC-to-IDAC heading has the condition Internal reference and range = 0 to VREF; Analog begins with 6.5 μA.",
+   "type": "wrong_row",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

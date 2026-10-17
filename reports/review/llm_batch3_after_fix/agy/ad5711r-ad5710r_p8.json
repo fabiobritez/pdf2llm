@@ -1,0 +1,9 @@
+{
+ "datasheet": "ad5711r-ad5710r",
+ "page": 8,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS - Table 3. AC Specifications (Continued)",
+  "DIGITAL INTERFACE TIMING - Table 4. Digital Interface Timing Specifications"
+ ],
+ "discrepancies": []
+}

@@ -1,0 +1,12 @@
+{
+ "datasheet": "ad5593r",
+ "page": 5,
+ "checked_sections": [
+  "Table 2. Specifications (continued): input thresholds, capacitance, hysteresis, and current",
+  "Logic inputs",
+  "Logic output (SDA)",
+  "Temperature sensor",
+  "Power requirements"
+ ],
+ "discrepancies": []
+}

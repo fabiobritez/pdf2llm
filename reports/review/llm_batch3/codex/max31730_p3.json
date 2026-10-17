@@ -1,0 +1,30 @@
+{
+ "datasheet": "max31730",
+ "page": 3,
+ "checked_sections": [
+  "Electrical Characteristics (continued)",
+  "I²C AC Electrical Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics (continued)",
+   "parameter": "THERM Output Low Voltage",
+   "column": "other",
+   "md_text": "THERM Output Low Voltage",
+   "pdf_text": "THERM with an overbar (active-low) Output Low Voltage",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics (continued)",
+   "parameter": "Output High Leakage Current",
+   "column": "other",
+   "md_text": "THERM, SDA",
+   "pdf_text": "THERM with an overbar (active-low), SDA",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}
