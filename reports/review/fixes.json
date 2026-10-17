@@ -1387,5 +1387,18 @@
       "validator-heuristic"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p10-note10-vio",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 10,
+    "old": "external pull-up voltage, V<sub>I0</sub>, is 3.13V < V<sub>I0</sub> < 3.6V.",
+    "new": "external pull-up voltage, V<sub>IO</sub>, is 3.13V < V<sub>IO</sub> < 3.6V.",
+    "evidence": "pdftotext p10 Note 10: 'SCL and SDA external pull-up voltage, VIO, is 3.13V < VIO < 3.6V' (letter O, not zero).",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
   }
 ]
