@@ -16,6 +16,10 @@ the Markdown column order. A row is
   unpaired  every token exists on the page but never together on one line.
 Only missing/unpaired rows need review; loose rows are reported as a count.
 
+Bit-layout tables (columns 7..0 or Bit 7..Bit 0): each field must sit, by x
+position on the page, over the bit columns it spans in the Markdown (an empty
+cell continues the field on its left); otherwise status "bit_column".
+
 Pin descriptions written as prose ("**EN (Pin 1):** ...", Analog Devices/LTC
 style) are checked too: the name and the pin list must be printed in that order
 on the page (status "pin_prose").
@@ -143,11 +147,57 @@ def in_order(toks, text):
     return True
 
 
+def bit_columns(doc, page, header, rows):
+    """Issues for bit-layout rows whose fields sit over other bits in the PDF."""
+    labels = [re.sub(r"(?i)^bit\s*", "", plain(h)) for h in header]
+    idx = [k for k, h in enumerate(labels) if re.fullmatch(r"[0-7]", h)]
+    if [labels[k] for k in idx] != list("76543210"):
+        return None
+    centres = None
+    for p in (page, page + 1):
+        if not 1 <= p <= len(doc):
+            continue
+        ws = doc[p - 1].get_text("words")
+        for y in sorted({round((w[1] + w[3]) / 2) for w in ws}):
+            line = sorted((w for w in ws if abs((w[1] + w[3]) / 2 - y) <= 2), key=lambda w: w[0])
+            bits = [w for w in line if re.fullmatch(r"(?i)(?:bit)?[0-7]", w[4])]
+            if [re.sub(r"(?i)^bit", "", w[4]) for w in bits][:8] == list("76543210"):
+                centres = (p, [(w[0] + w[2]) / 2 for w in bits[:8]], ws)
+                break
+        if centres:
+            break
+    if not centres:
+        return []
+    p, xs, ws = centres
+    step = xs[1] - xs[0]
+    edges = [xs[0] - step / 2] + [(a + b) / 2 for a, b in zip(xs, xs[1:])] + [xs[-1] + step / 2]
+    issues = []
+    for ln, cells in rows:
+        vals = [plain(cells[k]) if k < len(cells) else "" for k in idx]
+        for j, v in enumerate(vals):
+            toks = tokens(v)
+            if not toks:
+                continue
+            end = j + 1
+            while end < 8 and not vals[end]:
+                end += 1
+            hits = [(w[0] + w[2]) / 2 for w in ws if squash(w[4]).startswith(toks[0][:6])]
+            if hits and not any(edges[j] - 2 <= x <= edges[end] + 2 for x in hits):
+                issues.append({"line": ln, "page": page, "status": "bit_column", "tokens": [v],
+                               "row": f"md bits {7 - j}..{8 - end}; PDF x={[round(x) for x in hits[:4]]}, "
+                                      f"span {round(edges[j])}-{round(edges[end])}"})
+    return issues
+
+
 def check(name):
     md = ROOT / "output" / name / f"{name}.md"
     doc = pymupdf.open(ROOT / f"{name}.pdf")
     result = {"tables": 0, "rows": 0, "ok": 0, "loose": 0, "issues": []}
     for page, line, header, rows in md_tables(md.read_text(encoding="utf-8")):
+        bits = bit_columns(doc, page, header, rows)
+        if bits is not None:
+            result["bit_tables"] = result.get("bit_tables", 0) + 1
+            result["issues"] += bits
         if not structural(header):
             continue
         keep = [k for k, h in enumerate(header) if not LONG.search(h)]
@@ -189,16 +239,18 @@ def main():
     names = a.names or sorted(p.name for p in (ROOT / "output").iterdir() if (ROOT / f"{p.name}.pdf").exists())
     out = ROOT / a.out; out.mkdir(parents=True, exist_ok=True)
     summary = ["# Pin and register table check", "", "Rows: ok / loose / missing / unpaired.", "",
-               "| datasheet | tables | rows | ok | loose | missing | unpaired | prose pin entries (not matched) |",
-               "|---|---|---|---|---|---|---|---|"]
+               "| datasheet | tables | rows | ok | loose | missing | unpaired | prose pin entries (not matched) | bit layouts (misplaced) |",
+               "|---|---|---|---|---|---|---|---|---|"]
     for n in names:
         r = check(n)
         miss = sum(i["status"] == "missing" for i in r["issues"]); unp = len(r["issues"]) - miss
         prose = sum(i["status"] == "pin_prose" for i in r["issues"])
-        summary.append(f"| {n} | {r['tables']} | {r['rows']} | {r['ok']} | {r['loose']} | {miss} | {unp - prose} | {r.get('pin_prose', 0)} ({prose}) |")
+        bitc = sum(i["status"] == "bit_column" for i in r["issues"]); unp -= bitc
+        summary.append(f"| {n} | {r['tables']} | {r['rows']} | {r['ok']} | {r['loose']} | {miss} | {unp - prose} | {r.get('pin_prose', 0)} ({prose}) | {r.get('bit_tables', 0)} ({bitc}) |")
         (out / f"{n}.json").write_text(json.dumps(r, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"{n}: {r['tables']} tables, {r['rows']} rows, ok {r['ok']}, loose {r['loose']}, missing {miss}, "
-              f"unpaired {unp - prose}, prose pin entries {r.get('pin_prose', 0)} ({prose} not matched)")
+              f"unpaired {unp - prose}, prose pin entries {r.get('pin_prose', 0)} ({prose} not matched), "
+              f"bit-layout tables {r.get('bit_tables', 0)} ({bitc} misplaced fields)")
     (out / "SUMMARY.md").write_text("\n".join(summary) + "\n", encoding="utf-8")
 
 

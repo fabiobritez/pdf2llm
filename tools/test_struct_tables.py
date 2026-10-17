@@ -43,6 +43,18 @@ class StructTableTests(unittest.TestCase):
         self.assertEqual(c.tokens(m[1]), ["en1", "pin", "1", "ball", "b3"])
         self.assertTrue(c.in_order(["en1", "pin", "1"], "en1pin1ballb3enableinput"))
 
+    def test_bit_layout_shift_is_flagged(self):
+        class Page:
+            def get_text(self, kind):
+                ws = [(x - 3, 155, x + 3, 161, str(7 - k)) for k, x in enumerate(range(86, 586, 62))]
+                return ws + [(370, 169, 390, 175, "DROOPEN"), (440, 169, 460, 175, "SINGLE"),
+                            (190, 169, 220, 175, "RESERVED")]
+        header = ["7", "6", "5", "4", "3", "2", "1", "0"]
+        shifted = [(10, ["RESERVED", "", "", "", "DROOPEN", "SINGLE", "", ""])]
+        right = [(10, ["RESERVED", "", "", "", "", "DROOPEN", "SINGLE", ""])]
+        self.assertEqual([i["tokens"] for i in c.bit_columns([Page()], 1, header, shifted)], [["DROOPEN"]])
+        self.assertEqual(c.bit_columns([Page()], 1, header, right), [])
+
 
 if __name__ == "__main__":
     unittest.main()

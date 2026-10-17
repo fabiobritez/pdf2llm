@@ -10,9 +10,9 @@ Numeric tokens retain signs; − and – normalize to -. Word sets are case-sens
 
 Spec tables: 5; rows: 163; nonempty cells checked: 554; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 3852, compact 3852; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 3853, compact 3853; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 4457, compact 3852; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 4458, compact 3853; equal: False; source subset: False.
 
 ## ad5711r-ad5710r
 

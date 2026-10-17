@@ -1,0 +1,12 @@
+You are auditing the fidelity of a Markdown transcription of one page of an electronics datasheet.
+Files in the current directory:
+- PAGE_IMAGE: {img}  (rendered image of the ORIGINAL PDF page; this is the ground truth. Open and look at it.)
+- Zoomed crops of the same page at higher resolution: {top} (upper 55%) and {bottom} (lower 55%). Use them to read small text.
+- PAGE_MD: {md}  (the Markdown transcription of that same page, produced by an automatic converter)
+Datasheet: {name}, page {page}.
+
+Task: compare the transcription against the image. Focus on pin tables and pin descriptions (pin number <-> pin name <-> type pairing, package columns, ball IDs), register maps and bit-field tables (register name, address/offset, bit position or range, field name, reset/POR value, access type R/W/R/W1C..., and which description belongs to which bit), command tables (command name, code, type, paged, format, units, default), and the functional description prose (every number, unit, signal and pin name, active-high/low and "not" wording, bit and register references). Report wrong, missing or extra rows, cells or sentences, values in the wrong column or row, and misspelt identifiers. Ignore pure formatting differences (LaTeX vs plain, bold, whitespace, column padding, merged-cell rendering that keeps the meaning unambiguous, page headers/footers) and AI-written figure descriptions (image alt text, "Figure ...: A diagram showing ..." paragraphs): those are not transcription.
+
+Do not modify any files and do not run shell commands; just read the image files and the md file. Output ONLY a JSON object (no prose, no code fences) with this schema:
+{"datasheet":"{name}","page":{page},"checked_sections":["..."],"discrepancies":[{"section":"...","parameter":"row/pin/register/bit or sentence it belongs to","column":"PIN|NAME|BIT|FIELD|RESET|ACCESS|ADDRESS|TEXT|other","md_text":"exact text as it appears in the md (short)","pdf_text":"what the image shows","type":"wrong_value|wrong_column|missing|extra|wrong_row|misspelt|other","severity":"high|medium|low","confidence":"high|medium|low"}]}
+If everything matches, return an empty discrepancies list. Be precise; do not guess - if the image is unreadable, set confidence low.

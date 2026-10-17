@@ -3,5 +3,6 @@
  "rows": 43,
  "ok": 42,
  "loose": 1,
- "issues": []
+ "issues": [],
+ "bit_tables": 4
 }
