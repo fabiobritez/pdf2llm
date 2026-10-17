@@ -102,10 +102,21 @@ class CompactTests(unittest.TestCase):
     def test_header_only_column_not_dropped(self):
         self.assertIn('|A|MIN|Header|', compact('|A|MIN|Header|\n|-|-|-|\n|x|1||'))
 
+    def test_summary_and_section_index(self):
+        source = '{0}------\n\n# Part\n\n## 1 Features\n\n- 5 V supply\n\n{1}------\n\n## 2 Specs\n\n## 2 Specs (continued)\n'
+        out = compact(source, 'x.md', summary='Key features: 5 V supply [p1].')
+        self.assertIn('<!-- summary: begin', out)
+        self.assertIn('- 1 Features [p1]', out)
+        self.assertIn('- 2 Specs [p2]', out)
+        self.assertNotIn('(continued) [p', out)
+        self.assertEqual(check(source, out)['failures'], [])
+        bad = compact(source, 'x.md', summary='Key features: 6 V supply.')
+        self.assertTrue(any('Summary numbers' in f for f in check(source, bad)['failures']))
+
     def test_figures(self):
         out = compact('![A 1 V graph](a.jpg)\n\nA 1 V graph\n\n**Figure 7. Caption**')
         self.assertEqual(out.count('A 1 V graph'), 1)
-        self.assertIn('Figure (description only, not data): A 1 V graph', out)
+        self.assertIn('Figure a.jpg (description only, not data): A 1 V graph', out)
         self.assertIn('\nFigure 7. Caption', out)
         self.assertIn('graph 2 V extended', compact('![graph](a.jpg)\n\ngraph 2 V extended'))
         self.assertIn('different 3 V', compact('![graph](a.jpg)\n\ndifferent 3 V'))

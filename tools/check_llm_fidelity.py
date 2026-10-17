@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def tokens(text):
     # Preserve numeric sign semantics before stripping arbitrary TeX commands.
+    text = re.sub(r'(?:img/)?[0-9a-f]{32}_img\.\w+', ' ', text)  # image file names are metadata
     text = html.unescape(text).replace('−', '-').replace('–', '-').replace(r'\pm', '±')
     text = re.sub(r'^\s*[-+*]\s+', '', text)
     text = re.sub(r'</?(?:sub|sup)\b[^>]*>|<br\s*/?>', ' ', text, flags=re.I)
@@ -264,7 +265,23 @@ def tables(lines):
     return result
 
 
+GENERATED = re.compile(r'<!-- (summary|section index): begin[^\n]*-->\n(.*?)\n<!-- \1: end -->\n?', re.S)
+
+
+def generated_blocks(compact):
+    """Split off the generated summary / section index (not verbatim datasheet text)."""
+    blocks = {m[1]: m[2] for m in GENERATED.finditer(compact)}
+    return GENERATED.sub('', compact), blocks
+
+
 def check(source, compact):
+    compact, blocks = generated_blocks(compact)
+    summary_missing = []
+    if 'summary' in blocks:
+        # Every number in the summary must be printed somewhere in the datasheet.
+        known = set(tokens(source)[0]) | {n.lstrip('+') for n in tokens(source)[0]}
+        known |= {n.lstrip('±-+') for n in known}
+        summary_missing = sorted({n for n in tokens(blocks['summary'])[0] if n.lstrip('+') not in known})
     original = source_lines(source)
     src_tables = tables(original)
     dst_tables = tables(list(enumerate(compact.splitlines(), 1)))
@@ -309,8 +326,10 @@ def check(source, compact):
                 'equal': counts == target_numbers, 'subset': not missing,
                 'missing': {t: {'count': n, 'source_lines': locations[t]} for t, n in sorted(missing.items())},
                 'extra': dict(target_numbers - counts)}
+    if summary_missing:
+        failures.append(f'Summary numbers not found in the datasheet: {summary_missing}')
     return {'tables': len(src_tables), 'rows': rows_checked, 'cells': cells_checked,
-            'failures': failures, 'numeric': numeric_audit(original),
+            'failures': failures, 'summary': 'summary' in blocks, 'summary_missing': summary_missing, 'numeric': numeric_audit(original),
             'deduplicated_numeric': numeric_audit(source_lines(source, dedupe=True))}
 
 

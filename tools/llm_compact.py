@@ -7,7 +7,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = re.compile(r'^\{(\d+)\}-{3,}\s*$')
-IMAGE = re.compile(r'^!\[(.*)\]\([^\n]*\)\s*$')
+IMAGE = re.compile(r'^!\[(.*)\]\(([^\n]*)\)\s*$')
 HEADING = re.compile(r'^(#{1,6})\s+(.*)')
 ICONS = re.compile(r'^(Product Folder|Order Now|Technical Documents|Tools & Software|Support & Community)( icon)?$', re.I)
 SEPARATOR = re.compile(r'^:?-+:?$')
@@ -348,7 +348,31 @@ def inline(text, table=False):
                   lambda m: spans[int(m[1])], text)
 
 
-def compact(text, source='source.md'):
+SUMMARY_BEGIN = '<!-- summary: begin. Cross-checked against this datasheet; not part of the verbatim text. -->'
+SUMMARY_END = '<!-- summary: end -->'
+INDEX_BEGIN = '<!-- section index: begin -->'
+INDEX_END = '<!-- section index: end -->'
+
+
+def section_index(body):
+    """Top-level headings (# and ##) with the PDF page they start on."""
+    page, entries = None, []
+    for line in body.splitlines():
+        marker = re.fullmatch(r'\[p(\d+)\]', line)
+        if marker:
+            page = marker[1]
+            continue
+        heading = re.match(r'^(#{1,2})\s+(.*\S)\s*$', line)
+        if not heading:
+            continue
+        title = re.sub(r'\*+', '', heading[2]).strip()
+        if re.search(r'\(continued\)\s*$', title, re.I) or (entries and entries[-1][0].lower() == title.lower()):
+            continue
+        entries.append((title, page))
+    return [f'- {title}' + (f' [p{pg}]' if pg else '') for title, pg in entries]
+
+
+def compact(text, source='source.md', summary=None):
     if text.startswith('<!-- pdf2llm compact:'):
         return text  # Canonical output is a fixed point; never reinterpret literal text.
     lines = section_filter(list(enumerate(text.splitlines(), 1)))
@@ -381,7 +405,8 @@ def compact(text, source='source.md'):
             duplicate = bool(a and b and (a.startswith(b) or b.startswith(a)))
             if not ICONS.fullmatch(html.unescape(alt)):
                 # When the repeat is longer, keep it so prefix matching loses no data.
-                output.append('Figure (description only, not data): ' + inline(paragraph if duplicate and len(b) > len(a) else alt))
+                output.append(f'Figure {img[2].strip()} (description only, not data): '
+                              + inline(paragraph if duplicate and len(b) > len(a) else alt))
             if duplicate:
                 i = end - 1
         elif line.strip().startswith('|') and line.strip().endswith('|'):
@@ -411,8 +436,14 @@ def compact(text, source='source.md'):
                 output.append(inline(line))
         i += 1
     body = re.sub(r'\n{3,}', '\n\n', '\n'.join(output)).strip()
-    legend = f'<!-- pdf2llm compact: {source}. [pN] = PDF page N. "Figure (description only, not data)" lines are AI image descriptions, not measured data. ● = spec applies over full temperature range (as printed). -->'
-    return legend + '\n\n' + body + '\n'
+    legend = f'<!-- pdf2llm compact: {source}. [pN] = PDF page N. "Figure (description only, not data)" lines are AI image descriptions (image file given), not measured data. A cross-checked summary and a section index come first; the datasheet text follows. ● = spec applies over full temperature range (as printed). -->'
+    head = [legend, '']
+    if summary and summary.strip():
+        head += [SUMMARY_BEGIN, summary.strip(), SUMMARY_END, '']
+    index = section_index(body)
+    if index:
+        head += [INDEX_BEGIN, '## Section index', '', *index, INDEX_END, '']
+    return '\n'.join(head) + '\n' + body + '\n'
 
 
 def main():
@@ -424,7 +455,9 @@ def main():
         parser.error('Use --all or names, not both')
     for path in sources(args.names):
         target = path.with_name(path.parent.name + '.llm.md')
-        target.write_text(compact(path.read_text(), str(path.relative_to(ROOT))), encoding='utf-8')
+        summary_path = ROOT / 'reports' / 'llm' / 'summaries' / (path.parent.name + '.md')
+        summary = summary_path.read_text(encoding='utf-8') if summary_path.exists() else None
+        target.write_text(compact(path.read_text(), str(path.relative_to(ROOT)), summary), encoding='utf-8')
         print(target.relative_to(ROOT))
 
 
