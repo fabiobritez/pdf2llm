@@ -1,0 +1,303 @@
+[
+  {
+    "id": "ina190-p4-absmax-analog-inputs",
+    "file": "output/ina190/ina190.md",
+    "page": 4,
+    "old": "| V <sub>IN+</sub> , V <sub>IN-</sub> | Analog inputs                             | Differential (V <sub>IN+</sub> ) – (V <sub>IN-</sub> ) <sup>(2)</sup>    | –42                     | V    |\n|                                     |                                           | V <sub>IN+</sub> , V <sub>IN-</sub> , with respect to GND <sup>(3)</sup> | 42                      |      |",
+    "new": "| V <sub>IN+</sub> , V <sub>IN-</sub> | Analog inputs: Differential (V <sub>IN+</sub> ) – (V <sub>IN-</sub> ) <sup>(2)</sup> | –42 | 42 | V |\n|  | Analog inputs: V <sub>IN+</sub> , V <sub>IN-</sub> , with respect to GND <sup>(3)</sup> | GND – 0.3 | 42 | V |",
+    "evidence": "PDF p4 Absolute Maximum Ratings: Differential (VIN+)–(VIN–) MIN –42, MAX 42, UNIT V; VIN+, VIN– with respect to GND MIN GND – 0.3, MAX 42, UNIT V. md had the condition text in the MIN column, –42 in MAX, and lost 'GND – 0.3' and the second 42 placement.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-render-visual"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ina190-p4-absmax-ref-out-unit",
+    "file": "output/ina190/ina190.md",
+    "page": 4,
+    "old": "|                                     | REF, OUT <sup>(3)</sup>                   | GND – 0.3                                                                | (V <sub>S</sub> ) + 0.3 |      |",
+    "new": "|  | REF, OUT <sup>(3)</sup> | GND – 0.3 | (V <sub>S</sub> ) + 0.3 | V |",
+    "evidence": "PDF p4: REF, OUT row has UNIT V; md UNIT cell empty.",
+    "sources": [
+      "agy",
+      "pdf-render-visual"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p4-esd-columns",
+    "file": "output/ina190/ina190.md",
+    "page": 4,
+    "old": "|                    |                         | VALUE                                                                          | UNIT  |\n|--------------------|-------------------------|--------------------------------------------------------------------------------|-------|\n| V <sub>(ESD)</sub> | Electrostatic discharge | Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup>              | ±3000 |\n|                    |                         | Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup> | ±1000 |",
+    "new": "|  |  |  | VALUE | UNIT |\n|---|---|---|---|---|\n| V <sub>(ESD)</sub> | Electrostatic discharge | Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup> | ±3000 | V |\n|  |  | Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup> | ±1000 | V |",
+    "evidence": "PDF p4 ESD Ratings: V(ESD) HBM ±3000 V, CDM ±1000 V. md table had 4 columns so the values sat under the UNIT header and the unit V was missing.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-render-visual"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ina190-p5-ec-gain-error-subconditions",
+    "file": "output/ina190/ina190.md",
+    "page": 5,
+    "old": "| $E_G$                     | Gain error                         | $V_{\\text{OUT}} = 0.1\\text{ V to } V_S - 0.1\\text{ V}$                                                                                                                             | A1 devices         | -0.04%                    | ±0.2%                  |        |\n|                           |                                    |                                                                                                                                                                                    | A2, A3, A4 devices | -0.06%                    | ±0.3%                  |        |\n|                           |                                    |                                                                                                                                                                                    | A5 devices         | -0.08%                    | ±0.4%                  |        |",
+    "new": "| $E_G$ | Gain error | $V_{\\text{OUT}} = 0.1\\text{ V to } V_S - 0.1\\text{ V}$, A1 devices |  | -0.04% | ±0.2% |  |\n|  |  | A2, A3, A4 devices |  | -0.06% | ±0.3% |  |\n|  |  | A5 devices |  | -0.08% | ±0.4% |  |",
+    "evidence": "PDF p5 Electrical Characteristics: the device-variant sub-condition (A1 devices, ...) is a sub-column of CONDITIONS; MIN is blank. md put it in the MIN column. Values (TYP/MAX) were already in the correct columns; sub-condition moved into CONDITIONS and MIN left empty.",
+    "sources": [
+      "agy",
+      "validator-column-shift",
+      "pdf-render-visual"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p5-ec-rvrr-subconditions",
+    "file": "output/ina190/ina190.md",
+    "page": 5,
+    "old": "| RVRR                      | Reference voltage rejection ratio  | $V_{\\text{REF}} = 100\\text{ mV to } V_S - 100\\text{ mV}$ ,<br>$T_A = -40^\\circ\\text{C to } +125^\\circ\\text{C}$                                                                     | A1 devices         | ±2                        | ±10                    | µV/V   |\n|                           |                                    |                                                                                                                                                                                    | A2 devices         | ±1                        | ±6                     |        |\n|                           |                                    |                                                                                                                                                                                    | A3 devices         | ±0.5                      | ±4                     |        |\n|                           |                                    |                                                                                                                                                                                    | A4, A5 devices     | ±0.25                     | ±3                     |        |",
+    "new": "| RVRR | Reference voltage rejection ratio | $V_{\\text{REF}} = 100\\text{ mV to } V_S - 100\\text{ mV}$ ,<br>$T_A = -40^\\circ\\text{C to } +125^\\circ\\text{C}$, A1 devices |  | ±2 | ±10 | µV/V |\n|  |  | A2 devices |  | ±1 | ±6 |  |\n|  |  | A3 devices |  | ±0.5 | ±4 |  |\n|  |  | A4, A5 devices |  | ±0.25 | ±3 |  |",
+    "evidence": "PDF p5 Electrical Characteristics: the device-variant sub-condition (A1 devices, ...) is a sub-column of CONDITIONS; MIN is blank. md put it in the MIN column. Values (TYP/MAX) were already in the correct columns; sub-condition moved into CONDITIONS and MIN left empty.",
+    "sources": [
+      "agy",
+      "validator-column-shift",
+      "pdf-render-visual"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p5-ec-vzl-subconditions",
+    "file": "output/ina190/ina190.md",
+    "page": 5,
+    "old": "| $V_{\\text{ZL}}$           | Zero current output voltage        | $V_S = 1.8\\text{ V}$ , $R_L = 10\\text{ k}\\Omega$ to GND,<br>$T_A = -40^\\circ\\text{C to } +125^\\circ\\text{C}$ , $V_{\\text{SENSE}} = 0\\text{ mV}$ ,<br>$V_{\\text{REF}} = 0\\text{ V}$ | A1, A2, A3 devices | $(V_{\\text{GND}}) + 1$    | $(V_{\\text{GND}}) + 3$ | mV     |\n|                           |                                    |                                                                                                                                                                                    | A4 devices         | $(V_{\\text{GND}}) + 2$    | $(V_{\\text{GND}}) + 4$ | mV     |\n|                           |                                    |                                                                                                                                                                                    | A5 devices         | $(V_{\\text{GND}}) + 3$    | $(V_{\\text{GND}}) + 9$ | mV     |",
+    "new": "| $V_{\\text{ZL}}$ | Zero current output voltage | $V_S = 1.8\\text{ V}$ , $R_L = 10\\text{ k}\\Omega$ to GND,<br>$T_A = -40^\\circ\\text{C to } +125^\\circ\\text{C}$ , $V_{\\text{SENSE}} = 0\\text{ mV}$ ,<br>$V_{\\text{REF}} = 0\\text{ V}$, A1, A2, A3 devices |  | $(V_{\\text{GND}}) + 1$ | $(V_{\\text{GND}}) + 3$ | mV |\n|  |  | A4 devices |  | $(V_{\\text{GND}}) + 2$ | $(V_{\\text{GND}}) + 4$ | mV |\n|  |  | A5 devices |  | $(V_{\\text{GND}}) + 3$ | $(V_{\\text{GND}}) + 9$ | mV |",
+    "evidence": "PDF p5 Electrical Characteristics: the device-variant sub-condition (A1 devices, ...) is a sub-column of CONDITIONS; MIN is blank. md put it in the MIN column. Values (TYP/MAX) were already in the correct columns; sub-condition moved into CONDITIONS and MIN left empty.",
+    "sources": [
+      "agy",
+      "validator-column-shift",
+      "pdf-render-visual"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p3-ec-pmos-current-limit",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 3,
+    "old": "| PMOS Current Limit (I <sub>LIM</sub> )                    | Current out of SW, V <sub>OUT</sub> /V <sub>IN</sub> ≤ 0.2                    |        | 2.9       | 3.2        | 3.5 A    |",
+    "new": "| PMOS Current Limit (I <sub>LIM</sub> ) | Current out of SW, V <sub>OUT</sub> /V <sub>IN</sub> ≤ 0.2 | 2.9 | 3.2 | 3.5 | A |",
+    "evidence": "PDF p3 words: 2.9@x428 (MIN), 3.2@x468 (TYP), 3.5@x508 (MAX), A@x562 (UNITS); header MIN@426 TYP@466 MAX@505 UNITS@545. md shifted values one column right and merged '3.5 A'.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3315a-p4-ec-max-duty-cycle",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "| Maximum Duty Cycle                  |                                           | ●   | 100 |           | %          |",
+    "new": "| Maximum Duty Cycle |  | ● 100 |  |  | % |",
+    "evidence": "PDF p4 words: ● marker@x401, 100@x427 (MIN), %@x559. md put 100 in TYP. Rewritten with the '● value' convention used elsewhere in this table.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3315a-p4-ec-header-power",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "### Power Good/Soft-Start\n\n|                              |                                            |   |      |     |     |    |",
+    "new": "### Power Good/Soft-Start\n\n| PARAMETER | CONDITIONS | ● (full temp range) | MIN | TYP | MAX | UNITS |",
+    "evidence": "PDF p4: the 'Power Good/Soft-Start' rows continue the Electrical Characteristics table (columns PARAMETER, CONDITIONS, ● marker, MIN, TYP, MAX, UNITS). md sub-table had an empty header so columns were unlabeled.",
+    "sources": [
+      "pdf-word-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p4-ec-header-oscillator",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "### Oscillator and MODE/SYNC\n\n|                                            |                                     |   |                |   |      |     |",
+    "new": "### Oscillator and MODE/SYNC\n\n| PARAMETER | CONDITIONS | ● (full temp range) | MIN | TYP | MAX | UNITS |",
+    "evidence": "PDF p4: the 'Oscillator and MODE/SYNC' rows continue the Electrical Characteristics table (columns PARAMETER, CONDITIONS, ● marker, MIN, TYP, MAX, UNITS). md sub-table had an empty header so columns were unlabeled.",
+    "sources": [
+      "pdf-word-geometry"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p4-ec-pgood-delay",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "| PGOOD Delay                  |                                            |   | 120  |     |     | μs |",
+    "new": "| PGOOD Delay |  |  |  | 120 |  | μs |",
+    "evidence": "PDF p4 words: 120@x467 (TYP column), µs@x559; no ● marker. md put 120 under MIN.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3315a-p4-ec-pgood-pulldown",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "| PGOOD Pull-Down Resistance   | $V_{PGOOD} = 0.1\\text{V}$                  |   | 10   | 20  |     | Ω  |",
+    "new": "| PGOOD Pull-Down Resistance | $V_{PGOOD} = 0.1\\text{V}$ |  |  | 10 | 20 | Ω |",
+    "evidence": "PDF p4 words: 10@x469 (TYP), 20@x509 (MAX), Ω@x560; no ● marker. md put 10 under MIN and 20 under TYP.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3315a-p4-ec-no-clock-detect",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "| MODE/SYNC No Clock Detect Time             |                                     |   | 10             |   |      | μs  |",
+    "new": "| MODE/SYNC No Clock Detect Time |  |  |  | 10 |  | μs |",
+    "evidence": "PDF p4 words: 10@x469 (TYP), µs@x559; no ● marker. md put 10 under MIN.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3315a-p2-wlcsp-ball-map",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 2,
+    "old": "Image: WLCSP 16-ball package pinout diagram. Pin 1 is PGOOD, Pin 2 is FB2, Pin 3 is FB1, Pin 4 is MODE/SYNC, Pin 5 is VIN, Pin 6 is EN2, Pin 7 is EN1, Pin 8 is GND, Pin 9 is SW2, Pin 10 is SW2, Pin 11 is SW1, Pin 12 is SW1, Pin 13 is VIN, Pin 14 is GND, Pin 15 is GND, Pin 16 is VIN.",
+    "new": "Image: WLCSP 16-ball package pinout diagram (top view, ball grid rows A–D, columns 1–4). A1 PGOOD, A2 FB2, A3 FB1, A4 MODE/SYNC; B1 VIN, B2 EN2, B3 EN1, B4 GND; C1 SW2, C2 SW2, C3 SW1, C4 SW1; D1 VIN, D2 GND, D3 GND, D4 VIN.",
+    "evidence": "PDF p2 is a ball grid (A–D × 1–4), not pins 1–16; ball names cross-checked with PIN FUNCTIONS p10 (e.g. PGOOD Ball A1, EN1 Ball B3, SW1 Balls C3, C4).",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text",
+      "pin-functions-p10"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3309a-p2-pinout-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 2,
+    "old": "![Pin configuration diagram for the LTC3309A in LQFN 12-lead package. The diagram shows a top view of the package with pins numbered 1 through 13. Pin 13 is the exposed pad (PGND). The pins are labeled as follows: Pin 1: AGND, Pin 2: EN, Pin 3: VIN, Pin 4: PGND, Pin 5: SW, Pin 6: SW, Pin 7: PGND, Pin 8: VIN, Pin 9: MODE/SYNC, Pin 10: RT, Pin 11: PGND, Pin 12: AGND. The package dimensions are 2mm x 2mm x 0.74mm. The maximum junction temperature is 150°C, the junction-to-lead temperature is 51°C/W, the junction-to-body temperature is 12°C/W, the junction-to-case bottom temperature is 8.6°C/W, the junction-to-case top temperature is 73°C/W, and the junction-to-junction temperature is 0.6°C/W. The exposed pad (Pin 13) is PGND and must be soldered to PCB.](",
+    "new": "![LTC3309A LQFN 12-lead (2mm × 2mm × 0.74mm) pin configuration, top view. Pin 1: AGND, Pin 2: EN, Pin 3: VIN, Pin 4: PGND, Pin 5: SW, Pin 6: SW, Pin 7: PGND, Pin 8: VIN, Pin 9: MODE/SYNC, Pin 10: RT, Pin 11: PGOOD, Pin 12: FB, Pin 13 (exposed pad): PGND.](",
+    "evidence": "PDF p2 pin diagram and PIN FUNCTIONS p9: Pin 11 PGOOD, Pin 12 FB, Pins 5-6 SW, Pins 4, 7, 13 PGND. Generated alt text said Pin 11 PGND, Pin 12 AGND and mislabeled θJA/θJB/ΨJT as junction-to-lead/body/junction.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text",
+      "pin-functions-p9"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3309a-p2-pinout-text",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 2,
+    "old": "TOP VIEW\n\n12 11 10 RT\n\n13 PGND\n\n9 MODE/SYNC\n\n8 VIN\n\n7 PGND\n\n6 SW SW\n\n5 PGND\n\n4 PGND\n\n3 VIN\n\n2 EN\n\n1 AGND",
+    "new": "TOP VIEW\n\n- Pin 1: AGND\n- Pin 2: EN\n- Pin 3: VIN\n- Pin 4: PGND\n- Pin 5: SW\n- Pin 6: SW\n- Pin 7: PGND\n- Pin 8: VIN\n- Pin 9: MODE/SYNC\n- Pin 10: RT\n- Pin 11: PGOOD\n- Pin 12: FB\n- Pin 13 (exposed pad): PGND",
+    "evidence": "Datalab text dump of the pin diagram lost FB/PGOOD (pins 12/11) and labeled pin 5 PGND (PDF: SW). Replaced with the pin list verified against PDF text and PIN FUNCTIONS p9.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text",
+      "pin-functions-p9"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3309a-p2-pinout-caption",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 2,
+    "old": "Pin configuration diagram for the LTC3309A in LQFN 12-lead package. The diagram shows a top view of the package with pins numbered 1 through 13. Pin 13 is the exposed pad (PGND). The pins are labeled as follows: Pin 1: AGND, Pin 2: EN, Pin 3: VIN, Pin 4: PGND, Pin 5: SW, Pin 6: SW, Pin 7: PGND, Pin 8: VIN, Pin 9: MODE/SYNC, Pin 10: RT, Pin 11: PGND, Pin 12: AGND. The package dimensions are 2mm x 2mm x 0.74mm. The maximum junction temperature is 150°C, the junction-to-lead temperature is 51°C/W, the junction-to-body temperature is 12°C/W, the junction-to-case bottom temperature is 8.6°C/W, the junction-to-case top temperature is 73°C/W, and the junction-to-junction temperature is 0.6°C/W. The exposed pad (Pin 13) is PGND and must be soldered to PCB.",
+    "new": "",
+    "evidence": "Duplicate caption paragraph repeating the wrong generated alt text (Pin 11 PGND, Pin 12 AGND); removed (corrected alt text kept).",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3309a-p2-order-extra-row",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 2,
+    "old": "| LTC3309AJV-7#WTRPBF | LTC3309AJV-7#WTRMPBF | LHQH |                                               | –40°C to 150°C |\n|                     |                      |      |                                               | –40°C to 150°C |",
+    "new": "| LTC3309AJV-7#WTRPBF | LTC3309AJV-7#WTRMPBF | LHQH |                                               | –40°C to 150°C |",
+    "evidence": "PDF p2 AUTOMOTIVE PRODUCTS has 5 rows ending with LTC3309AJV-7#WTRPBF; md had a 6th empty row with only '–40°C to 150°C'.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p2-order-automotive-header",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 2,
+    "old": "|                     |                      |      |                                               |                |\n|---------------------|----------------------|------|-----------------------------------------------|----------------|\n| LTC3309AEV#WTRPBF   | LTC3309AEV#WTRMPBF   | LHFP | LQFN<br>(Laminate Package with QFN Footprint) | –40°C to 125°C |",
+    "new": "| TAPE AND REEL | TAPE AND REEL MINI | PART MARKING* | PACKAGE TYPE | TEMPERATURE RANGE |\n|---------------------|----------------------|------|-----------------------------------------------|----------------|\n| LTC3309AEV#WTRPBF   | LTC3309AEV#WTRMPBF   | LHFP | LQFN<br>(Laminate Package with QFN Footprint) | –40°C to 125°C |",
+    "evidence": "Automotive order table repeats the columns of ORDER INFORMATION in the PDF; md header row was empty.",
+    "sources": [
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p2-pinout-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 2,
+    "old": "![Top view diagram of the 18-pin LQFN package for the LTC3313. The pins are numbered 1 through 18. Pins 1-5 are on the left, 6-9 on the bottom, 10-14 on the right, and 15-18 on the top. Pin 19 is the exposed pad in the center. Labels for pins include EN, AGND, VIN, PGND, PGGOOD, MODE/SYNC, and RT. The diagram also shows the package dimensions: 3mm x 3mm x 0.95mm.](",
+    "new": "![LTC3313 LQFN 18-pin (3mm × 3mm × 0.95mm) pin configuration, top view. Pin 1: EN, Pin 2: AGND, Pin 3: VIN, Pin 4: VIN, Pin 5: PGND, Pins 6-9: SW, Pin 10: PGND, Pin 11: VIN, Pin 12: VIN, Pin 13: MODE/SYNC, Pin 14: PGOOD, Pin 15: RT, Pin 16: SSTT, Pin 17: ITH, Pin 18: FB, Pin 19 (exposed pad): PGND.](",
+    "evidence": "PDF p2 text has PGOOD (not 'PGGOOD'); pin names verified against PIN FUNCTIONS p9.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text",
+      "pin-functions-p9"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p2-pinout-text",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 2,
+    "old": "TOP VIEW\n\n18 17 16 15\n\nEN AGND V<sub>IN</sub> V<sub>IN</sub> PGND\n\n14 PGGOOD 13 MODE/SYNC 12 V<sub>IN</sub> 11 V<sub>IN</sub> 10 PGND\n\n19 PGND\n\n6 7 8 9\n\nSW SW SW SW",
+    "new": "TOP VIEW\n\n- Pin 1: EN\n- Pin 2: AGND\n- Pin 3: VIN\n- Pin 4: VIN\n- Pin 5: PGND\n- Pins 6-9: SW\n- Pin 10: PGND\n- Pin 11: VIN\n- Pin 12: VIN\n- Pin 13: MODE/SYNC\n- Pin 14: PGOOD\n- Pin 15: RT\n- Pin 16: SSTT\n- Pin 17: ITH\n- Pin 18: FB\n- Pin 19 (exposed pad): PGND",
+    "evidence": "Datalab text dump of the pin diagram lost the names of pins 15-18 (RT, SSTT, ITH, FB) and the numbers of pins 1-5, and misspelled PGOOD as 'PGGOOD'. Replaced with the pin list verified against PDF text and PIN FUNCTIONS p9.",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text",
+      "pin-functions-p9"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc3313-p2-pinout-caption",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 2,
+    "old": "Top view diagram of the 18-pin LQFN package for the LTC3313. The pins are numbered 1 through 18. Pins 1-5 are on the left, 6-9 on the bottom, 10-14 on the right, and 15-18 on the top. Pin 19 is the exposed pad in the center. Labels for pins include EN, AGND, VIN, PGND, PGGOOD, MODE/SYNC, and RT. The diagram also shows the package dimensions: 3mm x 3mm x 0.95mm.",
+    "new": "",
+    "evidence": "Duplicate caption paragraph repeating the generated alt text with 'PGGOOD'; removed (corrected alt text kept).",
+    "sources": [
+      "agy",
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
+  }
+]
