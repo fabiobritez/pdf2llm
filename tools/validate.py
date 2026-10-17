@@ -16,6 +16,11 @@ import sys
 
 import pymupdf
 
+try:
+    from tools.geometry import check_tables
+except ModuleNotFoundError:
+    from geometry import check_tables
+
 ROOT = Path(__file__).resolve().parents[1]
 WORD_THRESHOLD = NUMBER_THRESHOLD = 0.90
 MIN_MISSING_WORDS, MIN_MISSING_NUMBERS = 8, 3
@@ -25,7 +30,8 @@ BAD_TABLE_ROWS = 8
 WORD_LIST_LIMIT = 30
 ALIGNMENT_MARGIN = 0.18
 LIST_LIMIT = 40
-ISSUE_TYPES = ("missing unit", "unit in wrong column", "column shift", "ordering", "ragged row")
+ISSUE_TYPES = ("missing unit", "unit in wrong column", "column shift", "ordering", "ragged row",
+               "geometry column mismatch", "geometry missing value")
 MARKER = re.compile(r"^\{(\d+)\}-{8,}\s*$", re.M)
 IMAGE = re.compile(r"!\[((?:\\.|[^\]\\])*)\]\([^\n]*?\)")
 NUMBER = re.compile(r"(?<![\d.])(?P<sign>\+-|[+-])?(?P<value>\d+(?:\.\d+)?|\.\d+)(?P<percent>\s*%)?")
@@ -422,6 +428,10 @@ def table_issues(text: str) -> list[dict]:
     return sorted(issues, key=lambda item: (item['line'], item['type'], item['detail']))
 
 
+def geometry_issues(text, document):
+    return check_tables(text, document, table_blocks, normalize)
+
+
 def locate_md(name: str) -> Path:
     folder = ROOT / "output" / name
     for path in (folder / f"{name}.md", folder / "markdown.md"):
@@ -438,6 +448,7 @@ def validate(name: str) -> dict:
     text = md_path.read_text(encoding="utf-8")
     md_pages, warnings = split_pages(text)
     with pymupdf.open(ROOT / f"{name}.pdf") as document:
+        geometry_findings, geometry_stats = geometry_issues(text, document)
         extracted = extract_document(document)
         pdf_pages = [p["text"] for p in extracted]
     pdf_tokens = [tokens(page) for page in pdf_pages]
@@ -489,7 +500,8 @@ def validate(name: str) -> dict:
                           extra_number_count=len(nums - source_nums),
                           alt_only_number_count=len(alts), alt_only_numbers=sorted(alts)[:LIST_LIMIT],
                           classification=classification, figure_reasons=reasons, flags=flags))
-    issues = table_issues(text)
+    issues = table_issues(text) + geometry_findings
+    issues.sort(key=lambda item: (item["line"], item["type"], item["detail"]))
     nonfigure = [p for p in pages if p['classification'] != "figure"]
     low_count = sum(p['classification'] == "text loss" for p in nonfigure)
     high_rows = len({i['line'] for i in issues if i['confidence'] == 'high'})
@@ -502,6 +514,7 @@ def validate(name: str) -> dict:
                 summary=dict(pages=len(pdf_pages), mean_word_coverage=mean(pages, 'word_coverage'),
                              mean_number_coverage=mean(nonfigure, 'number_coverage'),
                              low_coverage_text_pages=low_count, high_confidence_table_rows=high_rows,
+                             geometry_rows=geometry_stats,
                              table_issue_counts={kind: sum(i['type'] == kind for i in issues) for kind in ISSUE_TYPES},
                              status=status))
 
@@ -516,6 +529,8 @@ def report_md(result: dict) -> str:
              f"Mean word coverage: {percent(summary['mean_word_coverage'])}; mean number coverage (filtered text): {percent(summary['mean_number_coverage'])}.",
              f"Low-coverage text pages: {summary['low_coverage_text_pages']}. Table issues: {len(result['table_issues'])}.", "",
              "Coverage uses unique normalized token sets. Page numbers below are 1-based; Markdown markers are 0-based. Figure regions are heuristic; text loss on mixed pages still counts. Extra numbers are possible OCR errors, not proof of hallucination.", ""]
+    g = summary["geometry_rows"]
+    lines += [f"Geometry rows: {g['verified_ok']} verified OK; {g['mismatched']} mismatched; {g['unverifiable']} unverifiable.", ""]
     lines += [f"- {w}" for w in result['warnings']]
     lines += ["", "| Page | Words | Numbers | Classification | Alt-only numbers | Missing / extra | Removed margin/repeated/boilerplate/figure (words,numbers) | Flags |",
               "| --- | --- | --- | --- | --- | --- | --- | --- |"]
@@ -534,7 +549,7 @@ def report_md(result: dict) -> str:
                       "Only in image alt text: " + (", ".join(page['alt_only_numbers']) or "none"), ""]
     lines += ["## Table issues", ""]
     for issue in result['table_issues']:
-        row = issue['row'].replace("|", " / ").replace("\n", " ")
+        row = issue['row'].replace("|", " / ").replace("\n", " ").rstrip()
         lines.append(f"- Page {issue['page']}, line {issue['line']}: **{issue['type']}** — {issue['detail']}. Row: {html.escape(row)}")
     if not result['table_issues']:
         lines.append("None detected.")
@@ -573,14 +588,17 @@ def main() -> int:
         print(f"{name}: {result['summary']['status']} ({result['pdf_pages']} pages, {len(result['table_issues'])} table issues)", flush=True)
     lines = ["# Datasheet validation summary", "", "Means use unique normalized token sets after margin, recurring-line and figure removal.",
              f"Text loss: words < {WORD_THRESHOLD:.0%} with ≥{MIN_MISSING_WORDS} missing, or numbers < {NUMBER_THRESHOLD:.0%} with ≥{MIN_MISSING_NUMBERS} missing. BAD: ≥20% text-loss pages (minimum 3), or ≥8 high-confidence table rows.", "",
-             "| Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Status |",
-             "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
+             "Geometry rows count numeric data rows: verified OK / mismatched / unverifiable. Ambiguous row matches and unsupported table layouts are unverifiable; OK is not certification of those rows.", "",
+             "| Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Geometry column | Geometry missing | Geometry rows OK / mismatch / unverifiable | Status |",
+             "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     for result in results:
         s = result['summary']
         counts = " | ".join(str(s['table_issue_counts'][kind]) for kind in ISSUE_TYPES)
-        lines.append(f"| [{result['name']}]({result['name']}.md) | {s['pages']} | {percent(s['mean_word_coverage'])} | {percent(s['mean_number_coverage'])} | {s['low_coverage_text_pages']} | {counts} | {s['status']} |")
+        g = s["geometry_rows"]
+        geometry_counts = f"{g['verified_ok']} / {g['mismatched']} / {g['unverifiable']}"
+        lines.append(f"| [{result['name']}]({result['name']}.md) | {s['pages']} | {percent(s['mean_word_coverage'])} | {percent(s['mean_number_coverage'])} | {s['low_coverage_text_pages']} | {counts} | {geometry_counts} | {s['status']} |")
     for name, error in errors:
-        lines.append(f"| {name} | — | — | — | — | — | — | — | — | — | ERROR |")
+        lines.append(f"| {name} | — | — | — | — | — | — | — | — | — | — | — | — | ERROR |")
         lines.append(f"\n{name}: {error}\n")
     (out / "SUMMARY.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return 1 if errors else 0

@@ -116,3 +116,47 @@ maxima), TS3A5018 p8 (missing test conditions), and missing figure captions on
 AD5711R/AD5710R p27 and TPS6287B20 p55. Six other concrete omissions listed there
 are package/land-pattern dimensions absent even from alt text. They should be
 reviewed as drawing information losses rather than ten confirmed prose losses.
+
+## Geometry column verification
+
+`geometry.py` adds a separate PDF-grounded check; the existing coverage and
+header-based checks keep their thresholds and behavior. It reads page words
+with `get_text("words")`, groups uppercase MIN/TYP/NOM/MAX/VALUE/UNIT(S)
+headers by baseline, and places column boundaries halfway between their centers.
+The first value interval extends half a column to the left; the last extends to
+the page edge. Repeated headers delimit separate schemas. Empty/headerless
+continuations reuse the page schema or the previous Markdown table's schema,
+with value columns aligned to the right. An unrelated named header (including a
+thermal metric table) prevents inheritance.
+
+Numeric PDF baselines collect nearby words within four points. Row matching uses
+fuzzy parameter/condition token recall within five points, with weaker support
+from shared labels within 30 points. The most specific condition must match at
+least 95%, including every numeric condition token. Device selectors can anchor
+rows with vertically centered parent parameters. Competing matches within a
+0.035 score margin, or repeated conditions on adjacent baselines, are
+unverifiable. Numeric value agreement does not select the PDF row. This avoids
+matching a corrupt value to a convenient different row.
+
+Matched numeric occurrences are compared by their x-center columns, preserving
+sign and ± and canonicalizing decimal precision. Supply-relative expressions
+such as `GND – 0.3` and `V_IN – 0.1` retain their numeric tokens. Missing PDF
+values and misplaced condition prose are also reported. Printed units are
+compared after typography normalization; blank shared units are allowed. A
+multi-baseline Markdown cell is conservatively unverifiable when it cannot be
+compared to one PDF baseline. Duplicate numeric limits require separate
+occurrences. Complex wrapped values, side-by-side schemas, missing PDF text,
+and ambiguous/short row labels can remain unverifiable; this is not complete
+semantic verification of expressions, exponents, or diagrams.
+
+JSON issues include `page`, `line`/`md_line`, `parameter`, `value`, `md_column`,
+`pdf_column`, and `confidence`. Types are `geometry column mismatch` and
+`geometry missing value`; both have high confidence and join the existing
+REVIEW/BAD row thresholds. JSON `summary.geometry_rows`, each sheet report,
+and SUMMARY.md distinguish verified OK, mismatched and unverifiable numeric
+Markdown rows. Multiple findings on a row count once in these row totals.
+
+Regression fixtures freeze the broken LTC3315A and INA190 rows independently of
+future Markdown repairs. Correct controls and false-positive samples read the
+current `output/` files. The geometry checks require only stdlib and PyMuPDF,
+make no API calls, and produce deterministic reports.

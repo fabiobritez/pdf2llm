@@ -86,6 +86,170 @@ class ValidatorTests(unittest.TestCase):
         self.assertGreater(result['removed']['margin']['numbers'], 0)
         doc.close()
 
+# Frozen broken Markdown: PDFs and correct controls are read from the repository,
+# but repairs to output/*.md must not remove the regression cases.
+LTC_P3 = r'''| PARAMETER | CONDITIONS | MIN | TYP | MAX | UNITS |
+| PMOS Current Limit (I <sub>LIM</sub> ) | Current out of SW, V <sub>OUT</sub> /V <sub>IN</sub> ≤ 0.2 | | 2.9 | 3.2 | 3.5 A |'''
+LTC_P4 = r'''| PARAMETER | CONDITIONS | MIN | TYP | MAX | UNITS |
+| Maximum Duty Cycle | | ● | 100 | | % |
+
+### Power Good/Soft-Start
+
+| | | | | | | |
+| PGOOD Delay | | | 120 | | | μs |
+| PGOOD Pull-Down Resistance | $V_{PGOOD} = 0.1\text{V}$ | | 10 | 20 | | Ω |
+
+### Oscillator and MODE/SYNC
+
+| | | | | | | |
+| MODE/SYNC No Clock Detect Time | | | 10 | | | μs |'''
+INA_P4 = r'''| | | MIN | MAX | UNIT |
+| V <sub>IN+</sub> , V <sub>IN-</sub> | Analog inputs | Differential (V <sub>IN+</sub> ) – (V <sub>IN-</sub> ) <sup>(2)</sup> | –42 | V |
+| | | V <sub>IN+</sub> , V <sub>IN-</sub> , with respect to GND <sup>(3)</sup> | 42 | |
+
+### ESD Ratings
+
+| | | VALUE | UNIT |
+| V <sub>(ESD)</sub> | Electrostatic discharge | Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup> | ±3000 |
+| | | Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup> | ±1000 |'''
+INA_P5 = r'''| PARAMETER | | CONDITIONS | MIN | TYP | MAX | UNIT |
+| $E_G$ | Gain error | $V_{\text{OUT}} = 0.1\text{ V to } V_S - 0.1\text{ V}$ | A1 devices | -0.04% | ±0.2% | |
+| RVRR | Reference voltage rejection ratio | $V_{\text{REF}} = 100\text{ mV to } V_S - 100\text{ mV}$ ,<br>$T_A = -40^\circ\text{C to } +125^\circ\text{C}$ | A1 devices | ±2 | ±10 | µV/V |
+| $V_{\text{ZL}}$ | Zero current output voltage | $V_S = 1.8\text{ V}$ , $R_L = 10\text{ k}\Omega$ to GND,<br>$T_A = -40^\circ\text{C to } +125^\circ\text{C}$ , $V_{\text{SENSE}} = 0\text{ mV}$ ,<br>$V_{\text{REF}} = 0\text{ V}$ | A1, A2, A3 devices | $(V_{\text{GND}}) + 1$ | $(V_{\text{GND}}) + 3$ | mV |'''
+
+
+class GeometryTests(unittest.TestCase):
+    def check(self, name, page, snippet):
+        with pymupdf.open(v.ROOT / (name + '.pdf')) as document:
+            return v.geometry_issues(f'{{{page-1}}}----------------\n' + snippet, document)
+
+    def assert_shift(self, issues, parameter, value, md_column, pdf_column):
+        matches = [i for i in issues if parameter in i['parameter'] or parameter in i['row']]
+        self.assertTrue(any(i['type'] == 'geometry column mismatch'
+                            and i['value'] == value and i['md_column'] == md_column
+                            and i['pdf_column'] == pdf_column for i in matches), matches)
+        for item in matches:
+            self.assertEqual(item['confidence'], 'high')
+            self.assertEqual(item['line'], item['md_line'])
+            self.assertGreater(item['page'], 0)
+
+    def test_ltc_pmos_merge(self):
+        issues, stats = self.check('ltc3315a', 3, LTC_P3)
+        for value, md_col, pdf_col in [('2.9', 'TYP', 'MIN'), ('3.2', 'MAX', 'TYP'), ('3.5', 'UNIT', 'MAX')]:
+            self.assert_shift(issues, 'PMOS Current Limit', value, md_col, pdf_col)
+        self.assertEqual(stats['mismatched'], 1)
+
+    def test_ltc_empty_continuation_headers(self):
+        issues, stats = self.check('ltc3315a', 4, LTC_P4)
+        for parameter, value, md_col, pdf_col in [
+                ('Maximum Duty Cycle', '100', 'TYP', 'MIN'),
+                ('PGOOD Delay', '120', 'MIN', 'TYP'),
+                ('PGOOD PullDown Resistance', '10', 'MIN', 'TYP'),
+                ('PGOOD PullDown Resistance', '20', 'TYP', 'MAX'),
+                ('MODE/SYNC No Clock Detect Time', '10', 'MIN', 'TYP')]:
+            self.assert_shift(issues, parameter, value, md_col, pdf_col)
+        self.assertEqual(stats['mismatched'], 4)
+        # A completely headerless block can use the page PDF schema, too.
+        issues, _ = self.check('ltc3315a', 4, '| PGOOD Delay | | | 120 | | | μs |')
+        self.assert_shift(issues, 'PGOOD Delay', '120', 'MIN', 'TYP')
+
+    def test_ina_absolute_and_esd(self):
+        issues, stats = self.check('ina190', 4, INA_P4)
+        self.assert_shift(issues, 'Analog inputs', '-42', 'MAX', 'MIN')
+        self.assertTrue(any(i['type'] == 'geometry missing value' and i['pdf_column'] == 'MAX'
+                            and i['value'] == '42' for i in issues))
+        self.assertTrue(any(i['type'] == 'geometry missing value' and i['pdf_column'] == 'MIN'
+                            and v.normalize(i['value']) == 'GND -0.3' for i in issues))
+        self.assert_shift(issues, 'Humanbody', '+-3000', 'UNIT', 'VALUE')
+        self.assert_shift(issues, 'Chargeddevice', '+-1000', 'UNIT', 'VALUE')
+        self.assertEqual(stats['mismatched'], 4)
+
+    def test_ina_device_conditions(self):
+        issues, stats = self.check('ina190', 5, INA_P5)
+        for parameter, value in [('Gain error', 'A1 devices'), ('RVRR', 'A1 devices'),
+                                 ('Zero current output voltage', 'A1, A2, A3 devices')]:
+            self.assert_shift(issues, parameter, value, 'MIN', 'CONDITIONS')
+        self.assertEqual(stats['mismatched'], 3)
+
+    def test_current_correct_rows_verified(self):
+        for name, page, parameter in [('ltc3315a', 4, 'NMOS Current Limit'),
+                                      ('ina190', 4, 'Supply voltage'), ('ina190', 5, 'CMRR')]:
+            with self.subTest(name=name, parameter=parameter):
+                text = v.split_pages(v.locate_md(name).read_text())[0][page-1]
+                block = next(b for b in v.table_blocks(text) if any(parameter in ' '.join(c) for _, c in b))
+                row = next(c for _, c in block if parameter in ' '.join(c))
+                header = next(c for _, c in block if any(v.normalize(cell) == 'MIN' for cell in c))
+                snippet = '\n'.join('| ' + ' | '.join(c) + ' |' for c in [header, row])
+                issues, stats = self.check(name, page, snippet)
+                self.assertEqual(issues, [])
+                self.assertEqual(stats['verified_ok'], 1, stats)
+
+    def test_html_and_missing_unit(self):
+        snippet = '''<table><tr><th>PARAMETER</th><th>MIN</th><th>TYP</th><th>MAX</th><th>UNIT</th></tr>
+<tr><td>PGOOD Delay</td><td>120</td><td></td><td></td><td>V</td></tr></table>'''
+        issues, _ = self.check('ltc3315a', 4, snippet)
+        self.assert_shift(issues, 'PGOOD Delay', '120', 'MIN', 'TYP')
+        self.assertTrue(any(i['value'] == 'V' and i['md_column'] == 'UNIT' for i in issues))
+
+
+    def test_reviewed_false_positive_samples(self):
+        cases = [
+            ('lt1965fb', 4, 'Dropout Voltage'),
+            ('tps22990', 6, 'ISD, VBIAS'),
+            ('tps22990', 7, 'VIN = 2.5 V'),
+            ('tps63802', 6, 'VPG,rising'),
+            ('ltc2975', 7, 'TUEVS'),
+            ('max31730', 2, 'Remote Temperature Accuracy'),
+            ('max31730', 3, 'Local Temperature Accuracy'),
+        ]
+        for name, page, fragment in cases:
+            with self.subTest(name=name, fragment=fragment):
+                text = v.split_pages(v.locate_md(name).read_text())[0][page-1]
+                block = next(b for b in v.table_blocks(text)
+                             if any(fragment in v.normalize(' '.join(c)) for _, c in b))
+                row = next(c for _, c in block if fragment in v.normalize(' '.join(c)))
+                header = next(c for _, c in block if any(v.normalize(cell) == 'MIN' for cell in c))
+                snippet = '\n'.join('| ' + ' | '.join(c) + ' |' for c in [header, row])
+                issues, _ = self.check(name, page, snippet)
+                self.assertEqual(issues, [])
+
+
+    def test_equal_values_need_separate_occurrences(self):
+        doc = pymupdf.open()
+        page = doc.new_page()
+        for x, word in [(360, 'MIN'), (420, 'TYP'), (480, 'MAX'), (540, 'UNIT')]:
+            page.insert_text((x, 100), word)
+        page.insert_text((60, 130), 'Supply voltage')
+        for x, word in [(360, '6.00'), (480, '+6'), (540, 'V')]:
+            page.insert_text((x, 130), word)
+        text = '| PARAMETER | MIN | TYP | MAX | UNIT |\n| Supply voltage | 6 | | | V |'
+        result = v.geometry_issues(text, doc)
+        self.assertEqual(result, v.geometry_issues(text, doc))
+        issues, stats = result
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0]['type'], 'geometry missing value')
+        self.assertEqual(issues[0]['pdf_column'], 'MAX')
+        self.assertEqual(stats['mismatched'], 1)
+        doc.close()
+
+    def test_ambiguous_rows_and_unrelated_tables_abstain(self):
+        doc = pymupdf.open()
+        p = doc.new_page()
+        for x, word in [(360, 'MIN'), (420, 'TYP'), (480, 'MAX'), (540, 'UNIT')]:
+            p.insert_text((x, 100), word)
+        for y in (130, 160):
+            p.insert_text((60, y), 'Supply voltage')
+            p.insert_text((480, y), '6')
+        issues, stats = v.geometry_issues('| PARAMETER | MIN | TYP | MAX | UNIT |\n| Supply voltage | 6 | | | V |', doc)
+        self.assertEqual(issues, [])
+        self.assertEqual(stats['unverifiable'], 1)
+        doc.close()
+        # The real thermal table follows MIN/NOM/MAX on the same page.
+        issues, stats = self.check('ina190', 4, '| THERMAL METRIC | | DCK | DDF | RSW | UNIT |\n'
+                                   '| RthetaJA | Junction-to-ambient thermal resistance | 137.2 | 170.7 | 163.8 | °C/W |')
+        self.assertEqual(issues, [])
+        self.assertEqual(stats['unverifiable'], 1)
+
 
 if __name__ == '__main__':
     unittest.main()
