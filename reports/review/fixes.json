@@ -1295,5 +1295,45 @@
       "pdf-word-geometry"
     ],
     "severity": "high"
+  },
+  {
+    "id": "ts3a5018-p4-absmax-conditions-column",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 4,
+    "old": "|                  |                                           | MIN                                                      | MAX | UNIT   |\n|------------------|-------------------------------------------|----------------------------------------------------------|-----|--------|\n| V <sub>+</sub>   | Supply voltage <sup>(3)</sup>             | -0.5                                                     | 4.6 | V      |\n| V <sub>NC</sub>  | Analog voltage <sup>(3)(4)</sup>          | -0.5                                                     | 4.6 | V      |\n| V <sub>NO</sub>  |                                           |                                                          |     |        |\n| V <sub>COM</sub> |                                           |                                                          |     |        |\n| I <sub>K</sub>   | Analog port diode current                 | V <sub>NC</sub> , V <sub>NO</sub> , V <sub>COM</sub> < 0 |     | -50 mA |\n| I <sub>NC</sub>  | ON-state switch current                   | -64                                                      | 64  | mA     |\n| I <sub>NO</sub>  |                                           |                                                          |     |        |\n| I <sub>COM</sub> |                                           |                                                          |     |        |\n| V <sub>I</sub>   | Digital input voltage <sup>(3)(4)</sup>   | -0.5                                                     | 4.6 | V      |\n| I <sub>IK</sub>  | Digital input clamp current               | V <sub>I</sub> < 0                                       |     | -50 mA |\n| I <sub>+</sub>   | Continuous current through V <sub>+</sub> | -100                                                     | 100 | mA     |\n| I <sub>GND</sub> | Continuous current through GND            | -100                                                     | 100 | mA     |\n| T <sub>stg</sub> | Storage temperature                       | -65                                                      | 150 | °C     |",
+    "new": "| | | | MIN | MAX | UNIT |\n|-|-|-|-|-|-|\n| V <sub>+</sub> | Supply voltage <sup>(3)</sup> |  | -0.5 | 4.6 | V |\n| V <sub>NC</sub> | Analog voltage <sup>(3)(4)</sup> |  | -0.5 | 4.6 | V |\n| V <sub>NO</sub> |  |  |  |  |  |\n| V <sub>COM</sub> |  |  |  |  |  |\n| I <sub>K</sub> | Analog port diode current | V <sub>NC</sub> , V <sub>NO</sub> , V <sub>COM</sub> < 0 | -50 | | mA |\n| I <sub>NC</sub> | ON-state switch current | V <sub>NC</sub> , V <sub>NO</sub> , V <sub>COM</sub> = 0 to 7 V | -64 | 64 | mA |\n| I <sub>NO</sub> |  |  |  |  |  |\n| I <sub>COM</sub> |  |  |  |  |  |\n| V <sub>I</sub> | Digital input voltage <sup>(3)(4)</sup> |  | -0.5 | 4.6 | V |\n| I <sub>IK</sub> | Digital input clamp current | V <sub>I</sub> < 0 | -50 | | mA |\n| I <sub>+</sub> | Continuous current through V <sub>+</sub> |  | -100 | 100 | mA |\n| I <sub>GND</sub> | Continuous current through GND |  | -100 | 100 | mA |\n| T <sub>stg</sub> | Storage temperature |  | -65 | 150 | °C |",
+    "evidence": "PDF p4 words: Abs Max table has a conditions column (x≈276): I_K 'VNC, VNO, VCOM < 0' –50@MIN(446) mA; I_IK 'VI < 0' –50@MIN mA; ON-state switch current 'VNC, VNO, VCOM = 0 to 7 V' –64/64 mA. Datalab had no conditions column, so the conditions landed in MIN and –50 merged into UNIT, and the 0-to-7 V condition was lost.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry",
+      "pdf-text"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ts3a5018-p4-esd-columns",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 4,
+    "old": "|                    |                         | VALUE                                                                          | UNIT  |\n|--------------------|-------------------------|--------------------------------------------------------------------------------|-------|\n| V <sub>(ESD)</sub> | Electrostatic discharge | Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup>              | ±2000 |\n|                    |                         | Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup> | ±1000 |",
+    "new": "| | | | VALUE | UNIT |\n|-|-|-|-|-|\n| V <sub>(ESD)</sub> | Electrostatic discharge | Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup> | ±2000 | V |\n| | | Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup> | ±1000 | V |",
+    "evidence": "PDF p4: ESD table rows HBM ±2000@VALUE(476) and CDM ±1000, UNIT 'V'@532 (shared). Datalab put the values under UNIT and dropped V.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ts3a5018-p4-thermal-row",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 4,
+    "old": "| R <sub>θJA</sub>              | Junction-to-ambient thermal resistance | 73         | 90          | 120        | 108        | 51         | 184 °C/W |",
+    "new": "| R <sub>θJA</sub> Junction-to-ambient thermal resistance | 73 | 90 | 120 | 108 | 51 | 184 | °C/W |",
+    "evidence": "PDF p4 words: RθJA 73@254 (D) 90@304 (DBQ) 120@349 (DGV) 108@396 (PW) 51@449 (RGY) 184@496 (RSV), °C/W@534. md shifted every value one package to the right and merged 184 into UNIT.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
   }
 ]
