@@ -170,7 +170,9 @@ def main():
             if c != "UNIT" and tuple(nums(new[i])) in md_cells_by_nums and nums(new[i]):
                 new[i] = md_cells_by_nums[tuple(nums(new[i]))]
         min_i = next((i for i, c in vcols.items() if c == "MIN"), None)
-        if min_i is not None and b["marker"]:
+        # marker already carried outside the value cells (end of CONDITIONS or its own column)
+        marker_elsewhere = any("●" in x for k, x in enumerate(r["cells"]) if k not in vcols)
+        if min_i is not None and b["marker"] and not marker_elsewhere:
             new[min_i] = ("● " + new[min_i]).strip()
         elif min_i is not None and md_marker and not b["marker"]:
             pass  # marker removal is reported separately; keep md marker

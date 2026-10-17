@@ -1282,5 +1282,18 @@
       "pdf-text"
     ],
     "severity": "high"
+  },
+  {
+    "id": "ltc2975-p10-toff-min-typ",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 10,
+    "old": "|                      |                                  |  |     |  |    |\n|----------------------|----------------------------------|--|-----|--|----|\n| t <sub>OFF_MIN</sub> | Minimum Off-Time for Any Channel |  | 100 |  | ms |",
+    "new": "| SYMBOL | PARAMETER | CONDITIONS | MIN | TYP | MAX | UNITS |\n|---|---|---|---|---|---|---|\n| t <sub>OFF_MIN</sub> | Minimum Off-Time for Any Channel | | | 100 | | ms |",
+    "evidence": "PDF p10 words: '100'@x472 under TYP@472 (MIN@435, MAX@498). Datalab emitted a headerless 6-column table, putting 100 in the 4th (MIN) position.",
+    "sources": [
+      "agy",
+      "pdf-word-geometry"
+    ],
+    "severity": "high"
   }
 ]
