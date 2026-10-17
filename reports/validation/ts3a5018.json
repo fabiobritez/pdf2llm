@@ -1,0 +1,3369 @@
+{
+  "markdown": "output/ts3a5018/ts3a5018.md",
+  "markdown_pages": 41,
+  "name": "ts3a5018",
+  "pages": [
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 11,
+      "extra_numbers": [
+        "-1.8",
+        "16",
+        "2",
+        "2.5",
+        "3.5",
+        "4",
+        "4.4",
+        "4.9",
+        "5",
+        "6",
+        "9.9"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.16666666666666666,
+      "figure_missing_numbers": [
+        "1",
+        "1.8",
+        "16",
+        "2.5",
+        "3.5",
+        "3.6",
+        "4",
+        "4.4",
+        "4.9",
+        "5",
+        "6",
+        "9.9"
+      ],
+      "figure_missing_words": [
+        "body",
+        "data",
+        "device",
+        "direction",
+        "either",
+        "end",
+        "information",
+        "nom",
+        "number",
+        "package",
+        "part",
+        "sheet",
+        "size",
+        "soic",
+        "ssop",
+        "transmitted",
+        "tssop",
+        "tvsop",
+        "uqfn",
+        "vqfn"
+      ],
+      "figure_number_tokens": 12,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          276.0,
+          171.79998779296875,
+          600.0,
+          320.5
+        ],
+        [
+          148.2801055908203,
+          348.6719970703125,
+          466.2799987792969,
+          591.421875
+        ]
+      ],
+      "figure_word_tokens": 24,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "ohmquad"
+      ],
+      "number_coverage": 1.0,
+      "page": 1,
+      "pdf_number_tokens": 13,
+      "pdf_word_tokens": 64,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 19,
+          "words": 25
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 33
+        },
+        "repeated": {
+          "numbers": 9,
+          "words": 4
+        }
+      },
+      "word_coverage": 0.984375
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 2,
+      "extra_numbers": [
+        "11",
+        "12"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 2,
+      "pdf_number_tokens": 51,
+      "pdf_word_tokens": 88,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 14,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 15,
+      "extra_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 0.48717948717948717,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [
+        "activelow",
+        "closed",
+        "common",
+        "description",
+        "enable",
+        "for",
+        "functions",
+        "ground",
+        "name",
+        "normally",
+        "not",
+        "open",
+        "path",
+        "rgy",
+        "scale",
+        "selector",
+        "supply",
+        "switch",
+        "type",
+        "voltage"
+      ],
+      "figure_number_tokens": 5,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          347.9841003417969,
+          91.15521240234375,
+          527.489501953125,
+          274.172119140625
+        ],
+        [
+          69.29521179199219,
+          109.3924560546875,
+          276.93963623046875,
+          296.6963195800781
+        ],
+        [
+          353.6935729980469,
+          312.4691467285156,
+          521.1780395507812,
+          451.9596252441406
+        ],
+        [
+          90.50517272949219,
+          304.9269104003906,
+          257.9730682373047,
+          465.60009765625
+        ],
+        [
+          12.0,
+          450.4000244140625,
+          599.9000244140625,
+          742.2999877929688
+        ]
+      ],
+      "figure_word_tokens": 39,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 3,
+      "pdf_number_tokens": 1,
+      "pdf_word_tokens": 10,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 49,
+          "words": 124
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 97,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 18,
+      "extra_numbers": [
+        "-1000",
+        "-2000",
+        "1000",
+        "101",
+        "108",
+        "120",
+        "16",
+        "184",
+        "2000",
+        "5018",
+        "51",
+        "6",
+        "6.2",
+        "6.4",
+        "64",
+        "73",
+        "85",
+        "90"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "-1000",
+        "-2000",
+        "1",
+        "1000",
+        "101",
+        "108",
+        "120",
+        "16",
+        "184",
+        "2",
+        "2000",
+        "6.2",
+        "6.4"
+      ],
+      "figure_missing_words": [
+        "dbq",
+        "degc",
+        "dgv",
+        "discharge",
+        "electrostatic",
+        "esd",
+        "information",
+        "junctiontoambient",
+        "metric",
+        "pins",
+        "ratings",
+        "report",
+        "resistance",
+        "rgy",
+        "rsv",
+        "rthetaja",
+        "soic",
+        "ssop",
+        "thermal",
+        "tssop",
+        "tvsop",
+        "unit",
+        "uqfn",
+        "value",
+        "vqfn"
+      ],
+      "figure_number_tokens": 13,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.0,
+          366.1000061035156,
+          599.9000244140625,
+          471.0
+        ],
+        [
+          12.0,
+          570.2999877929688,
+          599.9000244140625,
+          688.4000244140625
+        ]
+      ],
+      "figure_word_tokens": 25,
+      "flags": [],
+      "missing_number_count": 1,
+      "missing_numbers": [
+        "7"
+      ],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 0.96,
+      "page": 4,
+      "pdf_number_tokens": 25,
+      "pdf_word_tokens": 123,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 19,
+          "words": 34
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 10,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 8,
+      "extra_numbers": [
+        "10",
+        "12",
+        "16",
+        "2",
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 2,
+      "missing_words": [
+        "deltaron",
+        "ohm"
+      ],
+      "number_coverage": 1.0,
+      "page": 5,
+      "pdf_number_tokens": 27,
+      "pdf_word_tokens": 73,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 20,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9726027397260274
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 4,
+      "extra_numbers": [
+        "12",
+        "14",
+        "2",
+        "7"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 2,
+      "missing_words": [
+        "deltaron",
+        "ohm"
+      ],
+      "number_coverage": 1.0,
+      "page": 6,
+      "pdf_number_tokens": 41,
+      "pdf_word_tokens": 80,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 17,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.975
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 5,
+      "extra_numbers": [
+        "16",
+        "3",
+        "32",
+        "7",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "deltaron"
+      ],
+      "number_coverage": 1.0,
+      "page": 7,
+      "pdf_number_tokens": 43,
+      "pdf_word_tokens": 86,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 14,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9883720930232558
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text loss",
+      "extra_number_count": 4,
+      "extra_numbers": [
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 7,
+      "missing_numbers": [
+        "0.3",
+        "1.5",
+        "18",
+        "19",
+        "21",
+        "300",
+        "35"
+      ],
+      "missing_word_count": 9,
+      "missing_words": [
+        "figure",
+        "gnd",
+        "ohm",
+        "open",
+        "see",
+        "switch",
+        "vcom",
+        "vnc",
+        "vno"
+      ],
+      "number_coverage": 0.851063829787234,
+      "page": 8,
+      "pdf_number_tokens": 47,
+      "pdf_word_tokens": 52,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 11,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.8269230769230769
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 1,
+      "extra_numbers": [
+        "58"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "breakbeforemake"
+      ],
+      "number_coverage": 1.0,
+      "page": 9,
+      "pdf_number_tokens": 17,
+      "pdf_word_tokens": 34,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9705882352941176
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 11,
+      "extra_numbers": [
+        "-0.5",
+        "-40",
+        "0.2",
+        "0.5",
+        "1.5",
+        "15",
+        "25",
+        "6.12",
+        "8",
+        "8.5",
+        "85"
+      ],
+      "figure_alt_number_coverage": 0.42424242424242425,
+      "figure_alt_word_coverage": 0.5454545454545454,
+      "figure_missing_numbers": [
+        "-0.1",
+        "-0.2",
+        "-0.3",
+        "-0.4",
+        "-0.6",
+        "-20",
+        "-60",
+        "0",
+        "0.1",
+        "0.3",
+        "0.4",
+        "0.6",
+        "0.8",
+        "1.2",
+        "1.4",
+        "1.6",
+        "100",
+        "3.5",
+        "6.12"
+      ],
+      "figure_missing_words": [
+        "characteristics",
+        "com",
+        "icomoff",
+        "icomon",
+        "incoff",
+        "incon",
+        "inooff",
+        "inoon",
+        "ohm",
+        "typical"
+      ],
+      "figure_number_tokens": 33,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.0,
+          71.70001220703125,
+          600.0,
+          712.7000122070312
+        ]
+      ],
+      "figure_word_tokens": 22,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 10,
+      "pdf_number_tokens": 10,
+      "pdf_word_tokens": 8,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 58,
+          "words": 36
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 51,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 30,
+      "extra_numbers": [
+        "-100",
+        "-110",
+        "-15",
+        "-40",
+        "-6",
+        "-7",
+        "-70",
+        "-90",
+        "0",
+        "0.6",
+        "0.65",
+        "1",
+        "1.5",
+        "1.55",
+        "1.65",
+        "100",
+        "1000",
+        "2",
+        "2.2",
+        "25",
+        "3.5",
+        "3.6",
+        "3.8",
+        "4",
+        "4.8",
+        "5.2",
+        "5.8",
+        "6",
+        "7.5",
+        "85"
+      ],
+      "figure_alt_number_coverage": 0.391304347826087,
+      "figure_alt_word_coverage": 0.7857142857142857,
+      "figure_missing_numbers": [
+        "-1",
+        "-10",
+        "-2",
+        "-20",
+        "-3",
+        "-30",
+        "-4",
+        "-5",
+        "-50",
+        "-60",
+        "-80",
+        "0.2",
+        "0.4",
+        "0.8",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.85",
+        "2.05",
+        "2.25",
+        "2.45",
+        "2.5",
+        "2.65",
+        "2.85",
+        "3",
+        "3.05",
+        "3.25",
+        "3.45"
+      ],
+      "figure_missing_words": [
+        "characteristics",
+        "continued",
+        "typical"
+      ],
+      "figure_number_tokens": 46,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.0,
+          62.70001220703125,
+          600.0,
+          720.4000244140625
+        ]
+      ],
+      "figure_word_tokens": 14,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 11,
+      "pdf_number_tokens": 8,
+      "pdf_word_tokens": 16,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 60,
+          "words": 26
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 30,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 2,
+      "alt_only_numbers": [
+        "0.23%",
+        "0.42%"
+      ],
+      "classification": "text",
+      "extra_number_count": 19,
+      "extra_numbers": [
+        "-30",
+        "-40",
+        "-70",
+        "-75",
+        "-90",
+        "0",
+        "0.23",
+        "0.42",
+        "0.45",
+        "1",
+        "10",
+        "100",
+        "1000",
+        "2.9",
+        "3.3",
+        "3.7",
+        "4",
+        "800",
+        "85"
+      ],
+      "figure_alt_number_coverage": 0.3870967741935484,
+      "figure_alt_word_coverage": 0.5714285714285714,
+      "figure_missing_numbers": [
+        "-10",
+        "-20",
+        "-50",
+        "-60",
+        "-80",
+        "0.05",
+        "0.1",
+        "0.15",
+        "0.2",
+        "0.25",
+        "0.3",
+        "0.35",
+        "0.4",
+        "0.5",
+        "1.5",
+        "2",
+        "2.5",
+        "3",
+        "3.5"
+      ],
+      "figure_missing_words": [
+        "characteristics",
+        "continued",
+        "typical"
+      ],
+      "figure_number_tokens": 31,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.0,
+          62.70001220703125,
+          600.0,
+          538.7000122070312
+        ]
+      ],
+      "figure_word_tokens": 7,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 12,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 11,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 48,
+          "words": 12
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 9,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 2,
+      "extra_numbers": [
+        "0",
+        "7"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 0.75,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [
+        "channel",
+        "gnd",
+        "information",
+        "ohm",
+        "parameter"
+      ],
+      "figure_number_tokens": 1,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          350.39801025390625,
+          112.75309753417969,
+          557.2850341796875,
+          240.75779724121094
+        ],
+        [
+          53.73945617675781,
+          78.67098999023438,
+          356.63299560546875,
+          276.759765625
+        ],
+        [
+          345.4360046386719,
+          294.6131896972656,
+          548.7240295410156,
+          423.57769775390625
+        ],
+        [
+          61.73945617675781,
+          269.1719970703125,
+          363.9129943847656,
+          467.26055908203125
+        ],
+        [
+          346.7380065917969,
+          503.8336181640625,
+          552.1849670410156,
+          605.196533203125
+        ],
+        [
+          58.240234375,
+          459.6709899902344,
+          352.49298095703125,
+          657.759765625
+        ]
+      ],
+      "figure_word_tokens": 20,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 13,
+      "pdf_number_tokens": 3,
+      "pdf_word_tokens": 11,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 2,
+          "words": 45
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 1,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 2,
+      "alt_only_numbers": [
+        "50%",
+        "90%"
+      ],
+      "classification": "text",
+      "extra_number_count": 6,
+      "extra_numbers": [
+        "0",
+        "300",
+        "35",
+        "350",
+        "632",
+        "90"
+      ],
+      "figure_alt_number_coverage": 0.8,
+      "figure_alt_word_coverage": 0.9230769230769231,
+      "figure_missing_numbers": [
+        "1",
+        "3"
+      ],
+      "figure_missing_words": [
+        "signal",
+        "vcom"
+      ],
+      "figure_number_tokens": 10,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          47.71952819824219,
+          103.353515625,
+          223.16519165039062,
+          207.83631896972656
+        ],
+        [
+          143.24569702148438,
+          80.072021484375,
+          374.135009765625,
+          278.1605682373047
+        ],
+        [
+          351.9519958496094,
+          273.21600341796875,
+          557.8800048828125,
+          396.4202880859375
+        ],
+        [
+          59.374603271484375,
+          271.0559997558594,
+          389.3890075683594,
+          469.1448974609375
+        ],
+        [
+          341.63201904296875,
+          364.66168212890625,
+          571.0799560546875,
+          493.38592529296875
+        ],
+        [
+          378.1610107421875,
+          550.4727172851562,
+          570.8880004882812,
+          639.354736328125
+        ],
+        [
+          378.1610107421875,
+          596.7953491210938,
+          570.8880004882812,
+          718.079345703125
+        ],
+        [
+          40.21952819824219,
+          535.83203125,
+          423.7580261230469,
+          734.16015625
+        ]
+      ],
+      "figure_word_tokens": 26,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 14,
+      "pdf_number_tokens": 9,
+      "pdf_word_tokens": 45,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 16,
+          "words": 50
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 3,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 8,
+      "extra_numbers": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "350",
+        "50",
+        "5018",
+        "632"
+      ],
+      "figure_alt_number_coverage": 0.5,
+      "figure_alt_word_coverage": 0.5294117647058824,
+      "figure_missing_numbers": [
+        "0",
+        "350",
+        "632"
+      ],
+      "figure_missing_words": [
+        "bias",
+        "channel",
+        "dbm",
+        "load",
+        "power",
+        "setup",
+        "vnc",
+        "vno"
+      ],
+      "figure_number_tokens": 6,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          379.7610168457031,
+          83.83251953125,
+          573.20703125,
+          175.11453247070312
+        ],
+        [
+          379.7610168457031,
+          130.87542724609375,
+          573.20703125,
+          249.03912353515625
+        ],
+        [
+          38.21952819824219,
+          79.99201965332031,
+          420.7980041503906,
+          270.1601867675781
+        ],
+        [
+          375.6000061035156,
+          263.7725830078125,
+          568.5670166015625,
+          365.61517333984375
+        ],
+        [
+          375.6000061035156,
+          318.2554931640625,
+          568.5670166015625,
+          439.29998779296875
+        ],
+        [
+          42.21992492675781,
+          262.8119812011719,
+          409.1969909667969,
+          442.1804504394531
+        ],
+        [
+          382.0610046386719,
+          483.3152160644531,
+          575.028076171875,
+          604.5988159179688
+        ],
+        [
+          35.71952819824219,
+          434.83203125,
+          444.9389953613281,
+          627.1605834960938
+        ]
+      ],
+      "figure_word_tokens": 17,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 15,
+      "pdf_number_tokens": 3,
+      "pdf_word_tokens": 11,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 18,
+          "words": 73
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 9,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 6,
+      "extra_numbers": [
+        "0",
+        "0.1",
+        "1",
+        "2",
+        "20",
+        "600"
+      ],
+      "figure_alt_number_coverage": 0.3333333333333333,
+      "figure_alt_word_coverage": 0.5833333333333334,
+      "figure_missing_numbers": [
+        "0",
+        "0.1",
+        "2",
+        "20"
+      ],
+      "figure_missing_words": [
+        "capacitance",
+        "channel",
+        "deltavcom",
+        "fsource",
+        "gnd",
+        "includes",
+        "jig",
+        "khz",
+        "probe",
+        "vsource"
+      ],
+      "figure_number_tokens": 6,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          373.6360168457031,
+          156.99688720703125,
+          535.4008483886719,
+          276.3601837158203
+        ],
+        [
+          43.615997314453125,
+          83.072021484375,
+          366.4308166503906,
+          281.1605682373047
+        ],
+        [
+          52.239845275878906,
+          299.7686767578125,
+          365.69384765625,
+          388.8909912109375
+        ],
+        [
+          73.36129760742188,
+          340.81097412109375,
+          559.14599609375,
+          538.1804504394531
+        ]
+      ],
+      "figure_word_tokens": 24,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 2,
+      "missing_words": [
+        "deltavcom",
+        "off"
+      ],
+      "number_coverage": 1.0,
+      "page": 16,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 29,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 15,
+          "words": 39
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9310344827586207
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 2,
+      "extra_numbers": [
+        "2",
+        "8"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 0.3333333333333333,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [
+        "description",
+        "off"
+      ],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          148.2801055908203,
+          209.4720001220703,
+          466.2799987792969,
+          452.2218933105469
+        ],
+        [
+          132.0,
+          545.5,
+          480.0,
+          663.5999755859375
+        ]
+      ],
+      "figure_word_tokens": 3,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 17,
+      "pdf_number_tokens": 10,
+      "pdf_word_tokens": 84,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 10
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 1,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 13,
+      "extra_numbers": [
+        "-0.5",
+        "-10",
+        "-2",
+        "-4",
+        "0",
+        "1",
+        "100",
+        "1000",
+        "200",
+        "4",
+        "50",
+        "500",
+        "9"
+      ],
+      "figure_alt_number_coverage": 0.5333333333333333,
+      "figure_alt_word_coverage": 0.8888888888888888,
+      "figure_missing_numbers": [
+        "-1",
+        "-3",
+        "-5",
+        "-6",
+        "-7",
+        "-8",
+        "-9"
+      ],
+      "figure_missing_words": [
+        "application"
+      ],
+      "figure_number_tokens": 15,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          147.61058044433594,
+          227.4081268310547,
+          436.99102783203125,
+          406.3280944824219
+        ],
+        [
+          206.21226501464844,
+          536.8792114257812,
+          415.2906188964844,
+          717.1455078125
+        ]
+      ],
+      "figure_word_tokens": 9,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 18,
+      "pdf_number_tokens": 7,
+      "pdf_word_tokens": 102,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 19,
+          "words": 13
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 4,
+      "extra_numbers": [
+        "10",
+        "11",
+        "2",
+        "45"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.75,
+      "figure_missing_numbers": [
+        "1",
+        "2"
+      ],
+      "figure_missing_words": [
+        "min"
+      ],
+      "figure_number_tokens": 2,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          327.4871520996094,
+          405.4665832519531,
+          484.05072021484375,
+          546.5496826171875
+        ],
+        [
+          221.73187255859375,
+          406.81866455078125,
+          395.1533508300781,
+          547.366943359375
+        ],
+        [
+          127.95027160644531,
+          406.9779357910156,
+          283.89715576171875,
+          548.629150390625
+        ]
+      ],
+      "figure_word_tokens": 4,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 19,
+      "pdf_number_tokens": 9,
+      "pdf_word_tokens": 146,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 2,
+          "words": 4
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 1,
+      "extra_numbers": [
+        "12"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 2,
+      "missing_words": [
+        "deltaron",
+        "deltavcom"
+      ],
+      "number_coverage": 1.0,
+      "page": 20,
+      "pdf_number_tokens": 4,
+      "pdf_word_tokens": 122,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 1,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9836065573770492
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 1,
+      "extra_numbers": [
+        "13"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "etmonline"
+      ],
+      "number_coverage": 1.0,
+      "page": 21,
+      "pdf_number_tokens": 9,
+      "pdf_word_tokens": 151,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 10,
+          "words": 16
+        },
+        "repeated": {
+          "numbers": 1,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9933774834437086
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 14,
+      "extra_numbers": [
+        "-1",
+        "-2",
+        "-40",
+        "16",
+        "18",
+        "2000",
+        "2500",
+        "260",
+        "3000",
+        "4",
+        "5",
+        "5018",
+        "6",
+        "85"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "-1",
+        "-2",
+        "-40",
+        "1",
+        "16",
+        "18",
+        "2",
+        "2000",
+        "2500",
+        "260",
+        "3",
+        "3000",
+        "4",
+        "5",
+        "5018",
+        "6",
+        "85"
+      ],
+      "figure_missing_words": [
+        "active",
+        "ball",
+        "call",
+        "carrier",
+        "cunlim",
+        "dbq",
+        "dbqr",
+        "degc",
+        "dgv",
+        "dgvr",
+        "dgvrg",
+        "drg",
+        "finish",
+        "information",
+        "large",
+        "lead",
+        "level",
+        "marking",
+        "material",
+        "msl",
+        "nipdau",
+        "nipdauag",
+        "number",
+        "obsolete",
+        "orderable",
+        "package",
+        "packaging",
+        "part",
+        "peak",
+        "pins"
+      ],
+      "figure_number_tokens": 17,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          -19.493999481201172,
+          92.41499328613281,
+          858.4840087890625,
+          452.041015625
+        ]
+      ],
+      "figure_word_tokens": 53,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "-2026",
+        "31"
+      ],
+      "missing_word_count": 1,
+      "missing_words": [
+        "mar"
+      ],
+      "number_coverage": 0.6,
+      "page": 22,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 75,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 185,
+          "words": 211
+        },
+        "margin": {
+          "numbers": 1,
+          "words": 4
+        },
+        "repeated": {
+          "numbers": 10,
+          "words": 2
+        }
+      },
+      "word_coverage": 0.9866666666666667
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "-2026",
+        "31"
+      ],
+      "missing_word_count": 1,
+      "missing_words": [
+        "mar"
+      ],
+      "number_coverage": 0.6,
+      "page": 23,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 150,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 1,
+          "words": 4
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 2
+        }
+      },
+      "word_coverage": 0.9933333333333333
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 32,
+      "extra_numbers": [
+        "0",
+        "0.75",
+        "1",
+        "1.5",
+        "1.6",
+        "10.3",
+        "12",
+        "12.4",
+        "12.5",
+        "13.2",
+        "16",
+        "16.4",
+        "180",
+        "2",
+        "2.1",
+        "2.9",
+        "2000",
+        "2500",
+        "3",
+        "3.8",
+        "3000",
+        "330",
+        "4",
+        "4.3",
+        "5.2",
+        "5.6",
+        "5018",
+        "6.4",
+        "6.5",
+        "6.8",
+        "6.9",
+        "8"
+      ],
+      "figure_alt_number_coverage": 0.0625,
+      "figure_alt_word_coverage": 0.14285714285714285,
+      "figure_missing_numbers": [
+        "0",
+        "0.75",
+        "1.5",
+        "1.6",
+        "10.3",
+        "12",
+        "12.4",
+        "12.5",
+        "13.2",
+        "16",
+        "16.4",
+        "180",
+        "2",
+        "2.1",
+        "2.9",
+        "2000",
+        "2500",
+        "3",
+        "3.8",
+        "3000",
+        "330",
+        "4.3",
+        "5.2",
+        "5.6",
+        "5018",
+        "6.4",
+        "6.5",
+        "6.8",
+        "6.9",
+        "8"
+      ],
+      "figure_missing_words": [
+        "accommodate",
+        "all",
+        "are",
+        "assignments",
+        "between",
+        "carrier",
+        "cavity",
+        "centers",
+        "component",
+        "dbq",
+        "dbqr",
+        "designed",
+        "device",
+        "dgv",
+        "dgvr",
+        "dgvrg",
+        "diameter",
+        "dimension",
+        "drawing",
+        "drg",
+        "for",
+        "length",
+        "nominal",
+        "orientation",
+        "overall",
+        "package",
+        "pin",
+        "pins",
+        "pitch",
+        "pwr"
+      ],
+      "figure_number_tokens": 32,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          266.7464294433594,
+          103.66558837890625,
+          496.5466613769531,
+          234.76171875
+        ],
+        [
+          23.962005615234375,
+          104.09759521484375,
+          269.8902893066406,
+          277.52978515625
+        ],
+        [
+          215.41033935546875,
+          185.45773315429688,
+          547.73876953125,
+          292.0018310546875
+        ],
+        [
+          23.962005615234375,
+          226.71380615234375,
+          239.86622619628906,
+          313.0258483886719
+        ],
+        [
+          168.46624755859375,
+          281.5779113769531,
+          417.2025451660156,
+          425.56207275390625
+        ],
+        [
+          20.02197265625,
+          408.05096435546875,
+          589.5899658203125,
+          632.802978515625
+        ]
+      ],
+      "figure_word_tokens": 56,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "-2026",
+        "13"
+      ],
+      "missing_word_count": 1,
+      "missing_words": [
+        "aug"
+      ],
+      "number_coverage": 0.0,
+      "page": 24,
+      "pdf_number_tokens": 2,
+      "pdf_word_tokens": 7,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 137,
+          "words": 90
+        },
+        "margin": {
+          "numbers": 1,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 10,
+          "words": 2
+        }
+      },
+      "word_coverage": 0.8571428571428571
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 13,
+      "extra_numbers": [
+        "16",
+        "184",
+        "19",
+        "2000",
+        "2500",
+        "3",
+        "3000",
+        "32",
+        "35",
+        "353",
+        "356",
+        "4",
+        "5018"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.22857142857142856,
+      "figure_missing_numbers": [
+        "184",
+        "19",
+        "2000",
+        "2500",
+        "3",
+        "3000",
+        "32",
+        "35",
+        "353",
+        "356",
+        "4",
+        "5018"
+      ],
+      "figure_missing_words": [
+        "all",
+        "are",
+        "dbq",
+        "dbqr",
+        "device",
+        "dgv",
+        "dgvr",
+        "dgvrg",
+        "dimensions",
+        "drg",
+        "nominal",
+        "package",
+        "pins",
+        "pwr",
+        "rgy",
+        "rgyr",
+        "rgyrg",
+        "rsv",
+        "rsvr",
+        "soic",
+        "spq",
+        "ssop",
+        "tssop",
+        "tvsop",
+        "type",
+        "uqfn",
+        "vqfn"
+      ],
+      "figure_number_tokens": 12,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          23.961952209472656,
+          70.17518615722656,
+          405.8217468261719,
+          432.1708679199219
+        ],
+        [
+          20.02199935913086,
+          400.35699462890625,
+          586.4730224609375,
+          607.4819946289062
+        ]
+      ],
+      "figure_word_tokens": 35,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "-2026",
+        "13"
+      ],
+      "missing_word_count": 1,
+      "missing_words": [
+        "aug"
+      ],
+      "number_coverage": 0.0,
+      "page": 25,
+      "pdf_number_tokens": 2,
+      "pdf_word_tokens": 1,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 63,
+          "words": 45
+        },
+        "margin": {
+          "numbers": 1,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 10,
+          "words": 2
+        }
+      },
+      "word_coverage": 0.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "unextractable",
+      "extra_number_count": 41,
+      "extra_numbers": [
+        "-12",
+        "-8",
+        "0",
+        "0.004",
+        "0.005",
+        "0.006",
+        "0.01",
+        "0.012",
+        "0.016",
+        "0.017",
+        "0.02",
+        "0.05",
+        "0.069",
+        "0.15",
+        "0.157",
+        "0.228",
+        "0.244",
+        "0.386",
+        "0.394",
+        "1",
+        "10",
+        "11",
+        "13",
+        "15",
+        "16",
+        "2",
+        "20",
+        "25",
+        "27",
+        "3",
+        "31",
+        "4",
+        "40",
+        "4040047",
+        "43",
+        "5",
+        "51",
+        "6",
+        "75",
+        "80"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          19.31999969482422,
+          96.6199951171875,
+          592.4400024414062,
+          723.9959716796875
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [
+        "no extractable PDF tokens"
+      ],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 26,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 0,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 0
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          112.93798065185547,
+          198.58384704589844,
+          344.7779846191406,
+          390.3438415527344
+        ],
+        [
+          344.2979736328125,
+          198.58383178710938,
+          509.89794921875,
+          422.2638244628906
+        ],
+        [
+          112.93798065185547,
+          389.86383056640625,
+          344.7779846191406,
+          422.2638244628906
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 1,
+      "missing_numbers": [
+        "4231225"
+      ],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 0.8333333333333334,
+      "page": 27,
+      "pdf_number_tokens": 6,
+      "pdf_word_tokens": 25,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 3,
+      "extra_numbers": [
+        "2020",
+        "3",
+        "4220314"
+      ],
+      "figure_alt_number_coverage": 0.04,
+      "figure_alt_word_coverage": 0.06666666666666667,
+      "figure_missing_numbers": [
+        "0",
+        "0.05",
+        "0.07",
+        "0.1",
+        "0.13",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.4",
+        "0.45",
+        "0.55",
+        "1",
+        "1.2",
+        "1.75",
+        "1.85",
+        "12",
+        "15",
+        "2",
+        "2.55",
+        "2.65",
+        "2020",
+        "4220314",
+        "45",
+        "5"
+      ],
+      "figure_missing_words": [
+        "area",
+        "deg",
+        "flatpack",
+        "index",
+        "lead",
+        "notes",
+        "plane",
+        "quad",
+        "scale",
+        "seating",
+        "symm",
+        "thin",
+        "typ",
+        "ultra"
+      ],
+      "figure_number_tokens": 25,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.028400421142578,
+          74.5574951171875,
+          600.5953979492188,
+          683.3134765625
+        ],
+        [
+          265.9306335449219,
+          40.7474365234375,
+          309.97064208984375,
+          72.06744384765625
+        ]
+      ],
+      "figure_word_tokens": 15,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 28,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 25,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 34,
+          "words": 17
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 4
+        },
+        "repeated": {
+          "numbers": 8,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 7,
+      "extra_numbers": [
+        "1",
+        "13",
+        "271",
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "-0.55",
+        "2.4"
+      ],
+      "missing_word_count": 7,
+      "missing_words": [
+        "flatpack",
+        "height",
+        "lead",
+        "quad",
+        "rsv",
+        "thin",
+        "ultra"
+      ],
+      "number_coverage": 0.8666666666666667,
+      "page": 29,
+      "pdf_number_tokens": 15,
+      "pdf_word_tokens": 34,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 3,
+          "words": 13
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 8,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.7941176470588235
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 18,
+      "extra_numbers": [
+        "0.05",
+        "0.125",
+        "0.2",
+        "0.4",
+        "0.6",
+        "1",
+        "1.6",
+        "12",
+        "13",
+        "15",
+        "2",
+        "2.4",
+        "2020",
+        "25",
+        "4220314",
+        "5",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 0.6,
+      "figure_alt_word_coverage": 0.3125,
+      "figure_missing_numbers": [
+        "0.125",
+        "0.7",
+        "2",
+        "2020",
+        "25",
+        "4220314"
+      ],
+      "figure_missing_words": [
+        "based",
+        "continued",
+        "example",
+        "flatpack",
+        "lead",
+        "notes",
+        "quad",
+        "scale",
+        "thick",
+        "thin",
+        "ultra"
+      ],
+      "figure_number_tokens": 15,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.028400421142578,
+          74.5574951171875,
+          600.5953979492188,
+          694.6514892578125
+        ]
+      ],
+      "figure_word_tokens": 16,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 30,
+      "pdf_number_tokens": 4,
+      "pdf_word_tokens": 23,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 15,
+          "words": 17
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 8,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 2,
+      "extra_numbers": [
+        "12",
+        "38"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          222.86898803710938,
+          696.0250244140625,
+          409.20001220703125,
+          786.6080322265625
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "1996",
+        "2000"
+      ],
+      "missing_word_count": 4,
+      "missing_words": [
+        "august",
+        "february",
+        "mpds",
+        "revised"
+      ],
+      "number_coverage": 0.9428571428571428,
+      "page": 31,
+      "pdf_number_tokens": 35,
+      "pdf_word_tokens": 42,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 7
+        },
+        "repeated": {
+          "numbers": 11,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9047619047619048
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          261.05120849609375,
+          37.368255615234375,
+          317.2112121582031,
+          72.64825439453125
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 2,
+      "missing_numbers": [
+        "2.5",
+        "20"
+      ],
+      "missing_word_count": 1,
+      "missing_words": [
+        "scale"
+      ],
+      "number_coverage": 0.9428571428571428,
+      "page": 32,
+      "pdf_number_tokens": 35,
+      "pdf_word_tokens": 55,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 4
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9818181818181818
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 3,
+      "extra_numbers": [
+        "1",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 1,
+      "missing_numbers": [
+        "15"
+      ],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 0.9375,
+      "page": 33,
+      "pdf_number_tokens": 16,
+      "pdf_word_tokens": 45,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 14,
+      "extra_numbers": [
+        "-8",
+        "-9",
+        "0.05",
+        "0.125",
+        "0.45",
+        "0.65",
+        "1",
+        "1.5",
+        "10",
+        "12",
+        "14",
+        "2023",
+        "4220204",
+        "5.8"
+      ],
+      "figure_alt_number_coverage": 0.5833333333333334,
+      "figure_alt_word_coverage": 0.42857142857142855,
+      "figure_missing_numbers": [
+        "0.125",
+        "10",
+        "12",
+        "2023",
+        "4220204"
+      ],
+      "figure_missing_words": [
+        "based",
+        "continued",
+        "example",
+        "notes",
+        "outline",
+        "scale",
+        "small",
+        "thick"
+      ],
+      "figure_number_tokens": 12,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.028400421142578,
+          74.5574951171875,
+          600.5953979492188,
+          654.9664916992188
+        ]
+      ],
+      "figure_word_tokens": 14,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 34,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 28,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 13,
+          "words": 15
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text loss",
+      "extra_number_count": 10,
+      "extra_numbers": [
+        "0.0069",
+        "0.012",
+        "0.035",
+        "0.157",
+        "0.244",
+        "0.3",
+        "0.88",
+        "3.98",
+        "6.19",
+        "8"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          267.7217102050781,
+          27.71600341796875,
+          328.20172119140625,
+          68.0360107421875
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 17,
+      "missing_numbers": [
+        "-0.01",
+        "-0.012",
+        "-0.035",
+        "-0.157",
+        "-0.197",
+        "-0.244",
+        "-0.25",
+        "-0.3",
+        "-0.88",
+        "-3.98",
+        "-5",
+        "-6.19",
+        "0.069",
+        "0.189",
+        "14",
+        "2.8",
+        "4.81"
+      ],
+      "missing_word_count": 8,
+      "missing_words": [
+        "area",
+        "gage",
+        "note",
+        "plane",
+        "scale",
+        "seating",
+        "see",
+        "typical"
+      ],
+      "number_coverage": 0.6909090909090909,
+      "page": 35,
+      "pdf_number_tokens": 55,
+      "pdf_word_tokens": 57,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 4
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.8596491228070176
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 13,
+      "extra_numbers": [
+        "0",
+        "1",
+        "10416",
+        "1845",
+        "2",
+        "31",
+        "33",
+        "4",
+        "64",
+        "872",
+        "9",
+        "9751",
+        "99"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 36,
+      "pdf_number_tokens": 20,
+      "pdf_word_tokens": 42,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 17,
+      "extra_numbers": [
+        "0.005",
+        "0.016",
+        "0.025",
+        "0.063",
+        "0.127",
+        "0.213",
+        "0.41",
+        "0.635",
+        "1",
+        "1.6",
+        "14",
+        "2014",
+        "3",
+        "4",
+        "4214846",
+        "5",
+        "5.4"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.2857142857142857,
+      "figure_missing_numbers": [
+        "0.005",
+        "0.016",
+        "0.025",
+        "0.063",
+        "0.127",
+        "0.213",
+        "0.41",
+        "0.635",
+        "1.6",
+        "14",
+        "16",
+        "2014",
+        "3",
+        "4214846",
+        "5.4",
+        "8"
+      ],
+      "figure_missing_words": [
+        "based",
+        "continued",
+        "inch",
+        "notes",
+        "scale",
+        "shrink",
+        "smalloutline",
+        "stencil",
+        "symm",
+        "thick"
+      ],
+      "figure_number_tokens": 16,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          12.0,
+          74.52801513671875,
+          600.5669555664062,
+          660.606689453125
+        ]
+      ],
+      "figure_word_tokens": 14,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 37,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 29,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 17,
+          "words": 15
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 5
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "unextractable",
+      "extra_number_count": 28,
+      "extra_numbers": [
+        "-1994",
+        "-241",
+        "0",
+        "0.05",
+        "0.08",
+        "0.18",
+        "0.2",
+        "0.3",
+        "0.5",
+        "0.8",
+        "1",
+        "1.5",
+        "10",
+        "14.5",
+        "15",
+        "16",
+        "2.5",
+        "2011",
+        "3",
+        "3.35",
+        "3.65",
+        "3.85",
+        "4.15",
+        "4203539",
+        "5",
+        "6",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          19.31999969482422,
+          57.67999267578125,
+          597.8400268554688,
+          726.8200073242188
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [
+        "no extractable PDF tokens"
+      ],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 38,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 0,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 0
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "unextractable",
+      "extra_number_count": 15,
+      "extra_numbers": [
+        "0",
+        "1",
+        "10",
+        "14",
+        "15",
+        "16",
+        "2",
+        "271",
+        "3",
+        "4206353",
+        "5",
+        "55",
+        "7",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          19.259918212890625,
+          72.1399917602539,
+          591.9599609375,
+          647.9801025390625
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [
+        "no extractable PDF tokens"
+      ],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 39,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 0,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 0
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 1,
+      "alt_only_numbers": [
+        "67%"
+      ],
+      "classification": "unextractable",
+      "extra_number_count": 34,
+      "extra_numbers": [
+        "-7351",
+        "0.07",
+        "0.08",
+        "0.125",
+        "0.14",
+        "0.23",
+        "0.28",
+        "0.3",
+        "0.5",
+        "0.8",
+        "0.82",
+        "0.85",
+        "1",
+        "1.07",
+        "1.5",
+        "10",
+        "14",
+        "16",
+        "2",
+        "2.05",
+        "2.55",
+        "2.6",
+        "2.65",
+        "271",
+        "3",
+        "4",
+        "4.25",
+        "4.3",
+        "4.75",
+        "4.8",
+        "4208122",
+        "6",
+        "67",
+        "7525"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          19.3798828125,
+          57.20002746582031,
+          592.97998046875,
+          588.7000732421875
+        ],
+        [
+          67.1189193725586,
+          559.2799682617188,
+          450.1797790527344,
+          662.739990234375
+        ]
+      ],
+      "figure_word_tokens": 0,
+      "flags": [
+        "no extractable PDF tokens"
+      ],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 40,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 0,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 0
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 1,
+      "extra_numbers": [
+        "2026"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 41,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 131,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 1,
+          "words": 4
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 0,
+          "words": 0
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    }
+  ],
+  "pdf_pages": 41,
+  "summary": {
+    "high_confidence_table_rows": 2,
+    "low_coverage_text_pages": 2,
+    "mean_number_coverage": 0.9079313952783076,
+    "mean_word_coverage": 0.9513016922471864,
+    "pages": 41,
+    "status": "REVIEW",
+    "table_issue_counts": {
+      "column shift": 2,
+      "missing unit": 0,
+      "ordering": 0,
+      "ragged row": 0,
+      "unit in wrong column": 2
+    }
+  },
+  "table_issues": [
+    {
+      "confidence": "high",
+      "detail": "Text/expression in MIN",
+      "line": 189,
+      "page": 4,
+      "row": "I <sub>K</sub> | Analog port diode current | V <sub>NC</sub> , V <sub>NO</sub> , V <sub>COM</sub> < 0 |  | -50 mA",
+      "type": "column shift"
+    },
+    {
+      "confidence": "high",
+      "detail": "Check UNIT",
+      "line": 189,
+      "page": 4,
+      "row": "I <sub>K</sub> | Analog port diode current | V <sub>NC</sub> , V <sub>NO</sub> , V <sub>COM</sub> < 0 |  | -50 mA",
+      "type": "unit in wrong column"
+    },
+    {
+      "confidence": "high",
+      "detail": "Text/expression in MIN",
+      "line": 194,
+      "page": 4,
+      "row": "I <sub>IK</sub> | Digital input clamp current | V <sub>I</sub> < 0 |  | -50 mA",
+      "type": "column shift"
+    },
+    {
+      "confidence": "high",
+      "detail": "Check UNIT",
+      "line": 194,
+      "page": 4,
+      "row": "I <sub>IK</sub> | Digital input clamp current | V <sub>I</sub> < 0 |  | -50 mA",
+      "type": "unit in wrong column"
+    }
+  ],
+  "warnings": []
+}

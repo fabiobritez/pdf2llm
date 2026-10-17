@@ -1,0 +1,2808 @@
+{
+  "markdown": "output/ltc3313/ltc3313.md",
+  "markdown_pages": 29,
+  "name": "ltc3313",
+  "pages": [
+    {
+      "alt_only_number_count": 3,
+      "alt_only_numbers": [
+        "100%",
+        "80%",
+        "85%"
+      ],
+      "classification": "text",
+      "extra_number_count": 16,
+      "extra_numbers": [
+        "0",
+        "1.2",
+        "140",
+        "2",
+        "2.5",
+        "274",
+        "3.3",
+        "3.6",
+        "4",
+        "4020",
+        "47",
+        "470",
+        "6.8",
+        "80",
+        "800",
+        "85"
+      ],
+      "figure_alt_number_coverage": 0.6666666666666666,
+      "figure_alt_word_coverage": 0.5714285714285714,
+      "figure_missing_numbers": [
+        "0.1",
+        "0.4",
+        "0.8",
+        "1.6",
+        "12.5",
+        "2.4",
+        "2.8",
+        "22",
+        "3.2",
+        "7.5"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "converter",
+        "ith",
+        "mode",
+        "pgnd",
+        "pgood",
+        "sstt",
+        "stepdown",
+        "sync"
+      ],
+      "figure_number_tokens": 30,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          366.9574890136719,
+          546.9290161132812,
+          585.4114990234375,
+          735.7570190429688
+        ],
+        [
+          36.520599365234375,
+          561.5909423828125,
+          377.164306640625,
+          754.6610107421875
+        ]
+      ],
+      "figure_word_tokens": 21,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 1,
+      "pdf_number_tokens": 17,
+      "pdf_word_tokens": 143,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 44,
+          "words": 27
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 10
+        },
+        "repeated": {
+          "numbers": 16,
+          "words": 5
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 19,
+      "extra_numbers": [
+        "0.95",
+        "1.25",
+        "10",
+        "11",
+        "125",
+        "13",
+        "14",
+        "15",
+        "150",
+        "16",
+        "17",
+        "18",
+        "39.6",
+        "5.8",
+        "57.2",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "figure_alt_number_coverage": 0.46153846153846156,
+      "figure_alt_word_coverage": 0.21568627450980393,
+      "figure_missing_numbers": [
+        "-40",
+        "1.25",
+        "125",
+        "150",
+        "39.6",
+        "5.8",
+        "57.2"
+      ],
+      "figure_missing_words": [
+        "automotive",
+        "configuration",
+        "degc",
+        "description",
+        "determined",
+        "finish",
+        "footprint",
+        "free",
+        "information",
+        "ith",
+        "laminate",
+        "lead",
+        "lhqf",
+        "marking",
+        "mini",
+        "order",
+        "part",
+        "pbf",
+        "pcb",
+        "pgood",
+        "products",
+        "qfn",
+        "range",
+        "reel",
+        "soldered",
+        "sstt",
+        "tape",
+        "temperature",
+        "theta",
+        "thetaja"
+      ],
+      "figure_number_tokens": 13,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          273.0,
+          81.25,
+          609.5,
+          360.1499938964844
+        ],
+        [
+          3.1428985595703125,
+          363.45001220703125,
+          609.142822265625,
+          490.835693359375
+        ],
+        [
+          3.1428985595703125,
+          450.0356140136719,
+          609.142822265625,
+          552.9594116210938
+        ]
+      ],
+      "figure_word_tokens": 51,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 2,
+      "pdf_number_tokens": 14,
+      "pdf_word_tokens": 92,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 54,
+          "words": 117
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 19,
+          "words": 4
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 57,
+      "extra_numbers": [
+        "-100",
+        "-20",
+        "-45",
+        "0.1",
+        "0.2",
+        "0.375",
+        "0.4",
+        "0.425",
+        "0.5",
+        "1",
+        "1.2",
+        "1.3",
+        "1.5",
+        "1.8",
+        "10",
+        "100",
+        "106",
+        "110",
+        "114.5",
+        "12",
+        "125",
+        "13",
+        "130",
+        "15",
+        "150",
+        "17",
+        "18",
+        "19",
+        "2.1",
+        "2.2",
+        "2.25",
+        "2.5",
+        "20",
+        "200",
+        "21",
+        "24",
+        "274",
+        "3.5",
+        "31",
+        "35"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "-100",
+        "-20",
+        "-45",
+        "0.1",
+        "0.2",
+        "0.375",
+        "0.4",
+        "0.425",
+        "0.5",
+        "1.2",
+        "1.3",
+        "1.5",
+        "1.8",
+        "100",
+        "106",
+        "110",
+        "114.5",
+        "125",
+        "130",
+        "150",
+        "2",
+        "2.1",
+        "2.2",
+        "2.25",
+        "2.5",
+        "20",
+        "200",
+        "274",
+        "3.5",
+        "390",
+        "4",
+        "440",
+        "45",
+        "490",
+        "495",
+        "5.5",
+        "500",
+        "505"
+      ],
+      "figure_missing_words": [
+        "amp",
+        "and",
+        "bottom",
+        "charge",
+        "conditions",
+        "current",
+        "cycle",
+        "default",
+        "degc",
+        "delay",
+        "duty",
+        "error",
+        "feedback",
+        "frequency",
+        "gain",
+        "good",
+        "high",
+        "hysteresis",
+        "input",
+        "ipeak",
+        "ivalley",
+        "kohm",
+        "leakage",
+        "level",
+        "limit",
+        "lockout",
+        "low",
+        "max",
+        "maximum",
+        "mhz"
+      ],
+      "figure_number_tokens": 38,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          3.309600830078125,
+          117.4404296875,
+          609.310546875,
+          273.118896484375
+        ],
+        [
+          3.309600830078125,
+          231.580810546875,
+          609.310546875,
+          457.5234069824219
+        ],
+        [
+          3.309600830078125,
+          415.98529052734375,
+          609.310546875,
+          612.2803955078125
+        ],
+        [
+          3.309600830078125,
+          570.7421875,
+          609.310546875,
+          736.1754150390625
+        ]
+      ],
+      "figure_word_tokens": 85,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 3,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 22,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 51,
+          "words": 185
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 31,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 2,
+      "extra_numbers": [
+        "10",
+        "20"
+      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 4,
+      "pdf_number_tokens": 19,
+      "pdf_word_tokens": 113,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 3,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 26,
+      "extra_numbers": [
+        "0",
+        "0.001",
+        "0.5",
+        "1",
+        "1.185",
+        "1.2",
+        "1.215",
+        "1.8",
+        "10",
+        "100",
+        "15",
+        "2",
+        "2.5",
+        "20",
+        "3",
+        "32",
+        "3313",
+        "4",
+        "4020",
+        "5",
+        "5.5",
+        "55",
+        "6",
+        "7",
+        "8",
+        "800"
+      ],
+      "figure_alt_number_coverage": 0.07894736842105263,
+      "figure_alt_word_coverage": 0.6086956521739131,
+      "figure_missing_numbers": [
+        "0.001",
+        "0.01",
+        "0.1",
+        "1",
+        "1.185",
+        "1.188",
+        "1.191",
+        "1.194",
+        "1.197",
+        "1.203",
+        "1.206",
+        "1.209",
+        "1.212",
+        "1.215",
+        "10",
+        "100",
+        "15",
+        "2",
+        "2.5",
+        "20",
+        "3",
+        "3.3",
+        "3.5",
+        "32",
+        "3313",
+        "4",
+        "4.5",
+        "4020",
+        "5",
+        "5.5",
+        "55",
+        "6",
+        "7",
+        "8",
+        "800"
+      ],
+      "figure_missing_words": [
+        "clt",
+        "coilcraft",
+        "fsw",
+        "iload",
+        "mec",
+        "mhz",
+        "tdk",
+        "vin",
+        "xel"
+      ],
+      "figure_number_tokens": 38,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          333.76690673828125,
+          120.22900390625,
+          549.6410217285156,
+          308.1029968261719
+        ],
+        [
+          77.16690063476562,
+          120.6290283203125,
+          293.0408935546875,
+          308.5030212402344
+        ],
+        [
+          209.43499755859375,
+          322.64801025390625,
+          427.08502197265625,
+          512.5029907226562
+        ],
+        [
+          33.236000061035156,
+          323.24798583984375,
+          251.28500366210938,
+          513.1029968261719
+        ],
+        [
+          386.43499755859375,
+          323.24798583984375,
+          603.885009765625,
+          513.156982421875
+        ],
+        [
+          209.9040069580078,
+          529.3289794921875,
+          427.68499755859375,
+          718.7030029296875
+        ],
+        [
+          387.1050109863281,
+          528.926025390625,
+          604.3909301757812,
+          718.7379760742188
+        ],
+        [
+          33.435997009277344,
+          528.6480102539062,
+          251.08599853515625,
+          719.7570190429688
+        ]
+      ],
+      "figure_word_tokens": 23,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 5,
+      "pdf_number_tokens": 2,
+      "pdf_word_tokens": 8,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 127,
+          "words": 109
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 75,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 70,
+      "extra_numbers": [
+        "-25",
+        "-50",
+        "0",
+        "1",
+        "1.2",
+        "1.5",
+        "1.94",
+        "1.95",
+        "1.96",
+        "1.97",
+        "1.98",
+        "1.99",
+        "10",
+        "10.2",
+        "10.4",
+        "10.5",
+        "100",
+        "11",
+        "11.5",
+        "12",
+        "12.5",
+        "125",
+        "13",
+        "14",
+        "15",
+        "150",
+        "16",
+        "17",
+        "2",
+        "2.01",
+        "2.02",
+        "2.08",
+        "2.2",
+        "2.5",
+        "2.6",
+        "2.8",
+        "23",
+        "274",
+        "3",
+        "3.2"
+      ],
+      "figure_alt_number_coverage": 0.22413793103448276,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [
+        "-1",
+        "-25",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9",
+        "10.2",
+        "10.6",
+        "10.8",
+        "11",
+        "12",
+        "125",
+        "13",
+        "15",
+        "16",
+        "17",
+        "2.1",
+        "2.3",
+        "2.4",
+        "2.5",
+        "3",
+        "3.5",
+        "3313",
+        "340",
+        "360",
+        "370",
+        "380",
+        "390",
+        "410",
+        "495",
+        "496",
+        "497",
+        "498",
+        "499",
+        "5",
+        "5.5",
+        "500",
+        "501",
+        "502",
+        "503"
+      ],
+      "figure_missing_words": [],
+      "figure_number_tokens": 58,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          386.5544128417969,
+          120.02899169921875,
+          602.4284057617188,
+          307.9029846191406
+        ],
+        [
+          32.957496643066406,
+          120.22900390625,
+          248.8314971923828,
+          308.1029968261719
+        ],
+        [
+          209.75439453125,
+          120.8289794921875,
+          425.62890625,
+          308.7029724121094
+        ],
+        [
+          386.9169006347656,
+          324.6289978027344,
+          602.7908935546875,
+          512.5029907226562
+        ],
+        [
+          208.95440673828125,
+          325.02899169921875,
+          424.8283996582031,
+          512.9029846191406
+        ],
+        [
+          32.604400634765625,
+          325.22900390625,
+          248.47860717773438,
+          513.1029968261719
+        ],
+        [
+          32.82630157470703,
+          529.0570068359375,
+          248.70030212402344,
+          717.5030517578125
+        ],
+        [
+          209.71690368652344,
+          529.6290283203125,
+          425.5909118652344,
+          717.5030517578125
+        ],
+        [
+          386.6669006347656,
+          530.22900390625,
+          602.5410766601562,
+          718.10302734375
+        ]
+      ],
+      "figure_word_tokens": 28,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 6,
+      "pdf_number_tokens": 2,
+      "pdf_word_tokens": 8,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 118,
+          "words": 70
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 58,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 23,
+      "extra_numbers": [
+        "-50",
+        "0",
+        "0.5",
+        "100",
+        "150",
+        "16.5",
+        "16.8",
+        "18",
+        "19",
+        "19.5",
+        "2.25",
+        "20",
+        "21",
+        "21.8",
+        "22",
+        "23",
+        "24",
+        "3.2",
+        "3313",
+        "5.5",
+        "500",
+        "72",
+        "75"
+      ],
+      "figure_alt_number_coverage": 0.06521739130434782,
+      "figure_alt_word_coverage": 0.96,
+      "figure_missing_numbers": [
+        "-0.5",
+        "-1",
+        "-1.5",
+        "-2",
+        "-2.5",
+        "-25",
+        "-3",
+        "-3.5",
+        "-4",
+        "-50",
+        "0.5",
+        "1",
+        "1.5",
+        "10",
+        "100",
+        "125",
+        "150",
+        "18",
+        "19",
+        "2",
+        "2.5",
+        "20",
+        "200",
+        "21",
+        "22",
+        "23",
+        "24",
+        "3",
+        "3.5",
+        "300",
+        "3313",
+        "400",
+        "5",
+        "500",
+        "6",
+        "6.5",
+        "600",
+        "7",
+        "7.5",
+        "8"
+      ],
+      "figure_missing_words": [
+        "ilimit"
+      ],
+      "figure_number_tokens": 46,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          32.916900634765625,
+          120.02899169921875,
+          248.7908935546875,
+          307.90301513671875
+        ],
+        [
+          387.5762939453125,
+          120.42901611328125,
+          603.4505004882812,
+          308.3030090332031
+        ],
+        [
+          209.50399780273438,
+          120.42901611328125,
+          425.9949951171875,
+          308.3379821777344
+        ],
+        [
+          79.0,
+          325.22900390625,
+          294.8739929199219,
+          513.1029968261719
+        ],
+        [
+          332.2168884277344,
+          325.6289978027344,
+          548.0912780761719,
+          513.5029907226562
+        ],
+        [
+          78.61689758300781,
+          530.4290161132812,
+          294.49090576171875,
+          718.302978515625
+        ],
+        [
+          333.0574951171875,
+          530.8289794921875,
+          549.0859985351562,
+          718.9569702148438
+        ]
+      ],
+      "figure_word_tokens": 25,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 7,
+      "pdf_number_tokens": 2,
+      "pdf_word_tokens": 8,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 93,
+          "words": 67
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 51,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 19,
+      "extra_numbers": [
+        "0",
+        "1.2",
+        "10",
+        "2",
+        "200",
+        "22",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "3313",
+        "5",
+        "50",
+        "500",
+        "6",
+        "7",
+        "80",
+        "805"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.5294117647058824,
+      "figure_missing_numbers": [
+        "1",
+        "1.2",
+        "10",
+        "2",
+        "200",
+        "22",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3.3",
+        "30",
+        "3313",
+        "5",
+        "50",
+        "500",
+        "6",
+        "7",
+        "80",
+        "805"
+      ],
+      "figure_missing_words": [
+        "cout",
+        "div",
+        "fsw",
+        "iload",
+        "mhz",
+        "pgood",
+        "pulse",
+        "skipping"
+      ],
+      "figure_number_tokens": 21,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          312.49969482421875,
+          119.4000244140625,
+          531.0997009277344,
+          279.4000244140625
+        ],
+        [
+          116.49969482421875,
+          119.79998779296875,
+          335.0997009277344,
+          279.79998779296875
+        ],
+        [
+          313.1288146972656,
+          324.3999938964844,
+          531.7287902832031,
+          484.3999938964844
+        ],
+        [
+          116.12879943847656,
+          325.6000061035156,
+          334.72882080078125,
+          485.6000061035156
+        ],
+        [
+          312.4248962402344,
+          530.0,
+          531.02490234375,
+          690.0
+        ],
+        [
+          116.02879333496094,
+          530.2000122070312,
+          334.6287841796875,
+          690.2000122070312
+        ]
+      ],
+      "figure_word_tokens": 17,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 8,
+      "pdf_number_tokens": 5,
+      "pdf_word_tokens": 10,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 68,
+          "words": 74
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 6
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 9,
+      "pdf_number_tokens": 21,
+      "pdf_word_tokens": 178,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "figure",
+      "extra_number_count": 6,
+      "extra_numbers": [
+        "0.49",
+        "0.5",
+        "0.55",
+        "1",
+        "2",
+        "3313"
+      ],
+      "figure_alt_number_coverage": 0.125,
+      "figure_alt_word_coverage": 0.13793103448275862,
+      "figure_missing_numbers": [
+        "0.4",
+        "0.49",
+        "0.5",
+        "0.55",
+        "1",
+        "10",
+        "2"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "amp",
+        "antishoot",
+        "cff",
+        "cin",
+        "comp",
+        "cout",
+        "css",
+        "error",
+        "fault",
+        "ith",
+        "logic",
+        "mode",
+        "opt",
+        "oscillator",
+        "pgnd",
+        "pgood",
+        "reference",
+        "sense",
+        "slope",
+        "sstt",
+        "switch",
+        "sync",
+        "through",
+        "vtemp"
+      ],
+      "figure_number_tokens": 8,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          47.917198181152344,
+          86.01702880859375,
+          579.5421752929688,
+          471.9240417480469
+        ]
+      ],
+      "figure_word_tokens": 29,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 10,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 0,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 11,
+          "words": 32
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 5
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 11,
+      "pdf_number_tokens": 9,
+      "pdf_word_tokens": 231,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 12,
+      "pdf_number_tokens": 4,
+      "pdf_word_tokens": 174,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 9,
+      "extra_numbers": [
+        "0.5",
+        "1210",
+        "130",
+        "178",
+        "2.2",
+        "243",
+        "274",
+        "4",
+        "549"
+      ],
+      "figure_alt_number_coverage": 0.18181818181818182,
+      "figure_alt_word_coverage": 0.45,
+      "figure_missing_numbers": [
+        "0.5",
+        "100",
+        "1210",
+        "130",
+        "178",
+        "2.2",
+        "243",
+        "274",
+        "549"
+      ],
+      "figure_missing_words": [
+        "buck",
+        "fre",
+        "fsw",
+        "highest",
+        "kohm",
+        "loop",
+        "lower",
+        "mhz",
+        "regulator",
+        "shown",
+        "switching"
+      ],
+      "figure_number_tokens": 11,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          34.56700897216797,
+          245.5169677734375,
+          296.1533966064453,
+          376.4093933105469
+        ],
+        [
+          273.0000915527344,
+          519.3883056640625,
+          609.0001220703125,
+          691.0833129882812
+        ]
+      ],
+      "figure_word_tokens": 20,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 3,
+      "missing_words": [
+        "kohm",
+        "quency",
+        "vintovout"
+      ],
+      "number_coverage": 1.0,
+      "page": 13,
+      "pdf_number_tokens": 10,
+      "pdf_word_tokens": 132,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 12,
+          "words": 20
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 5,
+          "words": 3
+        }
+      },
+      "word_coverage": 0.9772727272727273
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 1,
+      "extra_numbers": [
+        "12"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "5"
+      ],
+      "figure_missing_words": [
+        "capacitors",
+        "coilcraft",
+        "com",
+        "elektronik",
+        "input",
+        "sumida",
+        "tdk",
+        "toko",
+        "url",
+        "vendor",
+        "vishay",
+        "weonline",
+        "wurth",
+        "www",
+        "xfmrs"
+      ],
+      "figure_number_tokens": 1,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          273.0,
+          488.80450439453125,
+          609.0,
+          660.4996337890625
+        ]
+      ],
+      "figure_word_tokens": 15,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 2,
+      "missing_words": [
+        "deltail",
+        "vout"
+      ],
+      "number_coverage": 1.0,
+      "page": 14,
+      "pdf_number_tokens": 14,
+      "pdf_word_tokens": 169,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 1,
+          "words": 33
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 5
+        }
+      },
+      "word_coverage": 0.9881656804733728
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "2"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "and",
+        "avx",
+        "capacitor",
+        "clock",
+        "com",
+        "default",
+        "divider",
+        "external",
+        "frequency",
+        "fsw",
+        "input",
+        "kyocera",
+        "kyoceraavx",
+        "master",
+        "mhz",
+        "mode",
+        "murata",
+        "output",
+        "pin",
+        "resistor",
+        "ripple",
+        "rtprogrammed",
+        "samsung",
+        "samsungsem",
+        "slave",
+        "switching",
+        "sync",
+        "taiyo",
+        "tdk"
+      ],
+      "figure_number_tokens": 1,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          3.0,
+          344.8020935058594,
+          339.0,
+          487.5733947753906
+        ],
+        [
+          3.0,
+          624.179931640625,
+          608.99951171875,
+          738.0274047851562
+        ]
+      ],
+      "figure_word_tokens": 37,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 15,
+      "pdf_number_tokens": 7,
+      "pdf_word_tokens": 208,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 1,
+          "words": 64
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 2
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 13,
+      "extra_numbers": [
+        "0",
+        "100",
+        "120",
+        "174",
+        "180",
+        "240",
+        "243",
+        "270",
+        "3",
+        "301",
+        "4",
+        "7",
+        "90"
+      ],
+      "figure_alt_number_coverage": 0.25,
+      "figure_alt_word_coverage": 0.1724137931034483,
+      "figure_missing_numbers": [
+        "0",
+        "100",
+        "120",
+        "174",
+        "180",
+        "240",
+        "243",
+        "270",
+        "301",
+        "5",
+        "7",
+        "90"
+      ],
+      "figure_missing_words": [
+        "angle",
+        "clock",
+        "connection",
+        "continuous",
+        "default",
+        "deg",
+        "example",
+        "external",
+        "forced",
+        "frequency",
+        "input",
+        "mhz",
+        "mode",
+        "none",
+        "ohm",
+        "operation",
+        "output",
+        "pulse",
+        "rtprogrammed",
+        "skipping",
+        "switching",
+        "sync",
+        "synchronization",
+        "value"
+      ],
+      "figure_number_tokens": 16,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          273.0,
+          96.17987060546875,
+          609.0,
+          274.48931884765625
+        ],
+        [
+          3.0,
+          156.796875,
+          339.0,
+          334.03009033203125
+        ],
+        [
+          84.9219970703125,
+          344.4906005859375,
+          250.82308959960938,
+          472.3652038574219
+        ]
+      ],
+      "figure_word_tokens": 29,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 16,
+      "pdf_number_tokens": 11,
+      "pdf_word_tokens": 137,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 34,
+          "words": 57
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 1,
+          "words": 6
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 17,
+      "pdf_number_tokens": 9,
+      "pdf_word_tokens": 239,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
+      "figure_number_tokens": 0,
+      "figure_reasons": [],
+      "figure_regions": [],
+      "figure_word_tokens": 0,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "vsstt"
+      ],
+      "number_coverage": 1.0,
+      "page": 18,
+      "pdf_number_tokens": 15,
+      "pdf_word_tokens": 167,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 0,
+          "words": 0
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 0,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9940119760479041
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 7,
+      "extra_numbers": [
+        "0",
+        "0.5",
+        "0.6",
+        "0.7",
+        "1.5",
+        "1.7",
+        "4"
+      ],
+      "figure_alt_number_coverage": 0.3333333333333333,
+      "figure_alt_word_coverage": 0.8571428571428571,
+      "figure_missing_numbers": [
+        "0.1",
+        "0.2",
+        "0.3",
+        "0.4",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.6",
+        "100",
+        "125",
+        "150",
+        "3313"
+      ],
+      "figure_missing_words": [
+        "applications",
+        "information"
+      ],
+      "figure_number_tokens": 18,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          50.22309875488281,
+          83.44970703125,
+          308.2875061035156,
+          312.989501953125
+        ]
+      ],
+      "figure_word_tokens": 14,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 19,
+      "pdf_number_tokens": 8,
+      "pdf_word_tokens": 207,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 24,
+          "words": 17
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 5,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 4,
+      "extra_numbers": [
+        "1",
+        "19",
+        "2",
+        "3"
+      ],
+      "figure_alt_number_coverage": 0.8333333333333334,
+      "figure_alt_word_coverage": 0.85,
+      "figure_missing_numbers": [
+        "5"
+      ],
+      "figure_missing_words": [
+        "css",
+        "high",
+        "see"
+      ],
+      "figure_number_tokens": 6,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          6.251701354980469,
+          103.86700439453125,
+          337.7489929199219,
+          465.65899658203125
+        ]
+      ],
+      "figure_word_tokens": 20,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 20,
+      "pdf_number_tokens": 2,
+      "pdf_word_tokens": 104,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 13,
+          "words": 27
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 9,
+          "words": 2
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 0,
+      "extra_numbers": [],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "0",
+        "0.1",
+        "1",
+        "100",
+        "120",
+        "121",
+        "180",
+        "2",
+        "22",
+        "274",
+        "3",
+        "3.3",
+        "3.32",
+        "30",
+        "3313",
+        "4.5",
+        "4.7",
+        "4018",
+        "48.7",
+        "5.5",
+        "680"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "coilcraft",
+        "deg",
+        "ith",
+        "mec",
+        "mode",
+        "pgnd",
+        "pgood",
+        "sstt",
+        "sync",
+        "xgl"
+      ],
+      "figure_number_tokens": 21,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          87.09230041503906,
+          113.8751220703125,
+          510.1167907714844,
+          422.3700866699219
+        ]
+      ],
+      "figure_word_tokens": 11,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 21,
+      "pdf_number_tokens": 4,
+      "pdf_word_tokens": 7,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 36,
+          "words": 21
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 8
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 18,
+      "extra_numbers": [
+        "0",
+        "0.1",
+        "1",
+        "10",
+        "100",
+        "120",
+        "1500",
+        "22",
+        "240",
+        "3",
+        "3313",
+        "4.5",
+        "432",
+        "47",
+        "5.49",
+        "55",
+        "744340300055",
+        "86.6"
+      ],
+      "figure_alt_number_coverage": 0.8260869565217391,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [
+        "174",
+        "243",
+        "274",
+        "4.5"
+      ],
+      "figure_missing_words": [],
+      "figure_number_tokens": 23,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          63.183494567871094,
+          117.64898681640625,
+          531.2143859863281,
+          537.1741027832031
+        ]
+      ],
+      "figure_word_tokens": 9,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 22,
+      "pdf_number_tokens": 3,
+      "pdf_word_tokens": 7,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 49,
+          "words": 28
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 3,
+          "words": 12
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 14,
+      "extra_numbers": [
+        "0",
+        "0.1",
+        "1",
+        "10",
+        "180",
+        "22",
+        "270",
+        "3",
+        "3313",
+        "4",
+        "4020",
+        "5.5",
+        "800",
+        "90"
+      ],
+      "figure_alt_number_coverage": 0.2,
+      "figure_alt_word_coverage": 0.09090909090909091,
+      "figure_missing_numbers": [
+        "0.1",
+        "1",
+        "1.2",
+        "10",
+        "100",
+        "140",
+        "2",
+        "22",
+        "274",
+        "3",
+        "3.32",
+        "301",
+        "4",
+        "4020",
+        "5.5",
+        "6.8",
+        "60",
+        "680",
+        "80",
+        "800"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "coilcraft",
+        "ith",
+        "mec",
+        "mode",
+        "pgnd",
+        "pgood",
+        "sstt",
+        "sync",
+        "xel"
+      ],
+      "figure_number_tokens": 25,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          75.50370025634766,
+          118.33978271484375,
+          520.5346069335938,
+          659.4622802734375
+        ]
+      ],
+      "figure_word_tokens": 11,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 23,
+      "pdf_number_tokens": 3,
+      "pdf_word_tokens": 7,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 60,
+          "words": 39
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 16
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 14,
+      "extra_numbers": [
+        "0.1",
+        "1",
+        "10",
+        "100",
+        "140",
+        "22",
+        "3.32",
+        "301",
+        "3313",
+        "4020",
+        "6.8",
+        "680",
+        "80",
+        "800"
+      ],
+      "figure_alt_number_coverage": 0.7083333333333334,
+      "figure_alt_word_coverage": 0.8461538461538461,
+      "figure_missing_numbers": [
+        "0",
+        "180",
+        "270",
+        "3",
+        "5",
+        "5.5",
+        "90"
+      ],
+      "figure_missing_words": [
+        "deg",
+        "sstt"
+      ],
+      "figure_number_tokens": 24,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          85.9813003540039,
+          120.1397705078125,
+          536.2634887695312,
+          661.2625122070312
+        ]
+      ],
+      "figure_word_tokens": 13,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 24,
+      "pdf_number_tokens": 3,
+      "pdf_word_tokens": 11,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 59,
+          "words": 41
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 4,
+          "words": 17
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 26,
+      "extra_numbers": [
+        "0.1",
+        "1",
+        "10",
+        "100",
+        "120",
+        "121",
+        "15",
+        "1500",
+        "2",
+        "22",
+        "3",
+        "3.3",
+        "3.6",
+        "3313",
+        "4.12",
+        "4.5",
+        "4018",
+        "5",
+        "5.5",
+        "55",
+        "562",
+        "6",
+        "649",
+        "680",
+        "7",
+        "744340300055"
+      ],
+      "figure_alt_number_coverage": 0.9230769230769231,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [
+        "6",
+        "7"
+      ],
+      "figure_missing_words": [],
+      "figure_number_tokens": 26,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          102.15267944335938,
+          105.89640808105469,
+          508.2037048339844,
+          310.83978271484375
+        ],
+        [
+          128.40309143066406,
+          323.6786193847656,
+          505.4540100097656,
+          536.6219787597656
+        ]
+      ],
+      "figure_word_tokens": 15,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 25,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 2,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 55,
+          "words": 26
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 13
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 6,
+      "extra_numbers": [
+        "-26",
+        "0.5",
+        "15",
+        "2",
+        "3313",
+        "744340300055"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "0.1",
+        "0.5",
+        "1",
+        "15",
+        "2",
+        "22",
+        "3",
+        "3.6",
+        "3313",
+        "4",
+        "47",
+        "55",
+        "6.81",
+        "680",
+        "744340300055",
+        "8"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "continuous",
+        "count",
+        "forced",
+        "ith",
+        "low",
+        "mhz",
+        "mode",
+        "part",
+        "pgnd",
+        "pgood",
+        "sstt",
+        "sync",
+        "wurth"
+      ],
+      "figure_number_tokens": 16,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          158.60740661621094,
+          104.48411560058594,
+          476.65838623046875,
+          309.8085021972656
+        ]
+      ],
+      "figure_word_tokens": 14,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 26,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 2,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 21,
+          "words": 15
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 1,
+          "words": 6
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 5,
+      "extra_numbers": [
+        "27",
+        "3313",
+        "4",
+        "6",
+        "920"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "-0.05",
+        "0",
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.5",
+        "0.65",
+        "0.75",
+        "1",
+        "1.7",
+        "18",
+        "2",
+        "3.5",
+        "45",
+        "920"
+      ],
+      "figure_missing_words": [
+        "aaa",
+        "bbb",
+        "bevel",
+        "bottom",
+        "cap",
+        "ccc",
+        "component",
+        "corner",
+        "ddd",
+        "deg",
+        "detail",
+        "dimensions",
+        "eee",
+        "fff",
+        "layout",
+        "loading",
+        "lqfn",
+        "ltxxxxxx",
+        "mold",
+        "notch",
+        "notes",
+        "orientation",
+        "outline",
+        "package",
+        "pcb",
+        "pin",
+        "rev",
+        "see",
+        "substrate",
+        "suggested"
+      ],
+      "figure_number_tokens": 15,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          388.656982421875,
+          136.72637939453125,
+          572.0809936523438,
+          347.11419677734375
+        ],
+        [
+          70.93560028076172,
+          128.54531860351562,
+          310.50469970703125,
+          365.99700927734375
+        ],
+        [
+          89.79890441894531,
+          346.1557922363281,
+          290.1120910644531,
+          451.7627868652344
+        ],
+        [
+          230.35519409179688,
+          325.6841125488281,
+          358.45489501953125,
+          497.76031494140625
+        ],
+        [
+          99.90139770507812,
+          406.4844970703125,
+          245.27529907226562,
+          499.72601318359375
+        ],
+        [
+          166.43679809570312,
+          450.9704895019531,
+          347.63641357421875,
+          564.3543090820312
+        ],
+        [
+          93.48809814453125,
+          514.924072265625,
+          323.6111755371094,
+          743.639892578125
+        ],
+        [
+          336.6026916503906,
+          535.67236328125,
+          557.6242065429688,
+          750.7960205078125
+        ]
+      ],
+      "figure_word_tokens": 33,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "terminials"
+      ],
+      "number_coverage": 1.0,
+      "page": 27,
+      "pdf_number_tokens": 26,
+      "pdf_word_tokens": 68,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 47,
+          "words": 51
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 8
+        },
+        "repeated": {
+          "numbers": 14,
+          "words": 0
+        }
+      },
+      "word_coverage": 0.9852941176470589
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "figure",
+      "extra_number_count": 6,
+      "extra_numbers": [
+        "0",
+        "1",
+        "2",
+        "23",
+        "25",
+        "7"
+      ],
+      "figure_alt_number_coverage": 0.0,
+      "figure_alt_word_coverage": 0.0,
+      "figure_missing_numbers": [
+        "1",
+        "23",
+        "25",
+        "7"
+      ],
+      "figure_missing_words": [
+        "configuration",
+        "date",
+        "description",
+        "history",
+        "initial",
+        "number",
+        "page",
+        "pin",
+        "release",
+        "rev",
+        "revision",
+        "updated"
+      ],
+      "figure_number_tokens": 4,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          3.0,
+          92.7333984375,
+          608.9755249023438,
+          194.3333740234375
+        ]
+      ],
+      "figure_word_tokens": 12,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
+      "page": 28,
+      "pdf_number_tokens": 0,
+      "pdf_word_tokens": 0,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 4,
+          "words": 12
+        },
+        "margin": {
+          "numbers": 2,
+          "words": 55
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 0
+        }
+      },
+      "word_coverage": 1.0
+    },
+    {
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
+      "classification": "text",
+      "extra_number_count": 46,
+      "extra_numbers": [
+        "-16",
+        "-24",
+        "-28",
+        "-32",
+        "0.1",
+        "1.3",
+        "1.8",
+        "100",
+        "13",
+        "130",
+        "15",
+        "178",
+        "18",
+        "2.5",
+        "2.8",
+        "22",
+        "230",
+        "240",
+        "3.4",
+        "3.6",
+        "3307",
+        "3308",
+        "3309",
+        "3310",
+        "3311",
+        "3313",
+        "3315",
+        "3515",
+        "3612",
+        "3614",
+        "3615",
+        "3616",
+        "3636",
+        "4",
+        "6.2",
+        "60",
+        "7150",
+        "7151",
+        "720",
+        "75"
+      ],
+      "figure_alt_number_coverage": 0.1875,
+      "figure_alt_word_coverage": 0.23529411764705882,
+      "figure_missing_numbers": [
+        "-16",
+        "-24",
+        "-28",
+        "-32",
+        "-95",
+        "0.6",
+        "0.8",
+        "1.3",
+        "1.8",
+        "12.5",
+        "13",
+        "130",
+        "18",
+        "2",
+        "2.25",
+        "2.5",
+        "2.8",
+        "20",
+        "230",
+        "240",
+        "3.1",
+        "3.4",
+        "3307",
+        "3308",
+        "3309",
+        "3310",
+        "3311",
+        "3315",
+        "3614",
+        "3615",
+        "3616",
+        "3636",
+        "4",
+        "4.75",
+        "42",
+        "470",
+        "5",
+        "5.5",
+        "6",
+        "6.2"
+      ],
+      "figure_missing_words": [
+        "agnd",
+        "bga",
+        "channel",
+        "comments",
+        "converter",
+        "current",
+        "dcs",
+        "description",
+        "differential",
+        "dual",
+        "efficiency",
+        "iout",
+        "isd",
+        "ith",
+        "lqfn",
+        "min",
+        "monolithic",
+        "number",
+        "package",
+        "packages",
+        "part",
+        "parts",
+        "pgnd",
+        "pgood",
+        "qfn",
+        "quiescent",
+        "regulator",
+        "related",
+        "remote",
+        "sense"
+      ],
+      "figure_number_tokens": 64,
+      "figure_reasons": [],
+      "figure_regions": [
+        [
+          124.50459289550781,
+          100.99797058105469,
+          487.55560302734375,
+          311.94140625
+        ],
+        [
+          3.0,
+          310.668212890625,
+          609.0,
+          754.672607421875
+        ]
+      ],
+      "figure_word_tokens": 51,
+      "flags": [],
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "down"
+      ],
+      "number_coverage": 1.0,
+      "page": 29,
+      "pdf_number_tokens": 20,
+      "pdf_word_tokens": 46,
+      "removed_tokens": {
+        "boilerplate": {
+          "numbers": 0,
+          "words": 0
+        },
+        "figure": {
+          "numbers": 159,
+          "words": 160
+        },
+        "margin": {
+          "numbers": 6,
+          "words": 14
+        },
+        "repeated": {
+          "numbers": 2,
+          "words": 6
+        }
+      },
+      "word_coverage": 0.9782608695652174
+    }
+  ],
+  "pdf_pages": 29,
+  "summary": {
+    "high_confidence_table_rows": 0,
+    "low_coverage_text_pages": 0,
+    "mean_number_coverage": 1.0,
+    "mean_word_coverage": 0.99734501279332,
+    "pages": 29,
+    "status": "OK",
+    "table_issue_counts": {
+      "column shift": 0,
+      "missing unit": 0,
+      "ordering": 0,
+      "ragged row": 0,
+      "unit in wrong column": 0
+    }
+  },
+  "table_issues": [],
+  "warnings": []
+}
