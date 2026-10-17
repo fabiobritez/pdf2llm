@@ -323,6 +323,29 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual(issues, [])
         doc.close()
 
+    def test_same_label_in_abs_max_and_recommended_tables(self):
+        # tps22990 p4: "Input voltage" is a row of both tables; the md block's
+        # own values pick the table.
+        doc = pymupdf.open()
+        p = doc.new_page()
+        for top, rows in ((100, [('Input voltage', '-0.3', '6'), ('Bias voltage', '-0.3', '6')]),
+                          (300, [('Input voltage', '0.6', '5.5'), ('Bias voltage', '2.5', '5.5')])):
+            for x, word in [(400, 'MIN'), (460, 'MAX'), (520, 'UNIT')]:
+                p.insert_text((x, top), word)
+            for k, (name, lo, hi) in enumerate(rows):
+                y = top + 20 + 15 * k
+                p.insert_text((60, y), name)
+                p.insert_text((405, y), lo)
+                p.insert_text((465, y), hi)
+                p.insert_text((525, y), 'V')
+        text = ('| | MIN | MAX | UNIT |\n| Input voltage | 0.6 | 5.5 | V |\n| Bias voltage | 2.5 | 5.5 | V |')
+        issues, stats = v.geometry_issues(text, doc)
+        self.assertEqual(issues, [])
+        self.assertEqual((stats['verified_ok'], stats['unverifiable']), (2, 0))
+        issues, stats = v.geometry_issues('| | MIN | MAX | UNIT |\n| Input voltage | | 0.6 | V |\n| Bias voltage | 2.5 | 5.5 | V |', doc)
+        self.assertTrue(any(i['type'] == 'geometry column mismatch' and i['value'] == '0.6' for i in issues), issues)
+        doc.close()
+
     def test_ambiguous_rows_and_unrelated_tables_abstain(self):
         doc = pymupdf.open()
         p = doc.new_page()

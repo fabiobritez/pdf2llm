@@ -118,6 +118,39 @@ def is_ambiguous(found):
     return isinstance(found, dict) and found.get('ambiguous') is True
 
 
+def row_tables(block, schemas, normalize):
+    """Per md row: the PDF table it belongs to, from the row's own values.
+
+    A row votes only when its full set of numeric values occurs in a band of
+    exactly one table on the page; Abs Max and Recommended tables share labels
+    such as "Input voltage", but rarely whole value sets. Rows without a vote
+    take the table of their nearest voting neighbours when those agree, so a md
+    block that merges two PDF tables is still split at the right place.
+    """
+    votes = []
+    columns = None  # md indices of value columns, from the block's header row
+    for _, raw in block:
+        labels = [label(normalize(c)) for c in raw]
+        if any(c in VALUES for c in labels):
+            columns = [i for i, c in enumerate(labels) if c in VALUES]
+            votes.append(None)
+            continue
+        cells = [raw[i] for i in columns if i < len(raw)] if columns else raw
+        sigs = [sig for sig in (signature(c, normalize) for c in cells) if sig]
+        hit = [h for h, cands in schemas
+               if sigs and any(all(any(sig == signature(v, normalize) for v in c['cells'].values()) for sig in sigs)
+                               for c in cands)]
+        votes.append(hit[0] if len(hit) == 1 else None)
+    result = []
+    for k, vote in enumerate(votes):
+        if vote is None:
+            before = next((v for v in reversed(votes[:k]) if v is not None), None)
+            after = next((v for v in votes[k+1:] if v is not None), None)
+            vote = before if after is None or after is before else after if before is None else None
+        result.append(vote)
+    return result
+
+
 def match_row(cells, schema, candidates, words, normalize):
     """Fuzzy token recall on local prose, with weaker support from shared labels.
 
@@ -259,7 +292,8 @@ def check_tables(text, document, table_blocks, normalize):
         unsupported = unsupported_header or any('UNIT' in [label(normalize(c)) for c in row[1]]
                           and not any(label(normalize(c)) in VALUES for c in row[1]) for row in block)
         previous_band = None  # (schema, candidates, index) of the last matched md row in this block
-        for line, raw in block:
+        tables = row_tables(block, schemas, normalize) if len(schemas) > 1 else [None] * len(block)
+        for (line, raw), preferred in zip(block, tables):
             cells = [normalize(c) for c in raw]
             labels = [label(c) for c in cells]
             if any(c in VALUES for c in labels):
@@ -326,6 +360,20 @@ def check_tables(text, document, table_blocks, normalize):
                     matches = []
                 if len(matches) == 1:
                     stats['value_matched'] += 1
+            if len(matches) > 1 and preferred is not None:
+                # the same label in two tables (Abs Max vs Recommended)
+                own = [m for m in matches if m[0] is preferred]
+                if len(own) == 1:
+                    matches = own
+                    stats['table_matched'] += 1
+            same_cells = False
+            if len(matches) > 1 and len({tuple(sorted((k, normalize(v)) for k, v in f['cells'].items() if k != 'UNIT'))
+                                          for _, f in matches}) == 1:
+                # identical value rows in two tables (e.g. one per VBIAS): the
+                # column check is the same whichever table it is
+                matches = matches[:1]
+                same_cells = True
+                stats['table_matched'] += 1
             if len(matches) != 1 and tied and previous_band is not None:
                 # Order constraint: consecutive md rows follow consecutive PDF
                 # rows. Among equally good candidates take the band right after
@@ -341,11 +389,12 @@ def check_tables(text, document, table_blocks, normalize):
                 previous_band = None
                 same = [sc for sc, _ in schemas if set(mappings.values()) == set(sc['columns'])]
                 unverifiable('no_schema' if not same else 'prose_ambiguous' if ambiguous
-                             else 'value_ambiguous' if value_ambiguous else 'no_match')
+                             else 'value_ambiguous' if value_ambiguous
+                             else 'multi_table' if matches else 'no_match')
                 continue
             schema, found = matches[0]
             cands = next(c for sc, c in schemas if sc is schema)
-            previous_band = (schema, cands, next(i for i, c in enumerate(cands) if c is found))
+            previous_band = None if same_cells else (schema, cands, next(i for i, c in enumerate(cands) if c is found))
             if any(len(signature(cells[i], normalize)) > len(signature(found['cells'].get(name, ''), normalize))
                    and len(signature(cells[i], normalize)) > 1 for i, name in mappings.items()):
                 unverifiable('wrapped')
