@@ -1,0 +1,199 @@
+{
+ "datasheet": "lt1965fb",
+ "page": 4,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS"
+ ],
+ "discrepancies": [
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-1.5, VIN = 2.1V, ILOAD = 1mA",
+   "column": "other",
+   "md_text": "| ● | 1.477 | 1.5 | V |",
+   "pdf_text": "(no ●) | MIN: 1.477 | TYP: 1.5 | MAX: 1.523 | V",
+   "type": "extra",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-1.5, VIN = 2.1V, ILOAD = 1mA",
+   "column": "MAX",
+   "md_text": "| ● | 1.477 | 1.5 | V |",
+   "pdf_text": "MIN: 1.477, TYP: 1.5, MAX: 1.523",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-1.5, 2.5 < VIN < 20V, 1mA < ILOAD < 1.1A",
+   "column": "MAX",
+   "md_text": "| ● | 1.455 | 1.5 | V |",
+   "pdf_text": "● | MIN: 1.455 | TYP: 1.5 | MAX: 1.545 | V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-1.8, VIN = 2.3V, ILOAD = 1mA",
+   "column": "other",
+   "md_text": "| ● | 1.773 | 1.8 | V |",
+   "pdf_text": "(no ●) | MIN: 1.773 | TYP: 1.8 | MAX: 1.827 | V",
+   "type": "extra",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-1.8, VIN = 2.3V, ILOAD = 1mA",
+   "column": "MAX",
+   "md_text": "| ● | 1.773 | 1.8 | V |",
+   "pdf_text": "MIN: 1.773, TYP: 1.8, MAX: 1.827",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-1.8, 2.8 < VIN < 20V, 1mA < ILOAD < 1.1A",
+   "column": "MAX",
+   "md_text": "| ● | 1.746 | 1.8 | V |",
+   "pdf_text": "● | MIN: 1.746 | TYP: 1.8 | MAX: 1.854 | V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-2.5, VIN = 3V, ILOAD = 1mA",
+   "column": "other",
+   "md_text": "| ● | 2.462 | 2.5 | V |",
+   "pdf_text": "(no ●) | MIN: 2.462 | TYP: 2.5 | MAX: 2.538 | V",
+   "type": "extra",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-2.5, VIN = 3V, ILOAD = 1mA",
+   "column": "MAX",
+   "md_text": "| ● | 2.462 | 2.5 | V |",
+   "pdf_text": "MIN: 2.462, TYP: 2.5, MAX: 2.538",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-2.5, 3.5 < VIN < 20V, 1mA < ILOAD < 1.1A",
+   "column": "MAX",
+   "md_text": "| ● | 2.425 | 2.5 | V |",
+   "pdf_text": "● | MIN: 2.425 | TYP: 2.5 | MAX: 2.575 | V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-3.3, VIN = 3.8V, ILOAD = 1mA",
+   "column": "other",
+   "md_text": "| ● | 3.25 | 3.3 | V |",
+   "pdf_text": "(no ●) | MIN: 3.25 | TYP: 3.3 | MAX: 3.35 | V",
+   "type": "extra",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-3.3, VIN = 3.8V, ILOAD = 1mA",
+   "column": "MAX",
+   "md_text": "| ● | 3.25 | 3.3 | V |",
+   "pdf_text": "MIN: 3.25, TYP: 3.3, MAX: 3.35",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Regulated Output Voltage (Note 5) - LT1965-3.3, 4.3 < VIN < 20V, 1mA < ILOAD < 1.1A",
+   "column": "MAX",
+   "md_text": "| ● | 3.201 | 3.3 | V |",
+   "pdf_text": "● | MIN: 3.201 | TYP: 3.3 | MAX: 3.399 | V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "ADJ Pin Voltage (Notes 4, 5) - VIN = 2.1V, ILOAD = 1mA",
+   "column": "CONDITIONS",
+   "md_text": "| | ADJ Pin Voltage (Notes 4, 5) | | 1.182 | 1.2 | V |",
+   "pdf_text": "PARAMETER: ADJ Pin Voltage (Notes 4, 5) | CONDITIONS: VIN = 2.1V, ILOAD = 1mA",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "ADJ Pin Voltage (Notes 4, 5) - VIN = 2.1V, ILOAD = 1mA",
+   "column": "MAX",
+   "md_text": "| | 1.182 | 1.2 | V |",
+   "pdf_text": "MIN: 1.182, TYP: 1.2, MAX: 1.218",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "ADJ Pin Voltage (Notes 4, 5) - 2.3V < VIN < 20V, 1mA < ILOAD < 1.1A (TJ < 125°C)",
+   "column": "MAX",
+   "md_text": "| ● | 1.164 | 1.2 | V |",
+   "pdf_text": "● | MIN: 1.164 | TYP: 1.2 | MAX: 1.236 | V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "ADJ Pin Voltage (Notes 4, 5) - 2.3V < VIN < 20V, 1mA < ILOAD < 1A (H-Grade, TJ > 125°C)",
+   "column": "other",
+   "md_text": "| Line Regulation | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1A (H-Grade, T <sub>J</sub> > 125°C) |",
+   "pdf_text": "Row belongs to ADJ Pin Voltage (Notes 4, 5), not Line Regulation",
+   "type": "wrong_row",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "ADJ Pin Voltage (Notes 4, 5) - 2.3V < VIN < 20V, 1mA < ILOAD < 1A (H-Grade, TJ > 125°C)",
+   "column": "MIN",
+   "md_text": "| | 1.158 | 1.236 | V |",
+   "pdf_text": "MIN: 1.158, TYP: (blank), MAX: 1.236",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Dropout Voltage - ILOAD = 1A (H-Grade, TJ > 125°C)",
+   "column": "MAX",
+   "md_text": "(row missing)",
+   "pdf_text": "ILOAD = 1A (H-Grade, TJ > 125°C) | MAX: 0.49 | V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "Shutdown Threshold - VOUT = On to Off",
+   "column": "MIN",
+   "md_text": "| ● | 0.2 | 0.45 | V |",
+   "pdf_text": "● | MIN: 0.2 | TYP: 0.45 | MAX: (blank) | V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

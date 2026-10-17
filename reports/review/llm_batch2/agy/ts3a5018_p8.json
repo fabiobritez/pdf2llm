@@ -1,0 +1,201 @@
+{
+ "datasheet": "ts3a5018",
+ "page": 8,
+ "checked_sections": [
+  "Electrical Characteristics for 1.8-V Supply (continued)",
+  "6.9 Switching Characteristics for 3.3-V Supply",
+  "6.10 Switching Characteristics for 2.5-V Supply"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_NC(OFF), I_NO(OFF) (NC, NO OFF leakage current), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "NC, NO<br>OFF leakage<br>current",
+   "pdf_text": "V_NC or V_NO = 0.3 V, V_COM = 1.65V, or V_NC or V_NO = 1.65V, V_COM = 0.3 V, Switch OFF, see Figure 18",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_NC(OFF), I_NO(OFF) (NC, NO OFF leakage current), V+ = 0 V",
+   "column": "CONDITIONS",
+   "md_text": "",
+   "pdf_text": "V_NC or V_NO = 1.95 V to 0 V, V_COM = 0 V to 1.95 V, or V_NC or V_NO = 0 V to 1.95 V, V_COM = 1.95 V to 0 V, Switch OFF, see Figure 18",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_NC(OFF), I_NO(OFF) (NC, NO OFF leakage current), V+ = 1.95 V, MIN = –4.5, MAX = 4.5",
+   "column": "other",
+   "md_text": "",
+   "pdf_text": "Full (in T_A column)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_NC(OFF), I_NO(OFF) (NC, NO OFF leakage current), V+ = 0 V, MIN = –0.4, TYP = 0.01, MAX = 0.4",
+   "column": "other",
+   "md_text": "Full",
+   "pdf_text": "25°C (in T_A column)",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_NC(OFF), I_NO(OFF) (NC, NO OFF leakage current), V+ = 0 V, MIN = –6.5, MAX = 6.5",
+   "column": "other",
+   "md_text": "",
+   "pdf_text": "Full (in T_A column)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_COM(OFF) (COM OFF leakage current), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "COM<br>OFF leakage<br>current",
+   "pdf_text": "V_COM = 1.65 V, V_NC or V_NO = 0.3V, or V_COM = 0.3 V, V_NC or V_NO = 1.65V, Switch OFF, see Figure 18",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_COM(OFF) (COM OFF leakage current), V+ = 0 V",
+   "column": "CONDITIONS",
+   "md_text": "",
+   "pdf_text": "V_COM = 0 V to 1.95 V, V_NC or V_NO = 1.95 V to 0 V, or V_COM = 1.95 V to 0, V_NC or V_NO = 0 to 1.95 V, Switch OFF, see Figure 18",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_COM(OFF) (COM OFF leakage current), V+ = 1.95 V, MIN = –0.9, MAX = 0.9",
+   "column": "other",
+   "md_text": "",
+   "pdf_text": "Full (in T_A column)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_COM(OFF) (COM OFF leakage current), V+ = 0 V, MIN = –0.4, TYP = 0.02, MAX = 0.4",
+   "column": "other",
+   "md_text": "Full",
+   "pdf_text": "25°C (in T_A column)",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_COM(OFF) (COM OFF leakage current), V+ = 0 V, MIN = –4.5, MAX = 4.5",
+   "column": "other",
+   "md_text": "",
+   "pdf_text": "Full (in T_A column)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_NC(ON), I_NO(ON) (NC, NO ON leakage current), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "NC, NO<br>ON leakage<br>current",
+   "pdf_text": "V_NC or V_NO = 0.3 V, V_COM = Open, or V_NC or V_NO = 1.65 V, V_COM = Open, Switch ON, see Figure 19",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_COM(ON) (COM ON leakage current), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "COM<br>ON leakage<br>current",
+   "pdf_text": "V_COM = 0.3 V, V_NC or V_NO = Open, or V_COM = 1.65 V, V_NC or V_NO = Open, Switch ON, see Figure 19",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "V_IH (Input logic high), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "Input logic high",
+   "pdf_text": "V_I = V_+ or GND",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "V_IL (Input logic low), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "Input logic low",
+   "pdf_text": "(empty; 'Input logic low' belongs to PARAMETER column)",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics for 1.8-V Supply (continued)",
+   "parameter": "I_IH, I_IL (Input leakage current), V+ = 1.95 V",
+   "column": "CONDITIONS",
+   "md_text": "Input leakage<br>current",
+   "pdf_text": "V_I = V_+ or 0",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.9 Switching Characteristics for 3.3-V Supply",
+   "parameter": "t_ON (Turnon time)",
+   "column": "CONDITIONS",
+   "md_text": "Turnon time",
+   "pdf_text": "V_COM = 2 V, R_L = 300 Ω, C_L = 35 pF, see Figure 21",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.9 Switching Characteristics for 3.3-V Supply",
+   "parameter": "t_OFF (Turnoff time)",
+   "column": "CONDITIONS",
+   "md_text": "Turnoff time",
+   "pdf_text": "V_COM = 2 V, R_L = 300 Ω, C_L = 35 pF, see Figure 21",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.10 Switching Characteristics for 2.5-V Supply",
+   "parameter": "t_ON (Turnon time)",
+   "column": "CONDITIONS",
+   "md_text": "Turnon time",
+   "pdf_text": "V_COM = 1.5 V, R_L = 300 Ω, C_L = 35 pF, see Figure 21",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.10 Switching Characteristics for 2.5-V Supply",
+   "parameter": "t_OFF (Turnoff time)",
+   "column": "CONDITIONS",
+   "md_text": "Turnoff time",
+   "pdf_text": "V_COM = 1.5 V, R_L = 300 Ω, C_L = 35 pF, see Figure 21",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

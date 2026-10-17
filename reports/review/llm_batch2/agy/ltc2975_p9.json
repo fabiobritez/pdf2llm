@@ -1,0 +1,174 @@
+{
+ "datasheet": "ltc2975",
+ "page": 9,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS - EEPROM Characteristics",
+  "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+  "ELECTRICAL CHARACTERISTICS - Digital Input SHARE_CLK",
+  "ELECTRICAL CHARACTERISTICS - Digital Outputs SDA, ALERTB, SHARE_CLK, FAULTB0, FAULTB1, PWRGD",
+  "ELECTRICAL CHARACTERISTICS - Digital Inputs ASEL0, ASEL1",
+  "ELECTRICAL CHARACTERISTICS - Serial Bus Timing Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - EEPROM Characteristics",
+   "parameter": "Endurance (Notes 8, 11) | 0°C < TJ < 85°C During EEPROM Write Operations",
+   "column": "MIN",
+   "md_text": "| ● | 10,000 | | Cycles |",
+   "pdf_text": "● in dot column, MIN = 10,000, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - EEPROM Characteristics",
+   "parameter": "Retention (Notes 8, 11) | TJ < 105°C",
+   "column": "MIN",
+   "md_text": "| ● | 20 | | Years |",
+   "pdf_text": "● in dot column, MIN = 20, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+   "parameter": "VIH High Level Input Voltage | FAULTB0, FAULTB1, SDA, SCL, WDI/RESETB, WP",
+   "column": "MIN",
+   "md_text": "| ● | 2.1 | | V |",
+   "pdf_text": "● in dot column, MIN = 2.1, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+   "parameter": "VIH High Level Input Voltage | CONTROLn Only",
+   "column": "MIN",
+   "md_text": "| ● | 1.85 | | V |",
+   "pdf_text": "● in dot column, MIN = 1.85, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+   "parameter": "tFAULT_MIN Minimum Low Pulse Width for Externally Generated Faults",
+   "column": "MIN",
+   "md_text": "| | 180 | | ms |",
+   "pdf_text": "MIN = 180, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+   "parameter": "tRESETB Pulse Width to Assert Reset | VWDI/RESETB ≤ 1.5V",
+   "column": "MIN",
+   "md_text": "| ● | 300 | | μs |",
+   "pdf_text": "● in dot column, MIN = 300, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+   "parameter": "tWDI Pulse Width to Reset Watchdog Timer | VWDI/RESETB ≤ 1.5V",
+   "column": "MIN",
+   "md_text": "| ● | 0.3 | 200 | μs |",
+   "pdf_text": "● in dot column, MIN = 0.3, TYP = empty, MAX = 200",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Input SHARE_CLK",
+   "parameter": "VIH High Level Input Voltage",
+   "column": "MIN",
+   "md_text": "| ● | 1.6 | | V |",
+   "pdf_text": "● in dot column, MIN = 1.6, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Input SHARE_CLK",
+   "parameter": "fSHARE_CLK_IN Input Frequency Operating Range",
+   "column": "MIN",
+   "md_text": "| ● | 90 | 110 | kHz |",
+   "pdf_text": "● in dot column, MIN = 90, TYP = empty, MAX = 110",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Input SHARE_CLK",
+   "parameter": "tLOW Assertion Low Time | VSHARE_CLK < 0.8V",
+   "column": "MIN",
+   "md_text": "| ● | 0.825 | 1.11 | μs |",
+   "pdf_text": "● in dot column, MIN = 0.825, TYP = empty, MAX = 1.11",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Outputs SDA, ALERTB, SHARE_CLK, FAULTB0, FAULTB1, PWRGD",
+   "parameter": "fSHARE_CLK_OUT Output Frequency Operating Range | 5.49kΩ Pull-Up to VDD33",
+   "column": "MIN",
+   "md_text": "| ● | 90 | 100 110 | kHz |",
+   "pdf_text": "● in dot column, MIN = 90, TYP = 100, MAX = 110",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Outputs SDA, ALERTB, SHARE_CLK, FAULTB0, FAULTB1, PWRGD",
+   "parameter": "fSHARE_CLK_OUT Output Frequency Operating Range | 5.49kΩ Pull-Up to VDD33",
+   "column": "TYP",
+   "md_text": "| ● | 90 | 100 110 | kHz |",
+   "pdf_text": "TYP = 100, MAX = 110 (merged into MAX as '100 110' in MD)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Digital Inputs ASEL0, ASEL1",
+   "parameter": "VIH Input High Threshold Voltage",
+   "column": "MIN",
+   "md_text": "| ● | V <sub>DD33</sub> – 0.5 | | V |",
+   "pdf_text": "● in dot column, MIN = VDD33 - 0.5, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Serial Bus Timing Characteristics",
+   "parameter": "fSCL Serial Clock Frequency (Note 10)",
+   "column": "MIN",
+   "md_text": "| ● | 10 | 400 | kHz |",
+   "pdf_text": "● in dot column, MIN = 10, TYP = empty, MAX = 400",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Serial Bus Timing Characteristics",
+   "parameter": "tLOW Serial Clock Low Period (Note 10)",
+   "column": "MIN",
+   "md_text": "| ● | 1.3 | | μs |",
+   "pdf_text": "● in dot column, MIN = 1.3, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS - Serial Bus Timing Characteristics",
+   "parameter": "tHIGH Serial Clock High Period (Note 10)",
+   "column": "MIN",
+   "md_text": "| ● | 0.6 | | μs |",
+   "pdf_text": "● in dot column, MIN = 0.6, TYP = empty",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

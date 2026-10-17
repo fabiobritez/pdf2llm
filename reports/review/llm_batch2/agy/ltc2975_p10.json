@@ -1,0 +1,41 @@
+{
+ "datasheet": "ltc2975",
+ "page": 10,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS",
+  "Additional Digital Timing Characteristics",
+  "Electrical Characteristics Notes (Note 1 to Note 13)"
+ ],
+ "discrepancies": [
+  {
+   "section": "Additional Digital Timing Characteristics",
+   "parameter": "t_OFF_MIN - Minimum Off-Time for Any Channel",
+   "column": "TYP",
+   "md_text": "| t <sub>OFF_MIN</sub> | Minimum Off-Time for Any Channel |  | 100 |  | ms |",
+   "pdf_text": "100 in TYP column (MIN and MAX empty) under ELECTRICAL CHARACTERISTICS headers",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "t_TIMEOUT_BUS - Time Allowed to Complete any PMBus Command After Which Time SDA Will Be Released and Command Terminated (Mfr_config_all_longer_pmbus_timeout = 0)",
+   "column": "MIN",
+   "md_text": "| Mfr_config_all_longer_pmbus_timeout = 0 | ●   | 25  | 35  | ms    |",
+   "pdf_text": "● in dedicated bullet column; MIN column is empty",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "t_TIMEOUT_BUS - Time Allowed to Complete any PMBus Command After Which Time SDA Will Be Released and Command Terminated (Mfr_config_all_longer_pmbus_timeout = 1)",
+   "column": "MIN",
+   "md_text": "| Mfr_config_all_longer_pmbus_timeout = 1 | ●   | 200 | 280 | ms    |",
+   "pdf_text": "● in dedicated bullet column; MIN column is empty",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

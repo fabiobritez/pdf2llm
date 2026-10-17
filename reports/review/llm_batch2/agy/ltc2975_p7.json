@@ -1,0 +1,193 @@
+{
+ "datasheet": "ltc2975",
+ "page": 7,
+ "checked_sections": [
+  "Electrical Characteristics - Voltage Supervisor Characteristics",
+  "Electrical Characteristics - Current Supervisor Characteristics",
+  "Electrical Characteristics - VIN_SNS Input Characteristics",
+  "Electrical Characteristics - DAC Soft-Connect Comparator Characteristics",
+  "Electrical Characteristics - Input Current Sense Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics - Voltage Supervisor Characteristics",
+   "parameter": "V_IN_VS Input Voltage Range (Programmable), Low Resolution Mode",
+   "column": "MIN",
+   "md_text": "| ● | 0 | 6 | V |",
+   "pdf_text": "● | MIN: 0 | TYP: [empty] | MAX: 6 | UNITS: V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Voltage Supervisor Characteristics",
+   "parameter": "V_IN_VS Input Voltage Range (Programmable), High Resolution Mode",
+   "column": "MIN",
+   "md_text": "| ● | 0 | 3.8 | V |",
+   "pdf_text": "● | MIN: 0 | TYP: [empty] | MAX: 3.8 | UNITS: V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Voltage Supervisor Characteristics",
+   "parameter": "V_IN_VS Input Voltage Range (Programmable), Single-Ended Voltage: V_SENSEMn",
+   "column": "MIN",
+   "md_text": "| ● | -0.1 | 0.1 | V |",
+   "pdf_text": "● | MIN: -0.1 | TYP: [empty] | MAX: 0.1 | UNITS: V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Voltage Supervisor Characteristics",
+   "parameter": "V_IN_VS Input Voltage Range (Programmable) (all 3 rows)",
+   "column": "CONDITIONS",
+   "md_text": "V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H}",
+   "pdf_text": "V_SENSEPn - V_SENSEMn (subscript n, not H)",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Current Supervisor Characteristics",
+   "parameter": "V_IN_CS Current Sense Input Range, Single-Ended Voltage: I_SENSEPn, I_SENSEMn",
+   "column": "MIN",
+   "md_text": "| ● | -0.1 | 6 | V |",
+   "pdf_text": "● | MIN: -0.1 | TYP: [empty] | MAX: 6 | UNITS: V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Current Supervisor Characteristics",
+   "parameter": "V_IN_CS Current Sense Input Range, Differential Voltage: V_IN_CS = (I_SENSEPn - I_SENSEMn)",
+   "column": "MIN",
+   "md_text": "| ● | -170 | 170 | mV |",
+   "pdf_text": "● | MIN: -170 | TYP: [empty] | MAX: 170 | UNITS: mV",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Current Supervisor Characteristics",
+   "parameter": "V_IN_CS Current Sense Input Range (both rows)",
+   "column": "CONDITIONS",
+   "md_text": "I_{\\text{SENSEP}_H}, I_{\\text{SENSEM}_H}",
+   "pdf_text": "I_SENSEPn, I_SENSEMn (subscript n, not H)",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Current Supervisor Characteristics",
+   "parameter": "TUE_CS Total Unadjusted Error, 50mV <= |V_IN_CS| <= 170mV",
+   "column": "CONDITIONS",
+   "md_text": "$50\\text{mV} \\leq  V_{\\text{IN\\_CS}}  \\leq 170\\text{mV}$",
+   "pdf_text": "50mV ≤ |V_IN_CS| ≤ 170mV (missing absolute value bars)",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Current Supervisor Characteristics",
+   "parameter": "TUE_CS Total Unadjusted Error, |V_IN_CS| < 50mV",
+   "column": "CONDITIONS",
+   "md_text": "$ V_{\\text{IN\\_CS}}  < 50\\text{mV}$",
+   "pdf_text": "|V_IN_CS| < 50mV (missing absolute value bars)",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - VIN_SNS Input Characteristics",
+   "parameter": "V_IN_SNS Input Voltage Range, (Note 12)",
+   "column": "MIN",
+   "md_text": "| ● | 0 | 15 | V |",
+   "pdf_text": "● | MIN: 0 | TYP: [empty] | MAX: 15 | UNITS: V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - VIN_SNS Input Characteristics",
+   "parameter": "I_VIN_SNS VIN_SNS Input Current, V_VIN_SNS = 4.5V",
+   "column": "MIN",
+   "md_text": "| ● | 80 | 140 | 200 μA |",
+   "pdf_text": "● | MIN: 80 | TYP: 140 | MAX: 200 | UNITS: μA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - VIN_SNS Input Characteristics",
+   "parameter": "I_VIN_SNS VIN_SNS Input Current, V_VIN_SNS = 12V",
+   "column": "MIN",
+   "md_text": "| ● | 150 | 250 | 350 μA |",
+   "pdf_text": "● | MIN: 150 | TYP: 250 | MAX: 350 | UNITS: μA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - VIN_SNS Input Characteristics",
+   "parameter": "I_VIN_SNS VIN_SNS Input Current, V_VIN_SNS = 15V",
+   "column": "MIN",
+   "md_text": "| ● | 180 | 300 | 420 μA |",
+   "pdf_text": "● | MIN: 180 | TYP: 300 | MAX: 420 | UNITS: μA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - DAC Soft-Connect Comparator Characteristics",
+   "parameter": "V_OS_CMP Offset Voltage (all 3 rows)",
+   "column": "CONDITIONS",
+   "md_text": "$V_{\\text{DACP}_H} = 0.2\\text{V}$",
+   "pdf_text": "V_DACPn = 0.2V (subscript n, not H)",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Input Current Sense Characteristics",
+   "parameter": "V_IIN Common Mode Input Range, V_IIN_SNSP = V_IIN_SNSM (Note 12)",
+   "column": "MIN",
+   "md_text": "| ● | 4.5 | 15 | V |",
+   "pdf_text": "● | MIN: 4.5 | TYP: [empty] | MAX: 15 | UNITS: V",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Input Current Sense Characteristics",
+   "parameter": "FS_IIN Full-Scale Input Current Sense Voltage Range, High Range",
+   "column": "MIN",
+   "md_text": "| ● | -100 | 100 | mV |",
+   "pdf_text": "● | MIN: -100 | TYP: [empty] | MAX: 100 | UNITS: mV",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Input Current Sense Characteristics",
+   "parameter": "FS_IIN Full-Scale Input Current Sense Voltage Range, Medium Range",
+   "column": "MIN",
+   "md_text": "| ● | -50 | 50 | mV |",
+   "pdf_text": "● | MIN: -50 | TYP: [empty] | MAX: 50 | UNITS: mV",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics - Input Current Sense Characteristics",
+   "parameter": "FS_IIN Full-Scale Input Current Sense Voltage Range, Low Range",
+   "column": "MIN",
+   "md_text": "| ● | -20 | 20 | mV |",
+   "pdf_text": "● | MIN: -20 | TYP: [empty] | MAX: 20 | UNITS: mV",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

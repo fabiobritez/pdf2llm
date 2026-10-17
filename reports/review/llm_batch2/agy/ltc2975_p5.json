@@ -1,0 +1,231 @@
+{
+ "datasheet": "ltc2975",
+ "page": 5,
+ "checked_sections": [
+  "ORDER INFORMATION",
+  "AUTOMOTIVE PRODUCTS",
+  "ELECTRICAL CHARACTERISTICS"
+ ],
+ "discrepancies": [
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_PWR - V_PWR Supply Input Operating Range (V_DD33 Floating)",
+   "column": "MIN",
+   "md_text": "| ● | 4.5 | 15 |",
+   "pdf_text": "● in dot column, MIN = 4.5, TYP = blank, MAX = 15",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "I_PWR - V_PWR Supply Current (4.5V ≤ V_PWR ≤ 15V, V_DD33 Floating)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "● in dot column, MIN = blank",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "I_VDD33 - V_DD33 Supply Current (3.13V ≤ V_DD33 ≤ 3.47V, V_PWR = V_DD33)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "● in dot column, MIN = blank",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_UVLO_VDD33 - V_DD33 Undervoltage Lockout (V_DD33 Ramping Up, V_PWR = V_DD33)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "2.25 (shifted to TYP in md; ● belongs in dot column)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_UVLO_VDD33 - V_DD33 Undervoltage Lockout (V_DD33 Ramping Up, V_PWR = V_DD33)",
+   "column": "TYP",
+   "md_text": "2.25",
+   "pdf_text": "2.55 (shifted to MAX in md; 2.25 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_UVLO_VDD33 - V_DD33 Undervoltage Lockout (V_DD33 Ramping Up, V_PWR = V_DD33)",
+   "column": "MAX",
+   "md_text": "2.55",
+   "pdf_text": "2.8 (missing in md; 2.55 is TYP)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Supply Input Operating Range (V_PWR = V_DD33)",
+   "column": "MIN",
+   "md_text": "| ● | 3.13 | 3.47 |",
+   "pdf_text": "● in dot column, MIN = 3.13, TYP = blank, MAX = 3.47",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Regulator Output Voltage (4.5V ≤ V_PWR ≤ 15V)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "3.13 (shifted to TYP in md; ● belongs in dot column)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Regulator Output Voltage (4.5V ≤ V_PWR ≤ 15V)",
+   "column": "TYP",
+   "md_text": "3.13",
+   "pdf_text": "3.26 (shifted to MAX in md; 3.13 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Regulator Output Voltage (4.5V ≤ V_PWR ≤ 15V)",
+   "column": "MAX",
+   "md_text": "3.26",
+   "pdf_text": "3.47 (missing in md; 3.26 is TYP)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Regulator Output Short-Circuit Current (V_PWR = 4.5V, V_DD33 = 0V)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "50 (shifted to TYP in md; ● belongs in dot column)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Regulator Output Short-Circuit Current (V_PWR = 4.5V, V_DD33 = 0V)",
+   "column": "TYP",
+   "md_text": "50",
+   "pdf_text": "90 (shifted to MAX in md; 50 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD33 - Regulator Output Short-Circuit Current (V_PWR = 4.5V, V_DD33 = 0V)",
+   "column": "MAX",
+   "md_text": "90",
+   "pdf_text": "140 (missing in md; 90 is TYP)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD25 - Regulator Output Voltage (3.13V ≤ V_DD33 ≤ 3.47V)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "2.35 (shifted to TYP in md; ● belongs in dot column)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD25 - Regulator Output Voltage (3.13V ≤ V_DD33 ≤ 3.47V)",
+   "column": "TYP",
+   "md_text": "2.35",
+   "pdf_text": "2.5 (shifted to MAX in md; 2.35 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD25 - Regulator Output Voltage (3.13V ≤ V_DD33 ≤ 3.47V)",
+   "column": "MAX",
+   "md_text": "2.5",
+   "pdf_text": "2.6 (missing in md; 2.5 is TYP)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD25 - Regulator Output Short-Circuit Current (V_PWR = V_DD33 = 3.47V, V_DD25 = 0V)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "30 (shifted to TYP in md; ● belongs in dot column)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD25 - Regulator Output Short-Circuit Current (V_PWR = V_DD33 = 3.47V, V_DD25 = 0V)",
+   "column": "TYP",
+   "md_text": "30",
+   "pdf_text": "55 (shifted to MAX in md; 30 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_DD25 - Regulator Output Short-Circuit Current (V_PWR = V_DD33 = 3.47V, V_DD25 = 0V)",
+   "column": "MAX",
+   "md_text": "55",
+   "pdf_text": "80 (missing in md; 55 is TYP)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_REF - Output Voltage (Note 3) (V_REF = V_REFP – V_REFM, 0 < I_REFP < 100µA)",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "1.220 (shifted to TYP in md; ● belongs in dot column)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_REF - Output Voltage (Note 3) (V_REF = V_REFP – V_REFM, 0 < I_REFP < 100µA)",
+   "column": "TYP",
+   "md_text": "1.220",
+   "pdf_text": "1.232 (shifted to MAX in md; 1.220 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "V_REF - Output Voltage (Note 3) (V_REF = V_REFP – V_REFM, 0 < I_REFP < 100µA)",
+   "column": "MAX",
+   "md_text": "1.232",
+   "pdf_text": "1.244 (missing in md; 1.232 is TYP)",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

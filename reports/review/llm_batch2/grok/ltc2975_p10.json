@@ -1,0 +1,41 @@
+{
+ "datasheet": "ltc2975",
+ "page": 10,
+ "checked_sections": [
+  "Electrical Characteristics",
+  "Additional Digital Timing Characteristics",
+  "Notes 1-13"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "t_TIMEOUT_BUS, Time Allowed to Complete any PMBus Command After Which Time SDA Will Be Released and Command Terminated; Mfr_config_all_longer_pmbus_timeout = 0",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "(blank); ● is only the full-temperature-range marker in the gutter left of MIN. TYP=25, MAX=35, UNIT=ms",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "t_TIMEOUT_BUS, Time Allowed to Complete any PMBus Command After Which Time SDA Will Be Released and Command Terminated; Mfr_config_all_longer_pmbus_timeout = 1",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "(blank); ● is only the full-temperature-range marker in the gutter left of MIN. TYP=200, MAX=280, UNIT=ms",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Notes",
+   "parameter": "Note 10, SCL/SDA external pull-up voltage symbol",
+   "column": "other",
+   "md_text": "V_I0",
+   "pdf_text": "V_IO",
+   "type": "wrong_value",
+   "severity": "medium",
+   "confidence": "medium"
+  }
+ ]
+}

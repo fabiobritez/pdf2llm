@@ -1,0 +1,182 @@
+{
+ "datasheet": "ltc2975",
+ "page": 6,
+ "checked_sections": [
+  "Electrical Characteristics",
+  "ADC Characteristics",
+  "Sense Input Current Characteristics",
+  "DAC Output Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VIN_ADC Voltage Sense Input Range, Differential Voltage: VIN_ADC=(VSENSEPn−VSENSEMn)",
+   "column": "TYP",
+   "md_text": "0",
+   "pdf_text": "TYP blank; 0 is MIN (MAX 6)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VIN_ADC Voltage Sense Input Range, Single-Ended Voltage: VSENSEMn",
+   "column": "TYP",
+   "md_text": "-0.1",
+   "pdf_text": "TYP blank; -0.1 is MIN (MAX 0.1)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VIN_ADC Current Sense Input Range, Single-Ended Voltage: ISENSEPn, ISENSEMn",
+   "column": "TYP",
+   "md_text": "-0.1",
+   "pdf_text": "TYP blank; -0.1 is MIN (MAX 6)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VIN_ADC Current Sense Input Range, Differential Current Sense Voltage: VIN_ADC=(ISENSEPn−ISENSEMn)",
+   "column": "TYP",
+   "md_text": "-170",
+   "pdf_text": "TYP blank; -170 is MIN (MAX 170)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "TUE_ADC_CURR_SNS Total Unadjusted Error (Note 3)",
+   "column": "other",
+   "md_text": "TUE_ADCCurr_SNS",
+   "pdf_text": "TUE_ADC_CURR_SNS",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "TUE_ADC_CURR_SNS Total Unadjusted Error, Current Sense Inputs 20mV to 170mV",
+   "column": "CONDITIONS",
+   "md_text": "20mV ≤  V <sub>IN_ADC</sub>   ≤ 170mV",
+   "pdf_text": "20mV ≤ |VIN_ADC| ≤ 170mV",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "TUE_ADC_CURR_SNS Total Unadjusted Error, Current Sense Inputs ≤ 20mV",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>IN_ADC</sub>   ≤ 20mV",
+   "pdf_text": "|VIN_ADC| ≤ 20mV",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "IIN_ISENSE Input Current",
+   "column": "other",
+   "md_text": "I <sub>INISENSE</sub>",
+   "pdf_text": "IIN_ISENSE (subscript IN_ISENSE)",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "IIN_ISENSE Differential Input Current, ISENSEPn and ISENSEMn Inputs",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>IN_DIFF</sub>   = 170mV",
+   "pdf_text": "|VIN_DIFF| = 170mV",
+   "type": "wrong_value",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VFS_VDAC Full-Scale Output Voltage, DAC Code=0x3FF, Buffer Gain Setting_0",
+   "column": "TYP",
+   "md_text": "1.3",
+   "pdf_text": "1.38 (1.3 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VFS_VDAC Full-Scale Output Voltage, DAC Code=0x3FF, Buffer Gain Setting_0",
+   "column": "MAX",
+   "md_text": "1.38",
+   "pdf_text": "1.44 (1.38 is TYP)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VFS_VDAC Full-Scale Output Voltage, DAC Code=0x3FF, Buffer Gain Setting_0",
+   "column": "UNIT",
+   "md_text": "1.44 V",
+   "pdf_text": "V (1.44 is MAX)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VFS_VDAC Full-Scale Output Voltage, DAC Polarity=1, Buffer Gain Setting_1",
+   "column": "TYP",
+   "md_text": "2.5",
+   "pdf_text": "2.65 (2.5 is MIN)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VFS_VDAC Full-Scale Output Voltage, DAC Polarity=1, Buffer Gain Setting_1",
+   "column": "MAX",
+   "md_text": "2.65",
+   "pdf_text": "2.77 (2.65 is TYP)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VFS_VDAC Full-Scale Output Voltage, DAC Polarity=1, Buffer Gain Setting_1",
+   "column": "UNIT",
+   "md_text": "2.77 V",
+   "pdf_text": "V (2.77 is MAX)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDAC Short-Circuit Current Low, VDACn Shorted to GND",
+   "column": "TYP",
+   "md_text": "-12",
+   "pdf_text": "TYP blank; -12 is MIN (MAX -4)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDAC Short-Circuit Current High, VDACn Shorted to VDD33",
+   "column": "TYP",
+   "md_text": "4",
+   "pdf_text": "TYP blank; 4 is MIN (MAX 12)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

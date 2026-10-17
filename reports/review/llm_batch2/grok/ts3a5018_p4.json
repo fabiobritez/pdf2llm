@@ -1,0 +1,172 @@
+{
+ "datasheet": "ts3a5018",
+ "page": 4,
+ "checked_sections": [
+  "6.1 Absolute Maximum Ratings",
+  "6.2 ESD Ratings",
+  "6.3 Recommended Operating Conditions",
+  "6.4 Thermal Information"
+ ],
+ "discrepancies": [
+  {
+   "section": "6.1 Absolute Maximum Ratings",
+   "parameter": "I_K Analog port diode current (V_NC, V_NO, V_COM < 0)",
+   "column": "MIN",
+   "md_text": "V <sub>NC</sub> , V <sub>NO</sub> , V <sub>COM</sub> < 0",
+   "pdf_text": "-50",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.1 Absolute Maximum Ratings",
+   "parameter": "I_K Analog port diode current (V_NC, V_NO, V_COM < 0)",
+   "column": "UNIT",
+   "md_text": "-50 mA",
+   "pdf_text": "mA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.1 Absolute Maximum Ratings",
+   "parameter": "I_NC, I_NO, I_COM ON-state switch current",
+   "column": "CONDITIONS",
+   "md_text": "",
+   "pdf_text": "V_NC, V_NO, V_COM = 0 to 7 V",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.1 Absolute Maximum Ratings",
+   "parameter": "I_IK Digital input clamp current (V_I < 0)",
+   "column": "MIN",
+   "md_text": "V <sub>I</sub> < 0",
+   "pdf_text": "-50",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.1 Absolute Maximum Ratings",
+   "parameter": "I_IK Digital input clamp current (V_I < 0)",
+   "column": "UNIT",
+   "md_text": "-50 mA",
+   "pdf_text": "mA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.2 ESD Ratings",
+   "parameter": "V(ESD) Electrostatic discharge, Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 — VALUE column",
+   "column": "other",
+   "md_text": "Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup>",
+   "pdf_text": "±2000",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.2 ESD Ratings",
+   "parameter": "V(ESD) Electrostatic discharge, Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001",
+   "column": "UNIT",
+   "md_text": "±2000",
+   "pdf_text": "V",
+   "type": "wrong_unit",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.2 ESD Ratings",
+   "parameter": "V(ESD) Electrostatic discharge, Charged-device model (CDM), per JEDEC specification JESD22-C101 — VALUE column",
+   "column": "other",
+   "md_text": "Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup>",
+   "pdf_text": "±1000",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.2 ESD Ratings",
+   "parameter": "V(ESD) Electrostatic discharge, Charged-device model (CDM), per JEDEC specification JESD22-C101",
+   "column": "UNIT",
+   "md_text": "±1000",
+   "pdf_text": "V",
+   "type": "wrong_unit",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance, D (SOIC) 16 PINS (value row is shifted one column right; description occupies the D column)",
+   "column": "other",
+   "md_text": "Junction-to-ambient thermal resistance",
+   "pdf_text": "73",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance, DBQ (SSOP) 16 PINS (value row shifted one column right)",
+   "column": "other",
+   "md_text": "73",
+   "pdf_text": "90",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance, DGV (TVSOP) 16 PINS (value row shifted one column right)",
+   "column": "other",
+   "md_text": "90",
+   "pdf_text": "120",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance, PW (TSSOP) 16 PINS (value row shifted one column right)",
+   "column": "other",
+   "md_text": "120",
+   "pdf_text": "108",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance, RGY (VQFN) 16 PINS (value row shifted one column right)",
+   "column": "other",
+   "md_text": "108",
+   "pdf_text": "51",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance, RSV (UQFN) 16 PINS (value row shifted one column right)",
+   "column": "other",
+   "md_text": "51",
+   "pdf_text": "184",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.4 Thermal Information",
+   "parameter": "RθJA Junction-to-ambient thermal resistance",
+   "column": "UNIT",
+   "md_text": "184 °C/W",
+   "pdf_text": "°C/W",
+   "type": "wrong_unit",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

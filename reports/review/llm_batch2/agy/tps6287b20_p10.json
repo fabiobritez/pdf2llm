@@ -1,0 +1,209 @@
+{
+ "datasheet": "tps6287b20",
+ "page": 10,
+ "checked_sections": [
+  "6.5 Electrical Characteristics (continued)"
+ ],
+ "discrepancies": [
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "f_SSC - Modulation frequency",
+   "column": "TYP",
+   "md_text": "| $f_{SW}/2048$ | | |",
+   "pdf_text": "MIN: (empty), TYP: fsw/2048, MAX: (empty)",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "Δf_SW - Switching frequency variation during spread spectrum operation",
+   "column": "MAX",
+   "md_text": "| $f_{SW}-10\\%$ | $f_{SW}+10\\%$ | |",
+   "pdf_text": "MIN: f_SW-10%, TYP: (empty), MAX: f_SW+10%",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "gm - Transconductance of OTA on COMP pin",
+   "column": "TYP",
+   "md_text": "| 1.5 | | |",
+   "pdf_text": "MIN: (empty), TYP: 1.5, MAX: (empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "R_DS(ON) - High-side FET static on-resistance (V_IN = 3.3 V)",
+   "column": "TYP",
+   "md_text": "| 3.4 | | |",
+   "pdf_text": "MIN: (empty), TYP: 3.4, MAX: 6.4",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "R_DS(ON) - High-side FET static on-resistance (V_IN = 3.3 V)",
+   "column": "MAX",
+   "md_text": "",
+   "pdf_text": "6.4",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "R_DS(ON) - Low-side FET static on-resistance (V_IN = 3.3 V)",
+   "column": "TYP",
+   "md_text": "| 1.9 | | |",
+   "pdf_text": "MIN: (empty), TYP: 1.9, MAX: 3.6",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "R_DS(ON) - Low-side FET static on-resistance (V_IN = 3.3 V)",
+   "column": "MAX",
+   "md_text": "",
+   "pdf_text": "3.6",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "I_(SW)(off) - SW pin current when HS-FET and LS-FET are off (V_IN = 6 V; V_(SW) = 0 V, T_J = 25 °C)",
+   "column": "MAX",
+   "md_text": "| -1.5 | 0.1 | |",
+   "pdf_text": "MIN: -1.5, TYP: (empty), MAX: 0.1",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "I_(SW)(off) - SW pin current when HS-FET and LS-FET are off (V_IN = 6 V; V_(SW) = 6 V, T_J = 25 °C)",
+   "column": "MAX",
+   "md_text": "| 60 | 130 | |",
+   "pdf_text": "MIN: 60, TYP: (empty), MAX: 130",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "I_(SW)(off) - SW pin current when HS-FET and LS-FET are off (V_(SW) = 0.4 V, current into SW pin)",
+   "column": "TYP",
+   "md_text": "| 11 | | |",
+   "pdf_text": "MIN: (empty), TYP: 11, MAX: 3000",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "I_(SW)(off) - SW pin current when HS-FET and LS-FET are off (V_(SW) = 0.4 V, current into SW pin)",
+   "column": "MAX",
+   "md_text": "",
+   "pdf_text": "3000",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "ILIM - Low-side FET negative current limit, DC",
+   "column": "TYP",
+   "md_text": "| -10 | | |",
+   "pdf_text": "MIN: (empty), TYP: -10, MAX: (empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "t_on, min - Minimum on-time of HS FET (V_IN = 3.3 V)",
+   "column": "TYP",
+   "md_text": "| 45 | | |",
+   "pdf_text": "MIN: (empty), TYP: 45, MAX: 53",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "t_on, min - Minimum on-time of HS FET (V_IN = 3.3 V)",
+   "column": "MAX",
+   "md_text": "",
+   "pdf_text": "53",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "t_on, min - Minimum on-time of HS FET (V_IN = 5 V)",
+   "column": "TYP",
+   "md_text": "| 35 | | |",
+   "pdf_text": "MIN: (empty), TYP: 35, MAX: 44",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "t_on, min - Minimum on-time of HS FET (V_IN = 5 V)",
+   "column": "MAX",
+   "md_text": "",
+   "pdf_text": "44",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "t_off, min - Minimum off-time of HS FET (V_IN = 5 V)",
+   "column": "TYP",
+   "md_text": "| 70 | | |",
+   "pdf_text": "MIN: (empty), TYP: 70, MAX: 100",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "t_off, min - Minimum off-time of HS FET (V_IN = 5 V)",
+   "column": "MAX",
+   "md_text": "",
+   "pdf_text": "100",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "Maximum duty cycle of power stage (DC operation for TPS6287B25 only, T_J = 125 °C)",
+   "column": "TYP",
+   "md_text": "| 40 | | |",
+   "pdf_text": "MIN: (empty), TYP: 40, MAX: (empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics (continued)",
+   "parameter": "Maximum duty cycle of power stage (DC operation for TPS6287B30 only, T_J = 125 °C)",
+   "column": "TYP",
+   "md_text": "| 25 | | |",
+   "pdf_text": "MIN: (empty), TYP: 25, MAX: (empty)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

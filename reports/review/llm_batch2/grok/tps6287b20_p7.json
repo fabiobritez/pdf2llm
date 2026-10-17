@@ -1,0 +1,111 @@
+{
+ "datasheet": "tps6287b20",
+ "page": 7,
+ "checked_sections": [
+  "6.3 Recommended Operating Conditions",
+  "6.4 Thermal Information",
+  "6.5 Electrical Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_Q Quiescent current; EN = High, I_OUT = 0 mA, device not switching; MODE = Low",
+   "column": "CONDITIONS",
+   "md_text": "Quiescent current",
+   "pdf_text": "EN = High, I_OUT = 0 mA, device not switching; MODE = Low",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_Q Quiescent current; EN = High, I_OUT = 0 mA, device not switching; MODE = Low",
+   "column": "MIN",
+   "md_text": "EN = High, $I_{OUT} = 0\\text{ mA}$ , device not switching; MODE = Low",
+   "pdf_text": "",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_Q Quiescent current; EN = High, I_OUT = 0 mA, device not switching; MODE = Low",
+   "column": "TYP",
+   "md_text": "",
+   "pdf_text": "2.1",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_Q Quiescent current; EN = High, I_OUT = 0 mA, device not switching; MODE = Low",
+   "column": "MAX",
+   "md_text": "2.1",
+   "pdf_text": "4.6",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_Q Quiescent current; EN = High, I_OUT = 0 mA, device not switching; MODE = Low",
+   "column": "UNIT",
+   "md_text": "4.6 mA",
+   "pdf_text": "mA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_SD Shutdown current; EN = Low, V(SW) = 0 V, max value at T_J = 125 °C",
+   "column": "CONDITIONS",
+   "md_text": "Shutdown current",
+   "pdf_text": "EN = Low, V(SW) = 0 V, max value at T_J = 125 °C",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_SD Shutdown current; EN = Low, V(SW) = 0 V, max value at T_J = 125 °C",
+   "column": "MIN",
+   "md_text": "EN = Low, $V_{(SW)} = 0\\text{ V}$ , max value at $T_J = 125\\text{ °C}$",
+   "pdf_text": "",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_SD Shutdown current; EN = Low, V(SW) = 0 V, max value at T_J = 125 °C",
+   "column": "TYP",
+   "md_text": "",
+   "pdf_text": "18",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_SD Shutdown current; EN = Low, V(SW) = 0 V, max value at T_J = 125 °C",
+   "column": "MAX",
+   "md_text": "18",
+   "pdf_text": "450",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "6.5 Electrical Characteristics",
+   "parameter": "I_SD Shutdown current; EN = Low, V(SW) = 0 V, max value at T_J = 125 °C",
+   "column": "UNIT",
+   "md_text": "450 µA",
+   "pdf_text": "µA",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}

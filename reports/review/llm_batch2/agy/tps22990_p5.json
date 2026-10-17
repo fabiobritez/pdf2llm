@@ -1,0 +1,70 @@
+{
+ "datasheet": "tps22990",
+ "page": 5,
+ "checked_sections": [
+  "7.4 Thermal Information",
+  "7.5 Electrical Characteristics—VBIAS = 5 V"
+ ],
+ "discrepancies": [
+  {
+   "section": "7.5 Electrical Characteristics—VBIAS = 5 V",
+   "parameter": "ISD, VIN (VIN shutdown current), VON = 0 V, VOUT = 0 V, VIN = 5 V",
+   "column": "MIN",
+   "md_text": "| V <sub>IN</sub> = 5 V | –40°C to +85°C | 0.004 | 4 | μA | (and –40°C to +105°C in MIN column on next row)",
+   "pdf_text": "VIN = 5 V in TEST CONDITIONS column; –40°C to +85°C and –40°C to +105°C in TA column; MIN column blank",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "7.5 Electrical Characteristics—VBIAS = 5 V",
+   "parameter": "ISD, VIN (VIN shutdown current), VON = 0 V, VOUT = 0 V, VIN = 3.3 V",
+   "column": "MIN",
+   "md_text": "| V <sub>IN</sub> = 3.3 V | –40°C to +85°C | 0.003 | 3 | (and –40°C to +105°C in MIN column on next row)",
+   "pdf_text": "VIN = 3.3 V in TEST CONDITIONS column; –40°C to +85°C and –40°C to +105°C in TA column; MIN column blank",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "7.5 Electrical Characteristics—VBIAS = 5 V",
+   "parameter": "ISD, VIN (VIN shutdown current), VON = 0 V, VOUT = 0 V, VIN = 2.5 V",
+   "column": "MIN",
+   "md_text": "| V <sub>IN</sub> = 2.5 V | –40°C to +85°C | 0.002 | 2 | (and –40°C to +105°C in MIN column on next row)",
+   "pdf_text": "VIN = 2.5 V in TEST CONDITIONS column; –40°C to +85°C and –40°C to +105°C in TA column; MIN column blank",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "7.5 Electrical Characteristics—VBIAS = 5 V",
+   "parameter": "ISD, VIN (VIN shutdown current), VON = 0 V, VOUT = 0 V, VIN = 1.8 V",
+   "column": "MIN",
+   "md_text": "| V <sub>IN</sub> = 1.8 V | –40°C to +85°C | 0.002 | 2 | (and –40°C to +105°C in MIN column on next row)",
+   "pdf_text": "VIN = 1.8 V in TEST CONDITIONS column; –40°C to +85°C and –40°C to +105°C in TA column; MIN column blank",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "7.5 Electrical Characteristics—VBIAS = 5 V",
+   "parameter": "ISD, VIN (VIN shutdown current), VON = 0 V, VOUT = 0 V, VIN = 1.05 V",
+   "column": "MIN",
+   "md_text": "| V <sub>IN</sub> = 1.05 V | –40°C to +85°C | 0.001 | 1 | (and –40°C to +105°C in MIN column on next row)",
+   "pdf_text": "VIN = 1.05 V in TEST CONDITIONS column; –40°C to +85°C and –40°C to +105°C in TA column; MIN column blank",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  },
+  {
+   "section": "7.5 Electrical Characteristics—VBIAS = 5 V",
+   "parameter": "ISD, VIN (VIN shutdown current), VON = 0 V, VOUT = 0 V, VIN = 0.6 V",
+   "column": "MIN",
+   "md_text": "| V <sub>IN</sub> = 0.6 V | –40°C to +85°C | 0.001 | 1 | (and –40°C to +105°C in MIN column on next row)",
+   "pdf_text": "VIN = 0.6 V in TEST CONDITIONS column; –40°C to +85°C and –40°C to +105°C in TA column; MIN column blank",
+   "type": "wrong_column",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

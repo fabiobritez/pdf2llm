@@ -1,0 +1,10 @@
+{
+ "datasheet": "sn74avc4t774",
+ "page": 6,
+ "checked_sections": [
+  "5.1 Absolute Maximum Ratings",
+  "5.2 ESD Ratings",
+  "5.3 Recommended Operating Conditions"
+ ],
+ "discrepancies": []
+}

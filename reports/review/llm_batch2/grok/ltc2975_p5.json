@@ -1,0 +1,230 @@
+{
+ "datasheet": "ltc2975",
+ "page": 5,
+ "checked_sections": [
+  "Order Information",
+  "Electrical Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VPWR Supply Input Operating Range, VDD33 Floating",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "4.5",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VPWR Supply Input Operating Range, VDD33 Floating",
+   "column": "TYP",
+   "md_text": "4.5",
+   "pdf_text": "(blank)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Supply Input Operating Range, VPWR = VDD33",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "3.13",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Supply Input Operating Range, VPWR = VDD33",
+   "column": "TYP",
+   "md_text": "3.13",
+   "pdf_text": "(blank)",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VUVLO_VDD33 VDD33 Undervoltage Lockout, VDD33 Ramping Up, VPWR = VDD33",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "2.25",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VUVLO_VDD33 VDD33 Undervoltage Lockout, VDD33 Ramping Up, VPWR = VDD33",
+   "column": "TYP",
+   "md_text": "2.25",
+   "pdf_text": "2.55",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VUVLO_VDD33 VDD33 Undervoltage Lockout, VDD33 Ramping Up, VPWR = VDD33",
+   "column": "MAX",
+   "md_text": "2.55",
+   "pdf_text": "2.8",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Regulator Output Voltage, 4.5V ≤ VPWR ≤ 15V",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "3.13",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Regulator Output Voltage, 4.5V ≤ VPWR ≤ 15V",
+   "column": "TYP",
+   "md_text": "3.13",
+   "pdf_text": "3.26",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Regulator Output Voltage, 4.5V ≤ VPWR ≤ 15V",
+   "column": "MAX",
+   "md_text": "3.26",
+   "pdf_text": "3.47",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Regulator Output Short-Circuit Current, VPWR = 4.5V, VDD33 = 0V",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "50",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Regulator Output Short-Circuit Current, VPWR = 4.5V, VDD33 = 0V",
+   "column": "TYP",
+   "md_text": "50",
+   "pdf_text": "90",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD33 Regulator Output Short-Circuit Current, VPWR = 4.5V, VDD33 = 0V",
+   "column": "MAX",
+   "md_text": "90",
+   "pdf_text": "140",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD25 Regulator Output Voltage, 3.13V ≤ VDD33 ≤ 3.47V",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "2.35",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD25 Regulator Output Voltage, 3.13V ≤ VDD33 ≤ 3.47V",
+   "column": "TYP",
+   "md_text": "2.35",
+   "pdf_text": "2.5",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD25 Regulator Output Voltage, 3.13V ≤ VDD33 ≤ 3.47V",
+   "column": "MAX",
+   "md_text": "2.5",
+   "pdf_text": "2.6",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD25 Regulator Output Short-Circuit Current, VPWR = VDD33 = 3.47V, VDD25 = 0V",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "30",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD25 Regulator Output Short-Circuit Current, VPWR = VDD33 = 3.47V, VDD25 = 0V",
+   "column": "TYP",
+   "md_text": "30",
+   "pdf_text": "55",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VDD25 Regulator Output Short-Circuit Current, VPWR = VDD33 = 3.47V, VDD25 = 0V",
+   "column": "MAX",
+   "md_text": "55",
+   "pdf_text": "80",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VREF Output Voltage (Note 3), VREF = VREFP − VREFM, 0 < IREFP < 100μA",
+   "column": "MIN",
+   "md_text": "●",
+   "pdf_text": "1.220",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VREF Output Voltage (Note 3), VREF = VREFP − VREFM, 0 < IREFP < 100μA",
+   "column": "TYP",
+   "md_text": "1.220",
+   "pdf_text": "1.232",
+   "type": "wrong_column",
+   "severity": "high",
+   "confidence": "high"
+  },
+  {
+   "section": "Electrical Characteristics",
+   "parameter": "VREF Output Voltage (Note 3), VREF = VREFP − VREFM, 0 < IREFP < 100μA",
+   "column": "MAX",
+   "md_text": "1.232",
+   "pdf_text": "1.244",
+   "type": "missing",
+   "severity": "high",
+   "confidence": "high"
+  }
+ ]
+}
