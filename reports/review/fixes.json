@@ -1413,5 +1413,213 @@
       "validator-heuristic"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p6-abs-bars-L309",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| TUE_ADCCurr_SNS                                      | Total Unadjusted Error (Note 3)          | Current Sense Inputs 20mV ≤  V <sub>IN_ADC</sub>   ≤ 170mV                                                                          | ●   |      | ±0.3  | % of Reading |",
+    "new": "| TUE_ADCCurr_SNS                                      | Total Unadjusted Error (Note 3)          | Current Sense Inputs 20mV ≤ \\|V <sub>IN_ADC</sub>\\| ≤ 170mV                                                                          | ●   |      | ±0.3  | % of Reading |",
+    "evidence": "pdftotext p6: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p6-abs-bars-L310",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      |                                          | Current Sense Inputs  V <sub>IN_ADC</sub>   ≤ 20mV                                                                                  | ●   |      | ±60   | µV           |",
+    "new": "|                                                      |                                          | Current Sense Inputs \\|V <sub>IN_ADC</sub>\\| ≤ 20mV                                                                                  | ●   |      | ±60   | µV           |",
+    "evidence": "pdftotext p6: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p6-abs-bars-L322",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      | Differential Input Current               | I <sub>SENSEP<sub>n</sub></sub> and I <sub>SENSEM<sub>n</sub></sub> Inputs,  V <sub>IN_DIFF</sub>   = 170mV                         | ●   |      | ±5    | µA           |",
+    "new": "|                                                      | Differential Input Current               | I <sub>SENSEP<sub>n</sub></sub> and I <sub>SENSEM<sub>n</sub></sub> Inputs, \\|V <sub>IN_DIFF</sub>\\| = 170mV                         | ●   |      | ±5    | µA           |",
+    "evidence": "pdftotext p6: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p7-abs-bars-L359",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $TUE_{\\text{CS}}$                                            | Total Unadjusted Error                                                      | $50\\text{mV} \\leq  V_{\\text{IN\\_CS}}  \\leq 170\\text{mV}$                                                                                 | ●   |       | ±3    | % of Reading |",
+    "new": "| $TUE_{\\text{CS}}$                                            | Total Unadjusted Error                                                      | $50\\text{mV} \\leq \\lvert V_{\\text{IN\\_CS}} \\rvert \\leq 170\\text{mV}$                                                                                 | ●   |       | ±3    | % of Reading |",
+    "evidence": "pdftotext p7: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p7-abs-bars-L360",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | $ V_{\\text{IN\\_CS}}  < 50\\text{mV}$                                                                                                      | ●   |       | ±1.5  | mV           |",
+    "new": "|                                                              |                                                                             | $\\lvert V_{\\text{IN\\_CS}} \\rvert < 50\\text{mV}$                                                                                                      | ●   |       | ±1.5  | mV           |",
+    "evidence": "pdftotext p7: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L390",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "| TUE_IIN               | Total Unadjusted Error | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 100mV, High Range ●                                                                 |     |     | ±0.6  | % of Reading |",
+    "new": "| TUE_IIN               | Total Unadjusted Error | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 100mV, High Range ●                                                                 |     |     | ±0.6  | % of Reading |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L391",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 50mV, Medium Range ●                                                                |     |     | ±0.65 | % of Reading |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 50mV, Medium Range ●                                                                |     |     | ±0.65 | % of Reading |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L392",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 20mV, Low Range ●                                                                   |     |     | ±0.75 | % of Reading |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 20mV, Low Range ●                                                                   |     |     | ±0.75 | % of Reading |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L393",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 20mV, High Range ●                                                                  |     |     | ±1    | % of Reading |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 20mV, High Range ●                                                                  |     |     | ±1    | % of Reading |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L394",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 15mV, Medium Range ●                                                                |     |     | ±1    | % of Reading |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 15mV, Medium Range ●                                                                |     |     | ±1    | % of Reading |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L395",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 10mV, Low Range ●                                                                   |     |     | ±1    | % of Reading |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 10mV, Low Range ●                                                                   |     |     | ±1    | % of Reading |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L396",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 0mV, High Range ●                                                                   |     |     | ±100  | μV           |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 0mV, High Range ●                                                                   |     |     | ±100  | μV           |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L397",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 0mV, Medium Range ●                                                                 |     |     | ±75   | μV           |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 0mV, Medium Range ●                                                                 |     |     | ±75   | μV           |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L398",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 0mV, Low Range ●                                                                    |     |     | ±50   | μV           |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 0mV, Low Range ●                                                                    |     |     | ±50   | μV           |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L399",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                       |                        | V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 0mV, Low Range BGA Only ●                                                           |     |     | ±65   | μV           |",
+    "new": "|                       |                        | \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 0mV, Low Range BGA Only ●                                                           |     |     | ±65   | μV           |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-abs-bars-L400",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "| CMRR_IIN              | DC CMRR                | 4.5V ≤ V <sub>IIN_SNSP</sub> = V <sub>IIN_SNS</sub> ≤ 15V<br> V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>   = 100mV<br>High Range ● | 85  |     |       | dB           |",
+    "new": "| CMRR_IIN              | DC CMRR                | 4.5V ≤ V <sub>IIN_SNSP</sub> = V <sub>IIN_SNS</sub> ≤ 15V<br> \\|V <sub>IIN_SNSP</sub> - V <sub>IIN_SNSM</sub>\\| = 100mV<br>High Range ● | 85  |     |       | dB           |",
+    "evidence": "pdftotext p8: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "medium"
   }
 ]
