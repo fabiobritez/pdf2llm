@@ -60,13 +60,13 @@ The I<sup>2</sup>C compatible interface offers several control, monitoring and w
 - (2) The package size (length × width) is a nominal value and includes pins, where applicable.
 - (3) See the [Device Options](#) tables.
 
-![Simplified Schematic diagram of the TPS6287Bxx converter. The diagram shows the input section with VIN (2.7V to 6V), VIN pin, and a soft-start network with R_EN and C_IN. The converter core includes MODE/SYNC, EN, VOSNS, GOSNS, SDA, SCL, VSET1, VSET2, COMP, PG, SYNC_OUT, AGND, and GND pins. The output section features a power switch (SW), an inductor (L), an output capacitor (COUT), and a load. A remote sense network with R_Z, C_C, and C_C2 is connected to the COMP pin. A power-good output (PG) is shown with a resistor R_PG and a capacitor C_PG to ground.](4d4c0d9569f139f1b68b2c2549c9a299_img.jpg)
+![Simplified Schematic diagram of the TPS6287Bxx converter. The diagram shows the input section with VIN (2.7V to 6V), VIN pin, and a soft-start network with R_EN and C_IN. The converter core includes MODE/SYNC, EN, VOSNS, GOSNS, SDA, SCL, VSET1, VSET2, COMP, PG, SYNC_OUT, AGND, and GND pins. The output section features a power switch (SW), an inductor (L), an output capacitor (COUT), and a load. A remote sense network with R_Z, C_C, and C_C2 is connected to the COMP pin. A power-good output (PG) is shown with a resistor R_PG and a capacitor C_PG to ground.](img/4d4c0d9569f139f1b68b2c2549c9a299_img.jpg)
 
 Simplified Schematic diagram of the TPS6287Bxx converter. The diagram shows the input section with VIN (2.7V to 6V), VIN pin, and a soft-start network with R\_EN and C\_IN. The converter core includes MODE/SYNC, EN, VOSNS, GOSNS, SDA, SCL, VSET1, VSET2, COMP, PG, SYNC\_OUT, AGND, and GND pins. The output section features a power switch (SW), an inductor (L), an output capacitor (COUT), and a load. A remote sense network with R\_Z, C\_C, and C\_C2 is connected to the COMP pin. A power-good output (PG) is shown with a resistor R\_PG and a capacitor C\_PG to ground.
 
 **Simplified Schematic**
 
-![Important Notice icon](b72097706f118df28125d1deb6b88d3e_img.jpg)
+![Important Notice icon](img/b72097706f118df28125d1deb6b88d3e_img.jpg)
 
 Important Notice icon
 
@@ -140,7 +140,7 @@ Unless otherwise noted, device variants without I<sup>2</sup>C operate with the 
 
 ## 5 Pin Configuration and Functions
 
-![Figure 5-1. RZV Package 24 Pin WQFN-FCRLF. The diagram shows the top and bottom views of a 24-pin WQFN package. The top view shows pin numbers 1-8 on the left and 20-13 on the right. The bottom view shows pin numbers 20-13 on the left and 1-8 on the right. Pin functions are labeled: 1: VOSNS, 2: EN, 3: VSET1 or FSET, 4: VSET2, 5, 6: VIN, 7, 8: GND, 9-12: SW, 13-16: GND, 17: SYNC_OUT, 18: MODE/ SYNC, 19: SDA or VSET4, 20: SCL or VSET3, 21: PG, 22: AGND, 23: COMP, 24: GOSNS.](d3ca266c298aeb34b019960c6c36f187_img.jpg)
+![Figure 5-1. RZV Package 24 Pin WQFN-FCRLF. The diagram shows the top and bottom views of a 24-pin WQFN package. The top view shows pin numbers 1-8 on the left and 20-13 on the right. The bottom view shows pin numbers 20-13 on the left and 1-8 on the right. Pin functions are labeled: 1: VOSNS, 2: EN, 3: VSET1 or FSET, 4: VSET2, 5, 6: VIN, 7, 8: GND, 9-12: SW, 13-16: GND, 17: SYNC_OUT, 18: MODE/ SYNC, 19: SDA or VSET4, 20: SCL or VSET3, 21: PG, 22: AGND, 23: COMP, 24: GOSNS.](img/d3ca266c298aeb34b019960c6c36f187_img.jpg)
 
 Figure 5-1. RZV Package 24 Pin WQFN-FCRLF. The diagram shows the top and bottom views of a 24-pin WQFN package. The top view shows pin numbers 1-8 on the left and 20-13 on the right. The bottom view shows pin numbers 20-13 on the left and 1-8 on the right. Pin functions are labeled: 1: VOSNS, 2: EN, 3: VSET1 or FSET, 4: VSET2, 5, 6: VIN, 7, 8: GND, 9-12: SW, 13-16: GND, 17: SYNC\_OUT, 18: MODE/ SYNC, 19: SDA or VSET4, 20: SCL or VSET3, 21: PG, 22: AGND, 23: COMP, 24: GOSNS.
 
@@ -473,31 +473,31 @@ over operating junction temperature ( $T_J = -40\text{ }^\circ\text{C}$  to  $+1
 
 ### 6.7 Typical Characteristics
 
-![Figure 6-1: RDS(on) of High Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 7) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).](98ee20ceb85cd84e2415b20b1eda1bcf_img.jpg)
+![Figure 6-1: RDS(on) of High Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 7) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).](img/98ee20ceb85cd84e2415b20b1eda1bcf_img.jpg)
 
 Figure 6-1: RDS(on) of High Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 7) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).
 
 **Figure 6-1.  $R_{DS(ON)}$  of High Side Switch**
 
-![Figure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).](8791f79b259a7463279c1aeb14c31580_img.jpg)
+![Figure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).](img/8791f79b259a7463279c1aeb14c31580_img.jpg)
 
 Figure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).
 
 **Figure 6-2.  $R_{DS(ON)}$  of Low Side Switch**
 
-![Figure 6-3: Shutdown Current vs Temperature. A line graph showing Shutdown Current (ISD) in µA on the y-axis (ranging from 10 to 70) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). The curves show a gradual increase in shutdown current with temperature, followed by a sharp increase starting around 120°C.](c222a9006d6d60a8d81e6ffbfc0e74ad_img.jpg)
+![Figure 6-3: Shutdown Current vs Temperature. A line graph showing Shutdown Current (ISD) in µA on the y-axis (ranging from 10 to 70) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). The curves show a gradual increase in shutdown current with temperature, followed by a sharp increase starting around 120°C.](img/c222a9006d6d60a8d81e6ffbfc0e74ad_img.jpg)
 
 Figure 6-3: Shutdown Current vs Temperature. A line graph showing Shutdown Current (ISD) in µA on the y-axis (ranging from 10 to 70) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). The curves show a gradual increase in shutdown current with temperature, followed by a sharp increase starting around 120°C.
 
 **Figure 6-3. Shutdown Current vs Temperature**
 
-![Figure 6-4: Quiescent Current vs Temperature. A line graph showing Quiescent Current (IQ) in mA on the y-axis (ranging from 2 to 3) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a linear increase in quiescent current as temperature increases.](9d1abc573e35610946ece87a18cbe862_img.jpg)
+![Figure 6-4: Quiescent Current vs Temperature. A line graph showing Quiescent Current (IQ) in mA on the y-axis (ranging from 2 to 3) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a linear increase in quiescent current as temperature increases.](img/9d1abc573e35610946ece87a18cbe862_img.jpg)
 
 Figure 6-4: Quiescent Current vs Temperature. A line graph showing Quiescent Current (IQ) in mA on the y-axis (ranging from 2 to 3) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a linear increase in quiescent current as temperature increases.
 
 **Figure 6-4. Quiescent Current vs Temperature**
 
-![Figure 6-5: Switching Frequency vs Temperature. A line graph showing Switching Frequency in MHz on the y-axis (ranging from 1.45 to 1.55) versus Junction Temperature in °C on the x-axis (ranging from -40 to 140). Two curves are plotted: VIN = 5.0 V (black) and VIN = 3.3 V (red). Both curves show a slight increase in switching frequency with temperature, with the VIN = 3.3 V curve consistently higher than the VIN = 5.0 V curve.](3084f66c81a49b6225666f212179642c_img.jpg)
+![Figure 6-5: Switching Frequency vs Temperature. A line graph showing Switching Frequency in MHz on the y-axis (ranging from 1.45 to 1.55) versus Junction Temperature in °C on the x-axis (ranging from -40 to 140). Two curves are plotted: VIN = 5.0 V (black) and VIN = 3.3 V (red). Both curves show a slight increase in switching frequency with temperature, with the VIN = 3.3 V curve consistently higher than the VIN = 5.0 V curve.](img/3084f66c81a49b6225666f212179642c_img.jpg)
 
 Figure 6-5: Switching Frequency vs Temperature. A line graph showing Switching Frequency in MHz on the y-axis (ranging from 1.45 to 1.55) versus Junction Temperature in °C on the x-axis (ranging from -40 to 140). Two curves are plotted: VIN = 5.0 V (black) and VIN = 3.3 V (red). Both curves show a slight increase in switching frequency with temperature, with the VIN = 3.3 V curve consistently higher than the VIN = 5.0 V curve.
 
@@ -507,7 +507,7 @@ Figure 6-5: Switching Frequency vs Temperature. A line graph showing Switching F
 
 ## 7 Parameter Measurement Information
 
-![Figure 7-1. Measurement Setup for TPS6287Bxx. This schematic diagram shows the connection of a TPS6287Bxx buck converter for parameter measurement. The input voltage VIN (2.7 V to 6 V) is connected to the VIN pin and a voltage divider for VIO. An input capacitor CIN (2 x 22 uF) is connected between VIN and ground. The enable pin (EN) is connected to a resistor REN (22 k ohms) to ground. The I2C pins (SDA, SCL) are shown. The output voltage is set by two resistors RVSET1 and RVSET2 connected to the VSET1 and VSET2 pins. The output stage consists of an inductor L, an output capacitor COUT (4 x 22 uF), and a load. The converter's output is also connected to a measurement circuit consisting of a resistor RZ (2.1 k ohms), a capacitor CC (1.8 nF), and a capacitor CC2 (10 pF) in parallel, followed by a comparator (COMP) and a power good (PG) pin. The PG pin is connected to a 100 k ohm resistor RPG to ground. The converter's ground pins (AGND, GND) are connected to a common ground point. The output voltage VIO is measured across the load.](a33da0f14e456f92539ce3e9b7d81f9a_img.jpg)
+![Figure 7-1. Measurement Setup for TPS6287Bxx. This schematic diagram shows the connection of a TPS6287Bxx buck converter for parameter measurement. The input voltage VIN (2.7 V to 6 V) is connected to the VIN pin and a voltage divider for VIO. An input capacitor CIN (2 x 22 uF) is connected between VIN and ground. The enable pin (EN) is connected to a resistor REN (22 k ohms) to ground. The I2C pins (SDA, SCL) are shown. The output voltage is set by two resistors RVSET1 and RVSET2 connected to the VSET1 and VSET2 pins. The output stage consists of an inductor L, an output capacitor COUT (4 x 22 uF), and a load. The converter's output is also connected to a measurement circuit consisting of a resistor RZ (2.1 k ohms), a capacitor CC (1.8 nF), and a capacitor CC2 (10 pF) in parallel, followed by a comparator (COMP) and a power good (PG) pin. The PG pin is connected to a 100 k ohm resistor RPG to ground. The converter's ground pins (AGND, GND) are connected to a common ground point. The output voltage VIO is measured across the load.](img/a33da0f14e456f92539ce3e9b7d81f9a_img.jpg)
 
 Figure 7-1. Measurement Setup for TPS6287Bxx. This schematic diagram shows the connection of a TPS6287Bxx buck converter for parameter measurement. The input voltage VIN (2.7 V to 6 V) is connected to the VIN pin and a voltage divider for VIO. An input capacitor CIN (2 x 22 uF) is connected between VIN and ground. The enable pin (EN) is connected to a resistor REN (22 k ohms) to ground. The I2C pins (SDA, SCL) are shown. The output voltage is set by two resistors RVSET1 and RVSET2 connected to the VSET1 and VSET2 pins. The output stage consists of an inductor L, an output capacitor COUT (4 x 22 uF), and a load. The converter's output is also connected to a measurement circuit consisting of a resistor RZ (2.1 k ohms), a capacitor CC (1.8 nF), and a capacitor CC2 (10 pF) in parallel, followed by a comparator (COMP) and a power good (PG) pin. The PG pin is connected to a 100 k ohm resistor RPG to ground. The converter's ground pins (AGND, GND) are connected to a common ground point. The output voltage VIO is measured across the load.
 
@@ -551,7 +551,7 @@ The TPS6287Bxx devices have a built-in I<sup>2</sup>C-compatible interface to co
 
 ### 8.2 Functional Block Diagram
 
-![Functional Block Diagram of the TPS6287Bxx devices showing internal components and pin connections.](3f1987804d7d78bc3b3bc560e974280a_img.jpg)
+![Functional Block Diagram of the TPS6287Bxx devices showing internal components and pin connections.](img/3f1987804d7d78bc3b3bc560e974280a_img.jpg)
 
 The diagram illustrates the internal architecture of the TPS6287Bxx devices. Key components include:
 
@@ -583,7 +583,7 @@ Functional Block Diagram of the TPS6287Bxx devices showing internal components a
 
 Figure 8-1 shows a simplified block diagram of the fixed-frequency DCS-Control topology used in the TPS6287Bxx devices. This topology comprises an inner emulated current loop and an outer voltage-regulating loop.
 
-![Figure 8-1: Fixed-Frequency DCS-Control Topology (Simplified). This block diagram illustrates the control architecture. It features a feedback loop where the output voltage (VOUT) is compared against a reference voltage (VREF) using an error amplifier. The error signal is processed by 'Control Logic' which includes a frequency source (fsw) and a switch (SW) to generate a clock for a flip-flop (R, Q). The flip-flop output (Q) drives a 'Gate Driver' for the power switch (MOSFET). The output of the switch is connected to an inductor (L) and a load resistor (RLoad). The inductor current is sensed via a sense resistor (RSNS) and fed back to the error amplifier. A 'Slope Compensation' block is shown, which adds a ramp signal to the feedback signal to ensure stable operation. The diagram also shows the input voltage (VIN) and the output capacitor (COUT).](a83ba9e3e2c1e21dd69953a7b09e45b4_img.jpg)
+![Figure 8-1: Fixed-Frequency DCS-Control Topology (Simplified). This block diagram illustrates the control architecture. It features a feedback loop where the output voltage (VOUT) is compared against a reference voltage (VREF) using an error amplifier. The error signal is processed by 'Control Logic' which includes a frequency source (fsw) and a switch (SW) to generate a clock for a flip-flop (R, Q). The flip-flop output (Q) drives a 'Gate Driver' for the power switch (MOSFET). The output of the switch is connected to an inductor (L) and a load resistor (RLoad). The inductor current is sensed via a sense resistor (RSNS) and fed back to the error amplifier. A 'Slope Compensation' block is shown, which adds a ramp signal to the feedback signal to ensure stable operation. The diagram also shows the input voltage (VIN) and the output capacitor (COUT).](img/a83ba9e3e2c1e21dd69953a7b09e45b4_img.jpg)
 
 Figure 8-1: Fixed-Frequency DCS-Control Topology (Simplified). This block diagram illustrates the control architecture. It features a feedback loop where the output voltage (VOUT) is compared against a reference voltage (VREF) using an error amplifier. The error signal is processed by 'Control Logic' which includes a frequency source (fsw) and a switch (SW) to generate a clock for a flip-flop (R, Q). The flip-flop output (Q) drives a 'Gate Driver' for the power switch (MOSFET). The output of the switch is connected to an inductor (L) and a load resistor (RLoad). The inductor current is sensed via a sense resistor (RSNS) and fed back to the error amplifier. A 'Slope Compensation' block is shown, which adds a ramp signal to the feedback signal to ensure stable operation. The diagram also shows the input voltage (VIN) and the output capacitor (COUT).
 
@@ -599,7 +599,7 @@ The device can control the inductor current in three different ways to regulate 
 
 During PWM-CCM operation, the device switches at a constant frequency and the inductor current is continuous (see Figure 8-2). PWM operation achieves the lowest output voltage ripple and the best transient performance.
 
-![Figure 8-2: Continuous Conduction Mode (CCM) Current Waveform. This graph plots 'Inductor Current' on the vertical axis against 'Time' on the horizontal axis. The waveform shows a sawtooth pattern where the current rises linearly to a peak and then falls linearly, never reaching zero. The time interval between two consecutive peaks is labeled as 1/fsw, representing the switching period.](aaba634667a4ad2369fe5478c594ff58_img.jpg)
+![Figure 8-2: Continuous Conduction Mode (CCM) Current Waveform. This graph plots 'Inductor Current' on the vertical axis against 'Time' on the horizontal axis. The waveform shows a sawtooth pattern where the current rises linearly to a peak and then falls linearly, never reaching zero. The time interval between two consecutive peaks is labeled as 1/fsw, representing the switching period.](img/aaba634667a4ad2369fe5478c594ff58_img.jpg)
 
 Figure 8-2: Continuous Conduction Mode (CCM) Current Waveform. This graph plots 'Inductor Current' on the vertical axis against 'Time' on the horizontal axis. The waveform shows a sawtooth pattern where the current rises linearly to a peak and then falls linearly, never reaching zero. The time interval between two consecutive peaks is labeled as 1/fsw, representing the switching period.
 
@@ -609,7 +609,7 @@ During PWM-DCM operation the device switches at a constant frequency and the ind
 
 {16}------------------------------------------------
 
-![Figure 8-3: Discontinuous Conduction Mode (DCM) Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform consists of a series of triangular pulses. The peak current of each pulse is constant. The time between the start of consecutive pulses is labeled as 1/fsw. The current returns to zero between pulses.](fed39b841ae2dce01088b84bfc1e2789_img.jpg)
+![Figure 8-3: Discontinuous Conduction Mode (DCM) Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform consists of a series of triangular pulses. The peak current of each pulse is constant. The time between the start of consecutive pulses is labeled as 1/fsw. The current returns to zero between pulses.](img/fed39b841ae2dce01088b84bfc1e2789_img.jpg)
 
 Figure 8-3: Discontinuous Conduction Mode (DCM) Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform consists of a series of triangular pulses. The peak current of each pulse is constant. The time between the start of consecutive pulses is labeled as 1/fsw. The current returns to zero between pulses.
 
@@ -617,7 +617,7 @@ Figure 8-3: Discontinuous Conduction Mode (DCM) Waveform. A graph showing Induct
 
 During PFM-DCM operation the device keeps the peak inductor current constant (at a level corresponding to the minimum on-time of the converter) and skips pulses to regulate the output (see [Figure 8-4](#)). The switching pulses that occur during PFM-DCM operation are synchronized to the internal clock.
 
-![Figure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform shows triangular pulses. The minimum on-time is indicated for the first pulse. Subsequent pulses are shown as dashed lines, labeled 'Skipped Pulses'. The time between the start of consecutive pulses is labeled as 1/fsw.](62ad98a4bc47922b5cf47de04571dae8_img.jpg)
+![Figure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform shows triangular pulses. The minimum on-time is indicated for the first pulse. Subsequent pulses are shown as dashed lines, labeled 'Skipped Pulses'. The time between the start of consecutive pulses is labeled as 1/fsw.](img/62ad98a4bc47922b5cf47de04571dae8_img.jpg)
 
 Figure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform shows triangular pulses. The minimum on-time is indicated for the first pulse. Subsequent pulses are shown as dashed lines, labeled 'Skipped Pulses'. The time between the start of consecutive pulses is labeled as 1/fsw.
 
@@ -629,7 +629,7 @@ $$I_{OUT(PFM)} = \frac{(V_{IN} - V_{OUT})}{2L} t_{ON}^2 \left( \frac{V_{IN}}{V_{
 
 The following figure shows how this threshold typically varies with  $V_{IN}$  and  $V_{OUT}$  for a switching frequency of 1.5MHz.
 
-![Figure 8-5: Output Current PFM-DCM Entry Threshold for fsw = 1.5MHz and L= 105nH. A line graph showing Output Current (A) on the y-axis (0 to 0.8) versus Output Voltage (V) on the x-axis (0.4 to 1.7). Three curves are shown for different input voltages: Vin = 2.7 V (black line), Vin = 3.3 V (red line), and Vin = 5 V (blue line). All curves show a decreasing trend as output voltage increases.](a3ee9a6f9fa9251ee0cac2d16e67e620_img.jpg)
+![Figure 8-5: Output Current PFM-DCM Entry Threshold for fsw = 1.5MHz and L= 105nH. A line graph showing Output Current (A) on the y-axis (0 to 0.8) versus Output Voltage (V) on the x-axis (0.4 to 1.7). Three curves are shown for different input voltages: Vin = 2.7 V (black line), Vin = 3.3 V (red line), and Vin = 5 V (blue line). All curves show a decreasing trend as output voltage increases.](img/a3ee9a6f9fa9251ee0cac2d16e67e620_img.jpg)
 
 | Output Voltage (V) | V <sub>IN</sub> = 2.7 V (A) | V <sub>IN</sub> = 3.3 V (A) | V <sub>IN</sub> = 5 V (A) |
 |--------------------|-----------------------------|-----------------------------|---------------------------|
@@ -682,7 +682,7 @@ The Enable (EN) pin is bidirectional, and has two functions:
 - As an input, the pin enables and disables the DC/DC converter in the device.
 - As an output, the pin provides a SYSTEM\_READY signal to other devices in a stacked configuration.
 
-![Figure 8-6. Enable Functional Block Diagram. The diagram shows the internal logic of the Enable pin. The EN pin is connected to the non-inverting input (+) of a comparator. The inverting input (-) of the comparator is connected to a reference voltage VIT(EN). The output of the comparator is labeled 'ENABLE'. Below the comparator, there is an N-channel MOSFET with its gate connected to the 'ENABLE' output and its source connected to ground. The drain of the MOSFET is connected to the input of a logic AND gate. The other input to the AND gate is connected to the 'CONTROL3:SINGLE' pin. The output of the AND gate is labeled 'SYSTEM_READY'.](e928f4874ed492d3ad4c6fa2d29aedbc_img.jpg)
+![Figure 8-6. Enable Functional Block Diagram. The diagram shows the internal logic of the Enable pin. The EN pin is connected to the non-inverting input (+) of a comparator. The inverting input (-) of the comparator is connected to a reference voltage VIT(EN). The output of the comparator is labeled 'ENABLE'. Below the comparator, there is an N-channel MOSFET with its gate connected to the 'ENABLE' output and its source connected to ground. The drain of the MOSFET is connected to the input of a logic AND gate. The other input to the AND gate is connected to the 'CONTROL3:SINGLE' pin. The output of the AND gate is labeled 'SYSTEM_READY'.](img/e928f4874ed492d3ad4c6fa2d29aedbc_img.jpg)
 
 Figure 8-6. Enable Functional Block Diagram. The diagram shows the internal logic of the Enable pin. The EN pin is connected to the non-inverting input (+) of a comparator. The inverting input (-) of the comparator is connected to a reference voltage VIT(EN). The output of the comparator is labeled 'ENABLE'. Below the comparator, there is an N-channel MOSFET with its gate connected to the 'ENABLE' output and its source connected to ground. The drain of the MOSFET is connected to the input of a logic AND gate. The other input to the AND gate is connected to the 'CONTROL3:SINGLE' pin. The output of the AND gate is labeled 'SYSTEM\_READY'.
 
@@ -720,7 +720,7 @@ When initialization is complete, the device enables I<sup>2</sup>C communication
 
 Figure 8-7 shows the start-up sequence when the EN pin is pulled up to V<sub>IN</sub>.
 
-![Timing diagram for Figure 8-7 showing the start-up sequence when the EN pin is pulled up to V_IN. The diagram shows four signals: V_IN, EN, V_OUT, and PG. V_IN rises above the UVLO threshold (VIT+(UVLO)). When it does, the EN pin is pulled low internally. After device initialization is complete, V_OUT begins to ramp up. The PG signal is undefined during the initialization period and then goes high after a delay (td(PG)). Timing parameters include t_d(EN)1 (delay from V_IN crossing UVLO to EN going low), t_d(RAMP) (output ramp time), and t_d(PG) (delay from V_OUT ramp start to PG going high).](99acc13de9c992bf42e0fcdddf0b09d3_img.jpg)
+![Timing diagram for Figure 8-7 showing the start-up sequence when the EN pin is pulled up to V_IN. The diagram shows four signals: V_IN, EN, V_OUT, and PG. V_IN rises above the UVLO threshold (VIT+(UVLO)). When it does, the EN pin is pulled low internally. After device initialization is complete, V_OUT begins to ramp up. The PG signal is undefined during the initialization period and then goes high after a delay (td(PG)). Timing parameters include t_d(EN)1 (delay from V_IN crossing UVLO to EN going low), t_d(RAMP) (output ramp time), and t_d(PG) (delay from V_OUT ramp start to PG going high).](img/99acc13de9c992bf42e0fcdddf0b09d3_img.jpg)
 
 Timing diagram for Figure 8-7 showing the start-up sequence when the EN pin is pulled up to V\_IN. The diagram shows four signals: V\_IN, EN, V\_OUT, and PG. V\_IN rises above the UVLO threshold (VIT+(UVLO)). When it does, the EN pin is pulled low internally. After device initialization is complete, V\_OUT begins to ramp up. The PG signal is undefined during the initialization period and then goes high after a delay (td(PG)). Timing parameters include t\_d(EN)1 (delay from V\_IN crossing UVLO to EN going low), t\_d(RAMP) (output ramp time), and t\_d(PG) (delay from V\_OUT ramp start to PG going high).
 
@@ -730,7 +730,7 @@ Figure 8-8 shows the start-up sequence when an external signal is connected to t
 
 {19}------------------------------------------------
 
-![Figure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin. This timing diagram shows the relationship between VIN, EN, VOUT, and PG pins. VIN rises above VIT+(UVLO), then EN rises above VIT+(EN). VOUT then ramps up from a prebias level to a final level. The ramp time is divided into tD(EN)2 and tD(RAMP). The PG pin goes from an undefined state to a high state after the ramp is complete, with a delay tD(PG).](96a7eac66ef72bb016c280278506ac63_img.jpg)
+![Figure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin. This timing diagram shows the relationship between VIN, EN, VOUT, and PG pins. VIN rises above VIT+(UVLO), then EN rises above VIT+(EN). VOUT then ramps up from a prebias level to a final level. The ramp time is divided into tD(EN)2 and tD(RAMP). The PG pin goes from an undefined state to a high state after the ramp is complete, with a delay tD(PG).](img/96a7eac66ef72bb016c280278506ac63_img.jpg)
 
 Figure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin. This timing diagram shows the relationship between VIN, EN, VOUT, and PG pins. VIN rises above VIT+(UVLO), then EN rises above VIT+(EN). VOUT then ramps up from a prebias level to a final level. The ramp time is divided into tD(EN)2 and tD(RAMP). The PG pin goes from an undefined state to a high state after the ramp is complete, with a delay tD(PG).
 
@@ -747,7 +747,7 @@ If the user programs the new output voltage setpoint (VSET[7:0]), output voltage
 
 The device can start up into a prebiased output. In this case, only a portion of the internal voltage ramp is seen externally (see Figure 8-9).
 
-![Figure 8-9: Start-Up into a Prebiased Output. This graph shows VOUT ramping from a prebias voltage level to a final voltage level. The ramp duration is labeled tD(RAMP).](58f42a91047786934d8a7e258d581ca2_img.jpg)
+![Figure 8-9: Start-Up into a Prebiased Output. This graph shows VOUT ramping from a prebias voltage level to a final voltage level. The ramp duration is labeled tD(RAMP).](img/58f42a91047786934d8a7e258d581ca2_img.jpg)
 
 Figure 8-9: Start-Up into a Prebiased Output. This graph shows VOUT ramping from a prebias voltage level to a final voltage level. The ramp duration is labeled tD(RAMP).
 
@@ -772,7 +772,7 @@ During device initialization, a resistor-to-digital converter in the device dete
 
 The following figure shows a simplified block diagram of the R2D converter used to detect the state of the FSET pin (an identical circuit detects the state of the VSET pin – see *Output Voltage Setpoint*).
 
-![Figure 8-10. FSET R2D Converter Functional Block Diagram. The diagram shows a circuit with an input voltage VIN connected to a switch S1. S1 is in series with a 6.5 kΩ resistor. The other end of this resistor is connected to the FSET pin and a node. From this node, a 1.6 kΩ resistor is connected to a switch S2, which is then connected to ground. The FSET pin is also connected to the non-inverting input (+) of a comparator. The comparator's output is the signal from the R2D converter. The comparator's inverting input (-) is connected to the node between the 6.5 kΩ and 1.6 kΩ resistors. The comparator's input levels are specified as VIL = < 0.4 V and VIH = > 0.8 V.](a3472689858b068ef469213682965325_img.jpg)
+![Figure 8-10. FSET R2D Converter Functional Block Diagram. The diagram shows a circuit with an input voltage VIN connected to a switch S1. S1 is in series with a 6.5 kΩ resistor. The other end of this resistor is connected to the FSET pin and a node. From this node, a 1.6 kΩ resistor is connected to a switch S2, which is then connected to ground. The FSET pin is also connected to the non-inverting input (+) of a comparator. The comparator's output is the signal from the R2D converter. The comparator's inverting input (-) is connected to the node between the 6.5 kΩ and 1.6 kΩ resistors. The comparator's input levels are specified as VIL = < 0.4 V and VIH = > 0.8 V.](img/a3472689858b068ef469213682965325_img.jpg)
 
 Figure 8-10. FSET R2D Converter Functional Block Diagram. The diagram shows a circuit with an input voltage VIN connected to a switch S1. S1 is in series with a 6.5 kΩ resistor. The other end of this resistor is connected to the FSET pin and a node. From this node, a 1.6 kΩ resistor is connected to a switch S2, which is then connected to ground. The FSET pin is also connected to the non-inverting input (+) of a comparator. The comparator's output is the signal from the R2D converter. The comparator's inverting input (-) is connected to the node between the 6.5 kΩ and 1.6 kΩ resistors. The comparator's input levels are specified as VIL = < 0.4 V and VIH = > 0.8 V.
 
@@ -953,7 +953,7 @@ Droop compensation scales the nominal output voltage based on the output current
 
 {24}------------------------------------------------
 
-![Figure 8-11: Voltage Scaling With Output Current. A line graph showing Output Voltage on the y-axis versus Output Current on the x-axis. The y-axis has markers at +12 mV, Nominal Output Voltage, and -12 mV. The x-axis has markers at 0 A, 50% of rated output current, and Rated output current. A straight line starts at +12 mV on the y-axis at 0 A, crosses the x-axis at 50% of rated output current, and continues to -12 mV at the Rated output current.](5500ab73cf84ccc0055eecf28889b4db_img.jpg)
+![Figure 8-11: Voltage Scaling With Output Current. A line graph showing Output Voltage on the y-axis versus Output Current on the x-axis. The y-axis has markers at +12 mV, Nominal Output Voltage, and -12 mV. The x-axis has markers at 0 A, 50% of rated output current, and Rated output current. A straight line starts at +12 mV on the y-axis at 0 A, crosses the x-axis at 50% of rated output current, and continues to -12 mV at the Rated output current.](img/5500ab73cf84ccc0055eecf28889b4db_img.jpg)
 
 Figure 8-11: Voltage Scaling With Output Current. A line graph showing Output Voltage on the y-axis versus Output Current on the x-axis. The y-axis has markers at +12 mV, Nominal Output Voltage, and -12 mV. The x-axis has markers at 0 A, 50% of rated output current, and Rated output current. A straight line starts at +12 mV on the y-axis at 0 A, crosses the x-axis at 50% of rated output current, and continues to -12 mV at the Rated output current.
 
@@ -979,7 +979,7 @@ When multiple devices are used together in a stacked configuration the MODE/SYNC
 
 The device has a spread spectrum clocking function that can reduce electromagnetic interference (EMI). When the SSC function is active, the device modulates the switching frequency  $\pm 10\%$  about the nominal value. The frequency modulation has a triangular characteristic (see [Figure 8-12](#)).
 
-![Figure 8-12: Spread Spectrum Clocking Behavior. A graph showing Switching Frequency on the y-axis versus Time on the x-axis. The y-axis has markers at +10%, Nominal fsw, and -10%. The x-axis shows a triangular wave oscillating between +10% and -10% of the nominal switching frequency. The period of one full cycle is labeled as 2048/fsw.](83263653e3d47accb69769332ca97817_img.jpg)
+![Figure 8-12: Spread Spectrum Clocking Behavior. A graph showing Switching Frequency on the y-axis versus Time on the x-axis. The y-axis has markers at +10%, Nominal fsw, and -10%. The x-axis shows a triangular wave oscillating between +10% and -10% of the nominal switching frequency. The period of one full cycle is labeled as 2048/fsw.](img/83263653e3d47accb69769332ca97817_img.jpg)
 
 Figure 8-12: Spread Spectrum Clocking Behavior. A graph showing Switching Frequency on the y-axis versus Time on the x-axis. The y-axis has markers at +10%, Nominal fsw, and -10%. The x-axis shows a triangular wave oscillating between +10% and -10% of the nominal switching frequency. The period of one full cycle is labeled as 2048/fsw.
 
@@ -1073,7 +1073,7 @@ The Power-Good (PG) pin is bidirectional and has two functions:
 
 {27}------------------------------------------------
 
-![Timing diagram for Figure 8-13. PG Timing. It shows the relationship between the Power Good (PG) signal and the output voltage (VOUT) relative to Overvoltage Protection (OVP) and Undervoltage Protection (UVP) thresholds. The PG signal is low when VOUT is below V_T-(OVP) or above V_T+(OVP), and high when VOUT is between V_T-(OVP) and V_T+(OVP). The diagram illustrates the delay t_d(PG) from the point where VOUT crosses the threshold to the point where the PG signal changes state. It also shows the PG signal going low during a soft start period and during thermal shutdown or disable.](abc0eb594f9d2c0daa0e60df05f2a666_img.jpg)
+![Timing diagram for Figure 8-13. PG Timing. It shows the relationship between the Power Good (PG) signal and the output voltage (VOUT) relative to Overvoltage Protection (OVP) and Undervoltage Protection (UVP) thresholds. The PG signal is low when VOUT is below V_T-(OVP) or above V_T+(OVP), and high when VOUT is between V_T-(OVP) and V_T+(OVP). The diagram illustrates the delay t_d(PG) from the point where VOUT crosses the threshold to the point where the PG signal changes state. It also shows the PG signal going low during a soft start period and during thermal shutdown or disable.](img/abc0eb594f9d2c0daa0e60df05f2a666_img.jpg)
 
 Timing diagram for Figure 8-13. PG Timing. It shows the relationship between the Power Good (PG) signal and the output voltage (VOUT) relative to Overvoltage Protection (OVP) and Undervoltage Protection (UVP) thresholds. The PG signal is low when VOUT is below V\_T-(OVP) or above V\_T+(OVP), and high when VOUT is between V\_T-(OVP) and V\_T+(OVP). The diagram illustrates the delay t\_d(PG) from the point where VOUT crosses the threshold to the point where the PG signal changes state. It also shows the PG signal going low during a soft start period and during thermal shutdown or disable.
 
@@ -1101,7 +1101,7 @@ Figure 8-14 shows a functional block diagram of the power-good function in a sta
 
 {28}------------------------------------------------
 
-![Figure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device). The diagram shows the internal logic for power-good detection. It includes a Hiccup Control block receiving CONTROL1:HICCUPEN and outputting to converter control logic and a STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM, and HICCUP. A Current Comparator receives Isw and feeds into the Hiccup Control and a 4 Consecutive Pulses Detection block, which also feeds into the STATUS Register. A Window Comparator receives Vout and feeds into a 40-µs Deglitch block, which then feeds into a Blanking block. The Blanking block also receives DVS Active and CONTROL3:PGBLNKDVS signals. The Blanking block output and the STATUS Register HICCUP output are combined with Thermal Shutdown conditions (VIN > VIT(OVLO), VIN < VIT(UVLO), VEN < VIT(EN)) in an OR gate to control the PG pin via a PMOS transistor.](28d75f39a24203712ee907b32cf0bbe5_img.jpg)
+![Figure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device). The diagram shows the internal logic for power-good detection. It includes a Hiccup Control block receiving CONTROL1:HICCUPEN and outputting to converter control logic and a STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM, and HICCUP. A Current Comparator receives Isw and feeds into the Hiccup Control and a 4 Consecutive Pulses Detection block, which also feeds into the STATUS Register. A Window Comparator receives Vout and feeds into a 40-µs Deglitch block, which then feeds into a Blanking block. The Blanking block also receives DVS Active and CONTROL3:PGBLNKDVS signals. The Blanking block output and the STATUS Register HICCUP output are combined with Thermal Shutdown conditions (VIN > VIT(OVLO), VIN < VIT(UVLO), VEN < VIT(EN)) in an OR gate to control the PG pin via a PMOS transistor.](img/28d75f39a24203712ee907b32cf0bbe5_img.jpg)
 
 Figure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device). The diagram shows the internal logic for power-good detection. It includes a Hiccup Control block receiving CONTROL1:HICCUPEN and outputting to converter control logic and a STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM, and HICCUP. A Current Comparator receives Isw and feeds into the Hiccup Control and a 4 Consecutive Pulses Detection block, which also feeds into the STATUS Register. A Window Comparator receives Vout and feeds into a 40-µs Deglitch block, which then feeds into a Blanking block. The Blanking block also receives DVS Active and CONTROL3:PGBLNKDVS signals. The Blanking block output and the STATUS Register HICCUP output are combined with Thermal Shutdown conditions (VIN > VIT(OVLO), VIN < VIT(UVLO), VEN < VIT(EN)) in an OR gate to control the PG pin via a PMOS transistor.
 
@@ -1124,7 +1124,7 @@ Figure 8-15 shows a functional block diagram of the power-good function in a sec
 
 {29}------------------------------------------------
 
-![Figure 8-15. Power-Good Functional Block Diagram (Secondary Device). The diagram shows a functional block diagram for a secondary device. It includes two flip-flops, FF1 and FF2. FF1 is connected to a Latch, which is connected to the DCM / CCM input. FF1 also has an Input Buffer with VIL = < 0.4 V and VIH = > 0.8 V. The output of the Input Buffer is connected to the PG pin. FF2 is connected to a Latch, which is connected to the Internal start-up sequence completed input. The output of the Latch is connected to the gate of a PMOS transistor Q1, which is connected to the PG pin and ground.](fa01531ea2c45beeb4036005da3037a4_img.jpg)
+![Figure 8-15. Power-Good Functional Block Diagram (Secondary Device). The diagram shows a functional block diagram for a secondary device. It includes two flip-flops, FF1 and FF2. FF1 is connected to a Latch, which is connected to the DCM / CCM input. FF1 also has an Input Buffer with VIL = < 0.4 V and VIH = > 0.8 V. The output of the Input Buffer is connected to the PG pin. FF2 is connected to a Latch, which is connected to the Internal start-up sequence completed input. The output of the Latch is connected to the gate of a PMOS transistor Q1, which is connected to the PG pin and ground.](img/fa01531ea2c45beeb4036005da3037a4_img.jpg)
 
 Figure 8-15. Power-Good Functional Block Diagram (Secondary Device). The diagram shows a functional block diagram for a secondary device. It includes two flip-flops, FF1 and FF2. FF1 is connected to a Latch, which is connected to the DCM / CCM input. FF1 also has an Input Buffer with VIL = < 0.4 V and VIH = > 0.8 V. The output of the Input Buffer is connected to the PG pin. FF2 is connected to a Latch, which is connected to the Internal start-up sequence completed input. The output of the Latch is connected to the gate of a PMOS transistor Q1, which is connected to the PG pin and ground.
 
@@ -1173,7 +1173,7 @@ Figure 8-16 shows the recommended interconnections in a stack of two TPS6287Bxx 
 
 {31}------------------------------------------------
 
-![Schematic diagram of two TPS6287Bxx devices in a stacked configuration. The primary device (top) is connected to VIN (2.7V to 6V), VIO, I2C, and a load. It has a feedback loop with VSET1/VSET2 pins connected to resistors RVSET1 and RVSET2. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC_OUT pin is connected to the MODE/SYNC pin of the secondary device. The secondary device (bottom) is connected to the primary device's SW pin, VIO, and a 47 kΩ resistor. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC_OUT pin is connected to the primary device's SYNC_OUT pin. Both devices have AGND, GND, and PG pins connected to ground.](14252bcd35912bd656e98b16b2ee51c0_img.jpg)
+![Schematic diagram of two TPS6287Bxx devices in a stacked configuration. The primary device (top) is connected to VIN (2.7V to 6V), VIO, I2C, and a load. It has a feedback loop with VSET1/VSET2 pins connected to resistors RVSET1 and RVSET2. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC_OUT pin is connected to the MODE/SYNC pin of the secondary device. The secondary device (bottom) is connected to the primary device's SW pin, VIO, and a 47 kΩ resistor. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC_OUT pin is connected to the primary device's SYNC_OUT pin. Both devices have AGND, GND, and PG pins connected to ground.](img/14252bcd35912bd656e98b16b2ee51c0_img.jpg)
 
 Schematic diagram of two TPS6287Bxx devices in a stacked configuration. The primary device (top) is connected to VIN (2.7V to 6V), VIO, I2C, and a load. It has a feedback loop with VSET1/VSET2 pins connected to resistors RVSET1 and RVSET2. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC\_OUT pin is connected to the MODE/SYNC pin of the secondary device. The secondary device (bottom) is connected to the primary device's SW pin, VIO, and a 47 kΩ resistor. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC\_OUT pin is connected to the primary device's SYNC\_OUT pin. Both devices have AGND, GND, and PG pins connected to ground.
 
@@ -1327,7 +1327,7 @@ TI recommends that the I<sup>2</sup>C controller initiates a STOP condition on t
 
 The controller initiates data transfer by generating a start condition. The start condition is when a high-to-low transition occurs on the SDA line while SCL is high, as shown in Figure 8-17. All I<sup>2</sup>C-compatible devices must recognize a start condition.
 
-![Figure 8-17: START and STOP Conditions. This timing diagram shows the SDA (DATA) and SCL (CLK) lines. The SCL line is high when the START Condition occurs, which is defined as a high-to-low transition on the SDA line. The STOP Condition occurs when the SDA line transitions from low to high while the SCL line is high. Dashed boxes labeled 'S' and 'P' indicate the START and STOP conditions respectively.](315bdbeafb39026e19b77c26b19d9d1f_img.jpg)
+![Figure 8-17: START and STOP Conditions. This timing diagram shows the SDA (DATA) and SCL (CLK) lines. The SCL line is high when the START Condition occurs, which is defined as a high-to-low transition on the SDA line. The STOP Condition occurs when the SDA line transitions from low to high while the SCL line is high. Dashed boxes labeled 'S' and 'P' indicate the START and STOP conditions respectively.](img/315bdbeafb39026e19b77c26b19d9d1f_img.jpg)
 
 Figure 8-17: START and STOP Conditions. This timing diagram shows the SDA (DATA) and SCL (CLK) lines. The SCL line is high when the START Condition occurs, which is defined as a high-to-low transition on the SDA line. The STOP Condition occurs when the SDA line transitions from low to high while the SCL line is high. Dashed boxes labeled 'S' and 'P' indicate the START and STOP conditions respectively.
 
@@ -1335,7 +1335,7 @@ Figure 8-17. START and STOP Conditions
 
 The controller then generates the SCL pulses, and transmits the 7-bit address and the read/write direction bit R/W on the SDA line. During all transmissions, the controller makes sure that data is valid. A valid data condition requires the SDA line to be stable during the entire high period of the clock pulse (see Figure 8-18). All devices recognize the address sent by the primary device and compare the address to the internal fixed addresses. Only the target with a matching address generates an acknowledge (see Figure 8-19) by pulling the SDA line low during the entire high period of the ninth SCL cycle. Upon detecting this acknowledge, the controller knows that the communication link with a target has been established.
 
-![Figure 8-18: Bit Transfer on the Serial Interface. This timing diagram shows the SDA (DATA) and SCL (CLK) lines. The SCL line is high during the 'Data line stable data valid' period. The SDA line is stable during this period. The SCL line is low during the 'Change of data allowed' period, where the SDA line can change state.](3db5d62ad46e33647ec2b1ad6d2703bb_img.jpg)
+![Figure 8-18: Bit Transfer on the Serial Interface. This timing diagram shows the SDA (DATA) and SCL (CLK) lines. The SCL line is high during the 'Data line stable data valid' period. The SDA line is stable during this period. The SCL line is low during the 'Change of data allowed' period, where the SDA line can change state.](img/3db5d62ad46e33647ec2b1ad6d2703bb_img.jpg)
 
 Figure 8-18: Bit Transfer on the Serial Interface. This timing diagram shows the SDA (DATA) and SCL (CLK) lines. The SCL line is high during the 'Data line stable data valid' period. The SDA line is stable during this period. The SCL line is low during the 'Change of data allowed' period, where the SDA line can change state.
 
@@ -1349,13 +1349,13 @@ Attempting to read data from register addresses not listed in this section resul
 
 {36}------------------------------------------------
 
-![Figure 8-19: Acknowledge on the I²C Bus. This timing diagram shows three signals: Data Output by Transmitter, Data Output by Receiver, and SCL from Controller. The SCL signal shows a START condition (S) and clock pulses for bytes 1, 2, 8, and 9. The Transmitter's data output shows a high-impedance state during the START condition and then transmits data. The Receiver's data output shows a 'Not Acknowledge' state followed by an 'Acknowledge' state during the 9th clock pulse. A 'Clock Pulse for Acknowledgement' is specifically labeled for the 9th pulse.](65a73373b57df71e5c2ce1ce0eb7b65d_img.jpg)
+![Figure 8-19: Acknowledge on the I²C Bus. This timing diagram shows three signals: Data Output by Transmitter, Data Output by Receiver, and SCL from Controller. The SCL signal shows a START condition (S) and clock pulses for bytes 1, 2, 8, and 9. The Transmitter's data output shows a high-impedance state during the START condition and then transmits data. The Receiver's data output shows a 'Not Acknowledge' state followed by an 'Acknowledge' state during the 9th clock pulse. A 'Clock Pulse for Acknowledgement' is specifically labeled for the 9th pulse.](img/65a73373b57df71e5c2ce1ce0eb7b65d_img.jpg)
 
 Figure 8-19: Acknowledge on the I²C Bus. This timing diagram shows three signals: Data Output by Transmitter, Data Output by Receiver, and SCL from Controller. The SCL signal shows a START condition (S) and clock pulses for bytes 1, 2, 8, and 9. The Transmitter's data output shows a high-impedance state during the START condition and then transmits data. The Receiver's data output shows a 'Not Acknowledge' state followed by an 'Acknowledge' state during the 9th clock pulse. A 'Clock Pulse for Acknowledgement' is specifically labeled for the 9th pulse.
 
 **Figure 8-19. Acknowledge on the I<sup>2</sup>C Bus**
 
-![Figure 8-20: Bus Protocol. This detailed timing diagram illustrates the I²C bus protocol. It shows SDA and SCL signals. Key events include: 1) Recognize START or REPEATED START condition (S or Sr) on SCL. 2) SDA shows MSB, followed by bytes 1, 2, 7, 8, 9. 3) Generate ACKNOWLEDGE signal from Target on SDA during the 9th clock pulse (byte complete, interrupt within target). 4) SCL is held low while interrupts are serviced. 5) SDA shows acknowledgement signal from receiver. 6) Recognize STOP or REPEATED START condition (P, Sr or P) on SCL. The diagram also shows SCL being held low duringacknowledgement and while interrupts are serviced.](a0fdaf0b566e05f53f0085cf41e2dbad_img.jpg)
+![Figure 8-20: Bus Protocol. This detailed timing diagram illustrates the I²C bus protocol. It shows SDA and SCL signals. Key events include: 1) Recognize START or REPEATED START condition (S or Sr) on SCL. 2) SDA shows MSB, followed by bytes 1, 2, 7, 8, 9. 3) Generate ACKNOWLEDGE signal from Target on SDA during the 9th clock pulse (byte complete, interrupt within target). 4) SCL is held low while interrupts are serviced. 5) SDA shows acknowledgement signal from receiver. 6) Recognize STOP or REPEATED START condition (P, Sr or P) on SCL. The diagram also shows SCL being held low duringacknowledgement and while interrupts are serviced.](img/a0fdaf0b566e05f53f0085cf41e2dbad_img.jpg)
 
 Figure 8-20: Bus Protocol. This detailed timing diagram illustrates the I²C bus protocol. It shows SDA and SCL signals. Key events include: 1) Recognize START or REPEATED START condition (S or Sr) on SCL. 2) SDA shows MSB, followed by bytes 1, 2, 7, 8, 9. 3) Generate ACKNOWLEDGE signal from Target on SDA during the 9th clock pulse (byte complete, interrupt within target). 4) SCL is held low while interrupts are serviced. 5) SDA shows acknowledgement signal from receiver. 6) Recognize STOP or REPEATED START condition (P, Sr or P) on SCL. The diagram also shows SCL being held low duringacknowledgement and while interrupts are serviced.
 
@@ -1373,7 +1373,7 @@ Attempting to read data from register addresses not listed in this section resul
 
 This requires a start condition, a valid I<sup>2</sup>C address, a register address byte, and a data byte for a single update. After the receipt of each byte, device acknowledges by pulling the SDA line low during the high period of a single clock pulse. A valid I<sup>2</sup>C address selects the device. The device performs an update on the falling edge of the acknowledge signal that follows the LSB byte.
 
-![Figure 8-21: 'Write' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. This diagram shows the byte sequence for a write operation. The sequence is: S (1 bit), Device Address (7 bits), R/W (1 bit, '0' for Write), A (1 bit, Acknowledge), Register Address (8 bits), A (1 bit, Acknowledge), Data (8 bits), A/A-bar (1 bit, Acknowledge/Not Acknowledge), and P (1 bit, STOP condition). A legend indicates that shaded boxes represent data 'From Controller to Target' and white boxes represent data 'From Target to Controller'. Definitions for A, A-bar, S, Sr, and P are provided.](71c152ac7a8ce3d70adcd78b3363a65e_img.jpg)
+![Figure 8-21: 'Write' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. This diagram shows the byte sequence for a write operation. The sequence is: S (1 bit), Device Address (7 bits), R/W (1 bit, '0' for Write), A (1 bit, Acknowledge), Register Address (8 bits), A (1 bit, Acknowledge), Data (8 bits), A/A-bar (1 bit, Acknowledge/Not Acknowledge), and P (1 bit, STOP condition). A legend indicates that shaded boxes represent data 'From Controller to Target' and white boxes represent data 'From Target to Controller'. Definitions for A, A-bar, S, Sr, and P are provided.](img/71c152ac7a8ce3d70adcd78b3363a65e_img.jpg)
 
 |   |                |     |   |                  |   |      |      |   |
 |---|----------------|-----|---|------------------|---|------|------|---|
@@ -1395,7 +1395,7 @@ Figure 8-21: 'Write' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. T
 
 {37}------------------------------------------------
 
-![Figure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. The diagram shows a sequence of I2C bytes: S (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Sr (1), Device Address (7), R/W (1), A (1), Data (8), A (1), and P (1). Arrows indicate the direction of data transfer: from Controller to Target for S, Device Address, R/W, A, Register Address, A, Sr, Device Address, R/W, A, Data, A, and P; and from Target to Controller for the second A. Labels '0' Write and '1' Read are placed above the R/W and A bytes respectively. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.](02bb4edc0dbdf4f0749ffd3e0ea2805c_img.jpg)
+![Figure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. The diagram shows a sequence of I2C bytes: S (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Sr (1), Device Address (7), R/W (1), A (1), Data (8), A (1), and P (1). Arrows indicate the direction of data transfer: from Controller to Target for S, Device Address, R/W, A, Register Address, A, Sr, Device Address, R/W, A, Data, A, and P; and from Target to Controller for the second A. Labels '0' Write and '1' Read are placed above the R/W and A bytes respectively. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.](img/02bb4edc0dbdf4f0749ffd3e0ea2805c_img.jpg)
 
 S | Device Address | R/W | A | Register Address | A | Sr | Device Address | R/W | A | Data | A | P  
  "0" Write | "1" Read
@@ -1413,7 +1413,7 @@ Figure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. Th
 
 **Figure 8-22. “Read” Data Transfer Format in Standard-, Fast, Fast-Plus Modes**
 
-![Figure 8-23: Data Transfer Format in HS-Mode. The diagram shows a sequence of I2C bytes: S (1), HS-Code (8), A̅ (1), Sr (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Data (8), A/A̅ (1), and P (1). The sequence is divided into F/S Mode and HS Mode. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.](04cfca33e3fc26513abe649d7474f733_img.jpg)
+![Figure 8-23: Data Transfer Format in HS-Mode. The diagram shows a sequence of I2C bytes: S (1), HS-Code (8), A̅ (1), Sr (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Data (8), A/A̅ (1), and P (1). The sequence is divided into F/S Mode and HS Mode. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.](img/04cfca33e3fc26513abe649d7474f733_img.jpg)
 
 S | HS-Code | A̅ | Sr | Device Address | R/W | A | Register Address | A | Data | A/A̅ | P
 
@@ -1626,7 +1626,7 @@ The following section discusses selection of the external components to complete
 
 ### 10.2 Typical Application
 
-![Typical Application Schematic for TPS6287Bx. The diagram shows a buck converter circuit. Input voltage VIN (2.7V to 6V) is connected to the VIN pin and a 2.2µF input capacitor CIN. The output voltage VOUT is set by a resistor divider RSET1 and RSET2 connected to the VSET1 and VSET2 pins. The output is connected to a load through an inductor L and an output capacitor COUT. The SW pin is connected to the inductor. The MODE/SYNC pin is connected to the output of a comparator (COMP) which also receives feedback from the output voltage through a resistor RZ and capacitor CC. The PG pin is connected to the output of a power good detector (PGD) which also receives feedback from the output voltage through a resistor RPG. The SDA and SCL pins are connected to an I2C interface. The SYNC_OUT pin is shown with a cross, indicating it is not used. The AGND, GND, and PGND pins are connected to ground.](9edb407536d4d4d4a6ac391527af047c_img.jpg)
+![Typical Application Schematic for TPS6287Bx. The diagram shows a buck converter circuit. Input voltage VIN (2.7V to 6V) is connected to the VIN pin and a 2.2µF input capacitor CIN. The output voltage VOUT is set by a resistor divider RSET1 and RSET2 connected to the VSET1 and VSET2 pins. The output is connected to a load through an inductor L and an output capacitor COUT. The SW pin is connected to the inductor. The MODE/SYNC pin is connected to the output of a comparator (COMP) which also receives feedback from the output voltage through a resistor RZ and capacitor CC. The PG pin is connected to the output of a power good detector (PGD) which also receives feedback from the output voltage through a resistor RPG. The SDA and SCL pins are connected to an I2C interface. The SYNC_OUT pin is shown with a cross, indicating it is not used. The AGND, GND, and PGND pins are connected to ground.](img/9edb407536d4d4d4a6ac391527af047c_img.jpg)
 
 Typical Application Schematic for TPS6287Bx. The diagram shows a buck converter circuit. Input voltage VIN (2.7V to 6V) is connected to the VIN pin and a 2.2µF input capacitor CIN. The output voltage VOUT is set by a resistor divider RSET1 and RSET2 connected to the VSET1 and VSET2 pins. The output is connected to a load through an inductor L and an output capacitor COUT. The SW pin is connected to the inductor. The MODE/SYNC pin is connected to the output of a comparator (COMP) which also receives feedback from the output voltage through a resistor RZ and capacitor CC. The PG pin is connected to the output of a power good detector (PGD) which also receives feedback from the output voltage through a resistor RPG. The SDA and SCL pins are connected to an I2C interface. The SYNC\_OUT pin is shown with a cross, indicating it is not used. The AGND, GND, and PGND pins are connected to ground.
 
@@ -1829,7 +1829,7 @@ The compensation capacitor  $C_{C2}$  is an optional capacitor that TI recommend
 
 The [TPS6287B25EVM-024](#) BOM is used in this section and  $f_{SW}= 1.5\text{MHz}$ , unless otherwise noted.
 
-![Figure 10-2: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (45 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.](c22de2cf24282469c2a2cf1018928116_img.jpg)
+![Figure 10-2: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (45 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.](img/c22de2cf24282469c2a2cf1018928116_img.jpg)
 
 $V_{IN} = 5.0\text{V}$  FPWM  $T_A = 25^\circ\text{C}$
 
@@ -1837,7 +1837,7 @@ Figure 10-2: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 25°C
 
 **Figure 10-2. Efficiency vs Output Current**
 
-![Figure 10-3: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.](ac7113ab2270f2d29fbc296fe31432b5_img.jpg)
+![Figure 10-3: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.](img/ac7113ab2270f2d29fbc296fe31432b5_img.jpg)
 
 $V_{IN} = 5.0\text{V}$  FPWM  $T_A = 85^\circ\text{C}$
 
@@ -1845,7 +1845,7 @@ Figure 10-3: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 85°C
 
 **Figure 10-3. Efficiency vs Output Current**
 
-![Figure 10-4: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (30 to 100) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.](1c4139270d1edff9631800a63eabf7f5_img.jpg)
+![Figure 10-4: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (30 to 100) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.](img/1c4139270d1edff9631800a63eabf7f5_img.jpg)
 
 $V_{IN} = 3.3\text{V}$  FPWM  $T_A = 25^\circ\text{C}$
 
@@ -1853,7 +1853,7 @@ Figure 10-4: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 25°C
 
 **Figure 10-4. Efficiency vs Output Current**
 
-![Figure 10-5: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.](4386b8117f7248610045728eb21e1764_img.jpg)
+![Figure 10-5: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.](img/4386b8117f7248610045728eb21e1764_img.jpg)
 
 $V_{IN} = 3.3\text{V}$  FPWM  $T_A = 85^\circ\text{C}$
 
@@ -1861,7 +1861,7 @@ Figure 10-5: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 85°C
 
 **Figure 10-5. Efficiency vs Output Current**
 
-![Figure 10-6: Safe Operating Area graph for VIN = 5.0V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.](b72e949fbca2c3abfa1505dc14880f48_img.jpg)
+![Figure 10-6: Safe Operating Area graph for VIN = 5.0V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.](img/b72e949fbca2c3abfa1505dc14880f48_img.jpg)
 
 $V_{IN} = 5.0\text{V}$  Nat. convection  $T_{JMAX} = 125^\circ\text{C}$
 
@@ -1869,7 +1869,7 @@ Figure 10-6: Safe Operating Area graph for VIN = 5.0V, Nat. convection, TJMAX = 
 
 **Figure 10-6. Safe Operating Area**
 
-![Figure 10-7: Safe Operating Area graph for VIN = 3.3V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.](3f213c9d6480f675a138b7213a9fd4c8_img.jpg)
+![Figure 10-7: Safe Operating Area graph for VIN = 3.3V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.](img/3f213c9d6480f675a138b7213a9fd4c8_img.jpg)
 
 $V_{IN} = 3.3\text{V}$  Nat. convection  $T_{JMAX} = 125^\circ\text{C}$
 
@@ -1879,7 +1879,7 @@ Figure 10-7: Safe Operating Area graph for VIN = 3.3V, Nat. convection, TJMAX = 
 
 {50}------------------------------------------------
 
-![Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The y-axis ranges from 0.397 to 0.4015 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](242fdee4611b447a4206005652ea3c19_img.jpg)
+![Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The y-axis ranges from 0.397 to 0.4015 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](img/242fdee4611b447a4206005652ea3c19_img.jpg)
 
 Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The y-axis ranges from 0.397 to 0.4015 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.
 
@@ -1888,7 +1888,7 @@ droop disabled
 
 **Figure 10-8. Output Voltage vs Output Current**
 
-![Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The y-axis ranges from 0.3874 to 0.4114 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-8, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](4134b40f9161ec8fcd3c28bdb48f80b0_img.jpg)
+![Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The y-axis ranges from 0.3874 to 0.4114 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-8, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](img/4134b40f9161ec8fcd3c28bdb48f80b0_img.jpg)
 
 Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The y-axis ranges from 0.3874 to 0.4114 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-8, with the 25 °C curve being the highest and the 125 °C curve being the lowest.
 
@@ -1897,7 +1897,7 @@ droop enabled
 
 **Figure 10-9. Output Voltage vs Output Current**
 
-![Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The y-axis ranges from 0.794 to 0.8036 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](d4852169b63bedb68b1f3c5b3b9b0cc0_img.jpg)
+![Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The y-axis ranges from 0.794 to 0.8036 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](img/d4852169b63bedb68b1f3c5b3b9b0cc0_img.jpg)
 
 Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The y-axis ranges from 0.794 to 0.8036 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.
 
@@ -1906,7 +1906,7 @@ droop disabled
 
 **Figure 10-10. Output Voltage vs Output Current**
 
-![Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The y-axis ranges from 0.7869 to 0.8133 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-10, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](38d1e71b35df502515a0d850a7966dae_img.jpg)
+![Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The y-axis ranges from 0.7869 to 0.8133 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-10, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](img/38d1e71b35df502515a0d850a7966dae_img.jpg)
 
 Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The y-axis ranges from 0.7869 to 0.8133 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-10, with the 25 °C curve being the highest and the 125 °C curve being the lowest.
 
@@ -1915,7 +1915,7 @@ droop enabled
 
 **Figure 10-11. Output Voltage vs Output Current**
 
-![Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The y-axis ranges from 1.662 to 1.683 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](6c5332a475cc3b84f0989ed3df1e1ebd_img.jpg)
+![Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The y-axis ranges from 1.662 to 1.683 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](img/6c5332a475cc3b84f0989ed3df1e1ebd_img.jpg)
 
 Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The y-axis ranges from 1.662 to 1.683 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.
 
@@ -1924,7 +1924,7 @@ droop disabled
 
 **Figure 10-12. Output Voltage vs Output Current**
 
-![Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The y-axis ranges from 1.6603 to 1.6891 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-12, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](d3d1e4301584c9d0fc1fb134382303e3_img.jpg)
+![Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The y-axis ranges from 1.6603 to 1.6891 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-12, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](img/d3d1e4301584c9d0fc1fb134382303e3_img.jpg)
 
 Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The y-axis ranges from 1.6603 to 1.6891 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-12, with the 25 °C curve being the highest and the 125 °C curve being the lowest.
 
@@ -1935,7 +1935,7 @@ droop enabled
 
 {51}------------------------------------------------
 
-![Figure 10-14: Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.397 to 0.4015) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](4666738057044ad78ced4dbbc0c1bfb3_img.jpg)
+![Figure 10-14: Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.397 to 0.4015) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](img/4666738057044ad78ced4dbbc0c1bfb3_img.jpg)
 
 $V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.4V$   
 droop disabled
@@ -1944,7 +1944,7 @@ Figure 10-14: Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. 
 
 **Figure 10-14. Output Voltage vs Output Current**
 
-![Figure 10-15: Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.3877 to 0.4117) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](11a2ed9ad059f4289e4475247d633e88_img.jpg)
+![Figure 10-15: Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.3877 to 0.4117) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](img/11a2ed9ad059f4289e4475247d633e88_img.jpg)
 
 $V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.4V$   
 droop enabled
@@ -1953,7 +1953,7 @@ Figure 10-15: Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. T
 
 **Figure 10-15. Output Voltage vs Output Current**
 
-![Figure 10-16: Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.793 to 0.8034) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](caeb46d58919c727aa9d338ae9492077_img.jpg)
+![Figure 10-16: Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.793 to 0.8034) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](img/caeb46d58919c727aa9d338ae9492077_img.jpg)
 
 $V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.8V$   
 droop disabled
@@ -1962,7 +1962,7 @@ Figure 10-16: Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. 
 
 **Figure 10-16. Output Voltage vs Output Current**
 
-![Figure 10-17: Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.7868 to 0.8132) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](2120c62a6ad82bcbf85ab00f39f70964_img.jpg)
+![Figure 10-17: Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.7868 to 0.8132) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](img/2120c62a6ad82bcbf85ab00f39f70964_img.jpg)
 
 $V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.8V$   
 droop enabled
@@ -1971,7 +1971,7 @@ Figure 10-17: Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. T
 
 **Figure 10-17. Output Voltage vs Output Current**
 
-![Figure 10-18: Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The graph shows Output Voltage (V) on the y-axis (1.66 to 1.6808) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](9b79cf921e66c449b06621743d69070d_img.jpg)
+![Figure 10-18: Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The graph shows Output Voltage (V) on the y-axis (1.66 to 1.6808) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](img/9b79cf921e66c449b06621743d69070d_img.jpg)
 
 $V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 1.675V$   
 droop disabled
@@ -1980,7 +1980,7 @@ Figure 10-18: Output Voltage vs Output Current for VOUT = 1.675V, droop disabled
 
 **Figure 10-18. Output Voltage vs Output Current**
 
-![Figure 10-19: Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The graph shows Output Voltage (V) on the y-axis (1.657 to 1.6882) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](90a707f5e8b944c0fbb3be48addd16ae_img.jpg)
+![Figure 10-19: Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The graph shows Output Voltage (V) on the y-axis (1.657 to 1.6882) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](img/90a707f5e8b944c0fbb3be48addd16ae_img.jpg)
 
 $V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 1.675V$   
 droop enabled
@@ -1991,7 +1991,7 @@ Figure 10-19: Output Voltage vs Output Current for VOUT = 1.675V, droop enabled.
 
 {52}------------------------------------------------
 
-![Oscilloscope screenshot showing start-up timing. The top trace is VIN, which steps up from 0V to 5V. The bottom trace is VOUT, which rises from 0V to 0.75V. The PWM signal is shown as a high-frequency square wave starting after VIN steps up. Scale bars: 200µs, 500k points, 1.60V.](b1601cda0f9b4fadfd55056c4f8ebce1_img.jpg)
+![Oscilloscope screenshot showing start-up timing. The top trace is VIN, which steps up from 0V to 5V. The bottom trace is VOUT, which rises from 0V to 0.75V. The PWM signal is shown as a high-frequency square wave starting after VIN steps up. Scale bars: 200µs, 500k points, 1.60V.](img/b1601cda0f9b4fadfd55056c4f8ebce1_img.jpg)
 
 Oscilloscope screenshot showing start-up timing. The top trace is VIN, which steps up from 0V to 5V. The bottom trace is VOUT, which rises from 0V to 0.75V. The PWM signal is shown as a high-frequency square wave starting after VIN steps up. Scale bars: 200µs, 500k points, 1.60V.
 
@@ -2000,7 +2000,7 @@ V<sub>IN</sub> = 5V      R<sub>LOAD</sub> = 66mΩ
 
 **Figure 10-20. Start-Up Timing**
 
-![Oscilloscope screenshot showing output voltage ripple. The trace shows a steady-state voltage with small high-frequency oscillations (ripple). Scale bars: 200µs, 500k points, 1.60V.](8e8ee6d2f8a17f2da03923bc97e226d7_img.jpg)
+![Oscilloscope screenshot showing output voltage ripple. The trace shows a steady-state voltage with small high-frequency oscillations (ripple). Scale bars: 200µs, 500k points, 1.60V.](img/8e8ee6d2f8a17f2da03923bc97e226d7_img.jpg)
 
 Oscilloscope screenshot showing output voltage ripple. The trace shows a steady-state voltage with small high-frequency oscillations (ripple). Scale bars: 200µs, 500k points, 1.60V.
 
@@ -2009,7 +2009,7 @@ V<sub>IN</sub> = 3.3V      I<sub>OUT</sub> = 11.3A
 
 **Figure 10-21. Output Voltage Ripple**
 
-![Oscilloscope screenshot showing load transient response with droop disabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](e4d74b50fc10b0f0a08cb2db56123cb9_img.jpg)
+![Oscilloscope screenshot showing load transient response with droop disabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](img/e4d74b50fc10b0f0a08cb2db56123cb9_img.jpg)
 
 Oscilloscope screenshot showing load transient response with droop disabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.
 
@@ -2019,7 +2019,7 @@ disabled
 
 **Figure 10-22. Load Transient Response**
 
-![Oscilloscope screenshot showing load transient response with droop enabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a larger transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](280b9e93811b0d5daa35d0911d48d61f_img.jpg)
+![Oscilloscope screenshot showing load transient response with droop enabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a larger transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](img/280b9e93811b0d5daa35d0911d48d61f_img.jpg)
 
 Oscilloscope screenshot showing load transient response with droop enabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a larger transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.
 
@@ -2029,7 +2029,7 @@ enabled
 
 **Figure 10-23. Load Transient Response**
 
-![Oscilloscope screenshot showing line transient response. The top trace shows VIN stepping up from 3.0V to 4.5V. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](32c8cb1f18ae0cd32fa6d7fd312104ef_img.jpg)
+![Oscilloscope screenshot showing line transient response. The top trace shows VIN stepping up from 3.0V to 4.5V. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](img/32c8cb1f18ae0cd32fa6d7fd312104ef_img.jpg)
 
 Oscilloscope screenshot showing line transient response. The top trace shows VIN stepping up from 3.0V to 4.5V. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.
 
@@ -2045,7 +2045,7 @@ I<sub>OUT</sub> = 16.25A
 
 ### 10.3 Typical Application - TPS6287BxV Devices
 
-![Typical Application Schematic for TPS6287BxV. The diagram shows a buck converter circuit. The input voltage VIN (2.7V to 6V) is connected to the VIN pin and a filter network consisting of REN and CIN. The EN pin is connected to the output of the filter. The VSET4, VSET3, VSET2, and VSET1 pins are connected to ground. The MODE/SYNC pin is connected to the output of a compensation network consisting of RZ, CC, and CC2. The COMP pin is connected to the output of the compensation network. The PG pin is connected to the output of a resistor RPG. The SW pin is connected to the SW pin of the load. The VOSNS and GOSNS pins are connected to the load. The SYNC_OUT pin is connected to the output of the load. The AGND, GND, and GND pins are connected to ground.](0a73b03fba21af142d619a9a662e6490_img.jpg)
+![Typical Application Schematic for TPS6287BxV. The diagram shows a buck converter circuit. The input voltage VIN (2.7V to 6V) is connected to the VIN pin and a filter network consisting of REN and CIN. The EN pin is connected to the output of the filter. The VSET4, VSET3, VSET2, and VSET1 pins are connected to ground. The MODE/SYNC pin is connected to the output of a compensation network consisting of RZ, CC, and CC2. The COMP pin is connected to the output of the compensation network. The PG pin is connected to the output of a resistor RPG. The SW pin is connected to the SW pin of the load. The VOSNS and GOSNS pins are connected to the load. The SYNC_OUT pin is connected to the output of the load. The AGND, GND, and GND pins are connected to ground.](img/0a73b03fba21af142d619a9a662e6490_img.jpg)
 
 Typical Application Schematic for TPS6287BxV. The diagram shows a buck converter circuit. The input voltage VIN (2.7V to 6V) is connected to the VIN pin and a filter network consisting of REN and CIN. The EN pin is connected to the output of the filter. The VSET4, VSET3, VSET2, and VSET1 pins are connected to ground. The MODE/SYNC pin is connected to the output of a compensation network consisting of RZ, CC, and CC2. The COMP pin is connected to the output of the compensation network. The PG pin is connected to the output of a resistor RPG. The SW pin is connected to the SW pin of the load. The VOSNS and GOSNS pins are connected to the load. The SYNC\_OUT pin is connected to the output of the load. The AGND, GND, and GND pins are connected to ground.
 
@@ -2068,7 +2068,9 @@ Table 10-5. Design Parameters
 
 ### 10.4 Typical Application Using Two TPS6287B25 in a Stacked Configuration
 
-![](9e8ebf03cae78f4f81b697548c2d7250_img.jpg)
+![](img/9e8ebf03cae78f4f81b697548c2d7250_img.jpg)
+
+**Figure 10-26. Stacking Two Devices for up to 50 A**
 
 {55}------------------------------------------------
 
@@ -2156,37 +2158,37 @@ The closest standard value from the E12 series is  $1.5 \text{ nF}$ .
 
 #### **10.4.3 Application Curves for Two Stacked Devices**
 
-![Figure 10-27: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 10A and then gradually declines as current increases to 50A.](3881b390d52f27a35faedfc170916c86_img.jpg)
+![Figure 10-27: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 10A and then gradually declines as current increases to 50A.](img/3881b390d52f27a35faedfc170916c86_img.jpg)
 
 Figure 10-27: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 10A and then gradually declines as current increases to 50A.
 
 **Figure 10-27. Efficiency vs Output Current**
 
-![Figure 10-28: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage remains relatively stable around 0.799V across the current range.](2c5884241ad393e03dd8e4ea25ff74a2_img.jpg)
+![Figure 10-28: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage remains relatively stable around 0.799V across the current range.](img/2c5884241ad393e03dd8e4ea25ff74a2_img.jpg)
 
 Figure 10-28: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage remains relatively stable around 0.799V across the current range.
 
 **Figure 10-28. Output Voltage vs Output Current**
 
-![Figure 10-29: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency is slightly lower than at 25°C, peaking around 90-92% at 10-15A.](ead8d1841c351608343c98f30e5f3f07_img.jpg)
+![Figure 10-29: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency is slightly lower than at 25°C, peaking around 90-92% at 10-15A.](img/ead8d1841c351608343c98f30e5f3f07_img.jpg)
 
 Figure 10-29: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency is slightly lower than at 25°C, peaking around 90-92% at 10-15A.
 
 **Figure 10-29. Efficiency vs Output Current**
 
-![Figure 10-30: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage is stable around 0.799V.](fe8672dfa08ec40ce3d9eb6277780260_img.jpg)
+![Figure 10-30: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage is stable around 0.799V.](img/fe8672dfa08ec40ce3d9eb6277780260_img.jpg)
 
 Figure 10-30: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage is stable around 0.799V.
 
 **Figure 10-30. Output Voltage vs Output Current**
 
-![Figure 10-31: Load Transient Response graph for VOUT = 0.75V, PWM; TPS6287B25, droop disabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a small dip during the load increase. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.](79607caa47ed192b11a2c7b17f0b88dd_img.jpg)
+![Figure 10-31: Load Transient Response graph for VOUT = 0.75V, PWM; TPS6287B25, droop disabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a small dip during the load increase. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.](img/79607caa47ed192b11a2c7b17f0b88dd_img.jpg)
 
 Figure 10-31: Load Transient Response graph for VOUT = 0.75V, PWM; TPS6287B25, droop disabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a small dip during the load increase. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.
 
 **Figure 10-31. Load Transient Response**
 
-![Figure 10-32: Load Transient Response graph for VOUT = 0.75V, PWM; TPS628776, droop enabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a more pronounced dip during the load increase compared to Figure 10-31. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.](7c186315a28490783b9bfd6b885caa49_img.jpg)
+![Figure 10-32: Load Transient Response graph for VOUT = 0.75V, PWM; TPS628776, droop enabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a more pronounced dip during the load increase compared to Figure 10-31. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.](img/7c186315a28490783b9bfd6b885caa49_img.jpg)
 
 Figure 10-32: Load Transient Response graph for VOUT = 0.75V, PWM; TPS628776, droop enabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a more pronounced dip during the load increase compared to Figure 10-31. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.
 
@@ -2194,7 +2196,7 @@ Figure 10-32: Load Transient Response graph for VOUT = 0.75V, PWM; TPS628776, dr
 
 {58}------------------------------------------------
 
-![Oscilloscope screenshot showing output voltage ripple. The waveform is a pink line with high-frequency noise. The grid shows 10 divisions horizontally and 2 divisions vertically. The Teledyne LeCroy logo is in the top right. The oscilloscope settings are: Bandwidth: 5.00 MHz, Timebase: 10.00 µs, Trigger: C2 EC.](4c547ec1af44f8fcdc8b1d67662ac30a_img.jpg)
+![Oscilloscope screenshot showing output voltage ripple. The waveform is a pink line with high-frequency noise. The grid shows 10 divisions horizontally and 2 divisions vertically. The Teledyne LeCroy logo is in the top right. The oscilloscope settings are: Bandwidth: 5.00 MHz, Timebase: 10.00 µs, Trigger: C2 EC.](img/4c547ec1af44f8fcdc8b1d67662ac30a_img.jpg)
 
 Bandwidth: 5.00 MHz  
 Timebase: 10.00 µs  
@@ -2216,7 +2218,7 @@ Oscilloscope screenshot showing output voltage ripple. The waveform is a pink li
 
 ### 10.5 Typical Application Using Three TPS6287B25 in a Stacked Configuration
 
-![Circuit diagram showing three TPS6287B25 devices stacked vertically. The top device is the Primary Device, and the two below are Secondary Devices. The Primary Device's VSET1 and VSET2 pins are connected to a resistor divider (R_VSET1, R_VSET2) between V_IN and ground. Its COMP pin is connected to a compensation network (R_z, C_c, C_c2) and an op-amp. Its PG pin is connected to the PG pins of the Secondary Devices. The Secondary Devices have their VSET1 and VSET2 pins connected to ground through 47 kΩ resistors. The SW pins of all three devices are connected in series through inductors (L) to a common output node. The output node is connected to a load through a switch and a capacitor (C_LOAD). The output voltage (V_O) is measured across the load. The input voltage (V_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input. The input voltage (V_O) is measured at the output. The input current (I^2C) is measured at the input. The input voltage (V_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input.](b34c69e1ec326b01c3a485b27b1df5f6_img.jpg)
+![Circuit diagram showing three TPS6287B25 devices stacked vertically. The top device is the Primary Device, and the two below are Secondary Devices. The Primary Device's VSET1 and VSET2 pins are connected to a resistor divider (R_VSET1, R_VSET2) between V_IN and ground. Its COMP pin is connected to a compensation network (R_z, C_c, C_c2) and an op-amp. Its PG pin is connected to the PG pins of the Secondary Devices. The Secondary Devices have their VSET1 and VSET2 pins connected to ground through 47 kΩ resistors. The SW pins of all three devices are connected in series through inductors (L) to a common output node. The output node is connected to a load through a switch and a capacitor (C_LOAD). The output voltage (V_O) is measured across the load. The input voltage (V_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input. The input voltage (V_O) is measured at the output. The input current (I^2C) is measured at the input. The input voltage (V_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input.](img/b34c69e1ec326b01c3a485b27b1df5f6_img.jpg)
 
 The diagram illustrates a stacked configuration of three TPS6287B25 buck converters. The top converter is designated as the 'Primary Device', while the two bottom converters are 'Secondary Devices'.  
 - **Primary Device:** Its  $V_{SET1}$  and  $V_{SET2}$  pins are connected to a resistor divider ( $R_{VSET1}$ ,  $R_{VSET2}$ ) between  $V_{IN}$  and ground. The  $COMP$  pin is connected to a compensation network consisting of a resistor  $R_z$  in series with a parallel combination of capacitors  $C_c$  and  $C_{C2}$ . The  $PG$  pin is connected to the  $PG$  pins of the secondary devices. The  $SW$  pin connects to an inductor  $L$  and the output node. The  $V_{IN}$  pin is connected to the input voltage source ( $V_{IN}$  = 2.7 V to 6 V). The  $V_{OUT}$  pin is connected to the output voltage ( $V_O$ ). The  $I^2C$  pin is connected to the input current ( $I^2C$ ).  
@@ -2231,25 +2233,25 @@ Figure 10-35. Stacking Three Devices
 
 #### 10.5.1 Application Curves
 
-![Figure 10-36: Efficiency vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for different input voltages: VIN = 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 15A and then gradually declines.](da0d310d0e9ecc6bfd61fe15aad963aa_img.jpg)
+![Figure 10-36: Efficiency vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for different input voltages: VIN = 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 15A and then gradually declines.](img/da0d310d0e9ecc6bfd61fe15aad963aa_img.jpg)
 
 Figure 10-36: Efficiency vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for different input voltages: VIN = 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 15A and then gradually declines.
 
 **Figure 10-36. Efficiency vs Output Current**
 
-![Figure 10-37: Output Voltage vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage remains very stable around 0.8V across the entire current range.](ddfefccc6c2fcfadf4e398109548faf8_img.jpg)
+![Figure 10-37: Output Voltage vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage remains very stable around 0.8V across the entire current range.](img/ddfefccc6c2fcfadf4e398109548faf8_img.jpg)
 
 Figure 10-37: Output Voltage vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage remains very stable around 0.8V across the entire current range.
 
 **Figure 10-37. Output Voltage vs Output Current**
 
-![Figure 10-38: Efficiency vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The efficiency curves are slightly lower than those at 25°C, peaking around 92-93%.](e26ba7dcccad6f4ade545e6b56b500fb_img.jpg)
+![Figure 10-38: Efficiency vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The efficiency curves are slightly lower than those at 25°C, peaking around 92-93%.](img/e26ba7dcccad6f4ade545e6b56b500fb_img.jpg)
 
 Figure 10-38: Efficiency vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The efficiency curves are slightly lower than those at 25°C, peaking around 92-93%.
 
 **Figure 10-38. Efficiency vs Output Current**
 
-![Figure 10-39: Output Voltage vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage is stable around 0.8V, with a very slight downward trend at higher currents.](61c876684d8cc2ea8784b52440318350_img.jpg)
+![Figure 10-39: Output Voltage vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage is stable around 0.8V, with a very slight downward trend at higher currents.](img/61c876684d8cc2ea8784b52440318350_img.jpg)
 
 Figure 10-39: Output Voltage vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage is stable around 0.8V, with a very slight downward trend at higher currents.
 
@@ -2284,7 +2286,7 @@ Figure 10-40 shows the top layer of one of the evaluation modules for this devic
 
 #### 10.7.2 Layout Example
 
-![PCB layout diagram for the TPS6287B25 evaluation module (EVM) top layer. The board is red with white traces and purple components. Key components are labeled: VIN (input voltage), CIN (input capacitors), GND (ground), VOUT (output voltage), L (inductor), COUT (output capacitors), and VSET1/VSET2 (voltage sense pins). The layout shows the placement of these components and the routing of the traces connecting them.](714e9fd4751252fd2a667bd05a96ba5c_img.jpg)
+![PCB layout diagram for the TPS6287B25 evaluation module (EVM) top layer. The board is red with white traces and purple components. Key components are labeled: VIN (input voltage), CIN (input capacitors), GND (ground), VOUT (output voltage), L (inductor), COUT (output capacitors), and VSET1/VSET2 (voltage sense pins). The layout shows the placement of these components and the routing of the traces connecting them.](img/714e9fd4751252fd2a667bd05a96ba5c_img.jpg)
 
 PCB layout diagram for the TPS6287B25 evaluation module (EVM) top layer. The board is red with white traces and purple components. Key components are labeled: VIN (input voltage), CIN (input capacitors), GND (ground), VOUT (output voltage), L (inductor), COUT (output capacitors), and VSET1/VSET2 (voltage sense pins). The layout shows the placement of these components and the routing of the traces connecting them.
 
@@ -2322,7 +2324,7 @@ All trademarks are the property of their respective owners.
 
 ### 11.5 Electrostatic Discharge Caution
 
-![Electrostatic Discharge Caution symbol: a triangle with a hand and a lightning bolt inside.](8cd572a1fd79d82ebe767a0471774a35_img.jpg)
+![Electrostatic Discharge Caution symbol: a triangle with a hand and a lightning bolt inside.](img/8cd572a1fd79d82ebe767a0471774a35_img.jpg)
 
 Electrostatic Discharge Caution symbol: a triangle with a hand and a lightning bolt inside.
 
@@ -2428,7 +2430,7 @@ In no event shall TI's liability arising out of such information exceed the tota
 
 ### **TAPE AND REEL INFORMATION**
 
-![Diagrams of Reel and Tape Dimensions with a descriptive table.](bfca6639dd4b8480f2d96d2b61c806d9_img.jpg)
+![Diagrams of Reel and Tape Dimensions with a descriptive table.](img/bfca6639dd4b8480f2d96d2b61c806d9_img.jpg)
 
 **REEL DIMENSIONS**
 
@@ -2454,7 +2456,7 @@ Diagrams of Reel and Tape Dimensions with a descriptive table.
 
 ### **QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE**
 
-![Diagram showing pocket quadrants (Q1-Q4) and sprocket holes with a feed direction arrow.](ada2aa7cce9cff9cf116d9ae2b8b7c27_img.jpg)
+![Diagram showing pocket quadrants (Q1-Q4) and sprocket holes with a feed direction arrow.](img/ada2aa7cce9cff9cf116d9ae2b8b7c27_img.jpg)
 
 Sprocket Holes
 
@@ -2497,7 +2499,7 @@ Diagram showing pocket quadrants (Q1-Q4) and sprocket holes with a feed directio
 
 ### **TAPE AND REEL BOX DIMENSIONS**
 
-![Isometric line drawing of an open tape and reel box with dimension lines for Length (L), Width (W), and Height (H).](87ef82094b0473eb98825e2b8e9cf944_img.jpg)
+![Isometric line drawing of an open tape and reel box with dimension lines for Length (L), Width (W), and Height (H).](img/87ef82094b0473eb98825e2b8e9cf944_img.jpg)
 
 An isometric line drawing of an open rectangular box. The box is shown from a three-quarter perspective, with its lid propped open. Dimension lines with arrows indicate the following measurements: 'L' for the length of the box, 'W' for the width, and 'H' for the height. The drawing is a simple black-and-white line art representation.
 
@@ -2535,7 +2537,7 @@ Isometric line drawing of an open tape and reel box with dimension lines for Len
 
 PLASTIC QUAD FLAT PACK- NO LEAD
 
-![Engineering drawing of the RZV0024A package outline (WQFN-FCRLF, 24-pin plastic quad flat pack - no lead) detailing top, side, and bottom views, along with SECTION A-A typical cross-section and mechanical dimensions in millimeters.](778eada01e468fa925a5d65c31bc66d4_img.jpg)
+![Engineering drawing of the RZV0024A package outline (WQFN-FCRLF, 24-pin plastic quad flat pack - no lead) detailing top, side, and bottom views, along with SECTION A-A typical cross-section and mechanical dimensions in millimeters.](img/778eada01e468fa925a5d65c31bc66d4_img.jpg)
 
 Package outline drawing for 24-pin WQFN-FCRLF:
 
@@ -2556,7 +2558,7 @@ Engineering drawing of the RZV0024A package outline (WQFN-FCRLF, 24-pin plastic 
 
 {71}------------------------------------------------
 
-![LAND PATTERN EXAMPLE diagram showing dimensions and layout for a WQFN-FCRLF package. The diagram shows a central rectangular area for the package with dimensions (2.85) and (2.5) for the top and (3.5) and (3.85) for the right side. It includes various pad sizes and spacing dimensions such as 2X (0.5), 2X (0.75), 20X (0.6), 2X (0.75), 25X (0.5), and (0.25) TYP. Symmetry markers (SYMM) are indicated. The diagram shows exposed metal areas in blue and solder mask openings in green.](9e4179ffe4701bec67534299c4935049_img.jpg)
+![LAND PATTERN EXAMPLE diagram showing dimensions and layout for a WQFN-FCRLF package. The diagram shows a central rectangular area for the package with dimensions (2.85) and (2.5) for the top and (3.5) and (3.85) for the right side. It includes various pad sizes and spacing dimensions such as 2X (0.5), 2X (0.75), 20X (0.6), 2X (0.75), 25X (0.5), and (0.25) TYP. Symmetry markers (SYMM) are indicated. The diagram shows exposed metal areas in blue and solder mask openings in green.](img/9e4179ffe4701bec67534299c4935049_img.jpg)
 
 LAND PATTERN EXAMPLE diagram showing dimensions and layout for a WQFN-FCRLF package. The diagram shows a central rectangular area for the package with dimensions (2.85) and (2.5) for the top and (3.5) and (3.85) for the right side. It includes various pad sizes and spacing dimensions such as 2X (0.5), 2X (0.75), 20X (0.6), 2X (0.75), 25X (0.5), and (0.25) TYP. Symmetry markers (SYMM) are indicated. The diagram shows exposed metal areas in blue and solder mask openings in green.
 
@@ -2564,7 +2566,7 @@ LAND PATTERN EXAMPLE
 EXPOSED METAL SHOWN  
 SCALE: 20X
 
-![SOLDER MASK DETAILS diagram showing two views of a pad. The left view shows 'NON- SOLDER MASK DEFINED (PREFERRED)' with labels for '0.05 MAX ALL AROUND', 'METAL', 'SOLDER MASK OPENING', and 'EXPOSED METAL'. The right view shows 'SOLDER MASK DEFINED' with labels for '0.05 MAX ALL AROUND', 'EXPOSED METAL', 'SOLDER MASK OPENING', and 'METAL UNDER SOLDER MASK'.](b387daba28c5aa523b84b26d6ba3d177_img.jpg)
+![SOLDER MASK DETAILS diagram showing two views of a pad. The left view shows 'NON- SOLDER MASK DEFINED (PREFERRED)' with labels for '0.05 MAX ALL AROUND', 'METAL', 'SOLDER MASK OPENING', and 'EXPOSED METAL'. The right view shows 'SOLDER MASK DEFINED' with labels for '0.05 MAX ALL AROUND', 'EXPOSED METAL', 'SOLDER MASK OPENING', and 'METAL UNDER SOLDER MASK'.](img/b387daba28c5aa523b84b26d6ba3d177_img.jpg)
 
 SOLDER MASK DETAILS diagram showing two views of a pad. The left view shows 'NON- SOLDER MASK DEFINED (PREFERRED)' with labels for '0.05 MAX ALL AROUND', 'METAL', 'SOLDER MASK OPENING', and 'EXPOSED METAL'. The right view shows 'SOLDER MASK DEFINED' with labels for '0.05 MAX ALL AROUND', 'EXPOSED METAL', 'SOLDER MASK OPENING', and 'METAL UNDER SOLDER MASK'.
 
@@ -2579,7 +2581,7 @@ NOTES: (continued)
 
 {72}------------------------------------------------
 
-![Technical drawing of a solder paste stencil for a WQFN-FCRLF package. The drawing shows a top-down view of the stencil with dimensions in millimeters. The overall width is (2.85) mm and the overall height is (3.85) mm. The package itself is (2.5) mm wide and (3.5) mm high. There are 24 solder paste areas, each (0.5) mm wide and (0.71) mm high. The stencil is symmetrical about both axes, as indicated by 'SYMM' and centering symbols. Various other dimensions are provided, including (2.0X (0.6)), (2X (0.75)), (2X (1.17)), (25X (0.5)), (0.75), (1.17), (1.59), and (0.25) TYP. A note indicates (R0.05) TYP for the corners of the package.](347010b7ac06d3ae97927fde0f784d7c_img.jpg)
+![Technical drawing of a solder paste stencil for a WQFN-FCRLF package. The drawing shows a top-down view of the stencil with dimensions in millimeters. The overall width is (2.85) mm and the overall height is (3.85) mm. The package itself is (2.5) mm wide and (3.5) mm high. There are 24 solder paste areas, each (0.5) mm wide and (0.71) mm high. The stencil is symmetrical about both axes, as indicated by 'SYMM' and centering symbols. Various other dimensions are provided, including (2.0X (0.6)), (2X (0.75)), (2X (1.17)), (25X (0.5)), (0.75), (1.17), (1.59), and (0.25) TYP. A note indicates (R0.05) TYP for the corners of the package.](img/347010b7ac06d3ae97927fde0f784d7c_img.jpg)
 
 Technical drawing of a solder paste stencil for a WQFN-FCRLF package. The drawing shows a top-down view of the stencil with dimensions in millimeters. The overall width is (2.85) mm and the overall height is (3.85) mm. The package itself is (2.5) mm wide and (3.5) mm high. There are 24 solder paste areas, each (0.5) mm wide and (0.71) mm high. The stencil is symmetrical about both axes, as indicated by 'SYMM' and centering symbols. Various other dimensions are provided, including (2.0X (0.6)), (2X (0.75)), (2X (1.17)), (25X (0.5)), (0.75), (1.17), (1.59), and (0.25) TYP. A note indicates (R0.05) TYP for the corners of the package.
 

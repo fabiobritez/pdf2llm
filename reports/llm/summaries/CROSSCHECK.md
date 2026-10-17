@@ -89,3 +89,24 @@ Drafted by agy from the compact datasheet text; checked claim by claim by codex 
 - fix: Up to 95% efficiency, 2 A max output current, and 3600 mA typ (3050 mA min, 4150 mA max) input current limit [p1, p6, p7]. -> Up to 95% efficiency; 2 A output current in buck mode and in boost mode at VIN = 4 V, VOUT = 5 V. Average positive input current limit is 3600 mA typ (3050 mA min, 4150 mA max) at VIN = 5.0 V, VOUT = 
 - fix: 50 µA typ quiescent current; +/- 1% dc accuracy in PWM mode and +3% / -1% in PFM mode [p1]. -> 50 µA typ quiescent current [p1]; +/- 1% dc accuracy in PWM mode and +3% / -1% in PFM mode with VIN ≥ 3 V [p7].
 - fix: Integrates soft start, load disconnect, UVLO, overvoltage, and 160 °C typ thermal shutdown for dual Li-Ion, metering, camera, portable PC, and medical applicati -> Integrates soft start, load disconnect, UVLO, overvoltage, and 160 °C typ thermal shutdown for dual Li-Ion, metering, camera, portable PC, and medical applications [p1, p6, p12].
+
+## tps63802
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (3 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: Voltage ranges: input 1.3 V min to 5.5 V max (V_I > 1.8 V min startup); output 1.8 V min to 5.2 V max [p5]. -> Voltage ranges: input 1.3 V min to 5.5 V max (V_I > 1.8 V required during startup until power good); output 1.8 V min to 5.2 V max [p5].
+- fix: Supply current into VIN: 11 μA typ quiescent and 45 nA typ (600 nA max) in shutdown [p6]. -> Supply current into VIN: 11 μA typ quiescent at T_J = 25°C, EN = V_IN = 3.6 V, V_OUT = 3.3 V, not switching; shutdown current 45 nA typ and 600 nA max with EN low, V_IN = 3.6 V, V_OUT = 0 V, specified
+- fix: Switching frequency: 2.1 MHz typ (boost), 1.4 MHz typ (buck-boost), 1.6 MHz typ (buck); line regulation 0.3 % typ, load regulation 0.1 % typ [p7]. -> Typical switching frequency at V_OUT = 3.3 V, no load, MODE = HIGH, T_J = 25°C: 2.1 MHz in boost at V_IN = 2.3 V, 1.4 MHz in buck-boost at V_IN = 3.3 V, and 1.6 MHz in buck at V_IN = 4.3 V. Typical li
+
+## ts3a5018
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (0 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+## tps6287b20
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (4 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: Input voltage range of 2.7V to 6V and three selectable output voltage ranges from 0.4V to 1.675V with ±0.8% accuracy [p1]. -> Input voltage range is 2.7V to 6V; three selectable output voltage ranges span 0.4V to 1.675V [p1], subject to V_OUT ≤ min(1.675V, V_IN − 1.5V) [p6–p7]. Output voltage accuracy is ±0.8% with V_IN ≥ V_
+- fix: Quiescent current of 2.1 mA typ (4.6 mA max) and shutdown current of 18 µA typ (450 µA max) [p7]. -> Quiescent current is 2.1 mA typ (4.6 mA max) with EN high, I_OUT = 0 mA, device not switching, and MODE low. Shutdown current is 18 µA typ (450 µA max) with EN low and V_SW = 0V; the shutdown maximum 
+- fix: I^2C-compatible interface up to 3.4MHz, optional spread spectrum clocking, and optional stacked operation [p1]. -> I^2C-equipped variants support an interface up to 3.4MHz; optional spread spectrum clocking and stacked operation are supported [p1]. VA variants have no I^2C interface [p3].
+- fix: Selects start-up voltage via VSET1 and VSET2 resistors, and supports voltage adjustment, monitoring, and warnings over I^2C [p1]. -> LA0 and HA0 variants select start-up voltage through VSET1 and VSET2 and support voltage adjustment, monitoring, and warnings over I^2C [p1, p3]. JE2 variants use pin 3 as FSET [p4]; VA variants lack 
