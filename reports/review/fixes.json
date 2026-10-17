@@ -2057,5 +2057,31 @@
       "check_struct_tables"
     ],
     "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p43-control3-bit-columns",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 43,
+    "old": "| RESERVED |   |   |   | DROOPEN | SINGLE | PGBLNKDVS |   |\n| R-0b     |   |   |   | R/W-xb  | R/W-0b | R/W-0b    |   |",
+    "new": "| RESERVED |   |   |   |         | DROOPEN | SINGLE | PGBLNKDVS |\n| R-0b     |   |   |   |         | R/W-xb | R/W-0b | R/W-0b    |",
+    "evidence": "PDF words p43 Figure 9-4: bit labels 7..0 at x=86,148,210,273,335,397,460,522; RESERVED x=191 (bits 7-3), DROOPEN x=379-399 (bit 2), SINGLE x=447-462 (bit 1), PGBLNKDVS x=500 (bit 0); R/W-xb/R/W-0b/R/W-0b likewise. Table 9-6 on the same page: DROOPEN bit 2, SINGLE bit 1, PGBLNKDVS bit 0. md had them shifted one bit left. Flagged by codex (gpt-6.1-sol) page review; confirmed by geometry.",
+    "sources": [
+      "codex",
+      "pdf-geometry"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ad5593r-p33-table18-row-descriptions",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 33,
+    "old": "|------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------|\n| 4    | ADC4     | 1: Include the selected ADC channel in the conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 3    | ADC3     | 1: Include the selected ADC channel in the conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 2    | ADC2     | 1: Include the selected ADC channel in the conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 1    | ADC1     | 1: Include the selected ADC channel in the conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 0    | ADC0     | 1: Include the selected ADC channel in the conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |",
+    "new": "|------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------|\n|      |          | 1: Include the selected ADC channel in the conversion sequence.                                                                                                                                               |       |        |\n| 4    | ADC4     | Include the ADC4 channel in conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 3    | ADC3     | Include the ADC3 channel in conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 2    | ADC2     | Include the ADC2 channel in conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 1    | ADC1     | Include the ADC1 channel in conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |\n| 0    | ADC0     | Include the ADC0 channel in conversion sequence.<br>0: The selected ADC channel is not included in the conversion sequence.<br>1: Include the selected ADC channel in the conversion sequence. | 0x0   | R/W    |",
+    "evidence": "PDF text p33 (pymupdf blocks): the page starts with the continuation line '1: Include the selected ADC channel in the conversion sequence.' (end of ADC5 from p32), then each row reads 'n / ADCn / Include the ADCn channel in conversion sequence. / 0x0 / R/W' followed by '0: ...' and '1: ...'. md had the continuation line copied into the start of every ADC4..ADC0 description instead of 'Include the ADCn channel in conversion sequence.'. Flagged by codex (gpt-6.1-sol) page review.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "medium"
   }
 ]
