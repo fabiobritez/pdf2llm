@@ -436,7 +436,7 @@ def compact(text, source='source.md', summary=None):
                 output.append(inline(line))
         i += 1
     body = re.sub(r'\n{3,}', '\n\n', '\n'.join(output)).strip()
-    legend = f'<!-- pdf2llm compact: {source}. [pN] = PDF page N. "Figure (description only, not data)" lines are AI image descriptions (image file given), not measured data. A cross-checked summary and a section index come first; the datasheet text follows. ● = spec applies over full temperature range (as printed). -->'
+    legend = f'<!-- pdf2llm compact: {source}. [pN] = PDF page N, 1-based (the full .md marks that page {{N-1}}). "Figure (description only, not data)" lines are AI image descriptions (image file given), not measured data. A cross-checked summary and a section index come first; the datasheet text follows. ● = spec applies over full temperature range (as printed). -->'
     head = [legend, '']
     if summary and summary.strip():
         head += [SUMMARY_BEGIN, summary.strip(), SUMMARY_END, '']
