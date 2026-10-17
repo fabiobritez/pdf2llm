@@ -1621,5 +1621,109 @@
       "pdf-text"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L346",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IN\\_VS}}$ | Input Voltage Range (Programmable) | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H})$ Low Resolution Mode | ● 0 |  | 6 | V |",
+    "new": "| $V_{\\text{IN\\_VS}}$ | Input Voltage Range (Programmable) | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_n} - V_{\\text{SENSEM}_n})$ Low Resolution Mode | ● 0 |  | 6 | V |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L347",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|  |  | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H})$ High Resolution Mode | ● 0 |  | 3.8 | V |",
+    "new": "|  |  | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_n} - V_{\\text{SENSEM}_n})$ High Resolution Mode | ● 0 |  | 3.8 | V |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L348",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|  |  | Single-Ended Voltage: $V_{\\text{SENSEM}_H}$ | ● -0.1 |  | 0.1 | V |",
+    "new": "|  |  | Single-Ended Voltage: $V_{\\text{SENSEM}_n}$ | ● -0.1 |  | 0.1 | V |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L356",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IN\\_CS}}$ | Current Sense Input Range | Single-Ended Voltage: $I_{\\text{SENSEP}_H}$ , $I_{\\text{SENSEM}_H}$ | ● -0.1 |  | 6 | V |",
+    "new": "| $V_{\\text{IN\\_CS}}$ | Current Sense Input Range | Single-Ended Voltage: $I_{\\text{SENSEP}_n}$ , $I_{\\text{SENSEM}_n}$ | ● -0.1 |  | 6 | V |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L357",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|  |  | Differential Voltage: $V_{\\text{IN\\_CS}} = (I_{\\text{SENSEP}_H} - I_{\\text{SENSEM}_H})$ | ● -170 |  | 170 | mV |",
+    "new": "|  |  | Differential Voltage: $V_{\\text{IN\\_CS}} = (I_{\\text{SENSEP}_n} - I_{\\text{SENSEM}_n})$ | ● -170 |  | 170 | mV |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L372",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{OS\\_CMP}}$                                         | Offset Voltage                                                              | $V_{\\text{DACP}_H} = 0.2\\text{V}$                                                                                                        | ●   | ±1    | ±18   | mV           |",
+    "new": "| $V_{\\text{OS\\_CMP}}$                                         | Offset Voltage                                                              | $V_{\\text{DACP}_n} = 0.2\\text{V}$                                                                                                        | ●   | ±1    | ±18   | mV           |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L373",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | $V_{\\text{DACP}_H} = 1.3\\text{V}$                                                                                                        | ●   | ±2    | ±26   | mV           |",
+    "new": "|                                                              |                                                                             | $V_{\\text{DACP}_n} = 1.3\\text{V}$                                                                                                        | ●   | ±2    | ±26   | mV           |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-subscript-n-L374",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | $V_{\\text{DACP}_H} = 2.65\\text{V}$                                                                                                       | ●   | ±3    | ±52   | mV           |",
+    "new": "|                                                              |                                                                             | $V_{\\text{DACP}_n} = 2.65\\text{V}$                                                                                                       | ●   | ±3    | ±52   | mV           |",
+    "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
   }
 ]
