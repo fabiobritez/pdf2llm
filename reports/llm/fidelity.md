@@ -4,7 +4,7 @@ PASS: 15 datasheets checked; spec-table failures: 0; whole-document numeric sour
 
 PASS requires zero spec-table failures and whole-document numeric source subset True after permitted figure-description deduplication.
 
-Numeric tokens retain signs; − and – normalize to -. Word sets are case-sensitive. Spec tables are paired in document order; all non-separator rows, including headers, are checked cell by cell. Whole-document equality/subset is reported both before and after the permitted figure-description deduplication. Image filenames, links, generated legend and page markers are metadata, not document numeric data.
+Numeric tokens retain signs; − and – normalize to -. Word sets are case-sensitive. Spec tables are paired in document order; all non-separator rows, including headers, are checked cell by cell. Whole-document equality/subset is reported both before and after the permitted figure-description deduplication. Image filenames, links, generated legend and page markers are metadata, not document numeric data. Source accounting excludes TOC, revision history, recognized vendor legal/trademark spans, wholly standard TI support subsections and TI copyright furniture; retained headings are still audited.
 
 ## ad5593r
 
@@ -26,11 +26,11 @@ Before figure deduplication (diagnostic only): source numeric tokens 5776, compa
 
 Spec tables: 8; rows: 91; nonempty cells checked: 350; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2712, compact 2713; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2703, compact 2704; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 3083, compact 2713; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 3074, compact 2704; equal: False; source subset: False.
 
 ## lt1965fb
 
@@ -44,9 +44,9 @@ Before figure deduplication (diagnostic only): source numeric tokens 3201, compa
 
 Spec tables: 32; rows: 470; nonempty cells checked: 3371; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 8509, compact 8509; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 8506, compact 8506; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 8905, compact 8509; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 8902, compact 8506; equal: False; source subset: False.
 
 ## ltc3309a
 
@@ -86,58 +86,58 @@ Before figure deduplication (diagnostic only): source numeric tokens 2970, compa
 
 Spec tables: 12; rows: 159; nonempty cells checked: 1300; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 3376, compact 3378; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 3368, compact 3370; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 2}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 3557, compact 3378; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 3549, compact 3370; equal: False; source subset: False.
 
 ## tps22990
 
 Spec tables: 21; rows: 210; nonempty cells checked: 817; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2224, compact 2226; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2205, compact 2206; equal: False; source subset: True.
 
-- Extra numeric tokens: {'2': 1, '271': 1}.
+- Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2575, compact 2226; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2556, compact 2206; equal: False; source subset: False.
 
 ## tps6287b20
 
 Spec tables: 16; rows: 247; nonempty cells checked: 1056; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 4950, compact 4951; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 4941, compact 4942; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 5487, compact 4951; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 5478, compact 4942; equal: False; source subset: False.
 
 ## tps63070
 
 Spec tables: 13; rows: 128; nonempty cells checked: 547; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2420, compact 2421; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2405, compact 2406; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2695, compact 2421; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2680, compact 2406; equal: False; source subset: False.
 
 ## tps63802
 
 Spec tables: 10; rows: 82; nonempty cells checked: 362; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 1986, compact 1987; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 1976, compact 1977; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2214, compact 1987; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2204, compact 1977; equal: False; source subset: False.
 
 ## ts3a5018
 
 Spec tables: 16; rows: 187; nonempty cells checked: 883; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2356, compact 2357; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2344, compact 2345; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2817, compact 2357; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2805, compact 2345; equal: False; source subset: False.

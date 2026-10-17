@@ -176,6 +176,110 @@ class CompactTests(unittest.TestCase):
             self.assertEqual(report.count('Before figure deduplication (diagnostic only):'), 1)
             self.assertEqual(report.count('Missing `987`'), 1)
 
+    def test_vendor_legal_spans_and_boundaries(self):
+        source = ('### **IMPORTANT NOTICE AND DISCLAIMER**\n\n'
+                  'TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS).\n\n'
+                  'These resources are intended for skilled developers designing with TI products. '
+                  'You are responsible for (1) selection and (2) testing.\n\n'
+                  "TI's products are provided subject to [TI's Terms of Sale](#).\n\n"
+                  'TI objects to and rejects any additional or different terms you may propose.\n\n'
+                  'Mailing Address: Texas Instruments, Dallas, Texas 75265\n\n'
+                  'Copyright © 2026, Texas Instruments Incorporated\n\nLast updated 10/2025\n\n'
+                  '{98}-----\n# PACKAGE OUTLINE\n|Dimension|MIN|MAX|\n|-|-|-|\n|Width|1.25|2.5|\n'
+                  '# Orderable Information\nPART123ABC, 3000 per reel\n')
+        out = compact(source)
+        marker = '(IMPORTANT NOTICE AND DISCLAIMER omitted: vendor boilerplate; see PDF.)'
+        self.assertEqual(out.count(marker), 1)
+        self.assertIn('### IMPORTANT NOTICE AND DISCLAIMER\n' + marker, out)
+        self.assertIn('[p99]', out)
+        self.assertNotIn('75265', out)
+        self.assertNotIn('2026', out)
+        self.assertIn('PART123ABC, 3000 per reel', out)
+        self.assertIn('|Width|1.25|2.5|', out)
+        self.assertFalse(check(source, out)['failures'])
+        self.assertTrue(check(source, out)['deduplicated_numeric']['subset'])
+        bad = check(source, out.replace('PART123ABC, 3000', 'PARTABC, '))
+        self.assertFalse(bad['deduplicated_numeric']['subset'])
+
+    def test_vendor_support_standard_and_document_lists(self):
+        source = ('## Documentation Support\n### Related Documentation\n'
+                  '- [SLVA123 application report](#)\n'
+                  '### 8.2 Receiving Notification of Documentation Updates\n'
+                  'To receive notification of documentation updates, navigate to the device product folder on [ti.com](#). '
+                  'Click on *Notifications* to register and receive a weekly digest of any product information that has changed. '
+                  'For change details, review the revision history included in any revised document.\n'
+                  '{4}-----\n### 8.3 Trademarks\n'
+                  'I2C™ is a trademark of NXP Semiconductors.\n'
+                  'All other trademarks are the property of their respective owners.\n'
+                  '### 8.4 Glossary\n#### [TI Glossary](#)\n\n'
+                  'This glossary lists and explains terms, acronyms, and definitions.\n'
+                  '## Land Pattern\nPad pitch 0.5 mm\n')
+        out = compact(source)
+        self.assertEqual(out.count('omitted: vendor boilerplate'), 3)
+        self.assertIn('SLVA123 application report', out)
+        self.assertIn('Documentation Support', out)
+        self.assertIn('Related Documentation', out)
+        self.assertIn('[p5]', out)
+        self.assertIn('Pad pitch 0.5 mm', out)
+        self.assertNotIn('I2C', out)
+        self.assertTrue(check(source, out)['deduplicated_numeric']['subset'])
+
+    def test_custom_support_sections_are_retained(self):
+        for title in ('Receiving Notification of Documentation Updates', 'Support Resources',
+                      'Trademarks', 'Electrostatic Discharge Caution', 'Glossary', 'Community Resources'):
+            with self.subTest(title=title):
+                source = ('### 7.2 ' + title + '\n\n'
+                          'All other trademarks are the property of their respective owners.\n\n'
+                          'Device-specific threshold 987 mV.\n#### Custom Details\nPin 456.\n')
+                out = compact(source)
+                self.assertNotIn('omitted: vendor boilerplate', out)
+                self.assertIn('All other trademarks', out)
+                self.assertIn('Device-specific threshold 987 mV.', out)
+                self.assertFalse(check(source, out.replace('987', ''))['deduplicated_numeric']['subset'])
+
+    def test_vendor_paragraphs_without_headings(self):
+        for paragraph in (
+                'Information furnished by Analog Devices is believed to be accurate and reliable. No license is granted.',
+                'Information furnished by Linear Technology is believed to be accurate and reliable.',
+                'Maxim Integrated cannot assume responsibility for use of any circuitry other than its products.',
+                'All registered trademarks and trademarks are the property of their respective owners. '
+                'Protected by U.S. patents, including 7382303, 7420359 and 8648623.',
+                'LT, LTC and Linear Technology are registered trademarks and ThinSOT is a trademark of '
+                'Linear Technology Corporation. All other trademarks are the property of their respective owners.'):
+            with self.subTest(paragraph=paragraph):
+                source = 'Part ABC123\n\n' + paragraph + '\n\n## Mechanical\nHeight 1.2 mm'
+                out = compact(source)
+                self.assertNotIn(paragraph, out)
+                self.assertEqual(out.count('omitted: vendor boilerplate'), 1)
+                self.assertIn('Part ABC123', out)
+                self.assertIn('Height 1.2 mm', out)
+                self.assertTrue(check(source, out)['deduplicated_numeric']['subset'])
+                self.assertFalse(check(source, out.replace('1.2', ''))['deduplicated_numeric']['subset'])
+
+    def test_ti_copyright_furniture(self):
+        source = ('Copyright © 2016, Texas Instruments Incorporated\n\n'
+                  'Value 654\n\nCopyright © 2021 Texas Instruments Incorporated **Submit Document Feedback** 9\n\n'
+                  'Copyright © 2016, Texas Instruments Incorporated\n\n'
+                  'Copyright © 2025 Other Vendor\n')
+        out = compact(source)
+        self.assertNotIn('Texas Instruments Incorporated', out)
+        self.assertNotIn('omitted:', out)
+        self.assertIn('Copyright © 2025 Other Vendor', out)
+        self.assertTrue(check(source, out)['deduplicated_numeric']['subset'])
+        self.assertFalse(check(source, out.replace('654', ''))['deduplicated_numeric']['subset'])
+        self.assertEqual([n for n, _ in fidelity.source_lines(source) if n in (1, 5, 7)], [])
+
+    def test_vendor_patterns_preserve_literals_and_tables(self):
+        legal = 'Information furnished by Analog Devices is believed to be accurate and reliable.'
+        source = ('```\n' + legal + '\nCopyright © 2026, Texas Instruments Incorporated\n```\n'
+                  '## Electrostatic Discharge (ESD) Ratings\n|Parameter|MIN|MAX|\n|-|-|-|\n'
+                  '|ESD|1000|2000|\n\n' + legal + '|Model|Package|\n|-|-|\n|ABC123|QFN16|')
+        out = compact(source)
+        self.assertIn('```\n' + legal + '\nCopyright © 2026, Texas Instruments Incorporated\n```', out)
+        self.assertIn('|ESD|1000|2000|', out)
+        self.assertIn(legal + '|Model|Package|', out)
+        self.assertTrue(check(source, out)['deduplicated_numeric']['subset'])
+
     def test_all_datasheets(self):
         for path in sources():
             with self.subTest(datasheet=path.parent.name):

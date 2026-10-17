@@ -34,8 +34,160 @@ def is_separator(row):
     return bool(row) and all(SEPARATOR.fullmatch(c.strip()) for c in row)
 
 
+# Full standard paragraphs: unfamiliar/custom support text is retained.
+STANDARD_SUPPORT = frozenset((
+    "Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and contact information for technical support.",
+    'ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may be more susceptible to damage because very small parametric changes could cause the device not to meet its published specifications.',
+    'Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do not necessarily reflect TI\'s views; see TI\'s Terms of Use.',
+    'SLYZ022 — TI Glossary.',
+    "TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help solve problems with fellow engineers.",
+    "TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight from the experts. Search existing answers or ask your own question to get the quick design help you need.",
+    'TI Glossary This glossary lists and explains terms, acronyms, and definitions.',
+    'The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective contributors. They do not constitute TI specifications and do not necessarily reflect TI\'s views; see TI\'s Terms of Use.',
+    'These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam during storage or handling to prevent electrostatic damage to the MOS gates.',
+    'This glossary lists and explains terms, acronyms, and definitions.',
+    'This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.',
+    'To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on Notifications to register and receive a weekly digest of any product information that has changed. For change details, review the revision history included in any revised document.',
+    'To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on Subscribe to updates to register and receive a weekly digest of any product information that has changed. For change details, review the revision history included in any revised document.',
+    'To receive notification of documentation updates, navigate to the device product folder on ti.com. In the upper right corner, click on Alert me to register and receive a weekly digest of any product information that has changed. For change details, review the revision history included in any revised document.',
+))
+SUPPORT_TITLES = frozenset(('receiving notification of documentation updates',
+    'support resources', 'community resources', 'trademarks',
+    'electrostatic discharge caution', 'glossary'))
+
+
+def vendor_plain(text):
+    text = re.sub(r'!?\[([^\]]*)\]\([^)]*\)', r'\1', text)
+    text = re.sub(r'<[^>]+>', '', text)
+    return ' '.join(html.unescape(text).replace('*', '').split())
+
+
+def trademark_legal(text):
+    ownership = (
+        r'All (?:registered trademarks and trademarks|(?:other )?trademarks) are the property of their respective owners\.'
+        r'|[^.\n]+ (?:is|are) (?:a |an )?(?:registered )?trademarks? of '
+        r'(?:Texas Instruments|NXP Semiconductors|Maxim Integrated Products, Inc|'
+        r'Linear Technology Corporation|Analog Devices(?:,? Inc)?)\.')
+    return bool(re.fullmatch(
+        r'(?:' + ownership + r')(?: (?:' + ownership + r'))*'
+        r'(?: Protected by U\.S\. patents, including [\d, and]+\.)?', text, re.I))
+
+
+def legal_paragraph(text):
+    if '|' in text or re.search(r'!\[|```|~~~', text):
+        return False
+    return bool(re.match(
+        r"(?:TI PROVIDES TECHNICAL AND RELIABILITY DATA\b|These resources are intended for skilled developers designing with TI products\."
+        r"|These resources are subject to change without notice\. TI grants you permission"
+        r"|TI['’]s products are provided subject to TI['’]s Terms of Sale"
+        r"|TI objects to and rejects any additional or different terms you may propose\."
+        r"|Mailing Address: Texas Instruments\b"
+        r"|Information furnished by (?:Analog Devices|Linear Technology) is believed to be accurate"
+        r"|(?:Maxim Integrated|Linear Technology) cannot assume responsibility for use of any circuitry)", text, re.I))
+
+
+def vendor_filter(lines, placeholders=True):
+    """Omit recognized legal paragraphs and wholly standard support sections.
+
+    Retain original line numbers and page boundaries. Never extend a legal
+    paragraph across a heading, table, image or page marker.
+    """
+    out = []
+    i = 0
+    fence = None
+    while i < len(lines):
+        number, line = lines[i]
+        if line.lstrip().startswith(('```', '~~~')):
+            marker = line.lstrip()[:3]
+            fence = None if fence == marker else marker if fence is None else fence
+            out.append(lines[i])
+            i += 1
+            continue
+        if fence:
+            out.append(lines[i])
+            i += 1
+            continue
+        heading = re.match(r'^(#{1,6})\s+(.*)', line)
+        title = re.sub(r'^\d+(?:\.\d+)*\s+', '', vendor_plain(heading[2])) if heading else ''
+        if heading and title.lower() == 'important notice and disclaimer':
+            end = i + 1
+            while end < len(lines) and not re.match(r'^#{1,6}\s+', lines[end][1]):
+                end += 1
+            body = '\n'.join(s for _, s in lines[i + 1:end]
+                             if not re.match(r'^\{\d+\}-{3,}', s))
+            paras = [vendor_plain(p) for p in re.split(r'\n\s*\n', body) if p.strip()]
+            if paras and any(p.upper().startswith('TI PROVIDES TECHNICAL') for p in paras) and all(
+                    legal_paragraph(p) or re.fullmatch(
+                        r'(?:Copyright © [\d, –—-]+,? Texas Instruments Incorporated\.?'
+                        r'|Last updated \d{1,2}/\d{4})', p, re.I) for p in paras):
+                out.append(lines[i])
+                if placeholders:
+                    out.append((number, f'({title} omitted: vendor boilerplate; see PDF.)'))
+                out.extend((n, s) for n, s in lines[i + 1:end] if re.match(r'^\{\d+\}-{3,}', s))
+                i = end
+                continue
+        if heading and title.lower() in SUPPORT_TITLES:
+            end = i + 1
+            while end < len(lines):
+                next_heading = re.match(r'^(#{1,6})\s+(.*)', lines[end][1])
+                # Only the standard TI Glossary link may be a nested heading.
+                if next_heading and not (len(next_heading[1]) > len(heading[1])
+                        and vendor_plain(next_heading[2]) == 'TI Glossary'):
+                    break
+                end += 1
+            body = '\n'.join(s for _, s in lines[i + 1:end]
+                             if not re.match(r'^\{\d+\}-{3,}', s))
+            paras = [vendor_plain(p) for p in re.split(r'\n\s*\n', body) if p.strip()]
+            def standard(p):
+                if title.lower() == 'trademarks':
+                    return trademark_legal(p) and 'Protected by' not in p
+                if p.startswith('####'):
+                    p = p.lstrip('# ').strip()
+                return (p in STANDARD_SUPPORT or p == 'TI Glossary'
+                        or (title.lower() == 'electrostatic discharge caution'
+                            and re.fullmatch(r'Electrostatic Discharge Caution (?:icon|symbol): [^\d]+', p)))
+            if paras and all(standard(p) for p in paras):
+                out.append(lines[i])
+                if placeholders:
+                    out.append((number, f'({title} omitted: vendor boilerplate; see PDF.)'))
+                out.extend((n, s) for n, s in lines[i + 1:end] if re.match(r'^\{\d+\}-{3,}', s))
+                i = end
+                continue
+            out.extend(lines[i:end])
+            i = end
+            continue
+        # These lines are repeated page furniture, with no placeholder needed.
+        if re.fullmatch(r'Copyright © [\d, –—-]+,? Texas Instruments Incorporated\.?(?: Submit Document Feedback \d+)?', vendor_plain(line), re.I):
+            i += 1
+            continue
+        # Paragraphs are bounded by structural content even without blank lines.
+        end = i + 1
+        if line.strip() and not heading and not re.match(r'^\s*(?:[|!`~]|\{\d+\})', line):
+            while end < len(lines) and lines[end][1].strip() and not re.match(
+                    r'^\s*(?:[#|!`~]|\{\d+\}|\*\*)', lines[end][1]):
+                end += 1
+            text = vendor_plain(' '.join(s for _, s in lines[i:end]))
+            legal_title = ('IMPORTANT NOTICE AND DISCLAIMER' if text.lower().startswith(('ti provides', 'these resources', "ti's", 'ti’s', 'ti objects', 'mailing address:'))
+                           else 'Legal Terms and Conditions')
+            if legal_paragraph(text) or trademark_legal(text):
+                if trademark_legal(text):
+                    legal_title = 'Trademarks'
+                # Adjacent legal paragraphs belong to one omitted span.
+                if placeholders and not (out and out[-1][1] == f'({legal_title} omitted: vendor boilerplate; see PDF.)'):
+                    out.append((number, f'({legal_title} omitted: vendor boilerplate; see PDF.)'))
+                i = end
+                # Blank lines between legal paragraphs should not create placeholders.
+                while i < len(lines) and not lines[i][1].strip():
+                    i += 1
+                continue
+        out.append(lines[i])
+        i += 1
+    return out
+
+
 def section_filter(lines):
     """Keep (line number, text), omitting only explicitly unwanted sections."""
+    lines = vendor_filter(lines)
     result = []
     section = None
     revision = False
