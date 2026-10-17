@@ -3175,5 +3175,122 @@
       "pdf-geometry"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p59-table50-vmode-periods",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 59,
+    "old": "| 7    | VMODE_EN_CH7 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 6    | VMODE_EN_CH6 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 5    | VMODE_EN_CH5 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 4    | VMODE_EN_CH4 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 3    | VMODE_EN_CH3 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 2    | VMODE_EN_CH2 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 1    | VMODE_EN_CH1 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 0    | VMODE_EN_CH0 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |",
+    "new": "| 7    | VMODE_EN_CH7 | VMODE enable register..<br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 6    | VMODE_EN_CH6 | VMODE enable register. <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 5    | VMODE_EN_CH5 | VMODE enable register  <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 4    | VMODE_EN_CH4 | VMODE enable register. <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 3    | VMODE_EN_CH3 | VMODE enable register. <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 2    | VMODE_EN_CH2 | VMODE enable register. <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 1    | VMODE_EN_CH1 | VMODE enable register. <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |\n| 0    | VMODE_EN_CH0 | VMODE enable register  <br>0: Set DAC to IMODE.<br>1: Set DAC to VMODE. | 0x0   | R/W    |",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p59 Table 50 descriptions print 'VMODE enable register..' (CH7), '.' (CH6, CH4-CH1) and no period (CH5, CH0); md had '..' on every row.",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p48-common-busyb",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 48,
+    "old": "- 1) Asserting low the Mfr\\_commonBusyb of the MFR\\_COMMON register. MFR\\_COMMON can always be read and will never NACK a byte read request even if the part is busy.",
+    "new": "- 1) Asserting low the Mfr\\_common\\_busyb of the MFR\\_COMMON register. MFR\\_COMMON can always be read and will never NACK a byte read request even if the part is busy.",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p48 'Mfr_common_busyb of the MFR_COMMON register'.",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p70-common-busyb-table",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 70,
+    "old": "| b[6]   | Mfr_commonBusyb          | Returns device busy status.<br>1: The device is available to process PMBus commands.<br>0: The device is busy and will NACK PMBus commands. |",
+    "new": "| b[6]   | Mfr_common_busyb          | Returns device busy status.<br>1: The device is available to process PMBus commands.<br>0: The device is busy and will NACK PMBus commands. |",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p70 'Mfr_common_busyb' (same bit, table).",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p52-propogate",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "Other channels can be held-off if a particular output has failed to discharge by using the bidirectional FAULTB<sub>n</sub> pins (refer to the MFR\\_FAULTB<sub>n</sub>\\_RESPONSE and MFR\\_FAULTB<sub>n</sub>\\_PROPAGATE registers).",
+    "new": "Other channels can be held-off if a particular output has failed to discharge by using the bidirectional FAULTB<sub>n</sub> pins (refer to the MFR\\_FAULTB<sub>n</sub>\\_RESPONSE and MFR\\_FAULTB<sub>n</sub>\\_PROPOGATE registers).",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p52 'MFR_FAULTBn_PROPOGATE registers' (misspelling printed in the PDF; kept verbatim).",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p57-unmasks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 57,
+    "old": "TON\\_MAX\\_FAULT\\_LIMIT is the maximum amount of time that the power supply being controlled by the LTC2975 can attempt to power up the output without reaching the VOUT\\_UV\\_FAULT\\_LIMIT. If it does not, then a TON\\_MAX\\_FAULT is declared. If the output reaches VOUT\\_UV\\_FAULT\\_LIMIT prior to TON\\_MAX\\_FAULT\\_LIMIT, the LTC2975 un.masks the VOUT\\_UV\\_FAULT\\_LIMIT threshold. (Note that a value of zero means there is no limit to how long the power supply can attempt to bring up its output voltage.) This delay is counted using SHARE\\_CLK only.",
+    "new": "TON\\_MAX\\_FAULT\\_LIMIT is the maximum amount of time that the power supply being controlled by the LTC2975 can attempt to power up the output without reaching the VOUT\\_UV\\_FAULT\\_LIMIT. If it does not, then a TON\\_MAX\\_FAULT is declared. If the output reaches VOUT\\_UV\\_FAULT\\_LIMIT prior to TON\\_MAX\\_FAULT\\_LIMIT, the LTC2975 unmasks the VOUT\\_UV\\_FAULT\\_LIMIT threshold. (Note that a value of zero means there is no limit to how long the power supply can attempt to bring up its output voltage.) This delay is counted using SHARE\\_CLK only.",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p57 'the LTC2975 unmasks the VOUT_...'.",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p59-watch-dog-t",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 59,
+    "old": "A non-zero write to the MFR\\_WATCHDOG\\_T register will reset the watchdog timer. Low-to-high transitions on the WDI/RESETB pin also reset the watchdog timer. If the timer expires, ALERTB is asserted and the PWRGD output is optionally de-asserted and then reasserted after MFR\\_PWRGD\\_ASSERTION\\_DELAY ms. Writing 0 to either the MFR\\_WATCHDOG\\_T or MFR\\_WATCHDOG\\_T\\_FIRST registers will disable the timer.",
+    "new": "A non-zero write to the MFR\\_WATCHDOG\\_T register will reset the watchdog timer. Low-to-high transitions on the WDI/RESETB pin also reset the watchdog timer. If the timer expires, ALERTB is asserted and the PWRGD output is optionally de-asserted and then reasserted after MFR\\_PWRGD\\_ASSERTION\\_DELAY ms. Writing 0 to either the MFR\\_WATCH\\_DOG\\_T or MFR\\_WATCHDOG\\_T\\_FIRST registers will disable the timer.",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p59 'Writing 0 to either the MFR_WATCH_DOG_T or MFR_WATCHDOG_T_FIRST' (as printed).",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p17-ltpowercad",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 17,
+    "old": "Applying a load transient and monitoring the response of the system or using a network analyzer to measure the actual loop response are two ways to verify and optimize the control loop stability. [LTPowerCAD®](#) is a useful tool to help optimize the compensation components.",
+    "new": "Applying a load transient and monitoring the response of the system or using a network analyzer to measure the actual loop response are two ways to verify and optimize the control loop stability. [LTpowerCAD®](#) is a useful tool to help optimize the compensation components.",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p17 'LTpowerCAD® is a ...'.",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p13-overtemperature-heading",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 13,
+    "old": "### Overt temperature Protection",
+    "new": "### Overtemperature Protection",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p13 heading 'Overtemperature Protection'.",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p15-psm-as-printed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 15,
+    "old": "Besides continuous conduction mode (PWM), the TPS63802 features power save mode (PFM) operation to achieve high efficiency at light load currents. This is implemented by pausing the switching operation, depending on the load current.",
+    "new": "Besides continuos conduction mode (PWM), the TPS63802 features power safe mode (PFM) operation to achieve high efficiency at light load currents. This is implemented by pausing the switching operation, depending on the load current.",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF text: p15 'Besides continuos conduction mode (PWM), the TPS63802 features power safe mode (PFM)' (typos printed in the PDF; kept verbatim).",
+    "sources": [
+      "grok",
+      "pdf-text"
+    ],
+    "severity": "low"
   }
 ]
