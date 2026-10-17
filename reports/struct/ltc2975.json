@@ -1,15 +1,7 @@
 {
  "tables": 82,
- "rows": 544,
- "ok": 451,
+ "rows": 535,
+ "ok": 443,
  "loose": 92,
- "issues": [
-  {
-   "line": 2848,
-   "page": 62,
-   "status": "unpaired",
-   "tokens": [],
-   "row": "b[2:0]|Iout_oc_fault_response_delay, Iout_uc_fault_response_delay|This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fas"
-  }
- ]
+ "issues": []
 }

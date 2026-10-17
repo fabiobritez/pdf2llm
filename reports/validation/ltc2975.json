@@ -10618,7 +10618,7 @@
     "geometry_rows": {
       "mismatched": 0,
       "order_matched": 29,
-      "out_of_scope": 1218,
+      "out_of_scope": 1210,
       "unverifiable": 5,
       "unverifiable_no_match": 4,
       "unverifiable_prose_ambiguous": 1,
