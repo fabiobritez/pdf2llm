@@ -4315,5 +4315,18 @@
       "pdf-image"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p76-data-block",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "Read only. This 2040-bit (255 byte) datablock contains a copy of the RAM buffer fault log. The RAM buffer is continuously updated after each ADC conversion as long as Mfr\\_fault\\_log\\_status\\_eeprom is clear.",
+    "new": "Read only. This 2040-bit (255 byte) data block contains a copy of the RAM buffer fault log. The RAM buffer is continuously updated after each ADC conversion as long as Mfr\\_fault\\_log\\_status\\_eeprom is clear.",
+    "evidence": "Flagged by grok (grok-4.7) page review; confirmed against PDF words p76 y=509: 'data' x=199 and 'block' x=219 are separate words ('This 2040-bit (255 byte) data block contains a copy of the RAM buffer fault log').",
+    "sources": [
+      "grok",
+      "pdf-words"
+    ],
+    "severity": "low"
   }
 ]
