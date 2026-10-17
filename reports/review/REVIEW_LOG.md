@@ -66,3 +66,42 @@ Medium / low:
 - ltc3315a p4 "Minimum On Time": ● marker sits alone in MIN (no MIN value) - left as is.
 - LTC tables mix "● 2.25" (marker inside MIN cell) with a separate ● column in sub-tables;
   consistent but not uniform.
+
+## Batch 2 (EC tables flagged by the geometry check)
+
+Scope (1-based PDF pages): lt1965fb p4, ltc2975 p5-p10, tps6287b20 p6/p7/p10,
+ts3a5018 p4/p5/p8, sn74avc4t774 p6/p7, tps22990 p5, tps63802 p6.
+
+Method: same as batch 1, plus `tools/review/realign.py`, which rebuilds each md
+row from PDF word geometry (rows aligned in order by their numbers, LTC
+full-temperature marker detected) and proposes the corrected cells. A fix was
+applied only when realign/word geometry agreed with agy and/or grok, or when I
+checked the PDF words/pdftotext by hand (noted as pdf-text/pdf-word-geometry in
+`fixes.json` `sources`). Raw pre-fix reviews: `reports/review/llm_batch2/`.
+Post-fix reviews: `reports/review/llm_batch2_after_fix/`.
+
+| Datasheet | Page | Problem (Datalab) | Evidence | Fix ids (prefix) | Rows |
+|---|---|---|---|---|---|
+| lt1965fb | 4 | ● merged into MIN, MAX lost (Regulated Output, ADJ); ● on rows without it; ADJ/Line Regulation labels shifted; Dropout H-grade row dropped | realign + agy + visual + pdftotext | `lt1965fb-p4-` | 15 |
+| ltc2975 | 5, 6, 7, 9 | "\| ● \| a \| b \|": ● put in MIN, values shifted, MAX/TYP lost, units merged | realign + agy (all) + grok (p5, p6) | `ltc2975-p5..p9-L*-geometry` | 44 |
+| ltc2975 | 10 | t_OFF_MIN 100 ms in MIN (headerless table); Note 10 V_I0 | words (100@TYP), agy; grok + pdftotext | `ltc2975-p10-` | 2 |
+| ltc2975 | 6-8 | absolute-value bars lost in conditions | agy + pdftotext | `ltc2975-p*-abs-bars-` | 16 |
+| ltc2975 | 7 | channel subscript n rendered as _H | agy + pdftotext | `ltc2975-p7-subscript-n-` | 8 |
+| ltc2975 | 8 | (none: ● sits at end of CONDITIONS; only cosmetic notes) | agy | - | 0 |
+| tps6287b20 | 10 | TI shift: values in MIN, MAX lost (R_DS(ON), t_on, t_off, I_SW...) | realign + agy + grok | `tps6287b20-p10-` | 14 |
+| tps6287b20 | 7 | SUPPLY table lost description column: I_Q/I_SD conditions in MIN, MAX in UNIT | agy + grok + words | `tps6287b20-p7-supply-table-columns` | 11 |
+| ts3a5018 | 4 | Abs Max lacked conditions column (I_K/I_IK -50 in UNIT, 0-7 V condition lost); ESD value in UNIT; R_θJA shifted one package | agy + words | `ts3a5018-p4-` | 3 tables |
+| ts3a5018 | 8 | TEST CONDITIONS column lost in 3 tables; 25°C/Full tags wrong | agy + grok + words | `ts3a5018-p8-` | 3 tables |
+| tps22990 | 5 | I_SD,VIN: V_IN sub-condition in T_A column, T_A in MIN | agy + words | `tps22990-p5-isd-vin-columns` | 12 |
+| tps63802 | 6 | R_DS(ON): second condition fragment in MIN | words | `tps63802-p6-rdson-conditions` | 4 |
+| sn74avc4t774 | 6, 7 | false positives (VCCA/VCCB matched Abs Max row; IOH/IOL matched the row holding the centred label) | agy 0, grok 0, words | validator fix | 0 |
+| tps22990 | 6 | false positives (R_ON 105°C rows matched a row of the next table) | words | validator fix | 0 |
+| ad5711r | 5 | Headroom 70/50, Footroom 250/120 (MIN > TYP) | words: the PDF prints exactly that | faithful, left as is | 0 |
+| tps6287b20 / ts3a5018 | 6 / 5 | realign proposals were cosmetic (footnote, units); agy 0 | agy | - | 0 |
+
+Validator changes driven by this batch (tests in `tools/test_validate.py`):
+explicit ambiguity, value fallback abstains when values recur in another table,
+numeric-range cells as row anchors, band word ownership, codex advisory review
+items (whole-word Conditions/Comments header, MIN+MAX for Title-case headers,
+formula skip needs an operator and whole-token numbers), and an `out_of_scope`
+count for rows of non-spec tables.
