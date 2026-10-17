@@ -270,18 +270,18 @@ Over operating temperature range (unless otherwise noted)
 
 over operating junction temperature ( $T_J = -40\text{ °C}$  to  $+125\text{ °C}$ ) and  $V_{IN} = 2.7\text{ V}$  to  $6\text{ V}$ . Typical values at  $V_{IN} = 5\text{ V}$  and  $T_J = 25\text{ °C}$  (unless otherwise noted).
 
-| PARAMETER        | TEST CONDITIONS                                       | MIN                                                                    | TYP | MAX | UNIT   |
-|------------------|-------------------------------------------------------|------------------------------------------------------------------------|-----|-----|--------|
-| <b>SUPPLY</b>    |                                                       |                                                                        |     |     |        |
-| $I_Q$            | Quiescent current                                     | EN = High, $I_{OUT} = 0\text{ mA}$ , device not switching; MODE = Low  |     | 2.1 | 4.6 mA |
-| $I_{SD}$         | Shutdown current                                      | EN = Low, $V_{(SW)} = 0\text{ V}$ , max value at $T_J = 125\text{ °C}$ |     | 18  | 450 µA |
-| $V_{IT+ (UVLO)}$ | Positive-going UVLO threshold voltage (VIN)           | 2.5                                                                    | 2.6 | 2.7 | V      |
-| $V_{IT-(UVLO)}$  | Negative-going UVLO threshold voltage (VIN)           | 2.4                                                                    | 2.5 | 2.6 | V      |
-| $V_{hys(UVLO)}$  | UVLO hysteresis voltage (VIN)                         | 80                                                                     |     |     | mV     |
-| $V_{IT+ (OVLO)}$ | Positive-going OVLO threshold voltage (VIN)           | 6.1                                                                    | 6.3 | 6.5 | V      |
-| $V_{IT-(OVLO)}$  | Negative-going OVLO threshold voltage (VIN)           | 6.0                                                                    | 6.2 | 6.4 | V      |
-| $V_{hys(OVLO)}$  | OVLO hysteresis voltage (VIN)                         | 80                                                                     |     |     | mV     |
-| $V_{IT-(POR)}$   | Negative-going power-on reset threshold voltage (VIN) | 1.4                                                                    |     |     | V      |
+| PARAMETER | | TEST CONDITIONS | MIN | TYP | MAX | UNIT |
+|---|---|---|---|---|---|---|
+| <b>SUPPLY</b> |  |  |  |  |  |  |
+| $I_Q$ | Quiescent current | EN = High, $I_{OUT} = 0\text{ mA}$ , device not switching; MODE = Low | | 2.1 | 4.6 | mA |
+| $I_{SD}$ | Shutdown current | EN = Low, $V_{(SW)} = 0\text{ V}$ , max value at $T_J = 125\text{ °C}$ | | 18 | 450 | µA |
+| $V_{IT+ (UVLO)}$ | Positive-going UVLO threshold voltage (VIN) |  | 2.5 | 2.6 | 2.7 | V |
+| $V_{IT-(UVLO)}$ | Negative-going UVLO threshold voltage (VIN) |  | 2.4 | 2.5 | 2.6 | V |
+| $V_{hys(UVLO)}$ | UVLO hysteresis voltage (VIN) |  | 80 |  |  | mV |
+| $V_{IT+ (OVLO)}$ | Positive-going OVLO threshold voltage (VIN) |  | 6.1 | 6.3 | 6.5 | V |
+| $V_{IT-(OVLO)}$ | Negative-going OVLO threshold voltage (VIN) |  | 6.0 | 6.2 | 6.4 | V |
+| $V_{hys(OVLO)}$ | OVLO hysteresis voltage (VIN) |  | 80 |  |  | mV |
+| $V_{IT-(POR)}$ | Negative-going power-on reset threshold voltage (VIN) |  | 1.4 |  |  | V |
 
 {7}------------------------------------------------
 

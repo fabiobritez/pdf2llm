@@ -29,7 +29,10 @@ def main() -> int:
         path = ROOT / fix["file"]
         text = texts.setdefault(fix["file"], path.read_text(encoding="utf-8"))
         count = text.count(fix["old"])
-        if count == 1:
+        if fix["new"] and fix["old"] in fix["new"] and text.count(fix["new"]) == 1:
+            # insertion-style fix (new extends old): already applied once
+            status.append(("already", fix["id"]))
+        elif count == 1:
             texts[fix["file"]] = text.replace(fix["old"], fix["new"], 1)
             status.append(("apply", fix["id"]))
         elif count == 0 and fix["new"] and fix["new"] in text:
