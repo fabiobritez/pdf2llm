@@ -3110,5 +3110,57 @@
       "pdf-geometry"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ad5711r-p12-L538-cs-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 12,
+    "old": "| D5             | CS       | DI   | Active Low Control Input. This is the frame synchronization signal for the input data.                                                                                                                                                                                                                  |",
+    "new": "| D5             | $\\overline{\\text{CS}}$ | DI   | Active Low Control Input. This is the frame synchronization signal for the input data.                                                                                                                                                                                                                  |",
+    "evidence": "Table 8 (p12) prints CS with an overbar (active low); checked visually on a 200 dpi crop. Same notation as the md's existing $\\overline{\\text{CS}}$. Flagged by grok (grok-4.7) struct page review.",
+    "sources": [
+      "grok",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-p12-L548-reset-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 12,
+    "old": "| C4             | RESET    | DI   | Asynchronous Reset. Active low logic input, low level triggered.                                                                                                                                                                                                                                        |",
+    "new": "| C4             | $\\overline{\\text{RESET}}$ | DI   | Asynchronous Reset. Active low logic input, low level triggered.                                                                                                                                                                                                                                        |",
+    "evidence": "Table 8 (p12) prints RESET with an overbar (active low); checked visually on a 200 dpi crop. Same notation as the md's existing $\\overline{\\text{RESET}}$. Flagged by grok (grok-4.7) struct page review.",
+    "sources": [
+      "grok",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-p12-L549-ldac-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 12,
+    "old": "| A5             | LDAC     | DI   | Asynchronous Load DAC. Active low logic input, falling edge sensitive.                                                                                                                                                                                                                                  |",
+    "new": "| A5             | $\\overline{\\text{LDAC}}$ | DI   | Asynchronous Load DAC. Active low logic input, falling edge sensitive.                                                                                                                                                                                                                                  |",
+    "evidence": "Table 8 (p12) prints LDAC with an overbar (active low); checked visually on a 200 dpi crop. Same notation as the md's existing $\\overline{\\text{LDAC}}$. Flagged by grok (grok-4.7) struct page review.",
+    "sources": [
+      "grok",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p3-pins-9-10-vout",
+    "file": "output/tps22990/tps22990.md",
+    "page": 3,
+    "old": "| 8   | VOUT              | O    | Switch output                                                                                                                                    |\n| 9   |                   |      |                                                                                                                                                  |\n| 10  |                   |      |                                                                                                                                                  |",
+    "new": "| 8   | VOUT              | O    | Switch output                                                                                                                                    |\n| 9   | VOUT              | O    | Switch output                                                                                                                                    |\n| 10  | VOUT              | O    | Switch output                                                                                                                                    |",
+    "evidence": "Pin Functions (p3): NAME 'VOUT', TYPE 'O' and 'Switch output' are one merged cell vertically centred at y=523 over pin rows 8 (y=510), 9 (y=523) and 10 (y=536); the md left pins 9 and 10 blank. Merged cell repeated on each row. Flagged by grok (grok-4.7); confirmed by PDF word geometry.",
+    "sources": [
+      "grok",
+      "pdf-geometry"
+    ],
+    "severity": "high"
   }
 ]
