@@ -2579,11 +2579,12 @@
   "pdf_pages": 22,
   "summary": {
     "geometry_rows": {
-      "mismatched": 11,
-      "unverifiable": 191,
-      "verified_ok": 13
+      "mismatched": 12,
+      "unverifiable": 160,
+      "value_matched": 31,
+      "verified_ok": 43
     },
-    "high_confidence_table_rows": 11,
+    "high_confidence_table_rows": 12,
     "low_coverage_text_pages": 1,
     "mean_number_coverage": 0.9871794871794872,
     "mean_word_coverage": 0.9947320534813753,
@@ -2591,7 +2592,7 @@
     "status": "BAD",
     "table_issue_counts": {
       "column shift": 0,
-      "geometry column mismatch": 21,
+      "geometry column mismatch": 23,
       "geometry missing value": 10,
       "missing unit": 0,
       "ordering": 0,
@@ -3002,6 +3003,32 @@
       "row": "Line Regulation | 2.3V < VIN < 20V, 1mA < ILOAD < 1A (HGrade, TJ > 125degC) |  | 1.158 | 1.236 | V",
       "type": "geometry column mismatch",
       "value": "1.158"
+    },
+    {
+      "confidence": "high",
+      "detail": "0.2: Markdown TYP, PDF MIN",
+      "line": 205,
+      "md_column": "TYP",
+      "md_line": 205,
+      "page": 4,
+      "parameter": "VOUT = On to Off",
+      "pdf_column": "MIN",
+      "row": " | VOUT = On to Off | ● | 0.2 | 0.45 | V",
+      "type": "geometry column mismatch",
+      "value": "0.2"
+    },
+    {
+      "confidence": "high",
+      "detail": "0.45: Markdown MAX, PDF TYP",
+      "line": 205,
+      "md_column": "MAX",
+      "md_line": 205,
+      "page": 4,
+      "parameter": "VOUT = On to Off",
+      "pdf_column": "TYP",
+      "row": " | VOUT = On to Off | ● | 0.2 | 0.45 | V",
+      "type": "geometry column mismatch",
+      "value": "0.45"
     }
   ],
   "warnings": []

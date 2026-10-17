@@ -6198,11 +6198,12 @@
   "pdf_pages": 74,
   "summary": {
     "geometry_rows": {
-      "mismatched": 9,
-      "unverifiable": 392,
-      "verified_ok": 101
+      "mismatched": 14,
+      "unverifiable": 351,
+      "value_matched": 41,
+      "verified_ok": 137
     },
-    "high_confidence_table_rows": 9,
+    "high_confidence_table_rows": 14,
     "low_coverage_text_pages": 2,
     "mean_number_coverage": 0.9289574080489726,
     "mean_word_coverage": 0.9479040693805979,
@@ -6210,8 +6211,8 @@
     "status": "BAD",
     "table_issue_counts": {
       "column shift": 2,
-      "geometry column mismatch": 13,
-      "geometry missing value": 2,
+      "geometry column mismatch": 18,
+      "geometry missing value": 6,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
@@ -6344,6 +6345,58 @@
     },
     {
       "confidence": "high",
+      "detail": "3.4: Markdown MIN, PDF TYP",
+      "line": 381,
+      "md_column": "MIN",
+      "md_line": 381,
+      "page": 10,
+      "parameter": "RDS(ON) / Highside FET static onresistance / VIN = 3.3 V",
+      "pdf_column": "TYP",
+      "row": "RDS(ON) | Highside FET static onresistance | VIN = 3.3 V | 3.4 |  |  | m omega",
+      "type": "geometry column mismatch",
+      "value": "3.4"
+    },
+    {
+      "confidence": "high",
+      "detail": "6.4: Markdown MISSING, PDF MAX",
+      "line": 381,
+      "md_column": "MISSING",
+      "md_line": 381,
+      "page": 10,
+      "parameter": "RDS(ON) / Highside FET static onresistance / VIN = 3.3 V",
+      "pdf_column": "MAX",
+      "row": "RDS(ON) | Highside FET static onresistance | VIN = 3.3 V | 3.4 |  |  | m omega",
+      "type": "geometry missing value",
+      "value": "6.4"
+    },
+    {
+      "confidence": "high",
+      "detail": "1.9: Markdown MIN, PDF TYP",
+      "line": 382,
+      "md_column": "MIN",
+      "md_line": 382,
+      "page": 10,
+      "parameter": "RDS(ON) / Lowside FET static onresistance / VIN = 3.3 V",
+      "pdf_column": "TYP",
+      "row": "RDS(ON) | Lowside FET static onresistance | VIN = 3.3 V | 1.9 |  |  | m omega",
+      "type": "geometry column mismatch",
+      "value": "1.9"
+    },
+    {
+      "confidence": "high",
+      "detail": "3.6: Markdown MISSING, PDF MAX",
+      "line": 382,
+      "md_column": "MISSING",
+      "md_line": 382,
+      "page": 10,
+      "parameter": "RDS(ON) / Lowside FET static onresistance / VIN = 3.3 V",
+      "pdf_column": "MAX",
+      "row": "RDS(ON) | Lowside FET static onresistance | VIN = 3.3 V | 1.9 |  |  | m omega",
+      "type": "geometry missing value",
+      "value": "3.6"
+    },
+    {
+      "confidence": "high",
       "detail": "0.1: Markdown TYP, PDF MAX",
       "line": 383,
       "md_column": "TYP",
@@ -6354,6 +6407,19 @@
       "row": "I(SW)(off) | SW pin current when HSFET and LSFET are off | VIN = 6 V ; V(SW) = 0 V , TJ = 25 degC | -1.5 | 0.1 |  | u A",
       "type": "geometry column mismatch",
       "value": "0.1"
+    },
+    {
+      "confidence": "high",
+      "detail": "130: Markdown TYP, PDF MAX",
+      "line": 384,
+      "md_column": "TYP",
+      "md_line": 384,
+      "page": 10,
+      "parameter": "SW pin current when HSFET and LSFET are off / VIN = 6 V ; V(SW) = 6 V , TJ = 25 degC",
+      "pdf_column": "MAX",
+      "row": " | SW pin current when HSFET and LSFET are off | VIN = 6 V ; V(SW) = 6 V , TJ = 25 degC | 60 | 130 |  | u A",
+      "type": "geometry column mismatch",
+      "value": "130"
     },
     {
       "confidence": "high",
@@ -6419,6 +6485,58 @@
       "row": "ton, min | Minimum ontime of HS FET | VIN = 3.3 V | 45 |  |  | ns",
       "type": "geometry missing value",
       "value": "53"
+    },
+    {
+      "confidence": "high",
+      "detail": "35: Markdown MIN, PDF TYP",
+      "line": 396,
+      "md_column": "MIN",
+      "md_line": 396,
+      "page": 10,
+      "parameter": "ton, min / Minimum ontime of HS FET / VIN = 5 V",
+      "pdf_column": "TYP",
+      "row": "ton, min | Minimum ontime of HS FET | VIN = 5 V | 35 |  |  | ns",
+      "type": "geometry column mismatch",
+      "value": "35"
+    },
+    {
+      "confidence": "high",
+      "detail": "44: Markdown MISSING, PDF MAX",
+      "line": 396,
+      "md_column": "MISSING",
+      "md_line": 396,
+      "page": 10,
+      "parameter": "ton, min / Minimum ontime of HS FET / VIN = 5 V",
+      "pdf_column": "MAX",
+      "row": "ton, min | Minimum ontime of HS FET | VIN = 5 V | 35 |  |  | ns",
+      "type": "geometry missing value",
+      "value": "44"
+    },
+    {
+      "confidence": "high",
+      "detail": "70: Markdown MIN, PDF TYP",
+      "line": 397,
+      "md_column": "MIN",
+      "md_line": 397,
+      "page": 10,
+      "parameter": "toff, min / Minimum offtime of HS FET / VIN = 5 V",
+      "pdf_column": "TYP",
+      "row": "toff, min | Minimum offtime of HS FET | VIN = 5 V | 70 |  |  | ns",
+      "type": "geometry column mismatch",
+      "value": "70"
+    },
+    {
+      "confidence": "high",
+      "detail": "100: Markdown MISSING, PDF MAX",
+      "line": 397,
+      "md_column": "MISSING",
+      "md_line": 397,
+      "page": 10,
+      "parameter": "toff, min / Minimum offtime of HS FET / VIN = 5 V",
+      "pdf_column": "MAX",
+      "row": "toff, min | Minimum offtime of HS FET | VIN = 5 V | 70 |  |  | ns",
+      "type": "geometry missing value",
+      "value": "100"
     },
     {
       "confidence": "high",

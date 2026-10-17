@@ -2797,11 +2797,12 @@
   "pdf_pages": 34,
   "summary": {
     "geometry_rows": {
-      "mismatched": 0,
-      "unverifiable": 216,
-      "verified_ok": 20
+      "mismatched": 6,
+      "unverifiable": 167,
+      "value_matched": 49,
+      "verified_ok": 63
     },
-    "high_confidence_table_rows": 12,
+    "high_confidence_table_rows": 18,
     "low_coverage_text_pages": 1,
     "mean_number_coverage": 0.9300420168067226,
     "mean_word_coverage": 0.9827829886382125,
@@ -2810,7 +2811,7 @@
     "table_issue_counts": {
       "column shift": 12,
       "geometry column mismatch": 0,
-      "geometry missing value": 0,
+      "geometry missing value": 6,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
@@ -3009,6 +3010,84 @@
       "page": 5,
       "row": " |  |  | –40°C to +105°C |  | 2 | ",
       "type": "unit in wrong column"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown MISSING, PDF TYP",
+      "line": 286,
+      "md_column": "MISSING",
+      "md_line": 286,
+      "page": 6,
+      "parameter": "-40degC to +105degC",
+      "pdf_column": "TYP",
+      "row": " |  |  | -40degC to +105degC |  |  | 6 | ",
+      "type": "geometry missing value",
+      "value": "4.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown MISSING, PDF TYP",
+      "line": 289,
+      "md_column": "MISSING",
+      "md_line": 289,
+      "page": 6,
+      "parameter": "-40degC to +105degC",
+      "pdf_column": "TYP",
+      "row": " |  |  | -40degC to +105degC |  |  | 6 | ",
+      "type": "geometry missing value",
+      "value": "4.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown MISSING, PDF TYP",
+      "line": 292,
+      "md_column": "MISSING",
+      "md_line": 292,
+      "page": 6,
+      "parameter": "-40degC to +105degC",
+      "pdf_column": "TYP",
+      "row": " |  |  | -40degC to +105degC |  |  | 6 | ",
+      "type": "geometry missing value",
+      "value": "4.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown MISSING, PDF TYP",
+      "line": 295,
+      "md_column": "MISSING",
+      "md_line": 295,
+      "page": 6,
+      "parameter": "-40degC to +105degC",
+      "pdf_column": "TYP",
+      "row": " |  |  | -40degC to +105degC |  |  | 6 | ",
+      "type": "geometry missing value",
+      "value": "4.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown MISSING, PDF TYP",
+      "line": 298,
+      "md_column": "MISSING",
+      "md_line": 298,
+      "page": 6,
+      "parameter": "-40degC to +105degC",
+      "pdf_column": "TYP",
+      "row": " |  |  | -40degC to +105degC |  |  | 6 | ",
+      "type": "geometry missing value",
+      "value": "4.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown MISSING, PDF TYP",
+      "line": 301,
+      "md_column": "MISSING",
+      "md_line": 301,
+      "page": 6,
+      "parameter": "-40degC to +105degC",
+      "pdf_column": "TYP",
+      "row": " |  |  | -40degC to +105degC |  |  | 6 | ",
+      "type": "geometry missing value",
+      "value": "4.5"
     }
   ],
   "warnings": []

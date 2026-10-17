@@ -3391,6 +3391,7 @@
     "geometry_rows": {
       "mismatched": 4,
       "unverifiable": 276,
+      "value_matched": 0,
       "verified_ok": 19
     },
     "high_confidence_table_rows": 4,

@@ -3319,8 +3319,9 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 5,
-      "unverifiable": 183,
-      "verified_ok": 34
+      "unverifiable": 146,
+      "value_matched": 37,
+      "verified_ok": 71
     },
     "high_confidence_table_rows": 5,
     "low_coverage_text_pages": 2,

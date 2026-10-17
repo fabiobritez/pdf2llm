@@ -10646,11 +10646,12 @@
   "pdf_pages": 108,
   "summary": {
     "geometry_rows": {
-      "mismatched": 25,
-      "unverifiable": 1304,
-      "verified_ok": 49
+      "mismatched": 41,
+      "unverifiable": 1254,
+      "value_matched": 50,
+      "verified_ok": 83
     },
-    "high_confidence_table_rows": 25,
+    "high_confidence_table_rows": 41,
     "low_coverage_text_pages": 0,
     "mean_number_coverage": 0.9945707070707072,
     "mean_word_coverage": 0.9884291527909282,
@@ -10658,8 +10659,8 @@
     "status": "BAD",
     "table_issue_counts": {
       "column shift": 0,
-      "geometry column mismatch": 40,
-      "geometry missing value": 5,
+      "geometry column mismatch": 57,
+      "geometry missing value": 6,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
@@ -10667,6 +10668,19 @@
     }
   },
   "table_issues": [
+    {
+      "confidence": "high",
+      "detail": "4.5: Markdown TYP, PDF MIN",
+      "line": 279,
+      "md_column": "TYP",
+      "md_line": 279,
+      "page": 5,
+      "parameter": "VPWR / VPWR Supply Input Operating Range / VDD33 Floating",
+      "pdf_column": "MIN",
+      "row": "VPWR | VPWR Supply Input Operating Range | VDD33 Floating | ● | 4.5 | 15 | V",
+      "type": "geometry column mismatch",
+      "value": "4.5"
+    },
     {
       "confidence": "high",
       "detail": "2.25: Markdown TYP, PDF MIN",
@@ -10799,6 +10813,45 @@
     },
     {
       "confidence": "high",
+      "detail": "2.35: Markdown TYP, PDF MIN",
+      "line": 287,
+      "md_column": "TYP",
+      "md_line": 287,
+      "page": 5,
+      "parameter": "VDD25 / Regulator Output Voltage / 3.13V <= VDD33 <= 3.47V",
+      "pdf_column": "MIN",
+      "row": "VDD25 | Regulator Output Voltage | 3.13V <= VDD33 <= 3.47V | ● | 2.35 | 2.5 | V",
+      "type": "geometry column mismatch",
+      "value": "2.35"
+    },
+    {
+      "confidence": "high",
+      "detail": "2.5: Markdown MAX, PDF TYP",
+      "line": 287,
+      "md_column": "MAX",
+      "md_line": 287,
+      "page": 5,
+      "parameter": "VDD25 / Regulator Output Voltage / 3.13V <= VDD33 <= 3.47V",
+      "pdf_column": "TYP",
+      "row": "VDD25 | Regulator Output Voltage | 3.13V <= VDD33 <= 3.47V | ● | 2.35 | 2.5 | V",
+      "type": "geometry column mismatch",
+      "value": "2.5"
+    },
+    {
+      "confidence": "high",
+      "detail": "2.6: Markdown MISSING, PDF MAX",
+      "line": 287,
+      "md_column": "MISSING",
+      "md_line": 287,
+      "page": 5,
+      "parameter": "VDD25 / Regulator Output Voltage / 3.13V <= VDD33 <= 3.47V",
+      "pdf_column": "MAX",
+      "row": "VDD25 | Regulator Output Voltage | 3.13V <= VDD33 <= 3.47V | ● | 2.35 | 2.5 | V",
+      "type": "geometry missing value",
+      "value": "2.6"
+    },
+    {
+      "confidence": "high",
       "detail": "30: Markdown TYP, PDF MIN",
       "line": 288,
       "md_column": "TYP",
@@ -10877,6 +10930,19 @@
     },
     {
       "confidence": "high",
+      "detail": "0: Markdown TYP, PDF MIN",
+      "line": 302,
+      "md_column": "TYP",
+      "md_line": 302,
+      "page": 6,
+      "parameter": "VINADC / Voltage Sense Input Range / Differential Voltage: VINADC = (VSENSEPn - VSENSEMn )",
+      "pdf_column": "MIN",
+      "row": "VINADC | Voltage Sense Input Range | Differential Voltage: VINADC = (VSENSEPn - VSENSEMn ) | ● | 0 | 6 | V",
+      "type": "geometry column mismatch",
+      "value": "0"
+    },
+    {
+      "confidence": "high",
       "detail": "-0.1: Markdown TYP, PDF MIN",
       "line": 303,
       "md_column": "TYP",
@@ -10900,6 +10966,19 @@
       "row": " | Current Sense Input Range | SingleEnded Voltage: ISENSEPn , ISENSEMn | ● | -0.1 | 6 | V",
       "type": "geometry column mismatch",
       "value": "-0.1"
+    },
+    {
+      "confidence": "high",
+      "detail": "-170: Markdown TYP, PDF MIN",
+      "line": 305,
+      "md_column": "TYP",
+      "md_line": 305,
+      "page": 6,
+      "parameter": "Differential Current Sense Voltage: VINADC = (ISENSEPn - ISENSEMn )",
+      "pdf_column": "MIN",
+      "row": " |  | Differential Current Sense Voltage: VINADC = (ISENSEPn - ISENSEMn ) | ● | -170 | 170 | mV",
+      "type": "geometry column mismatch",
+      "value": "-170"
     },
     {
       "confidence": "high",
@@ -11020,6 +11099,71 @@
       "row": " | ShortCircuit Current High | VDACn Shorted to VDD33 | ● | 4 | 12 | mA",
       "type": "geometry column mismatch",
       "value": "4"
+    },
+    {
+      "confidence": "high",
+      "detail": "0: Markdown TYP, PDF MIN",
+      "line": 346,
+      "md_column": "TYP",
+      "md_line": 346,
+      "page": 7,
+      "parameter": "VINVS / Input Voltage Range (Programmable) / VINVS = (VSENSEPH - VSENSEMH) Low Resolution Mode",
+      "pdf_column": "MIN",
+      "row": "VINVS | Input Voltage Range (Programmable) | VINVS = (VSENSEPH - VSENSEMH) Low Resolution Mode | ● | 0 | 6 | V",
+      "type": "geometry column mismatch",
+      "value": "0"
+    },
+    {
+      "confidence": "high",
+      "detail": "0: Markdown TYP, PDF MIN",
+      "line": 347,
+      "md_column": "TYP",
+      "md_line": 347,
+      "page": 7,
+      "parameter": "VINVS = (VSENSEPH - VSENSEMH) High Resolution Mode",
+      "pdf_column": "MIN",
+      "row": " |  | VINVS = (VSENSEPH - VSENSEMH) High Resolution Mode | ● | 0 | 3.8 | V",
+      "type": "geometry column mismatch",
+      "value": "0"
+    },
+    {
+      "confidence": "high",
+      "detail": "-0.1: Markdown TYP, PDF MIN",
+      "line": 348,
+      "md_column": "TYP",
+      "md_line": 348,
+      "page": 7,
+      "parameter": "SingleEnded Voltage: VSENSEMH",
+      "pdf_column": "MIN",
+      "row": " |  | SingleEnded Voltage: VSENSEMH | ● | -0.1 | 0.1 | V",
+      "type": "geometry column mismatch",
+      "value": "-0.1"
+    },
+    {
+      "confidence": "high",
+      "detail": "-0.1: Markdown TYP, PDF MIN",
+      "line": 356,
+      "md_column": "TYP",
+      "md_line": 356,
+      "page": 7,
+      "parameter": "VINCS / Current Sense Input Range / SingleEnded Voltage: ISENSEPH , ISENSEMH",
+      "pdf_column": "MIN",
+      "row": "VINCS | Current Sense Input Range | SingleEnded Voltage: ISENSEPH , ISENSEMH | ● | -0.1 | 6 | V",
+      "type": "geometry column mismatch",
+      "value": "-0.1"
+    },
+    {
+      "confidence": "high",
+      "detail": "-170: Markdown TYP, PDF MIN",
+      "line": 357,
+      "md_column": "TYP",
+      "md_line": 357,
+      "page": 7,
+      "parameter": "Differential Voltage: VINCS = (ISENSEPH - ISENSEMH)",
+      "pdf_column": "MIN",
+      "row": " |  | Differential Voltage: VINCS = (ISENSEPH - ISENSEMH) | ● | -170 | 170 | mV",
+      "type": "geometry column mismatch",
+      "value": "-170"
     },
     {
       "confidence": "high",
@@ -11203,6 +11347,32 @@
     },
     {
       "confidence": "high",
+      "detail": "-50: Markdown TYP, PDF MIN",
+      "line": 379,
+      "md_column": "TYP",
+      "md_line": 379,
+      "page": 7,
+      "parameter": "Referred to (VIINSNSP - VIINSNSM) Medium Range",
+      "pdf_column": "MIN",
+      "row": " |  | Referred to (VIINSNSP - VIINSNSM) Medium Range | ● | -50 | 50 | mV",
+      "type": "geometry column mismatch",
+      "value": "-50"
+    },
+    {
+      "confidence": "high",
+      "detail": "-20: Markdown TYP, PDF MIN",
+      "line": 380,
+      "md_column": "TYP",
+      "md_line": 380,
+      "page": 7,
+      "parameter": "Referred to (VIINSNSP - VIINSNSM) Low Range",
+      "pdf_column": "MIN",
+      "row": " |  | Referred to (VIINSNSP - VIINSNSM) Low Range | ● | -20 | 20 | mV",
+      "type": "geometry column mismatch",
+      "value": "-20"
+    },
+    {
+      "confidence": "high",
       "detail": "20: Markdown TYP, PDF MIN",
       "line": 460,
       "md_column": "TYP",
@@ -11229,6 +11399,58 @@
     },
     {
       "confidence": "high",
+      "detail": "1.85: Markdown TYP, PDF MIN",
+      "line": 464,
+      "md_column": "TYP",
+      "md_line": 464,
+      "page": 9,
+      "parameter": "CONTROLn Only",
+      "pdf_column": "MIN",
+      "row": " |  | CONTROLn Only | ● | 1.85 |  | V",
+      "type": "geometry column mismatch",
+      "value": "1.85"
+    },
+    {
+      "confidence": "high",
+      "detail": "180: Markdown TYP, PDF MIN",
+      "line": 471,
+      "md_column": "TYP",
+      "md_line": 471,
+      "page": 9,
+      "parameter": "tFAULTMIN / Minimum Low Pulse Width for Externally Generated Faults",
+      "pdf_column": "MIN",
+      "row": "tFAULTMIN | Minimum Low Pulse Width for Externally Generated Faults |  |  | 180 |  | ms",
+      "type": "geometry column mismatch",
+      "value": "180"
+    },
+    {
+      "confidence": "high",
+      "detail": "300: Markdown TYP, PDF MIN",
+      "line": 472,
+      "md_column": "TYP",
+      "md_line": 472,
+      "page": 9,
+      "parameter": "tRESETB / Pulse Width to Assert Reset / VWDI/RESETB <= 1.5V",
+      "pdf_column": "MIN",
+      "row": "tRESETB | Pulse Width to Assert Reset | VWDI/RESETB <= 1.5V | ● | 300 |  | us",
+      "type": "geometry column mismatch",
+      "value": "300"
+    },
+    {
+      "confidence": "high",
+      "detail": "0.3: Markdown TYP, PDF MIN",
+      "line": 473,
+      "md_column": "TYP",
+      "md_line": 473,
+      "page": 9,
+      "parameter": "tWDI / Pulse Width to Reset Watchdog Timer / VWDI/RESETB <= 1.5V",
+      "pdf_column": "MIN",
+      "row": "tWDI | Pulse Width to Reset Watchdog Timer | VWDI/RESETB <= 1.5V | ● | 0.3 | 200 | us",
+      "type": "geometry column mismatch",
+      "value": "0.3"
+    },
+    {
+      "confidence": "high",
       "detail": "90: Markdown TYP, PDF MIN",
       "line": 479,
       "md_column": "TYP",
@@ -11239,6 +11461,19 @@
       "row": "fSHARECLKIN | Input Frequency Operating Range |  | ● | 90 | 110 | kHz",
       "type": "geometry column mismatch",
       "value": "90"
+    },
+    {
+      "confidence": "high",
+      "detail": "0.825: Markdown TYP, PDF MIN",
+      "line": 480,
+      "md_column": "TYP",
+      "md_line": 480,
+      "page": 9,
+      "parameter": "tLOW / Assertion Low Time / VSHARECLK < 0.8V",
+      "pdf_column": "MIN",
+      "row": "tLOW | Assertion Low Time | VSHARECLK < 0.8V | ● | 0.825 | 1.11 | us",
+      "type": "geometry column mismatch",
+      "value": "0.825"
     },
     {
       "confidence": "high",
