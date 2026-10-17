@@ -2018,5 +2018,44 @@
       "pdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p105-bga-sensem",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 105,
+    "old": "| A1  | $V_{SENEM1}$       | B1  | $V_{SENEM0}$   | C1  | $V_{OUT\\_EN1}$ | D1  | $V_{OUT\\_EN3}$ | E1  | DNC           |\n| A2  | $V_{SENSEP1}$      | B2  | $V_{SENSEP0}$  | C2  | $V_{OUT\\_EN0}$ | D2  | GND            | E2  | $V_{IN\\_SNS}$ |\n| A3  | $V_{DAC3}$         | B3  | $V_{SENSEP2}$  | C3  | $V_{SENEM2}$   | D3  | $V_{OUT\\_EN2}$ | E3  | AUXFAULTB     |\n| A4  | $I_{IN\\_SNSM}$     | B4  | $I_{IN\\_SNSP}$ | C4  | $V_{DAC2}$     | D4  | GND            | E4  | GND           |\n| A5  | $V_{DAC0}$         | B5  | $V_{DAC1}$     | C5  | GND            | D5  | $I_{SENEM0}$   | E5  | ASEL1         |\n| A6  | $V_{IN\\_SNS\\_CAP}$ | B6  | $I_{SENEM3}$   | C6  | $I_{SENSEP3}$  | D6  | $I_{SENEM1}$   | E6  | $I_{SENSEP0}$ |\n| A7  | $V_{SENEM3}$       | B7  | $V_{SENSEP3}$  | C7  | $I_{SENEM2}$   | D7  | $I_{SENSEP2}$  | E7  | $I_{SENSEP1}$ |",
+    "new": "| A1  | $V_{SENSEM1}$       | B1  | $V_{SENSEM0}$   | C1  | $V_{OUT\\_EN1}$ | D1  | $V_{OUT\\_EN3}$ | E1  | DNC           |\n| A2  | $V_{SENSEP1}$      | B2  | $V_{SENSEP0}$  | C2  | $V_{OUT\\_EN0}$ | D2  | GND            | E2  | $V_{IN\\_SNS}$ |\n| A3  | $V_{DAC3}$         | B3  | $V_{SENSEP2}$  | C3  | $V_{SENSEM2}$   | D3  | $V_{OUT\\_EN2}$ | E3  | AUXFAULTB     |\n| A4  | $I_{IN\\_SNSM}$     | B4  | $I_{IN\\_SNSP}$ | C4  | $V_{DAC2}$     | D4  | GND            | E4  | GND           |\n| A5  | $V_{DAC0}$         | B5  | $V_{DAC1}$     | C5  | GND            | D5  | $I_{SENSEM0}$   | E5  | ASEL1         |\n| A6  | $V_{IN\\_SNS\\_CAP}$ | B6  | $I_{SENSEM3}$   | C6  | $I_{SENSEP3}$  | D6  | $I_{SENSEM1}$   | E6  | $I_{SENSEP0}$ |\n| A7  | $V_{SENSEM3}$       | B7  | $V_{SENSEP3}$  | C7  | $I_{SENSEM2}$   | D7  | $I_{SENSEP2}$  | E7  | $I_{SENSEP1}$ |",
+    "evidence": "PDF words p105 (BGA pin assignment): VSENSEM0..3 and ISENSEM0..3 (e.g. x=102,y=182 'VSENSEM1'); md had SENEM. Found by tools/check_struct_tables.py (tokens missing from page).",
+    "sources": [
+      "pdf-words",
+      "check_struct_tables"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p62-iout-bitnames",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 62,
+    "old": "| b[5:3] | lout_oc_fault_response_retry,<br>lout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| b[2:0] | lout_oc_fault_response_delay,<br>lout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> | b[2:0] | Deglitch interval | 001b | 100μs | 010b | 1ms | 011b | 5ms | 100b | 10ms | 101b | 20ms | 110b | 50ms | 111b | 100ms |",
+    "new": "| b[5:3] | Iout_oc_fault_response_retry,<br>Iout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| b[2:0] | Iout_oc_fault_response_delay,<br>Iout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> | b[2:0] | Deglitch interval | 001b | 100μs | 010b | 1ms | 011b | 5ms | 100b | 10ms | 101b | 20ms | 110b | 50ms | 111b | 100ms |",
+    "evidence": "PDF words p62: 'Iout_oc_fault_response_retry,', 'Iout_uc_fault_response_delay' (capital I); md had lowercase l.",
+    "sources": [
+      "pdf-words",
+      "check_struct_tables"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-p40-addr-ascension",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 40,
+    "old": "| 0x00 | INTERFACE_CONFIG_A      | [7:0] | SW_RESET         | RESERVED    | ADDR_ACCESSION         | SDO_ENABLE      | RESERVED              |                        |                             | RESET_SW    | 0x10  | R/W    |  |  |  |  |  |  |  |  |  |  |  |  |",
+    "new": "| 0x00 | INTERFACE_CONFIG_A      | [7:0] | SW_RESET         | RESERVED    | ADDR_ASCENSION         | SDO_ENABLE      | RESERVED              |                        |                             | RESET_SW    | 0x10  | R/W    |  |  |  |  |  |  |  |  |  |  |  |  |",
+    "evidence": "PDF words p40 register map: 'ADDR_AS' + 'CENSION' (x=260, y=225/235); ADDR_ASCENSION also on p32, p33, p42 and md line 1843. md register-map cell had ADDR_ACCESSION.",
+    "sources": [
+      "pdf-words",
+      "check_struct_tables"
+    ],
+    "severity": "high"
   }
 ]
