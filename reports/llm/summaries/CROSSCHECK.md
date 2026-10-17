@@ -64,3 +64,28 @@ Drafted by agy from the compact datasheet text; checked claim by claim by codex 
 - fix: Operates from V_PWR (4.5V min to 15V max) or V_DD33 (3.13V min to 3.47V max), drawing 10mA typ (13mA max). [p5] -> Operates from V_PWR (4.5V min to 15V max, V_DD33 floating) or from V_DD33 tied to V_PWR (3.13V min to 3.47V max), drawing 10mA typ (13mA max). [p5]
 - fix: Output current sensing (-170mV min to 170mV max) achieves ±0.3% of Reading max error; 10 Bits typ DACs update every 250µs typ. [p6] -> Output current sensing spans -170mV to 170mV differential, with ±0.3% of Reading max error for sense magnitudes of 20–170mV and ±60µV max for magnitudes ≤20mV; 10 Bits typ DACs update every 250µs typ 
 - fix: Supports 10kHz min to 400kHz max PMBus clock and EEPROM with 10,000 Cycles min endurance and 20 Years min retention. [p9] -> Supports 10kHz min to 400kHz max PMBus clock. EEPROM endurance is 10,000 cycles min with writes at 0°C < T_J < 85°C; retention is 20 years min at T_J < 105°C for EEPROM cycled fewer than 10,000 times.
+
+## sn74avc4t774
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (1 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: Propagation delay t_PLH/t_PHL at 3.3V ±0.3V is 0.1ns min to 2.9ns max (A to B) and 0.1ns min to 2.8ns max (B to A) [p11]. -> Propagation delay t_PLH/t_PHL with V_CCA = V_CCB = 3.3V ±0.3V is 0.1ns min to 2.9ns max (A to B) and 0.1ns min to 2.8ns max (B to A) [p11].
+
+## tps22990
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (5 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: On-state resistance of 3.9 mΩ typ (4.8 mΩ max at 25°C, 6 mΩ max full-range) and 10 A max continuous current [p4, p6]. -> On-state resistance at V_BIAS = V_ON = 5 V, I_OUT = -200 mA, and the listed V_IN values from 0.6 V to 5 V: 3.9 mΩ typ and 4.8 mΩ max at 25°C; 6 mΩ max over -40°C to +105°C. Maximum continuous switch c
+- fix: Supply currents (V_BIAS = 5 V): 63 μA typ (77 μA max) quiescent and 5.5 μA typ (7 μA max) shutdown [p5]. -> VBIAS-pin currents at V_BIAS = 5 V: quiescent 63 μA typ at 25°C, 77 μA max over -40°C to +105°C with I_OUT = 0 A and V_IN = V_ON = 5 V; shutdown 5.5 μA typ at 25°C, 7 μA max over -40°C to +105°C with 
+- fix: Turn-on time of 34 μs typ, rise time of 31 μs typ, and TPS22990 pull-down resistance of 218 Ω typ (253 Ω max) [p6, p7]. -> Typical turn-on time is 34 μs and rise time is 31 μs at V_IN = V_ON = V_BIAS = 5 V, T_A = 25°C, R_L = 10 Ω, C_L = 0.1 μF, C_T = 0 pF, R_PU = 10 kΩ and C_IN = 1 μF. TPS22990 pull-down resistance is 218
+- fix: Active-high ON, CT, and open-drain PG pins; 3.00 mm × 2.00 mm nom 10-pin WSON package; -40°C min to 105°C max operation [p1, p3, p4]. -> Active-high ON input, CT slew-rate control output, and active-high open-drain PG output; 3.00 mm × 2.00 mm nominal 10-pin WSON package; operating free-air temperature -40°C to +105°C [p1, p3, p4].
+- fix: Asserting ON high (1.2 V min) turns the switch on; pulling ON low (0.5 V max) turns it off and enables QOD [p4, p16, p18]. -> Asserting ON high (1.2 V min) turns the switch on; pulling ON low (0.5 V max) turns it off and, on TPS22990 only, enables QOD [p4, p16, p18].
+
+## tps63070
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (4 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: VIN supply range of 2.0 V min to 16 V max; VOUT range of 2.5 V min to 9 V max [p4, p7]. -> VIN is 2.0–16 V once started with VOUT ≥ 3.0 V; startup with VOUT < 3.0 V requires VIN ≥ 3.0 V. TPS63070/TPS630702 have a 2.5–9 V output range; TPS630701 has a fixed 5 V output [p6, p7].
+- fix: Up to 95% efficiency, 2 A max output current, and 3600 mA typ (3050 mA min, 4150 mA max) input current limit [p1, p6, p7]. -> Up to 95% efficiency; 2 A output current in buck mode and in boost mode at VIN = 4 V, VOUT = 5 V. Average positive input current limit is 3600 mA typ (3050 mA min, 4150 mA max) at VIN = 5.0 V, VOUT = 
+- fix: 50 µA typ quiescent current; +/- 1% dc accuracy in PWM mode and +3% / -1% in PFM mode [p1]. -> 50 µA typ quiescent current [p1]; +/- 1% dc accuracy in PWM mode and +3% / -1% in PFM mode with VIN ≥ 3 V [p7].
+- fix: Integrates soft start, load disconnect, UVLO, overvoltage, and 160 °C typ thermal shutdown for dual Li-Ion, metering, camera, portable PC, and medical applicati -> Integrates soft start, load disconnect, UVLO, overvoltage, and 160 °C typ thermal shutdown for dual Li-Ion, metering, camera, portable PC, and medical applications [p1, p6, p12].
