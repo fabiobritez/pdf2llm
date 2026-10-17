@@ -1374,5 +1374,18 @@
       "pdf-word-geometry"
     ],
     "severity": "high"
+  },
+  {
+    "id": "tps22990-p5-isd-vin-columns",
+    "file": "output/tps22990/tps22990.md",
+    "page": 5,
+    "old": "| I <sub>SD, VIN</sub> V <sub>IN</sub> shutdown current     | V <sub>ON</sub> = 0 V,<br>V <sub>OUT</sub> = 0 V                   | V <sub>IN</sub> = 5 V    | –40°C to +85°C  | 0.004 | 4   | μA   |\n|                                                           |                                                                    |                          | –40°C to +105°C |       | 10  |      |\n|                                                           |                                                                    | V <sub>IN</sub> = 3.3 V  | –40°C to +85°C  | 0.003 | 3   |      |\n|                                                           |                                                                    |                          | –40°C to +105°C |       | 7   |      |\n|                                                           |                                                                    | V <sub>IN</sub> = 2.5 V  | –40°C to +85°C  | 0.002 | 2   |      |\n|                                                           |                                                                    |                          | –40°C to +105°C |       | 5   |      |\n|                                                           |                                                                    | V <sub>IN</sub> = 1.8 V  | –40°C to +85°C  | 0.002 | 2   |      |\n|                                                           |                                                                    |                          | –40°C to +105°C |       | 4   |      |\n|                                                           |                                                                    | V <sub>IN</sub> = 1.05 V | –40°C to +85°C  | 0.001 | 1   |      |\n|                                                           |                                                                    |                          | –40°C to +105°C |       | 3   |      |\n|                                                           |                                                                    | V <sub>IN</sub> = 0.6 V  | –40°C to +85°C  | 0.001 | 1   |      |\n|                                                           |                                                                    |                          | –40°C to +105°C |       | 2   |      |",
+    "new": "| I <sub>SD, VIN</sub> V <sub>IN</sub> shutdown current | V <sub>ON</sub> = 0 V,<br>V <sub>OUT</sub> = 0 V, V <sub>IN</sub> = 5 V | –40°C to +85°C |  | 0.004 | 4 | μA |\n|  |  | –40°C to +105°C |  |  | 10 |  |\n|  | V <sub>IN</sub> = 3.3 V | –40°C to +85°C |  | 0.003 | 3 |  |\n|  |  | –40°C to +105°C |  |  | 7 |  |\n|  | V <sub>IN</sub> = 2.5 V | –40°C to +85°C |  | 0.002 | 2 |  |\n|  |  | –40°C to +105°C |  |  | 5 |  |\n|  | V <sub>IN</sub> = 1.8 V | –40°C to +85°C |  | 0.002 | 2 |  |\n|  |  | –40°C to +105°C |  |  | 4 |  |\n|  | V <sub>IN</sub> = 1.05 V | –40°C to +85°C |  | 0.001 | 1 |  |\n|  |  | –40°C to +105°C |  |  | 3 |  |\n|  | V <sub>IN</sub> = 0.6 V | –40°C to +85°C |  | 0.001 | 1 |  |\n|  |  | –40°C to +105°C |  |  | 2 |  |",
+    "evidence": "PDF p5 words: I_SD,VIN rows have V_IN sub-conditions (5/3.3/2.5/1.8/1.05/0.6 V) inside TEST CONDITIONS, T_A at x≈397, TYP at x≈488, MAX at x≈526. md put V_IN in the T_A column and T_A in MIN; values were already in TYP/MAX. Merged the V_IN condition into TEST CONDITIONS and moved T_A back.",
+    "sources": [
+      "pdf-word-geometry",
+      "validator-heuristic"
+    ],
+    "severity": "medium"
   }
 ]
