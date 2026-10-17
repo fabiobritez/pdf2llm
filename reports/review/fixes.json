@@ -2395,5 +2395,57 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5593r-p6-L303-reset-overbar",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 6,
+    "old": "| $t_{RESETL\\_PW}$       | 250                     |     |     | ns   | RESET low pulse width                                             |",
+    "new": "| $t_{RESETL\\_PW}$       | 250                     |     |     | ns   | $\\overline{\\text{RESET}}$ low pulse width                                             |",
+    "evidence": "RESET (pin) is printed with an overbar (active-low) in the PDF: visually checked on rendered crops of every RESET word (p6 timing table, p8 pin table, p19 and p26 prose); headings 'RESET FUNCTION' and 'Write to RESET register' have no bar and are unchanged. Notation matches the md's existing $\\overline{W}$. Flagged by codex (gpt-6.1-sol) on p8.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p8-L427-reset-overbar",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": "| 1                | 15              | A3                             | RESET              | Asynchronous Reset Pin. Tie this pin high for normal operation. When this pin is brought low, the AD5593R is reset to its default configuration.                                                                                                                                                                                                                                                                                                   |",
+    "new": "| 1                | 15              | A3                             | $\\overline{\\text{RESET}}$              | Asynchronous Reset Pin. Tie this pin high for normal operation. When this pin is brought low, the AD5593R is reset to its default configuration.                                                                                                                                                                                                                                                                                                   |",
+    "evidence": "RESET (pin) is printed with an overbar (active-low) in the PDF: visually checked on rendered crops of every RESET word (p6 timing table, p8 pin table, p19 and p26 prose); headings 'RESET FUNCTION' and 'Write to RESET register' have no bar and are unchanged. Notation matches the md's existing $\\overline{W}$. Flagged by codex (gpt-6.1-sol) on p8.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p19-L909-reset-overbar",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 19,
+    "old": "The AD5593R has an asynchronous RESET pin. For normal operation, RESET is tied high. A falling edge on RESET resets all registers to their default values and reconfigures the I/O pins to their default values (85 kΩ pull-down resistor to GND). The reset function takes 250 μs maximum; do not write new data to the\n\nAD5593R during this time. The AD5593R has a software reset that performs the same function as the RESET pin. The reset function is activated by writing 0x0F to the pointer byte and 0x0D and 0xAC to the most significant and least significant bytes of the software reset register, respectively.",
+    "new": "The AD5593R has an asynchronous $\\overline{\\text{RESET}}$ pin. For normal operation, $\\overline{\\text{RESET}}$ is tied high. A falling edge on $\\overline{\\text{RESET}}$ resets all registers to their default values and reconfigures the I/O pins to their default values (85 kΩ pull-down resistor to GND). The reset function takes 250 μs maximum; do not write new data to the\n\nAD5593R during this time. The AD5593R has a software reset that performs the same function as the $\\overline{\\text{RESET}}$ pin. The reset function is activated by writing 0x0F to the pointer byte and 0x0D and 0xAC to the most significant and least significant bytes of the software reset register, respectively.",
+    "evidence": "RESET (pin) is printed with an overbar (active-low) in the PDF: visually checked on rendered crops of every RESET word (p6 timing table, p8 pin table, p19 and p26 prose); headings 'RESET FUNCTION' and 'Write to RESET register' have no bar and are unchanged. Notation matches the md's existing $\\overline{W}$. Flagged by codex (gpt-6.1-sol) on p8.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-L1142-reset-overbar",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "The AD5593R can be reset to its default conditions by writing 0x0DAC to the software reset register (pointer byte = 0b00001111). This resets all registers to their default values and reconfigures the I/O<sub>x</sub> pins to their default values (85 k $\\Omega$  pull-down to GND). The reset function is triggered on the SCL falling edge of the eighth bit of the least significant byte (Bit 0 of Frame 4 in [Figure 36](#)), and the AD5593R does not generate an ACK signal for this byte of data. The AD5593R has a RESET pin that performs the same function. For normal operation, RESET is tied high. A falling edge on RESET triggers the reset function. Both the hardware and the software reset functions take 250  $\\mu$ s maximum and there must be no activity on the SCL pin of the AD5593R during this time.",
+    "new": "The AD5593R can be reset to its default conditions by writing 0x0DAC to the software reset register (pointer byte = 0b00001111). This resets all registers to their default values and reconfigures the I/O<sub>x</sub> pins to their default values (85 k $\\Omega$  pull-down to GND). The reset function is triggered on the SCL falling edge of the eighth bit of the least significant byte (Bit 0 of Frame 4 in [Figure 36](#)), and the AD5593R does not generate an ACK signal for this byte of data. The AD5593R has a $\\overline{\\text{RESET}}$ pin that performs the same function. For normal operation, $\\overline{\\text{RESET}}$ is tied high. A falling edge on $\\overline{\\text{RESET}}$ triggers the reset function. Both the hardware and the software reset functions take 250  $\\mu$ s maximum and there must be no activity on the SCL pin of the AD5593R during this time.",
+    "evidence": "RESET (pin) is printed with an overbar (active-low) in the PDF: visually checked on rendered crops of every RESET word (p6 timing table, p8 pin table, p19 and p26 prose); headings 'RESET FUNCTION' and 'Write to RESET register' have no bar and are unchanged. Notation matches the md's existing $\\overline{W}$. Flagged by codex (gpt-6.1-sol) on p8.",
+    "sources": [
+      "codex",
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
