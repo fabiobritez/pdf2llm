@@ -7,4 +7,4 @@ Geometry rows count numeric data rows: verified OK / mismatched / unverifiable. 
 
 | Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Geometry column | Geometry missing | Geometry rows OK / mismatch / unverifiable / out of scope | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [ad5593r](ad5593r.md) | 47 | 99.9% | 99.8% | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 132 / 0 / 5 / 262 | OK |
+| [ltc2975](ltc2975.md) | 108 | 98.9% | 99.5% | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 155 / 0 / 5 / 1218 | REVIEW |

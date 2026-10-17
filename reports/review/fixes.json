@@ -2447,5 +2447,239 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p25-track-en-chann",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 25,
+    "old": "| VIN_OFF                | 0x36     | Input voltage below which power conversion is disabled. All $V_{OUT\\_ENn}$ pins go off immediately or sequence off after TOFF_DELAY (See Mfr_track_en_channel). | R/W Word  | N     | L11         | V         | Y      | 9.0<br>0xD240            | <a href=\"#\">48</a> |",
+    "new": "| VIN_OFF                | 0x36     | Input voltage below which power conversion is disabled. All $V_{OUT\\_ENn}$ pins go off immediately or sequence off after TOFF_DELAY (See Mfr_track_en_chann). | R/W Word  | N     | L11         | V         | Y      | 9.0<br>0xD240            | <a href=\"#\">48</a> |",
+    "evidence": "PDF word p25 'Mfr_track_en_chann).' (same truncated name the md already has on L2324/L2820). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p26-pwrgd-off-uses-uv",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 26,
+    "old": "| POWER_GOOD_OFF         | 0x5F     | Output voltage at or below which a power good should be de-asserted when Mfr_config_all_pwrgrd_off_uses_uv is clear. | R/W Word | Y     | L16         | V     | Y      | 0.94<br>0x1E14           | 52       |",
+    "new": "| POWER_GOOD_OFF         | 0x5F     | Output voltage at or below which a power good should be de-asserted when Mfr_config_all_pwrgd_off_uses_uv is clear. | R/W Word | Y     | L16         | V     | Y      | 0.94<br>0x1E14           | 52       |",
+    "evidence": "PDF word p26 'config_all_pwrgd_off_uses_uv'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p26-vout-enn",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 26,
+    "old": "| TON_DELAY              | 0x60     | Time from CONTROL pin and/or OPERATION command = ON to VOUT_EN pin = ON.                                             | R/W Word | Y     | L11         | ms    | Y      | 1.0<br>0xBA00            | 57       |",
+    "new": "| TON_DELAY              | 0x60     | Time from CONTROL pin and/or OPERATION command = ON to VOUT_ENn pin = ON.                                             | R/W Word | Y     | L11         | ms    | Y      | 1.0<br>0xBA00            | 57       |",
+    "evidence": "PDF word p26 'VOUT_ENn'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p31-page-0xxx",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 31,
+    "old": "| b[7:0] | Page   | Page operation.<br>0x00: All PMBus commands address channel/page 0.<br>0x01: All PMBus commands address channel/page 1.<br>0x02: All PMBus commands address channel/page 2.<br>0x03: All PMBus commands address channel/page 3.<br>0XX: All non specified values reserved.<br>0xFF: A single PMBus write/send to commands that support this mode will simultaneously address all channel/pages with MFR_PAGE_FF_MASK enabled. |",
+    "new": "| b[7:0] | Page   | Page operation.<br>0x00: All PMBus commands address channel/page 0.<br>0x01: All PMBus commands address channel/page 1.<br>0x02: All PMBus commands address channel/page 2.<br>0x03: All PMBus commands address channel/page 3.<br>0xXX: All non specified values reserved.<br>0xFF: A single PMBus write/send to commands that support this mode will simultaneously address all channel/pages with MFR_PAGE_FF_MASK enabled. |",
+    "evidence": "PDF word p31 '0xXX:'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p34-plus-headings",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 34,
+    "old": "#### MFR\\_DATA\\_plus0 and MFR\\_DATA\\_plus1 Data Contents",
+    "new": "#### MFR\\_DATA\\_PLUS0 and MFR\\_DATA\\_PLUS1 Data Contents",
+    "evidence": "PDF words p34 y=292 'MFR_DATA_PLUS0' 'MFR_DATA_PLUS1'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p34-status-plus-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 34,
+    "old": "#### MFR\\_STATUS\\_plus0 and MFR\\_STATUS\\_plus1 Data Contents",
+    "new": "#### MFR\\_STATUS\\_PLUS0 and MFR\\_STATUS\\_PLUS1 Data Contents",
+    "evidence": "PDF words p34 y=401 'MFR_STATUS_PLUS0' 'MFR_STATUS_PLUS1'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p34-status-plus-location",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 34,
+    "old": "MFR\\_STATUS\\_plus0 is at command location 0x2C, and MFR\\_STATUS\\_plus1 is at command location 0x2D. These correspond to reserved PMBus command locations. These two status registers can only be read via Command Plus peeks.",
+    "new": "MFR\\_STATUS\\_PLUS0 is at command location 0x2C, and MFR\\_STATUS\\_PLUS1 is at command location 0x2D. These correspond to reserved PMBus command locations. These two status registers can only be read via Command Plus peeks.",
+    "evidence": "PDF words p34 y=550 'MFR_STATUS_PLUS0' 'MFR_STATUS_PLUS1'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p38-vvsense",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 38,
+    "old": "| b[10]    | Mfr_config_supervisor_resolution | Selects voltage supervisor resolution:<br>0: high resolution = 4mV / LSB, range for $V_{SENSEPn} - V_{SENSEMn}$ is 0 to 3.8V<br>1: low resolution = 8mV / LSB, range for $V_{SENSEPn} - V_{SENSEMn}$ is 0 to 6.0V                                                                                                                                                                                                                                           |",
+    "new": "| b[10]    | Mfr_config_supervisor_resolution | Selects voltage supervisor resolution:<br>0: high resolution = 4mV / LSB, range for $V_{VSENSEPn} - V_{VSENSEMn}$ is 0 to 3.8V<br>1: low resolution = 8mV / LSB, range for $V_{VSENSEPn} - V_{VSENSEMn}$ is 0 to 6.0V                                                                                                                                                                                                                                           |",
+    "evidence": "PDF words p38 y=342/356 'VVSENSEPn' 'VVSENSEMn' (V with subscript VSENSEPn/VSENSEMn, the pin names). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p40-faultb0-response-chann",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 40,
+    "old": "The waveform of Figure 16 illustrates cascade sequence ON and time based sequence OFF using the configuration illustrated in Figure 15. In this example the FAULTB0 pin is used as a broadcast off signal. Turning the system off with the FAULTB0 requires all slave channels to be configured with Mfr\\_faultb0\\_response\\_channel asserted high. After the system is turned off, the LTC2975 will assert ALERTB with all slave channels indicating a Status\\_mfr\\_fault0\\_in event.",
+    "new": "The waveform of Figure 16 illustrates cascade sequence ON and time based sequence OFF using the configuration illustrated in Figure 15. In this example the FAULTB0 pin is used as a broadcast off signal. Turning the system off with the FAULTB0 requires all slave channels to be configured with Mfr\\_faultb0\\_response\\_chann asserted high. After the system is turned off, the LTC2975 will assert ALERTB with all slave channels indicating a Status\\_mfr\\_fault0\\_in event.",
+    "evidence": "PDF word p40 'Mfr_faultb0_response_chann'. Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p45-pwrgd-L2220",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 45,
+    "old": "| b[11]    | Mfr_config_all_pwrGD_off_uses_uv    | Selects PWRGD de-assertion source for all channels.<br>0: PWRGD is de-asserted based on $V_{OUT}$ being below or equal to POWER_GOOD_OFF. This option uses the ADC. Response time is approximately 100ms to 200ms.<br>1: PWRGD is de-asserted based on $V_{OUT}$ being below or equal to VOUT_UV_LIMIT. This option uses the high speed supervisor. Response time is approximately 12 $\\mu$ s. |",
+    "new": "| b[11]    | Mfr_config_all_pwrgd_off_uses_uv    | Selects PWRGD de-assertion source for all channels.<br>0: PWRGD is de-asserted based on $V_{OUT}$ being below or equal to POWER_GOOD_OFF. This option uses the ADC. Response time is approximately 100ms to 200ms.<br>1: PWRGD is de-asserted based on $V_{OUT}$ being below or equal to VOUT_UV_LIMIT. This option uses the high speed supervisor. Response time is approximately 12 $\\mu$ s. |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p51-pwrgd-L2457",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 51,
+    "old": "| POWER_GOOD_OFF               | 0x5F     | Output voltage at or below which a power good should be de-asserted when Mfr_config_all_pwrGD_off_uses_uv is clear. | R/W Word | Y     | L16         | V     | Y      | 0.94<br>0x1E14  | 52       |",
+    "new": "| POWER_GOOD_OFF               | 0x5F     | Output voltage at or below which a power good should be de-asserted when Mfr_config_all_pwrgd_off_uses_uv is clear. | R/W Word | Y     | L16         | V     | Y      | 0.94<br>0x1E14  | 52       |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p58-pwrgd-L2743",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 58,
+    "old": "| b[8]    | Mfr_pwrGD_en_wdog  | Watchdog.<br>1 = Watchdog timer not-expired status is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = Watchdog timer does not affect the PWRGD pin.             |",
+    "new": "| b[8]    | Mfr_pwrgd_en_wdog  | Watchdog.<br>1 = Watchdog timer not-expired status is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = Watchdog timer does not affect the PWRGD pin.             |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p58-pwrgd-L2745",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 58,
+    "old": "| b[3]    | Mfr_pwrGD_en_chan3 | Channel 3.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "new": "| b[3]    | Mfr_pwrgd_en_chan3 | Channel 3.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p59-pwrgd-L2757",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 59,
+    "old": "| b[2]   | Mfr_pwrGD_en_chan2 | Channel 2.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "new": "| b[2]   | Mfr_pwrgd_en_chan2 | Channel 2.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p59-pwrgd-L2758",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 59,
+    "old": "| b[1]   | Mfr_pwrGD_en_chan1 | Channel 1.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "new": "| b[1]   | Mfr_pwrgd_en_chan1 | Channel 1.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p59-pwrgd-L2759",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 59,
+    "old": "| b[0]   | Mfr_pwrGD_en_chan0 | Channel 0.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "new": "| b[0]   | Mfr_pwrgd_en_chan0 | Channel 0.<br>1 = PWRGD status for this channel is ANDed with PWRGD status for any similarly enabled channels to determine when the PWRGD pin gets asserted.<br>0 = PWRGD status for this channel does not affect the PWRGD pin. |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p59-pwrgd-L2765",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 59,
+    "old": "The power good de-assertion delay and threshold source is controlled by Mfr\\_config\\_all\\_pwrGD\\_off\\_uses\\_uv. Systems that require a fast power good de-assertion should set Mfr\\_config\\_all\\_pwrGD\\_off\\_uses\\_uv = 1. This uses the VOUT\\_UV\\_FAULT\\_LIMIT and the high speed comparator to de-assert the PWRGD pin. Systems that require a separate power good off threshold should set Mfr\\_config\\_all\\_pwrGD\\_off\\_uses\\_uv = 0. This uses the slower ADC polling loop and POWER\\_GOOD\\_OFF to de-assert the PWRGD pin.",
+    "new": "The power good de-assertion delay and threshold source is controlled by Mfr\\_config\\_all\\_pwrgd\\_off\\_uses\\_uv. Systems that require a fast power good de-assertion should set Mfr\\_config\\_all\\_pwrgd\\_off\\_uses\\_uv = 1. This uses the VOUT\\_UV\\_FAULT\\_LIMIT and the high speed comparator to de-assert the PWRGD pin. Systems that require a separate power good off threshold should set Mfr\\_config\\_all\\_pwrgd\\_off\\_uses\\_uv = 0. This uses the slower ADC polling loop and POWER\\_GOOD\\_OFF to de-assert the PWRGD pin.",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p69-pwrgd-L3162",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 69,
+    "old": "| b[15]    | Mfr_pads_pwrGD_drive       | 0 = PWRGD pad is being driven low by this chip.<br>1 = PWRGD pad is not being driven low by this chip.                                                                           |",
+    "new": "| b[15]    | Mfr_pads_pwrgd_drive       | 0 = PWRGD pad is being driven low by this chip.<br>1 = PWRGD pad is not being driven low by this chip.                                                                           |",
+    "evidence": "PDF never prints 'pwrGD': all bit/field names are lowercase 'pwrgd' (PDF words p45 'Mfr_config_all_pwrgd_off_uses_uv', p51 'pwrgd_off_uses_uv', p58-59 'Mfr_pwrgd_en_wdog', 'Mfr_pwrgd_en_chan0..3', 'Mfr_config_all_pwrgd_off_uses_uv', p69 'Mfr_pads_pwrgd_drive'). Flagged by codex (gpt-6.1-sol) struct page review; confirmed against PDF words.",
+    "sources": [
+      "codex",
+      "pdf-words"
+    ],
+    "severity": "medium"
   }
 ]
