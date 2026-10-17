@@ -300,6 +300,29 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual(issues, [])
         doc.close()
 
+    def test_order_resolves_repeated_sub_rows(self):
+        # Identical sub-rows are resolved by order after an anchored row,
+        # and a shifted value in such a sub-row is still reported.
+        doc = pymupdf.open()
+        p = doc.new_page()
+        for x, word in [(360, 'MIN'), (420, 'TYP'), (480, 'MAX'), (540, 'UNIT')]:
+            p.insert_text((x, 100), word)
+        p.insert_text((60, 130), 'Supply voltage')
+        p.insert_text((480, 130), '3')
+        for y in (160, 190):
+            p.insert_text((60, y), 'Leakage current')
+            p.insert_text((480, y), '6')
+        head = '| PARAMETER | MIN | TYP | MAX | UNIT |\n| Supply voltage | | | 3 | V |\n'
+        issues, stats = v.geometry_issues(head + '| Leakage current | | | 6 | uA |\n| Leakage current | | | 6 | uA |', doc)
+        self.assertEqual(issues, [])
+        self.assertEqual((stats['verified_ok'], stats['unverifiable']), (3, 0))
+        issues, stats = v.geometry_issues(head + '| Leakage current | 6 | | | uA |', doc)
+        self.assertTrue(any(i['type'] == 'geometry column mismatch' and i['value'] == '6' for i in issues), issues)
+        # without an anchor row the same row abstains
+        issues, stats = v.geometry_issues('| PARAMETER | MIN | TYP | MAX | UNIT |\n| Leakage current | 6 | | | uA |', doc)
+        self.assertEqual(issues, [])
+        doc.close()
+
     def test_ambiguous_rows_and_unrelated_tables_abstain(self):
         doc = pymupdf.open()
         p = doc.new_page()

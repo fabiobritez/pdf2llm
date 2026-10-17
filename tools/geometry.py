@@ -110,7 +110,12 @@ def bands(words, schema, bottom, normalize):
     return result
 
 
-AMBIGUOUS = {'ambiguous': True}  # sentinel: prose matched several rows of one table
+UNVERIFIED = []  # debug: rows counted as unverifiable, with the reason (reset by callers)
+AMBIGUOUS = {'ambiguous': True}  # marker: several rows matched equally (with 'tied' candidates)
+
+
+def is_ambiguous(found):
+    return isinstance(found, dict) and found.get('ambiguous') is True
 
 
 def match_row(cells, schema, candidates, words, normalize):
@@ -185,7 +190,8 @@ def match_row(cells, schema, candidates, words, normalize):
     if not scored:
         return None
     if adjacent or (len(scored) > 1 and scored[0][0] - scored[1][0] < .035):
-        return AMBIGUOUS
+        top = scored[0][0]
+        return dict(AMBIGUOUS, tied=[c for sc, c in scored if top - sc < .035 or abs(c['y'] - scored[0][1]['y']) <= 20])
     return scored[0][1]
 
 
@@ -211,7 +217,7 @@ def match_by_values(raw, mappings, schema, candidates, words, normalize):
         if all(have[t] >= c for t, c in tokens.items()):
             hits.append(candidate)
     if len(hits) > 1:
-        return AMBIGUOUS
+        return dict(AMBIGUOUS, tied=hits)
     if not hits:
         return None
     if sum(tokens.values()) < 2:
@@ -252,6 +258,7 @@ def check_tables(text, document, table_blocks, normalize):
                               and not any(signature(c, normalize) for c in block[0][1]))
         unsupported = unsupported_header or any('UNIT' in [label(normalize(c)) for c in row[1]]
                           and not any(label(normalize(c)) in VALUES for c in row[1]) for row in block)
+        previous_band = None  # (schema, candidates, index) of the last matched md row in this block
         for line, raw in block:
             cells = [normalize(c) for c in raw]
             labels = [label(c) for c in cells]
@@ -278,20 +285,26 @@ def check_tables(text, document, table_blocks, normalize):
                 elif previous:
                     names = list(previous.values())
                     mappings = dict(zip(range(len(cells)-len(names), len(cells)), names))
+            def unverifiable(reason, line=line, page_no=page_no, cells=cells):
+                stats['unverifiable'] += 1
+                stats['unverifiable_' + reason] += 1
+                UNVERIFIED.append(dict(page=page_no + 1, line=line, reason=reason, row=' | '.join(cells)[:200]))
             if not mappings and not schemas:
                 stats['out_of_scope'] += 1
                 continue
             if not mappings or max(mappings) >= len(cells):
-                stats['unverifiable'] += 1
+                unverifiable('mapping')
                 continue
             matches = []
+            tied = []
             ambiguous = value_ambiguous = False
             for schema, candidates in schemas:
                 if set(mappings.values()) != set(schema['columns']):
                     continue
                 found = match_row(raw, schema, candidates, words, normalize)
-                if found is AMBIGUOUS:
+                if is_ambiguous(found):
                     ambiguous = True
+                    tied.append((schema, candidates, found['tied']))
                 elif found:
                     matches.append((schema, found))
             # A clear prose hit in another table (e.g. Abs Max "Supply voltage")
@@ -303,8 +316,9 @@ def check_tables(text, document, table_blocks, normalize):
                     if set(mappings.values()) != set(schema['columns']):
                         continue
                     found = match_by_values(raw, mappings, schema, candidates, words, normalize)
-                    if found is AMBIGUOUS:
+                    if is_ambiguous(found):
                         value_ambiguous = True
+                        tied.append((schema, candidates, found['tied']))
                     elif found:
                         matches.append((schema, found))
                 # the values recur in another table on the page: no unique row
@@ -312,13 +326,29 @@ def check_tables(text, document, table_blocks, normalize):
                     matches = []
                 if len(matches) == 1:
                     stats['value_matched'] += 1
+            if len(matches) != 1 and tied and previous_band is not None:
+                # Order constraint: consecutive md rows follow consecutive PDF
+                # rows. Among equally good candidates take the band right after
+                # the previous row's band, only if that band is one of the ties.
+                schema0, candidates0, row_index = previous_band
+                follow = [(sc, c) for sc, cands, ties in tied if sc is schema0
+                          for c in ties if row_index + 1 < len(cands) and c is cands[row_index + 1]]
+                follow = list({id(c): (sc, c) for sc, c in follow}.values())  # prose and value ties may repeat
+                if len(follow) == 1:
+                    matches = follow
+                    stats['order_matched'] += 1
             if len(matches) != 1:
-                stats['unverifiable'] += 1
+                previous_band = None
+                same = [sc for sc, _ in schemas if set(mappings.values()) == set(sc['columns'])]
+                unverifiable('no_schema' if not same else 'prose_ambiguous' if ambiguous
+                             else 'value_ambiguous' if value_ambiguous else 'no_match')
                 continue
             schema, found = matches[0]
+            cands = next(c for sc, c in schemas if sc is schema)
+            previous_band = (schema, cands, next(i for i, c in enumerate(cands) if c is found))
             if any(len(signature(cells[i], normalize)) > len(signature(found['cells'].get(name, ''), normalize))
                    and len(signature(cells[i], normalize)) > 1 for i, name in mappings.items()):
-                stats['unverifiable'] += 1
+                unverifiable('wrapped')
                 continue
             start = len(issues)
             parameter = ' / '.join(c for c in cells[:min(mappings)] if c) or next((c for c in cells if c), '')
