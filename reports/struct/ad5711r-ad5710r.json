@@ -5,21 +5,21 @@
  "loose": 19,
  "issues": [
   {
-   "line": 1800,
+   "line": 1793,
    "page": 40,
    "status": "unpaired",
    "tokens": [],
    "row": "0x11|INTERFACE_STATUS_A|[7:0]|NOT_READY_ERR|RESERVED||CLOCK_COUNT_ERR|CRC_ERR|RESERVED|REGISTER_PARTIAL_ACCESS_ERR|RESERVED|0x00|R/W||||||||||||"
   },
   {
-   "line": 1819,
+   "line": 1812,
    "page": 41,
    "status": "unpaired",
    "tokens": [],
    "row": "0xD2 to 0xE0 by 2|DAC_CHn|[15:8]|DAC_VAL[15:8]||||||||0x0000|R/W|||||||"
   },
   {
-   "line": 1829,
+   "line": 1822,
    "page": 41,
    "status": "unpaired",
    "tokens": [],

@@ -2040,14 +2040,19 @@
     "id": "ltc2975-p62-iout-bitnames",
     "file": "output/ltc2975/ltc2975.md",
     "page": 62,
-    "old": "| b[5:3] | lout_oc_fault_response_retry,<br>lout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| b[2:0] | lout_oc_fault_response_delay,<br>lout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> | b[2:0] | Deglitch interval | 001b | 100μs | 010b | 1ms | 011b | 5ms | 100b | 10ms | 101b | 20ms | 110b | 50ms | 111b | 100ms |",
-    "new": "| b[5:3] | Iout_oc_fault_response_retry,<br>Iout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| b[2:0] | Iout_oc_fault_response_delay,<br>Iout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> | b[2:0] | Deglitch interval | 001b | 100μs | 010b | 1ms | 011b | 5ms | 100b | 10ms | 101b | 20ms | 110b | 50ms | 111b | 100ms |",
-    "evidence": "PDF words p62: 'Iout_oc_fault_response_retry,', 'Iout_uc_fault_response_delay' (capital I); md had lowercase l.",
+    "old": "| b[5:3] | lout_oc_fault_response_retry,<br>lout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| b[2:0] | lout_oc_fault_response_delay,<br>lout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> | b[2:0] | Deglitch interval | 001b | 100μs | 010b | 1ms | 011b | 5ms | 100b | 10ms | 101b | 20ms | 110b | 50ms | 111b | 100ms |\n| b[2:0] | Deglitch interval                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 001b   | 100μs                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 010b   | 1ms                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 011b   | 5ms                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 100b   | 10ms                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 101b   | 20ms                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 110b   | 50ms                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 111b   | 100ms                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |",
+    "new": "| b[5:3] | Iout_oc_fault_response_retry,<br>Iout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| b[2:0] | Iout_oc_fault_response_delay,<br>Iout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> |",
+    "evidence": "PDF words p62: 'Iout_oc_fault_response_retry,', 'Iout_uc_fault_response_delay' (capital I); md had lowercase l. | Then: p62 IOUT_OC/UC_FAULT_RESPONSE b[2:0]: the 'b[2:0] / Deglitch interval' table (001b 100μs ... 111b 100ms) is nested inside the OPERATION cell (PDF words x=204-261, y=273-360, within the cell). The md already holds it as an HTML table in that cell, but also repeated it as 14 extra cells on the same row and 8 extra main-table rows (header + 7). Removed the duplicates; no content lost. Flagged by grok (grok-4.7); structure confirmed by PDF geometry (was the one 'unpaired' row of check_struct_tables).",
     "sources": [
-      "pdf-words",
-      "check_struct_tables"
+      "check_struct_tables",
+      "grok",
+      "pdf-geometry",
+      "pdf-words"
     ],
-    "severity": "medium"
+    "severity": "medium",
+    "merged": [
+      "ltc2975-p62-deglitch-nested-table"
+    ]
   },
   {
     "id": "ad5711r-p40-addr-ascension",
@@ -3285,15 +3290,1029 @@
     "severity": "low"
   },
   {
-    "id": "ltc2975-p62-deglitch-nested-table",
-    "file": "output/ltc2975/ltc2975.md",
-    "page": 62,
-    "old": "| b[2:0] | Iout_oc_fault_response_delay,<br>Iout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> | b[2:0] | Deglitch interval | 001b | 100μs | 010b | 1ms | 011b | 5ms | 100b | 10ms | 101b | 20ms | 110b | 50ms | 111b | 100ms |\n| b[2:0] | Deglitch interval                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 001b   | 100μs                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 010b   | 1ms                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 011b   | 5ms                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 100b   | 10ms                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 101b   | 20ms                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 110b   | 50ms                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n| 111b   | 100ms                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |",
-    "new": "| b[2:0] | Iout_oc_fault_response_delay,<br>Iout_uc_fault_response_delay | This sample count determines the amount of time a unit is to ignore a fault after it is first detected. Use this delay to deglitch fast faults.<br><br>000b: There is no additional deglitch delay applied to fault detection.<br><br>001b-111b: The fault is deglitched for the interval selected by b[2:0] as follows. <table data-bbox=\"511 718 821 982\"> <tr> <th>b[2:0]</th><th>Deglitch interval</th></tr> <tr> <td>001b</td><td>100μs</td></tr> <tr> <td>010b</td><td>1ms</td></tr> <tr> <td>011b</td><td>5ms</td></tr> <tr> <td>100b</td><td>10ms</td></tr> <tr> <td>101b</td><td>20ms</td></tr> <tr> <td>110b</td><td>50ms</td></tr> <tr> <td>111b</td><td>100ms</td></tr> </table> |",
-    "evidence": "p62 IOUT_OC/UC_FAULT_RESPONSE b[2:0]: the 'b[2:0] / Deglitch interval' table (001b 100μs ... 111b 100ms) is nested inside the OPERATION cell (PDF words x=204-261, y=273-360, within the cell). The md already holds it as an HTML table in that cell, but also repeated it as 14 extra cells on the same row and 8 extra main-table rows (header + 7). Removed the duplicates; no content lost. Flagged by grok (grok-4.7); structure confirmed by PDF geometry (was the one 'unpaired' row of check_struct_tables).",
+    "id": "ad5593r-p9-L461-figure-curve-table-removed",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": "| ADC CODE | NUMBER OF OCCURRENCES |\n|----------|-----------------------|\n| 2528     | ~1000                 |\n| 2529     | ~29000                |\n| 2530     | ~30000                |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| ADC CODE | NUMBER OF OCCURRENCES |'; only 0/6 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
     "sources": [
-      "grok",
-      "pdf-geometry"
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p9-L479-figure-curve-table-removed",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": "| ADC CODE | NUMBER OF OCCURRENCES |\n|----------|-----------------------|\n| 2520     | ~1000                 |\n| 2521     | ~1000                 |\n| 2522     | ~1000                 |\n| 2523     | ~1000                 |\n| 2524     | ~3000                 |\n| 2525     | ~33000                |\n| 2526     | ~24000                |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| ADC CODE | NUMBER OF OCCURRENCES |'; only 0/14 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p13-L621-figure-curve-table-removed",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 13,
+    "old": "| $V_{DD}$ (V) | $V_{REF}$ (V) |\n|--------------|---------------|\n| 2.7          | 2.49998       |\n| 3.0          | 2.50000       |\n| 3.3          | 2.50000       |\n| 3.6          | 2.49999       |\n| 3.9          | 2.50000       |\n| 4.2          | 2.50001       |\n| 4.5          | 2.50002       |\n| 4.8          | 2.50003       |\n| 5.1          | 2.50004       |\n| 5.4          | 2.50005       |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| $V_{DD}$ (V) | $V_{REF}$ (V) |'; only 0/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p21-L895-figure-curve-table-removed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 21,
+    "old": "| Frequency (Hz) | VOUT, RANGE = VREF (dB) | VOUT, RANGE = 2 × VREF (dB) | IOUT (dB) |\n|----------------|-------------------------|-----------------------------|-----------|\n| 10             | -90                     | -90                         | -90       |\n| 100            | -80                     | -85                         | -95       |\n| 1k             | -60                     | -70                         | -90       |\n| 10k            | -40                     | -55                         | -70       |\n| 100k           | -20                     | -45                         | -50       |\n| 1M             | -10                     | -30                         | -25       |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Frequency (Hz) | VOUT, RANGE = VREF (dB) | VOUT, RANGE = 2 × VREF (d'; only 1/24 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p22-L780-figure-curve-table-removed",
+    "file": "output/ina190/ina190.md",
+    "page": 22,
+    "old": "| Temperature (°C) | A1 Input Impedance (MΩ) | A2, A3, A4, A5 Input Impedance (MΩ) |\n|------------------|-------------------------|-------------------------------------|\n| -50              | 2.1                     | 4.5                                 |\n| 0                | 2.1                     | 4.4                                 |\n| 50               | 2.1                     | 4.3                                 |\n| 75               | 2.1                     | 4.2                                 |\n| 100              | 2.0                     | 3.8                                 |\n| 125              | 1.8                     | 3.2                                 |\n| 150              | 1.5                     | 2.5                                 |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature (°C) | A1 Input Impedance (MΩ) | A2, A3, A4, A5 Input Im'; only 7/21 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p1-L53-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 1,
+    "old": "| Output Current (A) | Dropout Voltage (mV) |\n|--------------------|----------------------|\n| 0.0                | 50                   |\n| 0.2                | 100                  |\n| 0.4                | 150                  |\n| 0.6                | 200                  |\n| 0.8                | 250                  |\n| 1.0                | 280                  |\n| 1.1                | 310                  |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Output Current (A) | Dropout Voltage (mV) |'; only 11/14 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L268-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Output Current (A) | Dropout Voltage (mV) @ $T_J = 125^\\circ\\text{C}$ | Dropout Voltage (mV) @ $T_J = 25^\\circ\\text{C}$ |\n|--------------------|--------------------------------------------------|-------------------------------------------------|\n| 0                  | ~100                                             | ~75                                             |\n| 0.2                | ~180                                             | ~130                                            |\n| 0.4                | ~250                                             | ~180                                            |\n| 0.6                | ~310                                             | ~230                                            |\n| 0.8                | ~360                                             | ~270                                            |\n| 1.0                | ~410                                             | ~310                                            |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Output Current (A) | Dropout Voltage (mV) @ $T_J = 125^\\circ\\text{C}'; only 9/18 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L287-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Output Current (A) | Guaranteed Dropout Voltage (mV) @ $T_J = 125^\\circ\\text{C}$ | Guaranteed Dropout Voltage (mV) @ $T_J = 25^\\circ\\text{C}$ |\n|--------------------|-------------------------------------------------------------|------------------------------------------------------------|\n| 0                  | ~100                                                        | ~80                                                        |\n| 0.1                | ~280                                                        | ~180                                                       |\n| 0.2                | ~300                                                        | ~200                                                       |\n| 0.5                | ~370                                                        | ~250                                                       |\n| 1.0                | ~490                                                        | ~360                                                       |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Output Current (A) | Guaranteed Dropout Voltage (mV) @ $T_J = 125^\\c'; only 9/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L305-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | $I_L = 1.1\\text{A}$ | $I_L = 1\\text{A}$ | $I_L = 500\\text{mA}$ | $I_L = 100\\text{mA}$ | $I_L = 1\\text{mA}$ |\n|----------------------------------|---------------------|-------------------|----------------------|----------------------|--------------------|\n| -50                              | ~250                | ~230              | ~150                 | ~90                  | ~40                |\n| 0                                | ~280                | ~260              | ~180                 | ~110                 | ~50                |\n| 50                               | ~320                | ~300              | ~220                 | ~140                 | ~60                |\n| 100                              | ~360                | ~340              | ~260                 | ~170                 | ~70                |\n| 150                              | ~420                | ~400              | ~310                 | ~190                 | ~80                |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | $I_L = 1.1\\text{A}$ | $I_L = 1\\te'; only 10/30 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L323-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | LT1965-1.5/-1.8/-2.5/-3.3 (mA) | LT1965 (mA) |\n|----------------------------------|--------------------------------|-------------|\n| -50                              | ~0.45                          | ~0.35       |\n| 0                                | ~0.55                          | ~0.45       |\n| 50                               | ~0.65                          | ~0.55       |\n| 100                              | ~0.75                          | ~0.65       |\n| 150                              | ~0.85                          | ~0.75       |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | LT1965-1.5/-1.8/-2.5/-3.3 (mA) |'; only 5/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L341-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |\n|----------------------------------|--------------------|\n| -50                              | ~1.504             |\n| 0                                | ~1.502             |\n| 50                               | ~1.501             |\n| 75                               | ~1.500             |\n| 100                              | ~1.501             |\n| 150                              | ~1.504             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |'; only 7/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L360-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |\n|----------------------------------|--------------------|\n| -50                              | ~1.804             |\n| 0                                | ~1.802             |\n| 50                               | ~1.801             |\n| 75                               | ~1.800             |\n| 100                              | ~1.801             |\n| 150                              | ~1.804             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |'; only 6/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L379-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |\n|----------------------------------|--------------------|\n| -50                              | ~2.502             |\n| 0                                | ~2.500             |\n| 50                               | ~2.499             |\n| 75                               | ~2.498             |\n| 100                              | ~2.499             |\n| 150                              | ~2.502             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |'; only 7/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L398-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |\n|----------------------------------|--------------------|\n| -50                              | ~3.302             |\n| 0                                | ~3.300             |\n| 50                               | ~3.299             |\n| 75                               | ~3.298             |\n| 100                              | ~3.299             |\n| 150                              | ~3.302             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | Output Voltage (V) |'; only 7/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p6-L417-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 6,
+    "old": "| Temperature ( $^\\circ\\text{C}$ ) | Adj Pin Voltage (V) |\n|----------------------------------|---------------------|\n| -50                              | ~1.204              |\n| 0                                | ~1.202              |\n| 50                               | ~1.201              |\n| 75                               | ~1.200              |\n| 100                              | ~1.201              |\n| 150                              | ~1.204              |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature ( $^\\circ\\text{C}$ ) | Adj Pin Voltage (V) |'; only 7/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p13-L797-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "| DC Bias Voltage (V) | X5R Change (%) | Y5V Change (%) |\n|---------------------|----------------|----------------|\n| 0                   | 0              | 0              |\n| 2                   | -2             | -10            |\n| 4                   | -5             | -25            |\n| 6                   | -10            | -45            |\n| 8                   | -15            | -60            |\n| 10                  | -20            | -70            |\n| 12                  | -25            | -75            |\n| 14                  | -30            | -78            |\n| 16                  | -40            | -80            |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| DC Bias Voltage (V) | X5R Change (%) | Y5V Change (%) |'; only 22/27 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p13-L815-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "| Temperature (°C) | X5R Change (%) | Y5V Change (%) |\n|------------------|----------------|----------------|\n| -25              | -5             | 10             |\n| 0                | -2             | 20             |\n| 25               | -1             | 10             |\n| 50               | -2             | -40            |\n| 75               | -5             | -80            |\n| 100              | -10            |                |\n| 125              | -15            |                |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature (°C) | X5R Change (%) | Y5V Change (%) |'; only 18/19 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p16-L967-figure-curve-table-removed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 16,
+    "old": "| Output Voltage (V) | LT1965 (mA) | LT1965-1.5 (mA) | LT1965-1.8 (mA) | LT1965-2.5 (mA) | LT1965-3.3 (mA) |\n|--------------------|-------------|-----------------|-----------------|-----------------|-----------------|\n| 0                  | 0           | 0               | 0               | 0               | 0               |\n| 1                  | 0.5         | 0.4             | 0.3             | 0.2             | 0.1             |\n| 2                  | 1.0         | 0.8             | 0.6             | 0.4             | 0.2             |\n| 3                  | 1.5         | 1.2             | 0.9             | 0.6             | 0.3             |\n| 4                  | 2.0         | 1.6             | 1.2             | 0.8             | 0.4             |\n| 5                  | 2.5         | 2.0             | 1.5             | 1.0             | 0.5             |\n| 6                  | 3.0         | 2.4             | 1.8             | 1.2             | 0.6             |\n| 7                  | 3.5         | 2.8             | 2.1             | 1.4             | 0.7             |\n| 8                  | 4.0         | 3.2             | 2.4             | 1.6             | 0.8             |\n| 9                  | 5.5         | 4.5             | 3.5             | 2.5             | 1.5             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Output Voltage (V) | LT1965 (mA) | LT1965-1.5 (mA) | LT1965-1.8 (mA)'; only 18/60 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-L932-figure-curve-table-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "| VIN_SNS (V) | -40°C (%) | 25°C (%) | 105°C (%) |\n|-------------|-----------|----------|-----------|\n| 4.5         | 0.25      | -0.10    | -0.45     |\n| 6.5         | 0.25      | -0.10    | -0.45     |\n| 8.5         | 0.25      | -0.10    | -0.45     |\n| 10.5        | 0.25      | -0.10    | -0.45     |\n| 12.5        | 0.25      | -0.10    | -0.45     |\n| 14.5        | 0.25      | -0.10    | -0.45     |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| VIN_SNS (V) | -40°C (%) | 25°C (%) | 105°C (%) |'; only 12/24 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-L951-figure-curve-table-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "| VIN_SNS (V) | -40°C (%) | 25°C (%) | 105°C (%) |\n|-------------|-----------|----------|-----------|\n| 4.5         | 0.4       | -0.1     | -0.5      |\n| 6.5         | 0.3       | -0.1     | -0.5      |\n| 8.5         | 0.4       | -0.1     | -0.5      |\n| 10.5        | 0.3       | -0.1     | -0.5      |\n| 12.5        | 0.4       | -0.1     | -0.5      |\n| 14.5        | 0.3       | -0.1     | -0.5      |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| VIN_SNS (V) | -40°C (%) | 25°C (%) | 105°C (%) |'; only 15/24 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-L971-figure-curve-table-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "| FREQUENCY (kHz) | -40°C (dB) | 25°C (dB) | 105°C (dB) |\n|-----------------|------------|-----------|------------|\n| 62.5            | -85        | -88       | -90        |\n| 625             | -85        | -88       | -90        |\n| 6250            | -85        | -88       | -90        |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| FREQUENCY (kHz) | -40°C (dB) | 25°C (dB) | 105°C (dB) |'; only 6/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-L985-figure-curve-table-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "| V <sub>DD33</sub> VOLTAGE (V) | V <sub>OUT_ENn</sub> VOLTAGE (V) |\n|-------------------------------|----------------------------------|\n| 0.0                           | 0.0                              |\n| 0.5                           | 0.55                             |\n| 0.6                           | 0.58                             |\n| 0.7                           | 0.55                             |\n| 0.8                           | 0.05                             |\n| 1.0                           | 0.0                              |\n| 2.0                           | 0.0                              |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| V <sub>DD33</sub> VOLTAGE (V) | V <sub>OUT_ENn</sub> VOLTAGE (V) |'; only 5/14 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L306-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | PMOS $I_{PEAKMAX}$ (A) | NMOS $I_{VALLEYMAX}$ (A) |\n|------------------|------------------------|--------------------------|\n| -50              | 9.0                    | 7.8                      |\n| 0                | 9.4                    | 7.7                      |\n| 50               | 9.7                    | 7.6                      |\n| 100              | 9.9                    | 7.5                      |\n| 150              | 10.0                   | 7.5                      |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | PMOS $I_{PEAKMAX}$ (A) | NMOS $I_{VALLEYMAX}$ (A)'; only 9/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L324-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| INPUT VOLTAGE (V) | 150°C (A) | 25°C (A) | -60°C (A) |\n|-------------------|-----------|----------|-----------|\n| 2.5               | 5.0       | 7.0      | 8.5       |\n| 3.0               | 10.0      | 9.5      | 9.0       |\n| 4.0               | 9.8       | 9.2      | 8.5       |\n| 5.0               | 9.5       | 9.0      | 8.3       |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| INPUT VOLTAGE (V) | 150°C (A) | 25°C (A) | -60°C (A) |'; only 11/16 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L339-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| DUTY CYCLE (%) | VIN = 5V (A) | VIN = 2.5V (A) | VIN = 3.3V (A) |\n|----------------|--------------|----------------|----------------|\n| 10             | 9.2          | 9.5            | 9.5            |\n| 50             | 9.0          | 9.2            | 9.2            |\n| 90             | 7.5          | 7.5            | 7.5            |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| DUTY CYCLE (%) | VIN = 5V (A) | VIN = 2.5V (A) | VIN = 3.3V (A) |'; only 9/12 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L353-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | VIN CURRENT (µA) |\n|------------------|------------------|\n| -50              | 0.8              |\n| 0                | 0.8              |\n| 50               | 0.9              |\n| 100              | 1.1              |\n| 150              | 2.5              |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | VIN CURRENT (µA) |'; only 6/10 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L369-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | VIN = 5.5V (µA) | VIN = 3.3V (µA) | VIN = 2.25V (µA) |\n|------------------|-----------------|-----------------|------------------|\n| -50              | 38              | 35              | 34               |\n| 0                | 40              | 37              | 36               |\n| 50               | 43              | 40              | 39               |\n| 100              | 48              | 45              | 44               |\n| 150              | 62              | 58              | 55               |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | VIN = 5.5V (µA) | VIN = 3.3V (µA) | VIN = 2.25V ('; only 10/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L385-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | VIN = 5.5V (mA) | VIN = 3.3V (mA) | VIN = 2.25V (mA) |\n|------------------|-----------------|-----------------|------------------|\n| -50              | 1.23            | 1.16            | 1.11             |\n| 0                | 1.23            | 1.16            | 1.12             |\n| 50               | 1.22            | 1.15            | 1.11             |\n| 100              | 1.21            | 1.14            | 1.10             |\n| 150              | 1.21            | 1.13            | 1.09             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | VIN = 5.5V (mA) | VIN = 3.3V (mA) | VIN = 2.25V ('; only 7/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L403-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | PMOS (µA) | NMOS (µA) |\n|------------------|-----------|-----------|\n| -50              | 0.1       | 0.1       |\n| 0                | 0.1       | 0.1       |\n| 50               | 0.2       | 0.2       |\n| 100              | 0.5       | 0.5       |\n| 150              | 2.5       | 5.0       |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | PMOS (µA) | NMOS (µA) |'; only 11/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L419-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | EN RISING (mV) | EN FALLING (mV) |\n|------------------|----------------|-----------------|\n| -50              | 400            | 350             |\n| 0                | 400            | 350             |\n| 50               | 400            | 350             |\n| 100              | 398            | 348             |\n| 150              | 395            | 345             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | EN RISING (mV) | EN FALLING (mV) |'; only 11/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p6-L435-figure-curve-table-removed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | RISING (V) | FALLING (V) |\n|------------------|------------|-------------|\n| -50              | 2.10       | 1.95        |\n| 0                | 2.10       | 1.95        |\n| 50               | 2.10       | 1.95        |\n| 100              | 2.09       | 1.94        |\n| 150              | 2.08       | 1.92        |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | RISING (V) | FALLING (V) |'; only 5/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L308-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | FEEDBACK VOLTAGE (mV) |\n|------------------|-----------------------|\n| -50              | 498.8                 |\n| -25              | 499.2                 |\n| 0                | 499.5                 |\n| 25               | 499.8                 |\n| 50               | 499.8                 |\n| 75               | 499.8                 |\n| 100              | 499.7                 |\n| 125              | 499.6                 |\n| 150              | 499.5                 |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | FEEDBACK VOLTAGE (mV) |'; only 9/18 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L328-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| INPUT VOLTAGE (V) | PMOS R <sub>DS(ON)</sub> (mΩ) | NMOS R <sub>DS(ON)</sub> (mΩ) |\n|-------------------|-------------------------------|-------------------------------|\n| 2.0               | 14.0                          | 4.0                           |\n| 2.5               | 12.5                          | 3.8                           |\n| 3.0               | 11.5                          | 3.5                           |\n| 3.5               | 10.5                          | 3.2                           |\n| 4.0               | 9.8                           | 3.0                           |\n| 4.5               | 9.2                           | 2.8                           |\n| 5.0               | 8.8                           | 2.6                           |\n| 5.5               | 8.5                           | 2.5                           |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| INPUT VOLTAGE (V) | PMOS R <sub>DS(ON)</sub> (mΩ) | NMOS R <sub>DS(O'; only 13/24 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L347-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | PMOS R <sub>DS(ON)</sub> (mΩ) | NMOS R <sub>DS(ON)</sub> (mΩ) |\n|------------------|-------------------------------|-------------------------------|\n| -50              | 8.0                           | 2.0                           |\n| -25              | 8.5                           | 2.2                           |\n| 0                | 9.0                           | 2.5                           |\n| 25               | 9.5                           | 2.8                           |\n| 50               | 10.0                          | 3.0                           |\n| 75               | 10.5                          | 3.2                           |\n| 100              | 11.0                          | 3.5                           |\n| 125              | 11.5                          | 3.8                           |\n| 150              | 12.5                          | 4.5                           |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | PMOS R <sub>DS(ON)</sub> (mΩ) | NMOS R <sub>DS(ON'; only 17/27 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L367-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | PMOS I <sub>SWITCH LEAKAGE</sub> (μA) | NMOS I <sub>SWITCH LEAKAGE</sub> (μA) |\n|------------------|---------------------------------------|---------------------------------------|\n| 25               | 1.0                                   | 1.0                                   |\n| 50               | 1.2                                   | 1.2                                   |\n| 75               | 1.5                                   | 1.5                                   |\n| 100              | 2.0                                   | 2.5                                   |\n| 125              | 4.0                                   | 6.0                                   |\n| 150              | 8.0                                   | 23.0                                  |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | PMOS I <sub>SWITCH LEAKAGE</sub> (μA) | NMOS I <s'; only 9/18 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L384-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | FREQUENCY (MHz) |\n|------------------|-----------------|\n| -50              | 2.00            |\n| -25              | 2.00            |\n| 0                | 2.00            |\n| 25               | 1.99            |\n| 50               | 1.98            |\n| 75               | 1.97            |\n| 100              | 1.96            |\n| 125              | 1.95            |\n| 150              | 1.94            |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | FREQUENCY (MHz) |'; only 9/18 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L404-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | RISING V <sub>IN</sub> UVLO (V) | FALLING V <sub>IN</sub> UVLO (V) |\n|------------------|---------------------------------|----------------------------------|\n| -50              | 2.08                            | 2.02                             |\n| -25              | 2.08                            | 2.02                             |\n| 0                | 2.08                            | 2.02                             |\n| 25               | 2.08                            | 2.02                             |\n| 50               | 2.08                            | 2.02                             |\n| 75               | 2.08                            | 2.02                             |\n| 100              | 2.08                            | 2.02                             |\n| 125              | 2.08                            | 2.01                             |\n| 150              | 2.08                            | 2.00                             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | RISING V <sub>IN</sub> UVLO (V) | FALLING V <sub>'; only 9/27 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L424-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | FREQUENCY (MHz) |\n|------------------|-----------------|\n| -50              | 2.00            |\n| -25              | 2.00            |\n| 0                | 2.00            |\n| 25               | 1.99            |\n| 50               | 1.99            |\n| 75               | 1.99            |\n| 100              | 1.99            |\n| 125              | 1.99            |\n| 150              | 1.99            |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | FREQUENCY (MHz) |'; only 9/18 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L444-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | EN RISING (mV) | EN FALLING (mV) |\n|------------------|----------------|-----------------|\n| -50              | 398            | 348             |\n| -25              | 399            | 349             |\n| 0                | 400            | 350             |\n| 25               | 400            | 350             |\n| 50               | 400            | 350             |\n| 75               | 400            | 350             |\n| 100              | 400            | 350             |\n| 125              | 400            | 350             |\n| 150              | 400            | 350             |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | EN RISING (mV) | EN FALLING (mV) |'; only 23/27 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p6-L464-figure-curve-table-removed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "| TEMPERATURE (°C) | SOFT-START CURRENT (μA) |\n|------------------|-------------------------|\n| -50              | 10.4                    |\n| -25              | 10.4                    |\n| 0                | 10.4                    |\n| 25               | 10.4                    |\n| 50               | 10.4                    |\n| 75               | 10.4                    |\n| 100              | 10.4                    |\n| 125              | 10.2                    |\n| 150              | 10.0                    |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | SOFT-START CURRENT (μA) |'; only 18/18 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p5-L238-figure-curve-table-removed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "| TEMPERATURE (°C) | V <sub>FB</sub> (mV) |\n|------------------|----------------------|\n| -50              | 500.0                |\n| 0                | 501.0                |\n| 25               | 501.2                |\n| 50               | 501.1                |\n| 75               | 501.0                |\n| 100              | 500.5                |\n| 125              | 499.5                |\n| 150              | 498.0                |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | V <sub>FB</sub> (mV) |'; only 8/16 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p5-L257-figure-curve-table-removed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "| TEMPERATURE (°C) | V <sub>IN</sub> = 2.25V | V <sub>IN</sub> = 3.3V | V <sub>IN</sub> = 5.5V |\n|------------------|-------------------------|------------------------|------------------------|\n| -50              | 85                      | 65                     | 55                     |\n| 0                | 95                      | 70                     | 58                     |\n| 25               | 105                     | 75                     | 60                     |\n| 50               | 115                     | 80                     | 62                     |\n| 75               | 125                     | 85                     | 65                     |\n| 100              | 135                     | 90                     | 68                     |\n| 125              | 145                     | 95                     | 70                     |\n| 150              | 155                     | 100                    | 72                     |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | V <sub>IN</sub> = 2.25V | V <sub>IN</sub> = 3.3V'; only 11/32 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p5-L276-figure-curve-table-removed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "| TEMPERATURE (°C) | V <sub>IN</sub> = 2.25V | V <sub>IN</sub> = 3.3V | V <sub>IN</sub> = 5.5V |\n|------------------|-------------------------|------------------------|------------------------|\n| -50              | 20                      | 15                     | 10                     |\n| 0                | 25                      | 18                     | 12                     |\n| 25               | 30                      | 20                     | 14                     |\n| 50               | 35                      | 22                     | 16                     |\n| 75               | 40                      | 25                     | 18                     |\n| 100              | 45                      | 28                     | 20                     |\n| 125              | 50                      | 30                     | 22                     |\n| 150              | 55                      | 32                     | 24                     |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | V <sub>IN</sub> = 2.25V | V <sub>IN</sub> = 3.3V'; only 21/32 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p5-L295-figure-curve-table-removed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "| TEMPERATURE (°C) | NMOS VIN = 5.5V, SW = 5.5V | NMOS VIN = 3.3V, SW = 3.3V | PMOS VIN = 5.5V, SW = 0V | PMOS VIN = 3.3V, SW = 0V |\n|------------------|----------------------------|----------------------------|--------------------------|--------------------------|\n| -50              | 0.0                        | 0.0                        | 0.0                      | 0.0                      |\n| 0                | 0.0                        | 0.0                        | 0.0                      | 0.0                      |\n| 25               | 0.0                        | 0.0                        | 0.0                      | 0.0                      |\n| 50               | 0.0                        | 0.0                        | 0.0                      | 0.0                      |\n| 75               | 0.1                        | 0.1                        | 0.1                      | 0.1                      |\n| 100              | 0.5                        | 0.4                        | 0.3                      | 0.2                      |\n| 125              | 2.0                        | 1.5                        | 0.8                      | 0.5                      |\n| 150              | 3.0                        | 2.5                        | 1.5                      | 0.8                      |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | NMOS VIN = 5.5V, SW = 5.5V | NMOS VIN = 3.3V, SW'; only 13/40 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p5-L314-figure-curve-table-removed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "| TEMPERATURE (°C) | V <sub>IN</sub> = 5.5V | V <sub>IN</sub> = 3.3V | V <sub>IN</sub> = 2.25V |\n|------------------|------------------------|------------------------|-------------------------|\n| -50              | 2.08                   | 2.00                   | 1.96                    |\n| 0                | 2.08                   | 2.00                   | 1.96                    |\n| 25               | 2.08                   | 2.00                   | 1.96                    |\n| 50               | 2.07                   | 1.99                   | 1.95                    |\n| 75               | 2.06                   | 1.98                   | 1.94                    |\n| 100              | 2.05                   | 1.97                   | 1.93                    |\n| 125              | 2.04                   | 1.96                   | 1.92                    |\n| 150              | 2.03                   | 1.95                   | 1.91                    |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| TEMPERATURE (°C) | V <sub>IN</sub> = 5.5V | V <sub>IN</sub> = 3.3V |'; only 20/32 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p5-L333-figure-curve-table-removed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "| V <sub>IN</sub> (V) | FREQUENCY (MHz) |\n|---------------------|-----------------|\n| 2.25                | 1.96            |\n| 3.3                 | 2.00            |\n| 4.5                 | 2.04            |\n| 5.5                 | 2.08            |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| V <sub>IN</sub> (V) | FREQUENCY (MHz) |'; only 8/8 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p12-L472-figure-curve-table-removed",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 12,
+    "old": "| I <sub>OL</sub> (mA) | V <sub>OL</sub> (V) at -40°C | V <sub>OL</sub> (V) at 25°C | V <sub>OL</sub> (V) at 85°C |\n|----------------------|------------------------------|-----------------------------|-----------------------------|\n| 0                    | 0.0                          | 0.0                         | 0.0                         |\n| 25                   | 0.6                          | 0.7                         | 0.8                         |\n| 50                   | 1.2                          | 1.4                         | 1.6                         |\n| 75                   | 1.8                          | 2.1                         | 2.4                         |\n| 100                  | 2.4                          | 2.8                         | 3.2                         |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| I <sub>OL</sub> (mA) | V <sub>OL</sub> (V) at -40°C | V <sub>OL</sub'; only 0/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p12-L486-figure-curve-table-removed",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 12,
+    "old": "| I <sub>OH</sub> (mA) | V <sub>OH</sub> (V) at -40°C | V <sub>OH</sub> (V) at 25°C | V <sub>OH</sub> (V) at 85°C |\n|----------------------|------------------------------|-----------------------------|-----------------------------|\n| -100                 | 1.0                          | 0.6                         | 0.2                         |\n| -75                  | 1.6                          | 1.2                         | 0.8                         |\n| -50                  | 2.2                          | 1.8                         | 1.4                         |\n| -25                  | 2.8                          | 2.4                         | 2.0                         |\n| 0                    | 3.6                          | 3.6                         | 3.6                         |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| I <sub>OH</sub> (mA) | V <sub>OH</sub> (V) at -40°C | V <sub>OH</sub'; only 3/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p13-L624-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "| Parameter                            | Value   | Mean   | Min    | Max    | Std Dev |\n|--------------------------------------|---------|--------|--------|--------|---------|\n| Rise Time                            | 14.33µs | 14.29µ | 14.20µ | 14.35µ | 53.50n  |\n| +V <sub>IN</sub> / +V <sub>OUT</sub> | 38.01µs | 37.96µ | 37.76µ | 38.07µ | 122.5n  |\n| +V <sub>IN</sub> / PG                | 141.8µs | 140.3µ | 130.4µ | 141.8µ | 4.004µ  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Parameter                            | Value   | Mean   | Min    | M'; only 0/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p13-L636-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "| Parameter                            | Value   | Mean   | Min    | Max    | Std Dev |\n|--------------------------------------|---------|--------|--------|--------|---------|\n| Rise Time                            | 33.73µs | 33.58µ | 33.44µ | 33.73µ | 139.7n  |\n| +V <sub>IN</sub> / +V <sub>OUT</sub> | 41.69µs | 41.64µ | 41.60µ | 41.69µ | 42.09n  |\n| +V <sub>IN</sub> / PG                | 161.7µs | 161.6µ | 161.7µ | 161.9µ | 98.42n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Parameter                            | Value   | Mean   | Min    | M'; only 0/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p13-L648-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "| Parameter                            | Value   | Mean   | Min    | Max    | Std Dev |\n|--------------------------------------|---------|--------|--------|--------|---------|\n| Rise Time                            | 14.44µs | 14.37µ | 14.16µ | 14.57µ | 119.1n  |\n| +V <sub>IN</sub> / +V <sub>OUT</sub> | 38.14µs | 38.11µ | 37.94µ | 38.28µ | 76.67n  |\n| +V <sub>IN</sub> / PG                | 129.1µs | 129.2µ | 129.1µ | 129.3µ | 66.12n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Parameter                            | Value   | Mean   | Min    | M'; only 0/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p13-L660-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "| Parameter                            | Value   | Mean   | Min    | Max    | Std Dev |\n|--------------------------------------|---------|--------|--------|--------|---------|\n| Rise Time                            | 26.30µs | 25.98µ | 25.41µ | 26.30µ | 286.3n  |\n| +V <sub>IN</sub> / +V <sub>OUT</sub> | 39.24µs | 39.23µ | 39.00µ | 39.55µ | 136.7n  |\n| +V <sub>IN</sub> / PG                | 140.6µs | 140.6µ | 140.5µ | 140.7µ | 74.97n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Parameter                            | Value   | Mean   | Min    | M'; only 0/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p13-L672-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "| Parameter                            | Value   | Mean   | Min    | Max    | Std Dev |\n|--------------------------------------|---------|--------|--------|--------|---------|\n| Fall Time                            | 2.044µs | 2.061µ | 1.971µ | 2.125µ | 50.49n  |\n| +V <sub>IN</sub> / +V <sub>OUT</sub> | 7.775µs | 7.771µ | 7.752µ | 7.790µ | 12.19n  |\n| +V <sub>IN</sub> / PG                | 1.180µs | 1.177µ | 1.172µ | 1.184µ | 3.183n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Parameter                            | Value   | Mean   | Min    | M'; only 0/15 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p14-L688-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "|           | Value   | Mean   | Min    | Max    | Std Dev |\n|-----------|---------|--------|--------|--------|---------|\n| Fall Time | 2.039µs | 2.049µ | 2.036µ | 2.066µ | 9.937n  |\n| +50%      | 5.027µs | 5.011µ | 4.994µ | 5.027µ | 11.01n  |\n| +10%      | 1.183µs | 1.186µ | 1.179µ | 1.193µ | 4.231n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '|           | Value   | Mean   | Min    | Max    | Std Dev |'; only 1/17 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p14-L703-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "|           | Value   | Mean   | Min    | Max    | Std Dev |\n|-----------|---------|--------|--------|--------|---------|\n| Fall Time | 1.945µs | 1.951µ | 1.918µ | 2.019µ | 34.17n  |\n| +50%      | 8.363µs | 8.372µ | 8.335µ | 8.398µ | 19.19n  |\n| +10%      | 1.380µs | 1.380µ | 1.378µ | 1.385µ | 2.067n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '|           | Value   | Mean   | Min    | Max    | Std Dev |'; only 1/17 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p14-L718-figure-curve-table-removed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "|           | Value   | Mean   | Min    | Max    | Std Dev |\n|-----------|---------|--------|--------|--------|---------|\n| Fall Time | 2.292µs | 2.330µ | 2.152µ | 2.456µ | 97.45n  |\n| +50%      | 5.551µs | 5.611µ | 5.551µ | 5.670µ | 37.81n  |\n| +10%      | 1.356µs | 1.356µ | 1.338µ | 1.360µ | 6.813n  |",
+    "new": "*[AI figure description: measurement table removed (labels/values were mis-transcribed from the scope screenshot). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '|           | Value   | Mean   | Min    | Max    | Std Dev |'; only 1/17 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p17-L634-figure-curve-table-removed",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 17,
+    "old": "| Output Voltage (V) | V <sub>IN</sub> = 2.7 V (A) | V <sub>IN</sub> = 3.3 V (A) | V <sub>IN</sub> = 5 V (A) |\n|--------------------|-----------------------------|-----------------------------|---------------------------|\n| 0.4                | 0.30                        | 0.48                        | 0.78                      |\n| 0.5                | 0.22                        | 0.38                        | 0.62                      |\n| 0.6                | 0.18                        | 0.30                        | 0.52                      |\n| 0.7                | 0.15                        | 0.25                        | 0.45                      |\n| 0.8                | 0.13                        | 0.20                        | 0.40                      |\n| 0.9                | 0.11                        | 0.17                        | 0.36                      |\n| 1.0                | 0.10                        | 0.15                        | 0.32                      |\n| 1.1                | 0.09                        | 0.13                        | 0.29                      |\n| 1.2                | 0.08                        | 0.12                        | 0.26                      |\n| 1.3                | 0.07                        | 0.11                        | 0.24                      |\n| 1.4                | 0.06                        | 0.10                        | 0.22                      |\n| 1.5                | 0.05                        | 0.09                        | 0.20                      |\n| 1.6                | 0.04                        | 0.08                        | 0.18                      |\n| 1.7                | 0.03                        | 0.07                        | 0.16                      |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Output Voltage (V) | V <sub>IN</sub> = 2.7 V (A) | V <sub>IN</sub> ='; only 13/56 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p8-L316-figure-curve-table-removed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "| V <sub>IN</sub> [V] | -40°C | 30°C | 85°C | 125°C |\n|---------------------|-------|------|------|-------|\n| 2                   | 35    | 47   | 57   | 65    |\n| 5                   | 37    | 50   | 60   | 70    |\n| 10                  | 38    | 52   | 68   | 80    |\n| 15                  | 39    | 52   | 67   | 82    |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| V <sub>IN</sub> [V] | -40°C | 30°C | 85°C | 125°C |'; only 9/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p8-L329-figure-curve-table-removed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "| V <sub>IN</sub> [V] | -40°C | 30°C | 80°C | 125°C |\n|---------------------|-------|------|------|-------|\n| 2                   | 32    | 42   | 50   | 58    |\n| 5                   | 32    | 42   | 50   | 58    |\n| 10                  | 28    | 36   | 44   | 50    |\n| 15                  | 28    | 36   | 43   | 49    |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| V <sub>IN</sub> [V] | -40°C | 30°C | 80°C | 125°C |'; only 9/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p8-L342-figure-curve-table-removed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "| V <sub>IN</sub> [V] | -40°C | 30°C | 85°C | 125°C |\n|---------------------|-------|------|------|-------|\n| 2                   | 61    | 78   | 95   | 108   |\n| 5                   | 61    | 78   | 95   | 108   |\n| 10                  | 61    | 78   | 93   | 107   |\n| 15                  | 61    | 78   | 93   | 107   |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| V <sub>IN</sub> [V] | -40°C | 30°C | 85°C | 125°C |'; only 4/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p8-L355-figure-curve-table-removed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "| V <sub>IN</sub> [V] | -40°C | 30°C | 85°C | 125°C |\n|---------------------|-------|------|------|-------|\n| 2                   | 77    | 101  | 123  | 143   |\n| 5                   | 77    | 101  | 123  | 143   |\n| 10                  | 77    | 101  | 121  | 141   |\n| 15                  | 77    | 101  | 121  | 141   |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| V <sub>IN</sub> [V] | -40°C | 30°C | 85°C | 125°C |'; only 4/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p8-L290-figure-curve-table-removed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 8,
+    "old": "| Temperature (°C) | Quiescent Current (µA) at $V_I = 1.8\\text{ V}$ | Quiescent Current (µA) at $V_I = 3.6\\text{ V}$ | Quiescent Current (µA) at $V_I = 5.5\\text{ V}$ |\n|------------------|------------------------------------------------|------------------------------------------------|------------------------------------------------|\n| -40              | 1.0                                            | 9.0                                            | 10.0                                           |\n| 0                | 1.0                                            | 9.5                                            | 10.5                                           |\n| 40               | 1.0                                            | 10.0                                           | 11.0                                           |\n| 80               | 1.0                                            | 10.5                                           | 11.5                                           |\n| 120              | 1.5                                            | 12.0                                           | 13.0                                           |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature (°C) | Quiescent Current (µA) at $V_I = 1.8\\text{ V}$ |'; only 5/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p8-L316-figure-curve-table-removed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 8,
+    "old": "| Temperature (°C) | Shutdown Current (µA) at $V_I = 1.8\\text{ V}$ | Shutdown Current (µA) at $V_I = 3.6\\text{ V}$ | Shutdown Current (µA) at $V_I = 5.5\\text{ V}$ |\n|------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|\n| -40              | 0.0                                           | 0.0                                           | 0.0                                           |\n| 0                | 0.0                                           | 0.0                                           | 0.0                                           |\n| 40               | 0.0                                           | 0.0                                           | 0.0                                           |\n| 80               | 0.05                                          | 0.1                                           | 0.1                                           |\n| 120              | 0.7                                           | 0.9                                           | 1.3                                           |",
+    "new": "*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*",
+    "evidence": "Table inside an AI-generated figure description (Datalab), header '| Temperature (°C) | Shutdown Current (µA) at $V_I = 1.8\\text{ V}$ | S'; only 5/20 of its numbers occur in the PDF page text: values were read off the plot, not printed. Removed per Fabio's instruction (2026-10-17) and replaced by a note; the figure image stays.",
+    "sources": [
+      "fabio-policy",
+      "pdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig26-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 26: Turnon Response oscilloscope trace. The trace shows VIN, VOUT, and PG signals. VIN is a step-up transition from 1.05 V to 3.88 V. VOUT follows VIN with a delay. PG is a low signal until VIN is stable, then it goes high. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "![Figure 26: Turnon Response oscilloscope trace. The trace shows VIN, VOUT, and PG signals. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig26-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 26: Turnon Response oscilloscope trace. The trace shows VIN, VOUT, and PG signals. VIN is a step-up transition from 1.05 V to 3.88 V. VOUT follows VIN with a delay. PG is a low signal until VIN is stable, then it goes high. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "\nFigure 26: Turnon Response oscilloscope trace. The trace shows VIN, VOUT, and PG signals. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig27-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 27: Turnon Response oscilloscope trace. Similar to Figure 26, but VIN is a step-up transition from 5 V to 3.88 V. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "![Figure 27: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig27-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 27: Turnon Response oscilloscope trace. Similar to Figure 26, but VIN is a step-up transition from 5 V to 3.88 V. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "\nFigure 27: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig28-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 28: Turnon Response oscilloscope trace. Similar to Figure 26, but VIN is a step-up transition from 1.05 V to 3.88 V with VBIAS = 3.3 V. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "![Figure 28: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig28-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 28: Turnon Response oscilloscope trace. Similar to Figure 26, but VIN is a step-up transition from 1.05 V to 3.88 V with VBIAS = 3.3 V. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "\nFigure 28: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig29-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 29: Turnon Response oscilloscope trace. Similar to Figure 27, but VIN is a step-up transition from 3.3 V to 3.88 V with VBIAS = 3.3 V. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "![Figure 29: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig29-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 29: Turnon Response oscilloscope trace. Similar to Figure 27, but VIN is a step-up transition from 3.3 V to 3.88 V with VBIAS = 3.3 V. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "\nFigure 29: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig30-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 30: Turnon Response oscilloscope trace. Similar to Figure 26, but VIN is a step-down transition from 3.88 V to 1.05 V. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "![Figure 30: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig30-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 30: Turnon Response oscilloscope trace. Similar to Figure 26, but VIN is a step-down transition from 3.88 V to 1.05 V. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.",
+    "new": "\nFigure 30: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig31-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "![Figure 31: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. VIN is 5V, IN is high, VOUT is 3.88V, and PG is high. When IN is pulsed low, VOUT falls to 0V. Fall time is measured between 500mV and 1.183V.",
+    "new": "![Figure 31: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig31-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "\nFigure 31: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. VIN is 5V, IN is high, VOUT is 3.88V, and PG is high. When IN is pulsed low, VOUT falls to 0V. Fall time is measured between 500mV and 1.183V.",
+    "new": "\nFigure 31: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig32-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "![Figure 32: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. VIN is 1.05V, IN is high, VOUT is 3.88V, and PG is high. When IN is pulsed low, VOUT falls to 0V. Fall time is measured between 500mV and 1.380V.",
+    "new": "![Figure 32: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig32-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "\nFigure 32: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. VIN is 1.05V, IN is high, VOUT is 3.88V, and PG is high. When IN is pulsed low, VOUT falls to 0V. Fall time is measured between 500mV and 1.380V.",
+    "new": "\nFigure 32: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig33-alt-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "![Figure 33: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. VIN is 3.3V, IN is high, VOUT is 1.68V, and PG is high. When IN is pulsed low, VOUT falls to 0V. Fall time is measured between 2.00V and 1.356V.",
+    "new": "![Figure 33: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals.",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-fig33-desc-scope-values",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "\nFigure 33: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. VIN is 3.3V, IN is high, VOUT is 1.68V, and PG is high. When IN is pulsed low, VOUT falls to 0V. Fall time is measured between 2.00V and 1.356V.",
+    "new": "\nFigure 33: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]",
+    "evidence": "AI figure description of a scope screenshot invented signal levels: '3.88 V' is the scope trigger level (shown as '1 ⨍ 3.88 V' in the screenshot, channel 1 = ON), not a VIN/VOUT level; the VIN 'transition' and fall-time levels are not supported by the image (checked visually on Figure 26). Invented sentences removed, note added. Per Fabio's instruction 2026-10-17.",
+    "sources": [
+      "fabio-policy",
+      "pdf-image"
     ],
     "severity": "medium"
   }
