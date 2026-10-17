@@ -1,0 +1,12 @@
+{
+ "datasheet": "ltc2975",
+ "page": 5,
+ "checked_sections": [
+  "Order Information",
+  "Automotive Products",
+  "BGA Order Information",
+  "Electrical Characteristics — Power Supply Characteristics",
+  "Electrical Characteristics — Voltage Reference Characteristics"
+ ],
+ "discrepancies": []
+}

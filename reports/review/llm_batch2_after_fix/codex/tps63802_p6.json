@@ -1,0 +1,11 @@
+{
+ "datasheet": "tps63802",
+ "page": 6,
+ "checked_sections": [
+  "8.5 Electrical Characteristics — Supply",
+  "8.5 Electrical Characteristics — Soft-start, Power Good",
+  "8.5 Electrical Characteristics — Logic Signals EN, MODE",
+  "8.5 Electrical Characteristics — Output"
+ ],
+ "discrepancies": []
+}

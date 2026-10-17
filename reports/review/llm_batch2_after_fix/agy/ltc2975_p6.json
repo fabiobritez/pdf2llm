@@ -1,0 +1,10 @@
+{
+ "datasheet": "ltc2975",
+ "page": 6,
+ "checked_sections": [
+  "Electrical Characteristics - ADC Characteristics",
+  "Electrical Characteristics - Sense Input Current Characteristics",
+  "Electrical Characteristics - DAC Output Characteristics"
+ ],
+ "discrepancies": []
+}

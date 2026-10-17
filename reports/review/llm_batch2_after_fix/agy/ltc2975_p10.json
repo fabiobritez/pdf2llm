@@ -1,0 +1,31 @@
+{
+ "datasheet": "ltc2975",
+ "page": 10,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS",
+  "Additional Digital Timing Characteristics",
+  "Notes 1-13"
+ ],
+ "discrepancies": [
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "t_TIMEOUT_BUS (Time Allowed to Complete any PMBus Command After Which Time SDA Will Be Released and Command Terminated), Mfr_config_all_longer_pmbus_timeout = 0",
+   "column": "MIN",
+   "md_text": "| Mfr_config_all_longer_pmbus_timeout = 0 | ● | 25 | 35 | ms |",
+   "pdf_text": "CONDITIONS: Mfr_config_all_longer_pmbus_timeout = 0, ● (in dot sub-column before MIN), MIN: empty, TYP: 25, MAX: 35, UNITS: ms",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "ELECTRICAL CHARACTERISTICS",
+   "parameter": "t_TIMEOUT_BUS (Time Allowed to Complete any PMBus Command After Which Time SDA Will Be Released and Command Terminated), Mfr_config_all_longer_pmbus_timeout = 1",
+   "column": "MIN",
+   "md_text": "| Mfr_config_all_longer_pmbus_timeout = 1 | ● | 200 | 280 | ms |",
+   "pdf_text": "CONDITIONS: Mfr_config_all_longer_pmbus_timeout = 1, ● (in dot sub-column before MIN), MIN: empty, TYP: 200, MAX: 280, UNITS: ms",
+   "type": "wrong_column",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

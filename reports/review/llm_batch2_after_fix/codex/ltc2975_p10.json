@@ -1,0 +1,10 @@
+{
+ "datasheet": "ltc2975",
+ "page": 10,
+ "checked_sections": [
+  "Electrical Characteristics",
+  "Additional Digital Timing Characteristics",
+  "Notes 1–13"
+ ],
+ "discrepancies": []
+}

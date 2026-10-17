@@ -1,0 +1,114 @@
+{
+ "datasheet": "ltc2975",
+ "page": 8,
+ "checked_sections": [
+  "Electrical Characteristics",
+  "External Temperature Sensor Characteristics (READ_TEMPERATURE_1)",
+  "Internal Temperature Sensor Characteristics (READ_TEMPERATURE_2)",
+  "VOUT Enable Output (VOUT_EN [3:0]) Characteristics",
+  "General Purpose Output (AUXFAULTB) Characteristics",
+  "Energy Meter Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output High Voltage",
+   "column": "other",
+   "md_text": "V <sub>OUT_ENn</sub>",
+   "pdf_text": "V with subscript VOUT_ENn",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output High Voltage",
+   "column": "CONDITIONS",
+   "md_text": "I <sub>OUT_ENn</sub> = -5μA",
+   "pdf_text": "I with subscript VOUT_ENn = −5μA",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output Sourcing Current",
+   "column": "other",
+   "md_text": "I <sub>OUT_ENn</sub>",
+   "pdf_text": "I with subscript VOUT_ENn",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output Sourcing Current",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>OUT_ENn</sub> Pull-Up Enabled, V <sub>OUT_ENn</sub> = 1V ●",
+   "pdf_text": "V with subscript VOUT_ENn Pull-Up Enabled, V with subscript VOUT_ENn = 1V ●",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output Sinking Current, Strong Pull-Down Enabled",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>OUT_ENn</sub> = 0.4V",
+   "pdf_text": "V with subscript VOUT_ENn = 0.4V",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output Sinking Current, Weak Pull-Down Enabled",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>OUT_ENn</sub> = 0.4V",
+   "pdf_text": "V with subscript VOUT_ENn = 0.4V",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Output Leakage Current",
+   "column": "CONDITIONS",
+   "md_text": "0V ≤ V <sub>OUT_ENn</sub> ≤ 15V",
+   "pdf_text": "0V ≤ V with subscript VOUT_ENn ≤ 15V",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Minimum VDD33 when VOUT_ENn Valid",
+   "column": "other",
+   "md_text": "V <sub>OUT_VALID</sub>",
+   "pdf_text": "V with subscript VOUT_VALID",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Minimum VDD33 when VOUT_ENn Valid",
+   "column": "other",
+   "md_text": "Minimum V <sub>DD33</sub> when V <sub>OUT_ENn</sub> Valid",
+   "pdf_text": "Minimum VDD33 when V with subscript VOUT_ENn Valid",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "VOUT Enable Output Characteristics",
+   "parameter": "Minimum VDD33 when VOUT_ENn Valid",
+   "column": "CONDITIONS",
+   "md_text": "V <sub>OUT_ENn</sub> ≤ 0.4V ●",
+   "pdf_text": "V with subscript VOUT_ENn ≤ 0.4V ●",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

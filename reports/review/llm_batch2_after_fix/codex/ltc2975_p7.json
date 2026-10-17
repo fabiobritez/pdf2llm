@@ -1,0 +1,23 @@
+{
+ "datasheet": "ltc2975",
+ "page": 7,
+ "checked_sections": [
+  "Voltage Supervisor Characteristics",
+  "Current Supervisor Characteristics",
+  "VIN_SNS Input Characteristics",
+  "DAC Soft-Connect Comparator Characteristics",
+  "Input Current Sense Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "Input Current Sense Characteristics",
+   "parameter": "I_IIN — Input Current",
+   "column": "CONDITIONS",
+   "md_text": "V_{\\text{IIN\\_SNSP}} = V_{\\text{IIN\\_SNSM}} = V_{\\text{IIN\\_SNS}}",
+   "pdf_text": "V_IIN_SNSP = V_IIN_SNSM = V_IN_SNS",
+   "type": "other",
+   "severity": "medium",
+   "confidence": "high"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "datasheet": "ltc2975",
+ "page": 7,
+ "checked_sections": [
+  "Electrical Characteristics - Voltage Supervisor Characteristics",
+  "Electrical Characteristics - Current Supervisor Characteristics",
+  "Electrical Characteristics - VIN_SNS Input Characteristics",
+  "Electrical Characteristics - DAC Soft-Connect Comparator Characteristics",
+  "Electrical Characteristics - Input Current Sense Characteristics"
+ ],
+ "discrepancies": []
+}

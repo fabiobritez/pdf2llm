@@ -105,3 +105,16 @@ numeric-range cells as row anchors, band word ownership, codex advisory review
 items (whole-word Conditions/Comments header, MIN+MAX for Title-case headers,
 formula skip needs an operator and whole-token numbers), and an `out_of_scope`
 count for rows of non-spec tables.
+
+### Batch 2 after-fix re-review
+
+Fixed pages re-rendered from the corrected md (`~/work/pdf2llm-run6`) and reviewed again:
+lt1965fb p4, ltc2975 p5-p10, tps6287b20 p7/p10, ts3a5018 p4/p8, tps22990 p5, tps63802 p6 (13 pages).
+
+- **agy:** 13/13 pages with 0 high/medium discrepancies. Only low: the ltc2975 p10 t_TIMEOUT_BUS ● sits in MIN, which is the repo convention (● alone in MIN when the row has no MIN value; the values are 25/35 ms TYP/MAX, as the PDF words confirm).
+- **codex** (now allowed without sandbox, images passed with `-i`): 13/13 with 0 high. One medium on ltc2975 p7 I_IIN is a false positive (pdftotext: `VIIN_SNSP = VIIN_SNSM = VIIN_SNS`, matching the md). The p6/p8 symbol-name lows were fixed (`ltc2975-p6-symbol-*`, `ltc2975-p8-symbol-vout-en-*`).
+- **grok:** lt1965fb p4 and ltc2975 p10 are clean (0 high/medium). The other pages were still running when this was written (about 5-8 min per page).
+
+Earlier rounds (run4/run5) found the absolute-value bars, the _H subscripts and the V_FS_VDAC shared condition, which are now fixed.
+`fixes.json` replays exactly: applying it to the original Datalab md (commit 6439792) reproduces every corrected file byte for byte.
+Raw outputs: `reports/review/llm_batch2_after_fix/{agy,codex,grok}/`.

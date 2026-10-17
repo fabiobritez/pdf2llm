@@ -1,0 +1,32 @@
+{
+ "datasheet": "ltc2975",
+ "page": 6,
+ "checked_sections": [
+  "Electrical Characteristics: test conditions",
+  "ADC Characteristics",
+  "Sense Input Current Characteristics (Note 13)",
+  "DAC Output Characteristics"
+ ],
+ "discrepancies": [
+  {
+   "section": "ADC Characteristics",
+   "parameter": "Total Unadjusted Error — Current Sense Inputs",
+   "column": "other",
+   "md_text": "TUE_ADCCurr_SNS",
+   "pdf_text": "TUE_ADC_CURR_SNS",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  },
+  {
+   "section": "Sense Input Current Characteristics (Note 13)",
+   "parameter": "Current sense input current",
+   "column": "other",
+   "md_text": "I <sub>INISENSE</sub>",
+   "pdf_text": "I_IN_ISENSE",
+   "type": "other",
+   "severity": "low",
+   "confidence": "high"
+  }
+ ]
+}

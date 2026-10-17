@@ -1,0 +1,13 @@
+{
+ "datasheet": "ltc2975",
+ "page": 9,
+ "checked_sections": [
+  "ELECTRICAL CHARACTERISTICS - EEPROM Characteristics",
+  "ELECTRICAL CHARACTERISTICS - Digital Inputs SCL, SDA, CONTROL0, CONTROL1, CONTROL2, CONTROL3, WDI/RESETB, FAULTB0, FAULTB1, WP",
+  "ELECTRICAL CHARACTERISTICS - Digital Input SHARE_CLK",
+  "ELECTRICAL CHARACTERISTICS - Digital Outputs SDA, ALERTB, SHARE_CLK, FAULTB0, FAULTB1, PWRGD",
+  "ELECTRICAL CHARACTERISTICS - Digital Inputs ASEL0, ASEL1",
+  "ELECTRICAL CHARACTERISTICS - Serial Bus Timing Characteristics"
+ ],
+ "discrepancies": []
+}

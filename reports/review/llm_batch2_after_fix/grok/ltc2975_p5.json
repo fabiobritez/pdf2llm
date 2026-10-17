@@ -1,0 +1,11 @@
+{
+ "datasheet": "ltc2975",
+ "page": 5,
+ "checked_sections": [
+  "Order Information",
+  "Automotive Products",
+  "Order Information (BGA)",
+  "Electrical Characteristics"
+ ],
+ "discrepancies": []
+}

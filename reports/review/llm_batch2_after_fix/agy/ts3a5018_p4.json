@@ -1,0 +1,11 @@
+{
+ "datasheet": "ts3a5018",
+ "page": 4,
+ "checked_sections": [
+  "6.1 Absolute Maximum Ratings",
+  "6.2 ESD Ratings",
+  "6.3 Recommended Operating Conditions",
+  "6.4 Thermal Information"
+ ],
+ "discrepancies": []
+}
