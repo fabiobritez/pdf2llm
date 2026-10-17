@@ -405,8 +405,11 @@ def compact(text, source='source.md', summary=None):
             duplicate = bool(a and b and (a.startswith(b) or b.startswith(a)))
             if not ICONS.fullmatch(html.unescape(alt)):
                 # When the repeat is longer, keep it so prefix matching loses no data.
-                output.append(f'Figure {img[2].strip()} (description only, not data): '
-                              + inline(paragraph if duplicate and len(b) > len(a) else alt))
+                text = inline(paragraph if duplicate and len(b) > len(a) else alt)
+                if text.strip():
+                    output.append(f'Figure {img[2].strip()} (description only, not data): ' + text)
+                else:
+                    output.append(f'Figure {img[2].strip()} (image only; no description)')
             if duplicate:
                 i = end - 1
         elif line.strip().startswith('|') and line.strip().endswith('|'):
