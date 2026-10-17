@@ -72,7 +72,8 @@ def audit(folder: Path) -> list:
             problems.append(f"{path.name}: {len(missing)} referenced images missing, e.g. {missing[0]}")
     md = full_markdown(folder)
     md_text = md.read_text(encoding="utf-8")
-    md_refs = re.findall(r"!\[[^\]]*\]\(img/(" + NAME + r")\)", md_text)
+    # Alt text may itself contain brackets ("D[7:0]"), so anchor on "](img/...)".
+    md_refs = re.findall(r"\]\(img/(" + NAME + r")\)", md_text)
     referenced = set().union(*(set(ANY.findall(p.read_text(encoding="utf-8"))) for p in text_files(folder)))
     orphans = sorted(on_disk - referenced)
     if orphans:
