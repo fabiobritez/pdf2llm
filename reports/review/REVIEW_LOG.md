@@ -144,3 +144,18 @@ Totals: verified 1059 → 1300, mismatched 0 → 0, unverifiable 393 → 152.
 Most of the remaining unverifiable rows are outside spec tables: scope-readout tables on the tps22990 p13/14 plots, and the tps6287b20 / tps63070 design-example "VALUE" tables.
 Known gap: TI tables with two MIN/TYP/MAX groups (TA = 25°C and full range, e.g. sn74avc4t774 p8) are out of validator scope. The p8 shift above was found by the LLMs, not by geometry.
 Raw outputs: `reports/review/llm_batch3/` and `reports/review/llm_batch3_after_fix/`.
+
+### Run12: prose / register / application pages (codex + grok)
+
+Scope: 138 pages rendered in `~/work/pdf2llm-run12` (functional description, register/command, applications pages) with `tools/review/review_struct.tmpl`.
+codex (`gpt-6.1-sol`, `xhigh`, confirmed in each output header) reviewed all 138 pages. 32 pages first had only a grok review because codex hit its usage limit (run12b: ltc3309a p6/8/22/23, ltc3313 p11-20, ltc3315a p12-14, tps63070 p9, tps63802 p9/10/13-17, ts3a5018 p17/18; run12c: ltc3315a p15-19). codex re-ran them on 2026-10-17 at 20:12 UTC; ltc3313 p14 and ts3a5018 p17 were re-run at 21:0x UTC. Each run used about 11-14k tokens, the same as the earlier codex batch.
+
+| Datasheet | Page | Finding | Evidence | Fix ids | Decision |
+|---|---|---|---|---|---|
+| ltc3315a | 16 | Table 1 (×2) and Table 2: md "Würth", PDF prints "Wurth" | codex + grok-4.7 (crops) + PDF words (U+0075) + image; validator listed "wurth" as missing | `ltc3315a-p16-table*-wurth-as-printed` | fixed (as printed) |
+| ltc3313 | 14 | Table 2: md "Würth", PDF prints "Wurth" | codex + grok-4.7 + PDF words + image | `ltc3313-p14-table2-wurth-as-printed` | fixed (as printed) |
+| ltc3313 / ltc3315a / tps63802 | 17 / 13 / 15 | LTpowerCAD, Overtemperature heading, "continuos"/"power safe mode" as printed | grok + codex + PDF text | already in 0deb33e | - |
+| ltc3309a | 6 | 27 curve-value findings (G10-G18) | codex (grok: 4) | tables removed in 7ecef66 (`ltc3309a-p6-*-figure-curve-table-removed`) | obsolete |
+
+All other pages in the 32-page set: 0 codex findings.
+ltc2975 p63: fresh codex and grok-4.7 reviews of the current md (`~/work/pdf2llm-run13`) found 0 discrepancies, matching the run10 reviews. A PyMuPDF word diff of md vs PDF also found no differences apart from the running header/footer and bullet glyphs. Checked against the image: table row/column assignment, `Mfr_retry_count [2:0]`, "0: No retries:" and the truncated `Mfr_track_en_chann`, all kept as printed.

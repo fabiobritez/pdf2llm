@@ -4328,5 +4328,50 @@
       "pdf-words"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p16-table1-wurth-as-printed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 16,
+    "old": "| Würth Elektronik | WE-MAPI        | 330 - 1500 | 3.7 - 5.5   | 17 - 39      | 3.0 × 3.0 × 2.0        |\n| Würth Elektronik | WE-PMCI        | 250 - 470  | 3.6 - 4     | 12.5 - 31    | 3.2 × 2.5 × 1.2        |",
+    "new": "| Wurth Elektronik | WE-MAPI        | 330 - 1500 | 3.7 - 5.5   | 17 - 39      | 3.0 × 3.0 × 2.0        |\n| Wurth Elektronik | WE-PMCI        | 250 - 470  | 3.6 - 4     | 12.5 - 31    | 3.2 × 2.5 × 1.2        |",
+    "evidence": "Flagged by codex (gpt-6.1-sol xhigh) run12 page review; confirmed by grok-4.7 on 400-dpi crops (no diaeresis, high confidence). PDF p16 words (PyMuPDF, font LinearHelvCond): 'Wurth' = 57 75 72 74 68 (plain u) at y=194 (WE-MAPI) and y=209 (WE-PMCI); rendered image shows no umlaut. Kept as printed.",
+    "sources": [
+      "codex",
+      "grok",
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p16-table2-wurth-as-printed",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 16,
+    "old": "| Würth Elektronik | www.we-online.com  |",
+    "new": "| Wurth Elektronik | www.we-online.com  |",
+    "evidence": "Flagged by codex (gpt-6.1-sol xhigh) run12 page review; confirmed by grok-4.7 on 400-dpi crop (no diaeresis, high confidence). PDF p16 words: 'Wurth' (plain u, U+0075) at y=514 in Table 2 (www.we-online.com row); rendered image shows no umlaut. Kept as printed.",
+    "sources": [
+      "codex",
+      "grok",
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p14-table2-wurth-as-printed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 14,
+    "old": "| Würth Elektronik | www.we-online.com |",
+    "new": "| Wurth Elektronik | www.we-online.com |",
+    "evidence": "Flagged by codex (gpt-6.1-sol xhigh) run12 page review (2026-10-17 21:0x UTC rerun); confirmed by grok-4.7 on 400-dpi crop (no diaeresis, high confidence). PDF p14 words: 'Wurth' (plain u, U+0075) x=315 y=605 in Table 2 Inductor Manufacturers (www.we-online.com row); rendered image shows no umlaut. Kept as printed.",
+    "sources": [
+      "codex",
+      "grok",
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
