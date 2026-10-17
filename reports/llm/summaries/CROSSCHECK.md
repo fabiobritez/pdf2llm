@@ -45,3 +45,22 @@ Drafted by agy from the compact datasheet text; checked claim by claim by codex 
 - fix: R_T-programmed switching frequency from 0.5MHz min to 5MHz max (2MHz typ default), 35ns typ (60ns max) minimum on-time, and 100% min maximum duty cycle [p3]. -> R_T-programmed switching frequency ranges from 0.5MHz to 5MHz; with RT tied to V_IN, the default frequency is 2MHz typ (1.8MHz min, 2.2MHz max). Minimum on-time is 35ns typ (60ns max), and maximum dut
 - fix: Precision 0.4V typ EN rising threshold, PGOOD output, SSTT soft-start/tracking, 4mV/°C typ temperature monitor, and 0.5MHz min to 2.25MHz max synchronization [p -> Precision 0.4V typ EN rising threshold, PGOOD output, SSTT soft-start/tracking, 4mV/°C typ temperature monitor, and 0.5MHz to 2.25MHz external synchronization with RT tied to V_IN [p3, p16].
 - fix: Supports multiphasing parallel converters for automotive (AEC-Q100 qualified), industrial, communications, server, telecom, POL, and FPGA/ASIC/μP core supplies  -> Supports multiphasing parallel converters and industrial, communications, server, telecom, POL, and FPGA/ASIC/μP core applications. AEC-Q100-qualified automotive versions use the #W suffix; only the l
+
+## ad5593r
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (2 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: DAC: 12 Bits typ resolution, -1 LSB min to +1 LSB max INL and DNL [p3]. -> DAC: 12 Bits typ resolution; INL and DNL each -1 LSB min to +1 LSB max, with outputs unloaded and linearity calculated over codes 8 to 4085 [p3, p6].
+- fix: DAC AC and reference: 6 μs typ settling time, 1.25 V/μs typ slew rate; V_REF 2.495 V min, 2.5 V typ, 2.505 V max [p4]. -> DAC AC and reference: 6 μs typ settling time for a ¼-to-¾-scale step, 1.25 V/μs typ slew rate; V_REF output 2.495 V min, 2.5 V typ, 2.505 V max [p4, p17].
+
+## ad5711r-ad5710r
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (0 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+## ltc2975
+
+Drafted by agy from the compact datasheet text; checked claim by claim by codex (3 issue(s)); numbers verified automatically by tools/check_llm_fidelity.py.
+
+- fix: Operates from V_PWR (4.5V min to 15V max) or V_DD33 (3.13V min to 3.47V max), drawing 10mA typ (13mA max). [p5] -> Operates from V_PWR (4.5V min to 15V max, V_DD33 floating) or from V_DD33 tied to V_PWR (3.13V min to 3.47V max), drawing 10mA typ (13mA max). [p5]
+- fix: Output current sensing (-170mV min to 170mV max) achieves ±0.3% of Reading max error; 10 Bits typ DACs update every 250µs typ. [p6] -> Output current sensing spans -170mV to 170mV differential, with ±0.3% of Reading max error for sense magnitudes of 20–170mV and ±60µV max for magnitudes ≤20mV; 10 Bits typ DACs update every 250µs typ 
+- fix: Supports 10kHz min to 400kHz max PMBus clock and EEPROM with 10,000 Cycles min endurance and 20 Years min retention. [p9] -> Supports 10kHz min to 400kHz max PMBus clock. EEPROM endurance is 10,000 cycles min with writes at 0°C < T_J < 85°C; retention is 20 years min at T_J < 105°C for EEPROM cycled fewer than 10,000 times.
