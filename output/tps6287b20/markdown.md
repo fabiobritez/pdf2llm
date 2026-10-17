@@ -374,15 +374,15 @@ over operating junction temperature ( $T_J = -40\text{ }^\circ\text{C}$  to  $+1
 | $f_{SW}$        | Switching frequency (SW)                                       | $f_{SW} = 2.25\text{ MHz}$ , PWM operation, only applies to TPS6287BxxJE2          | 2.025         | 2.25          | 2.475 | MHz        |
 | $f_{SW}$        | Switching frequency (SW)                                       | $f_{SW} = 2.5\text{ MHz}$ , PWM operation, only applies to TPS6287BxxJE2           | 2.25          | 2.5           | 2.75  | MHz        |
 | $f_{SW}$        | Switching frequency (SW)                                       | $f_{SW} = 3\text{ MHz}$ , PWM operation, only applies to TPS6287BxxJE2             | 2.7           | 3             | 3.3   | MHz        |
-| $f_{SSC}$       | Modulation frequency                                           |                                                                                    | $f_{SW}/2048$ |               |       | kHz        |
-| $\Delta f_{SW}$ | Switching frequency variation during spread spectrum operation |                                                                                    | $f_{SW}-10\%$ | $f_{SW}+10\%$ |       |            |
-| $g_m$           | Transconductance of OTA on COMP pin                            |                                                                                    | 1.5           |               |       | mS         |
+| $f_{SSC}$ | Modulation frequency |  |  | $f_{SW}/2048$ |  | kHz |
+| $\Delta f_{SW}$ | Switching frequency variation during spread spectrum operation |  | $f_{SW}-10\%$ |  | $f_{SW}+10\%$ |  |
+| $g_m$ | Transconductance of OTA on COMP pin |  |  | 1.5 |  | mS |
 | $\tau$          | Emulated current time constant                                 |                                                                                    | 11.87         | 12.5          | 13.2  | $\mu s$    |
-| $R_{DS(ON)}$    | High-side FET static on-resistance                             | $V_{IN} = 3.3\text{ V}$                                                            | 3.4           |               |       | m $\Omega$ |
-| $R_{DS(ON)}$    | Low-side FET static on-resistance                              | $V_{IN} = 3.3\text{ V}$                                                            | 1.9           |               |       | m $\Omega$ |
-| $I_{(SW)(off)}$ | SW pin current when HS-FET and LS-FET are off                  | $V_{IN} = 6\text{ V}$ ; $V_{(SW)} = 0\text{ V}$ , $T_J = 25\text{ }^\circ\text{C}$ | -1.5          | 0.1           |       | $\mu A$    |
-|                 | SW pin current when HS-FET and LS-FET are off                  | $V_{IN} = 6\text{ V}$ ; $V_{(SW)} = 6\text{ V}$ , $T_J = 25\text{ }^\circ\text{C}$ | 60            | 130           |       | $\mu A$    |
-|                 | SW pin current when HS-FET and LS-FET are off                  | $V_{(SW)} = 0.4\text{ V}$ , current into SW pin                                    | 11            |               |       | $\mu A$    |
+| $R_{DS(ON)}$ | High-side FET static on-resistance | $V_{IN} = 3.3\text{ V}$ |  | 3.4 | 6.4 | m $\Omega$ |
+| $R_{DS(ON)}$ | Low-side FET static on-resistance | $V_{IN} = 3.3\text{ V}$ |  | 1.9 | 3.6 | m $\Omega$ |
+| $I_{(SW)(off)}$ | SW pin current when HS-FET and LS-FET are off | $V_{IN} = 6\text{ V}$ ; $V_{(SW)} = 0\text{ V}$ , $T_J = 25\text{ }^\circ\text{C}$ | -1.5 |  | 0.1 | $\mu A$ |
+|  | SW pin current when HS-FET and LS-FET are off | $V_{IN} = 6\text{ V}$ ; $V_{(SW)} = 6\text{ V}$ , $T_J = 25\text{ }^\circ\text{C}$ | 60 |  | 130 | $\mu A$ |
+|  | SW pin current when HS-FET and LS-FET are off | $V_{(SW)} = 0.4\text{ V}$ , current into SW pin |  | 11 | 3000 | $\mu A$ |
 | ILIM            | High-side FET forward switch current limit, DC                 | TPS6287B10; TPS6287B15                                                             | 19            | 22.5          | 26    | A          |
 | ILIM            | High-side FET forward switch current limit, DC                 | TPS6287B20                                                                         | 24            | 28.5          | 32    | A          |
 | ILIM            | High-side FET forward switch current limit, DC                 | TPS6287B25                                                                         | 29            | 34            | 39    | A          |
@@ -391,12 +391,12 @@ over operating junction temperature ( $T_J = -40\text{ }^\circ\text{C}$  to  $+1
 | ILIM            | Low-side FET forward switch current limit, DC                  | TPS6287B20                                                                         | 20            | 24.5          | 29    | A          |
 | ILIM            | Low-side FET forward switch current limit, DC                  | TPS6287B25                                                                         | 24.5          | 29            | 33    | A          |
 | ILIM            | Low-side FET forward switch current limit, DC                  | TPS6287B30                                                                         | 29.5          | 33.5          | 38    | A          |
-| ILIM            | Low-side FET negative current limit, DC                        |                                                                                    | -10           |               |       | A          |
-| $t_{on, min}$   | Minimum on-time of HS FET                                      | $V_{IN} = 3.3\text{ V}$                                                            | 45            |               |       | ns         |
-| $t_{on, min}$   | Minimum on-time of HS FET                                      | $V_{IN} = 5\text{ V}$                                                              | 35            |               |       | ns         |
-| $t_{off, min}$  | Minimum off-time of HS FET                                     | $V_{IN} = 5\text{ V}$                                                              | 70            |               |       | ns         |
-|                 | Maximum duty cycle of power stage                              | DC operation for TPS6287B25 only, $T_J = 125\text{ }^\circ\text{C}$                | 40            |               |       | %          |
-|                 | Maximum duty cycle of power stage                              | DC operation for TPS6287B30 only, $T_J = 125\text{ }^\circ\text{C}$                | 25            |               |       | %          |
+| ILIM | Low-side FET negative current limit, DC |  |  | -10 |  | A |
+| $t_{on, min}$ | Minimum on-time of HS FET | $V_{IN} = 3.3\text{ V}$ |  | 45 | 53 | ns |
+| $t_{on, min}$ | Minimum on-time of HS FET | $V_{IN} = 5\text{ V}$ |  | 35 | 44 | ns |
+| $t_{off, min}$ | Minimum off-time of HS FET | $V_{IN} = 5\text{ V}$ |  | 70 | 100 | ns |
+|  | Maximum duty cycle of power stage | DC operation for TPS6287B25 only, $T_J = 125\text{ }^\circ\text{C}$ |  | 40 |  | % |
+|  | Maximum duty cycle of power stage | DC operation for TPS6287B30 only, $T_J = 125\text{ }^\circ\text{C}$ |  | 25 |  | % |
 
 {10}------------------------------------------------
 

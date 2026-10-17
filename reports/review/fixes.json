@@ -299,5 +299,986 @@
       "pdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p5-L279-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "| $V_{PWR}$                                | $V_{PWR}$ Supply Input Operating Range     | $V_{DD33}$ Floating                                                   | ●   | 4.5   | 15    | V      |",
+    "new": "| $V_{PWR}$ | $V_{PWR}$ Supply Input Operating Range | $V_{DD33}$ Floating | ● 4.5 |  | 15 | V |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '4.5', 'MAX': '15', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L282-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "| $V_{UVLO\\_VDD33}$                        | $V_{DD33}$ Undervoltage Lockout            | $V_{DD33}$ Ramping Up, $V_{PWR} = V_{DD33}$                           | ●   | 2.25  | 2.55  | V      |",
+    "new": "| $V_{UVLO\\_VDD33}$ | $V_{DD33}$ Undervoltage Lockout | $V_{DD33}$ Ramping Up, $V_{PWR} = V_{DD33}$ | ● 2.25 | 2.55 | 2.8 | V |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '2.25', 'TYP': '2.55', 'MAX': '2.8', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L284-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "| $V_{DD33}$                               | Supply Input Operating Range               | $V_{PWR} = V_{DD33}$                                                  | ●   | 3.13  | 3.47  | V      |",
+    "new": "| $V_{DD33}$ | Supply Input Operating Range | $V_{PWR} = V_{DD33}$ | ● 3.13 |  | 3.47 | V |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '3.13', 'MAX': '3.47', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L285-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "|                                          | Regulator Output Voltage                   | $4.5\\text{V} \\leq V_{PWR} \\leq 15\\text{V}$                            | ●   | 3.13  | 3.26  | V      |",
+    "new": "|  | Regulator Output Voltage | $4.5\\text{V} \\leq V_{PWR} \\leq 15\\text{V}$ | ● 3.13 | 3.26 | 3.47 | V |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '3.13', 'TYP': '3.26', 'MAX': '3.47', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L286-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "|                                          | Regulator Output Short-Circuit Current     | $V_{PWR} = 4.5\\text{V}$ , $V_{DD33} = 0\\text{V}$                      | ●   | 50    | 90    | mA     |",
+    "new": "|  | Regulator Output Short-Circuit Current | $V_{PWR} = 4.5\\text{V}$ , $V_{DD33} = 0\\text{V}$ | ● 50 | 90 | 140 | mA |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '50', 'TYP': '90', 'MAX': '140', 'UNIT': 'mA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L287-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "| $V_{DD25}$                               | Regulator Output Voltage                   | $3.13\\text{V} \\leq V_{DD33} \\leq 3.47\\text{V}$                        | ●   | 2.35  | 2.5   | V      |",
+    "new": "| $V_{DD25}$ | Regulator Output Voltage | $3.13\\text{V} \\leq V_{DD33} \\leq 3.47\\text{V}$ | ● 2.35 | 2.5 | 2.6 | V |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '2.35', 'TYP': '2.5', 'MAX': '2.6', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L288-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "|                                          | Regulator Output Short-Circuit Current     | $V_{PWR} = V_{DD33} = 3.47\\text{V}$ , $V_{DD25} = 0\\text{V}$          | ●   | 30    | 55    | mA     |",
+    "new": "|  | Regulator Output Short-Circuit Current | $V_{PWR} = V_{DD33} = 3.47\\text{V}$ , $V_{DD25} = 0\\text{V}$ | ● 30 | 55 | 80 | mA |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '30', 'TYP': '55', 'MAX': '80', 'UNIT': 'mA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p5-L291-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "| $V_{REF}$                                | Output Voltage (Note 3)                    | $V_{REF} = V_{REFP} - V_{REFM}$ , $0 < I_{REFP} < 100\\mu\\text{A}$     | ●   | 1.220 | 1.232 | V      |",
+    "new": "| $V_{REF}$ | Output Voltage (Note 3) | $V_{REF} = V_{REFP} - V_{REFM}$ , $0 < I_{REFP} < 100\\mu\\text{A}$ | ● 1.220 | 1.232 | 1.244 | V |",
+    "evidence": "PDF word geometry on p5 (tools/review/realign.py): PDF cells {'MIN': '1.220', 'TYP': '1.232', 'MAX': '1.244', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L302-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| V <sub>IN_ADC</sub>                                  | Voltage Sense Input Range                | Differential Voltage: V <sub>IN_ADC</sub> = (V <sub>SENSEP<sub>n</sub></sub> - V <sub>SENSEM<sub>n</sub></sub> )                    | ●   | 0    | 6     | V            |",
+    "new": "| V <sub>IN_ADC</sub> | Voltage Sense Input Range | Differential Voltage: V <sub>IN_ADC</sub> = (V <sub>SENSEP<sub>n</sub></sub> - V <sub>SENSEM<sub>n</sub></sub> ) | ● 0 |  | 6 | V |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '0', 'MAX': '6', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L303-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      |                                          | Single-Ended Voltage: V <sub>SENSEM<sub>n</sub></sub>                                                                               | ●   | -0.1 | 0.1   | V            |",
+    "new": "|  |  | Single-Ended Voltage: V <sub>SENSEM<sub>n</sub></sub> | ● -0.1 |  | 0.1 | V |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '–0.1', 'MAX': '0.1', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L304-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      | Current Sense Input Range                | Single-Ended Voltage: I <sub>SENSEP<sub>n</sub></sub> , I <sub>SENSEM<sub>n</sub></sub>                                             | ●   | -0.1 | 6     | V            |",
+    "new": "|  | Current Sense Input Range | Single-Ended Voltage: I <sub>SENSEP<sub>n</sub></sub> , I <sub>SENSEM<sub>n</sub></sub> | ● -0.1 |  | 6 | V |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '–0.1', 'MAX': '6', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L305-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      |                                          | Differential Current Sense Voltage: V <sub>IN_ADC</sub> = (I <sub>SENSEP<sub>n</sub></sub> - I <sub>SENSEM<sub>n</sub></sub> )      | ●   | -170 | 170   | mV           |",
+    "new": "|  |  | Differential Current Sense Voltage: V <sub>IN_ADC</sub> = (I <sub>SENSEP<sub>n</sub></sub> - I <sub>SENSEM<sub>n</sub></sub> ) | ● -170 |  | 170 | mV |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '–170', 'MAX': '170', 'UNIT': 'mV'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L325-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| V <sub>FS_VDAC</sub>                                 | Full-Scale Output Voltage (Programmable) | DAC Code = 0x3FF Buffer Gain Setting_0                                                                                              | ●   | 1.3  | 1.38  | 1.44 V       |",
+    "new": "| V <sub>FS_VDAC</sub> | Full-Scale Output Voltage (Programmable) | DAC Code = 0x3FF Buffer Gain Setting_0 | ● 1.3 | 1.38 | 1.44 | V |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '1.3', 'TYP': '1.38', 'MAX': '1.44', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L326-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      |                                          | DAC Polarity = 1 Buffer Gain Setting_1                                                                                              | ●   | 2.5  | 2.65  | 2.77 V       |",
+    "new": "|  |  | DAC Polarity = 1 Buffer Gain Setting_1 | ● 2.5 | 2.65 | 2.77 | V |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '2.5', 'TYP': '2.65', 'MAX': '2.77', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L334-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      | Short-Circuit Current Low                | V <sub>DAC<sub>n</sub></sub> Shorted to GND                                                                                         | ●   | -12  | -4    | mA           |",
+    "new": "|  | Short-Circuit Current Low | V <sub>DAC<sub>n</sub></sub> Shorted to GND | ● -12 |  | -4 | mA |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '–12', 'MAX': '–4', 'UNIT': 'mA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p6-L335-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "|                                                      | Short-Circuit Current High               | V <sub>DAC<sub>n</sub></sub> Shorted to V <sub>DD33</sub>                                                                           | ●   | 4    | 12    | mA           |",
+    "new": "|  | Short-Circuit Current High | V <sub>DAC<sub>n</sub></sub> Shorted to V <sub>DD33</sub> | ● 4 |  | 12 | mA |",
+    "evidence": "PDF word geometry on p6 (tools/review/realign.py): PDF cells {'MIN': '4', 'MAX': '12', 'UNIT': 'mA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L346-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IN\\_VS}}$                                          | Input Voltage Range (Programmable)                                          | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H})$ Low Resolution Mode                                                    | ●   | 0     | 6     | V            |",
+    "new": "| $V_{\\text{IN\\_VS}}$ | Input Voltage Range (Programmable) | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H})$ Low Resolution Mode | ● 0 |  | 6 | V |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '0', 'MAX': '6', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L347-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H})$ High Resolution Mode                                                   | ●   | 0     | 3.8   | V            |",
+    "new": "|  |  | $V_{\\text{IN\\_VS}} = (V_{\\text{SENSEP}_H} - V_{\\text{SENSEM}_H})$ High Resolution Mode | ● 0 |  | 3.8 | V |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '0', 'MAX': '3.8', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L348-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | Single-Ended Voltage: $V_{\\text{SENSEM}_H}$                                                                                              | ●   | -0.1  | 0.1   | V            |",
+    "new": "|  |  | Single-Ended Voltage: $V_{\\text{SENSEM}_H}$ | ● -0.1 |  | 0.1 | V |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '–0.1', 'MAX': '0.1', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L356-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IN\\_CS}}$                                          | Current Sense Input Range                                                   | Single-Ended Voltage: $I_{\\text{SENSEP}_H}$ , $I_{\\text{SENSEM}_H}$                                                                      | ●   | -0.1  | 6     | V            |",
+    "new": "| $V_{\\text{IN\\_CS}}$ | Current Sense Input Range | Single-Ended Voltage: $I_{\\text{SENSEP}_H}$ , $I_{\\text{SENSEM}_H}$ | ● -0.1 |  | 6 | V |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '–0.1', 'MAX': '6', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L357-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | Differential Voltage: $V_{\\text{IN\\_CS}} = (I_{\\text{SENSEP}_H} - I_{\\text{SENSEM}_H})$                                                  | ●   | -170  | 170   | mV           |",
+    "new": "|  |  | Differential Voltage: $V_{\\text{IN\\_CS}} = (I_{\\text{SENSEP}_H} - I_{\\text{SENSEM}_H})$ | ● -170 |  | 170 | mV |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '–170', 'MAX': '170', 'UNIT': 'mV'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L364-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IN\\_SNS}}$                                         | $V_{\\text{IN\\_SNS}}$ Input Voltage Range                                    | (Note 12)                                                                                                                                | ●   | 0     | 15    | V            |",
+    "new": "| $V_{\\text{IN\\_SNS}}$ | $V_{\\text{IN\\_SNS}}$ Input Voltage Range | (Note 12) | ● 0 |  | 15 | V |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '0', 'MAX': '15', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L365-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $I_{\\text{VIN\\_SNS}}$                                        | $V_{\\text{IN\\_SNS}}$ Input Current                                          | $V_{\\text{VIN\\_SNS}} = 4.5\\text{V}$                                                                                                      | ●   | 80    | 140   | 200 μA       |",
+    "new": "| $I_{\\text{VIN\\_SNS}}$ | $V_{\\text{IN\\_SNS}}$ Input Current | $V_{\\text{VIN\\_SNS}} = 4.5\\text{V}$ | ● 80 | 140 | 200 | μA |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '80', 'TYP': '140', 'MAX': '200', 'UNIT': 'µA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L366-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | $V_{\\text{VIN\\_SNS}} = 12\\text{V}$                                                                                                       | ●   | 150   | 250   | 350 μA       |",
+    "new": "|  |  | $V_{\\text{VIN\\_SNS}} = 12\\text{V}$ | ● 150 | 250 | 350 | μA |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '150', 'TYP': '250', 'MAX': '350', 'UNIT': 'µA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L367-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | $V_{\\text{VIN\\_SNS}} = 15\\text{V}$                                                                                                       | ●   | 180   | 300   | 420 μA       |",
+    "new": "|  |  | $V_{\\text{VIN\\_SNS}} = 15\\text{V}$ | ● 180 | 300 | 420 | μA |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '180', 'TYP': '300', 'MAX': '420', 'UNIT': 'µA'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L376-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IIN}}$                                             | Common Mode Input Range                                                     | $V_{\\text{IIN\\_SNSP}} = V_{\\text{IIN\\_SNSM}}$ (Note 12)                                                                                  | ●   | 4.5   | 15    | V            |",
+    "new": "| $V_{\\text{IIN}}$ | Common Mode Input Range | $V_{\\text{IIN\\_SNSP}} = V_{\\text{IIN\\_SNSM}}$ (Note 12) | ● 4.5 |  | 15 | V |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '4.5', 'MAX': '15', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L378-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $FS_{\\text{IIN}}$                                            | Full-Scale Input Current Sense Voltage Range                                | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ High Range                                                                   | ●   | -100  | 100   | mV           |",
+    "new": "| $FS_{\\text{IIN}}$ | Full-Scale Input Current Sense Voltage Range | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ High Range | ● -100 |  | 100 | mV |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '–100', 'MAX': '100', 'UNIT': 'mV'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L379-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ Medium Range                                                                 | ●   | -50   | 50    | mV           |",
+    "new": "|  |  | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ Medium Range | ● -50 |  | 50 | mV |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '–50', 'MAX': '50', 'UNIT': 'mV'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p7-L380-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "|                                                              |                                                                             | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ Low Range                                                                    | ●   | -20   | 20    | mV           |",
+    "new": "|  |  | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ Low Range | ● -20 |  | 20 | mV |",
+    "evidence": "PDF word geometry on p7 (tools/review/realign.py): PDF cells {'MIN': '–20', 'MAX': '20', 'UNIT': 'mV'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L459-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| Endurance                                                                                                | (Notes 8, 11)                                           | 0°C < T <sub>J</sub> < 85°C During EEPROM Write Operations                 | ●   | 10,000                  |         | Cycles |",
+    "new": "| Endurance | (Notes 8, 11) | 0°C < T <sub>J</sub> < 85°C During EEPROM Write Operations | ● 10,000 |  |  | Cycles |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '10,000', 'UNIT': 'Cycles'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L460-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| Retention                                                                                                | (Notes 8, 11)                                           | T <sub>J</sub> < 105°C                                                     | ●   | 20                      |         | Years  |",
+    "new": "| Retention | (Notes 8, 11) | T <sub>J</sub> < 105°C | ● 20 |  |  | Years |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '20', 'UNIT': 'Years'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L463-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| V <sub>IH</sub>                                                                                          | High Level Input Voltage                                | FAULTB0, FAULTB1, SDA, SCL, WDI/RESETB, WP                                 | ●   | 2.1                     |         | V      |",
+    "new": "| V <sub>IH</sub> | High Level Input Voltage | FAULTB0, FAULTB1, SDA, SCL, WDI/RESETB, WP | ● 2.1 |  |  | V |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '2.1', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L464-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "|                                                                                                          |                                                         | CONTROL <sub>n</sub> Only                                                  | ●   | 1.85                    |         | V      |",
+    "new": "|  |  | CONTROL <sub>n</sub> Only | ● 1.85 |  |  | V |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '1.85', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L471-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>FAULT_MIN</sub>                                                                                   | Minimum Low Pulse Width for Externally Generated Faults |                                                                            |     | 180                     |         | ms     |",
+    "new": "| t <sub>FAULT_MIN</sub> | Minimum Low Pulse Width for Externally Generated Faults |  | 180 |  |  | ms |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '180', 'UNIT': 'ms'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L472-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>RESETB</sub>                                                                                      | Pulse Width to Assert Reset                             | V <sub>WDI/RESETB</sub> ≤ 1.5V                                             | ●   | 300                     |         | μs     |",
+    "new": "| t <sub>RESETB</sub> | Pulse Width to Assert Reset | V <sub>WDI/RESETB</sub> ≤ 1.5V | ● 300 |  |  | μs |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '300', 'UNIT': 'µs'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L473-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>WDI</sub>                                                                                         | Pulse Width to Reset Watchdog Timer                     | V <sub>WDI/RESETB</sub> ≤ 1.5V                                             | ●   | 0.3                     | 200     | μs     |",
+    "new": "| t <sub>WDI</sub> | Pulse Width to Reset Watchdog Timer | V <sub>WDI/RESETB</sub> ≤ 1.5V | ● 0.3 |  | 200 | μs |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '0.3', 'MAX': '200', 'UNIT': 'µs'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L477-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| V <sub>IH</sub>                                                                                          | High Level Input Voltage                                |                                                                            | ●   | 1.6                     |         | V      |",
+    "new": "| V <sub>IH</sub> | High Level Input Voltage |  | ● 1.6 |  |  | V |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '1.6', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L479-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| f <sub>SHARE_CLK_IN</sub>                                                                                | Input Frequency Operating Range                         |                                                                            | ●   | 90                      | 110     | kHz    |",
+    "new": "| f <sub>SHARE_CLK_IN</sub> | Input Frequency Operating Range |  | ● 90 |  | 110 | kHz |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '90', 'MAX': '110', 'UNIT': 'kHz'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L480-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>LOW</sub>                                                                                         | Assertion Low Time                                      | V <sub>SHARE_CLK</sub> < 0.8V                                              | ●   | 0.825                   | 1.11    | μs     |",
+    "new": "| t <sub>LOW</sub> | Assertion Low Time | V <sub>SHARE_CLK</sub> < 0.8V | ● 0.825 |  | 1.11 | μs |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '0.825', 'MAX': '1.11', 'UNIT': 'µs'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L486-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| f <sub>SHARE_CLK_OUT</sub>                                                                               | Output Frequency Operating Range                        | 5.49kΩ Pull-Up to V <sub>DD33</sub>                                        | ●   | 90                      | 100 110 | kHz    |",
+    "new": "| f <sub>SHARE_CLK_OUT</sub> | Output Frequency Operating Range | 5.49kΩ Pull-Up to V <sub>DD33</sub> | ● 90 | 100 | 110 | kHz |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '90', 'TYP': '100', 'MAX': '110', 'UNIT': 'kHz'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L488-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| V <sub>IH</sub>                                                                                          | Input High Threshold Voltage                            |                                                                            | ●   | V <sub>DD33</sub> – 0.5 |         | V      |",
+    "new": "| V <sub>IH</sub> | Input High Threshold Voltage |  | ● V <sub>DD33</sub> – 0.5 |  |  | V |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': 'VDD33 – 0.5', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L494-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| f <sub>SCL</sub>                                                                                         | Serial Clock Frequency (Note 10)                        |                                                                            | ●   | 10                      | 400     | kHz    |",
+    "new": "| f <sub>SCL</sub> | Serial Clock Frequency (Note 10) |  | ● 10 |  | 400 | kHz |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '10', 'MAX': '400', 'UNIT': 'kHz'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L495-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>LOW</sub>                                                                                         | Serial Clock Low Period (Note 10)                       |                                                                            | ●   | 1.3                     |         | μs     |",
+    "new": "| t <sub>LOW</sub> | Serial Clock Low Period (Note 10) |  | ● 1.3 |  |  | μs |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '1.3', 'UNIT': 'µs'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "ltc2975-p9-L496-geometry",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>HIGH</sub>                                                                                        | Serial Clock High Period (Note 10)                      |                                                                            | ●   | 0.6                     |         | μs     |",
+    "new": "| t <sub>HIGH</sub> | Serial Clock High Period (Note 10) |  | ● 0.6 |  |  | μs |",
+    "evidence": "PDF word geometry on p9 (tools/review/realign.py): PDF cells {'MIN': '0.6', 'UNIT': 'µs'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L377-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $f_{SSC}$       | Modulation frequency                                           |                                                                                    | $f_{SW}/2048$ |               |       | kHz        |",
+    "new": "| $f_{SSC}$ | Modulation frequency |  |  | $f_{SW}/2048$ |  | kHz |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': 'fsw/2048', 'UNIT': 'kHz'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L378-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $\\Delta f_{SW}$ | Switching frequency variation during spread spectrum operation |                                                                                    | $f_{SW}-10\\%$ | $f_{SW}+10\\%$ |       |            |",
+    "new": "| $\\Delta f_{SW}$ | Switching frequency variation during spread spectrum operation |  | $f_{SW}-10\\%$ |  | $f_{SW}+10\\%$ |  |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'MIN': 'fSW–10%', 'MAX': 'fSW+10%'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L379-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $g_m$           | Transconductance of OTA on COMP pin                            |                                                                                    | 1.5           |               |       | mS         |",
+    "new": "| $g_m$ | Transconductance of OTA on COMP pin |  |  | 1.5 |  | mS |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '1.5', 'UNIT': 'mS'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L381-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $R_{DS(ON)}$    | High-side FET static on-resistance                             | $V_{IN} = 3.3\\text{ V}$                                                            | 3.4           |               |       | m $\\Omega$ |",
+    "new": "| $R_{DS(ON)}$ | High-side FET static on-resistance | $V_{IN} = 3.3\\text{ V}$ |  | 3.4 | 6.4 | m $\\Omega$ |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '3.4', 'MAX': '6.4', 'UNIT': 'mΩ'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L382-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $R_{DS(ON)}$    | Low-side FET static on-resistance                              | $V_{IN} = 3.3\\text{ V}$                                                            | 1.9           |               |       | m $\\Omega$ |",
+    "new": "| $R_{DS(ON)}$ | Low-side FET static on-resistance | $V_{IN} = 3.3\\text{ V}$ |  | 1.9 | 3.6 | m $\\Omega$ |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '1.9', 'MAX': '3.6', 'UNIT': 'mΩ'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L383-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $I_{(SW)(off)}$ | SW pin current when HS-FET and LS-FET are off                  | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 0\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | -1.5          | 0.1           |       | $\\mu A$    |",
+    "new": "| $I_{(SW)(off)}$ | SW pin current when HS-FET and LS-FET are off | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 0\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | -1.5 |  | 0.1 | $\\mu A$ |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'MIN': '–1.5', 'MAX': '0.1', 'UNIT': 'µA'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L384-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "|                 | SW pin current when HS-FET and LS-FET are off                  | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 6\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | 60            | 130           |       | $\\mu A$    |",
+    "new": "|  | SW pin current when HS-FET and LS-FET are off | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 6\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | 60 |  | 130 | $\\mu A$ |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'MIN': '60', 'MAX': '130', 'UNIT': 'µA'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L385-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "|                 | SW pin current when HS-FET and LS-FET are off                  | $V_{(SW)} = 0.4\\text{ V}$ , current into SW pin                                    | 11            |               |       | $\\mu A$    |",
+    "new": "|  | SW pin current when HS-FET and LS-FET are off | $V_{(SW)} = 0.4\\text{ V}$ , current into SW pin |  | 11 | 3000 | $\\mu A$ |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '11', 'MAX': '3000', 'UNIT': 'µA'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L394-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| ILIM            | Low-side FET negative current limit, DC                        |                                                                                    | -10           |               |       | A          |",
+    "new": "| ILIM | Low-side FET negative current limit, DC |  |  | -10 |  | A |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '–10', 'UNIT': 'A'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L395-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $t_{on, min}$   | Minimum on-time of HS FET                                      | $V_{IN} = 3.3\\text{ V}$                                                            | 45            |               |       | ns         |",
+    "new": "| $t_{on, min}$ | Minimum on-time of HS FET | $V_{IN} = 3.3\\text{ V}$ |  | 45 | 53 | ns |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '45', 'MAX': '53', 'UNIT': 'ns'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L396-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $t_{on, min}$   | Minimum on-time of HS FET                                      | $V_{IN} = 5\\text{ V}$                                                              | 35            |               |       | ns         |",
+    "new": "| $t_{on, min}$ | Minimum on-time of HS FET | $V_{IN} = 5\\text{ V}$ |  | 35 | 44 | ns |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '35', 'MAX': '44', 'UNIT': 'ns'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L397-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "| $t_{off, min}$  | Minimum off-time of HS FET                                     | $V_{IN} = 5\\text{ V}$                                                              | 70            |               |       | ns         |",
+    "new": "| $t_{off, min}$ | Minimum off-time of HS FET | $V_{IN} = 5\\text{ V}$ |  | 70 | 100 | ns |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '70', 'MAX': '100', 'UNIT': 'ns'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L398-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "|                 | Maximum duty cycle of power stage                              | DC operation for TPS6287B25 only, $T_J = 125\\text{ }^\\circ\\text{C}$                | 40            |               |       | %          |",
+    "new": "|  | Maximum duty cycle of power stage | DC operation for TPS6287B25 only, $T_J = 125\\text{ }^\\circ\\text{C}$ |  | 40 |  | % |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '40', 'UNIT': '%'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "tps6287b20-p10-L399-geometry",
+    "file": "output/tps6287b20/markdown.md",
+    "page": 10,
+    "old": "|                 | Maximum duty cycle of power stage                              | DC operation for TPS6287B30 only, $T_J = 125\\text{ }^\\circ\\text{C}$                | 25            |               |       | %          |",
+    "new": "|  | Maximum duty cycle of power stage | DC operation for TPS6287B30 only, $T_J = 125\\text{ }^\\circ\\text{C}$ |  | 25 |  | % |",
+    "evidence": "PDF word geometry on p10 (tools/review/realign.py): PDF cells {'TYP': '25', 'UNIT': '%'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy",
+      "grok"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L160-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "| Regulated Output Voltage<br>(Note 5)                                                | LT1965-1.5, V <sub>IN</sub> = 2.1V, I <sub>LOAD</sub> = 1mA                                      | ●   | 1.477 | 1.5   | V                 |",
+    "new": "| Regulated Output Voltage<br>(Note 5) | LT1965-1.5, V <sub>IN</sub> = 2.1V, I <sub>LOAD</sub> = 1mA | 1.477 | 1.5 | 1.523 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.477', 'TYP': '1.5', 'MAX': '1.523', 'UNIT': 'V'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L161-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-1.5, 2.5 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A                          | ●   | 1.455 | 1.5   | V                 |",
+    "new": "|  | LT1965-1.5, 2.5 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A | ● 1.455 | 1.5 | 1.545 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.455', 'TYP': '1.5', 'MAX': '1.545', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L162-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-1.8, V <sub>IN</sub> = 2.3V, I <sub>LOAD</sub> = 1mA                                      | ●   | 1.773 | 1.8   | V                 |",
+    "new": "|  | LT1965-1.8, V <sub>IN</sub> = 2.3V, I <sub>LOAD</sub> = 1mA | 1.773 | 1.8 | 1.827 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.773', 'TYP': '1.8', 'MAX': '1.827', 'UNIT': 'V'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L163-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-1.8, 2.8 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A                          | ●   | 1.746 | 1.8   | V                 |",
+    "new": "|  | LT1965-1.8, 2.8 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A | ● 1.746 | 1.8 | 1.854 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.746', 'TYP': '1.8', 'MAX': '1.854', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L164-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-2.5, V <sub>IN</sub> = 3V, I <sub>LOAD</sub> = 1mA                                        | ●   | 2.462 | 2.5   | V                 |",
+    "new": "|  | LT1965-2.5, V <sub>IN</sub> = 3V, I <sub>LOAD</sub> = 1mA | 2.462 | 2.5 | 2.538 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '2.462', 'TYP': '2.5', 'MAX': '2.538', 'UNIT': 'V'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L165-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-2.5, 3.5 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A                          | ●   | 2.425 | 2.5   | V                 |",
+    "new": "|  | LT1965-2.5, 3.5 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A | ● 2.425 | 2.5 | 2.575 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '2.425', 'TYP': '2.5', 'MAX': '2.575', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L166-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-3.3, V <sub>IN</sub> = 3.8V, I <sub>LOAD</sub> = 1mA                                      | ●   | 3.25  | 3.3   | V                 |",
+    "new": "|  | LT1965-3.3, V <sub>IN</sub> = 3.8V, I <sub>LOAD</sub> = 1mA | 3.25 | 3.3 | 3.35 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '3.25', 'TYP': '3.3', 'MAX': '3.35', 'UNIT': 'V'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L167-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | LT1965-3.3, 4.3 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A                          | ●   | 3.201 | 3.3   | V                 |",
+    "new": "|  | LT1965-3.3, 4.3 < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A | ● 3.201 | 3.3 | 3.399 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '3.201', 'TYP': '3.3', 'MAX': '3.399', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L168-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | ADJ Pin Voltage (Notes 4, 5)                                                                     |     | 1.182 | 1.2   | V                 |",
+    "new": "|  | ADJ Pin Voltage (Notes 4, 5) | 1.182 | 1.2 | 1.218 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.182', 'TYP': '1.2', 'MAX': '1.218', 'UNIT': 'V'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L169-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A (T <sub>J</sub> < 125°C)            | ●   | 1.164 | 1.2   | V                 |",
+    "new": "|  | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1.1A (T <sub>J</sub> < 125°C) | ● 1.164 | 1.2 | 1.236 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.164', 'TYP': '1.2', 'MAX': '1.236', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L170-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "| Line Regulation                                                                     | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1A (H-Grade, T <sub>J</sub> > 125°C)     |     | 1.158 | 1.236 | V                 |",
+    "new": "| Line Regulation | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1A (H-Grade, T <sub>J</sub> > 125°C) | 1.158 |  | 1.236 | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '1.158', 'MAX': '1.236', 'UNIT': 'V'}, full-temp marker absent. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-L205-geometry",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4,
+    "old": "|                                                                                     | V <sub>OUT</sub> = On to Off                                                                     | ●   | 0.2   | 0.45  | V                 |",
+    "new": "|  | V <sub>OUT</sub> = On to Off | ● 0.2 | 0.45 |  | V |",
+    "evidence": "PDF word geometry on p4 (tools/review/realign.py): PDF cells {'MIN': '0.2', 'TYP': '0.45', 'UNIT': 'V'}, full-temp marker present. Datalab shifted/lost values in MIN/TYP/MAX/UNIT.",
+    "sources": [
+      "pdf-word-geometry",
+      "agy"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "lt1965fb-p4-adj-pin-voltage-label",
+    "old": "|  | ADJ Pin Voltage (Notes 4, 5) | 1.182 | 1.2 | 1.218 | V |",
+    "new": "| ADJ Pin Voltage (Notes 4, 5) | V <sub>IN</sub> = 2.1V, I <sub>LOAD</sub> = 1mA | 1.182 | 1.2 | 1.218 | V |",
+    "evidence": "PDF p4: 'ADJ Pin Voltage (Notes 4, 5)' is the PARAMETER and 'VIN = 2.1V, ILOAD = 1mA' the CONDITIONS of this row; md had the parameter in CONDITIONS and lost the condition.",
+    "sources": [
+      "agy",
+      "pdf-text",
+      "pdf-render-visual"
+    ],
+    "severity": "high",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4
+  },
+  {
+    "id": "lt1965fb-p4-line-regulation-label",
+    "old": "| Line Regulation | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1A (H-Grade, T <sub>J</sub> > 125°C) | 1.158 |  | 1.236 | V |\n|                                                                                     | LT1965-1.5, ΔV <sub>IN</sub> = 2.1V to 20V, I <sub>LOAD</sub> = 1mA                              | ●   | 3.5   | 9     | mV                |",
+    "new": "| | 2.3V < V <sub>IN</sub> < 20V, 1mA < I <sub>LOAD</sub> < 1A (H-Grade, T <sub>J</sub> > 125°C) | 1.158 |  | 1.236 | V |\n| Line Regulation | LT1965-1.5, ΔV <sub>IN</sub> = 2.1V to 20V, I <sub>LOAD</sub> = 1mA                              | ●   | 3.5   | 9     | mV                |",
+    "evidence": "PDF p4: the H-Grade 1.158/1.236 V row is the third ADJ Pin Voltage row; 'Line Regulation' starts at the LT1965-1.5 ΔVIN row. md shifted the parameter label up one row.",
+    "sources": [
+      "agy",
+      "pdf-text",
+      "pdf-render-visual"
+    ],
+    "severity": "high",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4
+  },
+  {
+    "id": "lt1965fb-p4-dropout-hgrade-row",
+    "old": "|                                                                                     | I <sub>LOAD</sub> = 1.1A (T <sub>J</sub> < 125°C)                                                | ●   |       | 0.49  | V                 |",
+    "new": "|                                                                                     | I <sub>LOAD</sub> = 1.1A (T <sub>J</sub> < 125°C)                                                | ●   |       | 0.49  | V                 |\n| | I <sub>LOAD</sub> = 1A (H-Grade, T <sub>J</sub> > 125°C) | | | 0.49 | V |",
+    "evidence": "PDF p4 Dropout Voltage has a final row 'ILOAD = 1A (H-Grade, TJ > 125°C)' MAX 0.49 V (no ● marker); md dropped it.",
+    "sources": [
+      "agy",
+      "pdf-text"
+    ],
+    "severity": "high",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 4
   }
 ]
