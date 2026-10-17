@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Move a datasheet's Datalab images into output/<name>/img/ and point every
-reference (md, html, json, chunks) there; then audit the image references.
+"""Move a datasheet's Datalab images into output/<name>/img/ and point the
+Markdown references there; then audit the image references.
 
 usage: python3 tools/relocate_images.py [--check] name [name ...]
 
 The move uses `git mv` (history is kept). Rewriting is idempotent: only bare
 `<hash>_img.<ext>` names not already prefixed by a path are changed. The audit
 (also run with --check, without changing anything) verifies that:
-  - every image referenced by any file exists under img/;
+  - every image referenced by <name>.md or <name>.llm.md exists under img/;
   - every image file under img/ is referenced by the full Markdown (no orphans);
-  - the Markdown references the images in the same order as the HTML export,
-    i.e. each image sits at its document position.
+  - the .llm.md references exactly the .md images minus dropped cover icons, in
+    the same order.
+Image positions were checked against Datalab's HTML export before that export
+was removed (commit e8b4963); the .md is now the source of truth.
 Exit status 1 when the audit fails.
 """
 import re
@@ -22,26 +24,17 @@ ROOT = Path(__file__).resolve().parent.parent
 NAME = r"[0-9a-f]{32}_img\.(?:jpe?g|png|gif|webp)"
 BARE = re.compile(r"(?<![\w/])(" + NAME + r")")
 ANY = re.compile(r"(?:img/)?(" + NAME + r")")
-TEXT_SUFFIXES = (".md", ".html", ".json")
 
 
 def full_markdown(folder: Path) -> Path:
-    for path in (folder / f"{folder.name}.md", folder / "markdown.md"):
-        if path.exists():
-            return path
-    raise SystemExit(f"no Markdown in {folder}")
-
-
-def html_export(folder: Path):
-    for path in (folder / f"{folder.name}.html", folder / "html.html"):
-        if path.exists():
-            return path
-    return None
+    path = folder / f"{folder.name}.md"
+    if not path.exists():
+        raise SystemExit(f"no {path.name} in {folder}")
+    return path
 
 
 def text_files(folder: Path):
-    return sorted(p for p in folder.iterdir() if p.is_file() and p.name.endswith(TEXT_SUFFIXES)
-                  and not p.name.endswith(".llm.md"))
+    return [full_markdown(folder)]
 
 
 def relocate(folder: Path) -> None:
@@ -74,34 +67,18 @@ def audit(folder: Path) -> list:
     md_text = md.read_text(encoding="utf-8")
     # Alt text may itself contain brackets ("D[7:0]"), so anchor on "](img/...)".
     md_refs = re.findall(r"\]\(img/(" + NAME + r")\)", md_text)
-    referenced = set().union(*(set(ANY.findall(p.read_text(encoding="utf-8"))) for p in text_files(folder)))
-    orphans = sorted(on_disk - referenced)
+    orphans = sorted(on_disk - set(md_refs))
     if orphans:
-        problems.append(f"{len(orphans)} images referenced by no file, e.g. {orphans[0]}")
-    html = html_export(folder)
-    if html:
-        html_text = html.read_text(encoding="utf-8")
-        html_refs = re.findall(r'src="img/(' + NAME + r')"', html_text)
-        if set(html_refs) <= set(md_refs):
-            a = [r for r in md_refs if r in set(html_refs)]
-            if a != html_refs:
-                k = next(i for i, (x, y) in enumerate(zip(a, html_refs)) if x != y)
-                problems.append(f"image order differs from {html.name} at #{k}: md {a[k]} vs html {html_refs[k]}")
-            only_md = sorted(set(md_refs) - set(html_refs))
-            if only_md:
-                problems.append(f"{len(only_md)} md images not in {html.name}")
-        else:
-            # The exports come from separate conversion runs (own image crops):
-            # compare per page that the md has an image wherever the HTML has one.
-            def per_page(chunks):
-                return {int(k): len(re.findall(NAME, v)) for k, v in chunks}
-            md_pages = per_page(re.findall(r"^\{(\d+)\}-{6,}\n(.*?)(?=^\{\d+\}-{6,}|\Z)", md_text, re.S | re.M))
-            html_pages = per_page(re.findall(r'data-page-id="(\d+)"(.*?)(?=data-page-id=|\Z)', html_text, re.S))
-            short = {p: (md_pages.get(p, 0), n) for p, n in html_pages.items() if md_pages.get(p, 0) < n}
-            if short:
-                problems.append(f"pages where md has fewer images than {html.name} (md, html): {short}")
-            print(f"  note: {html.name} is a separate conversion run ({len(set(html_refs) - set(md_refs))} of its "
-                  f"{len(set(html_refs))} images are its own crops); per-page image counts compared instead")
+        problems.append(f"{len(orphans)} images not referenced by {md.name}, e.g. {orphans[0]}")
+    llm = folder / f"{folder.name}.llm.md"
+    if llm.exists():
+        llm_refs = re.findall(r"img/(" + NAME + r")", llm.read_text(encoding="utf-8"))
+        missing = sorted(set(llm_refs) - on_disk)
+        if missing:
+            problems.append(f"{llm.name}: {len(missing)} referenced images missing, e.g. {missing[0]}")
+        kept = [r for r in dict.fromkeys(md_refs) if r in set(llm_refs)]
+        if list(dict.fromkeys(llm_refs)) != kept:
+            problems.append(f"{llm.name}: image order differs from {md.name}")
     print(f"{folder.name}: {len(on_disk)} images, {len(md_refs)} md references; "
           + ("OK" if not problems else "; ".join(problems)))
     return problems

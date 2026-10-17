@@ -46,15 +46,18 @@ fuera de Git.
 
 `output/<n>/` contiene:
 
-- `<n>.md`: transcripción completa y literal del datasheet. Sobre la conversión original solo tiene tres cosas: las correcciones verificadas de `reports/review/fixes.json`, las rutas de imagen pasadas a `img/` y los epígrafes de figura que faltaban. Para reproducirlo, aplicar `fixes.json` sobre el commit 6439792 y luego `tools/relocate_images.py`.
+- `<n>.md`: transcripción completa y literal del datasheet. Sobre la conversión original solo tiene tres cosas: las correcciones verificadas de `reports/review/fixes.json`, las rutas de imagen pasadas a `img/` y los epígrafes de figura que faltaban. Es la fuente de verdad. `python3 tools/replay_fixes.py` lo reproduce byte a byte: parte del commit 6439792, aplica `fixes.json` y luego pasa las rutas a `img/`.
 - `<n>.llm.md`: versión compacta para LLM, generada con `tools/llm_compact.py`. Empieza con un resumen de características clave y funcionamiento general, redactado por un modelo, verificado afirmación por afirmación por un segundo modelo y con todos los números comprobados contra el datasheet. Luego van un índice de secciones y el detalle compacto. Las figuras aparecen como "description only, not data".
-- `img/`: imágenes referenciadas desde el `.md`, el `.html`, el `.json` y los chunks.
-- `.html`, `.json` y `.chunks.json`: exportaciones originales. Solo se les cambiaron las rutas de imagen; no llevan las correcciones de transcripción.
+- `img/`: las imágenes que referencia el `.md`; no hay ninguna sin uso.
+- `<n>.metadata.json`: metadatos de la conversión de Datalab.
+
+El HTML, el JSON con bloques/bbox y los chunks de Datalab se eliminaron del repo (siguen en el historial, hasta el commit e8b4963). Se pueden volver a generar desde el PDF con `pdf2llm.py` (API de Datalab, de pago), pero no llevan las correcciones de transcripción: para eso está el `.md`. Antes de borrarlos se comprobó que las imágenes del `.md` estaban en la misma posición que en el HTML.
 
 Comprobaciones:
 
 ```
-python3 tools/relocate_images.py --check <n>       # imágenes: sin huérfanas, orden igual al HTML
+python3 tools/relocate_images.py --check <n>       # imágenes: existen, sin huérfanas, .llm.md en el mismo orden
+python3 tools/replay_fixes.py                      # el .md = conversión original + fixes.json
 python tools/check_llm_fidelity.py                 # tablas de especificaciones y números del .llm.md
 python tools/validate.py --all                     # tablas contra la geometría del PDF
 uv run --no-project --with tiktoken python tools/token_counts.py

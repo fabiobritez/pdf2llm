@@ -9,8 +9,8 @@ nice ~/.venvs/pdf2llm/bin/python tools/validate.py --all
 ```
 
 `--all` selects root PDFs with matching `output/<name>/` directories. Explicit
-names and `--out <directory>` are supported. Markdown lookup tries `<name>.md`,
-`markdown.md`, then a sole `*.md`. The default destination is
+names and `--out <directory>` are supported. Markdown is `output/<name>/<name>.md`
+(a sole `*.md` is accepted as a fallback). The default destination is
 `reports/validation/`; writing inside `output/` is rejected. No network, API,
 Datalab, or external extraction program is used. Reports contain no timestamps;
 sheets, token lists, JSON keys and issues have stable ordering. Failures produce

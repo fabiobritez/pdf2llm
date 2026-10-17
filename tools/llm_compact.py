@@ -18,7 +18,7 @@ def sources(names=None):
     for directory in sorted((ROOT / 'output').iterdir()):
         if not directory.is_dir() or (names and directory.name not in names):
             continue
-        path = directory / ('markdown.md' if directory.name == 'tps6287b20' else directory.name + '.md')
+        path = directory / (directory.name + '.md')
         if path.exists():
             paths.append(path)
     if names and set(names) - {p.parent.name for p in paths}:

@@ -918,7 +918,7 @@
   },
   {
     "id": "tps6287b20-p10-L377-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $f_{SSC}$       | Modulation frequency                                           |                                                                                    | $f_{SW}/2048$ |               |       | kHz        |",
     "new": "| $f_{SSC}$ | Modulation frequency |  |  | $f_{SW}/2048$ |  | kHz |",
@@ -932,7 +932,7 @@
   },
   {
     "id": "tps6287b20-p10-L378-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $\\Delta f_{SW}$ | Switching frequency variation during spread spectrum operation |                                                                                    | $f_{SW}-10\\%$ | $f_{SW}+10\\%$ |       |            |",
     "new": "| $\\Delta f_{SW}$ | Switching frequency variation during spread spectrum operation |  | $f_{SW}-10\\%$ |  | $f_{SW}+10\\%$ |  |",
@@ -946,7 +946,7 @@
   },
   {
     "id": "tps6287b20-p10-L379-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $g_m$           | Transconductance of OTA on COMP pin                            |                                                                                    | 1.5           |               |       | mS         |",
     "new": "| $g_m$ | Transconductance of OTA on COMP pin |  |  | 1.5 |  | mS |",
@@ -960,7 +960,7 @@
   },
   {
     "id": "tps6287b20-p10-L381-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $R_{DS(ON)}$    | High-side FET static on-resistance                             | $V_{IN} = 3.3\\text{ V}$                                                            | 3.4           |               |       | m $\\Omega$ |",
     "new": "| $R_{DS(ON)}$ | High-side FET static on-resistance | $V_{IN} = 3.3\\text{ V}$ |  | 3.4 | 6.4 | m $\\Omega$ |",
@@ -974,7 +974,7 @@
   },
   {
     "id": "tps6287b20-p10-L382-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $R_{DS(ON)}$    | Low-side FET static on-resistance                              | $V_{IN} = 3.3\\text{ V}$                                                            | 1.9           |               |       | m $\\Omega$ |",
     "new": "| $R_{DS(ON)}$ | Low-side FET static on-resistance | $V_{IN} = 3.3\\text{ V}$ |  | 1.9 | 3.6 | m $\\Omega$ |",
@@ -988,7 +988,7 @@
   },
   {
     "id": "tps6287b20-p10-L383-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $I_{(SW)(off)}$ | SW pin current when HS-FET and LS-FET are off                  | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 0\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | -1.5          | 0.1           |       | $\\mu A$    |",
     "new": "| $I_{(SW)(off)}$ | SW pin current when HS-FET and LS-FET are off | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 0\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | -1.5 |  | 0.1 | $\\mu A$ |",
@@ -1002,7 +1002,7 @@
   },
   {
     "id": "tps6287b20-p10-L384-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "|                 | SW pin current when HS-FET and LS-FET are off                  | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 6\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | 60            | 130           |       | $\\mu A$    |",
     "new": "|  | SW pin current when HS-FET and LS-FET are off | $V_{IN} = 6\\text{ V}$ ; $V_{(SW)} = 6\\text{ V}$ , $T_J = 25\\text{ }^\\circ\\text{C}$ | 60 |  | 130 | $\\mu A$ |",
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "tps6287b20-p10-L385-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "|                 | SW pin current when HS-FET and LS-FET are off                  | $V_{(SW)} = 0.4\\text{ V}$ , current into SW pin                                    | 11            |               |       | $\\mu A$    |",
     "new": "|  | SW pin current when HS-FET and LS-FET are off | $V_{(SW)} = 0.4\\text{ V}$ , current into SW pin |  | 11 | 3000 | $\\mu A$ |",
@@ -1030,7 +1030,7 @@
   },
   {
     "id": "tps6287b20-p10-L394-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| ILIM            | Low-side FET negative current limit, DC                        |                                                                                    | -10           |               |       | A          |",
     "new": "| ILIM | Low-side FET negative current limit, DC |  |  | -10 |  | A |",
@@ -1044,7 +1044,7 @@
   },
   {
     "id": "tps6287b20-p10-L395-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $t_{on, min}$   | Minimum on-time of HS FET                                      | $V_{IN} = 3.3\\text{ V}$                                                            | 45            |               |       | ns         |",
     "new": "| $t_{on, min}$ | Minimum on-time of HS FET | $V_{IN} = 3.3\\text{ V}$ |  | 45 | 53 | ns |",
@@ -1058,7 +1058,7 @@
   },
   {
     "id": "tps6287b20-p10-L396-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $t_{on, min}$   | Minimum on-time of HS FET                                      | $V_{IN} = 5\\text{ V}$                                                              | 35            |               |       | ns         |",
     "new": "| $t_{on, min}$ | Minimum on-time of HS FET | $V_{IN} = 5\\text{ V}$ |  | 35 | 44 | ns |",
@@ -1072,7 +1072,7 @@
   },
   {
     "id": "tps6287b20-p10-L397-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "| $t_{off, min}$  | Minimum off-time of HS FET                                     | $V_{IN} = 5\\text{ V}$                                                              | 70            |               |       | ns         |",
     "new": "| $t_{off, min}$ | Minimum off-time of HS FET | $V_{IN} = 5\\text{ V}$ |  | 70 | 100 | ns |",
@@ -1086,7 +1086,7 @@
   },
   {
     "id": "tps6287b20-p10-L398-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "|                 | Maximum duty cycle of power stage                              | DC operation for TPS6287B25 only, $T_J = 125\\text{ }^\\circ\\text{C}$                | 40            |               |       | %          |",
     "new": "|  | Maximum duty cycle of power stage | DC operation for TPS6287B25 only, $T_J = 125\\text{ }^\\circ\\text{C}$ |  | 40 |  | % |",
@@ -1100,7 +1100,7 @@
   },
   {
     "id": "tps6287b20-p10-L399-geometry",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 10,
     "old": "|                 | Maximum duty cycle of power stage                              | DC operation for TPS6287B30 only, $T_J = 125\\text{ }^\\circ\\text{C}$                | 25            |               |       | %          |",
     "new": "|  | Maximum duty cycle of power stage | DC operation for TPS6287B30 only, $T_J = 125\\text{ }^\\circ\\text{C}$ |  | 25 |  | % |",
@@ -1299,7 +1299,7 @@
   },
   {
     "id": "tps6287b20-p7-supply-table-columns",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 6,
     "old": "| PARAMETER        | TEST CONDITIONS                                       | MIN                                                                    | TYP | MAX | UNIT   |\n|------------------|-------------------------------------------------------|------------------------------------------------------------------------|-----|-----|--------|\n| <b>SUPPLY</b>    |                                                       |                                                                        |     |     |        |\n| $I_Q$            | Quiescent current                                     | EN = High, $I_{OUT} = 0\\text{ mA}$ , device not switching; MODE = Low  |     | 2.1 | 4.6 mA |\n| $I_{SD}$         | Shutdown current                                      | EN = Low, $V_{(SW)} = 0\\text{ V}$ , max value at $T_J = 125\\text{ °C}$ |     | 18  | 450 µA |\n| $V_{IT+ (UVLO)}$ | Positive-going UVLO threshold voltage (VIN)           | 2.5                                                                    | 2.6 | 2.7 | V      |\n| $V_{IT-(UVLO)}$  | Negative-going UVLO threshold voltage (VIN)           | 2.4                                                                    | 2.5 | 2.6 | V      |\n| $V_{hys(UVLO)}$  | UVLO hysteresis voltage (VIN)                         | 80                                                                     |     |     | mV     |\n| $V_{IT+ (OVLO)}$ | Positive-going OVLO threshold voltage (VIN)           | 6.1                                                                    | 6.3 | 6.5 | V      |\n| $V_{IT-(OVLO)}$  | Negative-going OVLO threshold voltage (VIN)           | 6.0                                                                    | 6.2 | 6.4 | V      |\n| $V_{hys(OVLO)}$  | OVLO hysteresis voltage (VIN)                         | 80                                                                     |     |     | mV     |\n| $V_{IT-(POR)}$   | Negative-going power-on reset threshold voltage (VIN) | 1.4                                                                    |     |     | V      |",
     "new": "| PARAMETER | | TEST CONDITIONS | MIN | TYP | MAX | UNIT |\n|---|---|---|---|---|---|---|\n| <b>SUPPLY</b> |  |  |  |  |  |  |\n| $I_Q$ | Quiescent current | EN = High, $I_{OUT} = 0\\text{ mA}$ , device not switching; MODE = Low | | 2.1 | 4.6 | mA |\n| $I_{SD}$ | Shutdown current | EN = Low, $V_{(SW)} = 0\\text{ V}$ , max value at $T_J = 125\\text{ °C}$ | | 18 | 450 | µA |\n| $V_{IT+ (UVLO)}$ | Positive-going UVLO threshold voltage (VIN) |  | 2.5 | 2.6 | 2.7 | V |\n| $V_{IT-(UVLO)}$ | Negative-going UVLO threshold voltage (VIN) |  | 2.4 | 2.5 | 2.6 | V |\n| $V_{hys(UVLO)}$ | UVLO hysteresis voltage (VIN) |  | 80 |  |  | mV |\n| $V_{IT+ (OVLO)}$ | Positive-going OVLO threshold voltage (VIN) |  | 6.1 | 6.3 | 6.5 | V |\n| $V_{IT-(OVLO)}$ | Negative-going OVLO threshold voltage (VIN) |  | 6.0 | 6.2 | 6.4 | V |\n| $V_{hys(OVLO)}$ | OVLO hysteresis voltage (VIN) |  | 80 |  |  | mV |\n| $V_{IT-(POR)}$ | Negative-going power-on reset threshold voltage (VIN) |  | 1.4 |  |  | V |",
@@ -1877,7 +1877,7 @@
   },
   {
     "id": "tps6287b20-p9-synch-out-phase-0b0",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 9,
     "old": "|                   | Phase shift at SYNC_OUT with reference to internal CLK or external CLK | CONTROL2:SYNC_OUT_PHASE = 0b0                                                       |       | 120   |      | °    |",
     "new": "|                   | Phase shift at SYNC_OUT with reference to internal CLK or external CLK | CONTROL2:SYNCH_OUT_PHASE = 0b0                                                       |       | 120   |      | °    |",
@@ -1891,7 +1891,7 @@
   },
   {
     "id": "tps6287b20-p9-synch-out-phase-0b1",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 9,
     "old": "|                   | Phase shift at SYNC_OUT with reference to internal CLK or external CLK | CONTROL2:SYNC_OUT_PHASE = 0b1                                                       |       | 180   |      | °    |",
     "new": "|                   | Phase shift at SYNC_OUT with reference to internal CLK or external CLK | CONTROL2:SYNCH_OUT_PHASE = 0b1                                                       |       | 180   |      | °    |",
@@ -2009,7 +2009,7 @@
   },
   {
     "id": "tps6287b20-p55-figure10-26-caption",
-    "file": "output/tps6287b20/markdown.md",
+    "file": "output/tps6287b20/tps6287b20.md",
     "page": 55,
     "old": "{55}------------------------------------------------\n\n#### 10.4.1 Design Requirements For Two Stacked Devices",
     "new": "**Figure 10-26. Stacking Two Devices for up to 50 A**\n\n{55}------------------------------------------------\n\n#### 10.4.1 Design Requirements For Two Stacked Devices",

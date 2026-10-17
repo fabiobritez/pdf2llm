@@ -222,22 +222,22 @@
     },
     {
       "name": "tps6287b20",
-      "source": "output/tps6287b20/markdown.md",
+      "source": "output/tps6287b20/tps6287b20.md",
       "compact": "output/tps6287b20/tps6287b20.llm.md",
       "chars": {
         "before": 281848,
-        "after": 174159,
+        "after": 174161,
         "saved_percent": 38.21
       },
       "o200k_base": {
         "before": 70737,
-        "after": 53304,
+        "after": 53308,
         "saved_percent": 24.64
       },
       "cl100k_base": {
         "before": 71105,
-        "after": 53758,
-        "saved_percent": 24.4
+        "after": 53762,
+        "saved_percent": 24.39
       }
     },
     {
@@ -304,17 +304,17 @@
   "totals": {
     "chars": {
       "before": 2854182,
-      "after": 1773797,
+      "after": 1773799,
       "saved_percent": 37.85
     },
     "o200k_base": {
       "before": 707192,
-      "after": 542684,
+      "after": 542688,
       "saved_percent": 23.26
     },
     "cl100k_base": {
       "before": 704861,
-      "after": 542901,
+      "after": 542905,
       "saved_percent": 22.98
     }
   }

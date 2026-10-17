@@ -17,7 +17,7 @@ def main():
     for directory in sorted((ROOT / 'output').iterdir()):
         if not directory.is_dir():
             continue
-        source = directory / ('markdown.md' if directory.name == 'tps6287b20' else directory.name + '.md')
+        source = directory / (directory.name + '.md')
         if not source.exists():
             continue
         target = directory / (directory.name + '.llm.md')

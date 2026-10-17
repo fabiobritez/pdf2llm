@@ -434,7 +434,7 @@ def geometry_issues(text, document):
 
 def locate_md(name: str) -> Path:
     folder = ROOT / "output" / name
-    for path in (folder / f"{name}.md", folder / "markdown.md"):
+    for path in (folder / f"{name}.md",):
         if path.is_file():
             return path
     candidates = sorted(folder.glob("*.md"))
