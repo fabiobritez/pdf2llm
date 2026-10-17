@@ -1,0 +1,32 @@
+{
+  "datasheet": "ltc3313",
+  "page": 2,
+  "checked_sections": [
+    "Absolute Maximum Ratings",
+    "Pin Configuration",
+    "Thermal Resistances",
+    "Order Information"
+  ],
+  "discrepancies": [
+    {
+      "section": "Pin Configuration",
+      "parameter": "Pin 14",
+      "column": "PIN",
+      "md_text": "14 PGGOOD",
+      "pdf_text": "14 PGOOD",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "Left-side pins (top to bottom): EN, AGND, VIN, VIN, PGND",
+      "column": "PIN",
+      "md_text": "EN AGND V<sub>IN</sub> V<sub>IN</sub> PGND",
+      "pdf_text": "1 EN, 2 AGND, 3 VIN, 4 VIN, 5 PGND",
+      "type": "missing",
+      "severity": "low",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "datasheet": "ina190",
+  "page": 5,
+  "checked_sections": [
+    "6.5 Electrical Characteristics"
+  ],
+  "discrepancies": [
+    {
+      "section": "6.5 Electrical Characteristics",
+      "parameter": "E_G (Gain error), V_OUT = 0.1 V to V_S - 0.1 V",
+      "column": "MIN",
+      "md_text": "| A1 devices | -0.04% | ±0.2% | (and A2, A3, A4 devices; A5 devices in MIN column)",
+      "pdf_text": "A1 devices / A2, A3, A4 devices / A5 devices are in a sub-column of CONDITIONS; MIN column is blank",
+      "type": "wrong_column",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "section": "6.5 Electrical Characteristics",
+      "parameter": "RVRR (Reference voltage rejection ratio), V_REF = 100 mV to V_S - 100 mV, T_A = -40°C to +125°C",
+      "column": "MIN",
+      "md_text": "| A1 devices | ±2 | ±10 | µV/V | (and A2 devices; A3 devices; A4, A5 devices in MIN column)",
+      "pdf_text": "A1 devices / A2 devices / A3 devices / A4, A5 devices are in a sub-column of CONDITIONS; MIN column is blank",
+      "type": "wrong_column",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "section": "6.5 Electrical Characteristics",
+      "parameter": "V_ZL (Zero current output voltage), V_S = 1.8 V, R_L = 10 kΩ to GND, T_A = -40°C to +125°C, V_SENSE = 0 mV, V_REF = 0 V",
+      "column": "MIN",
+      "md_text": "| A1, A2, A3 devices | $(V_{\\text{GND}}) + 1$ | $(V_{\\text{GND}}) + 3$ | mV | (and A4 devices; A5 devices in MIN column)",
+      "pdf_text": "A1, A2, A3 devices / A4 devices / A5 devices are in a sub-column of CONDITIONS; MIN column is blank",
+      "type": "wrong_column",
+      "severity": "medium",
+      "confidence": "high"
+    }
+  ]
+}

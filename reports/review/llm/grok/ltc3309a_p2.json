@@ -1,0 +1,101 @@
+{
+  "datasheet": "ltc3309a",
+  "page": 2,
+  "checked_sections": [
+    "Absolute Maximum Ratings",
+    "Pin Configuration",
+    "Order Information"
+  ],
+  "discrepancies": [
+    {
+      "section": "Pin Configuration",
+      "parameter": "Pin 12 function name (diagram prose)",
+      "column": "PIN",
+      "md_text": "Pin 12: AGND",
+      "pdf_text": "FB",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "Pin 11 function name (diagram prose)",
+      "column": "PIN",
+      "md_text": "Pin 11: PGND",
+      "pdf_text": "PGOOD",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "Pins 12 and 11 names in TOP VIEW text listing",
+      "column": "PIN",
+      "md_text": "12 11 10 RT",
+      "pdf_text": "12 FB, 11 PGOOD, 10 RT",
+      "type": "missing",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "Pin 5 function name (TOP VIEW text listing)",
+      "column": "PIN",
+      "md_text": "5 PGND",
+      "pdf_text": "SW",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "Pin 6 function name (TOP VIEW text listing)",
+      "column": "PIN",
+      "md_text": "6 SW SW",
+      "pdf_text": "SW (pin 5 is the other SW)",
+      "type": "other",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "θJA prose gloss (symbol line θJA = 51°C/W is correct)",
+      "column": "other",
+      "md_text": "the junction-to-lead temperature is 51°C/W",
+      "pdf_text": "θJA = 51°C/W",
+      "type": "other",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "θJB prose gloss (symbol line θJB = 12°C/W is correct)",
+      "column": "other",
+      "md_text": "the junction-to-body temperature is 12°C/W",
+      "pdf_text": "θJB = 12°C/W",
+      "type": "other",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "section": "Pin Configuration",
+      "parameter": "ΨJT prose gloss (symbol line ΨJT = 0.6°C/W is correct)",
+      "column": "other",
+      "md_text": "the junction-to-junction temperature is 0.6°C/W",
+      "pdf_text": "ΨJT = 0.6°C/W",
+      "type": "other",
+      "severity": "medium",
+      "confidence": "high"
+    },
+    {
+      "section": "Order Information",
+      "parameter": "AUTOMOTIVE PRODUCTS trailing row with empty part columns",
+      "column": "other",
+      "md_text": "|                     |                      |      |                                               | –40°C to 150°C |",
+      "pdf_text": "no such row; last automotive row is LTC3309AJV-7#WTRPBF / LTC3309AJV-7#WTRMPBF / LHQH / –40°C to 150°C",
+      "type": "extra",
+      "severity": "medium",
+      "confidence": "high"
+    }
+  ]
+}

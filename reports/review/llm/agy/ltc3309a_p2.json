@@ -1,0 +1,52 @@
+{
+  "datasheet": "ltc3309a",
+  "page": 2,
+  "checked_sections": [
+    "ABSOLUTE MAXIMUM RATINGS",
+    "PIN CONFIGURATION",
+    "ORDER INFORMATION",
+    "AUTOMOTIVE PRODUCTS**"
+  ],
+  "discrepancies": [
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "Pin 11 and Pin 12",
+      "column": "PIN",
+      "md_text": "12 11 10 RT (and caption: Pin 11: PGND, Pin 12: AGND)",
+      "pdf_text": "Pin 11: PGOOD, Pin 12: FB",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "Pin 5",
+      "column": "PIN",
+      "md_text": "6 SW SW / 5 PGND",
+      "pdf_text": "5 SW, 6 SW",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "Thermal resistance descriptions in caption/alt text",
+      "column": "other",
+      "md_text": "junction-to-lead temperature is 51°C/W, the junction-to-body temperature is 12°C/W ... junction-to-junction temperature is 0.6°C/W",
+      "pdf_text": "θJA = 51°C/W, θJB = 12°C/W, ΨJT = 0.6°C/W",
+      "type": "other",
+      "severity": "low",
+      "confidence": "high"
+    },
+    {
+      "section": "ORDER INFORMATION (AUTOMOTIVE PRODUCTS**)",
+      "parameter": "6th row under AUTOMOTIVE PRODUCTS**",
+      "column": "other",
+      "md_text": "| | | | | –40°C to 150°C |",
+      "pdf_text": "(no 6th row; table has 5 rows under AUTOMOTIVE PRODUCTS**)",
+      "type": "extra",
+      "severity": "medium",
+      "confidence": "high"
+    }
+  ]
+}

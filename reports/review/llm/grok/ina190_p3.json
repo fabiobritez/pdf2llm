@@ -1,0 +1,9 @@
+{
+  "datasheet": "ina190",
+  "page": 3,
+  "checked_sections": [
+    "Pin Configuration and Functions",
+    "Pin Functions"
+  ],
+  "discrepancies": []
+}

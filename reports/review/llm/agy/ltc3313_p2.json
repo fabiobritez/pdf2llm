@@ -1,0 +1,42 @@
+{
+  "datasheet": "ltc3313",
+  "page": 2,
+  "checked_sections": [
+    "ABSOLUTE MAXIMUM RATINGS",
+    "PIN CONFIGURATION",
+    "ORDER INFORMATION",
+    "AUTOMOTIVE PRODUCTS"
+  ],
+  "discrepancies": [
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "Pins 18, 17, 16, 15",
+      "column": "PIN",
+      "md_text": "18 17 16 15",
+      "pdf_text": "18 FB, 17 ITH, 16 SSTT, 15 RT",
+      "type": "missing",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "Pins 1, 2, 3, 4, 5 (EN, AGND, VIN, VIN, PGND)",
+      "column": "PIN",
+      "md_text": "EN AGND V<sub>IN</sub> V<sub>IN</sub> PGND",
+      "pdf_text": "1 EN, 2 AGND, 3 VIN, 4 VIN, 5 PGND",
+      "type": "missing",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "Pin 14",
+      "column": "PIN",
+      "md_text": "14 PGGOOD",
+      "pdf_text": "14 PGOOD",
+      "type": "wrong_value",
+      "severity": "medium",
+      "confidence": "high"
+    }
+  ]
+}

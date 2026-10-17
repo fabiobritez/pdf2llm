@@ -1,0 +1,82 @@
+{
+  "datasheet": "ina190",
+  "page": 4,
+  "checked_sections": [
+    "6.1 Absolute Maximum Ratings",
+    "6.2 ESD Ratings",
+    "6.3 Recommended Operating Conditions",
+    "6.4 Thermal Information"
+  ],
+  "discrepancies": [
+    {
+      "section": "6.1 Absolute Maximum Ratings",
+      "parameter": "V_IN+, V_IN- Analog inputs, Differential (V_IN+) – (V_IN-)",
+      "column": "MIN",
+      "md_text": "Differential (V <sub>IN+</sub> ) – (V <sub>IN-</sub> ) <sup>(2)</sup>",
+      "pdf_text": "–42",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "6.1 Absolute Maximum Ratings",
+      "parameter": "V_IN+, V_IN- Analog inputs, Differential (V_IN+) – (V_IN-)",
+      "column": "MAX",
+      "md_text": "–42",
+      "pdf_text": "42",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "6.1 Absolute Maximum Ratings",
+      "parameter": "V_IN+, V_IN- Analog inputs, V_IN+, V_IN- with respect to GND",
+      "column": "MIN",
+      "md_text": "V <sub>IN+</sub> , V <sub>IN-</sub> , with respect to GND <sup>(3)</sup>",
+      "pdf_text": "GND – 0.3",
+      "type": "missing",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "6.2 ESD Ratings",
+      "parameter": "V_(ESD) Electrostatic discharge, Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 (VALUE column)",
+      "column": "other",
+      "md_text": "Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 <sup>(1)</sup>",
+      "pdf_text": "±3000",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "6.2 ESD Ratings",
+      "parameter": "V_(ESD) Electrostatic discharge, Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001",
+      "column": "UNIT",
+      "md_text": "±3000",
+      "pdf_text": "V",
+      "type": "wrong_unit",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "6.2 ESD Ratings",
+      "parameter": "V_(ESD) Electrostatic discharge, Charged-device model (CDM), per JEDEC specification JESD22-C101 (VALUE column)",
+      "column": "other",
+      "md_text": "Charged-device model (CDM), per JEDEC specification JESD22-C101 <sup>(2)</sup>",
+      "pdf_text": "±1000",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "6.2 ESD Ratings",
+      "parameter": "V_(ESD) Electrostatic discharge, Charged-device model (CDM), per JEDEC specification JESD22-C101",
+      "column": "UNIT",
+      "md_text": "±1000",
+      "pdf_text": "V",
+      "type": "wrong_unit",
+      "severity": "high",
+      "confidence": "high"
+    }
+  ]
+}

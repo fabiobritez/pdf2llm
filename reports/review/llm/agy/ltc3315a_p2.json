@@ -1,0 +1,20 @@
+{
+  "datasheet": "ltc3315a",
+  "page": 2,
+  "checked_sections": [
+    "ABSOLUTE MAXIMUM RATINGS",
+    "PIN CONFIGURATION"
+  ],
+  "discrepancies": [
+    {
+      "section": "PIN CONFIGURATION",
+      "parameter": "WLCSP PACKAGE (CB-16-11 16-BALL) pin/ball designators",
+      "column": "PIN",
+      "md_text": "Pin 1 is PGOOD, Pin 2 is FB2, Pin 3 is FB1, Pin 4 is MODE/SYNC, Pin 5 is VIN, Pin 6 is EN2, Pin 7 is EN1, Pin 8 is GND, Pin 9 is SW2, Pin 10 is SW2, Pin 11 is SW1, Pin 12 is SW1, Pin 13 is VIN, Pin 14 is GND, Pin 15 is GND, Pin 16 is VIN.",
+      "pdf_text": "Grid rows A–D and columns 1–4: A1=PGOOD, A2=FB2, A3=FB1, A4=MODE/SYNC, B1=VIN, B2=EN2, B3=EN1, B4=GND, C1=SW2, C2=SW2, C3=SW1, C4=SW1, D1=VIN, D2=GND, D3=GND, D4=VIN",
+      "type": "wrong_value",
+      "severity": "high",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "datasheet": "ltc3315a",
+  "page": 4,
+  "checked_sections": [
+    "ELECTRICAL CHARACTERISTICS",
+    "Power Good/Soft-Start",
+    "Oscillator and MODE/SYNC",
+    "Notes 1-6"
+  ],
+  "discrepancies": [
+    {
+      "section": "ELECTRICAL CHARACTERISTICS",
+      "parameter": "Minimum On Time (VIN = 5.5V)",
+      "column": "MIN",
+      "md_text": "| Minimum On Time | $V_{IN} = 5.5\\text{V}$ | ● | 25 | 45 | ns |",
+      "pdf_text": "● is in the full-temperature-range column; MIN is blank (TYP = 25, MAX = 45)",
+      "type": "wrong_column",
+      "severity": "low",
+      "confidence": "high"
+    },
+    {
+      "section": "ELECTRICAL CHARACTERISTICS",
+      "parameter": "Maximum Duty Cycle",
+      "column": "MIN",
+      "md_text": "| Maximum Duty Cycle | | ● | 100 | | % |",
+      "pdf_text": "● in full-temperature-range column, 100 in MIN column, TYP blank (md puts ● in MIN and 100 in TYP)",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "ELECTRICAL CHARACTERISTICS - Power Good/Soft-Start",
+      "parameter": "PGOOD Delay",
+      "column": "TYP",
+      "md_text": "| PGOOD Delay | | | 120 | | | μs |",
+      "pdf_text": "120 in TYP column, MIN blank (md puts 120 in MIN column)",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "ELECTRICAL CHARACTERISTICS - Power Good/Soft-Start",
+      "parameter": "PGOOD Pull-Down Resistance (VPGOOD = 0.1V)",
+      "column": "TYP",
+      "md_text": "| PGOOD Pull-Down Resistance | $V_{PGOOD} = 0.1\\text{V}$ | | 10 | 20 | | Ω |",
+      "pdf_text": "MIN is blank, TYP = 10, MAX = 20 (md shifts 10 to MIN and 20 to TYP)",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "ELECTRICAL CHARACTERISTICS - Oscillator and MODE/SYNC",
+      "parameter": "MODE/SYNC No Clock Detect Time",
+      "column": "TYP",
+      "md_text": "| MODE/SYNC No Clock Detect Time | | | 10 | | | μs |",
+      "pdf_text": "10 in TYP column, MIN blank (md puts 10 in MIN column)",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    }
+  ]
+}

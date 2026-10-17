@@ -1,0 +1,42 @@
+{
+  "datasheet": "ltc3315a",
+  "page": 4,
+  "checked_sections": [
+    "Electrical Characteristics",
+    "Power Good/Soft-Start",
+    "Oscillator and MODE/SYNC",
+    "Notes"
+  ],
+  "discrepancies": [
+    {
+      "section": "Power Good/Soft-Start",
+      "parameter": "PGOOD Delay",
+      "column": "TYP",
+      "md_text": "|   | 120  |     |     | μs |",
+      "pdf_text": "MIN blank, TYP 120, MAX blank, μs",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Power Good/Soft-Start",
+      "parameter": "PGOOD Pull-Down Resistance, VPGOOD = 0.1V",
+      "column": "other",
+      "md_text": "|   | 10   | 20  |     | Ω  |",
+      "pdf_text": "MIN blank, TYP 10, MAX 20, Ω",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Oscillator and MODE/SYNC",
+      "parameter": "MODE/SYNC No Clock Detect Time",
+      "column": "TYP",
+      "md_text": "|   | 10             |   |      | μs  |",
+      "pdf_text": "MIN blank, TYP 10, MAX blank, μs",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    }
+  ]
+}

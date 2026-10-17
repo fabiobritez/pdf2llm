@@ -1,0 +1,50 @@
+{
+  "datasheet": "ltc3315a",
+  "page": 3,
+  "checked_sections": [
+    "Order Information",
+    "Electrical Characteristics"
+  ],
+  "discrepancies": [
+    {
+      "section": "Electrical Characteristics",
+      "parameter": "PMOS Current Limit (I_LIM), Current out of SW, V_OUT/V_IN ≤ 0.2",
+      "column": "MIN",
+      "md_text": "",
+      "pdf_text": "2.9",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Electrical Characteristics",
+      "parameter": "PMOS Current Limit (I_LIM), Current out of SW, V_OUT/V_IN ≤ 0.2",
+      "column": "TYP",
+      "md_text": "2.9",
+      "pdf_text": "3.2",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Electrical Characteristics",
+      "parameter": "PMOS Current Limit (I_LIM), Current out of SW, V_OUT/V_IN ≤ 0.2",
+      "column": "MAX",
+      "md_text": "3.2",
+      "pdf_text": "3.5",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "section": "Electrical Characteristics",
+      "parameter": "PMOS Current Limit (I_LIM), Current out of SW, V_OUT/V_IN ≤ 0.2",
+      "column": "UNIT",
+      "md_text": "3.5 A",
+      "pdf_text": "A",
+      "type": "wrong_column",
+      "severity": "high",
+      "confidence": "high"
+    }
+  ]
+}
