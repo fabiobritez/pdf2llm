@@ -258,6 +258,48 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual(stats['mismatched'], 1)
         doc.close()
 
+    def test_numeric_range_condition_selects_sub_row(self):
+        # sn74avc4t774 p7: parameter label is centred on the 3rd sub-row;
+        # the "1.1V to 1.3V" condition must pick the first one.
+        doc = pymupdf.open()
+        p = doc.new_page()
+        for x, word in [(330, 'VCCO'), (430, 'MIN'), (495, 'MAX'), (526, 'UNIT')]:
+            p.insert_text((x, 100), word)
+        rows = [(130, '1.1V to 1.3V', '-3'), (150, '1.4V to 1.6V', '-6'), (170, '1.65V to 1.95V', '-8')]
+        for y, cond, val in rows:
+            p.insert_text((315, y), cond)
+            p.insert_text((500, y), val)
+        p.insert_text((60, 170), 'High-level output current')
+        p.insert_text((526, 170), 'mA')
+        text = ('| PARAMETER | VCCO | MIN | MAX | UNIT |\n'
+                '| High-level output current | 1.1V to 1.3V | | -3 | mA |\n'
+                '| | 1.4V to 1.6V | | -6 | |\n'
+                '| | 1.65V to 1.95V | | -8 | |')
+        issues, stats = v.geometry_issues(text, doc)
+        self.assertEqual([i for i in issues if i['type'].startswith('geometry')], [])
+        doc.close()
+
+    def test_value_fallback_abstains_when_values_recur_in_other_table(self):
+        # tps22990 p6: a bare "-40C to +105C ... 6" row exists six times in one
+        # table; a single "6" row in another table must not be picked.
+        doc = pymupdf.open()
+        p = doc.new_page()
+        for top in (100, 400):
+            for x, word in [(420, 'TA'), (468, 'MIN'), (492, 'TYP'), (515, 'MAX'), (537, 'UNIT')]:
+                p.insert_text((x, top), word)
+        for y in (130, 170, 210):
+            p.insert_text((395, y), '-40C to +105C')
+            p.insert_text((526, y), '6')
+        p.insert_text((395, 430), '-40C to +105C')
+        p.insert_text((522, 430), '59')
+        p.insert_text((395, 440), '-40C to +85C')
+        p.insert_text((496, 440), '4.5')
+        p.insert_text((526, 440), '6')
+        text = '| PARAMETER | TA | MIN | TYP | MAX | UNIT |\n| | -40C to +105C | | | 6 | |'
+        issues, stats = v.geometry_issues(text, doc)
+        self.assertEqual(issues, [])
+        doc.close()
+
     def test_ambiguous_rows_and_unrelated_tables_abstain(self):
         doc = pymupdf.open()
         p = doc.new_page()

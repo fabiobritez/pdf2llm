@@ -173,3 +173,15 @@ make no API calls, and produce deterministic reports.
   bounds the unit column and is treated as prose.
 - Formula cells (e.g. `20 + 0.1CB`) are not reported missing when their numbers appear
   elsewhere in the md row; unit cells such as `LSB12` keep their digits when compared.
+
+## Geometry matching extensions (batch 3)
+
+- Ambiguity is now explicit: when a row's prose matches several rows of its own
+  table, a clear hit in another table (e.g. Abs Max "Supply voltage" vs the
+  Recommended row) is discarded instead of reported as a mismatch.
+- The value fallback abstains when the row's values occur in several bands of
+  any table on the page (tps22990 R_ON temperature sub-rows).
+- Numeric range cells ("1.1V to 1.3V") are prose queries, so a sub-row is not
+  matched to the row that carries the vertically centred parameter label.
+- Prose words belong only to their nearest band, so packed rows do not borrow
+  a neighbour's condition.

@@ -109,6 +109,9 @@ def bands(words, schema, bottom, normalize):
     return result
 
 
+AMBIGUOUS = {'ambiguous': True}  # sentinel: prose matched several rows of one table
+
+
 def match_row(cells, schema, candidates, words, normalize):
     """Fuzzy token recall on local prose, with weaker support from shared labels.
 
@@ -119,7 +122,8 @@ def match_row(cells, schema, candidates, words, normalize):
     queries = []
     for cell in cells:
         terms = prose(cell, normalize)
-        if len(set(terms)) >= 2 and any(len(t) >= 3 and t.isalpha() for t in terms) and not re.fullmatch(r'[\d.()+*/x+%\- A-Z]+', normalize(cell)):
+        # numeric ranges such as "1.1V to 1.3V" identify a sub-row as well as words do
+        if len(set(terms)) >= 2 and (any(len(t) >= 3 and t.isalpha() for t in terms) or sum(bool(re.search(r"\d", t)) for t in terms) >= 2) and not re.fullmatch(r'[\d.()+*/x+%\- A-Z]+', normalize(cell)):
             queries.append(terms)
     if not queries:
         return None
@@ -142,10 +146,15 @@ def match_row(cells, schema, candidates, words, normalize):
             if joined == queries[0]:
                 anchors.append((y+yy)/2)
     selector = next((i for i, q in reversed(list(enumerate(queries))) if 'devices' in q), None)
+    ys = [c['y'] for c in candidates]
+    owner = {id(w): min(ys, key=lambda cy: abs((w[1] + w[3]) / 2 - cy)) for w, _ in left_words} if ys else {}
     scored = []
     for candidate in candidates:
         y = candidate['y']
-        local = [t for w, ts in left_words if abs((w[1] + w[3]) / 2 - y) <= 5 for t in ts]
+        # A word belongs to the nearest band only: tightly packed rows (3-4 pt
+        # apart) must not borrow a neighbour's condition, e.g. "+105°C".
+        local = [t for w, ts in left_words if abs((w[1] + w[3]) / 2 - y) <= 5
+                 and owner.get(id(w), y) == y for t in ts]
         nearby = [t for w, ts in left_words if abs((w[1] + w[3]) / 2 - y) <= 30 for t in ts]
         scores = []
         for query in queries:
@@ -172,8 +181,10 @@ def match_row(cells, schema, candidates, words, normalize):
     # temperature bullet; a shared, vertically centered parameter cannot
     # distinguish them reliably. Do not let its position break that tie.
     adjacent = len(scored) > 1 and abs(scored[0][1]['y'] - scored[1][1]['y']) <= 20
-    if not scored or adjacent or (len(scored) > 1 and scored[0][0] - scored[1][0] < .035):
+    if not scored:
         return None
+    if adjacent or (len(scored) > 1 and scored[0][0] - scored[1][0] < .035):
+        return AMBIGUOUS
     return scored[0][1]
 
 
@@ -198,7 +209,9 @@ def match_by_values(raw, mappings, schema, candidates, words, normalize):
                        for t in signature(value, normalize))
         if all(have[t] >= c for t, c in tokens.items()):
             hits.append(candidate)
-    if len(hits) != 1:
+    if len(hits) > 1:
+        return AMBIGUOUS
+    if not hits:
         return None
     if sum(tokens.values()) < 2:
         terms = [t for c in raw[:min(mappings)] for t in prose(c, normalize) if len(t) >= 3 and t.isalpha()]
@@ -265,19 +278,31 @@ def check_tables(text, document, table_blocks, normalize):
                 stats['unverifiable'] += 1
                 continue
             matches = []
+            ambiguous = value_ambiguous = False
             for schema, candidates in schemas:
                 if set(mappings.values()) != set(schema['columns']):
                     continue
                 found = match_row(raw, schema, candidates, words, normalize)
-                if found:
+                if found is AMBIGUOUS:
+                    ambiguous = True
+                elif found:
                     matches.append((schema, found))
+            # A clear prose hit in another table (e.g. Abs Max "Supply voltage")
+            # must not win when the row's own table matched several rows.
+            if ambiguous:
+                matches = []
             if not matches:
                 for schema, candidates in schemas:
                     if set(mappings.values()) != set(schema['columns']):
                         continue
                     found = match_by_values(raw, mappings, schema, candidates, words, normalize)
-                    if found:
+                    if found is AMBIGUOUS:
+                        value_ambiguous = True
+                    elif found:
                         matches.append((schema, found))
+                # the values recur in another table on the page: no unique row
+                if value_ambiguous:
+                    matches = []
                 if len(matches) == 1:
                     stats['value_matched'] += 1
             if len(matches) != 1:
