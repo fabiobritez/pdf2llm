@@ -1,0 +1,12 @@
+You are auditing the fidelity of a Markdown transcription of one page of an electronics datasheet.
+Files in the current directory:
+- PAGE_IMAGE: {img}  (rendered image of the ORIGINAL PDF page; this is the ground truth. Open and look at it.)
+- Zoomed crops of the same page at higher resolution: {top} (upper 55%) and {bottom} (lower 55%). Use them to read small digits.
+- PAGE_MD: {md}  (the Markdown transcription of that same page, produced by an automatic converter)
+Datasheet: {name}, page {page}.
+
+Task: compare the transcription against the image, focusing on the critical tables: Absolute Maximum Ratings, Recommended Operating Conditions, ESD/Thermal, Electrical Characteristics, Pin configuration/Pin functions, Order information, register tables. Check EVERY numeric cell: value, sign, unit, which column it is in (MIN/TYP/MAX/UNIT), which row/parameter and condition it belongs to, footnote markers, the "●" full-temperature-range marker, and pin numbers/names. Also report missing or extra rows. Ignore pure formatting differences (LaTeX vs plain, bold, whitespace, column padding, merged-cell rendering that keeps the meaning unambiguous).
+
+Do not modify any files and do not run shell commands; just read the image files and the md file. Output ONLY a JSON object (no prose, no code fences) with this schema:
+{"datasheet":"{name}","page":{page},"checked_sections":["..."],"discrepancies":[{"section":"...","parameter":"row/parameter name and condition","column":"MIN|TYP|MAX|UNIT|CONDITIONS|PIN|other","md_text":"exact text as it appears in the md (short)","pdf_text":"what the image shows","type":"wrong_value|wrong_column|missing|extra|wrong_unit|wrong_row|other","severity":"high|medium|low","confidence":"high|medium|low"}]}
+If everything matches, return an empty discrepancies list. Be precise; do not guess - if the image is unreadable for a cell, set confidence low.
