@@ -160,3 +160,16 @@ Regression fixtures freeze the broken LTC3315A and INA190 rows independently of
 future Markdown repairs. Correct controls and false-positive samples read the
 current `output/` files. The geometry checks require only stdlib and PyMuPDF,
 make no API calls, and produce deterministic reports.
+
+### Geometry matching extensions (batch 2)
+
+- **Value fallback** (`match_by_values`): when prose matching cannot pick a PDF row,
+  the md row is matched by its numeric values (they must be a sub-multiset of exactly
+  one PDF row; a single value also needs prose overlap nearby). Column placement is not
+  used to choose the row, so shifted/missing values are still reported. Counted as
+  `value_matched` in the JSON stats.
+- **ADI layout**: Title-case `Min Typ Max Unit` headers are accepted when at least three
+  labels share a line, and a `Test Conditions/Comments` column to the right of `Unit`
+  bounds the unit column and is treated as prose.
+- Formula cells (e.g. `20 + 0.1CB`) are not reported missing when their numbers appear
+  elsewhere in the md row; unit cells such as `LSB12` keep their digits when compared.

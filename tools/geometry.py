@@ -47,17 +47,19 @@ def headers(words, right):
     groups = []
     for word in sorted(words, key=lambda w: (w[1], w[0])):
         name = label(word[4])
-        if word[4] != word[4].upper() or name not in LABELS:
+        if name not in LABELS or not (word[4] == word[4].upper() or word[4] == word[4].capitalize()):
             continue
         y = (word[1] + word[3]) / 2
         group = next((g for g in groups if abs(g['y'] - y) <= 3), None)
         if group is None:
             group = dict(y=y, words=[])
             groups.append(group)
-        group['words'].append((name, (word[0] + word[2]) / 2))
+        group['words'].append((name, (word[0] + word[2]) / 2, word[4] == word[4].upper()))
     result = []
     for group in groups:
-        cols = sorted(group['words'], key=lambda item: item[1])
+        if not all(upper for _, _, upper in group['words']) and len(group['words']) < 3:
+            continue  # Title-case labels only count as a header in a full Min/Typ/Max row.
+        cols = sorted(((n, x) for n, x, _ in group['words']), key=lambda item: item[1])
         if len(cols) < 2 or not any(n in VALUES for n, _ in cols):
             continue
         if len({n for n, _ in cols}) != len(cols):
@@ -65,9 +67,20 @@ def headers(words, right):
         centers = [x for _, x in cols]
         edges = [centers[0] - (centers[1] - centers[0]) / 2]
         edges += [(a + b) / 2 for a, b in zip(centers, centers[1:])]
-        edges.append(right)
-        result.append(dict(y=group['y'], columns=[n for n, _ in cols], edges=edges))
+        prose_right = None
+        tail = [w for w in words if abs((w[1] + w[3]) / 2 - group['y']) <= 3 and w[0] > centers[-1] + 5
+                and re.match(r'(?i)(test|conditions?|comments?)', w[4])]
+        if tail:
+            prose_right = min(w[0] for w in tail) - 4
+        edges.append(prose_right or right)
+        result.append(dict(y=group['y'], columns=[n for n, _ in cols], edges=edges, prose_right=prose_right))
     return sorted(result, key=lambda h: h['y'])
+
+
+def is_prose(word, schema):
+    """Parameter/condition text: left of the value columns, or right of them (ADI layout)."""
+    x = (word[0] + word[2]) / 2
+    return x < schema['edges'][0] or (schema.get('prose_right') is not None and x >= schema['prose_right'])
 
 
 def column(x, header):
@@ -110,8 +123,7 @@ def match_row(cells, schema, candidates, words, normalize):
             queries.append(terms)
     if not queries:
         return None
-    left_words = [(w, prose(w[4], normalize)) for w in words
-                  if (w[0] + w[2]) / 2 < schema['edges'][0]]
+    left_words = [(w, prose(w[4], normalize)) for w in words if is_prose(w, schema)]
     physical = {}
     for word, terms in left_words:
         physical.setdefault(tuple(word[5:7]), []).append(word)
@@ -165,8 +177,41 @@ def match_row(cells, schema, candidates, words, normalize):
     return scored[0][1]
 
 
+def match_by_values(raw, mappings, schema, candidates, words, normalize):
+    """Fallback row match on the numeric values themselves.
+
+    Used only when prose matching fails. The md row's value tokens (from its
+    MIN/TYP/MAX/VALUE/UNIT cells) must form a sub-multiset of exactly one PDF
+    band's value tokens. With a single token we additionally require some
+    prose overlap near that band, so a lone "5" cannot pick an arbitrary row.
+    Column placement is never used to choose the band, so column errors stay
+    detectable; a value that was transcribed wrongly simply yields no match.
+    """
+    tokens = Counter(t for i, name in mappings.items() if i < len(raw)
+                     for t in signature(raw[i], normalize)
+                     if name in VALUES or name == 'UNIT')
+    if not tokens:
+        return None
+    hits = []
+    for candidate in candidates:
+        have = Counter(t for name, value in candidate['cells'].items() if name in VALUES
+                       for t in signature(value, normalize))
+        if all(have[t] >= c for t, c in tokens.items()):
+            hits.append(candidate)
+    if len(hits) != 1:
+        return None
+    if sum(tokens.values()) < 2:
+        terms = [t for c in raw[:min(mappings)] for t in prose(c, normalize) if len(t) >= 3 and t.isalpha()]
+        y = hits[0]['y']
+        local = {t for w in words if abs((w[1] + w[3]) / 2 - y) <= 12
+                 and is_prose(w, schema) for t in prose(w[4], normalize)}
+        if not terms or sum(t in local for t in terms) / len(terms) < .5:
+            return None
+    return hits[0]
+
+
 def check_tables(text, document, table_blocks, normalize):
-    issues, stats = [], Counter(verified_ok=0, mismatched=0, unverifiable=0)
+    issues, stats = [], Counter(verified_ok=0, mismatched=0, unverifiable=0, value_matched=0)
     markers = [(text.count('\n', 0, m.start()) + 1, int(m[1]))
                for m in re.finditer(r'^\{(\d+)\}-{8,}\s*$', text, re.M)]
     cache = {}
@@ -226,6 +271,15 @@ def check_tables(text, document, table_blocks, normalize):
                 found = match_row(raw, schema, candidates, words, normalize)
                 if found:
                     matches.append((schema, found))
+            if not matches:
+                for schema, candidates in schemas:
+                    if set(mappings.values()) != set(schema['columns']):
+                        continue
+                    found = match_by_values(raw, mappings, schema, candidates, words, normalize)
+                    if found:
+                        matches.append((schema, found))
+                if len(matches) == 1:
+                    stats['value_matched'] += 1
             if len(matches) != 1:
                 stats['unverifiable'] += 1
                 continue
@@ -252,7 +306,7 @@ def check_tables(text, document, table_blocks, normalize):
                 terms = prose(raw[i], normalize)
                 if name in VALUES and len(terms) >= 2 and not md_values[i] and not re.fullmatch(r'[A-Z\W]+', cells[i]):
                     local = ' '.join(w[4] for w in words if abs((w[1]+w[3])/2-found['y']) <= 9
-                                     and (w[0]+w[2])/2 < schema['edges'][0])
+                                     and is_prose(w, schema))
                     target = prose(local, normalize)
                     if all(t in target for t in terms):
                         emit('geometry column mismatch', cells[i], name, 'CONDITIONS')
@@ -275,9 +329,15 @@ def check_tables(text, document, table_blocks, normalize):
                 target = next((counts for counts in remaining.values() if counts[token]), None)
                 if target is not None:
                     target[token] -= 1
+            row_text = normalize(' '.join(raw))
             for name, counts in remaining.items():
                 if any(count > 0 for count in counts.values()):
-                    emit('geometry missing value', found['cells'][name], 'MISSING', name)
+                    pdf_cell = found['cells'][name]
+                    # Formula cells (e.g. "20 + 0.1CB") are often transcribed into
+                    # another column as LaTeX; only flag them if their numbers are absent.
+                    if re.search(r'[A-Za-z]', pdf_cell) and all(t.lstrip('+-') in row_text for t in counts if counts[t] > 0):
+                        continue
+                    emit('geometry missing value', pdf_cell, 'MISSING', name)
             # Blank units can be shared over many rows. Compare printed units
             # when both sides provide one; numeric-only unit cells are corrupt.
             for i, name in mappings.items():
@@ -287,7 +347,7 @@ def check_tables(text, document, table_blocks, normalize):
                     value = normalize(value).replace('omega', 'ohm').replace('√', 'sqrt')
                     value = value.replace('%', '')
                     return re.sub(r'[\s{}\\]+', '', value)
-                md_unit = unit_key(re.sub(r'[\d.±+\- ]+', '', cells[i]))
+                md_unit = unit_key(re.sub(r"^[\d.±+\-\s]+", "", cells[i]))
                 pdf_unit = unit_key(found['cells']['UNIT'])
                 if md_unit != pdf_unit:
                     if md_unit:

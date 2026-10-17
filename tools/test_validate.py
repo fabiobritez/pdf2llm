@@ -184,6 +184,32 @@ class GeometryTests(unittest.TestCase):
                 self.assertEqual(issues, [])
                 self.assertEqual(stats['verified_ok'], 1, stats)
 
+    def test_value_fallback_catches_tps_missing_max(self):
+        # tps6287b20 p10 (pre-fix Datalab rows): TI values shifted into MIN, MAX lost.
+        text = ('| PARAMETER | | TEST CONDITIONS | MIN | TYP | MAX | UNIT |\n'
+                '| $R_{DS(ON)}$ | High-side FET static on-resistance | $V_{IN} = 3.3\\text{ V}$ | 3.4 | | | m $\\Omega$ |\n'
+                '| $t_{off, min}$ | Minimum off-time of HS FET | $V_{IN} = 5\\text{ V}$ | 70 | | | ns |')
+        issues, stats = self.check('tps6287b20', 10, text)
+        self.assert_shift(issues, 'Highside FET static', '3.4', 'MIN', 'TYP')
+        self.assertTrue(any(i['type'] == 'geometry missing value' and i['value'] == '6.4' for i in issues))
+        self.assert_shift(issues, 'Minimum offtime', '70', 'MIN', 'TYP')
+        self.assertTrue(any(i['type'] == 'geometry missing value' and i['value'] == '100' for i in issues))
+
+    def test_adi_title_case_header_and_right_conditions(self):
+        # ADI layout: Parameter | Min | Typ | Max | Unit | Test Conditions/Comments.
+        text = v.split_pages(v.locate_md('ad5593r').read_text())[0][3]
+        block = next(b for b in v.table_blocks(text) if any(v.normalize(c) == 'Min' or c.strip() == 'Min' for _, cs in b for c in cs))
+        snippet = '\n'.join('| ' + ' | '.join(c) + ' |' for _, c in block)
+        issues, stats = self.check('ad5593r', 4, snippet)
+        self.assertEqual([i for i in issues if i['type'].startswith('geometry')], [])
+        self.assertGreater(stats['verified_ok'], 3, stats)
+
+    def test_unit_with_digits_is_not_a_mismatch(self):
+        text = ('| Parameter | Min | Typ | Max | Unit | Test Conditions/Comments |\n'
+                '| AD5711R | -0.625 | | +0.625 | LSB <sub>12</sub> | |')
+        issues, _ = self.check('ad5711r-ad5710r', 4, text)
+        self.assertFalse(any('UNIT' in str(i.get('pdf_column')) for i in issues))
+
     def test_html_and_missing_unit(self):
         snippet = '''<table><tr><th>PARAMETER</th><th>MIN</th><th>TYP</th><th>MAX</th><th>UNIT</th></tr>
 <tr><td>PGOOD Delay</td><td>120</td><td></td><td></td><td>V</td></tr></table>'''
