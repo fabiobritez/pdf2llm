@@ -2799,13 +2799,14 @@
     "geometry_rows": {
       "mismatched": 0,
       "order_matched": 45,
-      "out_of_scope": 75,
+      "out_of_scope": 98,
+      "out_of_scope_scope_readout": 24,
       "table_matched": 18,
-      "unverifiable": 27,
-      "unverifiable_no_schema": 24,
+      "unverifiable": 9,
+      "unverifiable_band_shared": 6,
       "unverifiable_prose_ambiguous": 3,
       "value_matched": 47,
-      "verified_ok": 134
+      "verified_ok": 128
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 1,

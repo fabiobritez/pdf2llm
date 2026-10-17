@@ -3546,11 +3546,13 @@
     "geometry_rows": {
       "mismatched": 0,
       "order_matched": 4,
-      "out_of_scope": 115,
-      "unverifiable": 22,
-      "unverifiable_no_schema": 22,
+      "out_of_scope": 136,
+      "out_of_scope_design_table": 17,
+      "out_of_scope_no_header": 5,
+      "unverifiable": 2,
+      "unverifiable_band_shared": 2,
       "value_matched": 29,
-      "verified_ok": 71
+      "verified_ok": 69
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 0,

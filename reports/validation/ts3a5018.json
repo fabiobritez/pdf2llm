@@ -3300,7 +3300,7 @@
     "geometry_rows": {
       "mismatched": 0,
       "order_matched": 45,
-      "out_of_scope": 97,
+      "out_of_scope": 96,
       "table_matched": 3,
       "unverifiable": 1,
       "unverifiable_value_ambiguous": 1,

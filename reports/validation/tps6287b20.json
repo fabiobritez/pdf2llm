@@ -6195,10 +6195,10 @@
     "geometry_rows": {
       "mismatched": 0,
       "order_matched": 16,
-      "out_of_scope": 296,
-      "unverifiable": 39,
+      "out_of_scope": 326,
+      "out_of_scope_design_table": 31,
+      "unverifiable": 8,
       "unverifiable_no_match": 1,
-      "unverifiable_no_schema": 31,
       "unverifiable_prose_ambiguous": 4,
       "unverifiable_value_ambiguous": 3,
       "value_matched": 39,

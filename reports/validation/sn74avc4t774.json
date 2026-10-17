@@ -3390,14 +3390,15 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "order_matched": 10,
-      "out_of_scope": 253,
+      "order_matched": 20,
+      "out_of_scope": 161,
       "table_matched": 1,
-      "unverifiable": 12,
+      "unverifiable": 19,
+      "unverifiable_band_shared": 3,
       "unverifiable_no_match": 2,
-      "unverifiable_prose_ambiguous": 10,
-      "value_matched": 0,
-      "verified_ok": 34
+      "unverifiable_prose_ambiguous": 14,
+      "value_matched": 53,
+      "verified_ok": 112
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 2,

@@ -2790,10 +2790,10 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "order_matched": 2,
+      "order_matched": 4,
       "out_of_scope": 122,
       "unverifiable": 0,
-      "value_matched": 6,
+      "value_matched": 4,
       "verified_ok": 44
     },
     "high_confidence_table_rows": 0,

@@ -2920,9 +2920,10 @@
       "mismatched": 0,
       "order_matched": 1,
       "out_of_scope": 96,
-      "unverifiable": 0,
+      "unverifiable": 2,
+      "unverifiable_band_shared": 2,
       "value_matched": 5,
-      "verified_ok": 51
+      "verified_ok": 49
     },
     "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 1,
