@@ -346,6 +346,31 @@ class GeometryTests(unittest.TestCase):
         self.assertTrue(any(i['type'] == 'geometry column mismatch' and i['value'] == '0.6' for i in issues), issues)
         doc.close()
 
+    def test_dual_min_typ_max_groups(self):
+        # sn74avc4t774 p8: TA = 25C and -40C to 85C groups, UNIT in the group row.
+        doc = pymupdf.open()
+        p = doc.new_page()
+        for x, word in [(300, 'MIN'), (330, 'TYP'), (360, 'MAX'), (420, 'MIN'), (450, 'TYP'), (480, 'MAX')]:
+            p.insert_text((x, 100), word)
+        p.insert_text((520, 95), 'UNIT')
+        p.insert_text((60, 130), 'Input leakage')
+        p.insert_text((332, 130), '0.1')
+        p.insert_text((362, 130), '1')
+        p.insert_text((482, 130), '5')
+        p.insert_text((520, 130), 'uA')
+        head = ('| PARAMETER | TA = 25C | | | full range | | | UNIT |\n'
+                '| | MIN | TYP | MAX | MIN | TYP | MAX | |\n')
+        issues, stats = v.geometry_issues(head + '| Input leakage | | 0.1 | 1 | | | 5 | uA |', doc)
+        self.assertEqual(issues, [])
+        self.assertEqual(stats['verified_ok'], 1)
+        issues, stats = v.geometry_issues(head + '| Input leakage | 0.1 | 1 | | | | 5 | uA |', doc)
+        self.assertEqual({(i['value'], i['md_column'], i['pdf_column']) for i in issues
+                          if i['type'] == 'geometry column mismatch'}, {('0.1', 'MIN', 'TYP'), ('1', 'TYP', 'MAX')})
+        # a design-example VALUE table on a spec page is out of scope, not unverifiable
+        issues, stats = v.geometry_issues('| SYMBOL | PARAMETER | VALUE |\n| VIN | Input voltage | 3.3V |', doc)
+        self.assertEqual((issues, stats['unverifiable'], stats['out_of_scope']), ([], 0, 1))
+        doc.close()
+
     def test_ambiguous_rows_and_unrelated_tables_abstain(self):
         doc = pymupdf.open()
         p = doc.new_page()

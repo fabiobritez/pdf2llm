@@ -9,8 +9,39 @@ from difflib import SequenceMatcher
 from decimal import Decimal
 import re
 
-LABELS = {'MIN', 'TYP', 'NOM', 'MAX', 'VALUE', 'UNIT', 'UNITS'}
+class _Labels(frozenset):
+    """Column-name set that also accepts group-suffixed names such as MIN#2."""
+    def __contains__(self, name):
+        return frozenset.__contains__(self, name.split('#')[0] if isinstance(name, str) else name)
+
+    def __sub__(self, other):
+        return _Labels(frozenset(self) - frozenset(other))
+
+
+LABELS = _Labels({'MIN', 'TYP', 'NOM', 'MAX', 'VALUE', 'UNIT', 'UNITS'})
 VALUES = LABELS - {'UNIT', 'UNITS'}
+
+
+def grouped(names):
+    """Suffix repeated value labels: two MIN/TYP/MAX groups (TA = 25C and full
+    range) become MIN TYP MAX MIN#2 TYP#2 MAX#2."""
+    seen = {}
+    out = []
+    for name in names:
+        if name in VALUES:
+            seen[name] = seen.get(name, 0) + 1
+            out.append(name if seen[name] == 1 else f'{name}#{seen[name]}')
+        else:
+            out.append(name)
+    return out
+
+
+def same_columns(mappings, schema):
+    """md and PDF column sets agree; a UNIT header the PDF splits ("UN IT") is not required."""
+    md = set(mappings.values())
+    if 'UNIT' not in schema['columns']:
+        md.discard('UNIT')
+    return md == set(schema['columns'])
 
 
 def label(text):
@@ -33,6 +64,8 @@ def signature(text, normalize):
            for t in re.findall(r'[A-Za-z]+', text)):
         return ()
     text = text.replace('%', '')
+    # "VCCO - 0.2", "(VIN - 1.5 V)": a minus after an operand is an operator, not a sign
+    text = re.sub(r'(?<=[A-Za-z)])\s+[-\u2013\u2212]\s*(?=\d)', ' ', text)
     # Numeric signatures deliberately exclude device selectors such as A1.
     result = []
     for token in re.findall(r'(?<![\w.])(?:\+-|[+-])?(?:\d+(?:\.\d+)?|\.\d+)', text):
@@ -63,8 +96,16 @@ def headers(words, right):
         cols = sorted(((n, x) for n, x, _ in group['words']), key=lambda item: item[1])
         if len(cols) < 2 or not any(n in VALUES for n, _ in cols):
             continue
-        if len({n for n, _ in cols}) != len(cols):
+        names = [n for n, _ in cols]
+        if any(names.count(n) > 1 for n in names if n not in VALUES) or max(map(names.count, names)) > 6:
             continue  # Two side-by-side tables need a more specific schema.
+        if len(set(names)) != len(names):
+            # Repeated value groups must be contiguous copies (MIN TYP MAX MIN TYP MAX).
+            values = [n for n in names if n in VALUES]
+            first = values[:len(set(values))]
+            if values != first * (len(values) // len(first)) or len(values) % len(first):
+                continue
+            cols = list(zip(grouped(names), [x for _, x in cols]))
         centers = [x for _, x in cols]
         edges = [centers[0] - (centers[1] - centers[0]) / 2]
         edges += [(a + b) / 2 for a, b in zip(centers, centers[1:])]
@@ -101,11 +142,17 @@ def bands(words, schema, bottom, normalize):
             ys.append(y)
     result = []
     for y in ys:
-        local = [w for w in words if abs((w[1] + w[3]) / 2 - y) <= 4]
+        local = sorted((w for w in words if abs((w[1] + w[3]) / 2 - y) <= 4), key=lambda w: w[0])
+        # "VLOGIC − 0.2" may straddle a column edge: an operator after an
+        # identifier keeps itself and its operand in the identifier's column.
+        where = [column((w[0] + w[2]) / 2, schema) for w in local]
+        for k in range(1, len(local) - 1):
+            if (local[k][4] in ('−', '-', '–', '+', '×') and re.fullmatch(r'[A-Za-z][\w()]*', local[k-1][4])
+                    and local[k][0] - local[k-1][2] < 4 and local[k+1][0] - local[k][2] < 4):
+                where[k] = where[k+1] = where[k-1]
         cells = {}
         for name in schema['columns']:
-            selected = [w for w in local if column((w[0] + w[2]) / 2, schema) == name]
-            cells[name] = ' '.join(w[4] for w in sorted(selected, key=lambda w: w[0]))
+            cells[name] = ' '.join(w[4] for w, at in zip(local, where) if at == name)
         result.append(dict(y=y, cells=cells))
     return result
 
@@ -289,15 +336,29 @@ def check_tables(text, document, table_blocks, normalize):
         first = [label(normalize(c)) for c in block[0][1]]
         unsupported_header = (any(first) and not any(c in LABELS for c in first)
                               and not any(signature(c, normalize) for c in block[0][1]))
-        unsupported = unsupported_header or any('UNIT' in [label(normalize(c)) for c in row[1]]
-                          and not any(label(normalize(c)) in VALUES for c in row[1]) for row in block)
+        def has_values(row):
+            return any(label(normalize(c)) in VALUES for c in row[1])
+        # A UNIT row without value labels is a non-spec table, unless it is the
+        # group row of a two-row header (TA = 25C | full range, then MIN TYP MAX).
+        unsupported = unsupported_header or any(
+            'UNIT' in [label(normalize(c)) for c in row[1]] and not has_values(row)
+            and not (k + 1 < len(block) and has_values(block[k + 1])) for k, row in enumerate(block))
         previous_band = None  # (schema, candidates, index) of the last matched md row in this block
         tables = row_tables(block, schemas, normalize) if len(schemas) > 1 else [None] * len(block)
+        claims = {}  # id(PDF band) -> md rows matched to it
+        group_row = None
         for (line, raw), preferred in zip(block, tables):
             cells = [normalize(c) for c in raw]
             labels = [label(c) for c in cells]
+            if 'UNIT' in labels and not any(c in VALUES for c in labels):
+                group_row = labels
+                continue
             if any(c in VALUES for c in labels):
-                md_columns = {i: c for i, c in enumerate(labels) if c in LABELS}
+                md_columns = {i: c for i, c in enumerate(grouped(labels)) if c in LABELS}
+                if group_row is not None:  # UNIT given only in the group row above
+                    md_columns.update({i: 'UNIT' for i, c in enumerate(group_row)
+                                       if c == 'UNIT' and i < len(labels) and not labels[i]})
+                group_row = None
                 inherited[page_no] = md_columns
                 continue
             if not any(cells):
@@ -333,7 +394,7 @@ def check_tables(text, document, table_blocks, normalize):
             tied = []
             ambiguous = value_ambiguous = False
             for schema, candidates in schemas:
-                if set(mappings.values()) != set(schema['columns']):
+                if not same_columns(mappings, schema):
                     continue
                 found = match_row(raw, schema, candidates, words, normalize)
                 if is_ambiguous(found):
@@ -347,7 +408,7 @@ def check_tables(text, document, table_blocks, normalize):
                 matches = []
             if not matches:
                 for schema, candidates in schemas:
-                    if set(mappings.values()) != set(schema['columns']):
+                    if not same_columns(mappings, schema):
                         continue
                     found = match_by_values(raw, mappings, schema, candidates, words, normalize)
                     if is_ambiguous(found):
@@ -387,7 +448,20 @@ def check_tables(text, document, table_blocks, normalize):
                     stats['order_matched'] += 1
             if len(matches) != 1:
                 previous_band = None
-                same = [sc for sc, _ in schemas if set(mappings.values()) == set(sc['columns'])]
+                same = [sc for sc, _ in schemas if same_columns(mappings, sc)]
+                if not same:
+                    # Tables the PDF has no MIN/TYP/MAX header for are not spec
+                    # tables: scope readouts (Value/Mean/Min/Max/Std Dev),
+                    # design-example VALUE tables, BOM/ordering tables that only
+                    # inherited a column mapping from a spec table on the page.
+                    header = {label(normalize(c)) for row in block for c in row[1]}
+                    kind = ('scope_readout' if header & {'MEAN', 'STD DEV', 'STDDEV'}
+                            else 'design_table' if md_columns is not None and set(md_columns.values()) <= {'VALUE', 'UNIT'}
+                            else 'no_header' if md_columns is None else None)
+                    if kind:
+                        stats['out_of_scope'] += 1
+                        stats['out_of_scope_' + kind] += 1
+                        continue
                 unverifiable('no_schema' if not same else 'prose_ambiguous' if ambiguous
                              else 'value_ambiguous' if value_ambiguous
                              else 'multi_table' if matches else 'no_match')
@@ -474,5 +548,19 @@ def check_tables(text, document, table_blocks, normalize):
                         emit('geometry column mismatch', cells[i], 'UNIT', 'UNIT (' + pdf_unit + ')')
                     else:
                         emit('geometry missing value', found['cells']['UNIT'], 'MISSING', 'UNIT')
-            stats['mismatched' if len(issues) > start else 'verified_ok'] += 1
+            outcome = 'mismatched' if len(issues) > start else 'verified_ok'
+            stats[outcome] += 1
+            claims.setdefault(id(found), []).append((start, len(issues), outcome, unverifiable))
+        # One PDF row can back one md row only. When two md rows claimed the
+        # same band (labels centred over sub-rows), at least one match is wrong:
+        # withdraw both results.
+        drop = set()
+        for rows in claims.values():
+            if len(rows) > 1:
+                for start, end, outcome, mark in rows:
+                    drop.update(range(start, end))
+                    stats[outcome] -= 1
+                    mark('band_shared')
+        if drop:
+            issues[:] = [item for k, item in enumerate(issues) if k not in drop]
     return issues, dict(stats)

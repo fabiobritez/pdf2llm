@@ -530,7 +530,7 @@ def report_md(result: dict) -> str:
              f"Low-coverage text pages: {summary['low_coverage_text_pages']}. Table issues: {len(result['table_issues'])}.", "",
              "Coverage uses unique normalized token sets. Page numbers below are 1-based; Markdown markers are 0-based. Figure regions are heuristic; text loss on mixed pages still counts. Extra numbers are possible OCR errors, not proof of hallucination.", ""]
     g = summary["geometry_rows"]
-    lines += [f"Geometry rows: {g['verified_ok']} verified OK; {g['mismatched']} mismatched; {g['unverifiable']} unverifiable; {g.get('out_of_scope', 0)} out of scope (no MIN/TYP/MAX/VALUE table).", ""]
+    lines += [f"Geometry rows: {g['verified_ok']} verified OK; {g['mismatched']} mismatched; {g['unverifiable']} unverifiable; {g.get('out_of_scope', 0)} out of scope (non-spec tables: no MIN/TYP/MAX/VALUE header, scope readouts, design-example VALUE tables, BOM).", ""]
     lines += [f"- {w}" for w in result['warnings']]
     lines += ["", "| Page | Words | Numbers | Classification | Alt-only numbers | Missing / extra | Removed margin/repeated/boilerplate/figure (words,numbers) | Flags |",
               "| --- | --- | --- | --- | --- | --- | --- | --- |"]
