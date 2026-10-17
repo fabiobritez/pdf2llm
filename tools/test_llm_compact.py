@@ -1,5 +1,11 @@
 """Focused conversion cases and independent fidelity regression tests."""
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
+from tools import check_llm_fidelity as fidelity
 from tools.llm_compact import compact, inline, latex, sources
 from tools.check_llm_fidelity import check, tokens
 
@@ -23,7 +29,7 @@ class CompactTests(unittest.TestCase):
         self.assertEqual(inline('a<br>b'), 'a\nb')
         self.assertEqual(inline('V <sub>SENSEP<sub>n</sub></sub>'), 'V_SENSEP_n')
         self.assertEqual(inline('a `b   c` d'), 'a `b   c` d')
-        self.assertEqual(inline(r'V_{IN+} \pm 12'), 'V_IN+ ± 12')
+        self.assertEqual(inline(r'V_{IN+} \pm 12'), 'V_IN+ ±12')
         self.assertEqual(inline(r' A   B\_C  '), 'A B_C')
 
     def test_tables(self):
@@ -32,6 +38,59 @@ class CompactTests(unittest.TestCase):
         self.assertIn('|A|MIN||MAX|\n|-|-|-|-|\n|x|1||2|\n|y||●|3|', out)
         self.assertFalse(check(source, out)['failures'])
         self.assertEqual(out.count('●'), source.count('●') + 1)  # legend
+
+    def test_nested_lists(self):
+        source = ('- Low power:\n    - Supply\n        * Detail\n    - Current\n'
+                  '- Accuracy:\n  - Offset\n\n  - Gain\n\n## Next\n'
+                  '1. Parent\n    1. Child\n        1. Grandchild\n2. Sibling')
+        expected = ('- Low power:\n  - Supply\n    * Detail\n  - Current\n'
+                    '- Accuracy:\n  - Offset\n\n  - Gain\n\n## Next\n'
+                    '1. Parent\n  1. Child\n    1. Grandchild\n2. Sibling')
+        self.assertIn(expected, compact(source))
+        self.assertIn('- Parent\n  - Child', compact('- Parent\n\t- Child'))
+
+    def test_spacing_cleanup(self):
+        cases = {
+            r'50 $\mu$ A': '50 µA',
+            r'$\pm$ 15 $\mu$ V': '±15 µV',
+            '± 0.2%': '±0.2%', 'V_S :': 'V_S:',
+            '+125°C ,': '+125°C,', '( /OE )': '(/OE)',
+            'Δ T_I': 'ΔT_I', 'μ A': 'μA',
+            'x ,<br> y': 'x; y',
+            '( a ) [ b ] x ; y : z . Next': '(a) [b] x; y: z. Next',
+            '1 2 3 . 4': '1 2 3. 4',
+            '1 .2': '1 .2',
+        }
+        for source, expected in cases.items():
+            with self.subTest(source=source):
+                self.assertEqual(inline(source, table=True), expected)
+                self.assertIn('|' + expected + '|', compact('|Text|\n|-|\n|' + source + '|'))
+
+    def test_numeric_minus(self):
+        source = '–40 −12 x =−2 (–3) y –4 word–word word – word 1–2'
+        expected = '-40 -12 x =-2 (-3) y -4 word–word word – word 1–2'
+        self.assertEqual(inline(source), expected)
+        self.assertIn('|-40|-12|', compact('|MIN|MAX|\n|-|-|\n|–40|−12|'))
+
+    def test_emphasis(self):
+        source = '**bold** *italic* _italic_ __bold__ ***both*** **V_OS** V_OS A_B_C 2 * 3'
+        expected = 'bold italic italic bold both V_OS V_OS A_B_C 2 * 3'
+        self.assertEqual(inline(source), expected)
+        self.assertIn('### Title V_OS', compact('### **Title** _V_OS_'))
+        self.assertIn('|bold|V_OS|', compact('|**bold**|*V_OS*|'))
+        self.assertIn('* Item', compact('* **Item**'))
+        self.assertIn('Package\n\nTop View', compact('**Package\n\nTop View**'))
+        self.assertIn('- Top View: Shows', compact('- Top View:** Shows'))
+
+    def test_cleanup_preserves_code(self):
+        literal = '**bold** _em_ V_OS ± 15 µ A Δ T_I ( /OE ) –12 1 2'
+        for fence in ('```', '~~~'):
+            self.assertIn(fence + '\n' + literal + '\n' + fence,
+                          compact(fence + '\n' + literal + '\n' + fence))
+        for delimiter in ('`', '``'):
+            span = delimiter + literal + delimiter
+            self.assertEqual(inline('**Prose** ' + span + ' , ± 2'), 'Prose ' + span + ', ±2')
+        self.assertEqual(inline('``a ` b``'), '``a ` b``')
 
     def test_escaped_table_pipes(self):
         src = r'|Parameter|MIN|MAX|' + '\n|-|-|-|\n' + r'|Voltage \|V\||1|2|'
@@ -99,6 +158,23 @@ class CompactTests(unittest.TestCase):
         good = compact(src)
         for bad in [good.replace('±12', '12'), good.replace('Voltage ●', 'Voltage'), good.replace('|±12|12|', '|±12||')]:
             self.assertTrue(check(src, bad)['failures'])
+
+    def test_checker_cli_rejects_prose_numeric_loss(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            sheet = root / 'output' / 'sample'
+            sheet.mkdir(parents=True)
+            source = '|Parameter|MIN|\n|-|-|\n|Voltage|1|\n\nProse 987'
+            (sheet / 'sample.md').write_text(source)
+            target = compact(source).replace('Prose 987', 'Prose')
+            self.assertFalse(check(source, target)['failures'])
+            (sheet / 'sample.llm.md').write_text(target)
+            with patch.object(fidelity, 'ROOT', root), patch('sys.argv', ['check_llm_fidelity']), redirect_stdout(StringIO()):
+                self.assertEqual(fidelity.main(), 1)
+            report = (root / 'reports' / 'llm' / 'fidelity.md').read_text()
+            self.assertIn('FAIL: 1 datasheets checked; spec-table failures: 0;', report)
+            self.assertEqual(report.count('Before figure deduplication (diagnostic only):'), 1)
+            self.assertEqual(report.count('Missing `987`'), 1)
 
     def test_all_datasheets(self):
         for path in sources():

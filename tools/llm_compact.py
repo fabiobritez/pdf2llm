@@ -161,15 +161,39 @@ def _inline_plain(text, table=False):
     # again: doing so would make flattened nested subscripts non-idempotent.
     text = re.sub(r'\\([_#%&()\[\]])', r'\1', text)
     text = re.sub(r'\.{3,}', '', text)
-    text = re.sub(r'\*\*(Figure\s+\d+\b.*?)\*\*', r'\1', text)
+    # Paired prose emphasis only: underscores within identifiers stay literal.
+    for _ in range(3):
+        for marker in ('**', '__', '*', '_'):
+            escaped = re.escape(marker)
+            boundary = r'\w' if marker[0] == '_' else r'\*'
+            text = re.sub(r'(?<![' + boundary + r'\\])' + escaped
+                          + r'(?=\S)(.+?)(?<=\S)' + escaped
+                          + r'(?![' + boundary + r'])', r'\1', text)
+    # Extracted captions can split bold across lines or leave a lone closer.
+    text = re.sub(r'(?<!\\)\*\*', '', text)
+    text = re.sub(r'(?<!\S)[–−](?=\d)|(?<=[(=])[–−](?=\d)', '-', text)
+    text = re.sub(r',[^\S\n]*;', ';', text)
+    text = re.sub(r'[^\S\n]+([,;:)\]])', r'\1', text)
+    text = re.sub(r'[^\S\n]+\.(?=\s|$)', '.', text)
+    text = re.sub(r'([(\[])[^\S\n]+', r'\1', text)
+    text = re.sub(r'([±Δ])[^\S\n]+(?=\S)', r'\1', text)
+    text = re.sub(r'([µμ])[^\S\n]+(?=[^\W\d_])', r'\1', text)
     return re.sub(r'[^\S\n]{2,}', ' ', text).strip()
 
 
 def inline(text, table=False):
-    # Backtick spans are literal code, including their internal whitespace.
-    parts = re.split(r'(`+[^`]*`+)', text)
-    return ''.join(part if part.startswith('`') else ((' ' if part[:1].isspace() else '') + _inline_plain(part, table) + (' ' if part[-1:].isspace() else ''))
-                   for part in parts).strip() if len(parts) > 1 else _inline_plain(text, table)
+    # Protect literal spans while allowing cleanup at their prose boundaries.
+    spans = []
+    sentinel = '\ue000'
+    while sentinel in text:
+        sentinel += '\ue000'
+    def protect(match):
+        spans.append(match[0])
+        return sentinel + str(len(spans) - 1) + sentinel
+    text = re.sub(r'(?<!`)(`+)(?!`)(.*?)\1(?!`)', protect, text)
+    text = _inline_plain(text, table)
+    return re.sub(re.escape(sentinel) + r'(\d+)' + re.escape(sentinel),
+                  lambda m: spans[int(m[1])], text)
 
 
 def compact(text, source='source.md'):
@@ -179,6 +203,7 @@ def compact(text, source='source.md'):
     output = []
     i = 0
     in_code = False
+    list_indents = []
     while i < len(lines):
         line = lines[i][1]
         if line.lstrip().startswith(('```', '~~~')):
@@ -220,7 +245,18 @@ def compact(text, source='source.md'):
                 output.append('|' + '|'.join(values) + '|')
             continue
         else:
-            output.append(inline(line))
+            item = re.match(r'^(\s*)([-+*]|\d+[.)])\s+(.*)$', line)
+            if item:
+                indent = len(item[1].expandtabs(4))
+                while list_indents and indent < list_indents[-1]:
+                    list_indents.pop()
+                if not list_indents or indent > list_indents[-1]:
+                    list_indents.append(indent)
+                output.append('  ' * (len(list_indents) - 1) + item[2] + ' ' + inline(item[3]))
+            else:
+                if line.strip() and not line[:1].isspace():
+                    list_indents.clear()
+                output.append(inline(line))
         i += 1
     body = re.sub(r'\n{3,}', '\n\n', '\n'.join(output)).strip()
     legend = f'<!-- pdf2llm compact: {source}. [pN] = PDF page N. "Figure (description only, not data)" lines are AI image descriptions, not measured data. ● = spec applies over full temperature range (as printed). -->'

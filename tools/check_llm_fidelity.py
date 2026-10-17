@@ -178,11 +178,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('names', nargs='*')
     args = parser.parse_args()
-    report = ['# LLM fidelity audit', '', 'Numeric tokens retain signs; − and – normalize to -. Word sets are case-sensitive. '
+    report = ['# LLM fidelity audit', '', 'PASS requires zero spec-table failures and whole-document numeric source subset True after permitted figure-description deduplication.', '',
+              'Numeric tokens retain signs; − and – normalize to -. Word sets are case-sensitive. '
               'Spec tables are paired in document order; all non-separator rows, including headers, are checked cell by cell. '
               'Whole-document equality/subset is reported both before and after the permitted figure-description deduplication. '
               'Image filenames, links, generated legend and page markers are metadata, not document numeric data.', '']
     failed = False
+    checked = table_failures = numeric_passes = 0
     paths = sorted((ROOT / 'output').glob('*/*.md'))
     for path in paths:
         if path.name.endswith('.llm.md') or (args.names and path.parent.name not in args.names):
@@ -193,23 +195,30 @@ def main():
             report.extend([f'## {path.parent.name}', '', 'FAIL: compact file missing.', ''])
             continue
         result = check(path.read_text(), target.read_text())
-        failed |= bool(result['failures'])
+        checked += 1
+        table_failures += len(result['failures'])
+        numeric_passes += int(result['deduplicated_numeric']['subset'])
+        failed |= bool(result['failures']) or not result['deduplicated_numeric']['subset']
         report.extend([f'## {path.parent.name}', '',
                        f"Spec tables: {result['tables']}; rows: {result['rows']}; nonempty cells checked: {result['cells']}; failures: {len(result['failures'])}.", ''])
         for failure in result['failures']:
             report.append('- ' + failure)
-        for key, title in [('numeric', 'Whole document'), ('deduplicated_numeric', 'After permitted figure deduplication')]:
+        for key, title in [('deduplicated_numeric', 'Whole document after permitted figure deduplication'), ('numeric', 'Before figure deduplication (diagnostic only)')]:
             audit = result[key]
             report.extend(['', f"{title}: source numeric tokens {audit['source_count']}, compact {audit['compact_count']}; equal: {audit['equal']}; source subset: {audit['subset']}.", ''])
+            if key == 'numeric':
+                continue  # One count line; repeated figure descriptions explain losses.
             for token, detail in audit['missing'].items():
                 report.append(f"- Missing `{token}` ×{detail['count']}; source lines: {', '.join(map(str, detail['source_lines']))}.")
             if audit['extra']:
                 report.append(f"- Extra numeric tokens: {audit['extra']}.")
         report.append('')
         print(f"{path.parent.name}: {result['tables']} tables, {result['rows']} rows, {result['cells']} cells, {len(result['failures'])} failures; dedup numeric subset={result['deduplicated_numeric']['subset']}")
+    report[2:2] = [f"{'FAIL' if failed else 'PASS'}: {checked} datasheets checked; spec-table failures: {table_failures}; "
+                   f"whole-document numeric source subset after permitted figure deduplication: True for {numeric_passes}/{checked}.", '']
     directory = ROOT / 'reports' / 'llm'
     directory.mkdir(parents=True, exist_ok=True)
-    (directory / 'fidelity.md').write_text('\n'.join(report) + '\n')
+    (directory / 'fidelity.md').write_text(re.sub(r'\n{3,}', '\n\n', '\n'.join(report)).rstrip() + '\n')
     return int(failed)
 
 
