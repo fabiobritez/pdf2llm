@@ -18,9 +18,9 @@ Before figure deduplication (diagnostic only): source numeric tokens 4457, compa
 
 Spec tables: 10; rows: 212; nonempty cells checked: 731; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 4512, compact 4512; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 4513, compact 4513; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 5776, compact 4512; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 5777, compact 4513; equal: False; source subset: False.
 
 ## ina190
 
@@ -106,11 +106,11 @@ Before figure deduplication (diagnostic only): source numeric tokens 2556, compa
 
 Spec tables: 16; rows: 247; nonempty cells checked: 1056; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 4941, compact 4942; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 4944, compact 4945; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 5478, compact 4942; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 5481, compact 4945; equal: False; source subset: False.
 
 ## tps63070
 
