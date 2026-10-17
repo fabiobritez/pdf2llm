@@ -1,10 +1,11 @@
-"""Collapse chained fixes (A.new == B.old) into one old->final fix so apply_md_fixes stays idempotent."""
+"""Collapse chained fixes (A.new == B.old) into one old->final fix so apply_md_fixes stays idempotent.
 
-Usage: apply the new fixes with tools/apply_md_fixes.py FIRST, then run this script.
+Usage: apply new fixes with tools/apply_md_fixes.py FIRST, then run this script.
 After merging, each fix maps the original Datalab text to the final text.
+"""
 import json
 from pathlib import Path
-fp = Path("/srv/agents/pdf2llm/reports/review/fixes.json"); fx = json.loads(fp.read_text())
+fp = Path(__file__).resolve().parents[2] / "reports/review/fixes.json"; fx = json.loads(fp.read_text())
 out = []
 for b in fx:
     a = next((x for x in out if x["file"] == b["file"] and x["new"] and x["new"] == b["old"]), None)
