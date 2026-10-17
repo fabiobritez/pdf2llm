@@ -1447,13 +1447,17 @@
     "file": "output/ltc2975/ltc2975.md",
     "page": 6,
     "old": "| TUE_ADCCurr_SNS                                      | Total Unadjusted Error (Note 3)          | Current Sense Inputs 20mV ≤  V <sub>IN_ADC</sub>   ≤ 170mV                                                                          | ●   |      | ±0.3  | % of Reading |",
-    "new": "| TUE_ADCCurr_SNS                                      | Total Unadjusted Error (Note 3)          | Current Sense Inputs 20mV ≤ \\|V <sub>IN_ADC</sub>\\| ≤ 170mV                                                                          | ●   |      | ±0.3  | % of Reading |",
-    "evidence": "pdftotext p6: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX).",
+    "new": "| TUE_ADC_CURR_SNS                                      | Total Unadjusted Error (Note 3)          | Current Sense Inputs 20mV ≤ \\|V <sub>IN_ADC</sub>\\| ≤ 170mV                                                                          | ●   |      | ±0.3  | % of Reading |",
+    "evidence": "pdftotext p6: the condition uses absolute-value bars (|...|); Datalab dropped them (they clash with table pipes). Restored as escaped \\| (or \\lvert/\\rvert inside LaTeX). | Then: pdftotext p6: symbol 'TUE_ADC_ CURR_SNS'.",
     "sources": [
       "agy",
+      "codex",
       "pdf-text"
     ],
-    "severity": "medium"
+    "severity": "medium",
+    "merged": [
+      "ltc2975-p6-symbol-tue-adc-curr-sns"
+    ]
   },
   {
     "id": "ltc2975-p6-abs-bars-L310",
@@ -1685,6 +1689,97 @@
     "evidence": "pdftotext p7: channel-index subscript is 'n' (VSENSEPn, VSENSEMn, VDACPn, ISENSEPn); Datalab rendered it as _H.",
     "sources": [
       "agy",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p6-symbol-iin-isense",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| I <sub>INISENSE</sub>                                | Input Current                            | I <sub>SENSEP<sub>n</sub></sub> and I <sub>SENSEM<sub>n</sub></sub> Inputs                                                          | ●   |      | ±3    | µA           |",
+    "new": "| I <sub>IN_ISENSE</sub>                                | Input Current                            | I <sub>SENSEP<sub>n</sub></sub> and I <sub>SENSEM<sub>n</sub></sub> Inputs                                                          | ●   |      | ±3    | µA           |",
+    "evidence": "pdftotext p6: symbol 'IIN_ISENSE' (cf. I_IN_VSENSE on the row above).",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-symbol-vout-en-L426",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "| V <sub>OUT_ENn</sub>   | Output High Voltage                                       | I <sub>OUT_ENn</sub> = -5μA, V <sub>DD33</sub> = 3.13V ●          | 10  | 13 | 14.7 | V  |",
+    "new": "| V <sub>VOUT_ENn</sub>   | Output High Voltage                                       | I <sub>VOUT_ENn</sub> = -5μA, V <sub>DD33</sub> = 3.13V ●          | 10  | 13 | 14.7 | V  |",
+    "evidence": "pdftotext p8: symbols are V/I with subscript VOUT_ENn (pin name), i.e. VVOUT_ENn, IVOUT_ENn, VVOUT_VALID; md dropped the pin-name V.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-symbol-vout-en-L427",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "| I <sub>OUT_ENn</sub>   | Output Sourcing Current                                   | V <sub>OUT_ENn</sub> Pull-Up Enabled, V <sub>OUT_ENn</sub> = 1V ● | -5  | -7 | -9   | μA |",
+    "new": "| I <sub>VOUT_ENn</sub>   | Output Sourcing Current                                   | V <sub>VOUT_ENn</sub> Pull-Up Enabled, V <sub>VOUT_ENn</sub> = 1V ● | -5  | -7 | -9   | μA |",
+    "evidence": "pdftotext p8: symbols are V/I with subscript VOUT_ENn (pin name), i.e. VVOUT_ENn, IVOUT_ENn, VVOUT_VALID; md dropped the pin-name V.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-symbol-vout-en-L428",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                        | Output Sinking Current                                    | Strong Pull-Down Enabled, V <sub>OUT_ENn</sub> = 0.4V ●           | 2.5 | 5  | 8    | mA |",
+    "new": "|                        | Output Sinking Current                                    | Strong Pull-Down Enabled, V <sub>VOUT_ENn</sub> = 0.4V ●           | 2.5 | 5  | 8    | mA |",
+    "evidence": "pdftotext p8: symbols are V/I with subscript VOUT_ENn (pin name), i.e. VVOUT_ENn, IVOUT_ENn, VVOUT_VALID; md dropped the pin-name V.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-symbol-vout-en-L429",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                        |                                                           | Weak Pull-Down Enabled, V <sub>OUT_ENn</sub> = 0.4V ●             | 33  | 50 | 65   | μA |",
+    "new": "|                        |                                                           | Weak Pull-Down Enabled, V <sub>VOUT_ENn</sub> = 0.4V ●             | 33  | 50 | 65   | μA |",
+    "evidence": "pdftotext p8: symbols are V/I with subscript VOUT_ENn (pin name), i.e. VVOUT_ENn, IVOUT_ENn, VVOUT_VALID; md dropped the pin-name V.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-symbol-vout-en-L430",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "|                        | Output Leakage Current                                    | Internal Pull-Up Disabled, 0V ≤ V <sub>OUT_ENn</sub> ≤ 15V ●      |     |    | ±1   | μA |",
+    "new": "|                        | Output Leakage Current                                    | Internal Pull-Up Disabled, 0V ≤ V <sub>VOUT_ENn</sub> ≤ 15V ●      |     |    | ±1   | μA |",
+    "evidence": "pdftotext p8: symbols are V/I with subscript VOUT_ENn (pin name), i.e. VVOUT_ENn, IVOUT_ENn, VVOUT_VALID; md dropped the pin-name V.",
+    "sources": [
+      "codex",
+      "pdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-symbol-vout-en-L431",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "| V <sub>OUT_VALID</sub> | Minimum V <sub>DD33</sub> when V <sub>OUT_ENn</sub> Valid | V <sub>OUT_ENn</sub> ≤ 0.4V ●                                     |     |    | 1.1  | V  |",
+    "new": "| V <sub>VOUT_VALID</sub> | Minimum V <sub>DD33</sub> when V <sub>OUT_ENn</sub> Valid | V <sub>VOUT_ENn</sub> ≤ 0.4V ●                                     |     |    | 1.1  | V  |",
+    "evidence": "pdftotext p8: symbols are V/I with subscript VOUT_ENn (pin name), i.e. VVOUT_ENn, IVOUT_ENn, VVOUT_VALID; md dropped the pin-name V.",
+    "sources": [
+      "codex",
       "pdf-text"
     ],
     "severity": "low"
