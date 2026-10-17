@@ -316,7 +316,8 @@ class GeometryTests(unittest.TestCase):
         issues, stats = self.check('ina190', 4, '| THERMAL METRIC | | DCK | DDF | RSW | UNIT |\n'
                                    '| RthetaJA | Junction-to-ambient thermal resistance | 137.2 | 170.7 | 163.8 | °C/W |')
         self.assertEqual(issues, [])
-        self.assertEqual(stats['unverifiable'], 1)
+        # no MIN/TYP/MAX/VALUE columns: abstain, reported as out of scope
+        self.assertEqual(stats['unverifiable'] + stats['out_of_scope'], 1)
 
 
 if __name__ == '__main__':

@@ -530,7 +530,7 @@ def report_md(result: dict) -> str:
              f"Low-coverage text pages: {summary['low_coverage_text_pages']}. Table issues: {len(result['table_issues'])}.", "",
              "Coverage uses unique normalized token sets. Page numbers below are 1-based; Markdown markers are 0-based. Figure regions are heuristic; text loss on mixed pages still counts. Extra numbers are possible OCR errors, not proof of hallucination.", ""]
     g = summary["geometry_rows"]
-    lines += [f"Geometry rows: {g['verified_ok']} verified OK; {g['mismatched']} mismatched; {g['unverifiable']} unverifiable.", ""]
+    lines += [f"Geometry rows: {g['verified_ok']} verified OK; {g['mismatched']} mismatched; {g['unverifiable']} unverifiable; {g.get('out_of_scope', 0)} out of scope (no MIN/TYP/MAX/VALUE table).", ""]
     lines += [f"- {w}" for w in result['warnings']]
     lines += ["", "| Page | Words | Numbers | Classification | Alt-only numbers | Missing / extra | Removed margin/repeated/boilerplate/figure (words,numbers) | Flags |",
               "| --- | --- | --- | --- | --- | --- | --- | --- |"]
@@ -589,13 +589,13 @@ def main() -> int:
     lines = ["# Datasheet validation summary", "", "Means use unique normalized token sets after margin, recurring-line and figure removal.",
              f"Text loss: words < {WORD_THRESHOLD:.0%} with ≥{MIN_MISSING_WORDS} missing, or numbers < {NUMBER_THRESHOLD:.0%} with ≥{MIN_MISSING_NUMBERS} missing. BAD: ≥20% text-loss pages (minimum 3), or ≥8 high-confidence table rows.", "",
              "Geometry rows count numeric data rows: verified OK / mismatched / unverifiable. Ambiguous row matches and unsupported table layouts are unverifiable; OK is not certification of those rows.", "",
-             "| Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Geometry column | Geometry missing | Geometry rows OK / mismatch / unverifiable | Status |",
+             "| Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Geometry column | Geometry missing | Geometry rows OK / mismatch / unverifiable / out of scope | Status |",
              "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     for result in results:
         s = result['summary']
         counts = " | ".join(str(s['table_issue_counts'][kind]) for kind in ISSUE_TYPES)
         g = s["geometry_rows"]
-        geometry_counts = f"{g['verified_ok']} / {g['mismatched']} / {g['unverifiable']}"
+        geometry_counts = f"{g['verified_ok']} / {g['mismatched']} / {g['unverifiable']} / {g.get('out_of_scope', 0)}"
         lines.append(f"| [{result['name']}]({result['name']}.md) | {s['pages']} | {percent(s['mean_word_coverage'])} | {percent(s['mean_number_coverage'])} | {s['low_coverage_text_pages']} | {counts} | {geometry_counts} | {s['status']} |")
     for name, error in errors:
         lines.append(f"| {name} | — | — | — | — | — | — | — | — | — | — | — | — | ERROR |")

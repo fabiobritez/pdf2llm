@@ -225,7 +225,10 @@ def match_by_values(raw, mappings, schema, candidates, words, normalize):
 
 
 def check_tables(text, document, table_blocks, normalize):
-    issues, stats = [], Counter(verified_ok=0, mismatched=0, unverifiable=0, value_matched=0)
+    # out_of_scope: rows of tables without MIN/TYP/MAX/VALUE columns (registers,
+    # pin lists, ordering info) or on pages with no such PDF header. They are not
+    # spec values this check can verify, so they are not counted as unverifiable.
+    issues, stats = [], Counter(verified_ok=0, mismatched=0, unverifiable=0, value_matched=0, out_of_scope=0)
     markers = [(text.count('\n', 0, m.start()) + 1, int(m[1]))
                for m in re.finditer(r'^\{(\d+)\}-{8,}\s*$', text, re.M)]
     cache = {}
@@ -262,7 +265,7 @@ def check_tables(text, document, table_blocks, normalize):
             if not any(signature(c, normalize) for c in cells):
                 continue
             if unsupported:
-                stats['unverifiable'] += 1
+                stats['out_of_scope'] += 1
                 continue
             mappings = md_columns
             if mappings is None:
@@ -275,6 +278,9 @@ def check_tables(text, document, table_blocks, normalize):
                 elif previous:
                     names = list(previous.values())
                     mappings = dict(zip(range(len(cells)-len(names), len(cells)), names))
+            if not mappings and not schemas:
+                stats['out_of_scope'] += 1
+                continue
             if not mappings or max(mappings) >= len(cells):
                 stats['unverifiable'] += 1
                 continue

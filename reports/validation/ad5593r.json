@@ -4394,7 +4394,8 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "unverifiable": 291,
+      "out_of_scope": 262,
+      "unverifiable": 29,
       "value_matched": 17,
       "verified_ok": 108
     },

@@ -2570,7 +2570,8 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "unverifiable": 161,
+      "out_of_scope": 153,
+      "unverifiable": 8,
       "value_matched": 31,
       "verified_ok": 55
     },

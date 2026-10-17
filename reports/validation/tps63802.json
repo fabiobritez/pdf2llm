@@ -2918,91 +2918,27 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "unverifiable": 101,
-      "value_matched": 3,
-      "verified_ok": 46
+      "out_of_scope": 96,
+      "unverifiable": 1,
+      "value_matched": 5,
+      "verified_ok": 50
     },
-    "high_confidence_table_rows": 4,
+    "high_confidence_table_rows": 0,
     "low_coverage_text_pages": 1,
     "mean_number_coverage": 0.9270787262273331,
     "mean_word_coverage": 0.9565528375447068,
     "pages": 38,
     "status": "REVIEW",
     "table_issue_counts": {
-      "column shift": 4,
+      "column shift": 0,
       "geometry column mismatch": 0,
       "geometry missing value": 0,
       "missing unit": 0,
       "ordering": 0,
       "ragged row": 0,
-      "unit in wrong column": 4
+      "unit in wrong column": 0
     }
   },
-  "table_issues": [
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 253,
-      "page": 6,
-      "row": "Buck<br>$R_{DS,ON}$ | High-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L2)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 47 |  | mΩ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 253,
-      "page": 6,
-      "row": "Buck<br>$R_{DS,ON}$ | High-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L2)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 47 |  | mΩ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 254,
-      "page": 6,
-      "row": " | Low-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L2)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 30 |  | mΩ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 254,
-      "page": 6,
-      "row": " | Low-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L2)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 30 |  | mΩ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 255,
-      "page": 6,
-      "row": "Boost<br>$R_{DS,ON}$ | High-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L1)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 43 |  | mΩ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 255,
-      "page": 6,
-      "row": "Boost<br>$R_{DS,ON}$ | High-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L1)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 43 |  | mΩ",
-      "type": "unit in wrong column"
-    },
-    {
-      "confidence": "high",
-      "detail": "Text/expression in MIN",
-      "line": 256,
-      "page": 6,
-      "row": " | Low-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L1)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 18 |  | mΩ",
-      "type": "column shift"
-    },
-    {
-      "confidence": "high",
-      "detail": "Check MIN",
-      "line": 256,
-      "page": 6,
-      "row": " | Low-side FET on-resistance | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_{(L1)} = 0.19\\text{ A}$ | $V_{IN} = 3\\text{ V}$ , $V_{OUT} = 3.3\\text{ V}$ ; $I_O = 0.5\\text{ A}$ | 18 |  | mΩ",
-      "type": "unit in wrong column"
-    }
-  ],
+  "table_issues": [],
   "warnings": []
 }

@@ -3723,7 +3723,8 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "unverifiable": 159,
+      "out_of_scope": 158,
+      "unverifiable": 1,
       "value_matched": 25,
       "verified_ok": 57
     },

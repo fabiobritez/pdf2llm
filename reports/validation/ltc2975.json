@@ -10650,8 +10650,9 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "unverifiable": 1252,
-      "value_matched": 51,
+      "out_of_scope": 1218,
+      "unverifiable": 34,
+      "value_matched": 45,
       "verified_ok": 126
     },
     "high_confidence_table_rows": 1,
