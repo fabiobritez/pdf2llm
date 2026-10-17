@@ -281,7 +281,9 @@ def check(source, compact):
         # Every number in the summary must be printed somewhere in the datasheet.
         known = set(tokens(source)[0]) | {n.lstrip('+') for n in tokens(source)[0]}
         known |= {n.lstrip('±-+') for n in known}
-        summary_missing = sorted({n for n in tokens(blocks['summary'])[0] if n.lstrip('+') not in known})
+        # Tokenize line by line so a list bullet ("- 18-pin") is not read as a sign.
+        summary_numbers = {n for line in blocks['summary'].splitlines() for n in tokens(line)[0]}
+        summary_missing = sorted(n for n in summary_numbers if n.lstrip('+') not in known)
     original = source_lines(source)
     src_tables = tables(original)
     dst_tables = tables(list(enumerate(compact.splitlines(), 1)))

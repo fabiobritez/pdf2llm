@@ -71,22 +71,36 @@ def audit(folder: Path) -> list:
         if missing:
             problems.append(f"{path.name}: {len(missing)} referenced images missing, e.g. {missing[0]}")
     md = full_markdown(folder)
-    md_refs = re.findall(r"!\[[^\]]*\]\(img/(" + NAME + r")\)", md.read_text(encoding="utf-8"))
-    orphans = sorted(on_disk - set(md_refs))
+    md_text = md.read_text(encoding="utf-8")
+    md_refs = re.findall(r"!\[[^\]]*\]\(img/(" + NAME + r")\)", md_text)
+    referenced = set().union(*(set(ANY.findall(p.read_text(encoding="utf-8"))) for p in text_files(folder)))
+    orphans = sorted(on_disk - referenced)
     if orphans:
-        problems.append(f"{len(orphans)} images not referenced by {md.name}, e.g. {orphans[0]}")
+        problems.append(f"{len(orphans)} images referenced by no file, e.g. {orphans[0]}")
     html = html_export(folder)
     if html:
-        html_refs = re.findall(r'src="img/(' + NAME + r')"', html.read_text(encoding="utf-8"))
-        common = set(md_refs) & set(html_refs)
-        a = [r for r in md_refs if r in common]
-        b = [r for r in html_refs if r in common]
-        if a != b:
-            k = next(i for i, (x, y) in enumerate(zip(a, b)) if x != y)
-            problems.append(f"image order differs from {html.name} at #{k}: md {a[k]} vs html {b[k]}")
-        only_html = sorted(set(html_refs) - set(md_refs))
-        if only_html:
-            problems.append(f"{len(only_html)} images in {html.name} but not in {md.name}, e.g. {only_html[0]}")
+        html_text = html.read_text(encoding="utf-8")
+        html_refs = re.findall(r'src="img/(' + NAME + r')"', html_text)
+        if set(html_refs) <= set(md_refs):
+            a = [r for r in md_refs if r in set(html_refs)]
+            if a != html_refs:
+                k = next(i for i, (x, y) in enumerate(zip(a, html_refs)) if x != y)
+                problems.append(f"image order differs from {html.name} at #{k}: md {a[k]} vs html {html_refs[k]}")
+            only_md = sorted(set(md_refs) - set(html_refs))
+            if only_md:
+                problems.append(f"{len(only_md)} md images not in {html.name}")
+        else:
+            # The exports come from separate conversion runs (own image crops):
+            # compare per page that the md has an image wherever the HTML has one.
+            def per_page(chunks):
+                return {int(k): len(re.findall(NAME, v)) for k, v in chunks}
+            md_pages = per_page(re.findall(r"^\{(\d+)\}-{6,}\n(.*?)(?=^\{\d+\}-{6,}|\Z)", md_text, re.S | re.M))
+            html_pages = per_page(re.findall(r'data-page-id="(\d+)"(.*?)(?=data-page-id=|\Z)', html_text, re.S))
+            short = {p: (md_pages.get(p, 0), n) for p, n in html_pages.items() if md_pages.get(p, 0) < n}
+            if short:
+                problems.append(f"pages where md has fewer images than {html.name} (md, html): {short}")
+            print(f"  note: {html.name} is a separate conversion run ({len(set(html_refs) - set(md_refs))} of its "
+                  f"{len(set(html_refs))} images are its own crops); per-page image counts compared instead")
     print(f"{folder.name}: {len(on_disk)} images, {len(md_refs)} md references; "
           + ("OK" if not problems else "; ".join(problems)))
     return problems
