@@ -3162,5 +3162,18 @@
       "pdf-geometry"
     ],
     "severity": "high"
+  },
+  {
+    "id": "tps63802-p6-ipk-condition-merged",
+    "file": "output/tps63802/tps63802.md",
+    "page": 6,
+    "old": "| $I_{PK}$                      | Peak Current Limit, Boost Mode                    | TPS63802; $V_{IN} \\geq 2.5\\text{ V}$                                                                                                           | 4                                                                       | 5    | 5.75 | A    |\n|                               | Peak Current Limit, Buck-Boost Mode               |                                                                                                                                                |                                                                         | 5    |      | A    |\n|                               | Peak Current Limit, Buck Mode                     |                                                                                                                                                |                                                                         | 3.8  |      | A    |",
+    "new": "| $I_{PK}$                      | Peak Current Limit, Boost Mode                    | TPS63802; $V_{IN} \\geq 2.5\\text{ V}$                                                                                                           | 4                                                                       | 5    | 5.75 | A    |\n|                               | Peak Current Limit, Buck-Boost Mode               | TPS63802; $V_{IN} \\geq 2.5\\text{ V}$                                                                                                           |                                                                         | 5    |      | A    |\n|                               | Peak Current Limit, Buck Mode                     | TPS63802; $V_{IN} \\geq 2.5\\text{ V}$                                                                                                           |                                                                         | 3.8  |      | A    |",
+    "evidence": "Electrical Characteristics p6: the test condition 'TPS63802; VIN ≥ 2.5 V' is one merged cell vertically centred at y=585 across the I_PK rows Boost (y=568), Buck-Boost (y=580-589) and Buck (y=602); md had it only on the Boost row. Repeated on each row. Flagged by grok (grok-4.7) row review; confirmed by PDF word geometry.",
+    "sources": [
+      "grok",
+      "pdf-geometry"
+    ],
+    "severity": "medium"
   }
 ]
