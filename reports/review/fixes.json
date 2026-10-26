@@ -30339,5 +30339,265 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p59-fig10-33-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 59,
+    "old": "![Oscilloscope screenshot showing output voltage ripple. The waveform is a pink line with high-frequency noise. The grid shows 10 divisions horizontally and 2 divisions vertically. The Teledyne LeCroy logo is in the top right. The oscilloscope settings are: Bandwidth: 5.00 MHz, Timebase: 10.00 µs, Trigger: C2 EC.](4c547ec1af44f8fcdc8b1d67662ac30a_img.jpg)\n\nBandwidth: 5.00 MHz  \nTimebase: 10.00 µs  \nTrigger: C2 EC\n\n$V_{OUT} = 0.75V$   \n $V_{IN} = 5V$\n\nPWM\n\n$T_A = 25^{\\circ}C$   \n $R_{LOAD} = 20m\\Omega$\n\n**Figure 10-33. Output Voltage Ripple**\n\nOscilloscope screenshot showing output voltage ripple. The waveform is a pink line with high-frequency noise. The grid shows 10 divisions horizontally and 2 divisions vertically. The Teledyne LeCroy logo is in the top right. The oscilloscope settings are: Bandwidth: 5.00 MHz, Timebase: 10.00 µs, Trigger: C2 EC.",
+    "new": "![Oscilloscope screenshot for Figure 10-33, Output Voltage Ripple of the two-device stack (description written from the screenshot; read values from the image/PDF). Teledyne LeCroy capture: C2 (magenta, BwL DC50, 5.00 mV/div, offset -740.60 mV) shows the output voltage ripple as an irregular periodic waveform with a dip once per switching cycle, slightly above the center line; timebase 1.00 µs/div (10.00 µs Tbase, 25 kS, 2.5 GS/s), trigger C2 DC, Stop, edge positive at 744.35 mV.](4c547ec1af44f8fcdc8b1d67662ac30a_img.jpg)\n\nOscilloscope screenshot for Figure 10-33, Output Voltage Ripple of the two-device stack (description written from the screenshot; read values from the image/PDF). Teledyne LeCroy capture: C2 (magenta, BwL DC50, 5.00 mV/div, offset -740.60 mV) shows the output voltage ripple as an irregular periodic waveform with a dip once per switching cycle, slightly above the center line; timebase 1.00 µs/div (10.00 µs Tbase, 25 kS, 2.5 GS/s), trigger C2 DC, Stop, edge positive at 744.35 mV.\n\nV<sub>OUT</sub> = 0.75V      PWM      T<sub>A</sub> = 25°C  \nV<sub>IN</sub> = 5V      R<sub>LOAD</sub> = 20mΩ\n\n**Figure 10-33. Output Voltage Ripple**",
+    "evidence": "PDF p59 Figure 10-33: the AI text invented scope settings ('Bandwidth: 5.00 MHz, Timebase: 10.00 µs, Trigger: C2 EC'), which were also inserted as a text block, and put its description after the caption. The screen shows C2 at 5.00 mV/div, 1.00 µs/div (Tbase 10.00 µs), trigger C2 DC. Rewritten from the screenshot in the usual alt text + paragraph + printed conditions + caption order; the conditions are written as on p53.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p60-fig10-35-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 60,
+    "old": "![Circuit diagram showing three TPS6287B25 devices stacked vertically. The top device is the Primary Device, and the two below are Secondary Devices. The Primary Device's VSET1 and VSET2 pins are connected to a resistor divider (R_VSET1, R_VSET2) between V_IN and ground. Its COMP pin is connected to a compensation network (R_z, C_c, C_c2) and an op-amp. Its PG pin is connected to the PG pins of the Secondary Devices. The Secondary Devices have their VSET1 and VSET2 pins connected to ground through 47 kΩ resistors. The SW pins of all three devices are connected in series through inductors (L) to a common output node. The output node is connected to a load through a switch and a capacitor (C_LOAD). The output voltage (V_O) is measured across the load. The input voltage (V_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input. The input voltage (V_O) is measured at the output. The input current (I^2C) is measured at the input. The input voltage (V_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input.](b34c69e1ec326b01c3a485b27b1df5f6_img.jpg)\n\nThe diagram illustrates a stacked configuration of three TPS6287B25 buck converters. The top converter is designated as the 'Primary Device', while the two bottom converters are 'Secondary Devices'.  \n- **Primary Device:** Its  $V_{SET1}$  and  $V_{SET2}$  pins are connected to a resistor divider ( $R_{VSET1}$ ,  $R_{VSET2}$ ) between  $V_{IN}$  and ground. The  $COMP$  pin is connected to a compensation network consisting of a resistor  $R_z$  in series with a parallel combination of capacitors  $C_c$  and  $C_{C2}$ . The  $PG$  pin is connected to the  $PG$  pins of the secondary devices. The  $SW$  pin connects to an inductor  $L$  and the output node. The  $V_{IN}$  pin is connected to the input voltage source ( $V_{IN}$  = 2.7 V to 6 V). The  $V_{OUT}$  pin is connected to the output voltage ( $V_O$ ). The  $I^2C$  pin is connected to the input current ( $I^2C$ ).  \n- **Secondary Devices:** Both have their  $V_{SET1}$  and  $V_{SET2}$  pins connected to ground through  $47\\text{ k}\\Omega$  resistors. Their  $PG$  pins are connected to the  $PG$  pin of the primary device. The  $SW$  pins are connected in series through inductors  $L$  to a common output node. The  $V_{IN}$  pins are connected to the output node. The  $V_{OUT}$  pins are connected to the output voltage ( $V_O$ ). The  $I^2C$  pins are connected to the input current ( $I^2C$ ).  \n- **Output Stage:** The common output node is connected to the load through a switch and a capacitor ( $C_{LOAD}$ ). The output voltage ( $V_O$ ) is measured across the load. The input current ( $I^2C$ ) is measured at the input.\n\nCircuit diagram showing three TPS6287B25 devices stacked vertically. The top device is the Primary Device, and the two below are Secondary Devices. The Primary Device's VSET1 and VSET2 pins are connected to a resistor divider (R\\_VSET1, R\\_VSET2) between V\\_IN and ground. Its COMP pin is connected to a compensation network (R\\_z, C\\_c, C\\_c2) and an op-amp. Its PG pin is connected to the PG pins of the Secondary Devices. The Secondary Devices have their VSET1 and VSET2 pins connected to ground through 47 kΩ resistors. The SW pins of all three devices are connected in series through inductors (L) to a common output node. The output node is connected to a load through a switch and a capacitor (C\\_LOAD). The output voltage (V\\_O) is measured across the load. The input voltage (V\\_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input. The input voltage (V\\_O) is measured at the output. The input current (I^2C) is measured at the input. The input voltage (V\\_IN) is between 2.7 V and 6 V. The input current (I^2C) is measured at the input.\n\nFigure 10-35. Stacking Three Devices\n",
+    "new": "![Schematic of three TPS6287B25 devices in a stacked configuration (Figure 10-35; description written from the drawing). Primary device (top): V_IN = 2.7 V to 6 V to both VIN pins and MODE/SYNC, C_IN to ground; R_EN from V_IN to EN; SDA and SCL form the I2C bus with pull-up resistors to V_IO; R_VSET1 and R_VSET2 from VSET1 and VSET2 to ground; SW drives an inductor L with C_OUT to ground; VOSNS and GOSNS sense the output and its ground at the Load, where C_LOAD is connected; COMP has R_Z in series with C_C to AGND and C_C2 in parallel; PG is pulled up to V_IO by R_PG and is the PG output; AGND and both GND pins are grounded. Two secondary devices (middle and bottom), each with both VIN pins on V_IN and its own C_IN, EN on the common EN line, SDA, SCL, VSET1 and VSET2 tied to ground, GOSNS and VOSNS tied together to ground, its own inductor L and C_OUT feeding the common output, COMP and PG on the primary COMP and PG nets, and AGND and both GND pins grounded. The clock is daisy-chained: the primary SYNC_OUT drives MODE/SYNC of the first secondary, whose SYNC_OUT (with a 47 kΩ resistor to ground) drives MODE/SYNC of the second secondary; the SYNC_OUT of the second secondary has a 47 kΩ resistor to ground.](b34c69e1ec326b01c3a485b27b1df5f6_img.jpg)\n\nSchematic of three TPS6287B25 devices in a stacked configuration (Figure 10-35; description written from the drawing). Primary device (top): V\\_IN = 2.7 V to 6 V to both VIN pins and MODE/SYNC, C\\_IN to ground; R\\_EN from V\\_IN to EN; SDA and SCL form the I2C bus with pull-up resistors to V\\_IO; R\\_VSET1 and R\\_VSET2 from VSET1 and VSET2 to ground; SW drives an inductor L with C\\_OUT to ground; VOSNS and GOSNS sense the output and its ground at the Load, where C\\_LOAD is connected; COMP has R\\_Z in series with C\\_C to AGND and C\\_C2 in parallel; PG is pulled up to V\\_IO by R\\_PG and is the PG output; AGND and both GND pins are grounded. Two secondary devices (middle and bottom), each with both VIN pins on V\\_IN and its own C\\_IN, EN on the common EN line, SDA, SCL, VSET1 and VSET2 tied to ground, GOSNS and VOSNS tied together to ground, its own inductor L and C\\_OUT feeding the common output, COMP and PG on the primary COMP and PG nets, and AGND and both GND pins grounded. The clock is daisy-chained: the primary SYNC\\_OUT drives MODE/SYNC of the first secondary, whose SYNC\\_OUT (with a 47 kΩ resistor to ground) drives MODE/SYNC of the second secondary; the SYNC\\_OUT of the second secondary has a 47 kΩ resistor to ground.\n\n**Figure 10-35. Stacking Three Devices**\n",
+    "evidence": "PDF p60 Figure 10-35: the AI text (alt, a bullet list and a repeated paragraph with degenerate repetitions) described a resistor divider from V_IN on VSET1/VSET2, 47 kΩ resistors on the secondaries' VSET pins, SW pins 'connected in series', an op-amp, a switch to the load and an 'input current (I^2C)'. The drawing has R_VSET1/R_VSET2 to ground on the primary, grounded SDA/SCL/VSET1/VSET2/VOSNS/GOSNS on the secondaries, the 47 kΩ resistors on the secondaries' SYNC_OUT pins, a daisy-chained SYNC_OUT to MODE/SYNC clock, and shared EN, COMP, PG and output nets. Rewritten from the drawing in the usual alt text + paragraph form; caption made bold (Figure 10-34 does not exist in the PDF, numbering as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-36-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "![Figure 10-36: Efficiency vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for different input voltages: VIN = 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 15A and then gradually declines.](da0d310d0e9ecc6bfd61fe15aad963aa_img.jpg)\n\nFigure 10-36: Efficiency vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for different input voltages: VIN = 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 15A and then gradually declines.",
+    "new": "![Figure 10-36: Efficiency vs Output Current, three stacked devices, T_A = 25°C, V_OUT = 0.8V (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 75), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly. At light load V_IN= 2.7 V is the most efficient and V_IN= 6.0 V the least; at high current the order changes, the V_IN= 2.7 V curve ends early (before 55 A) at the lowest level and V_IN= 3.3 V is the lowest of the curves that reach 75 A.](da0d310d0e9ecc6bfd61fe15aad963aa_img.jpg)\n\nFigure 10-36: Efficiency vs Output Current, three stacked devices, T\\_A = 25°C, V\\_OUT = 0.8V (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 75), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly. At light load V\\_IN= 2.7 V is the most efficient and V\\_IN= 6.0 V the least; at high current the order changes, the V\\_IN= 2.7 V curve ends early (before 55 A) at the lowest level and V\\_IN= 3.3 V is the lowest of the curves that reach 75 A.",
+    "evidence": "PDF p61 Figure 10-36: the AI text gave read-off values and did not say that the V_IN= 2.7 V curve stops before 55 A; rewritten from the graph with shapes and order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-38-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "![Figure 10-38: Efficiency vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The efficiency curves are slightly lower than those at 25°C, peaking around 92-93%.](e26ba7dcccad6f4ade545e6b56b500fb_img.jpg)\n\nFigure 10-38: Efficiency vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The efficiency curves are slightly lower than those at 25°C, peaking around 92-93%.",
+    "new": "![Figure 10-38: Efficiency vs Output Current, three stacked devices, T_A = 85°C, V_OUT = 0.8V (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 75), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly. At light load V_IN= 2.7 V is the most efficient and V_IN= 6.0 V the least; at high current the order changes, the V_IN= 2.7 V curve ends early (before 55 A) at the lowest level and V_IN= 3.3 V is the lowest of the curves that reach 75 A.](e26ba7dcccad6f4ade545e6b56b500fb_img.jpg)\n\nFigure 10-38: Efficiency vs Output Current, three stacked devices, T\\_A = 85°C, V\\_OUT = 0.8V (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 75), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly. At light load V\\_IN= 2.7 V is the most efficient and V\\_IN= 6.0 V the least; at high current the order changes, the V\\_IN= 2.7 V curve ends early (before 55 A) at the lowest level and V\\_IN= 3.3 V is the lowest of the curves that reach 75 A.",
+    "evidence": "PDF p61 Figure 10-38: the AI text gave read-off values and did not say that the V_IN= 2.7 V curve stops before 55 A; rewritten from the graph with shapes and order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-37-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "![Figure 10-37: Output Voltage vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage remains very stable around 0.8V across the entire current range.](ddfefccc6c2fcfadf4e398109548faf8_img.jpg)\n\nFigure 10-37: Output Voltage vs Output Current graph at TA = 25°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 75). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage remains very stable around 0.8V across the entire current range.",
+    "new": "![Figure 10-37: Output Voltage vs Output Current, three stacked devices, T_A = 25°C, V_OUT = 0.8V (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 75), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other just below the 0.8 V grid line, falling slightly at high current. The V_IN= 2.7 V curve ends before 55 A.](ddfefccc6c2fcfadf4e398109548faf8_img.jpg)\n\nFigure 10-37: Output Voltage vs Output Current, three stacked devices, T\\_A = 25°C, V\\_OUT = 0.8V (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 75), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other just below the 0.8 V grid line, falling slightly at high current. The V\\_IN= 2.7 V curve ends before 55 A.",
+    "evidence": "PDF p61 Figure 10-37: the AI text gave a read-off level ('around 0.8V'); rewritten from the graph with shapes only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-39-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "![Figure 10-39: Output Voltage vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage is stable around 0.8V, with a very slight downward trend at higher currents.](61c876684d8cc2ea8784b52440318350_img.jpg)\n\nFigure 10-39: Output Voltage vs Output Current graph at TA = 85°C and VOUT = 0.8V. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are plotted for VIN = 2.7V, 3.3V, 4.0V, 5.0V, and 6.0V. The output voltage is stable around 0.8V, with a very slight downward trend at higher currents.",
+    "new": "![Figure 10-39: Output Voltage vs Output Current, three stacked devices, T_A = 85°C, V_OUT = 0.8V (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 50), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other just below the 0.8 V grid line, falling slightly at high current.](61c876684d8cc2ea8784b52440318350_img.jpg)\n\nFigure 10-39: Output Voltage vs Output Current, three stacked devices, T\\_A = 85°C, V\\_OUT = 0.8V (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 50), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other just below the 0.8 V grid line, falling slightly at high current.",
+    "evidence": "PDF p61 Figure 10-39: the AI text gave a read-off level ('around 0.8V'); rewritten from the graph with shapes only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-36-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "\n\n**Figure 10-36. Efficiency vs Output Current**",
+    "new": "\n\nT<sub>A</sub> = 25°C      V<sub>OUT</sub> = 0.8V\n\n**Figure 10-36. Efficiency vs Output Current**",
+    "evidence": "PDF p61 Figure 10-36: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-37-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "\n\n**Figure 10-37. Output Voltage vs Output Current**",
+    "new": "\n\nT<sub>A</sub> = 25°C      V<sub>OUT</sub> = 0.8V\n\n**Figure 10-37. Output Voltage vs Output Current**",
+    "evidence": "PDF p61 Figure 10-37: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-38-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "\n\n**Figure 10-38. Efficiency vs Output Current**",
+    "new": "\n\nT<sub>A</sub> = 85°C      V<sub>OUT</sub> = 0.8V\n\n**Figure 10-38. Efficiency vs Output Current**",
+    "evidence": "PDF p61 Figure 10-38: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p61-fig10-39-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 61,
+    "old": "\n\n**Figure 10-39. Output Voltage vs Output Current**",
+    "new": "\n\nT<sub>A</sub>= 85°C      V<sub>OUT</sub> = 0.8V\n\n**Figure 10-39. Output Voltage vs Output Current**",
+    "evidence": "PDF p61 Figure 10-39: the printed test conditions under the graph were missing; added as printed (TA= 85°C without a space).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p62-fig10-40-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 62,
+    "old": "![PCB layout diagram for the TPS6287B25 evaluation module (EVM) top layer. The board is red with white traces and purple components. Key components are labeled: VIN (input voltage), CIN (input capacitors), GND (ground), VOUT (output voltage), L (inductor), COUT (output capacitors), and VSET1/VSET2 (voltage sense pins). The layout shows the placement of these components and the routing of the traces connecting them.](714e9fd4751252fd2a667bd05a96ba5c_img.jpg)\n\nPCB layout diagram for the TPS6287B25 evaluation module (EVM) top layer. The board is red with white traces and purple components. Key components are labeled: VIN (input voltage), CIN (input capacitors), GND (ground), VOUT (output voltage), L (inductor), COUT (output capacitors), and VSET1/VSET2 (voltage sense pins). The layout shows the placement of these components and the routing of the traces connecting them.",
+    "new": "![PCB layout of the TPS6287B25 EVM top layer (Figure 10-40; description written from the drawing). Red copper areas with purple pads and gray vias; white lines separate the copper areas. The device sits left of center; above and below it the labels VIN, CIN (several input capacitors close to the two VIN-GND pin pairs) and GND mark the symmetric butterfly input loops. The inductor L is right of the device on the VOUT copper area, with COUT capacitors above, below and to the right of it, and large GND areas at the top corners. Small components on the left are labeled R1, C46, C47, and the VSET1 and VSET2 pins have R4 and R6.](714e9fd4751252fd2a667bd05a96ba5c_img.jpg)\n\nPCB layout of the TPS6287B25 EVM top layer (Figure 10-40; description written from the drawing). Red copper areas with purple pads and gray vias; white lines separate the copper areas. The device sits left of center; above and below it the labels VIN, CIN (several input capacitors close to the two VIN-GND pin pairs) and GND mark the symmetric butterfly input loops. The inductor L is right of the device on the VOUT copper area, with COUT capacitors above, below and to the right of it, and large GND areas at the top corners. Small components on the left are labeled R1, C46, C47, and the VSET1 and VSET2 pins have R4 and R6.",
+    "evidence": "PDF p62 Figure 10-40: the AI text called VSET1/VSET2 'voltage sense pins' and described white traces and purple components generically; the drawing labels R1, C46, C47, R4 at VSET1 and R6 at VSET2, the symmetric VIN/CIN/GND input loops on both sides of the device, L on the VOUT area and the COUT capacitors. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p62-fig10-40-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 62,
+    "old": "\n\nFigure 10-40. TPS6287B25 EVM Top Layer\n",
+    "new": "\n\n**Figure 10-40. TPS6287B25 EVM Top Layer**\n",
+    "evidence": "PDF p62: Figure 10-40 caption is bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p67-addendum-see-part-number",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 67,
+    "old": "| See<br>TPS6287B30LA0WRZVF |",
+    "new": "| See TPS6287B30LA0WRZVR    |",
+    "evidence": "PDF p67 packaging addendum: the Op temp cell of TPS6287B30LA0WRZVR.A reads 'See TPS6287B30LA0WRZVR' (pdftotext and render); the md had 'WRZVF' (OCR error) and a <br> unlike the other 'See ...' cells.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p68-heading-tape-reel-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 68,
+    "old": "### **TAPE AND REEL INFORMATION**",
+    "new": "### TAPE AND REEL INFORMATION",
+    "evidence": "PDF p68: `**` removed inside the heading (headings are bold already), as in the tps63802 and ts3a5018 reviews.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p68-heading-quadrant-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 68,
+    "old": "### **QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE**",
+    "new": "### QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE",
+    "evidence": "PDF p68: `**` removed inside the heading (headings are bold already), as in the tps63802 and ts3a5018 reviews.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p70-heading-box-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 70,
+    "old": "### **TAPE AND REEL BOX DIMENSIONS**",
+    "new": "### TAPE AND REEL BOX DIMENSIONS",
+    "evidence": "PDF p70: `**` removed inside the heading, as in the tps63802 and ts3a5018 reviews.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p71-rzv0024a-outline-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 71,
+    "old": "![Engineering drawing of the RZV0024A package outline (WQFN-FCRLF, 24-pin plastic quad flat pack - no lead) detailing top, side, and bottom views, along with SECTION A-A typical cross-section and mechanical dimensions in millimeters.](778eada01e468fa925a5d65c31bc66d4_img.jpg)\n\nPackage outline drawing for 24-pin WQFN-FCRLF:\n\n- Top View:** Body size 3.15/2.95 mm × 4.15/3.95 mm with Pin 1 Index Area at upper left; Datums A and B indicated.\n- Side View:** Total height 0.7/0.6 mm, seating plane height 0.01/0.00 mm, Seating Plane datum C with coplanarity tolerance 0.08 C. Side view thickness (0.20) TYP.\n- Bottom View:** Exposed thermal pad layout and 24 perimeter pins (plus additional inner contacts). Pitch and spacing include (0.5) mm, 2X 2.5 mm, 2X 0.85/0.65 mm, 2X 1.35/1.15 mm, 2X 3.5 mm, 1.85/1.65 mm. Pin dimensions: 24X 0.5 mm, 20X 0.5/0.3 mm, 28X (0.18) mm, 28X 0.3/0.2 mm. True position tolerance: 0.1(M) C|A|B / 0.05(M) C.\n- Section A-A (Typical):** Detail showing lead terminal profile with dimensions (0.2), 0.1 MIN, and (0.1).\n\nEngineering drawing of the RZV0024A package outline (WQFN-FCRLF, 24-pin plastic quad flat pack - no lead) detailing top, side, and bottom views, along with SECTION A-A typical cross-section and mechanical dimensions in millimeters.",
+    "new": "![RZV0024A package outline, WQFN-FCRLF (description written from the drawing; dimensions in mm, min/max pairs as printed, values in parentheses for reference). Top view: body 3.15/2.95 wide (datum B) and 4.15/3.95 long (datum A), PIN 1 INDEX AREA in the upper left corner. Side view: height 0.7/0.6, standoff 0.01/0.00 above the SEATING PLANE (datum C), coplanarity 0.08 C; end view: terminal thickness (0.20) TYP. SECTION A-A TYPICAL: terminal profile with (0.2), 0.1 MIN and (0.1). Bottom view: perimeter terminals numbered 1 and 24 at the lower left, 8 at the upper left, 13 at the upper right and 20 at the lower right, with a PIN 1 ID chamfer on the lower left thermal pad; three exposed thermal pads (one wide upper pad 1.85/1.65 wide and 1.35/1.15 long, two lower pads with 2X 1.35/1.15) on SYMM centerlines; terminal pitch 24X 0.5, terminal length 20X 0.5/0.3, terminal width 28X 0.3/0.2 and 28X (0.18), position tolerance 0.1 (M) C A B and 0.05 (M) C; (0.75) from the horizontal centerline to the adjacent terminal centers, 2X 3.5 between the outer terminal centers along the long side, 2X 2.5 along the short side, (0.5) and 2X 0.85/0.65 for the bottom terminals and lower pads. Drawing number 4228538/A 02/2022.](778eada01e468fa925a5d65c31bc66d4_img.jpg)\n\nRZV0024A package outline, WQFN-FCRLF (description written from the drawing; dimensions in mm, min/max pairs as printed, values in parentheses for reference). Top view: body 3.15/2.95 wide (datum B) and 4.15/3.95 long (datum A), PIN 1 INDEX AREA in the upper left corner. Side view: height 0.7/0.6, standoff 0.01/0.00 above the SEATING PLANE (datum C), coplanarity 0.08 C; end view: terminal thickness (0.20) TYP. SECTION A-A TYPICAL: terminal profile with (0.2), 0.1 MIN and (0.1). Bottom view: perimeter terminals numbered 1 and 24 at the lower left, 8 at the upper left, 13 at the upper right and 20 at the lower right, with a PIN 1 ID chamfer on the lower left thermal pad; three exposed thermal pads (one wide upper pad 1.85/1.65 wide and 1.35/1.15 long, two lower pads with 2X 1.35/1.15) on SYMM centerlines; terminal pitch 24X 0.5, terminal length 20X 0.5/0.3, terminal width 28X 0.3/0.2 and 28X (0.18), position tolerance 0.1 (M) C A B and 0.05 (M) C; (0.75) from the horizontal centerline to the adjacent terminal centers, 2X 3.5 between the outer terminal centers along the long side, 2X 2.5 along the short side, (0.5) and 2X 0.85/0.65 for the bottom terminals and lower pads. Drawing number 4228538/A 02/2022.",
+    "evidence": "PDF p71 RZV0024A package outline: the AI list had broken '**' markup, called 0.01/0.00 a 'seating plane height', described '24 perimeter pins (plus additional inner contacts)' and mixed pitch and pad dimensions. Rewritten from the drawing in the usual alt text + paragraph form (values as printed, including '28X' terminal-width callouts on a 24-pin package).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p71-notes-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 71,
+    "old": "### **NOTES:**\n\n1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing per ASME Y14.5M.\n2. This drawing is subject to change without notice.\n3. The package thermal pad",
+    "new": "### NOTES:\n\n1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing per ASME Y14.5M.\n2. This drawing is subject to change without notice.\n3. The package thermal pad",
+    "evidence": "PDF p71: `**` removed inside the NOTES: heading, as in the ts3a5018 review.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p72-land-pattern-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 72,
+    "old": "{71}------------------------------------------------\n\n![LAND PATTERN EXAMPLE diagram showing dimensions and layout for a WQFN-FCRLF package. The diagram shows a central rectangular area for the package with dimensions (2.85) and (2.5) for the top and (3.5) and (3.85) for the right side. It includes various pad sizes and spacing dimensions such as 2X (0.5), 2X (0.75), 20X (0.6), 2X (0.75), 25X (0.5), and (0.25) TYP. Symmetry markers (SYMM) are indicated. The diagram shows exposed metal areas in blue and solder mask openings in green.](9e4179ffe4701bec67534299c4935049_img.jpg)\n\nLAND PATTERN EXAMPLE diagram showing dimensions and layout for a WQFN-FCRLF package. The diagram shows a central rectangular area for the package with dimensions (2.85) and (2.5) for the top and (3.5) and (3.85) for the right side. It includes various pad sizes and spacing dimensions such as 2X (0.5), 2X (0.75), 20X (0.6), 2X (0.75), 25X (0.5), and (0.25) TYP. Symmetry markers (SYMM) are indicated. The diagram shows exposed metal areas in blue and solder mask openings in green.",
+    "new": "{71}------------------------------------------------\n\n#### EXAMPLE BOARD LAYOUT\n\nRZV0024A\n\n**WQFN-FCRLF - 0.7 mm max height**\n\nPLASTIC QUAD FLAT PACK- NO LEAD\n\n![RZV0024A land pattern example, exposed metal shown, scale 20X (description written from the drawing; all values in parentheses, mm). Top view of the pads, pin 1 at the upper left: pads 1 and 24 to 20 along the top, 8 and 13 at the bottom corners; the four corner pads (1, 8, 13, 20) are L-shaped, corner radius (R0.05) TYP. Two thermal pads in the upper half and one larger thermal pad in the lower half, on SYMM centerlines. Dimensions: (2.85) across the outer pad edges and (2.5) between the outer pad centers along the short side; 2X (0.5) and 2X (0.75) between top pad centers; side pads 20X (0.6) long and (0.25) TYP wide at 25X (0.5) pitch; 2X (0.75) and (0.75) from the horizontal centerline; 2X (1.25) and (1.25) for the thermal pad heights; (1.75) for the lower thermal pad width; (3.5) between the top and bottom pad rows and (3.85) across them. Each pad is shown with its metal outline (blue) inside the solder mask opening (green).](9e4179ffe4701bec67534299c4935049_img.jpg)\n\nRZV0024A land pattern example, exposed metal shown, scale 20X (description written from the drawing; all values in parentheses, mm). Top view of the pads, pin 1 at the upper left: pads 1 and 24 to 20 along the top, 8 and 13 at the bottom corners; the four corner pads (1, 8, 13, 20) are L-shaped, corner radius (R0.05) TYP. Two thermal pads in the upper half and one larger thermal pad in the lower half, on SYMM centerlines. Dimensions: (2.85) across the outer pad edges and (2.5) between the outer pad centers along the short side; 2X (0.5) and 2X (0.75) between top pad centers; side pads 20X (0.6) long and (0.25) TYP wide at 25X (0.5) pitch; 2X (0.75) and (0.75) from the horizontal centerline; 2X (1.25) and (1.25) for the thermal pad heights; (1.75) for the lower thermal pad width; (3.5) between the top and bottom pad rows and (3.85) across them. Each pad is shown with its metal outline (blue) inside the solder mask opening (green).",
+    "evidence": "PDF p72 RZV0024A example board layout: the title block (EXAMPLE BOARD LAYOUT, RZV0024A, WQFN-FCRLF - 0.7 mm max height, PLASTIC QUAD FLAT PACK- NO LEAD) was missing; the AI text described 'a central rectangular area for the package', listed '(3.5) and (3.85) for the right side' and said solder mask openings are green/exposed metal blue without describing the pads. Title block added in the format of the other datasheets and description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p73-stencil-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 73,
+    "old": "{72}------------------------------------------------\n\n![Technical drawing of a solder paste stencil for a WQFN-FCRLF package. The drawing shows a top-down view of the stencil with dimensions in millimeters. The overall width is (2.85) mm and the overall height is (3.85) mm. The package itself is (2.5) mm wide and (3.5) mm high. There are 24 solder paste areas, each (0.5) mm wide and (0.71) mm high. The stencil is symmetrical about both axes, as indicated by 'SYMM' and centering symbols. Various other dimensions are provided, including (2.0X (0.6)), (2X (0.75)), (2X (1.17)), (25X (0.5)), (0.75), (1.17), (1.59), and (0.25) TYP. A note indicates (R0.05) TYP for the corners of the package.](347010b7ac06d3ae97927fde0f784d7c_img.jpg)\n\nTechnical drawing of a solder paste stencil for a WQFN-FCRLF package. The drawing shows a top-down view of the stencil with dimensions in millimeters. The overall width is (2.85) mm and the overall height is (3.85) mm. The package itself is (2.5) mm wide and (3.5) mm high. There are 24 solder paste areas, each (0.5) mm wide and (0.71) mm high. The stencil is symmetrical about both axes, as indicated by 'SYMM' and centering symbols. Various other dimensions are provided, including (2.0X (0.6)), (2X (0.75)), (2X (1.17)), (25X (0.5)), (0.75), (1.17), (1.59), and (0.25) TYP. A note indicates (R0.05) TYP for the corners of the package.",
+    "new": "{72}------------------------------------------------\n\n#### EXAMPLE STENCIL DESIGN\n\nRZV0024A\n\n**WQFN-FCRLF - 0.7 mm max height**\n\nPLASTIC QUAD FLAT PACK- NO LEAD\n\n![RZV0024A solder paste example based on 0.1 mm thick stencil, scale 15X (description written from the drawing; all values in parentheses, mm). Same pad arrangement as the land pattern (pin 1 at the upper left, 24 to 20 along the top, 8 and 13 at the bottom corners, L-shaped corner apertures with (R0.05) TYP corners). Stencil apertures (red) are drawn inside the pad outlines (blue): the two upper thermal-pad apertures are 2X (1.17) high and the lower one (1.17) high and (1.59) wide. Other dimensions: (2.85) and (2.5) across the short side, 2X (0.5) and 2X (0.71) between top aperture centers, 20X (0.6) aperture length, (0.25) TYP aperture width, 25X (0.5) pitch, 2X (0.75) and (0.75) from the horizontal centerline, (3.5) and (3.85) across the long side, SYMM centerlines.](347010b7ac06d3ae97927fde0f784d7c_img.jpg)\n\nRZV0024A solder paste example based on 0.1 mm thick stencil, scale 15X (description written from the drawing; all values in parentheses, mm). Same pad arrangement as the land pattern (pin 1 at the upper left, 24 to 20 along the top, 8 and 13 at the bottom corners, L-shaped corner apertures with (R0.05) TYP corners). Stencil apertures (red) are drawn inside the pad outlines (blue): the two upper thermal-pad apertures are 2X (1.17) high and the lower one (1.17) high and (1.59) wide. Other dimensions: (2.85) and (2.5) across the short side, 2X (0.5) and 2X (0.71) between top aperture centers, 20X (0.6) aperture length, (0.25) TYP aperture width, 25X (0.5) pitch, 2X (0.75) and (0.75) from the horizontal centerline, (3.5) and (3.85) across the long side, SYMM centerlines.",
+    "evidence": "PDF p73 RZV0024A example stencil design: the title block (EXAMPLE STENCIL DESIGN, RZV0024A, WQFN-FCRLF - 0.7 mm max height, PLASTIC QUAD FLAT PACK- NO LEAD) was missing; the AI text gave '24 solder paste areas, each (0.5) mm wide and (0.71) mm high' (2X (0.5) and 2X (0.71) are center spacings), wrote '(2.0X (0.6))' and '2X (1.17)' generically and called (R0.05) the package corner radius. Title block added and description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
