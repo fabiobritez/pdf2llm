@@ -4373,5 +4373,361 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ina190-p1-device-info-sc70-x-as-printed",
+    "file": "output/ina190/ina190.md",
+    "page": 1,
+    "old": "| INA190      | SC70 (6)   | 2.00 mm × 1.25 mm |",
+    "new": "| INA190      | SC70 (6)   | 2.00 mm x 1.25 mm |",
+    "evidence": "PDF p1 Device Information: pdftotext and PyMuPDF words print '2.00 mm x 1.25 mm' with a plain letter x for SC70 (the SOT-23 and UQFN rows use ×). Kept as printed.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p1-typical-application-alt-ref-enable",
+    "file": "output/ina190/ina190.md",
+    "page": 1,
+    "old": "The output is also connected to a reference (REF) pin. The enable pin (ENABLE(1)) is shown with a switch symbol. A 0.1 μF capacitor is connected between the supply voltage and ground. A note states: (1) The ENABLE pin is available only in the DDF and RSW packages.]",
+    "new": "The REF pin is connected to ground. The enable pin (ENABLE(1)) is driven by a digital pulse symbol. A 0.1 μF capacitor is connected between the supply voltage and ground. Bias currents of 0.5 nA (typ) are shown flowing into IN+ and IN-. A note states: (1) The ENABLE pin is available only in the DDF and RSW packages.]",
+    "evidence": "AI figure description (alt text) contradicted the PDF p1 drawing: REF is tied to a ground symbol (not to OUT), ENABLE has a pulse symbol (not a switch); the two '0.5 nA (typ)' labels on the input arrows were omitted. Checked on the rendered page.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p1-typical-application-desc-ref-enable",
+    "file": "output/ina190/ina190.md",
+    "page": 1,
+    "old": "The output is also connected to a reference (REF) pin. The enable pin (ENABLE(1)) is shown with a switch symbol. A 0.1 μF capacitor is connected between the supply voltage and ground. A note states: (1) The ENABLE pin is available only in the DDF and RSW packages.\n",
+    "new": "The REF pin is connected to ground. The enable pin (ENABLE(1)) is driven by a digital pulse symbol. A 0.1 μF capacitor is connected between the supply voltage and ground. Bias currents of 0.5 nA (typ) are shown flowing into IN+ and IN-. A note states: (1) The ENABLE pin is available only in the DDF and RSW packages.\n",
+    "evidence": "Same correction as ina190-p1-typical-application-alt-ref-enable for the repeated description paragraph below the image.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p2-revhist-page-numbers",
+    "file": "output/ina190/ina190.md",
+    "page": 2,
+    "old": "- Changed front page for clarity .....\n- Changed all instances of  $V_{VS}$  to  $V_S$  for consistency .....\n- Changed section title from *Output Signal Conditioning* to *Signal Conditioning* and reworded section for clarity .....\n- Changed Figure 41, *Differential Input Impedance vs Temperature*, to reflect improved device performance.....\n- Changed location of *Common-Mode Voltage Transients* section from *Power Supply Recommendations* to *Application and Implementation* .....",
+    "new": "- Changed front page for clarity ..... 1\n- Changed all instances of  $V_{VS}$  to  $V_S$  for consistency ..... 1\n- Changed section title from *Output Signal Conditioning* to *Signal Conditioning* and reworded section for clarity ..... 22\n- Changed Figure 41, *Differential Input Impedance vs Temperature*, to reflect improved device performance..... 22\n- Changed location of *Common-Mode Voltage Transients* section from *Power Supply Recommendations* to *Application and Implementation* ..... 24",
+    "evidence": "PDF p2 Revision History (pdftotext -layout + image): page numbers 1, 1, 22, 22, 24 printed after the leaders; md had dropped them.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p3-pin-functions-vs-plain-as-printed",
+    "file": "output/ina190/ina190.md",
+    "page": 3,
+    "old": "or connected to $V_S$ if not used. DDF and RSW packages only.",
+    "new": "or connected to VS if not used. DDF and RSW packages only.",
+    "evidence": "PDF p3 Pin Functions spans: 'connected to VS' is one 8.0 pt span (no subscript), unlike the earlier 'driven to V' + 'S' 6.0 pt subscript. Kept as printed.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p3-pin-functions-nc-vs-plain-as-printed",
+    "file": "output/ina190/ina190.md",
+    "page": 3,
+    "old": "connect to any voltage between GND and $V_S$ .",
+    "new": "connect to any voltage between GND and VS.",
+    "evidence": "PDF p3 NC row span 'and VS.' at 8.0 pt, no subscript. Kept as printed.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p3-pin-functions-vs-name-plain",
+    "file": "output/ina190/ina190.md",
+    "page": 3,
+    "old": "| $V_S$  | 3   | 1   | 6       | Analog        |",
+    "new": "| VS     | 3   | 1   | 6       | Analog        |",
+    "evidence": "PDF p3 Pin Functions NAME cell 'VS' is a single 8.0 pt span (no subscript), matching the pin diagrams (VS). Kept as printed.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p6-ec-conditions-header-column",
+    "file": "output/ina190/ina190.md",
+    "page": 6,
+    "old": "| PARAMETER                       | CONDITIONS                 |                                                                                                                | MIN              | TYP | MAX              | UNIT                   |",
+    "new": "| PARAMETER                       |                            | CONDITIONS                                                                                                     | MIN              | TYP | MAX              | UNIT                   |",
+    "evidence": "PDF p6 EC (continued): the CONDITIONS header sits over the conditions column (x≈415), while PARAMETER spans the symbol and name columns; md put CONDITIONS over the parameter-name column (Leakage input current, ...) and left the real conditions column (0 V ≤ V_ENABLE ≤ V_S, ...) without a header. Checked on the rendered page and word x-positions.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p7-figs1-6-alt-histograms",
+    "file": "output/ina190/ina190.md",
+    "page": 7,
+    "old": "![A grid of six figures showing typical characteristics of the INA190. Figures 1, 3, and 5 are histograms showing the production distribution of Input Offset Voltage, Common-Mode Rejection Ratio, and Gain Error for A1 devices. Figures 2, 4, and 6 are line graphs showing the temperature dependence of these same parameters for A1, A2/A3/A4, and A2/A3/A4 devices respectively. All graphs show very low drift or variation over the temperature range of -50°C to 150°C.]",
+    "new": "![A grid of six figures showing typical characteristics of the INA190. Figures 1, 3, 5, and 6 are histograms showing the production distribution of Input Offset Voltage, Common-Mode Rejection Ratio, and Gain Error (Figure 5: A1 devices; Figure 6: A2, A3, and A4 devices). Figures 2 and 4 are line graphs of Offset Voltage and Common-Mode Rejection Ratio versus temperature from -50°C to 150°C, both showing very little variation.]",
+    "evidence": "AI figure description contradicted PDF p7: Figure 6 is a Gain Error histogram (A2, A3, and A4 devices), not a line graph; only Figures 2 and 4 are plotted vs temperature. Checked on the 150-dpi render and the figure captions/sub-labels in the PDF text.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p7-figs1-6-desc-histograms",
+    "file": "output/ina190/ina190.md",
+    "page": 7,
+    "old": "**Figure 6. Gain Error Production Distribution**\n\nA grid of six figures showing typical characteristics of the INA190. Figures 1, 3, and 5 are histograms showing the production distribution of Input Offset Voltage, Common-Mode Rejection Ratio, and Gain Error for A1 devices. Figures 2, 4, and 6 are line graphs showing the temperature dependence of these same parameters for A1, A2/A3/A4, and A2/A3/A4 devices respectively. All graphs show very low drift or variation over the temperature range of -50°C to 150°C.",
+    "new": "**Figure 6. Gain Error Production Distribution**\n\nA grid of six figures showing typical characteristics of the INA190. Figures 1, 3, 5, and 6 are histograms showing the production distribution of Input Offset Voltage, Common-Mode Rejection Ratio, and Gain Error (Figure 5: A1 devices; Figure 6: A2, A3, and A4 devices). Figures 2 and 4 are line graphs of Offset Voltage and Common-Mode Rejection Ratio versus temperature from -50°C to 150°C, both showing very little variation.",
+    "evidence": "Same correction as ina190-p7-figs1-6-alt-histograms for the repeated description paragraph.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p7-fig5-fig6-device-labels",
+    "file": "output/ina190/ina190.md",
+    "page": 7,
+    "old": "**Figure 5. Gain Error Production Distribution**\n\n**Figure 6. Gain Error Production Distribution**",
+    "new": "A1 devices\n\n**Figure 5. Gain Error Production Distribution**\n\nA2, A3, and A4 devices\n\n**Figure 6. Gain Error Production Distribution**",
+    "evidence": "PDF p7 prints the sub-labels 'A1 devices' above the Figure 5 caption and 'A2, A3, and A4 devices' above the Figure 6 caption (pdftotext + image); md had lost them, so the two identically titled figures were indistinguishable.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p8-fig7-alt-center",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "The distribution is centered around 0% gain error, with the highest frequency between -0.12% and -0.08%.]",
+    "new": "The distribution is centered below 0% gain error; the tallest bar is at the -0.08 tick.]",
+    "evidence": "AI figure description was self-contradictory ('centered around 0%' yet peak at -0.12% to -0.08%); PDF p8 Figure 7 render: the tallest bar sits on the -0.08 tick and the whole distribution is left of 0.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p8-fig7-desc-center",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "The distribution is centered around 0% gain error, with the highest frequency between -0.12% and -0.08%.\n",
+    "new": "The distribution is centered below 0% gain error; the tallest bar is at the -0.08 tick.\n",
+    "evidence": "Same correction as ina190-p8-fig7-alt-center for the repeated description paragraph.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p8-fig7-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "\n\n**Figure 7. Gain Error Production Distribution**",
+    "new": "\n\nA5 devices\n\n**Figure 7. Gain Error Production Distribution**",
+    "evidence": "PDF p8 prints 'A5 devices' under the Figure 7 plot, above its caption (pdftotext + image); md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p8-fig9-fig10-sublabels",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "\n\n**Figure 9. Gain vs Frequency**",
+    "new": "\n\nV<sub>S</sub> = 5 V\n\n**Figure 9. Gain vs Frequency**",
+    "evidence": "PDF p8 prints 'VS = 5 V' (S subscript) under the Figure 9 plot, above its caption; md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p8-fig10-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "\n\n**Figure 10. Power-Supply Rejection Ratio vs Frequency**",
+    "new": "\n\nV<sub>S</sub> = 5 V\n\n**Figure 10. Power-Supply Rejection Ratio vs Frequency**",
+    "evidence": "PDF p8 prints 'VS = 5 V' under the Figure 10 plot, above its caption; md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p8-fig11-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "\n\n**Figure 11. Common-Mode Rejection Ratio vs Frequency**",
+    "new": "\n\nA3 devices\n\n**Figure 11. Common-Mode Rejection Ratio vs Frequency**",
+    "evidence": "PDF p8 prints 'A3 devices' under the Figure 11 plot, above its caption; md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p8-fig12-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 8,
+    "old": "\n\n**Figure 12. Output Voltage Swing vs Output Current**",
+    "new": "\n\nV<sub>S</sub> = 1.8 V\n\n**Figure 12. Output Voltage Swing vs Output Current**",
+    "evidence": "PDF p8 prints 'VS = 1.8 V' under the Figure 12 plot, above its caption; md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig14-flat-level-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "at VS = 5.0 V. The curve is nearly flat around 0 nA.]",
+    "new": "at VS = 5.0 V. The curve is nearly flat, slightly above 0 nA (about 0.05 nA).]",
+    "evidence": "AI figure description: PDF p9 Figure 14 render shows the curve flat at about +0.05 nA, not around 0 nA.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig14-flat-level-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "at VS = 5.0 V. The curve is nearly flat around 0 nA.\n",
+    "new": "at VS = 5.0 V. The curve is nearly flat, slightly above 0 nA (about 0.05 nA).\n",
+    "evidence": "AI figure description: PDF p9 Figure 14 render shows the curve flat at about +0.05 nA, not around 0 nA. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig15-flat-level-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "at V_ENABLE = 0 V. The curve is nearly flat around 0 nA.]",
+    "new": "at V_ENABLE = 0 V. The curve is nearly flat, slightly above 0 nA.]",
+    "evidence": "AI figure description: PDF p9 Figure 15 render shows the curve flat slightly above 0 nA (between the 0 and 0.05 gridlines).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig15-flat-level-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "at V\\_ENABLE = 0 V. The curve is nearly flat around 0 nA.\n",
+    "new": "at V\\_ENABLE = 0 V. The curve is nearly flat, slightly above 0 nA.\n",
+    "evidence": "AI figure description: PDF p9 Figure 15 render shows the curve flat slightly above 0 nA (between the 0 and 0.05 gridlines). (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig17-legend-5v-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "Three curves are shown for VS = 1.8 V (black), 3.3 V (red), and 5.0 V (grey). All curves show a linear increase with temperature, with higher VS values resulting in higher quiescent current.]",
+    "new": "Three curves are shown for VS = 1.8 V (black), 3.3 V (red), and 5 V (grey). All curves show a linear increase with temperature, with higher VS values resulting in higher quiescent current.]",
+    "evidence": "PDF p9 Figure 17 legend prints 'VS = 5 V' (Figure 18 prints 5.0 V); description aligned to the legend text.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig17-legend-5v-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "Three curves are shown for VS = 1.8 V (black), 3.3 V (red), and 5.0 V (grey). All curves show a linear increase with temperature, with higher VS values resulting in higher quiescent current.\n",
+    "new": "Three curves are shown for VS = 1.8 V (black), 3.3 V (red), and 5 V (grey). All curves show a linear increase with temperature, with higher VS values resulting in higher quiescent current.\n",
+    "evidence": "PDF p9 Figure 17 legend prints 'VS = 5 V' (Figure 18 prints 5.0 V); description aligned to the legend text. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig13-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "\n\n**Figure 13. Output Voltage Swing vs Output Current",
+    "new": "\n\nV<sub>S</sub> = 5.0 V\n\n**Figure 13. Output Voltage Swing vs Output Current",
+    "evidence": "PDF p9 prints 'VS = 5.0 V' (subscript) under the Figure 13 plot, above its caption (pdftotext + image); md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig14-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "\n\n**Figure 14. Input Bias Current vs Common-Mode Voltage**",
+    "new": "\n\nV<sub>S</sub> = 5.0 V\n\n**Figure 14. Input Bias Current vs Common-Mode Voltage**",
+    "evidence": "PDF p9 prints 'VS = 5.0 V' (subscript) under the Figure 14 plot, above its caption (pdftotext + image); md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig15-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "\n\n**Figure 15. Input Bias Current vs Common-Mode Voltage (Shutdown)",
+    "new": "\n\nV<sub>ENABLE</sub> = 0 V\n\n**Figure 15. Input Bias Current vs Common-Mode Voltage (Shutdown)",
+    "evidence": "PDF p9 prints 'VENABLE = 0 V' (subscript) under the Figure 15 plot, above its caption (pdftotext + image); md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p9-fig18-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 9,
+    "old": "\n\n**Figure 18. Quiescent Current vs Temperature (Disabled)",
+    "new": "\n\nV<sub>ENABLE</sub> = 0 V\n\n**Figure 18. Quiescent Current vs Temperature (Disabled)",
+    "evidence": "PDF p9 prints 'VENABLE = 0 V' (subscript) under the Figure 18 plot, above its caption (pdftotext + image); md body had lost it.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
   }
 ]
