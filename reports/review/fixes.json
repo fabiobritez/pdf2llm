@@ -13312,5 +13312,457 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5593r-p38-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 38,
+    "old": "{37}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{37}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p38 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p39-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 39,
+    "old": "{38}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{38}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p39 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p40-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 40,
+    "old": "{39}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{39}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p40 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p41-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 41,
+    "old": "{40}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{40}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p41 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p42-opendrain-bitmap-description-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 42,
+    "old": "![Register map diagram for GPIO_OPENDRAIN_CONFIG. It shows a 16-bit register with bits 15-8 labeled [15:8] RESERVED. Bits 7-0 are labeled [7] GPIO7 (R/W) through [0] GPIO0 (R/W). Each bit from 7 to 0 has a description: 'Set the I/O pin as open-drain.' and a note about the pin state (0: push/pull, 1: open-drain).](",
+    "new": "![Register map diagram for GPIO_OPENDRAIN_CONFIG. It shows a 16-bit register with bits 15-8 labeled [15:8] RESERVED. Bits 7-0 are labeled [7] GPIO7 (R/W) through [0] GPIO0 (R/W). Each bit from 7 to 0 has a description: 'Set the I/O7 pin as open-drain.' through 'Set the I/O0 pin as open-drain.' (the 0: push/pull and 1: open-drain settings are in Table 28, not in the drawing).](",
+    "evidence": "PDF p42 GPIO_OPENDRAIN_CONFIG bit map (render + PDF text): each label reads 'Set the I/Ox pin as open-drain.' for its own pin; the drawing has no 0/1 pin-state note (that is in Table 28).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p42-opendrain-bitmap-description-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 42,
+    "old": "Register map for GPIO\\_OPENDRAIN\\_CONFIG. The register is 16 bits wide, with bits 15 through 0. Bits 15-8 are RESERVED. Bits 7-0 are GPIO pins 7-0 respectively, each with a description: 'Set the I/O pin as open-drain.' and a note about the pin state (0: push/pull, 1: open-drain).",
+    "new": "Register map for GPIO\\_OPENDRAIN\\_CONFIG. The register is 16 bits wide, with bits 15 through 0. Bits 15-8 are RESERVED. Bits 7-0 are GPIO pins 7-0 respectively, each with a description: 'Set the I/O7 pin as open-drain.' through 'Set the I/O0 pin as open-drain.' (the 0: push/pull and 1: open-drain settings are in Table 28, not in the drawing).",
+    "evidence": "Same as ad5593r-p42-opendrain-bitmap-description-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p42-opendrain-bitmap-description-3",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 42,
+    "old": "Register map diagram for GPIO\\_OPENDRAIN\\_CONFIG. It shows a 16-bit register with bits 15-8 labeled [15:8] RESERVED. Bits 7-0 are labeled [7] GPIO7 (R/W) through [0] GPIO0 (R/W). Each bit from 7 to 0 has a description: 'Set the I/O pin as open-drain.' and a note about the pin state (0: push/pull, 1: open-drain).",
+    "new": "Register map diagram for GPIO\\_OPENDRAIN\\_CONFIG. It shows a 16-bit register with bits 15-8 labeled [15:8] RESERVED. Bits 7-0 are labeled [7] GPIO7 (R/W) through [0] GPIO0 (R/W). Each bit from 7 to 0 has a description: 'Set the I/O7 pin as open-drain.' through 'Set the I/O0 pin as open-drain.' (the 0: push/pull and 1: open-drain settings are in Table 28, not in the drawing).",
+    "evidence": "Same as ad5593r-p42-opendrain-bitmap-description-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p42-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 42,
+    "old": "{41}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{41}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p42 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p43-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 43,
+    "old": "{42}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{42}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p43 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p44-dac-wr-bitmap-name-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 44,
+    "old": "![Bit layout diagram for DAC_WRITE register. Bits 15-12 are labeled [15:12] RESERVED. Bits 11-0 are labeled [11:0] DAC_DATA_WR (R/W) 12-bit DAC data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bits 15-12 are shaded and labeled RESERVED. Bits 11-0 are labeled DAC_DATA_WR (R/W) 12-bit DAC data.](",
+    "new": "![Bit layout diagram for DAC_WR register. Bits 15-12 are labeled [15:12] RESERVED. Bits 11-0 are labeled [11:0] DAC_DATA_WR (R/W) 12-bit DAC data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bits 15-12 are shaded and labeled RESERVED. Bits 11-0 are labeled DAC_DATA_WR (R/W) 12-bit DAC data.](",
+    "evidence": "PDF p44 (render + text): the register is named DAC_WR ('Reset: 0x0000, Name: DAC_WR', Table 31); the drawing has no 'DAC_WRITE' label.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p44-dac-wr-bitmap-name-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 44,
+    "old": "Bit layout diagram for DAC\\_WRITE register. Bits 15-12 are labeled [15:12] RESERVED. Bits 11-0 are labeled [11:0] DAC\\_DATA\\_WR (R/W) 12-bit DAC data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bits 15-12 are shaded and labeled RESERVED. Bits 11-0 are labeled DAC\\_DATA\\_WR (R/W) 12-bit DAC data.",
+    "new": "Bit layout diagram for DAC\\_WR register. Bits 15-12 are labeled [15:12] RESERVED. Bits 11-0 are labeled [11:0] DAC\\_DATA\\_WR (R/W) 12-bit DAC data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bits 15-12 are shaded and labeled RESERVED. Bits 11-0 are labeled DAC\\_DATA\\_WR (R/W) 12-bit DAC data.",
+    "evidence": "Same as ad5593r-p44-dac-wr-bitmap-name-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p44-dac-data-rd-bitmap-name-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 44,
+    "old": "![Bit layout diagram for DAC_READBACK register. Bit 15 is labeled [15] MSB_1 (R) MSB. Bits 14-12 are labeled [14:12] DAC_ADDR (R) DAC Address. Bits 11-0 are labeled [11:0] DAC_DATA (R) 12-bit DAC Input Register Data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bit 15 is labeled MSB_1 (R) MSB. Bits 14-12 are labeled DAC_ADDR (R) DAC Address. Bits 11-0 are labeled DAC_DATA (R) 12-bit DAC Input Register Data.](",
+    "new": "![Bit layout diagram for DAC_DATA_RD register. Bit 15 is labeled [15] MSB_1 (R) MSB. Bits 14-12 are labeled [14:12] DAC_ADDR (R) DAC Address. Bits 11-0 are labeled [11:0] DAC_DATA (R) 12-bit DAC Input Register Data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bit 15 is labeled MSB_1 (R) MSB. Bits 14-12 are labeled DAC_ADDR (R) DAC Address. Bits 11-0 are labeled DAC_DATA (R) 12-bit DAC Input Register Data.](",
+    "evidence": "PDF p44 (render + text): the register is named DAC_DATA_RD ('Name: DAC_DATA_RD', Table 32); the drawing has no 'DAC_READBACK' label.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p44-dac-data-rd-bitmap-name-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 44,
+    "old": "Bit layout diagram for DAC\\_READBACK register. Bit 15 is labeled [15] MSB\\_1 (R) MSB. Bits 14-12 are labeled [14:12] DAC\\_ADDR (R) DAC Address. Bits 11-0 are labeled [11:0] DAC\\_DATA (R) 12-bit DAC Input Register Data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bit 15 is labeled MSB\\_1 (R) MSB. Bits 14-12 are labeled DAC\\_ADDR (R) DAC Address. Bits 11-0 are labeled DAC\\_DATA (R) 12-bit DAC Input Register Data.",
+    "new": "Bit layout diagram for DAC\\_DATA\\_RD register. Bit 15 is labeled [15] MSB\\_1 (R) MSB. Bits 14-12 are labeled [14:12] DAC\\_ADDR (R) DAC Address. Bits 11-0 are labeled [11:0] DAC\\_DATA (R) 12-bit DAC Input Register Data. The diagram shows a row of 16 bits with bit numbers 15 down to 0 above them. Bit 15 is labeled MSB\\_1 (R) MSB. Bits 14-12 are labeled DAC\\_ADDR (R) DAC Address. Bits 11-0 are labeled DAC\\_DATA (R) 12-bit DAC Input Register Data.",
+    "evidence": "Same as ad5593r-p44-dac-data-rd-bitmap-name-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p44-dac-write-register-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 44,
+    "old": "\n### DAC Write Register\n",
+    "new": "\n#### DAC Write Register\n",
+    "evidence": "PDF p44 (PyMuPDF spans + render): 'DAC Write Register' is a bold title-case register title like 'Software Reset Register' and 'DAC Data Readback Register' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p44-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 44,
+    "old": "{43}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{43}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p44 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p45-adc-result-bitmap-values-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 45,
+    "old": "![Bit layout diagram for ADC_RESULT register. Bits 15-12 are 0000, bit 11 is 0, bits 10-0 are 000000000000. Labels: [15] MSB_0 (R) MSB, [14:12] ADC_ADDR (R) ADC address, [11:0] ADC_DATA (R) 12-bit ADC result.](",
+    "new": "![Bit layout diagram for ADC_RESULT register. All 16 bit boxes (15 to 0) show 0. Labels: [15] MSB_0 (R) MSB, [14:12] ADC_ADDR (R) ADC address, [11:0] ADC_DATA (R) 12-bit ADC result.](",
+    "evidence": "PDF p45 ADC_RESULT bit map (300 dpi crop): 16 boxes, all 0; the description listed 12 zeros for the 11 bits 10-0.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p45-adc-result-bitmap-values-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 45,
+    "old": "Bit layout diagram for ADC\\_RESULT register. Bits 15-12 are 0000, bit 11 is 0, bits 10-0 are 000000000000. Labels: [15] MSB\\_0 (R) MSB, [14:12] ADC\\_ADDR (R) ADC address, [11:0] ADC\\_DATA (R) 12-bit ADC result.",
+    "new": "Bit layout diagram for ADC\\_RESULT register. All 16 bit boxes (15 to 0) show 0. Labels: [15] MSB\\_0 (R) MSB, [14:12] ADC\\_ADDR (R) ADC address, [11:0] ADC\\_DATA (R) 12-bit ADC result.",
+    "evidence": "Same as ad5593r-p45-adc-result-bitmap-values-1 (repeated description text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p45-tmp-sense-bitmap-values-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 45,
+    "old": "![Bit layout diagram for TMP_SENSE_RESULT register. Bits 15-12 are 1000, bit 11 is 0, bits 10-0 are 000000000000. Labels: [15:12] TMPSENSE_ADDR (R) Temperature Indicator Address, [11:0] ADC_DATA (R) 12-bit ADC result.](",
+    "new": "![Bit layout diagram for TMP_SENSE_RESULT register. Bit 15 shows 1 and bits 14 to 0 show 0. Labels: [15:12] TMPSENSE_ADDR (R) Temperature Indicator Address, [11:0] ADC_DATA (R) 12-bit ADC result.](",
+    "evidence": "PDF p45 TMP_SENSE_RESULT bit map (300 dpi crop): bit 15 is 1, bits 14-0 are 0; the description listed 12 zeros for the 11 bits 10-0.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p45-tmp-sense-bitmap-values-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 45,
+    "old": "Bit layout diagram for TMP\\_SENSE\\_RESULT register. Bits 15-12 are 1000, bit 11 is 0, bits 10-0 are 000000000000. Labels: [15:12] TMPSENSE\\_ADDR (R) Temperature Indicator Address, [11:0] ADC\\_DATA (R) 12-bit ADC result.",
+    "new": "Bit layout diagram for TMP\\_SENSE\\_RESULT register. Bit 15 shows 1 and bits 14 to 0 show 0. Labels: [15:12] TMPSENSE\\_ADDR (R) Temperature Indicator Address, [11:0] ADC\\_DATA (R) 12-bit ADC result.",
+    "evidence": "Same as ad5593r-p45-tmp-sense-bitmap-values-1 (repeated description text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p45-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 45,
+    "old": "{44}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{44}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p45 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p46-fig44-tssop-dimensions-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "![Figure 44: 16-Lead Thin Shrink Small Outline Package [TSSOP] (RU-16) dimensions. Top view shows a 5.10 x 6.40 mm body with 4.90 x 6.40 mm pin pitch. Side view shows a maximum height of 1.20 mm and coplanarity of 0.10 mm.](",
+    "new": "![Figure 44: 16-Lead Thin Shrink Small Outline Package [TSSOP] (RU-16) dimensions (description written from the PDF drawing; values are max/nom/min as printed). Top view: body length 5.10/5.00/4.90, body width 4.50/4.40/4.30, lead tip to lead tip 6.40 BSC, pins 1, 8, 9 and 16 marked, PIN 1 indicator. Side view: height 1.20 MAX, standoff 0.15/0.05, lead pitch 0.65 BSC, lead width 0.30/0.19, coplanarity 0.10. End view: lead thickness 0.20/0.09, foot angle 8°/0°, foot length 0.75/0.60/0.45.](",
+    "evidence": "PDF p46 Figure 44 (200-400 dpi render): 5.10/5.00/4.90 is the body length and 4.50/4.40/4.30 the body width; 6.40 BSC is the lead span and the pitch is 0.65 BSC. The AI text described a '5.10 x 6.40 mm body with 4.90 x 6.40 mm pin pitch'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig44-tssop-dimensions-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "\nFigure 44: 16-Lead Thin Shrink Small Outline Package [TSSOP] (RU-16) dimensions. Top view shows a 5.10 x 6.40 mm body with 4.90 x 6.40 mm pin pitch. Side view shows a maximum height of 1.20 mm and coplanarity of 0.10 mm.\n",
+    "new": "\nFigure 44: 16-Lead Thin Shrink Small Outline Package [TSSOP] (RU-16) dimensions (description written from the PDF drawing; values are max/nom/min as printed). Top view: body length 5.10/5.00/4.90, body width 4.50/4.40/4.30, lead tip to lead tip 6.40 BSC, pins 1, 8, 9 and 16 marked, PIN 1 indicator. Side view: height 1.20 MAX, standoff 0.15/0.05, lead pitch 0.65 BSC, lead width 0.30/0.19, coplanarity 0.10. End view: lead thickness 0.20/0.09, foot angle 8°/0°, foot length 0.75/0.60/0.45.\n",
+    "evidence": "Same as ad5593r-p46-fig44-tssop-dimensions-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig45-lfcsp-dimensions-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "![Figure 45: 16-Lead Lead Frame Chip Scale Package [LFCSP] (CP-16-32) dimensions. Top view shows a 3.10 x 3.10 mm body. Bottom view shows a 3.00 x 3.00 mm body. Side view shows a maximum height of 0.80 mm and coplanarity of 0.08 mm.](",
+    "new": "![Figure 45: 16-Lead Lead Frame Chip Scale Package [LFCSP] (CP-16-32) dimensions (description written from the PDF drawing; values are max/nom/min as printed). Top view: square body 3.10/3.00/2.90 SQ with a shaded PIN 1 INDICATOR corner. Bottom view: lead pitch 0.50 BSC, lead width 0.30/0.25/0.20, lead length 0.50/0.40/0.30, pins 1, 4, 5, 8, 9, 12, 13 and 16 numbered. Side view: height 0.80/0.75/0.70, standoff 0.05 MAX / 0.02 NOM, coplanarity 0.08, 0.152 REF.](",
+    "evidence": "PDF p46 Figure 45 (render): 3.10/3.00/2.90 SQ is one square body dimension (max/nom/min), not a 3.10 × 3.10 top view and a 3.00 × 3.00 bottom view; the maximum height 0.80 is correct.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig45-lfcsp-dimensions-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "\nFigure 45: 16-Lead Lead Frame Chip Scale Package [LFCSP] (CP-16-32) dimensions. Top view shows a 3.10 x 3.10 mm body. Bottom view shows a 3.00 x 3.00 mm body. Side view shows a maximum height of 0.80 mm and coplanarity of 0.08 mm.\n",
+    "new": "\nFigure 45: 16-Lead Lead Frame Chip Scale Package [LFCSP] (CP-16-32) dimensions (description written from the PDF drawing; values are max/nom/min as printed). Top view: square body 3.10/3.00/2.90 SQ with a shaded PIN 1 INDICATOR corner. Bottom view: lead pitch 0.50 BSC, lead width 0.30/0.25/0.20, lead length 0.50/0.40/0.30, pins 1, 4, 5, 8, 9, 12, 13 and 16 numbered. Side view: height 0.80/0.75/0.70, standoff 0.05 MAX / 0.02 NOM, coplanarity 0.08, 0.152 REF.\n",
+    "evidence": "Same as ad5593r-p46-fig45-lfcsp-dimensions-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig46-wlcsp-dimensions-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "![Figure 46: 16-Ball Wafer Level Chip Scale Package [WLCSP] (CB-16-3) dimensions. Top view shows a 2.000 x 2.000 mm body. Bottom view shows a 1.960 x 1.960 mm body. Side view shows a maximum height of 0.640 mm and coplanarity of 0.05 mm.](",
+    "new": "![Figure 46: 16-Ball Wafer Level Chip Scale Package [WLCSP] (CB-16-3) dimensions (description written from the PDF drawing; values are max/nom/min as printed). Top view (ball side down): square body 2.000/1.960/1.920 SQ with a BALL A1 IDENTIFIER. Bottom view (ball side up): 4 × 4 balls, columns 4 to 1 and rows A to D, ball pitch 0.50 BSC, 1.50 REF between the outer rows. Side view: height 0.640/0.595/0.540, ball dimension 0.340/0.320/0.300, ball height 0.270/0.240/0.210, coplanarity 0.05.](",
+    "evidence": "PDF p46 Figure 46 (400 dpi crop): 2.000/1.960/1.920 SQ is one square body dimension (max/nom/min), not a 2.000 × 2.000 top view and a 1.960 × 1.960 bottom view.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig46-wlcsp-dimensions-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "\nFigure 46: 16-Ball Wafer Level Chip Scale Package [WLCSP] (CB-16-3) dimensions. Top view shows a 2.000 x 2.000 mm body. Bottom view shows a 1.960 x 1.960 mm body. Side view shows a maximum height of 0.640 mm and coplanarity of 0.05 mm.\n",
+    "new": "\nFigure 46: 16-Ball Wafer Level Chip Scale Package [WLCSP] (CB-16-3) dimensions (description written from the PDF drawing; values are max/nom/min as printed). Top view (ball side down): square body 2.000/1.960/1.920 SQ with a BALL A1 IDENTIFIER. Bottom view (ball side up): 4 × 4 balls, columns 4 to 1 and rows A to D, ball pitch 0.50 BSC, 1.50 REF between the outer rows. Side view: height 0.640/0.595/0.540, ball dimension 0.340/0.320/0.300, ball height 0.270/0.240/0.210, coplanarity 0.05.\n",
+    "evidence": "Same as ad5593r-p46-fig46-wlcsp-dimensions-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig44-labels",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "Side view dimensions: 1.20 MAX, 0.15, 0.05, 0.65 BSC, 0.30, 0.19, SEATING PLANE, COPLANARITY 0.10. Lead angle: 8° / 0°.",
+    "new": "Side view dimensions: 1.20 MAX, 0.15, 0.05, 0.65 BSC, 0.30, 0.19, SEATING PLANE, COPLANARITY 0.10. End view dimensions: 0.20, 0.09, 8°, 0°, 0.75, 0.60, 0.45. Top view labels: PIN 1, 1, 8, 9, 16.",
+    "evidence": "PDF p46 Figure 44 (render): the end view also prints 0.20/0.09 and 0.75/0.60/0.45 next to 8°/0°, and the top view prints PIN 1 and pin numbers 1, 8, 9, 16; these labels were missing from the md list.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig45-labels",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "Top view dimensions: 3.10, 3.00 SQ, 2.90. Bottom view dimensions: 0.30, 0.25, 0.20, 0.50 BSC, 0.50, 0.40, 0.30.",
+    "new": "Top view dimensions: 3.10, 3.00 SQ, 2.90, PIN 1 INDICATOR, TOP VIEW. Bottom view dimensions: 0.30, 0.25, 0.20, 0.50 BSC, 0.50, 0.40, 0.30, BOTTOM VIEW, pin numbers 1, 4, 5, 8, 9, 12, 13, 16.",
+    "evidence": "PDF p46 Figure 45 (render): PIN 1 INDICATOR, TOP VIEW, BOTTOM VIEW and the pin numbers are printed; they were missing from the md list.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p46-fig45-drawing-ids",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "COMPLIANT TO JEDEC STANDARDS MO-220-WEED.\n",
+    "new": "COMPLIANT TO JEDEC STANDARDS MO-220-WEED.\n\n09-03-2013-A (PKG-004132 printed in light gray)\n",
+    "evidence": "PDF p46 Figure 45 (900 dpi crop): the drawing prints the date code '09-03-2013-A' at the right and 'PKG-004132' in light gray at the lower left.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p46-fig46-labels",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "Top view dimensions: 2.000, 1.960 SQ, 1.920. Bottom view dimensions: 1.50 REF, 0.50 BSC, 0.50, 0.40, 0.30.",
+    "new": "Top view dimensions: 2.000, 1.960 SQ, 1.920, BALL A1 IDENTIFIER, TOP VIEW (BALL SIDE DOWN). Bottom view dimensions: 1.50 REF, 0.50 BSC, columns 4, 3, 2, 1, rows A, B, C, D, BOTTOM VIEW (BALL SIDE UP).",
+    "evidence": "PDF p46 Figure 46 (400 dpi crop): the WLCSP bottom view prints only 1.50 REF and 0.50 BSC plus the column/row labels; '0.50, 0.40, 0.30' belongs to the LFCSP drawing (Figure 45), not to Figure 46.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p46-fig46-drawing-id",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "Figure 46. 16-Ball Wafer Level Chip Scale Package [WLCSP] (CB-16-3) Dimensions shown in millimeters\n",
+    "new": "10-17-2012-B\n\nFigure 46. 16-Ball Wafer Level Chip Scale Package [WLCSP] (CB-16-3) Dimensions shown in millimeters\n",
+    "evidence": "PDF p46 Figure 46 (400 dpi crop): the drawing prints the date code '10-17-2012-B' at the right.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p46-fig45-caption-times",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 46,
+    "old": "[LFCSP] 3 mm x 3 mm Body and 0.75 mm Package Height",
+    "new": "[LFCSP] 3 mm × 3 mm Body and 0.75 mm Package Height",
+    "evidence": "PDF p46 (pdftotext): the Figure 45 caption prints '3 mm × 3 mm' with the multiplication sign U+00D7.",
+    "sources": [
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p47-marking-code-row",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 47,
+    "old": "| AD5593RBCBZ-RL7    | -40°C to +105°C   | 16-Ball WLCSP (1.96mm x 1.96mm)    | Reel, 3000       | CB-16-3        | DM6          |\n| AD5593RBCPZ-RL7    | -40°C to +105°C   | 16-Lead LFCSP (3mm x 3mm x 0.75mm) | Reel, 1500       | CP-16-32       |              |",
+    "new": "| AD5593RBCBZ-RL7    | -40°C to +105°C   | 16-Ball WLCSP (1.96mm x 1.96mm)    | Reel, 3000       | CB-16-3        |              |\n| AD5593RBCPZ-RL7    | -40°C to +105°C   | 16-Lead LFCSP (3mm x 3mm x 0.75mm) | Reel, 1500       | CP-16-32       | DM6          |",
+    "evidence": "PDF p47 Ordering Guide (word positions + render): 'DM6' is on the AD5593RBCPZ-RL7 baseline (y=165, with CP-16-32), not on the AD5593RBCBZ-RL7 WLCSP row (y=152).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p47-outline-dimensions-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 47,
+    "old": "{46}------------------------------------------------\n\n### OUTLINE DIMENSIONS\n",
+    "new": "{46}------------------------------------------------\n\n## OUTLINE DIMENSIONS\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): repeated blue section title 'OUTLINE DIMENSIONS' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p47-ordering-guide-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 47,
+    "old": "\n## ORDERING GUIDE\n",
+    "new": "\n### ORDERING GUIDE\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render) and TOC p2: 'ORDERING GUIDE' is a bold black caps subsection under the blue 'OUTLINE DIMENSIONS' title (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p47-evaluation-boards-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 47,
+    "old": "\n## EVALUATION BOARDS\n",
+    "new": "\n### EVALUATION BOARDS\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render) and TOC p2: 'EVALUATION BOARDS' is a bold black caps subsection under 'OUTLINE DIMENSIONS' (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
