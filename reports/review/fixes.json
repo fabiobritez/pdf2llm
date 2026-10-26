@@ -7028,7 +7028,7 @@
     "file": "output/ltc3309a/ltc3309a.md",
     "page": 5,
     "old": "Graph showing Feedback Voltage (mV) vs. Temperature (°C). The feedback voltage is relatively stable around 500 mV from -50°C to 75°C, then decreases to approximately 498 mV at 150°C.",
-    "new": "Graph showing Feedback Voltage (mV) vs. Temperature (°C). The feedback voltage rises slightly from about 499.3 mV at -50°C to a maximum near 501 mV around 50°C, then decreases to approximately 498 mV at 150°C.",
+    "new": "Graph showing Feedback Voltage (mV) vs. Temperature (°C). The feedback voltage rises slightly from just below 500 mV at -50°C to a maximum near 501 mV around 50°C, then decreases to approximately 498 mV at 150°C.",
     "evidence": "PDF p5 G01 (render): the curve starts below 500 mV at -50°C and peaks near 501 mV at about 50°C; 'stable around 500 mV from -50°C to 75°C' hid the rise and the peak. Read values from the image/PDF.",
     "sources": [
       "pdf-image",

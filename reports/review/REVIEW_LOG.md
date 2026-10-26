@@ -217,3 +217,31 @@ Not changed / open:
 - Repo-wide conventions were kept: hyphen for the en dash (–40°C), Greek μ next to µ, SHDN overbars dropped in headings and tables, and running headers/footers omitted, including the p21 'Information furnished by Linear Technology…' disclaimer and the p22 address/copyright footer (other LTC sheets omit them too).
 - Structure-only oddities: `## LT1965 Series` running-header headings, `## Thermal Considerations` at H2 while sibling subsections are H3, `###### **NOTE:**` on p17.
 - Figure descriptions are still AI text. They now agree with the drawings on connections, labels and dimension meanings, but approximate curve levels (for example Fig 6 "approximately 5.5mA at 9V", G29 "minimum around 75°C") are estimates. Read values from the image/PDF.
+
+### ltc3309a full page-by-page review (2026-10-26)
+
+Scope: all 26 PDF pages of `ltc3309a.pdf`. For each page: rendered image (`tools/review/render_pages.py`, plus 220-300 dpi crops of schematics, the block diagram and the rotated p24 package drawing), `pdftotext -layout`, PyMuPDF word rows and spans (sub/superscripts, glyphs), and a word-level diff of the PDF text against the `{N-1}` section of `output/ltc3309a/ltc3309a.md`. The EC table (p3) matches the PDF cell by cell, including the ● column and MIN/TYP/MAX positions. Table 1 (p14), Table 2 (p15, 23 rows), Table 3 (p16), the order tables (p2), the package dimensions (p24), Revision History (p25) and Related Parts (p26) were checked row by row.
+109 new fixes, all `ltc3309a-p*` ids in `fixes.json` (2 medium, 107 low). Description fixes have two entries each (`-alt` for the image alt text, `-desc` for the repeated paragraph). `replay_fixes.py` reproduces the md exactly.
+
+| Page(s) | Finding | Fix ids (prefix) | Severity |
+|---|---|---|---|
+| 1 | Part number title 'LTC3309A' was missing; the md started at the subtitle | `ltc3309a-p1-title-missing` | medium |
+| 10 | Block diagram bullet list invented 'SS (Pin 14)' and 'IC (Pin 15)' (IC listed twice), called the PGOOD logic a NAND driving a P-channel MOSFET (PDF: OR gate, N-channel open drain) and omitted G_M, V_C compensation, I_SS/C_SS, C_FF and the V_IN pins; the bold markers were broken. Rewritten from the drawing | `ltc3309a-p10-block-diagram-description` | medium |
+| 8 | Scope descriptions G28-G36 contained Chinese words (纹波, 电压) and no channel scales; G33 described as 'bursts of pulses' (single pulses with ringing). Rewritten with the printed scales | `ltc3309a-p8-g28` ... `-g36` | low |
+| 1, 13, 17-23, 26 | Schematic descriptions contradicted the drawings: input 10µF called output capacitors (TA02-TA05, p26 TA08), 1µF 0201 'in series' (TA06/TA07), 10nF called a SYNC coupling or FB capacitor (TA04, TA08/TA09), invented 1.3M/200k resistors in TA05, TA09 divider given as 200k/200k (PDF: 100k/200k), missing 33µF/47µF x2 output capacitors, 22.6k RT, 1M pull-ups; Fig 1 divider placement, Fig 2 'pin 3' and 'ground labeled 3309A F02', Fig 3a CBYP called a resistor, Fig 4 thermal paths and an invented theta_CV | `ltc3309a-p1-ta01a`, `ltc3309a-p13-fig1`, `ltc3309a-p17-fig2`, `ltc3309a-p18-f03a`, `ltc3309a-p19-fig4`, `ltc3309a-p2[0-3]-ta0*`, `ltc3309a-p21-ta0*`, `ltc3309a-p26-ta08` | low |
+| 1, 5, 6, 7 | Curve descriptions: TA01b power-loss levels (0.001W/0.5W; PDF about 0.0003W/0.2W, now described by shape), G01 peak near 50°C, G02/G04/G06 curves start at 2.25V, G10 NMOS end points, G20-G27 line styles (dashed vs dotted, no dash-dot line) | `ltc3309a-p1-ta01b`, `ltc3309a-p5-g0*-desc*`, `ltc3309a-p6-g10`, `ltc3309a-p7-g2*-line-styles` | low |
+| 24 | Package drawing: X is a datum; 12b/eee/fff belong to DETAIL A, DETAIL C shows A1 and 12× ddd; land pattern 2.50 ±0.05 is the overall size, not the pitch; 0.70 ±0.05 is the pad length | `ltc3309a-p24-*` | low |
+| 1, 5, 8, 13, 17-23, 26 | Drawing numbers missing: TA01a, G01-G09, G28-G36, F01-F04 (F03a/F03b), TA02-TA09 and TA08 on p26 (printed as TA08 on both p23 and p26, kept as printed); Figure 2-4 captions bolded like Figure 1 | `*-drawing-number`, `ltc3309a-p18-fig3-caption-bold` | low |
+| 4, 16, 18, 19 | Paragraphs split at the column break were rejoined (Note 2, 'The second function', 'unbroken ground plane', 'relatively high') | `*-column-split` | low |
+| 3, 11, 12, 14, 16, 17 | As printed: `VEN =0.5V` (EN Pin Leakage), curly apostrophes (regulator’s, LTC3309A’s ×5), 'RT pin' as a pin name (not R_T), Equation (3) denominator `f_sw` lowercase | `ltc3309a-p3-en-leakage-*`, `*-curly-apostrophe`, `ltc3309a-p14-*` | low |
+
+No error found on p2 (the earlier pinout/order fixes still hold), p9, p15 or p25.
+After the fixes: `validate.py --all` reports ltc3309a OK (word/number coverage 99.9/100.0%, unchanged; geometry 37 / 0 / 1 / 91). `check_llm_fidelity.py`: ltc3309a has 0 spec-table failures and the numeric subset is True. `relocate_images.py --check ltc3309a`: OK. `check_struct_tables.py`: unchanged. `unittest` test_validate / test_llm_compact / test_struct_tables: OK (64 tests).
+`ltc3309a.llm.md` was regenerated with `tools/llm_compact.py ltc3309a`. Every summary claim in `reports/llm/summaries/ltc3309a.md` was re-checked against the corrected md (p1-p4, p9, p11, p12); none needed a change.
+
+Not changed / open:
+- Repo-wide conventions were kept: hyphen for the en dash (–40°C, –1.5), Greek μ next to µ, `˚` (U+02DA) in the p2 temperature ranges normalized to `°`, and running headers/footers omitted, including the p25 'Information furnished by Analog Devices…' disclaimer and the p26 copyright line.
+- p24 notes 1 and 4-6 are cut off at the right edge in the PDF itself ('OPENING N', 'HEAT F', 'MUST LOCATED', 'OPTIONAL CORN'); the md keeps them truncated as printed.
+- p11 'start-up' and p13 'soft-start' are hyphenated at line ends in the PDF; the md hyphenation was kept.
+- Structure-only oddities: `#### Overtemperature Protection` at H4 while sibling subsections are H3 (p12), bold `###` headings on p13, the p8 scope channel labels only inside the descriptions.
+- Figure descriptions are still AI text. They now agree with the drawings on connections, labels and dimension meanings, but approximate curve levels (for example TA01b "approximately 80% at 0.001A", G06 "1.96 MHz at 2.25V") are estimates. Read values from the image/PDF.
