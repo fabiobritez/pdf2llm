@@ -21213,5 +21213,447 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p91-fig31-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "![Figure 31: Application Circuit with Crowbar Protection on Intermediate Bus. This schematic shows a power supply system. An input bus (4.5V < VIBUS < 15V) feeds into a DC/DC converter. A sense resistor (RSENSE = 0.007Ω) is placed between the input and the converter. The LTC2975* IC is used for monitoring and control. It has pins for VIN_SNS, V_PWR, V_DAC0, V_SENSEP0, V_SENSEM0, V_OUT_EN0, REFP, REFM, GND, AUXFAULTB, VDD33, VDD25, and VDD25. A MOSFET (Q1, Si4894BDY) is used for crowbar protection, controlled by the LTC2975. A timer IC (LTC4210-1) is also present, with pins for VCC, SENSE, GATE, ON, TIMER, and GND. Other components include a BAT54 diode, a 10k resistor, a 0.22µF capacitor, a 24.3k resistor, a 100Ω resistor, a 68Ω resistor, a 0.01µF capacitor, a 10k resistor, a 4.99k resistor, a 1k resistor, a 1/4W resistor, a 10k resistor, a 0.1µF capacitor, and a 0.01µF capacitor. A note states: '*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.](",
+    "new": "![Figure 31. Application Circuit with Crowbar Protection on Intermediate Bus (description written from the PDF drawing). The intermediate bus 4.5V < V_IBUS < 15V passes through R_SENSE 0.007Ω and the MOSFET Q1 Si4894BDY to the V_IN pin of a DC/DC CONVERTER (C_BYPASS to ground at V_IN). An LTC4210-1 (pins V_CC, SENSE, GATE, ON, TIMER, GND) senses across R_SENSE and drives the Q1 gate through 100Ω, with 68Ω and 0.01µF to ground on the GATE node; its ON pin sits on a 24.3k/10k divider from the bus, TIMER has 0.22µF to ground. The LTC2975 (asterisk: some details omitted) has I_IN_SNSM and I_IN_SNSP across R_SENSE, V_IN_SNS on the bus, V_PWR on the bus with 0.1µF, V_DAC0, V_SENSEP0 and V_SENSEM0 to the converter's feedback divider and LOAD (V_OUT, V_FB, SGND), V_OUT_EN0 to RUN/SS, REFP-REFM with 0.01µF, GND, V_DD33 V_DD33 and V_DD25 V_DD25 each pair with 0.1µF. AUXFAULTB connects to the cathode of a BAT54 diode whose anode is on the LTC4210-1 ON node, and through 4.99k to the base of an MMBT2907 PNP transistor; the emitter is on the bus/V_PWR line, with 10k and 0.01µF from emitter to base; the collector drives, through 1k 1/4W with 10k to ground, the gate of an S4010DS3 SCR crowbar from the bus (after Q1) to ground. Note: '*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'. Drawing number 2975 F31.](",
+    "evidence": "PDF p91 Figure 31 (render at 200 dpi + pdftotext): Q1 is the pass MOSFET driven by the LTC4210-1 GATE, not a crowbar controlled by the LTC2975; the crowbar is the S4010DS3 SCR fired by the MMBT2907 from AUXFAULTB; LTC4210-1 is not a timer IC; '1k' and '1/4W' are one resistor; I_IN_SNSM/I_IN_SNSP, CBYPASS, MMBT2907, S4010DS3, the DC/DC pins and the doubled V_DD33 pins were missing ('VDD25, and VDD25'). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p91-fig31-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "\nFigure 31: Application Circuit with Crowbar Protection on Intermediate Bus. This schematic shows a power supply system. An input bus (4.5V < VIBUS < 15V) feeds into a DC/DC converter. A sense resistor (RSENSE = 0.007Ω) is placed between the input and the converter. The LTC2975\\* IC is used for monitoring and control. It has pins for VIN\\_SNS, V\\_PWR, V\\_DAC0, V\\_SENSEP0, V\\_SENSEM0, V\\_OUT\\_EN0, REFP, REFM, GND, AUXFAULTB, VDD33, VDD25, and VDD25. A MOSFET (Q1, Si4894BDY) is used for crowbar protection, controlled by the LTC2975. A timer IC (LTC4210-1) is also present, with pins for VCC, SENSE, GATE, ON, TIMER, and GND. Other components include a BAT54 diode, a 10k resistor, a 0.22µF capacitor, a 24.3k resistor, a 100Ω resistor, a 68Ω resistor, a 0.01µF capacitor, a 10k resistor, a 4.99k resistor, a 1k resistor, a 1/4W resistor, a 10k resistor, a 0.1µF capacitor, and a 0.01µF capacitor. A note states: '\\*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.\n",
+    "new": "\nFigure 31. Application Circuit with Crowbar Protection on Intermediate Bus (description written from the PDF drawing). The intermediate bus 4.5V < V_IBUS < 15V passes through R_SENSE 0.007Ω and the MOSFET Q1 Si4894BDY to the V_IN pin of a DC/DC CONVERTER (C_BYPASS to ground at V_IN). An LTC4210-1 (pins V_CC, SENSE, GATE, ON, TIMER, GND) senses across R_SENSE and drives the Q1 gate through 100Ω, with 68Ω and 0.01µF to ground on the GATE node; its ON pin sits on a 24.3k/10k divider from the bus, TIMER has 0.22µF to ground. The LTC2975 (asterisk: some details omitted) has I_IN_SNSM and I_IN_SNSP across R_SENSE, V_IN_SNS on the bus, V_PWR on the bus with 0.1µF, V_DAC0, V_SENSEP0 and V_SENSEM0 to the converter's feedback divider and LOAD (V_OUT, V_FB, SGND), V_OUT_EN0 to RUN/SS, REFP-REFM with 0.01µF, GND, V_DD33 V_DD33 and V_DD25 V_DD25 each pair with 0.1µF. AUXFAULTB connects to the cathode of a BAT54 diode whose anode is on the LTC4210-1 ON node, and through 4.99k to the base of an MMBT2907 PNP transistor; the emitter is on the bus/V_PWR line, with 10k and 0.01µF from emitter to base; the collector drives, through 1k 1/4W with 10k to ground, the gate of an S4010DS3 SCR crowbar from the bus (after Q1) to ground. Note: '*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'. Drawing number 2975 F31.\n",
+    "evidence": "Same as ltc2975-p91-fig31-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p91-fig31-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "\nFigure 31. Application Circuit with Crowbar Protection on Intermediate Bus\n",
+    "new": "\n**Figure 31. Application Circuit with Crowbar Protection on Intermediate Bus**\n",
+    "evidence": "PDF p91: the caption 'Figure 31. Application Circuit with Crowbar Protection on Intermediate Bus' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p91-fig32-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "![Figure 32: Channel Fault Management Block Diagram. This block diagram illustrates the internal logic for managing faults across four channels (0, 1, 2, 3). Each channel has an 'EVENT PROCESSOR' block (PAGE = 0, 1, 2, 3). Each processor receives 'Mfr_faultb0_response' and 'Mfr_faultb1_response' signals. The processors output 'FAULTED_OFF' signals. These signals are then propagated through 'Mfr_faultb0_propagate_chan' and 'Mfr_faultb1_propagate_chan' blocks. The propagated signals are combined using OR gates to generate 'FAULTB0' and 'FAULTB1' signals. A note indicates: '2975 F32'.](",
+    "new": "![Figure 32. Channel Fault Management Block Diagram (description written from the PDF drawing). Four blocks CHANNEL 0 to CHANNEL 3 EVENT PROCESSOR (PAGE = 0 to PAGE = 3). Each block has two inputs, each through a switch labeled Mfr_faultb0_response, page = n and Mfr_faultb1_response, page = n; these inputs come from the FAULTB0 and FAULTB1 pins through input buffers. Each block's FAULTED_OFF output goes through two switches, Mfr_faultb0_propagate_chann and Mfr_faultb1_propagate_chann; the four Mfr_faultb0_propagate outputs feed an OR gate driving an open-drain NMOS pull-down on the FAULTB0 pin, and the four Mfr_faultb1_propagate outputs feed an OR gate driving an open-drain NMOS pull-down on FAULTB1. Drawing number 2975 F32.](",
+    "evidence": "PDF p91 Figure 32 (render at 200 dpi): the Mfr_faultbX_propagate_chanN and Mfr_faultbX_response elements are switches, not blocks; the FAULTB0/FAULTB1 pins are fed back through buffers to the response switches and are driven by OR gates through open-drain NMOS transistors; '2975 F32' is the drawing number, not a note. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p91-fig32-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "\nFigure 32: Channel Fault Management Block Diagram. This block diagram illustrates the internal logic for managing faults across four channels (0, 1, 2, 3). Each channel has an 'EVENT PROCESSOR' block (PAGE = 0, 1, 2, 3). Each processor receives 'Mfr\\_faultb0\\_response' and 'Mfr\\_faultb1\\_response' signals. The processors output 'FAULTED\\_OFF' signals. These signals are then propagated through 'Mfr\\_faultb0\\_propagate\\_chan' and 'Mfr\\_faultb1\\_propagate\\_chan' blocks. The propagated signals are combined using OR gates to generate 'FAULTB0' and 'FAULTB1' signals. A note indicates: '2975 F32'.\n",
+    "new": "\nFigure 32. Channel Fault Management Block Diagram (description written from the PDF drawing). Four blocks CHANNEL 0 to CHANNEL 3 EVENT PROCESSOR (PAGE = 0 to PAGE = 3). Each block has two inputs, each through a switch labeled Mfr_faultb0_response, page = n and Mfr_faultb1_response, page = n; these inputs come from the FAULTB0 and FAULTB1 pins through input buffers. Each block's FAULTED_OFF output goes through two switches, Mfr_faultb0_propagate_chann and Mfr_faultb1_propagate_chann; the four Mfr_faultb0_propagate outputs feed an OR gate driving an open-drain NMOS pull-down on the FAULTB0 pin, and the four Mfr_faultb1_propagate outputs feed an OR gate driving an open-drain NMOS pull-down on FAULTB1. Drawing number 2975 F32.\n",
+    "evidence": "Same as ltc2975-p91-fig32-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p91-fig32-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 91,
+    "old": "\nFigure 32. Channel Fault Management Block Diagram\n",
+    "new": "\n**Figure 32. Channel Fault Management Block Diagram**\n",
+    "evidence": "PDF p91: the caption 'Figure 32. Channel Fault Management Block Diagram' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p92-continuation-not-bullet",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 92,
+    "old": "\n- Channels responding to a FAULTB pin pulling low will attempt",
+    "new": "\nChannels responding to a FAULTB pin pulling low will attempt",
+    "evidence": "PDF p92: 'Channels responding to a FAULTB pin pulling low...' is an indented continuation paragraph of the last bullet on p91/p90 (no bullet glyph; x=58 vs bullet glyphs at x=46); the md made it a new bullet.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p92-interconnect-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 92,
+    "old": "\n## INTERCONNECT BETWEEN MULTIPLE ADI POWER MANAGERS\n",
+    "new": "\n### INTERCONNECT BETWEEN MULTIPLE ADI POWER MANAGERS\n",
+    "evidence": "PDF p92 (PyMuPDF spans): 'INTERCONNECT BETWEEN MULTIPLE ADI POWER MANAGERS' is a LinearHelvCond-Bold 11.7pt caps subsection (H3), not the running section title.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p92-subscripts",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 92,
+    "old": "- All VIN\\_SNS lines should be tied together in a star type connection at the point where VIN is to be sensed. This will minimize timing errors for the case where the ON\\_OFF\\_CONFIG is configured to start the LTC2975 based on VIN and ignore",
+    "new": "- All V<sub>IN\\_SNS</sub> lines should be tied together in a star type connection at the point where V<sub>IN</sub> is to be sensed. This will minimize timing errors for the case where the ON\\_OFF\\_CONFIG is configured to start the LTC2975 based on V<sub>IN</sub> and ignore",
+    "evidence": "PDF p92 (PyMuPDF spans): V_IN_SNS and V_IN (twice) are printed with subscripts in this bullet.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p92-tresetb-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 92,
+    "old": "low for at least tRESETB to enter",
+    "new": "low for at least t<sub>RESETB</sub> to enter",
+    "evidence": "PDF p92 (PyMuPDF spans): t_RESETB is printed with a subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p92-fig33-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 92,
+    "old": "\nFigure 33. Typical Connections Between Multiple ADI Power System Managers\n",
+    "new": "\n**Figure 33. Typical Connections Between Multiple ADI Power System Managers**\n",
+    "evidence": "PDF p92: the caption 'Figure 33. Typical Connections Between Multiple ADI Power System Managers' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p93-application-circuits-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "\n## APPLICATION CIRCUITS\n",
+    "new": "\n### APPLICATION CIRCUITS\n",
+    "evidence": "PDF p93 (PyMuPDF spans): 'APPLICATION CIRCUITS' is a LinearHelvCond-Bold 11.7pt caps subsection (H3) under the running title APPLICATIONS INFORMATION.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p93-trimming-external-feedback-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "\n### Trimming and Margining DC/DC Converters with External Feedback Resistors\n",
+    "new": "\n#### Trimming and Margining DC/DC Converters with External Feedback Resistors\n",
+    "evidence": "PDF p93 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p93-column-split",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "with an external feedback\n\nnetwork. The",
+    "new": "with an external feedback network. The",
+    "evidence": "PDF p93: the sentence 'a power supply with an external feedback / network.' continues from the left column to the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p93-fig34-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "The timing diagram shows the control signal  $V_{CONTROL}$  going high, which triggers a sequence of output enable signals  $V_{OUT0}$ ,  $V_{OUT1}$ ,  $V_{OUT2}$ , up to  $V_{OUTn}$ . Each output has a corresponding delay time labeled  $T_{ON\\_DELAY0}$ ,  $T_{ON\\_DELAY1}$ ,  $T_{ON\\_DELAY2}$ , and  $T_{ON\\_DELAYn}$ . A fault condition  $V_{FAULTBn}$  is shown going low, which terminates the sequence with a delay  $T_{ON\\_MAX\\_FAULT1}$ .",
+    "new": "The timing diagram (description written from the PDF drawing) shows V<sub>CONTROL</sub> going high; TON\\_DELAY0, TON\\_DELAY1, TON\\_DELAY2 and TON\\_DELAY*n* are all measured from that edge. V<sub>OUT0</sub> rises after TON\\_DELAY0. V<sub>OUT1</sub> starts to rise after TON\\_DELAY1 but stays below the level V<sub>OUT0</sub> reaches (channel 1 short) and drops again. TON\\_MAX\\_FAULT1, measured from the end of TON\\_DELAY1, ends when the BUSSED V<sub>FAULTB*n*</sub> PINS go low; V<sub>OUT0</sub> then falls. V<sub>OUT2</sub> and V<sub>OUT*n*</sub> stay low: their TON\\_DELAY2 and TON\\_DELAY*n* intervals end after the fault. Drawing number 2975 F34.",
+    "evidence": "PDF p93 Figure 34 (render): V_OUT0..V_OUTn are output voltages, not enable signals; the delay labels are TON_DELAYn (not T_ON_DELAY); TON_MAX_FAULT1 runs from the end of TON_DELAY1 to the falling edge of the bussed FAULTB pins, it is not a delay after the fault; V_OUT1 never reaches regulation (the short) and V_OUT0 is shut off after FAULTB goes low. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p93-fig34-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "\nFigure 34. Aborted On-Sequence Due to Channel 1 Short\n",
+    "new": "\n**Figure 34. Aborted On-Sequence Due to Channel 1 Short**\n",
+    "evidence": "PDF p93: the caption 'Figure 34. Aborted On-Sequence Due to Channel 1 Short' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p93-fig35-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "The diagram illustrates the internal architecture of the LTC2975\\* and its connection to a DC/DC converter. Inside the LTC2975\\*, a 16-BIT ADC and a 10-BIT DAC are connected to a central CONTROL LOGIC block. The CONTROL LOGIC also interfaces with a PMBus INTERFACE (SDA, SCL, ALERTB, CONTROL, FAULT) and an EEPROM. An OV/UV SUPERVISOR is also present. The 10-BIT DAC output  $V_{DAC}$  is connected to the feedback node of the DC/DC converter through resistor R30. The DC/DC converter's feedback node is also connected to a resistor divider consisting of R20 and R10. The converter's output  $V_{OUT}$  is sensed by the LTC2975\\* through  $V_{SENSEP}$  and  $V_{SENSEM}$  pins.",
+    "new": "The diagram (description written from the PDF drawing) shows the LTC2975\\* (V<sub>PWR</sub> connected to V<sub>IN</sub>) and a DC/DC CONVERTER (V<sub>IN</sub>, V<sub>OUT</sub>, V<sub>FB</sub>, RUN). Inside the LTC2975\\*: a 16-BIT ADC and an OV/UV SUPERVISOR on the V<sub>SENSEP</sub>/V<sub>SENSEM</sub> inputs, both feeding the CONTROL LOGIC; the CONTROL LOGIC connects to the PMBus INTERFACE pins SDA, SCL and ALERTB, to the CONTROL and FAULT pins, to an EEPROM, to a 10-BIT DAC driving V<sub>DAC</sub>, and to V<sub>OUT\\_EN</sub>. V<sub>SENSEP</sub> and V<sub>SENSEM</sub> sense across the LOAD at the converter output. V<sub>DAC</sub> connects through R30 to the V<sub>FB</sub> node of the R20 (from V<sub>OUT</sub>)/R10 (to ground) feedback divider. V<sub>OUT\\_EN</sub> drives the converter's RUN pin.",
+    "evidence": "PDF p93 Figure 35 (render): the 'PMBus INTERFACE' bracket covers only SDA, SCL and ALERTB (CONTROL and FAULT are separate pins); the OV/UV SUPERVISOR is on the V_SENSE inputs; V_PWR from V_IN, V_OUT_EN to RUN and the LOAD were missing. Rewritten from the drawing; the note sentence after it is unchanged.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p93-fig35-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 93,
+    "old": "\nFigure 35. Application Circuit for DC/DC Converters with External Feedback Resistors\n",
+    "new": "\n**Figure 35. Application Circuit for DC/DC Converters with External Feedback Resistors**\n",
+    "evidence": "PDF p93: the caption 'Figure 35. Application Circuit for DC/DC Converters with External Feedback Resistors' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p94-four-step-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 94,
+    "old": "\n### Four-Step Resistor Selection Procedure for DC/DC Converters with External Feedback Resistors\n",
+    "new": "\n#### Four-Step Resistor Selection Procedure for DC/DC Converters with External Feedback Resistors\n",
+    "evidence": "PDF p94 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p94-trim-pin-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 94,
+    "old": "\n### Trimming and Margining DC/DC Converters with a TRIM Pin\n",
+    "new": "\n#### Trimming and Margining DC/DC Converters with a TRIM Pin\n",
+    "evidence": "PDF p94 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig36-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "![Figure 36: Application Circuit for DC/DC Converters with Trim Pin. The diagram shows an LTC2975* IC connected to a DC/DC converter. The LTC2975* has pins for V_PWR, V_DDS33, V_DDS3, V_DDS25, GND, V_IN_SNS, V_DAC0, V_SENSEP0, V_SENSEM0, and V_OUT_EN0. The DC/DC converter has pins for V_IN, V_O+, TRIM, V_SENSE+, V_SENSE-, ON/OFFB, and V_O-. A resistor R30 is connected between the TRIM pin and the V_SENSE+ pin. A load is connected between the V_O+ and ground pins of the DC/DC converter. Input voltage is specified as 4.5V < V_IBUS < 15V. Two 0.1µF capacitors are connected to the V_DDS33 and V_DDS25 pins. A note states: * SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS AND NO INPUT CURRENT SENSE SHOWN.](",
+    "new": "![Figure 36. Application Circuit for DC/DC Converters with Trim Pin (description written from the PDF drawing). The bus 4.5V < V_IBUS < 15V connects to V_PWR and V_IN_SNS of the LTC2975* and to V_IN of the DC/DC CONVERTER. The two V_DD33 pins are tied together with a 0.1µF capacitor to ground; V_DD25 has a 0.1µF capacitor to ground; GND to ground. V_DAC0 connects through R30 to the converter's TRIM pin. V_SENSEP0 and V_SENSEM0 sense across the LOAD, which sits between V_O+ / V_SENSE+ and V_SENSE- (the V_SENSE- side is grounded). V_OUT_EN0 drives ON/OFFB. V_O- is grounded. Note: '* SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS AND NO INPUT CURRENT SENSE SHOWN'. Drawing number 2975 F36.](",
+    "evidence": "PDF p95 Figure 36 (render at 200 dpi): the pins are V_DD33, V_DD33 and V_DD25 (not 'V_DDS33, V_DDS3, V_DDS25'); R30 is between V_DAC0 and TRIM, not between TRIM and V_SENSE+; V_SENSEP0/V_SENSEM0, V_OUT_EN0 → ON/OFFB and the V_IN_SNS/V_PWR bus connections were missing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p95-fig36-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\nFigure 36: Application Circuit for DC/DC Converters with Trim Pin. The diagram shows an LTC2975\\* IC connected to a DC/DC converter. The LTC2975\\* has pins for V\\_PWR, V\\_DDS33, V\\_DDS3, V\\_DDS25, GND, V\\_IN\\_SNS, V\\_DAC0, V\\_SENSEP0, V\\_SENSEM0, and V\\_OUT\\_EN0. The DC/DC converter has pins for V\\_IN, V\\_O+, TRIM, V\\_SENSE+, V\\_SENSE-, ON/OFFB, and V\\_O-. A resistor R30 is connected between the TRIM pin and the V\\_SENSE+ pin. A load is connected between the V\\_O+ and ground pins of the DC/DC converter. Input voltage is specified as 4.5V < V\\_IBUS < 15V. Two 0.1µF capacitors are connected to the V\\_DDS33 and V\\_DDS25 pins. A note states: \\* SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS AND NO INPUT CURRENT SENSE SHOWN.\n",
+    "new": "\nFigure 36. Application Circuit for DC/DC Converters with Trim Pin (description written from the PDF drawing). The bus 4.5V < V_IBUS < 15V connects to V_PWR and V_IN_SNS of the LTC2975* and to V_IN of the DC/DC CONVERTER. The two V_DD33 pins are tied together with a 0.1µF capacitor to ground; V_DD25 has a 0.1µF capacitor to ground; GND to ground. V_DAC0 connects through R30 to the converter's TRIM pin. V_SENSEP0 and V_SENSEM0 sense across the LOAD, which sits between V_O+ / V_SENSE+ and V_SENSE- (the V_SENSE- side is grounded). V_OUT_EN0 drives ON/OFFB. V_O- is grounded. Note: '* SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS AND NO INPUT CURRENT SENSE SHOWN'. Drawing number 2975 F36.\n",
+    "evidence": "Same as ltc2975-p95-fig36-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p95-fig36-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\nFigure 36. Application Circuit for DC/DC Converters with Trim Pin\n",
+    "new": "\n**Figure 36. Application Circuit for DC/DC Converters with Trim Pin**\n",
+    "evidence": "PDF p95: the caption 'Figure 36. Application Circuit for DC/DC Converters with Trim Pin' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-two-step-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\n### Two-Step Resistor and DAC Full-Scale Voltage Selection Procedure for DC/DC Converters with a TRIM Pin\n",
+    "new": "\n#### Two-Step Resistor and DAC Full-Scale Voltage Selection Procedure for DC/DC Converters with a TRIM Pin\n",
+    "evidence": "PDF p95 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-sense-resistor-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\n### Measuring Output with a Sense Resistor\n",
+    "new": "\n#### Measuring Output with a Sense Resistor\n",
+    "evidence": "PDF p95 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-inductor-dcr-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\n### Measuring Output with Inductor DCR\n",
+    "new": "\n#### Measuring Output with Inductor DCR\n",
+    "evidence": "PDF p95 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-column-split",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "offers a good compromise\n\nbetween the voltage ripple",
+    "new": "offers a good compromise between the voltage ripple",
+    "evidence": "PDF p95: the sentence 'offers a good compromise / between the voltage ripple' continues from the left to the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-due-the-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "in order to minimize gain errors due to the current sense inputs' internal resistance. C<sub>CM1</sub>",
+    "new": "in order to minimize gain errors due the current sense inputs' internal resistance. C<sub>CM1</sub>",
+    "evidence": "PDF p95 (pdftotext + render): the DCR paragraph prints 'gain errors due the current sense inputs’ internal resis-tance' (no 'to'); manufacturer wording kept as printed. The sense-resistor paragraph above does print 'due to'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig37-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "![Figure 37: Sense Resistor Current Sensing Circuits. The diagram shows a DC/DC converter output connected to a load inductor L. A sense resistor R_SNS is placed in series with the inductor. A balanced filter consisting of two resistors R_CM and two capacitors C_CM is connected across the sense resistor. The output of the filter is connected to the I_SENSEP and I_SENSEM pins of an LTC2975 IC. The diagram is labeled 2975 F37.](",
+    "new": "![Figure 37. Sense Resistor Current Sensing Circuits (description written from the PDF drawing). The inductor L and the sense resistor R_SNS are in series in the LOAD CURRENT path (arrow toward the load). From the node between L and R_SNS, one R_CM goes to I_SENSEP of the LTC2975; from the other end of R_SNS, the second R_CM goes to I_SENSEM. Each sense line has a C_CM capacitor to ground (the two capacitors share the grounded middle node). Drawing number 2975 F37.](",
+    "evidence": "PDF p95 Figure 37 (render): no DC/DC converter is drawn and L is the converter inductor, not a 'load inductor'; which R_CM goes to I_SENSEP/I_SENSEM and the C_CM to ground were not stated. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig37-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\nFigure 37: Sense Resistor Current Sensing Circuits. The diagram shows a DC/DC converter output connected to a load inductor L. A sense resistor R\\_SNS is placed in series with the inductor. A balanced filter consisting of two resistors R\\_CM and two capacitors C\\_CM is connected across the sense resistor. The output of the filter is connected to the I\\_SENSEP and I\\_SENSEM pins of an LTC2975 IC. The diagram is labeled 2975 F37.\n",
+    "new": "\nFigure 37. Sense Resistor Current Sensing Circuits (description written from the PDF drawing). The inductor L and the sense resistor R_SNS are in series in the LOAD CURRENT path (arrow toward the load). From the node between L and R_SNS, one R_CM goes to I_SENSEP of the LTC2975; from the other end of R_SNS, the second R_CM goes to I_SENSEM. Each sense line has a C_CM capacitor to ground (the two capacitors share the grounded middle node). Drawing number 2975 F37.\n",
+    "evidence": "Same as ltc2975-p95-fig37-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig37-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\nFigure 37. Sense Resistor Current Sensing Circuits\n",
+    "new": "\n**Figure 37. Sense Resistor Current Sensing Circuits**\n",
+    "evidence": "PDF p95: the caption 'Figure 37. Sense Resistor Current Sensing Circuits' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig38-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "![Figure 38: DCR Current Sensing Circuits. The diagram shows a DC/DC converter output connected to a load inductor L and a DCR. A second-order R-C filter is used for current sensing. The filter consists of two resistors R_CM1 and R_CM2, and two capacitors C_CM1 and C_CM2. The output of the filter is connected to the I_SENSEP and I_SENSEM pins of an LTC2975 IC. The diagram is labeled 2975 F38.](",
+    "new": "![Figure 38. DCR Current Sensing Circuits (description written from the PDF drawing). The switch node SWX0 feeds the inductor L with its DCR. One R_CM1 goes from SWX0 and one from the far end of the DCR to two nodes, each with a C_CM1 capacitor to ground. From those nodes, one R_CM2 goes to I_SENSEP and one to I_SENSEM of the LTC2975, each with a C_CM2 capacitor to ground (the C_CM2 pair shares a grounded middle node). Drawing number 2975 F38.](",
+    "evidence": "PDF p95 Figure 38 (render): every filter element is drawn twice (two R_CM1, two C_CM1, two R_CM2, two C_CM2), forming a two-stage filter from SWX0 and the DCR output node to I_SENSEP/I_SENSEM; the AI text listed one of each and called the circuit a DC/DC output with a 'load inductor'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig38-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\nFigure 38: DCR Current Sensing Circuits. The diagram shows a DC/DC converter output connected to a load inductor L and a DCR. A second-order R-C filter is used for current sensing. The filter consists of two resistors R\\_CM1 and R\\_CM2, and two capacitors C\\_CM1 and C\\_CM2. The output of the filter is connected to the I\\_SENSEP and I\\_SENSEM pins of an LTC2975 IC. The diagram is labeled 2975 F38.\n",
+    "new": "\nFigure 38. DCR Current Sensing Circuits (description written from the PDF drawing). The switch node SWX0 feeds the inductor L with its DCR. One R_CM1 goes from SWX0 and one from the far end of the DCR to two nodes, each with a C_CM1 capacitor to ground. From those nodes, one R_CM2 goes to I_SENSEP and one to I_SENSEM of the LTC2975, each with a C_CM2 capacitor to ground (the C_CM2 pair shares a grounded middle node). Drawing number 2975 F38.\n",
+    "evidence": "Same as ltc2975-p95-fig38-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p95-fig38-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 95,
+    "old": "\nFigure 38. DCR Current Sensing Circuits\n",
+    "new": "\n**Figure 38. DCR Current Sensing Circuits**\n",
+    "evidence": "PDF p95: the caption 'Figure 38. DCR Current Sensing Circuits' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
