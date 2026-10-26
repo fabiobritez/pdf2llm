@@ -28233,5 +28233,83 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p26-d-outline-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 26,
+    "old": "The figure shows the mechanical specifications for a D (R-PDSO-G16) Plastic Small Outline package. It includes a top view, a side view, and two detail views of the lead profile.\n\n**Top View:** Shows a 16-pin package with pins numbered 1 to 16. The total length is 0.394 (10,00) inches / 0.386 (9,80) mm. The total width is 0.244 (6,20) inches / 0.228 (5,80) mm. The body width is 0.157 (4,00) inches / 0.150 (3,80) mm. The pitch between pins is 0.050 (1,27) mm. A feature control frame specifies a flatness of 0.010 (0,25) mm relative to datum C. A position tolerance of 0.010 (0,25) mm at maximum material condition (M) is specified for the pin locations. A detail callout D indicates a body width tolerance of 0.020 (0,51) inches / 0.012 (0,31) mm.\n\n**Side View:** Shows the package profile with a maximum height of 0.069 (1,75) mm. The lead thickness is 0.010 (0,25) mm / 0.004 (0,10) mm.\n\n**Detail View 1 (Top Right):** Shows a close-up of the lead profile with a thickness of 0.010 (0,25) mm / 0.004 (0,10) mm.\n\n**Detail View 2 (Bottom Center):** Shows a close-up of the lead profile with a thickness of 0.010 (0,25) mm / 0.005 (0,13) mm. The lead angle is 0°-8°. The distance from the seating plane to the lead tip is 0.050 (1,27) mm / 0.016 (0,40) mm. A surface finish callout specifies a maximum height of 0.004 (0,10) mm. The gauge plane is indicated at the lead root.",
+    "new": "The figure shows the D (R-PDSO-G16) package outline (description written from the drawing; all dimensions in inches, millimeters in parentheses).\n\n**Top View:** 16 leads, pins 1-8 along the bottom (pin 1 at the left, next to the Pin 1 Index Area) and 9-16 along the top (16 at the left). Body length 0.394 (10,00) / 0.386 (9,80), flagged with note C. Width across the leads 0.244 (6,20) / 0.228 (5,80). Body width 0.157 (4,00) / 0.150 (3,80), flagged with note D. Lead pitch 0.050 (1,27) (boxed basic dimension). Lead width 0.020 (0,51) / 0.012 (0,31), with a position tolerance frame 0.010 (0,25) at maximum material condition (M).\n\n**Side View:** Package height 0.069 (1,75) Max; standoff 0.010 (0,25) / 0.004 (0,10).\n\n**Detail View (circled lead):** Lead thickness 0.010 (0,25) / 0.005 (0,13). Gauge Plane 0.010 (0,25) (boxed) above the Seating Plane. Lead angle 0°–8°. Foot length 0.050 (1,27) / 0.016 (0,40). Coplanarity 0.004 (0,10) to the Seating Plane.",
+    "evidence": "PDF p26 D (R-PDSO-G16) drawing (vector, no text layer): dimensions are inches with millimeters in parentheses, not 'inches / mm'; 0.394/0.386 is the body length (note C) and 0.020/0.012 the lead width with a 0.010 (0,25) M position tolerance; there is no flatness frame to datum C and note D flags the 0.157/0.150 body width; 0.010/0.004 in the side view is the standoff, 0.004 (0,10) is coplanarity and 0.010 (0,25) the gauge plane; the two 'detail views' were one side view and one lead detail. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p27-generic-package-view-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 27,
+    "old": "![Two views of a Texas Instruments UQFN package: top view and side view.](87d9833379b490461fb3451cf389cb4a_img.jpg)\n\nThe image displays two views of a Texas Instruments UQFN (Ultra Thin Quad Flat No-lead) package. On the left is a top-down view of the package, which is black with the Texas Instruments logo and name printed in white. On the right is a side view of the same package, showing its low profile and the 16 leads arranged in a quad flat configuration. The leads are silver-colored with a copper-colored base.\n\nTwo views of a Texas Instruments UQFN package: top view and side view.",
+    "new": "![Two rendered views of the RSV UQFN package: top side and bottom side](87d9833379b490461fb3451cf389cb4a_img.jpg)\n\nRendered images of the RSV 16 UQFN package: on the left the top side, black with the Texas Instruments logo and name in white, small copper-colored lead ends visible along the edge; on the right the bottom side, showing the 16 silver-colored pads with copper-colored ends at the package edges, one corner pad having a chamfered end.\n\n4231225/A",
+    "evidence": "PDF p27 generic package view: the right image is the bottom side with the 16 pads, not a 'side view'; the drawing number 4231225/A printed at the bottom of the page was missing. Rewritten from the images; repeated alt text removed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p28-rsv-outline-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 28,
+    "old": "Technical mechanical drawing of RSV0016A package outline showing top view, side view, bottom pin layout view, and side pin detail with millimeter dimensions.\n\n4220314/C",
+    "new": "RSV0016A package outline (description written from the drawing; dimensions in mm). Top view: body 1.85 / 1.75 wide (datum B) and 2.65 / 2.55 long (datum A), PIN 1 INDEX AREA in the upper-left corner. Side view: height 0.55 / 0.45, standoff 0.05 / 0.00, coplanarity 0.05 C to the SEATING PLANE (datum C). Bottom view: pads 1-4 on the left side (1 at the bottom), 5-8 along the top, 9-12 on the right side, 13-16 along the bottom; SYMM centerlines in both directions. 2X 1.2 (boxed) between the outer pad centerlines on each side, 12X 0.4 (boxed) pitch. 15X 0.45 / 0.35 pad length, 0.55 / 0.45 for pad 1, which carries the PIN 1 ID (45° X 0.1) chamfer. 16X 0.25 / 0.15 pad width with position tolerances 0.07 Ⓜ C A B and 0.05 Ⓜ. Side profile at the right: (0.13) TYP.\n\n4220314/C",
+    "evidence": "PDF p28 RSV0016A package outline: the md had only a generic sentence (repeating the alt text) and none of the drawing dimensions. Rewritten from the drawing and the PDF text layer.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p28-headings-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 28,
+    "old": "# **RSV0016A**",
+    "new": "# RSV0016A",
+    "evidence": "PDF p28: plain title block text; ** removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p28-heading-uqfn-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 28,
+    "old": "### **UQFN - 0.55 mm max height**",
+    "new": "### UQFN - 0.55 mm max height",
+    "evidence": "PDF p28: plain title block text; ** removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p28-notes-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 28,
+    "old": "##### **NOTES:**",
+    "new": "##### NOTES:",
+    "evidence": "PDF p28: 'NOTES:' label; ** removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
