@@ -9258,5 +9258,187 @@
       "pdftotext"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p25-ta06-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 25,
+    "old": "![Circuit diagram for LTC3313 in Forced Continuous Mode. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V). The output voltage is V<sub>OUT</sub> (1V, 15A). The inductor L is 55nH (WURTH 744340300055). The frequency is 5MHz. The diagram shows connections for EN, MODE/SYNC, SSTT, ITH, PGND, PGOOD, SW, FB, AGND, and RT. Component values include 22µF, 649k, 100k, 0.1µF, 4.12k, 680pF, 10pF, 100k, and 22µF x3.](",
+    "new": "![Circuit diagram for LTC3313 in Forced Continuous Mode. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V), decoupled by 22µF and 0.1µF capacitors on each side of the IC. The output voltage is V<sub>OUT</sub> (1V, 15A). The inductor L is 55nH (WURTH 744340300055). The frequency is 5MHz, set by a 100k resistor from RT to ground. EN is driven by a 649k/100k divider from V<sub>IN</sub>; MODE/SYNC is drawn with an arrow out to a clock waveform; SSTT has 0.1µF to ground; ITH has 4.12k in series with 680pF to ground. FB connects to a 100k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the upper 100k; a 1µF capacitor connects V<sub>IN</sub> to AGND; the output has 22µF ×3 capacitors. PGOOD is not connected in the drawing.](",
+    "evidence": "PDF p25 TA06 schematic (render): the description gave only a value list (no 1µF V_IN-AGND capacitor, '22µF x3' where the PDF prints ×3) and no connections; rewritten from the drawing (RT 100k, 649k/100k EN divider, 100k/100k FB divider with 10pF, MODE/SYNC clock output).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p25-ta06-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 25,
+    "old": "\nCircuit diagram for LTC3313 in Forced Continuous Mode. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V). The output voltage is V<sub>OUT</sub> (1V, 15A). The inductor L is 55nH (WURTH 744340300055). The frequency is 5MHz. The diagram shows connections for EN, MODE/SYNC, SSTT, ITH, PGND, PGOOD, SW, FB, AGND, and RT. Component values include 22µF, 649k, 100k, 0.1µF, 4.12k, 680pF, 10pF, 100k, and 22µF x3.\n",
+    "new": "\nCircuit diagram for LTC3313 in Forced Continuous Mode. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V), decoupled by 22µF and 0.1µF capacitors on each side of the IC. The output voltage is V<sub>OUT</sub> (1V, 15A). The inductor L is 55nH (WURTH 744340300055). The frequency is 5MHz, set by a 100k resistor from RT to ground. EN is driven by a 649k/100k divider from V<sub>IN</sub>; MODE/SYNC is drawn with an arrow out to a clock waveform; SSTT has 0.1µF to ground; ITH has 4.12k in series with 680pF to ground. FB connects to a 100k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the upper 100k; a 1µF capacitor connects V<sub>IN</sub> to AGND; the output has 22µF ×3 capacitors. PGOOD is not connected in the drawing.\n",
+    "evidence": "PDF p25 TA06 schematic (render): the description gave only a value list (no 1µF V_IN-AGND capacitor, '22µF x3' where the PDF prints ×3) and no connections; rewritten from the drawing (RT 100k, 649k/100k EN divider, 100k/100k FB divider with 10pF, MODE/SYNC clock output).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p25-ta07-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 25,
+    "old": "![Circuit diagram for LTC3313 in Pulse-Skipping Mode. The input voltage is V<sub>IN</sub> (4.5V TO 5.5V). The output voltage is V<sub>OUT</sub> (3.3V, 15A). The inductor L is 120nH (COILCRAFT XGL4018-121MEC). The frequency is 2MHz. The diagram shows connections for EN, MODE/SYNC, SSTT, ITH, PGND, PGOOD, SW, FB, AGND, and RT. Component values include 22µF, 1M, 100k, 0.1µF, 0.1µF, 22µF, 100k, 120nH, 10pF, 562k, 100k, 1500pF, and 1k.](",
+    "new": "![Circuit diagram for LTC3313 in Pulse-Skipping Mode. The input voltage is V<sub>IN</sub> (4.5V TO 5.5V), decoupled by 22µF and 0.1µF capacitors on each side of the IC. The output voltage is V<sub>OUT</sub> (3.3V, 15A). The inductor L is 120nH (COILCRAFT XGL4018-121MEC). The frequency is 2MHz (RT and MODE/SYNC are both tied to V<sub>IN</sub>). EN is driven by a 1M/100k divider from V<sub>IN</sub>; SSTT has 0.1µF to ground; ITH has 1k in series with 1500pF to ground. FB connects to a 562k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the 562k; a 1µF capacitor connects V<sub>IN</sub> to AGND; the output has 22µF ×2 capacitors. PGOOD is the PGOOD output, pulled up to V<sub>OUT</sub> through 100k.](",
+    "evidence": "PDF p25 TA07 schematic (render): the description gave only a value list (no 1µF V_IN-AGND capacitor) and no connections; rewritten from the drawing (RT and MODE/SYNC tied to V_IN for pulse-skipping at 2MHz, 1M/100k EN divider, 562k/100k FB divider with 10pF, 100k PGOOD pull-up to V_OUT).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p25-ta07-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 25,
+    "old": "\nCircuit diagram for LTC3313 in Pulse-Skipping Mode. The input voltage is V<sub>IN</sub> (4.5V TO 5.5V). The output voltage is V<sub>OUT</sub> (3.3V, 15A). The inductor L is 120nH (COILCRAFT XGL4018-121MEC). The frequency is 2MHz. The diagram shows connections for EN, MODE/SYNC, SSTT, ITH, PGND, PGOOD, SW, FB, AGND, and RT. Component values include 22µF, 1M, 100k, 0.1µF, 0.1µF, 22µF, 100k, 120nH, 10pF, 562k, 100k, 1500pF, and 1k.\n",
+    "new": "\nCircuit diagram for LTC3313 in Pulse-Skipping Mode. The input voltage is V<sub>IN</sub> (4.5V TO 5.5V), decoupled by 22µF and 0.1µF capacitors on each side of the IC. The output voltage is V<sub>OUT</sub> (3.3V, 15A). The inductor L is 120nH (COILCRAFT XGL4018-121MEC). The frequency is 2MHz (RT and MODE/SYNC are both tied to V<sub>IN</sub>). EN is driven by a 1M/100k divider from V<sub>IN</sub>; SSTT has 0.1µF to ground; ITH has 1k in series with 1500pF to ground. FB connects to a 562k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the 562k; a 1µF capacitor connects V<sub>IN</sub> to AGND; the output has 22µF ×2 capacitors. PGOOD is the PGOOD output, pulled up to V<sub>OUT</sub> through 100k.\n",
+    "evidence": "PDF p25 TA07 schematic (render): the description gave only a value list (no 1µF V_IN-AGND capacitor) and no connections; rewritten from the drawing (RT and MODE/SYNC tied to V_IN for pulse-skipping at 2MHz, 1M/100k EN divider, 562k/100k FB divider with 10pF, 100k PGOOD pull-up to V_OUT).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p25-ta06-x3-as-printed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 25,
+    "old": "$V_{OUT}$  1V 15A\n\n22µF x3",
+    "new": "$V_{OUT}$  1V 15A\n\n22µF ×3",
+    "evidence": "PDF p25 TA06 prints '22µF ×3' with the multiplication sign (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p25-ta07-x2-as-printed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 25,
+    "old": "$V_{OUT}$  3.3V 15A\n\n22µF x2",
+    "new": "$V_{OUT}$  3.3V 15A\n\n22µF ×2",
+    "evidence": "PDF p25 TA07 prints '22µF ×2' with the multiplication sign (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p26-running-header",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 26,
+    "old": "{25}------------------------------------------------\n\n# LTC3313\n\n---\n\n## TYPICAL APPLICATIONS",
+    "new": "{25}------------------------------------------------\n\n## TYPICAL APPLICATIONS",
+    "evidence": "PDF p26: 'LTC3313' is the running page header (as on every page) and the rule is decoration; the md made it an H1 heading followed by '---'. Running headers are omitted on the other pages.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p26-ta08-description",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 26,
+    "old": "Image: LTC3313 schematic for 2MHz, 0.5V, 15A, Forced Continuous Mode, Low Part Count application\n\nL = WURTH 744340300055\n\n\n\n---\n\n26  \nFor more information [www.analog.com](https://www.analog.com)  \nRev. A\n",
+    "new": "*[Schematic not extracted as an image in this conversion; see PDF p26. Description written from the drawing.]*\n\nLTC3313 schematic. The input V<sub>IN</sub> = 3.0V TO 3.6V is decoupled by 22µF and 0.1µF capacitors on each side of the IC; EN and RT are tied to V<sub>IN</sub> (2MHz default frequency) and MODE/SYNC is tied to ground (forced continuous mode). SSTT has 0.1µF to ground; ITH has 6.81k in series with 680pF to ground. SW drives L, 55nH to V<sub>OUT</sub> = 0.5V, 15A, which has 47µF ×4 output capacitors; FB is connected directly to V<sub>OUT</sub> (no divider). A 1µF capacitor connects V<sub>IN</sub> to AGND, and AGND is connected to the output ground. PGOOD is not connected.\n\n3313 TA08\n\nL = WURTH 744340300055\n",
+    "evidence": "PDF p26 TA08 (render + pdftotext): the md had only an 'Image:' placeholder line (no image file was extracted), no circuit content and no drawing number, followed by the page footer ('26', 'For more information www.analog.com', 'Rev. A'), which is omitted on the other pages. Description written from the drawing; '3313 TA08' is printed under the schematic.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p27-dimension-table-columns",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 27,
+    "old": "| SYMBOL | DIMENSIONS |      |      | NOTES         |\n|--------|------------|------|------|---------------|\n|        | MIN        | NOM  | MAX  |               |\n| A      | 0.85       | 0.95 | 1.05 |               |\n| A1     | 0.01       | 0.02 | 0.03 |               |\n| L      | 0.30       | 0.40 | 0.50 |               |\n| b      | 0.22       | 0.25 | 0.28 |               |\n| D      | 3.00       |      |      |               |\n| E      | 3.00       |      |      |               |\n| D1     | 1.70       |      |      |               |\n| E1     | 1.70       |      |      |               |\n| e      | 0.50       |      |      |               |\n| H1     | 0.25 REF   |      |      | SUBSTRATE THK |\n| H2     | 0.70 REF   |      |      | MOLD CAP HT   |\n| aaa    | 0.10       |      |      |               |\n| bbb    | 0.10       |      |      |               |\n| ccc    | 0.08       |      |      |               |\n| ddd    | 0.10       |      |      |               |\n| eee    | 0.15       |      |      |               |\n| fff    | 0.08       |      |      |               |",
+    "new": "| SYMBOL | DIMENSIONS |          |      | NOTES         |\n|--------|------------|----------|------|---------------|\n|        | MIN        | NOM      | MAX  |               |\n| A      | 0.85       | 0.95     | 1.05 |               |\n| A1     | 0.01       | 0.02     | 0.03 |               |\n| L      | 0.30       | 0.40     | 0.50 |               |\n| b      | 0.22       | 0.25     | 0.28 |               |\n| D      |            | 3.00     |      |               |\n| E      |            | 3.00     |      |               |\n| D1     |            | 1.70     |      |               |\n| E1     |            | 1.70     |      |               |\n| e      |            | 0.50     |      |               |\n| H1     |            | 0.25 REF |      | SUBSTRATE THK |\n| H2     |            | 0.70 REF |      | MOLD CAP HT   |\n| aaa    |            |          | 0.10 |               |\n| bbb    |            |          | 0.10 |               |\n| ccc    |            |          | 0.08 |               |\n| ddd    |            |          | 0.10 |               |\n| eee    |            |          | 0.15 |               |\n| fff    |            |          | 0.08 |               |",
+    "evidence": "PDF p27 dimension table (render, rotated page; PyMuPDF word positions): D, E, D1, E1, e, H1 and H2 are printed in the NOM column and aaa, bbb, ccc, ddd, eee, fff in the MAX column; the md had all of them under MIN.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p27-running-header",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 27,
+    "old": "**PACKAGE DESCRIPTION**\n\n**LTC3313**\n\n**LQFN Package",
+    "new": "**PACKAGE DESCRIPTION**\n\n**LQFN Package",
+    "evidence": "PDF p27: 'LTC3313' is the running page header, not part of the package title (render); running headers are omitted on the other pages.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p27-drawing-labels",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 27,
+    "old": "LQFN 18 0920 REV Ø\n\nFor more information [www.analog.com](http://www.analog.com)\n\nRev. A\n\n27\n",
+    "new": "LQFN 18 0920 REV Ø\n\n*[Package drawings not extracted as an image in this conversion; see PDF p27. Printed labels, grouped by view:]*\n\n- PACKAGE TOP VIEW: D, E, datums X and Y, 2× aaa Z, PIN 1 CORNER (note 4).\n- PACKAGE BOTTOM VIEW: pins 1, 5, 6, 9, 10, 14, 15, 18; e, b, D1, E1; exposed pad dimensions 1.70, 1.70, 0.25, 0.25, 0.25, 0.15; PIN 1 NOTCH 0.25 × 45°; SEE NOTES 3; note 6; ccc Ⓜ Z X Y; DETAIL A.\n- Side view: A; DETAIL B. DETAIL A: L, e, e/2, 18b, eee Ⓜ Z X Y, fff Ⓜ Z. DETAIL B: SUBSTRATE, MOLD CAP, H1, H2, // bbb Z, DETAIL C. DETAIL C: A1, 18×, ddd Z.\n- SUGGESTED PCB LAYOUT TOP VIEW: 3.50 ±0.05 (both directions), PACKAGE OUTLINE, pad centre coordinates 1.0000, 0.5000, 0.0000, 0.5000, 1.0000 and 0.7500, 0.2500, 0.0000, 0.2500, 0.7500; 0.25, 0.65, 0.15, 1.70, 1.70, 0.25, 0.25, 0.25, 0.15.\n- PACKAGE IN TRAY LOADING ORIENTATION: LTXXXXXX marking, COMPONENT PIN 1, TRAY PIN 1 BEVEL.\n",
+    "evidence": "PDF p27 (render + pdftotext, rotated page): the package drawings (top/bottom view, details A-C, suggested PCB layout, tray loading orientation) were missing from the md and no image file was extracted; their printed labels are listed by view. The page footer ('For more information www.analog.com', 'Rev. A', '27') is omitted on the other pages.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p29-ta09-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 29,
+    "old": "![Circuit diagram of the LTC3313 in a typical application. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V). The LTC3313 is configured for 3MHz, 1.0V, 15A, Forced Continuous Mode. The diagram shows the input capacitors (22µF, 0.1µF, 0.1µF, 22µF), the LTC3313 IC, the output inductor (L = COILCRAFT XEL3515-720MEB), the output capacitors (22µF x3), and the feedback network (10pF, 100k, 100k, 178k). The output voltage is V<sub>OUT</sub> (1.0V, 15A).](",
+    "new": "![Circuit diagram of the LTC3313 in a typical application. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V), decoupled by 22µF and 0.1µF capacitors on each side of the IC; EN is tied to V<sub>IN</sub>. The LTC3313 is configured for 3MHz, 1.0V, 15A, Forced Continuous Mode: RT has a 178k resistor to ground and MODE/SYNC is drawn with an output arrow. SSTT has 0.1µF to ground; ITH has 4.75k in series with 470pF to ground. SW drives the 72nH output inductor (L = COILCRAFT XEL3515-720MEB) to V<sub>OUT</sub> (1.0V, 15A), which has 22µF ×3 output capacitors. FB connects to a 100k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the upper 100k; a 1µF capacitor connects V<sub>IN</sub> to AGND. PGOOD is not connected.](",
+    "evidence": "PDF p29 TA09 schematic (render): the 178k resistor is on RT (frequency setting), not part of the feedback network (FB has a 100k/100k divider with 10pF); the description omitted the 72nH inductor value, the 4.75k/470pF ITH network, the 0.1µF SSTT and 1µF V_IN-AGND capacitors, and printed '22µF x3' where the PDF has ×3.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p29-ta09-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 29,
+    "old": "\nCircuit diagram of the LTC3313 in a typical application. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V). The LTC3313 is configured for 3MHz, 1.0V, 15A, Forced Continuous Mode. The diagram shows the input capacitors (22µF, 0.1µF, 0.1µF, 22µF), the LTC3313 IC, the output inductor (L = COILCRAFT XEL3515-720MEB), the output capacitors (22µF x3), and the feedback network (10pF, 100k, 100k, 178k). The output voltage is V<sub>OUT</sub> (1.0V, 15A).\n",
+    "new": "\nCircuit diagram of the LTC3313 in a typical application. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V), decoupled by 22µF and 0.1µF capacitors on each side of the IC; EN is tied to V<sub>IN</sub>. The LTC3313 is configured for 3MHz, 1.0V, 15A, Forced Continuous Mode: RT has a 178k resistor to ground and MODE/SYNC is drawn with an output arrow. SSTT has 0.1µF to ground; ITH has 4.75k in series with 470pF to ground. SW drives the 72nH output inductor (L = COILCRAFT XEL3515-720MEB) to V<sub>OUT</sub> (1.0V, 15A), which has 22µF ×3 output capacitors. FB connects to a 100k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the upper 100k; a 1µF capacitor connects V<sub>IN</sub> to AGND. PGOOD is not connected.\n",
+    "evidence": "PDF p29 TA09 schematic (render): the 178k resistor is on RT (frequency setting), not part of the feedback network (FB has a 100k/100k divider with 10pF); the description omitted the 72nH inductor value, the 4.75k/470pF ITH network, the 0.1µF SSTT and 1µF V_IN-AGND capacitors, and printed '22µF x3' where the PDF has ×3.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p29-ta09-labels",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 29,
+    "old": "Circuit diagram of the LTC3313 in a typical application. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V), decoupled by 22µF and 0.1µF capacitors on each side of the IC; EN is tied to V<sub>IN</sub>. The LTC3313 is configured for 3MHz, 1.0V, 15A, Forced Continuous Mode: RT has a 178k resistor to ground and MODE/SYNC is drawn with an output arrow. SSTT has 0.1µF to ground; ITH has 4.75k in series with 470pF to ground. SW drives the 72nH output inductor (L = COILCRAFT XEL3515-720MEB) to V<sub>OUT</sub> (1.0V, 15A), which has 22µF ×3 output capacitors. FB connects to a 100k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the upper 100k; a 1µF capacitor connects V<sub>IN</sub> to AGND. PGOOD is not connected.\n\n## RELATED PARTS",
+    "new": "Circuit diagram of the LTC3313 in a typical application. The input voltage is V<sub>IN</sub> (3.0V TO 3.6V), decoupled by 22µF and 0.1µF capacitors on each side of the IC; EN is tied to V<sub>IN</sub>. The LTC3313 is configured for 3MHz, 1.0V, 15A, Forced Continuous Mode: RT has a 178k resistor to ground and MODE/SYNC is drawn with an output arrow. SSTT has 0.1µF to ground; ITH has 4.75k in series with 470pF to ground. SW drives the 72nH output inductor (L = COILCRAFT XEL3515-720MEB) to V<sub>OUT</sub> (1.0V, 15A), which has 22µF ×3 output capacitors. FB connects to a 100k/100k divider from V<sub>OUT</sub> to AGND with 10pF across the upper 100k; a 1µF capacitor connects V<sub>IN</sub> to AGND. PGOOD is not connected.\n\n3313 TA09\n\nL = COILCRAFT XEL3515-720MEB\n\n## RELATED PARTS",
+    "evidence": "PDF p29 prints the drawing number '3313 TA09' and 'L = COILCRAFT XEL3515-720MEB' under the schematic (pdftotext + render); both were missing as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
