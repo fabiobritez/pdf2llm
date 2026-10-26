@@ -22565,5 +22565,136 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p1-description-column-split",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 1,
+    "old": "The logic levels\n\nof the direction-control (DIR) input",
+    "new": "The logic levels of the direction-control (DIR) input",
+    "evidence": "PDF p1: 'The logic levels' ends the left column and 'of the direction-control (DIR) input' starts the right column; it is one paragraph (one sentence). Rejoined.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p1-package-rsv-comma-as-printed",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 1,
+    "old": "|              | RSV (UQFN, 16)         | 2.6mm × 1.8mm               |",
+    "new": "|              | RSV, (UQFN, 16)        | 2.6mm × 1.8mm               |",
+    "evidence": "PDF p1 Package Information table prints 'RSV, (UQFN, 16)' (comma after RSV, pdftotext and image). Manufacturer typo kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p2-typical-application-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 2,
+    "old": "The diagram illustrates a typical application of the SN74AVC4T774 device. It shows the device connected between an MCU and an SPI Peripheral. The MCU's GPIO1 is connected to the  $\\overline{\\text{OE}}$  input of the SN74AVC4T774. The SN74AVC4T774's  $\\text{V}_{\\text{CCA}}$  and  $\\text{V}_{\\text{CCB}}$  pins are connected to 1.8 V and 3.3 V supplies, respectively. The  $\\overline{\\text{OE}}$  pin is also connected to a pull-up resistor network that includes a resistor to 1.8 V and a switch-like component to GND. The SN74AVC4T774's",
+    "new": "The diagram illustrates a typical application of the SN74AVC4T774 device (description written from the PDF drawing). It shows the device connected between an MCU and an SPI Peripheral. The MCU's GPIO1 is connected to the  $\\overline{\\text{OE}}$  input of the SN74AVC4T774. The SN74AVC4T774's  $\\text{V}_{\\text{CCA}}$  and  $\\text{V}_{\\text{CCB}}$  pins are connected to 1.8 V and 3.3 V supplies, respectively; the MCU is also supplied from the 1.8 V rail and the SPI Peripheral from the 3.3 V rail. The  $\\overline{\\text{OE}}$  line also has a pullup resistor (drawn dashed) to the 1.8 V rail. The SN74AVC4T774's",
+    "evidence": "PDF p2 drawing: the OE/GPIO1 line has a single dashed-outline pullup resistor to the 1.8 V rail; there is no switch or component to GND. The 1.8 V rail also feeds the MCU box and the 3.3 V rail the SPI Peripheral box (previously not stated).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-4-rsv-pinout-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "16-Pin UQFN (Top View). Pinout diagram for a 16-pin UQFN package. Pin 1 is DIR2, 2 is DIR1, 3 is A1, 4 is A2, 5 is A3, 6 is A4, 7 is DIR3, 8 is DIR4, 9 is OE, 10 is GND, 11 is B4, 12 is B3, 13 is B2, 14 is B1, 15 is VCCB, and 16 is VCCA. Pin 1 has a circle symbol indicating the orientation. A dashed rectangle labeled 'Thermal Pad' is shown in the center.](",
+    "new": "16-Pin UQFN (Top View). Pinout diagram for a 16-pin UQFN package (pin numbers as printed in the PDF drawing). Pin 1 is A1, 2 is A2, 3 is A3, 4 is A4 (left side, top to bottom); 5 is DIR3, 6 is DIR4, 7 is OE, 8 is GND (bottom side); 9 is B4, 10 is B3, 11 is B2, 12 is B1 (right side, bottom to top); 13 is VCCB, 14 is VCCA, 15 is DIR1, 16 is DIR2 (top side, right to left). Pin 1 is marked by a chamfered pad corner; no thermal pad is drawn.](",
+    "evidence": "PDF p4 Figure 4-4 (RSV UQFN): pins 1-4 A1-A4, 5 DIR3, 6 DIR4, 7 OE, 8 GND, 9-12 B4-B1, 13 VCCB, 14 VCCA, 15 DIR1, 16 DIR2 (rotated labels, image and pdftotext), consistent with the RSV column of Table 4-1 on p5. The md gave the PW/RGY numbering with DIR1/DIR2 swapped, and a pin-1 circle and thermal pad that the RSV drawing does not have.",
+    "sources": [
+      "pdf-image",
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-4-rsv-pinout-table",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "| DIR2 | 1 | 16 | V <sub>CCA</sub> |\n| DIR1 | 2 | 15 | V <sub>CCB</sub> |\n| A1   | 3 | 14 | B1               |\n| A2   | 4 | 13 | B2               |\n| A3   | 5 | 12 | B3               |\n| A4   | 6 | 11 | B4               |\n| DIR3 | 7 | 10 | GND              |\n| DIR4 | 8 | 9  | OE               |",
+    "new": "| A1   | 1 | 16 | DIR2             |\n| A2   | 2 | 15 | DIR1             |\n| A3   | 3 | 14 | V <sub>CCA</sub> |\n| A4   | 4 | 13 | V <sub>CCB</sub> |\n| DIR3 | 5 | 12 | B1               |\n| DIR4 | 6 | 11 | B2               |\n| OE   | 7 | 10 | B3               |\n| GND  | 8 | 9  | B4               |",
+    "evidence": "PDF p4 Figure 4-4 (RSV UQFN): pins 1-4 A1-A4, 5 DIR3, 6 DIR4, 7 OE, 8 GND, 9-12 B4-B1, 13 VCCB, 14 VCCA, 15 DIR1, 16 DIR2 (rotated labels, image and pdftotext), consistent with the RSV column of Table 4-1 on p5. The md gave the PW/RGY numbering with DIR1/DIR2 swapped, and a pin-1 circle and thermal pad that the RSV drawing does not have. Pin-number table rebuilt as pin n / pin 17-n pairs like the other packages.",
+    "sources": [
+      "pdf-image",
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-4-rsv-pinout-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "16-Pin UQFN (Top View). Pinout diagram for a 16-pin UQFN package. Pin 1 is DIR2, 2 is DIR1, 3 is A1, 4 is A2, 5 is A3, 6 is A4, 7 is DIR3, 8 is DIR4, 9 is OE, 10 is GND, 11 is B4, 12 is B3, 13 is B2, 14 is B1, 15 is VCCB, and 16 is VCCA. Pin 1 has a circle symbol indicating the orientation. A dashed rectangle labeled 'Thermal Pad' is shown in the center.\n",
+    "new": "16-Pin UQFN (Top View). Pinout diagram for a 16-pin UQFN package (pin numbers as printed in the PDF drawing). Pin 1 is A1, 2 is A2, 3 is A3, 4 is A4 (left side, top to bottom); 5 is DIR3, 6 is DIR4, 7 is OE, 8 is GND (bottom side); 9 is B4, 10 is B3, 11 is B2, 12 is B1 (right side, bottom to top); 13 is VCCB, 14 is VCCA, 15 is DIR1, 16 is DIR2 (top side, right to left). Pin 1 is marked by a chamfered pad corner; no thermal pad is drawn.\n",
+    "evidence": "PDF p4 Figure 4-4 (RSV UQFN): pins 1-4 A1-A4, 5 DIR3, 6 DIR4, 7 OE, 8 GND, 9-12 B4-B1, 13 VCCB, 14 VCCA, 15 DIR1, 16 DIR2 (rotated labels, image and pdftotext), consistent with the RSV column of Table 4-1 on p5. The md gave the PW/RGY numbering with DIR1/DIR2 swapped, and a pin-1 circle and thermal pad that the RSV drawing does not have. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-5-bqb-no-circle-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "16-pin WQFN package. Pin 1 is DIR1, 2 is DIR2, 3 is A1, 4 is A2, 5 is A3, 6 is A4, 7 is DIR3, 8 is DIR4, 9 is OE, 10 is GND, 11 is B4, 12 is B3, 13 is B2, 14 is B1, 15 is VCCB, and 16 is VCCA. Pin 1 has a circle symbol indicating the orientation. A dashed rectangle labeled 'Thermal Pad' is shown in the center.](",
+    "new": "16-pin WQFN package. Pin 1 is DIR1, 2 is DIR2, 3 is A1, 4 is A2, 5 is A3, 6 is A4, 7 is DIR3, 8 is DIR4, 9 is OE, 10 is GND, 11 is B4, 12 is B3, 13 is B2, 14 is B1, 15 is VCCB, and 16 is VCCA. No pin-1 circle is drawn; pins 1 and 16 are on the top edge, pins 8 and 9 on the bottom edge, and the thermal pad outline has a chamfered top-left corner. A dashed rectangle labeled 'Thermal Pad' is shown in the center.](",
+    "evidence": "PDF p4 Figure 4-5 (BQB): there is no pin-1 circle; DIR1 (1) and VCCA (16) are on the top edge, DIR4 (8) and OE (9) on the bottom edge, and the dashed thermal pad has a chamfered corner.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-5-bqb-no-circle-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "16-pin WQFN package. Pin 1 is DIR1, 2 is DIR2, 3 is A1, 4 is A2, 5 is A3, 6 is A4, 7 is DIR3, 8 is DIR4, 9 is OE, 10 is GND, 11 is B4, 12 is B3, 13 is B2, 14 is B1, 15 is VCCB, and 16 is VCCA. Pin 1 has a circle symbol indicating the orientation. A dashed rectangle labeled 'Thermal Pad' is shown in the center.\n",
+    "new": "16-pin WQFN package. Pin 1 is DIR1, 2 is DIR2, 3 is A1, 4 is A2, 5 is A3, 6 is A4, 7 is DIR3, 8 is DIR4, 9 is OE, 10 is GND, 11 is B4, 12 is B3, 13 is B2, 14 is B1, 15 is VCCB, and 16 is VCCA. No pin-1 circle is drawn; pins 1 and 16 are on the top edge, pins 8 and 9 on the bottom edge, and the thermal pad outline has a chamfered top-left corner. A dashed rectangle labeled 'Thermal Pad' is shown in the center.\n",
+    "evidence": "PDF p4 Figure 4-5 (BQB): there is no pin-1 circle; DIR1 (1) and VCCA (16) are on the top edge, DIR4 (8) and OE (9) on the bottom edge, and the dashed thermal pad has a chamfered corner. Same as -alt.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-2-dyy-not-to-scale",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "A dashed rectangle labeled 'Thermal Pad' is shown in the center.\n\n**Figure 4-2.",
+    "new": "A dashed rectangle labeled 'Thermal Pad' is shown in the center. The drawing is marked 'Not to scale'.\n\n**Figure 4-2.",
+    "evidence": "PDF p4 Figure 4-2 prints 'Not to scale' under the package outline; the text was missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p4-fig4-3-rgy-not-to-scale",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 4,
+    "old": "A dashed rectangle labeled 'Thermal Pad' is shown in the center.\n\n**Figure 4-3.",
+    "new": "A dashed rectangle labeled 'Thermal Pad' is shown in the center. The drawing is marked 'Not to scale'.\n\n**Figure 4-3.",
+    "evidence": "PDF p4 Figure 4-3 prints 'Not to scale' under the package outline; the text was missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
