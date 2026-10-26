@@ -27531,5 +27531,512 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p9-switching-1v8-duplicate-figure-ref",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 9,
+    "old": "| t <sub>ON</sub>  | Turnon time                | V <sub>COM</sub> = V <sub>+</sub> ,<br>R <sub>L</sub> = 50 Ω,<br>see <a href=\"#\">Figure 21</a>                    | C <sub>L</sub> = 35 pF,<br>see <a href=\"#\">Figure 21</a> | 25°C           | 1.8 V                  |     | 14.1 | 49.3 | ns   |\n|                  |                            |                                                                                                                   |                                                          | Full           | 1.65 V<br>to<br>1.95 V |     | 49.3 | 56.7 |      |\n| t <sub>OFF</sub> | Turnoff time               | V <sub>COM</sub> = V <sub>+</sub> ,<br>R <sub>L</sub> = 50 Ω,<br>see <a href=\"#\">Figure 21</a>                    | C <sub>L</sub> = 35 pF,<br>see <a href=\"#\">Figure 21</a> | 25°C           | 1.8 V                  |     | 16.1 | 26.5 | ns   |\n|                  |                            |                                                                                                                   |                                                          | Full           | 1.65 V<br>to<br>1.95 V |     |      | 31.2 |      |\n| t <sub>BBM</sub> | Break-before-<br>make time | V <sub>NC</sub> = V <sub>NO</sub> = V <sub>+</sub> /2,<br>R <sub>L</sub> = 50 Ω,<br>see <a href=\"#\">Figure 21</a> | C <sub>L</sub> = 35 pF,<br>see <a href=\"#\">Figure 21</a> | 25°C           | 1.8 V                  | 5.3 | 18.4 | 58   | ns   |\n|                  |                            |                                                                                                                   |                                                          | Full           | 1.65 V<br>to<br>1.95 V |     |      | 58   |      |",
+    "new": "| t <sub>ON</sub>  | Turnon time                | V <sub>COM</sub> = V <sub>+</sub> ,<br>R <sub>L</sub> = 50 Ω,                                                  | C <sub>L</sub> = 35 pF,<br>see <a href=\"#\">Figure 21</a> | 25°C           | 1.8 V                  |     | 14.1 | 49.3 | ns   |\n|                  |                            |                                                                                                                   |                                                          | Full           | 1.65 V<br>to<br>1.95 V |     | 49.3 | 56.7 |      |\n| t <sub>OFF</sub> | Turnoff time               | V <sub>COM</sub> = V <sub>+</sub> ,<br>R <sub>L</sub> = 50 Ω,                                                  | C <sub>L</sub> = 35 pF,<br>see <a href=\"#\">Figure 21</a> | 25°C           | 1.8 V                  |     | 16.1 | 26.5 | ns   |\n|                  |                            |                                                                                                                   |                                                          | Full           | 1.65 V<br>to<br>1.95 V |     |      | 31.2 |      |\n| t <sub>BBM</sub> | Break-before-<br>make time | V <sub>NC</sub> = V <sub>NO</sub> = V <sub>+</sub> /2,<br>R <sub>L</sub> = 50 Ω,                                  | C <sub>L</sub> = 35 pF,<br>see <a href=\"#\">Figure 21</a> | 25°C           | 1.8 V                  | 5.3 | 18.4 | 58   | ns   |\n|                  |                            |                                                                                                                   |                                                          | Full           | 1.65 V<br>to<br>1.95 V |     |      | 58   |      |",
+    "evidence": "PDF p9 Switching Characteristics for 1.8-V Supply: the first condition column of t_ON, t_OFF and t_BBM is 'VCOM = V+, RL = 50 Ω,' (resp. 'VNC = VNO = V+/2, RL = 50 Ω,'); 'see Figure 21' is printed only once, in the second column under 'CL = 35 pF,'. The md repeated it in both columns.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p10-fig1-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 10,
+    "old": "![Figure 1: r-on vs VCOM (V+ = 3.3 V). This graph shows the on-resistance (r-on) in ohms as a function of the common-mode voltage (VCOM) in volts for a supply voltage (V+) of 3.3 V. The temperature (TA) is 25°C. Two curves are shown: one for V+ = 2.5 V (red) and one for V+ = 3.3 V (black). Both curves show a peak in resistance around VCOM = 1.8 V, with the 2.5 V curve peaking at approximately 15 ohms and the 3.3 V curve peaking at approximately 8 ohms.](8ee3b76dd49f31624d287885bc2c81ee_img.jpg)\n\nFigure 1: r-on vs VCOM (V+ = 3.3 V). This graph shows the on-resistance (r-on) in ohms as a function of the common-mode voltage (VCOM) in volts for a supply voltage (V+) of 3.3 V. The temperature (TA) is 25°C. Two curves are shown: one for V+ = 2.5 V (red) and one for V+ = 3.3 V (black). Both curves show a peak in resistance around VCOM = 1.8 V, with the 2.5 V curve peaking at approximately 15 ohms and the 3.3 V curve peaking at approximately 8 ohms.",
+    "new": "![Figure 1: r<sub>on</sub> vs V<sub>COM</sub>, T<sub>A</sub> = 25°C. r<sub>on</sub> (Ω) versus V<sub>COM</sub> (V), two curves labeled V<sub>+</sub> = 2.5 V (red) and V<sub>+</sub> = 3.3 V (black). The 2.5 V curve is higher: it rises with V<sub>COM</sub> to a sharp peak and falls again, ending where it meets the 3.3 V curve. The 3.3 V curve rises slowly with a small shoulder, reaches a broad peak at a higher V<sub>COM</sub> than the 2.5 V curve and then decreases to the end of its range. Read values from the image/PDF.](8ee3b76dd49f31624d287885bc2c81ee_img.jpg)\n\nFigure 1: r<sub>on</sub> vs V<sub>COM</sub>, T<sub>A</sub> = 25°C. r<sub>on</sub> (Ω) versus V<sub>COM</sub> (V), two curves labeled V<sub>+</sub> = 2.5 V (red) and V<sub>+</sub> = 3.3 V (black). The 2.5 V curve is higher: it rises with V<sub>COM</sub> to a sharp peak and falls again, ending where it meets the 3.3 V curve. The 3.3 V curve rises slowly with a small shoulder, reaches a broad peak at a higher V<sub>COM</sub> than the 2.5 V curve and then decreases to the end of its range. Read values from the image/PDF.",
+    "evidence": "PDF p10 Figure 1: T_A = 25°C and two curves (V+ = 2.5 V red, V+ = 3.3 V black). The AI text said the graph is for V+ = 3.3 V only, put both peaks 'around VCOM = 1.8 V' (the 3.3 V peak is at a higher VCOM) and gave peak values read off the curves. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p10-fig2-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 10,
+    "old": "![Figure 2: r-on vs VCOM (V+ = 2.5 V). This graph shows the on-resistance (r-on) in ohms as a function of the common-mode voltage (VCOM) in volts for a supply voltage (V+) of 2.5 V. Three curves are shown for different temperatures: -40°C (black), 25°C (grey), and 85°C (black). All curves show a peak in resistance around VCOM = 2.5 V, with the 85°C curve having the highest peak resistance at approximately 8.5 ohms.](7c2f0efb2c5d10a52ce19ba33d9d3cec_img.jpg)\n\nFigure 2: r-on vs VCOM (V+ = 2.5 V). This graph shows the on-resistance (r-on) in ohms as a function of the common-mode voltage (VCOM) in volts for a supply voltage (V+) of 2.5 V. Three curves are shown for different temperatures: -40°C (black), 25°C (grey), and 85°C (black). All curves show a peak in resistance around VCOM = 2.5 V, with the 85°C curve having the highest peak resistance at approximately 8.5 ohms.",
+    "new": "![Figure 2: r<sub>on</sub> vs V<sub>COM</sub> (V<sub>+</sub> = 2.5 V). r<sub>on</sub> (Ω) versus V<sub>COM</sub> (V), three black curves labeled 85°C (top), 25°C (middle) and –40°C (bottom). All three have the same shape: a slow rise with a shoulder, a peak and a decrease toward the end of the V<sub>COM</sub> axis; r<sub>on</sub> is higher at higher temperature over the whole range. Read values from the image/PDF.](7c2f0efb2c5d10a52ce19ba33d9d3cec_img.jpg)\n\nFigure 2: r<sub>on</sub> vs V<sub>COM</sub> (V<sub>+</sub> = 2.5 V). r<sub>on</sub> (Ω) versus V<sub>COM</sub> (V), three black curves labeled 85°C (top), 25°C (middle) and –40°C (bottom). All three have the same shape: a slow rise with a shoulder, a peak and a decrease toward the end of the V<sub>COM</sub> axis; r<sub>on</sub> is higher at higher temperature over the whole range. Read values from the image/PDF.",
+    "evidence": "PDF p10 Figure 2: three black curves 85°C (top), 25°C, –40°C (bottom). The AI text called the 25°C curve grey and gave a peak value read off the curve. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p10-fig3-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 10,
+    "old": "![Figure 3: Leakage Current vs Temperature (V+ = 3.6 V). This graph shows leakage current in nanamperes (nA) versus ambient temperature (TA) in degrees Celsius for a supply voltage (V+) of 3.6 V. Six curves are shown: I_NC(ON), I_COM(ON), I_NO(ON), I_COM(OFF), I_NC(OFF), and I_NO(OFF). The leakage current generally increases with temperature, with I_NC(OFF) showing the steepest increase.](64bacf564ff025df294b6d30341c76df_img.jpg)\n\nFigure 3: Leakage Current vs Temperature (V+ = 3.6 V). This graph shows leakage current in nanamperes (nA) versus ambient temperature (TA) in degrees Celsius for a supply voltage (V+) of 3.6 V. Six curves are shown: I\\_NC(ON), I\\_COM(ON), I\\_NO(ON), I\\_COM(OFF), I\\_NC(OFF), and I\\_NO(OFF). The leakage current generally increases with temperature, with I\\_NC(OFF) showing the steepest increase.",
+    "new": "![Figure 3: Leakage Current vs Temperature (V<sub>+</sub> = 3.6 V). Leakage Current (nA) versus T<sub>A</sub> (°C), six piecewise-linear curves labeled I<sub>NC(ON)</sub>, I<sub>COM(ON)</sub>, I<sub>NO(ON)</sub>, I<sub>COM(OFF)</sub>, I<sub>NC(OFF)</sub> and I<sub>NO(OFF)</sub>. The three ON-leakage curves are nearly flat from –40°C to 25°C and then rise linearly to 85°C, where they are at the top of the graph. The three OFF-leakage curves start near zero, rise slightly up to 25°C and then rise linearly with different slopes: the steepest (labeled I<sub>NC(OFF)</sub>) reaches the level of the ON curves at 85°C, the lowest is labeled I<sub>NO(OFF)</sub>. Read values from the image/PDF.](64bacf564ff025df294b6d30341c76df_img.jpg)\n\nFigure 3: Leakage Current vs Temperature (V<sub>+</sub> = 3.6 V). Leakage Current (nA) versus T<sub>A</sub> (°C), six piecewise-linear curves labeled I<sub>NC(ON)</sub>, I<sub>COM(ON)</sub>, I<sub>NO(ON)</sub>, I<sub>COM(OFF)</sub>, I<sub>NC(OFF)</sub> and I<sub>NO(OFF)</sub>. The three ON-leakage curves are nearly flat from –40°C to 25°C and then rise linearly to 85°C, where they are at the top of the graph. The three OFF-leakage curves start near zero, rise slightly up to 25°C and then rise linearly with different slopes: the steepest (labeled I<sub>NC(OFF)</sub>) reaches the level of the ON curves at 85°C, the lowest is labeled I<sub>NO(OFF)</sub>. Read values from the image/PDF.",
+    "evidence": "PDF p10 Figure 3: the axis label is T_A (°C); the ON curves are flat up to 25°C and then rise, the OFF curves start near zero. The AI text said 'nanamperes' and only that leakage 'generally increases'. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p10-fig4-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 10,
+    "old": "![Figure 4: Leakage Current vs Temperature (V+ = 1.8 V). This graph shows leakage current in nanamperes (nA) versus ambient temperature (TA) in degrees Celsius for a supply voltage (V+) of 1.8 V. The same six curves as Figure 3 are shown. The leakage current is lower than in Figure 3, with I_NC(OFF) and I_NO(OFF) showing the most significant temperature dependence.](71d82d389da5fe06a4aefb661ea17af9_img.jpg)\n\nFigure 4: Leakage Current vs Temperature (V+ = 1.8 V). This graph shows leakage current in nanamperes (nA) versus ambient temperature (TA) in degrees Celsius for a supply voltage (V+) of 1.8 V. The same six curves as Figure 3 are shown. The leakage current is lower than in Figure 3, with I\\_NC(OFF) and I\\_NO(OFF) showing the most significant temperature dependence.",
+    "new": "![Figure 4: Leakage Current vs Temperature (V<sub>+</sub> = 1.8 V). Leakage Current (nA) versus Temperature (°C), six curves with the legend INC_ON (blue), INO_ON (green), ICOM_ON (red), INC_OFF (purple), INO_OFF (orange) and ICOM_OFF (brown); graph tag G005. INC_ON, ICOM_ON and ICOM_OFF are in an upper group and change little with temperature; INO_ON is in the same group but rises to a maximum near room temperature and falls at both ends of the range. INC_OFF and INO_OFF are much lower and nearly flat, INO_OFF being the lowest curve. Read values from the image/PDF.](71d82d389da5fe06a4aefb661ea17af9_img.jpg)\n\nFigure 4: Leakage Current vs Temperature (V<sub>+</sub> = 1.8 V). Leakage Current (nA) versus Temperature (°C), six curves with the legend INC_ON (blue), INO_ON (green), ICOM_ON (red), INC_OFF (purple), INO_OFF (orange) and ICOM_OFF (brown); graph tag G005. INC_ON, ICOM_ON and ICOM_OFF are in an upper group and change little with temperature; INO_ON is in the same group but rises to a maximum near room temperature and falls at both ends of the range. INC_OFF and INO_OFF are much lower and nearly flat, INO_OFF being the lowest curve. Read values from the image/PDF.",
+    "evidence": "PDF p10 Figure 4: legend INC_ON/INO_ON/ICOM_ON/INC_OFF/INO_OFF/ICOM_OFF, tag G005. The AI text said leakage is 'lower than in Figure 3' and that I_NC(OFF) and I_NO(OFF) have the most significant temperature dependence; those two are the flattest curves, and INO_ON varies most. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p10-fig5-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 10,
+    "old": "![Figure 5: Charge Injection (Qc) vs VCOM. This graph shows charge injection in picocoulombs (pC) as a function of the common-mode voltage (VCOM) in volts. Two curves are shown for V+ = 3.3 V (red) and V+ = 2.5 V (black). The charge injection is highest at low VCOM and decreases as VCOM increases, with a local minimum around VCOM = 1.5 V.](07496ee9f5697ea2702f9c108db04713_img.jpg)\n\nFigure 5: Charge Injection (Qc) vs VCOM. This graph shows charge injection in picocoulombs (pC) as a function of the common-mode voltage (VCOM) in volts. Two curves are shown for V+ = 3.3 V (red) and V+ = 2.5 V (black). The charge injection is highest at low VCOM and decreases as VCOM increases, with a local minimum around VCOM = 1.5 V.",
+    "new": "![Figure 5: Charge Injection (Q<sub>C</sub>) vs V<sub>COM</sub>. Charge Injection (pC) versus V<sub>COM</sub> (V), two piecewise-linear curves labeled V<sub>+</sub> = 3.3 V (red, upper) and V<sub>+</sub> = 2.5 V (black, lower). Both are highest at V<sub>COM</sub> = 0 and decrease to a minimum. The 3.3 V curve has its minimum at a higher V<sub>COM</sub> and then rises to the end of its range; the 2.5 V curve rises after its minimum and then falls again at the end of its range. Read values from the image/PDF.](07496ee9f5697ea2702f9c108db04713_img.jpg)\n\nFigure 5: Charge Injection (Q<sub>C</sub>) vs V<sub>COM</sub>. Charge Injection (pC) versus V<sub>COM</sub> (V), two piecewise-linear curves labeled V<sub>+</sub> = 3.3 V (red, upper) and V<sub>+</sub> = 2.5 V (black, lower). Both are highest at V<sub>COM</sub> = 0 and decrease to a minimum. The 3.3 V curve has its minimum at a higher V<sub>COM</sub> and then rises to the end of its range; the 2.5 V curve rises after its minimum and then falls again at the end of its range. Read values from the image/PDF.",
+    "evidence": "PDF p10 Figure 5: the 2.5 V curve (black) falls again after a short rise and the minima are at different V_COM. The AI text gave a single 'local minimum around VCOM = 1.5 V' for both curves. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p10-fig6-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 10,
+    "old": "![Figure 6: Charge Injection (Qc) vs VCOM (V+ = 1.8 V). This graph shows charge injection in picocoulombs (pC) as a function of the common-mode voltage (VCOM) in volts for a supply voltage (V+) of 1.8 V. The curve shows a minimum charge injection of approximately -0.5 pC at VCOM = 0.2 V, followed by a sharp increase to approximately 0.5 pC at VCOM = 1.8 V.](9551159385e06b56c90a1a26664533a2_img.jpg)\n\nFigure 6: Charge Injection (Qc) vs VCOM (V+ = 1.8 V). This graph shows charge injection in picocoulombs (pC) as a function of the common-mode voltage (VCOM) in volts for a supply voltage (V+) of 1.8 V. The curve shows a minimum charge injection of approximately -0.5 pC at VCOM = 0.2 V, followed by a sharp increase to approximately 0.5 pC at VCOM = 1.8 V.",
+    "new": "![Figure 6: Charge Injection (Q<sub>C</sub>) vs V<sub>COM</sub> (V<sub>+</sub> = 1.8 V). Charge Injection - pC versus V<sub>COM</sub> - V, one black curve. The charge injection is negative at low V<sub>COM</sub>, with a shallow minimum near the left end of the axis, then rises steadily through zero, flattens briefly and rises steeply to the end of the curve. Read values from the image/PDF.](9551159385e06b56c90a1a26664533a2_img.jpg)\n\nFigure 6: Charge Injection (Q<sub>C</sub>) vs V<sub>COM</sub> (V<sub>+</sub> = 1.8 V). Charge Injection - pC versus V<sub>COM</sub> - V, one black curve. The charge injection is negative at low V<sub>COM</sub>, with a shallow minimum near the left end of the axis, then rises steadily through zero, flattens briefly and rises steeply to the end of the curve. Read values from the image/PDF.",
+    "evidence": "PDF p10 Figure 6: axis labels 'Charge Injection - pC' and 'VCOM - V'. The AI text gave a minimum and an end value read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-heading-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "### **Typical Characteristics (continued)**\n\n![Figure 7",
+    "new": "### Typical Characteristics (continued)\n\n![Figure 7",
+    "evidence": "PDF p11: 'Typical Characteristics (continued)' is a plain heading; ** removed inside the ### heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-fig7-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "![Figure 7: tON and tOFF vs Supply Voltage. A line graph showing tON (black line) and tOFF (red line) in nanoseconds on the y-axis (0 to 7) versus supply voltage V+ in volts on the x-axis (2.0 to 4.0). tON decreases from approximately 5.8 ns at 2.2V to 5.2 ns at 3.6V. tOFF remains relatively constant around 3.5 ns across the voltage range.](eb903413d070b64f45cd763804ba443f_img.jpg)\n\nFigure 7: tON and tOFF vs Supply Voltage. A line graph showing tON (black line) and tOFF (red line) in nanoseconds on the y-axis (0 to 7) versus supply voltage V+ in volts on the x-axis (2.0 to 4.0). tON decreases from approximately 5.8 ns at 2.2V to 5.2 ns at 3.6V. tOFF remains relatively constant around 3.5 ns across the voltage range.",
+    "new": "![Figure 7: t<sub>ON</sub> and t<sub>OFF</sub> vs Supply Voltage. t<sub>ON</sub>/t<sub>OFF</sub> (ns) versus V<sub>+</sub> (V), two curves labeled t<sub>ON</sub> (black, upper) and t<sub>OFF</sub> (red, lower). t<sub>ON</sub> decreases slowly as V<sub>+</sub> increases; t<sub>OFF</sub> is nearly flat. Read values from the image/PDF.](eb903413d070b64f45cd763804ba443f_img.jpg)\n\nFigure 7: t<sub>ON</sub> and t<sub>OFF</sub> vs Supply Voltage. t<sub>ON</sub>/t<sub>OFF</sub> (ns) versus V<sub>+</sub> (V), two curves labeled t<sub>ON</sub> (black, upper) and t<sub>OFF</sub> (red, lower). t<sub>ON</sub> decreases slowly as V<sub>+</sub> increases; t<sub>OFF</sub> is nearly flat. Read values from the image/PDF.",
+    "evidence": "PDF p11 Figure 7: t_ON (black) above t_OFF (red), t_ON decreasing, t_OFF flat. The AI text gave values read off the curves. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-fig8-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "![Figure 8: tON and tOFF vs Temperature. A line graph showing tON (black line) and tOFF (black line) in nanoseconds on the y-axis (0 to 8) versus ambient temperature TA in degrees Celsius on the x-axis (-40 to 85). Both tON and tOFF show a positive correlation with temperature, with tON increasing from about 6.0 ns at -40°C to 7.5 ns at 85°C, and tOFF increasing from about 3.8 ns to 4.8 ns over the same range.](72d357d406618f3f884c3876fc3058ee_img.jpg)\n\nFigure 8: tON and tOFF vs Temperature. A line graph showing tON (black line) and tOFF (black line) in nanoseconds on the y-axis (0 to 8) versus ambient temperature TA in degrees Celsius on the x-axis (-40 to 85). Both tON and tOFF show a positive correlation with temperature, with tON increasing from about 6.0 ns at -40°C to 7.5 ns at 85°C, and tOFF increasing from about 3.8 ns to 4.8 ns over the same range.",
+    "new": "![Figure 8: t<sub>ON</sub> and t<sub>OFF</sub> vs Temperature (V<sub>+</sub> = 3.3 V). t<sub>ON</sub>/t<sub>OFF</sub> (ns) versus T<sub>A</sub> (°C) at –40, 25 and 85, two black curves labeled t<sub>ON</sub> (upper) and t<sub>OFF</sub> (lower). Both increase with temperature; t<sub>ON</sub> rises more steeply above 25°C, t<sub>OFF</sub> more steeply below 25°C. Read values from the image/PDF.](72d357d406618f3f884c3876fc3058ee_img.jpg)\n\nFigure 8: t<sub>ON</sub> and t<sub>OFF</sub> vs Temperature (V<sub>+</sub> = 3.3 V). t<sub>ON</sub>/t<sub>OFF</sub> (ns) versus T<sub>A</sub> (°C) at –40, 25 and 85, two black curves labeled t<sub>ON</sub> (upper) and t<sub>OFF</sub> (lower). Both increase with temperature; t<sub>ON</sub> rises more steeply above 25°C, t<sub>OFF</sub> more steeply below 25°C. Read values from the image/PDF.",
+    "evidence": "PDF p11 Figure 8: two black curves, t_ON above t_OFF, both rising with temperature. The AI text gave values read off the curves. Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-fig9-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "![Figure 9: Logic-Level Threshold vs V+. A line graph showing Logic Level Threshold in volts on the y-axis (0 to 1.8) versus supply voltage V+ in volts on the x-axis (1.65 to 3.6). Two curves are shown: V_IH (blue line) and V_IL (green line). Both thresholds increase linearly with V+. At 25°C, V_IH is approximately 0.65V at 1.65V V+ and 1.55V at 3.6V V+. V_IL is approximately 0.6V at 1.65V V+ and 1.5V at 3.6V V+.](1640ec1dfae8bdfa5af950db7623febc_img.jpg)\n\nFigure 9: Logic-Level Threshold vs V+. A line graph showing Logic Level Threshold in volts on the y-axis (0 to 1.8) versus supply voltage V+ in volts on the x-axis (1.65 to 3.6). Two curves are shown: V\\_IH (blue line) and V\\_IL (green line). Both thresholds increase linearly with V+. At 25°C, V\\_IH is approximately 0.65V at 1.65V V+ and 1.55V at 3.6V V+. V\\_IL is approximately 0.6V at 1.65V V+ and 1.5V at 3.6V V+.",
+    "new": "![Figure 9: Logic-Level Threshold vs V<sub>+</sub>, T<sub>A</sub> = 25°C. Logic Level Threshold (V) versus V+ (V), two curves with the legend V<sub>IH</sub> (blue) and V<sub>IL</sub> (olive green); graph tag G001. Both thresholds rise almost linearly with V<sub>+</sub>, V<sub>IH</sub> slightly above V<sub>IL</sub> over most of the range, the two curves meeting at the right end of the axis. Read values from the image/PDF.](1640ec1dfae8bdfa5af950db7623febc_img.jpg)\n\nFigure 9: Logic-Level Threshold vs V<sub>+</sub>, T<sub>A</sub> = 25°C. Logic Level Threshold (V) versus V+ (V), two curves with the legend V<sub>IH</sub> (blue) and V<sub>IL</sub> (olive green); graph tag G001. Both thresholds rise almost linearly with V<sub>+</sub>, V<sub>IH</sub> slightly above V<sub>IL</sub> over most of the range, the two curves meeting at the right end of the axis. Read values from the image/PDF.",
+    "evidence": "PDF p11 Figure 9: T_A = 25°C label, legend VIH (blue) / VIL (olive green), tag G001. The AI text gave threshold values read off the curves (and a V_IH below V_IL at 1.65 V that does not match the ordering). Rewritten from the graph: shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-fig10-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "![Figure 10: Gain vs Frequency Bandwidth. A line graph showing Gain in dB on the y-axis (-7 to 0) versus Frequency in MHz on a logarithmic x-axis (1 to 1K). The gain is near 0 dB until approximately 100 MHz, after which it drops sharply to about -6 dB at 1 MHz.](b51b03092124a58634f30947c8c76ef8_img.jpg)\n\nFigure 10: Gain vs Frequency Bandwidth. A line graph showing Gain in dB on the y-axis (-7 to 0) versus Frequency in MHz on a logarithmic x-axis (1 to 1K). The gain is near 0 dB until approximately 100 MHz, after which it drops sharply to about -6 dB at 1 MHz.",
+    "new": "![Figure 10: Gain vs Frequency Bandwidth (V<sub>+</sub> = 3.3 V). Gain (dB) versus Frequency (MHz) on a logarithmic axis from 1 to 1K, one black curve. The gain is flat close to 0 dB up to about 100 MHz and then rolls off steeply, with small ripples, toward the end of the curve. Read values from the image/PDF.](b51b03092124a58634f30947c8c76ef8_img.jpg)\n\nFigure 10: Gain vs Frequency Bandwidth (V<sub>+</sub> = 3.3 V). Gain (dB) versus Frequency (MHz) on a logarithmic axis from 1 to 1K, one black curve. The gain is flat close to 0 dB up to about 100 MHz and then rolls off steeply, with small ripples, toward the end of the curve. Read values from the image/PDF.",
+    "evidence": "PDF p11 Figure 10: the curve is flat near 0 dB to about 100 MHz and then falls. The AI text said it drops 'to about -6 dB at 1 MHz' (1 MHz is the left end of the axis, where the gain is flat). Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-fig11-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "![Figure 11: OFF Isolation vs Frequency. A line graph showing Gain in dB on the y-axis (-90 to 0) versus Frequency in MHz on a logarithmic x-axis (1 to 1000). The gain starts at approximately -70 dB at 1 MHz and increases to about -15 dB at 1000 MHz, with some fluctuations between 100 MHz and 1000 MHz.](fef288b92fc7299b718bb8d6107421c0_img.jpg)\n\nFigure 11: OFF Isolation vs Frequency. A line graph showing Gain in dB on the y-axis (-90 to 0) versus Frequency in MHz on a logarithmic x-axis (1 to 1000). The gain starts at approximately -70 dB at 1 MHz and increases to about -15 dB at 1000 MHz, with some fluctuations between 100 MHz and 1000 MHz.",
+    "new": "![Figure 11: OFF Isolation vs Frequency (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The curve rises steadily from the low-frequency end, flattens, then shows a peak, a sharp dip and a higher peak near the high-frequency end before falling again at the end of the axis. Read values from the image/PDF.](fef288b92fc7299b718bb8d6107421c0_img.jpg)\n\nFigure 11: OFF Isolation vs Frequency (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The curve rises steadily from the low-frequency end, flattens, then shows a peak, a sharp dip and a higher peak near the high-frequency end before falling again at the end of the axis. Read values from the image/PDF.",
+    "evidence": "PDF p11 Figure 11: axis labels 'Gain - dB' and 'f - Frequency - MHz'. The AI text gave start and end values read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p11-fig12-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 11,
+    "old": "![Figure 12: Crosstalk Adjacent vs Frequency. A line graph showing Gain in dB on the y-axis (-110 to 0) versus Frequency in MHz on a logarithmic x-axis (1 to 1000). The gain starts at approximately -100 dB at 1 MHz and increases to about -15 dB at 1000 MHz, showing a similar trend to Figure 11.](4e9f919b6251a6cccd4ba90ce4b0a33e_img.jpg)\n\nFigure 12: Crosstalk Adjacent vs Frequency. A line graph showing Gain in dB on the y-axis (-110 to 0) versus Frequency in MHz on a logarithmic x-axis (1 to 1000). The gain starts at approximately -100 dB at 1 MHz and increases to about -15 dB at 1000 MHz, showing a similar trend to Figure 11.",
+    "new": "![Figure 12: Crosstalk Adjacent vs Frequency (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The curve rises slowly and noisily at low frequency, then steeply to a peak, dips and rises to a second peak near the high-frequency end. Read values from the image/PDF.](4e9f919b6251a6cccd4ba90ce4b0a33e_img.jpg)\n\nFigure 12: Crosstalk Adjacent vs Frequency (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The curve rises slowly and noisily at low frequency, then steeply to a peak, dips and rises to a second peak near the high-frequency end. Read values from the image/PDF.",
+    "evidence": "PDF p11 Figure 12: axis labels 'Gain - dB' and 'f - Frequency - MHz'. The AI text gave start and end values read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p12-heading-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 12,
+    "old": "### **Typical Characteristics (continued)**\n\n![Figure 13",
+    "new": "### Typical Characteristics (continued)\n\n![Figure 13",
+    "evidence": "PDF p12: 'Typical Characteristics (continued)' is a plain heading; ** removed inside the ### heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p12-fig13-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 12,
+    "old": "![Figure 13: Crosstalk vs Frequency (V+ = 1.8 V). A line graph showing Gain in dB on the y-axis (from -90 to 0) versus Frequency in MHz on a logarithmic x-axis (from 1 to 1000). The curve starts at approximately -70 dB at 1 MHz, rises linearly to about -30 dB at 100 MHz, then shows several peaks and troughs between 100 MHz and 1000 MHz, with a notable peak near 800 MHz.](602ada2a012ff3cc38d91de2eec5b450_img.jpg)\n\nFigure 13: Crosstalk vs Frequency (V+ = 1.8 V). A line graph showing Gain in dB on the y-axis (from -90 to 0) versus Frequency in MHz on a logarithmic x-axis (from 1 to 1000). The curve starts at approximately -70 dB at 1 MHz, rises linearly to about -30 dB at 100 MHz, then shows several peaks and troughs between 100 MHz and 1000 MHz, with a notable peak near 800 MHz.",
+    "new": "![Figure 13: Crosstalk vs Frequency (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The curve rises steadily from the low-frequency end, flattens briefly, steps up, stays nearly flat and then rises to a peak near the high-frequency end before falling at the end of the axis. Read values from the image/PDF.](602ada2a012ff3cc38d91de2eec5b450_img.jpg)\n\nFigure 13: Crosstalk vs Frequency (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The curve rises steadily from the low-frequency end, flattens briefly, steps up, stays nearly flat and then rises to a peak near the high-frequency end before falling at the end of the axis. Read values from the image/PDF.",
+    "evidence": "PDF p12 Figure 13: axis labels 'Gain - dB' and 'f - Frequency - MHz'. The AI text gave values read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p12-fig14-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 12,
+    "old": "![Figure 14: OFF Isolation vs Frequency (V+ = 3.3 V). A line graph showing Gain in dB on the y-axis (from -90 to 0) versus Frequency in MHz on a logarithmic x-axis (from 1 to 1k). The curve starts at approximately -75 dB at 1 MHz, rises linearly to about -30 dB at 100 MHz, then shows several peaks and troughs between 100 MHz and 1k MHz, with a notable peak near 800 MHz.](6279fafb3a874e174648eb907385c954_img.jpg)\n\nFigure 14: OFF Isolation vs Frequency (V+ = 3.3 V). A line graph showing Gain in dB on the y-axis (from -90 to 0) versus Frequency in MHz on a logarithmic x-axis (from 1 to 1k). The curve starts at approximately -75 dB at 1 MHz, rises linearly to about -30 dB at 100 MHz, then shows several peaks and troughs between 100 MHz and 1k MHz, with a notable peak near 800 MHz.",
+    "new": "![Figure 14: OFF Isolation vs Frequency (V<sub>+</sub> = 3.3 V). Gain (dB) versus Frequency (MHz) on a logarithmic axis from 1 to 1k, one black curve. The curve rises steadily with frequency, flattens, then shows a small peak, a sharp dip and a recovery near the high-frequency end. Read values from the image/PDF.](6279fafb3a874e174648eb907385c954_img.jpg)\n\nFigure 14: OFF Isolation vs Frequency (V<sub>+</sub> = 3.3 V). Gain (dB) versus Frequency (MHz) on a logarithmic axis from 1 to 1k, one black curve. The curve rises steadily with frequency, flattens, then shows a small peak, a sharp dip and a recovery near the high-frequency end. Read values from the image/PDF.",
+    "evidence": "PDF p12 Figure 14: one curve rising steadily, a small peak and one sharp notch near the end. The AI text gave values read off the curve and 'several peaks and troughs'. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p12-fig15-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 12,
+    "old": "![Figure 15: Total Harmonic Distortion vs Frequency. A line graph showing THD (%) on the y-axis (from 0.00 to 0.45) versus Frequency in MHz on a logarithmic x-axis (from 10 to 100 K). The curve starts at approximately 0.42% at 10 MHz, decreases sharply to about 0.23% at 100 MHz, and then remains relatively flat around 0.23% up to 100 K MHz.](83dedc2074a453d13ce74cc2e1ae4ff5_img.jpg)\n\nFigure 15: Total Harmonic Distortion vs Frequency. A line graph showing THD (%) on the y-axis (from 0.00 to 0.45) versus Frequency in MHz on a logarithmic x-axis (from 10 to 100 K). The curve starts at approximately 0.42% at 10 MHz, decreases sharply to about 0.23% at 100 MHz, and then remains relatively flat around 0.23% up to 100 K MHz.",
+    "new": "![Figure 15: Total Harmonic Distortion vs Frequency. THD (%) versus Frequency (MHz) on a logarithmic axis labeled 10, 100, 1000, 10 K, 100 K (axis title as printed), one black curve. THD is highest at the low-frequency end, decreases steeply to a constant level that stays flat over most of the axis, and drops by a small step near the end of the curve. Read values from the image/PDF.](83dedc2074a453d13ce74cc2e1ae4ff5_img.jpg)\n\nFigure 15: Total Harmonic Distortion vs Frequency. THD (%) versus Frequency (MHz) on a logarithmic axis labeled 10, 100, 1000, 10 K, 100 K (axis title as printed), one black curve. THD is highest at the low-frequency end, decreases steeply to a constant level that stays flat over most of the axis, and drops by a small step near the end of the curve. Read values from the image/PDF.",
+    "evidence": "PDF p12 Figure 15: axis labeled 'Frequency (MHz)' with ticks 10 to 100 K (kept as printed; the EC table gives the THD condition as f = 20 Hz to 20 kHz). The AI text gave values read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p12-fig16-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 12,
+    "old": "![Figure 16: Power-Supply Current vs Temperature (V+ = 3.3 V). A line graph showing I+ in µA on the y-axis (from 0.0 to 4.0) versus TA in °C on a linear x-axis (from -40 to 85). The curve shows a gradual decrease in current from approximately 3.7 µA at -40 °C to about 2.9 µA at 85 °C.](c8cbc7250125f5d48395f1885ef248d9_img.jpg)\n\nFigure 16: Power-Supply Current vs Temperature (V+ = 3.3 V). A line graph showing I+ in µA on the y-axis (from 0.0 to 4.0) versus TA in °C on a linear x-axis (from -40 to 85). The curve shows a gradual decrease in current from approximately 3.7 µA at -40 °C to about 2.9 µA at 85 °C.",
+    "new": "![Figure 16: Power-Supply Current vs Temperature (V<sub>+</sub> = 3.3 V). I<sub>+</sub> (µA) versus T<sub>A</sub> (°C) at –40, 25 and 85, one black curve. The supply current decreases with increasing temperature, more steeply above 25°C. Read values from the image/PDF.](c8cbc7250125f5d48395f1885ef248d9_img.jpg)\n\nFigure 16: Power-Supply Current vs Temperature (V<sub>+</sub> = 3.3 V). I<sub>+</sub> (µA) versus T<sub>A</sub> (°C) at –40, 25 and 85, one black curve. The supply current decreases with increasing temperature, more steeply above 25°C. Read values from the image/PDF.",
+    "evidence": "PDF p12 Figure 16: one curve, decreasing with temperature. The AI text gave values read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p13-fig17-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 13,
+    "old": "![Figure 17: ON-State Resistance (r_on) measurement circuit. The circuit shows a switch with NC, NO, and COM terminals. The NC terminal is connected to a voltage source V_NC. The NO terminal is connected to a voltage source V_NO. The COM terminal is connected to a voltage source V_COM and a current source I_COM. The switch is controlled by an input voltage V_I through an inverter. The inverter's output is connected to the NC and NO terminals. The switch is shown in the ON state, connecting NC to COM. The current I_COM is measured through the COM terminal.](410562339ce067fdc6fa41940c118658_img.jpg)",
+    "new": "![Figure 17: ON-state resistance (r<sub>on</sub>) test circuit](410562339ce067fdc6fa41940c118658_img.jpg)",
+    "evidence": "PDF p13 Figure 17: the control path is a buffer driving the internal switch (no inverter, nothing 'connected to the NC and NO terminals'); the source is selected onto VNC, VNO is open, and ICOM is a current source from the VCOM node to ground. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p13-fig17-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 13,
+    "old": "\nFigure 17: ON-State Resistance (r\\_on) measurement circuit. The circuit shows a switch with NC, NO, and COM terminals. The NC terminal is connected to a voltage source V\\_NC. The NO terminal is connected to a voltage source V\\_NO. The COM terminal is connected to a voltage source V\\_COM and a current source I\\_COM. The switch is controlled by an input voltage V\\_I through an inverter. The inverter's output is connected to the NC and NO terminals. The switch is shown in the ON state, connecting NC to COM. The current I\\_COM is measured through the COM terminal.\n",
+    "new": "\nFigure 17: ON-State Resistance (r<sub>on</sub>) test circuit (description written from the drawing). The device is drawn as a box with V<sub>+</sub> at the top and GND at the bottom (grounded). A grounded voltage source is connected through an external selector switch to the V<sub>NC</sub> terminal (NC pin); the V<sub>NO</sub> terminal (NO pin) is drawn open. A grounded source V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer, whose dashed control line goes to the internal switch, drawn connecting COM to NC. COM is the V<sub>COM</sub> node, loaded by the current source I<sub>COM</sub> to ground. The box on the right reads Channel ON, the r<sub>on</sub> equation and V<sub>I</sub> = V<sub>IH</sub> or V<sub>IL</sub>.\n",
+    "evidence": "PDF p13 Figure 17: the control path is a buffer driving the internal switch (no inverter, nothing 'connected to the NC and NO terminals'); the source is selected onto VNC, VNO is open, and ICOM is a current source from the VCOM node to ground. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p13-fig18-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 13,
+    "old": "![Figure 18: OFF-State Leakage Current measurement circuit. The circuit is similar to Figure 17, but the switch is shown in the OFF state, connecting NO to COM. The current I_COM is measured through the COM terminal. The input voltage V_I is set to V_IH or V_IL. The NC and NO terminals are connected to 0V, and the COM terminal is connected to V_+.](3ad00ce93ad9dea9ee0f47535e5355e6_img.jpg)",
+    "new": "![Figure 18: OFF-state leakage current test circuit](3ad00ce93ad9dea9ee0f47535e5355e6_img.jpg)",
+    "evidence": "PDF p13 Figure 18: VCOM is driven by a voltage source; NC and NO are not both 'connected to 0V' and there is no I_COM in this drawing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p13-fig18-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 13,
+    "old": "\nFigure 18: OFF-State Leakage Current measurement circuit. The circuit is similar to Figure 17, but the switch is shown in the OFF state, connecting NO to COM. The current I\\_COM is measured through the COM terminal. The input voltage V\\_I is set to V\\_IH or V\\_IL. The NC and NO terminals are connected to 0V, and the COM terminal is connected to V\\_+.\n",
+    "new": "\nFigure 18: OFF-State Leakage Current test circuit (description written from the drawing). Same arrangement as Figure 17: a grounded voltage source is connected through an external selector switch to the V<sub>NC</sub> terminal (NC pin), V<sub>NO</sub> is drawn open, V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer. The internal switch is drawn connecting COM to NO, so NC is the OFF channel. The V<sub>COM</sub> node is driven by a second grounded voltage source (no current source). The box on the right reads OFF-State Leakage Current, Channel OFF, V<sub>I</sub> = V<sub>IH</sub> or V<sub>IL</sub>, V<sub>NC</sub> or V<sub>NO</sub> = 0 to V<sub>+</sub> and V<sub>COM</sub> = V<sub>+</sub> to 0.\n",
+    "evidence": "PDF p13 Figure 18: VCOM is driven by a voltage source; NC and NO are not both 'connected to 0V' and there is no I_COM in this drawing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p13-fig19-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 13,
+    "old": "![Figure 19: ON-State Leakage Current measurement circuit. The circuit is similar to Figure 17, but the switch is shown in the ON state, connecting NC to COM. The current I_COM is measured through the COM terminal. The input voltage V_I is set to V_IH or V_IL. The NC and NO terminals are connected to 0V, and the COM terminal is connected to V_+.](e9d825d87c5f85c8dba0664eace96ef4_img.jpg)",
+    "new": "![Figure 19: ON-state leakage current test circuit](e9d825d87c5f85c8dba0664eace96ef4_img.jpg)",
+    "evidence": "PDF p13 Figure 19: VCOM is an open terminal; NC and NO are not 'connected to 0V' and COM is not 'connected to V+'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p13-fig19-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 13,
+    "old": "\nFigure 19: ON-State Leakage Current measurement circuit. The circuit is similar to Figure 17, but the switch is shown in the ON state, connecting NC to COM. The current I\\_COM is measured through the COM terminal. The input voltage V\\_I is set to V\\_IH or V\\_IL. The NC and NO terminals are connected to 0V, and the COM terminal is connected to V\\_+.\n",
+    "new": "\nFigure 19: ON-State Leakage Current test circuit (description written from the drawing). Same arrangement as Figure 17: a grounded voltage source is connected through an external selector switch to the V<sub>NC</sub> terminal (NC pin), V<sub>NO</sub> is drawn open, V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer, and the internal switch is drawn connecting COM to NC. The V<sub>COM</sub> terminal is left open (no source or load). The box on the right reads ON-State Leakage Current, Channel ON, V<sub>I</sub> = V<sub>IH</sub> or V<sub>IL</sub>.\n",
+    "evidence": "PDF p13 Figure 19: VCOM is an open terminal; NC and NO are not 'connected to 0V' and COM is not 'connected to V+'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-heading-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "### **Parameter Measurement Information (continued)**\n\n![Figure 20",
+    "new": "### Parameter Measurement Information (continued)\n\n![Figure 20",
+    "evidence": "PDF p14: 'Parameter Measurement Information (continued)' is a plain heading; ** removed inside the ### heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-fig20-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "![Figure 20: Capacitance measurement circuit diagram. A capacitance meter is connected to the NC pin of a switch. The switch has NC, NO, COM, and IN or EN pins. The IN or EN pin is connected to a logic input VI. The switch is powered by V+ and has a ground connection. A text box specifies: VBIAS = V+ or GND, VI = VIH or VIL, and capacitance is measured at NC, NO, COM, and IN inputs during ON and OFF conditions.](a26e142d3df5bef41a84a9dd099d7825_img.jpg)",
+    "new": "![Figure 20: Capacitance test circuit](a26e142d3df5bef41a84a9dd099d7825_img.jpg)",
+    "evidence": "PDF p14 Figure 20: the meter reaches the pins through a selector switch and V_NO/V_COM/V_I are separate open terminals; the AI text did not mention them. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-fig20-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "\nFigure 20: Capacitance measurement circuit diagram. A capacitance meter is connected to the NC pin of a switch. The switch has NC, NO, COM, and IN or EN pins. The IN or EN pin is connected to a logic input VI. The switch is powered by V+ and has a ground connection. A text box specifies: VBIAS = V+ or GND, VI = VIH or VIL, and capacitance is measured at NC, NO, COM, and IN inputs during ON and OFF conditions.\n",
+    "new": "\nFigure 20: Capacitance test circuit (description written from the drawing). A Capacitance Meter, with its V<sub>BIAS</sub> terminal, is connected through an external selector switch to the V<sub>NC</sub> terminal (NC pin); the V<sub>NO</sub> (NO), V<sub>COM</sub> (COM) and V<sub>I</sub> terminals are drawn as open circles. V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer whose dashed control line goes to the internal switch, drawn connecting COM to NC. V<sub>+</sub> is at the top of the device and GND at the bottom (grounded). The box on the right reads V<sub>BIAS</sub> = V<sub>+</sub> or GND, V<sub>I</sub> = V<sub>IH</sub> or V<sub>IL</sub>, and 'Capacitance is measured at NC, NO, COM, and IN inputs during ON and OFF conditions.'\n",
+    "evidence": "PDF p14 Figure 20: the meter reaches the pins through a selector switch and V_NO/V_COM/V_I are separate open terminals; the AI text did not mention them. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-fig21-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "![Figure 21: Turnon and Turnoff time measurement circuit. The switch output (VNC or VNO) is connected to a load consisting of a resistor RL and a capacitor CL(2). The input VI is a logic square wave. A timing diagram shows the transition from 0 to V+ and back, with 50% rise/fall times and tON/tOFF measured between 90% levels. A table provides test conditions: tON and tOFF tests use RL = 300 ohms and CL = 35 pF.](16c1175b5f05a4b55e6d396fc51b15b3_img.jpg)",
+    "new": "![Figure 21: Turnon and turnoff time test circuit and timing diagram](16c1175b5f05a4b55e6d396fc51b15b3_img.jpg)",
+    "evidence": "PDF p14 Figure 21: t_ON/t_OFF run from the 50% point of the logic input to the 90% point of the switch output (not '50% rise/fall times ... between 90% levels'); both NC/NO outputs have CL and RL loads and COM is driven by V_COM (3). The R_L/C_L table below the image is kept. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-fig21-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "\nFigure 21: Turnon and Turnoff time measurement circuit. The switch output (VNC or VNO) is connected to a load consisting of a resistor RL and a capacitor CL(2). The input VI is a logic square wave. A timing diagram shows the transition from 0 to V+ and back, with 50% rise/fall times and tON/tOFF measured between 90% levels. A table provides test conditions: tON and tOFF tests use RL = 300 ohms and CL = 35 pF.\n",
+    "new": "\nFigure 21: Turnon and turnoff time test circuit (description written from the drawing). COM is driven by V<sub>COM</sub> <sup>(3)</sup>. Both NC or NO outputs are loaded to ground by C<sub>L</sub> <sup>(2)</sup> in parallel with R<sub>L</sub>; the output node of the switched channel is labeled V<sub>NC</sub> or V<sub>NO</sub>. A pulse generator (Logic Input <sup>(1)</sup>) supplies V<sub>I</sub> to IN or EN (EN with an overbar) through a buffer that controls the internal switch. V<sub>+</sub> at the top, GND at the bottom. The table gives R<sub>L</sub> and C<sub>L</sub> for the t<sub>ON</sub> and t<sub>OFF</sub> tests. Timing diagram: Logic Input (V<sub>I</sub>) switches between 0 and V<sub>+</sub>; t<sub>ON</sub> is measured from the 50% point of the V<sub>I</sub> edge to the 90% point of the rising Switch Output (V<sub>NC</sub>), t<sub>OFF</sub> from the 50% point of the next V<sub>I</sub> edge to the 90% point of the falling output.\n",
+    "evidence": "PDF p14 Figure 21: t_ON/t_OFF run from the 50% point of the logic input to the 90% point of the switch output (not '50% rise/fall times ... between 90% levels'); both NC/NO outputs have CL and RL loads and COM is driven by V_COM (3). The R_L/C_L table below the image is kept. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-fig22-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "![Figure 22: Bandwidth measurement circuit. A network analyzer with a 50 ohm source is connected to the NC pin of the switch. The switch output is connected to the COM pin. The input VI is a DC bias. A text box specifies: Channel ON: NC to COM, VI = V+ or GND. Another box details the Network Analyzer Setup: Source Power = 0 dBm (632-mV P-P at 50-ohm load), DC Bias = 350 mV.](d17f75945bbb3feb84a153ecfedb9b81_img.jpg)",
+    "new": "![Figure 22: Bandwidth test circuit](d17f75945bbb3feb84a153ecfedb9b81_img.jpg)",
+    "evidence": "PDF p14 Figure 22: the analyzer source feeds VNC through 50 Ω and COM returns to a 50 Ω input; V_I is a separate DC source on IN or EN-bar (the 350 mV DC bias is an analyzer setting, not V_I). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p14-fig22-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 14,
+    "old": "\nFigure 22: Bandwidth measurement circuit. A network analyzer with a 50 ohm source is connected to the NC pin of the switch. The switch output is connected to the COM pin. The input VI is a DC bias. A text box specifies: Channel ON: NC to COM, VI = V+ or GND. Another box details the Network Analyzer Setup: Source Power = 0 dBm (632-mV P-P at 50-ohm load), DC Bias = 350 mV.\n",
+    "new": "\nFigure 22: Bandwidth test circuit (description written from the drawing). Inside the Network Analyzer, the Source Signal drives the V<sub>NC</sub> terminal (NC pin) through a 50 Ω resistor; the V<sub>COM</sub> terminal (COM) is wired back to the analyzer input, terminated by 50 Ω to ground. V<sub>NO</sub> (NO) is drawn open. A grounded DC source V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer; the internal switch is drawn connecting COM to NC. The boxes on the right read 'Channel ON: NC to COM, V<sub>I</sub> = V<sub>+</sub> or GND' and 'Network Analyzer Setup: Source Power = 0 dBm (632-mV P-P at 50-Ω load), DC Bias = 350 mV'.\n",
+    "evidence": "PDF p14 Figure 22: the analyzer source feeds VNC through 50 Ω and COM returns to a 50 Ω input; V_I is a separate DC source on IN or EN-bar (the 350 mV DC bias is an analyzer setting, not V_I). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-heading-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "### **Parameter Measurement Information (continued)**\n\n![Figure 23",
+    "new": "### Parameter Measurement Information (continued)\n\n![Figure 23",
+    "evidence": "PDF p15: 'Parameter Measurement Information (continued)' is a plain heading; ** removed inside the ### heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-fig23-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "![Figure 23: OFF Isolation (OISO) test circuit. A network analyzer is connected to the NC and NO pins of the TS3A5018. The NC pin is connected to the source signal through a 50-ohm resistor. The NO pin is connected to the source signal through a 50-ohm resistor. The input voltage VI is applied to the IN or EN pin. The output voltage VCOM is measured at the COM pin. The supply voltage is V+. The ground is connected to the GND pin and the source signal ground.](9b6b5924b48bf2fd5f347f88f06f45b3_img.jpg)",
+    "new": "![Figure 23: OFF isolation test circuit](9b6b5924b48bf2fd5f347f88f06f45b3_img.jpg)",
+    "evidence": "PDF p15 Figure 23: the source drives only VNC (with a '50' termination to ground), COM returns to the analyzer and NO is open; the AI text said both NC and NO are fed from the source through 50 Ω. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-fig23-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "\nFigure 23: OFF Isolation (OISO) test circuit. A network analyzer is connected to the NC and NO pins of the TS3A5018. The NC pin is connected to the source signal through a 50-ohm resistor. The NO pin is connected to the source signal through a 50-ohm resistor. The input voltage VI is applied to the IN or EN pin. The output voltage VCOM is measured at the COM pin. The supply voltage is V+. The ground is connected to the GND pin and the source signal ground.\n",
+    "new": "\nFigure 23: OFF Isolation (O<sub>ISO</sub>) test circuit (description written from the drawing). Inside the Network Analyzer, the Source Signal drives the V<sub>NC</sub> terminal (NC pin) through a 50 Ω resistor; V<sub>NC</sub> is also terminated to ground by a resistor labeled '50' (no unit printed). The internal switch is drawn connecting COM to NO, so the NC channel is OFF; V<sub>NO</sub> (NO) is drawn open. The V<sub>COM</sub> terminal (COM) is wired back to the analyzer input, terminated by 50 Ω to ground. A grounded DC source V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer. V<sub>+</sub> at the top, GND at the bottom.\n",
+    "evidence": "PDF p15 Figure 23: the source drives only VNC (with a '50' termination to ground), COM returns to the analyzer and NO is open; the AI text said both NC and NO are fed from the source through 50 Ω. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-fig24-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "![Figure 24: Crosstalk (XTALK) test circuit. A network analyzer is connected to the NC and NO pins of the TS3A5018. The NC pin is connected to the source signal through a 50-ohm resistor. The NO pin is connected to the source signal through a 50-ohm resistor. The input voltage VI is applied to the IN or EN pin. The output voltage VCOM is measured at the COM pin. The supply voltage is V+. The ground is connected to the GND pin and the source signal ground.](a7c51c18111139f9aca2805114108565_img.jpg)",
+    "new": "![Figure 24: Crosstalk test circuit](a7c51c18111139f9aca2805114108565_img.jpg)",
+    "evidence": "PDF p15 Figure 24: NO is the measured (analyzer input) terminal and COM is terminated by 50 Ω; the AI text said NO is fed from the source and VCOM is measured. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-fig24-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "\nFigure 24: Crosstalk (XTALK) test circuit. A network analyzer is connected to the NC and NO pins of the TS3A5018. The NC pin is connected to the source signal through a 50-ohm resistor. The NO pin is connected to the source signal through a 50-ohm resistor. The input voltage VI is applied to the IN or EN pin. The output voltage VCOM is measured at the COM pin. The supply voltage is V+. The ground is connected to the GND pin and the source signal ground.\n",
+    "new": "\nFigure 24: Crosstalk (X<sub>TALK</sub>) test circuit (description written from the drawing). Inside the Network Analyzer, the Source Signal drives the V<sub>NC</sub> terminal (NC pin) through a 50 Ω resistor, and the V<sub>NO</sub> terminal (NO pin) is wired to the analyzer input, terminated by 50 Ω to ground. The internal switch is drawn connecting COM to NC; the V<sub>COM</sub> terminal (COM) is terminated by 50 Ω to ground. A grounded DC source V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer. V<sub>+</sub> at the top, GND at the bottom.\n",
+    "evidence": "PDF p15 Figure 24: NO is the measured (analyzer input) terminal and COM is terminated by 50 Ω; the AI text said NO is fed from the source and VCOM is measured. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-fig25-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "![Figure 25: Crosstalk Adjacent test circuit. A network analyzer is connected to the NC1 and NC2 pins of the TS3A5018. The NC1 pin is connected to the source signal through a 50-ohm resistor. The NC2 pin is connected to the source signal through a 50-ohm resistor. The input voltage VI is applied to the IN or EN pin. The output voltages VCOM1 and VCOM2 are measured at the COM1 and COM2 pins. The supply voltage is V+. The ground is connected to the GND pin and the source signal ground.](e4c6fa93821e3546ee9fcae897ae2771_img.jpg)",
+    "new": "![Figure 25: Adjacent-channel crosstalk test circuit](e4c6fa93821e3546ee9fcae897ae2771_img.jpg)",
+    "evidence": "PDF p15 Figure 25: only NC1 is driven, NC2 is grounded, COM1 is terminated and COM2 is the measured output; the AI text said both NC1 and NC2 are fed from the source and that VCOM1 and VCOM2 are measured. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p15-fig25-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 15,
+    "old": "\nFigure 25: Crosstalk Adjacent test circuit. A network analyzer is connected to the NC1 and NC2 pins of the TS3A5018. The NC1 pin is connected to the source signal through a 50-ohm resistor. The NC2 pin is connected to the source signal through a 50-ohm resistor. The input voltage VI is applied to the IN or EN pin. The output voltages VCOM1 and VCOM2 are measured at the COM1 and COM2 pins. The supply voltage is V+. The ground is connected to the GND pin and the source signal ground.\n",
+    "new": "\nFigure 25: Crosstalk Adjacent test circuit (description written from the drawing). Inside the Network Analyzer, the Source Signal drives the V<sub>NC1</sub> terminal (NC1 pin) through a 50 Ω resistor; the V<sub>NC2</sub> terminal (NC2 pin) is grounded. Both internal switches are drawn connecting COM1 to NC1 and COM2 to NC2. COM1 is terminated by 50 Ω to ground and COM2 is wired back to the analyzer input, terminated by 50 Ω to ground. A grounded DC source V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer that controls both switches. V<sub>+</sub> at the top, GND at the bottom.\n",
+    "evidence": "PDF p15 Figure 25: only NC1 is driven, NC2 is grounded, COM1 is terminated and COM2 is the measured output; the AI text said both NC1 and NC2 are fed from the source and that VCOM1 and VCOM2 are measured. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
