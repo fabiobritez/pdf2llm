@@ -30,24 +30,24 @@
       ],
       "figure_missing_words": [
         "applicable",
+        "bxx",
         "current",
         "device",
         "fast",
         "fcrlf",
         "for",
+        "includes",
         "information",
         "more",
         "number",
         "options",
         "package",
-        "rvset",
         "rzv",
+        "section",
         "see",
         "size",
         "tables",
-        "through",
         "transient",
-        "vio",
         "where",
         "wqfn"
       ],
@@ -317,17 +317,12 @@
         "8",
         "9"
       ],
-      "figure_alt_number_coverage": 0.7058823529411765,
-      "figure_alt_word_coverage": 0.5294117647058824,
+      "figure_alt_number_coverage": 0.9411764705882353,
+      "figure_alt_word_coverage": 0.5588235294117647,
       "figure_missing_numbers": [
-        "10",
-        "11",
-        "14",
-        "15",
         "8.3"
       ],
       "figure_missing_words": [
-        "description",
         "differential",
         "for",
         "frequency",
@@ -901,20 +896,22 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 12,
+      "extra_number_count": 14,
       "extra_numbers": [
         "-40",
+        "0",
         "1.45",
+        "1.5",
         "1.55",
         "10",
-        "120",
         "140",
         "160",
         "2.7",
         "3.3",
         "6.7",
         "7",
-        "70"
+        "70",
+        "90"
       ],
       "figure_alt_number_coverage": 0.2727272727272727,
       "figure_alt_word_coverage": 0.8333333333333334,
@@ -926,7 +923,6 @@
         "1.47",
         "1.48",
         "1.49",
-        "1.5",
         "1.51",
         "1.52",
         "1.53",
@@ -934,6 +930,7 @@
         "1.6",
         "1.8",
         "100",
+        "120",
         "2.1",
         "2.2",
         "2.3",
@@ -1019,35 +1016,36 @@
         "71",
         "744302010"
       ],
-      "figure_alt_number_coverage": 0.6111111111111112,
-      "figure_alt_word_coverage": 0.4722222222222222,
+      "figure_alt_number_coverage": 0.2777777777777778,
+      "figure_alt_word_coverage": 0.6111111111111112,
       "figure_missing_numbers": [
         "0",
+        "1.8",
+        "10",
+        "100",
         "105",
+        "2.1",
+        "22",
         "226",
         "25",
         "31",
+        "4",
         "71",
         "744302010"
       ],
       "figure_missing_words": [
         "any",
-        "description",
         "elektronik",
         "gcm",
-        "gosns",
         "instruments",
         "kohm",
         "manufacturer",
-        "mode",
         "murata",
         "reference",
         "see",
         "setpoint",
-        "sync",
-        "syncout",
         "texas",
-        "vosns",
+        "voltage",
         "wryur",
         "wuerth"
       ],
@@ -1107,44 +1105,12 @@
         "3",
         "8.2"
       ],
-      "figure_alt_number_coverage": 0.0,
-      "figure_alt_word_coverage": 0.125,
+      "figure_alt_number_coverage": 0.75,
+      "figure_alt_word_coverage": 1.0,
       "figure_missing_numbers": [
-        "1",
-        "2",
-        "3",
         "8.2"
       ],
-      "figure_missing_words": [
-        "agnd",
-        "bias",
-        "comp",
-        "compensation",
-        "control",
-        "device",
-        "drive",
-        "gate",
-        "gnd",
-        "gosns",
-        "ihs",
-        "ils",
-        "mode",
-        "mohm",
-        "oscillator",
-        "ramp",
-        "regulator",
-        "scl",
-        "sda",
-        "shutdown",
-        "slope",
-        "sync",
-        "syncout",
-        "thermal",
-        "vin",
-        "vosns",
-        "vref",
-        "vset"
-      ],
+      "figure_missing_words": [],
       "figure_number_tokens": 4,
       "figure_reasons": [],
       "figure_regions": [
@@ -1192,15 +1158,10 @@
       "extra_number_count": 0,
       "extra_numbers": [],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.6842105263157895,
+      "figure_alt_word_coverage": 0.9473684210526315,
       "figure_missing_numbers": [],
       "figure_missing_words": [
-        "agnd",
-        "comp",
-        "fswt",
-        "gosns",
-        "tauaux",
-        "vosns"
+        "fswt"
       ],
       "figure_number_tokens": 2,
       "figure_reasons": [],
@@ -1252,16 +1213,17 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 6,
+      "extra_number_count": 7,
       "extra_numbers": [
         "0",
         "0.4",
         "0.8",
+        "1.2",
         "1.7",
         "2.7",
         "3.3"
       ],
-      "figure_alt_number_coverage": 0.4444444444444444,
+      "figure_alt_number_coverage": 0.5,
       "figure_alt_word_coverage": 0.9090909090909091,
       "figure_missing_numbers": [
         "0.2",
@@ -1270,7 +1232,6 @@
         "0.7",
         "0.9",
         "1.1",
-        "1.2",
         "1.3",
         "1.4",
         "1.6"
@@ -1337,7 +1298,7 @@
       "extra_number_count": 0,
       "extra_numbers": [],
       "figure_alt_number_coverage": 0.5,
-      "figure_alt_word_coverage": 0.25,
+      "figure_alt_word_coverage": 0.3333333333333333,
       "figure_missing_numbers": [
         "8.3"
       ],
@@ -1347,8 +1308,6 @@
         "configuration",
         "fpwm",
         "fpwmen",
-        "high",
-        "low",
         "mode",
         "nonsynchronous",
         "not",
@@ -1433,8 +1392,10 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 0,
-      "missing_words": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "systemready"
+      ],
       "number_coverage": 1.0,
       "page": 19,
       "pdf_number_tokens": 11,
@@ -1457,7 +1418,7 @@
           "words": 4
         }
       },
-      "word_coverage": 1.0
+      "word_coverage": 0.9900990099009901
     },
     {
       "alt_only_number_count": 0,
@@ -1473,7 +1434,7 @@
         "6.2"
       ],
       "figure_alt_number_coverage": 0.125,
-      "figure_alt_word_coverage": 0.47619047619047616,
+      "figure_alt_word_coverage": 0.5714285714285714,
       "figure_missing_numbers": [
         "1",
         "1.5",
@@ -1484,11 +1445,9 @@
         "6.2"
       ],
       "figure_missing_words": [
-        "device",
         "frequency",
         "fset",
         "gnd",
-        "initialization",
         "kohm",
         "mhz",
         "resistor",
@@ -1562,7 +1521,7 @@
         "6.5"
       ],
       "figure_alt_number_coverage": 0.4666666666666667,
-      "figure_alt_word_coverage": 0.625,
+      "figure_alt_word_coverage": 0.5,
       "figure_missing_numbers": [
         "0",
         "0.71875",
@@ -1576,6 +1535,7 @@
       "figure_missing_words": [
         "range",
         "steps",
+        "voltage",
         "vrange"
       ],
       "figure_number_tokens": 15,
@@ -2156,10 +2116,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 1,
-      "missing_words": [
-        "exits"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 27,
       "pdf_number_tokens": 8,
@@ -2182,7 +2140,7 @@
           "words": 4
         }
       },
-      "word_coverage": 0.992
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
@@ -2195,7 +2153,7 @@
         "2"
       ],
       "figure_alt_number_coverage": 0.0,
-      "figure_alt_word_coverage": 0.3333333333333333,
+      "figure_alt_word_coverage": 0.23809523809523808,
       "figure_missing_numbers": [
         "2"
       ],
@@ -2208,7 +2166,9 @@
         "ovlo",
         "pgblnkdvs",
         "primary",
+        "soft",
         "standalone",
+        "start",
         "tsd",
         "undefined",
         "uvlo",
@@ -2262,24 +2222,23 @@
       "word_coverage": 1.0
     },
     {
-      "alt_only_number_count": 0,
-      "alt_only_numbers": [],
-      "classification": "text",
-      "extra_number_count": 2,
-      "extra_numbers": [
-        "4",
-        "40"
+      "alt_only_number_count": 2,
+      "alt_only_numbers": [
+        "105%",
+        "95%"
       ],
-      "figure_alt_number_coverage": 0.6666666666666666,
-      "figure_alt_word_coverage": 0.9375,
-      "figure_missing_numbers": [
+      "classification": "text",
+      "extra_number_count": 4,
+      "extra_numbers": [
         "105",
+        "4",
+        "40",
         "95"
       ],
-      "figure_missing_words": [
-        "complete",
-        "softstart"
-      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
       "figure_number_tokens": 6,
       "figure_reasons": [],
       "figure_regions": [
@@ -2433,18 +2392,9 @@
         "6"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.6666666666666666,
+      "figure_alt_word_coverage": 1.0,
       "figure_missing_numbers": [],
-      "figure_missing_words": [
-        "cin",
-        "cload",
-        "comp",
-        "cout",
-        "ren",
-        "rpg",
-        "scl",
-        "sda"
-      ],
+      "figure_missing_words": [],
       "figure_number_tokens": 7,
       "figure_reasons": [],
       "figure_regions": [
@@ -2724,10 +2674,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 1,
-      "missing_words": [
-        "deviceswait"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 36,
       "pdf_number_tokens": 11,
@@ -2750,28 +2698,22 @@
           "words": 4
         }
       },
-      "word_coverage": 0.9936708860759493
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 6,
+      "extra_number_count": 3,
       "extra_numbers": [
         "3",
-        "4",
-        "5",
-        "6",
         "7",
         "9"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.9428571428571428,
+      "figure_alt_word_coverage": 1.0,
       "figure_missing_numbers": [],
-      "figure_missing_words": [
-        "ack",
-        "line"
-      ],
+      "figure_missing_words": [],
       "figure_number_tokens": 2,
       "figure_reasons": [],
       "figure_regions": [
@@ -2827,20 +2769,9 @@
         "7"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.5,
+      "figure_alt_word_coverage": 1.0,
       "figure_missing_numbers": [],
-      "figure_missing_words": [
-        "acknowledge",
-        "condition",
-        "continues",
-        "high",
-        "low",
-        "not",
-        "repeated",
-        "sda",
-        "start",
-        "stop"
-      ],
+      "figure_missing_words": [],
       "figure_number_tokens": 0,
       "figure_reasons": [],
       "figure_regions": [
@@ -3500,23 +3431,16 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 4,
+      "extra_number_count": 3,
       "extra_numbers": [
         "2",
-        "2.2",
         "2.7",
         "6"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.7619047619047619,
+      "figure_alt_word_coverage": 1.0,
       "figure_missing_numbers": [],
-      "figure_missing_words": [
-        "gosns",
-        "ren",
-        "rvset",
-        "vio",
-        "vosns"
-      ],
+      "figure_missing_words": [],
       "figure_number_tokens": 5,
       "figure_reasons": [],
       "figure_regions": [
@@ -3914,13 +3838,10 @@
       "word_coverage": 0.975609756097561
     },
     {
-      "alt_only_number_count": 2,
-      "alt_only_numbers": [
-        "80%",
-        "85%"
-      ],
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 19,
+      "extra_number_count": 18,
       "extra_numbers": [
         "0",
         "0.4",
@@ -3938,7 +3859,6 @@
         "33",
         "45",
         "75",
-        "80",
         "85",
         "95"
       ],
@@ -4053,17 +3973,10 @@
         "6287",
         "85"
       ],
-      "figure_alt_number_coverage": 0.6666666666666666,
-      "figure_alt_word_coverage": 0.5714285714285714,
-      "figure_missing_numbers": [
-        "5",
-        "6287"
-      ],
-      "figure_missing_words": [
-        "fpwm",
-        "tps",
-        "vin"
-      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
       "figure_number_tokens": 6,
       "figure_reasons": [],
       "figure_regions": [
@@ -4171,17 +4084,10 @@
         "6287",
         "85"
       ],
-      "figure_alt_number_coverage": 0.6666666666666666,
-      "figure_alt_word_coverage": 0.5714285714285714,
-      "figure_missing_numbers": [
-        "3.3",
-        "6287"
-      ],
-      "figure_missing_words": [
-        "fpwm",
-        "tps",
-        "vin"
-      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
       "figure_number_tokens": 6,
       "figure_reasons": [],
       "figure_regions": [
@@ -4262,33 +4168,45 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 17,
+      "extra_number_count": 27,
       "extra_numbers": [
-        "0",
+        "-3.15",
+        "-746.8",
+        "-797.5",
+        "0.36",
         "0.75",
+        "1",
         "1.6",
         "100",
         "11.3",
         "16.25",
+        "2",
+        "2.5",
         "200",
         "25",
         "3",
         "3.3",
+        "3.815",
+        "4",
         "4.5",
         "5",
+        "50",
         "500",
         "6287",
         "66",
+        "749.15",
         "8.56",
         "8.75"
       ],
-      "figure_alt_number_coverage": 0.36363636363636365,
-      "figure_alt_word_coverage": 0.5,
+      "figure_alt_number_coverage": 0.18181818181818182,
+      "figure_alt_word_coverage": 0.3333333333333333,
       "figure_missing_numbers": [
+        "0.75",
         "11.3",
         "16.25",
         "25",
         "3.3",
+        "4.5",
         "6287",
         "66",
         "8.75"
@@ -4298,8 +4216,10 @@
         "fpwm",
         "iout",
         "mohm",
+        "pwm",
         "rload",
-        "tps"
+        "tps",
+        "vin"
       ],
       "figure_number_tokens": 11,
       "figure_reasons": [],
@@ -4383,12 +4303,10 @@
         "4"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.85,
+      "figure_alt_word_coverage": 0.95,
       "figure_missing_numbers": [],
       "figure_missing_words": [
-        "cout",
-        "devices",
-        "vio"
+        "devices"
       ],
       "figure_number_tokens": 7,
       "figure_reasons": [],
@@ -4434,45 +4352,21 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 0,
-      "extra_numbers": [],
-      "figure_alt_number_coverage": 0.0,
-      "figure_alt_word_coverage": 0.0,
-      "figure_missing_numbers": [
+      "extra_number_count": 8,
+      "extra_numbers": [
         "1",
         "100",
+        "16",
         "2",
         "2.7",
         "47",
         "6",
-        "6287"
+        "8"
       ],
-      "figure_missing_words": [
-        "agnd",
-        "cin",
-        "cload",
-        "comp",
-        "cout",
-        "device",
-        "gnd",
-        "gosns",
-        "load",
-        "mode",
-        "primary",
-        "ren",
-        "rpg",
-        "rvset",
-        "scl",
-        "sda",
-        "secondary",
-        "sync",
-        "syncout",
-        "tps",
-        "vin",
-        "vio",
-        "vosns",
-        "vset"
-      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 1.0,
+      "figure_missing_numbers": [],
+      "figure_missing_words": [],
       "figure_number_tokens": 7,
       "figure_reasons": [],
       "figure_regions": [
@@ -4689,40 +4583,39 @@
       "word_coverage": 0.9636363636363636
     },
     {
-      "alt_only_number_count": 1,
-      "alt_only_numbers": [
-        "92%"
-      ],
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 24,
+      "extra_number_count": 25,
       "extra_numbers": [
         "0",
         "0.75",
         "0.792",
-        "0.799",
         "0.8",
         "0.808",
+        "1",
         "10.4",
         "13",
-        "15",
+        "2",
         "2.7",
+        "20",
+        "22.8",
         "25",
         "3.3",
         "37",
         "4",
+        "40",
         "5",
         "50",
         "6",
         "60",
         "6287",
-        "628776",
+        "62876",
         "85",
-        "90",
-        "92",
         "95"
       ],
-      "figure_alt_number_coverage": 0.5,
-      "figure_alt_word_coverage": 0.8421052631578947,
+      "figure_alt_number_coverage": 0.43333333333333335,
+      "figure_alt_word_coverage": 0.8947368421052632,
       "figure_missing_numbers": [
         "0.793",
         "0.794",
@@ -4730,6 +4623,7 @@
         "0.796",
         "0.797",
         "0.798",
+        "0.799",
         "0.801",
         "0.802",
         "0.803",
@@ -4738,12 +4632,12 @@
         "0.806",
         "0.807",
         "10.4",
-        "62876"
+        "13",
+        "37"
       ],
       "figure_missing_words": [
         "application",
-        "devices",
-        "stacked"
+        "iout"
       ],
       "figure_number_tokens": 30,
       "figure_reasons": [],
@@ -4801,20 +4695,24 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 5,
+      "extra_number_count": 10,
       "extra_numbers": [
+        "-740.6",
         "0.75",
+        "1",
         "2",
+        "2.5",
         "20",
         "25",
-        "5"
+        "5",
+        "50",
+        "744.35"
       ],
-      "figure_alt_number_coverage": 0.25,
+      "figure_alt_number_coverage": 0.5,
       "figure_alt_word_coverage": 0.0,
       "figure_missing_numbers": [
         "0.75",
-        "20",
-        "25"
+        "20"
       ],
       "figure_missing_words": [
         "degc",
@@ -4883,24 +4781,9 @@
         "6"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.4166666666666667,
+      "figure_alt_word_coverage": 1.0,
       "figure_missing_numbers": [],
-      "figure_missing_words": [
-        "agnd",
-        "cin",
-        "cout",
-        "gnd",
-        "gosns",
-        "mode",
-        "ren",
-        "rpg",
-        "scl",
-        "sda",
-        "sync",
-        "syncout",
-        "vio",
-        "vosns"
-      ],
+      "figure_missing_words": [],
       "figure_number_tokens": 7,
       "figure_reasons": [],
       "figure_regions": [
@@ -4942,12 +4825,10 @@
       "word_coverage": 1.0
     },
     {
-      "alt_only_number_count": 1,
-      "alt_only_numbers": [
-        "93%"
-      ],
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 20,
+      "extra_number_count": 18,
       "extra_numbers": [
         "0",
         "0.792",
@@ -4955,19 +4836,17 @@
         "0.808",
         "10.5",
         "10.6",
-        "15",
         "2.7",
         "25",
         "3.3",
         "4",
         "5",
         "50",
+        "55",
         "6",
         "60",
         "75",
         "85",
-        "92",
-        "93",
         "95"
       ],
       "figure_alt_number_coverage": 0.38461538461538464,
@@ -4989,12 +4868,12 @@
         "0.807",
         "10.5",
         "10.6",
+        "15",
         "20",
         "30",
         "35",
         "40",
         "45",
-        "55",
         "65",
         "70"
       ],
@@ -5048,19 +4927,18 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 2,
+      "extra_number_count": 6,
       "extra_numbers": [
         "1",
-        "2"
-      ],
-      "figure_alt_number_coverage": 0.3333333333333333,
-      "figure_alt_word_coverage": 0.875,
-      "figure_missing_numbers": [
+        "2",
         "4",
         "46",
         "47",
         "6"
       ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 0.875,
+      "figure_missing_numbers": [],
       "figure_missing_words": [
         "example"
       ],
@@ -5910,9 +5788,11 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 1,
+      "extra_number_count": 3,
       "extra_numbers": [
-        "-0.7"
+        "-0.7",
+        "13",
+        "8"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -5923,15 +5803,11 @@
       "figure_regions": [],
       "figure_word_tokens": 0,
       "flags": [],
-      "missing_number_count": 1,
-      "missing_numbers": [
-        "0.75"
-      ],
-      "missing_word_count": 1,
-      "missing_words": [
-        "symm"
-      ],
-      "number_coverage": 0.9696969696969697,
+      "missing_number_count": 0,
+      "missing_numbers": [],
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 1.0,
       "page": 71,
       "pdf_number_tokens": 33,
       "pdf_word_tokens": 49,
@@ -5953,17 +5829,22 @@
           "words": 0
         }
       },
-      "word_coverage": 0.9795918367346939
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
-      "classification": "text loss",
-      "extra_number_count": 3,
+      "classification": "text",
+      "extra_number_count": 8,
       "extra_numbers": [
+        "-0.7",
         "-4",
         "-5",
-        "271"
+        "1",
+        "13",
+        "24",
+        "271",
+        "8"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -5974,22 +5855,14 @@
       "figure_regions": [],
       "figure_word_tokens": 0,
       "flags": [],
-      "missing_number_count": 4,
+      "missing_number_count": 2,
       "missing_numbers": [
-        "1.25",
-        "1.75",
         "4",
         "5"
       ],
-      "missing_word_count": 5,
-      "missing_words": [
-        "flat",
-        "lead",
-        "pack",
-        "plastic",
-        "quad"
-      ],
-      "number_coverage": 0.7777777777777778,
+      "missing_word_count": 0,
+      "missing_words": [],
+      "number_coverage": 0.8888888888888888,
       "page": 72,
       "pdf_number_tokens": 18,
       "pdf_word_tokens": 62,
@@ -6011,14 +5884,15 @@
           "words": 0
         }
       },
-      "word_coverage": 0.9193548387096774
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 19,
+      "extra_number_count": 24,
       "extra_numbers": [
+        "-0.7",
         "0.05",
         "0.1",
         "0.25",
@@ -6026,40 +5900,37 @@
         "0.6",
         "0.71",
         "0.75",
+        "1",
         "1.17",
         "1.59",
+        "13",
         "15",
         "2",
         "2.5",
         "2.85",
+        "20",
         "2022",
         "24",
         "25",
         "3.5",
         "3.85",
-        "4228538"
+        "4228538",
+        "8"
       ],
-      "figure_alt_number_coverage": 0.7368421052631579,
-      "figure_alt_word_coverage": 0.3125,
+      "figure_alt_number_coverage": 0.8947368421052632,
+      "figure_alt_word_coverage": 0.5625,
       "figure_missing_numbers": [
-        "0.1",
-        "15",
-        "20",
         "2022",
         "4228538"
       ],
       "figure_missing_words": [
-        "based",
         "continued",
-        "example",
         "flat",
         "lead",
         "notes",
         "pack",
         "plastic",
-        "quad",
-        "scale",
-        "thick"
+        "quad"
       ],
       "figure_number_tokens": 19,
       "figure_reasons": [],
@@ -6161,14 +6032,14 @@
       "value_matched": 39,
       "verified_ok": 167
     },
-    "high_confidence_table_rows": 0,
-    "low_coverage_text_pages": 1,
-    "mean_number_coverage": 0.9371113545590835,
-    "mean_word_coverage": 0.9529376629097668,
+    "high_confidence_table_rows": 1,
+    "low_coverage_text_pages": 0,
+    "mean_number_coverage": 0.9390485345784553,
+    "mean_word_coverage": 0.9543630878878838,
     "pages": 74,
     "status": "REVIEW",
     "table_issue_counts": {
-      "column shift": 0,
+      "column shift": 1,
       "geometry column mismatch": 0,
       "geometry missing value": 0,
       "missing unit": 0,
@@ -6177,6 +6048,15 @@
       "unit in wrong column": 0
     }
   },
-  "table_issues": [],
+  "table_issues": [
+    {
+      "confidence": "high",
+      "detail": "Text/expression in TYP",
+      "line": 377,
+      "page": 10,
+      "row": "$f_{SSC}$ | Modulation frequency |  |  | fsw/2048 |  | kHz",
+      "type": "column shift"
+    }
+  ],
   "warnings": []
 }
