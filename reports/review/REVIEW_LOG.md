@@ -271,7 +271,6 @@ After the fixes: `validate.py --all` reports ltc3313 OK (word/number coverage 99
 
 Not changed / open:
 - p26 (TA08) and p27 (package drawings) have no image in `img/`: Datalab did not extract them. The md now carries a description / label list marked as written from the PDF drawing; extracting those images would need a new conversion or a rendered crop.
-- p11 says 'See Table 6' and p14 'See Table 4 for pin configuration' (Table 4 is the multiphase configuration; Table 6 has the single-phase pin settings). Kept as printed.
 - Repo-wide conventions were kept: hyphen for the en dash (–40°C, –0.3V), Greek μ next to µ, and running headers/footers omitted, including the p28 'Information furnished by Analog Devices…' disclaimer and the p29 copyright/date footer. The p1 FEATURES list prints its first five items in bold; the md does not bold them.
 - p15 'X5R or X7R type capacitors' starts the right column; it is ambiguous whether it continues the previous paragraph, so the paragraph break was kept. Same for p19 'In normal operation…'.
 - Structure-only oddities: typical-application titles on p21-p24 and p29 are plain text while p25/p26 are bold; label dumps under the p8 and p25 figures; `## LTC3313` running header kept on p2.
