@@ -24873,5 +24873,109 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps22990-p24-fig39-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot showing inrush current with CT = 0 pF. The plot shows four channels: 1) ON (blue), 2) PG (green), 3) VOUT (purple), and 4) IOUT (cyan). When the power supply is turned on, the VOUT (purple) rises and the IOUT (cyan) shows a sharp peak of approximately 200mA. The PG (green) signal is a step function. The ON (blue) signal is a square wave. The IOUT peak occurs at approximately 79.7700µs.]",
+    "new": "![Oscilloscope screenshot showing inrush current with CT = 0 pF. Four channels: 1 ON (blue), 2 IOUT (cyan), 3 VOUT (magenta), 4 PG (green). ON steps high; VOUT then rises with a slight overshoot and settles, while IOUT shows a single bell-shaped inrush current pulse during the VOUT rise and returns to its baseline; PG goes high some time after VOUT has settled. Read scales, timing and current levels from the image/PDF.]",
+    "evidence": "PDF p24 Figure 39: channel 2 is IOUT and channel 4 is PG (the AI text had them swapped); the '~200mA' peak was the channel scale and '79.7700µs' the trigger position, not readings.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p24-fig39-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 24,
+    "old": "\n\nOscilloscope screenshot showing inrush current with CT = 0 pF. The plot shows four channels: 1) ON (blue), 2) PG (green), 3) VOUT (purple), and 4) IOUT (cyan). When the power supply is turned on, the VOUT (purple) rises and the IOUT (cyan) shows a sharp peak of approximately 200mA. The PG (green) signal is a step function. The ON (blue) signal is a square wave. The IOUT peak occurs at approximately 79.7700µs.\n",
+    "new": "\n\nOscilloscope screenshot showing inrush current with CT = 0 pF. Four channels: 1 ON (blue), 2 IOUT (cyan), 3 VOUT (magenta), 4 PG (green). ON steps high; VOUT then rises with a slight overshoot and settles, while IOUT shows a single bell-shaped inrush current pulse during the VOUT rise and returns to its baseline; PG goes high some time after VOUT has settled. Read scales, timing and current levels from the image/PDF.\n",
+    "evidence": "PDF p24 Figure 39: channel 2 is IOUT and channel 4 is PG (the AI text had them swapped); the '~200mA' peak was the channel scale and '79.7700µs' the trigger position, not readings.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p24-fig40-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot showing inrush current with CT = 6800 pF. The plot shows four channels: 1) ON (blue), 2) PG (green), 3) VOUT (purple), and 4) IOUT (cyan). When the power supply is turned on, the VOUT (purple) rises and the IOUT (cyan) shows a smaller peak of approximately 100mA. The PG (green) signal is a step function. The ON (blue) signal is a square wave. The IOUT peak occurs at approximately 297.000µs.]",
+    "new": "![Oscilloscope screenshot showing inrush current with CT = 6800 pF. Four channels: 1 ON (blue), 2 IOUT (cyan), 3 VOUT (magenta), 4 PG (green). ON steps high; after a delay VOUT ramps up linearly (slower than in Figure 39), and IOUT shows a flat-topped inrush current pulse of lower amplitude for the duration of the ramp; PG goes high some time after VOUT has settled. Read scales, timing and current levels from the image/PDF.]",
+    "evidence": "PDF p24 Figure 40: channel 2 is IOUT and channel 4 is PG (the AI text had them swapped); the '~100mA' peak was the channel scale and '297.000µs' the trigger position, not readings.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p24-fig40-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 24,
+    "old": "\n\nOscilloscope screenshot showing inrush current with CT = 6800 pF. The plot shows four channels: 1) ON (blue), 2) PG (green), 3) VOUT (purple), and 4) IOUT (cyan). When the power supply is turned on, the VOUT (purple) rises and the IOUT (cyan) shows a smaller peak of approximately 100mA. The PG (green) signal is a step function. The ON (blue) signal is a square wave. The IOUT peak occurs at approximately 297.000µs.\n",
+    "new": "\n\nOscilloscope screenshot showing inrush current with CT = 6800 pF. Four channels: 1 ON (blue), 2 IOUT (cyan), 3 VOUT (magenta), 4 PG (green). ON steps high; after a delay VOUT ramps up linearly (slower than in Figure 39), and IOUT shows a flat-topped inrush current pulse of lower amplitude for the duration of the ramp; PG goes high some time after VOUT has settled. Read scales, timing and current levels from the image/PDF.\n",
+    "evidence": "PDF p24 Figure 40: channel 2 is IOUT and channel 4 is PG (the AI text had them swapped); the '~100mA' peak was the channel scale and '297.000µs' the trigger position, not readings.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p24-fig39-caption-bold",
+    "file": "output/tps22990/tps22990.md",
+    "page": 24,
+    "old": "\n\nFigure 39. . Inrush Current with  $C_T = 0$  pF\n",
+    "new": "\n\n**Figure 39. . Inrush Current with  $C_T = 0$  pF**\n",
+    "evidence": "PDF p24: bold figure caption, as the other captions (the doubled '. .' is printed so).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p24-fig40-caption-bold",
+    "file": "output/tps22990/tps22990.md",
+    "page": 24,
+    "old": "\n\nFigure 40. Inrush Current with  $C_T = 6800$  pF\n",
+    "new": "\n\n**Figure 40. Inrush Current with  $C_T = 6800$  pF**\n",
+    "evidence": "PDF p24: bold figure caption, as the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p25-fig41-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 25,
+    "old": "![PCB layout diagram for the TPS22990 device. The diagram shows a 10-pin package with pins 1-10. Pin 1 is CT, connected to a CT Capacitor. Pin 2 is NC. Pin 3 is VIN, connected to a VIN Bypass Capacitor. Pin 4 is VBIAS, connected to a VBIAS Bypass Capacitor. Pin 5 is ON, connected to a 'To GPIO control' pin. Pin 6 is GND, connected to a Power Ground Plane. Pin 7 is PG, connected to a VOUT Bypass Capacitor through a pull-up resistor Rpu. Pin 8 is VOUT, connected to a VOUT Bypass Capacitor. Pin 9 is VOUT, connected to a VOUT Bypass Capacitor. Pin 10 is VOUT, connected to a VOUT Bypass Capacitor. The VIN pin is also connected to a VIN Bypass Capacitor. The VIN pin area is labeled 'VIN (thermal pad)'. The diagram includes various traces and vias (circles) indicating connections to the Power Ground Plane and VIN Plane.]",
+    "new": "![PCB layout diagram for the TPS22990 device (pins 1-5 CT, NC, VIN, VBIAS, ON on the left, pins 6-10 GND, PG, VOUT, VOUT, VOUT on the right, VIN (thermal pad) in the center). The VIN pin 3 copper joins the thermal pad copper, which carries six vias to the VIN plane and extends below the package. The CT Capacitor connects the CT pad to a ground copper area with a via to the power ground plane, and the VBIAS Bypass Capacitor connects the VBIAS pad to the same ground area. The ON pin is routed 'To GPIO control'; NC is unconnected. The three VOUT pads share one copper area. R_PU connects the PG pad to the VOUT copper. The VOUT Bypass Capacitor connects the VOUT copper to the GND pad copper, which has a via to the power ground plane and extends below the package, where the VIN Bypass Capacitor connects it to the VIN copper. Legend: solid circle = VIA to Power Ground Plane, dashed circle = VIA to VIN Plane.]",
+    "evidence": "PDF p25 Figure 41 drawing: one VOUT Bypass Capacitor from the VOUT copper to GND (not one per VOUT pin); R_PU goes from PG to the VOUT copper (not to the capacitor); the CT and VBIAS capacitors share a ground area with a ground via; the VIN Bypass Capacitor sits between the VIN/thermal-pad copper and the GND copper below the package.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p25-fig41-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 25,
+    "old": "\n\nPCB layout diagram for the TPS22990 device. The diagram shows a 10-pin package with pins 1-10. Pin 1 is CT, connected to a CT Capacitor. Pin 2 is NC. Pin 3 is VIN, connected to a VIN Bypass Capacitor. Pin 4 is VBIAS, connected to a VBIAS Bypass Capacitor. Pin 5 is ON, connected to a 'To GPIO control' pin. Pin 6 is GND, connected to a Power Ground Plane. Pin 7 is PG, connected to a VOUT Bypass Capacitor through a pull-up resistor Rpu. Pin 8 is VOUT, connected to a VOUT Bypass Capacitor. Pin 9 is VOUT, connected to a VOUT Bypass Capacitor. Pin 10 is VOUT, connected to a VOUT Bypass Capacitor. The VIN pin is also connected to a VIN Bypass Capacitor. The VIN pin area is labeled 'VIN (thermal pad)'. The diagram includes various traces and vias (circles) indicating connections to the Power Ground Plane and VIN Plane.\n",
+    "new": "\n\nPCB layout diagram for the TPS22990 device (pins 1-5 CT, NC, VIN, VBIAS, ON on the left, pins 6-10 GND, PG, VOUT, VOUT, VOUT on the right, VIN (thermal pad) in the center). The VIN pin 3 copper joins the thermal pad copper, which carries six vias to the VIN plane and extends below the package. The CT Capacitor connects the CT pad to a ground copper area with a via to the power ground plane, and the VBIAS Bypass Capacitor connects the VBIAS pad to the same ground area. The ON pin is routed 'To GPIO control'; NC is unconnected. The three VOUT pads share one copper area. R_PU connects the PG pad to the VOUT copper. The VOUT Bypass Capacitor connects the VOUT copper to the GND pad copper, which has a via to the power ground plane and extends below the package, where the VIN Bypass Capacitor connects it to the VIN copper. Legend: solid circle = VIA to Power Ground Plane, dashed circle = VIA to VIN Plane.\n",
+    "evidence": "PDF p25 Figure 41 drawing: one VOUT Bypass Capacitor from the VOUT copper to GND (not one per VOUT pin); R_PU goes from PG to the VOUT copper (not to the capacitor); the CT and VBIAS capacitors share a ground area with a ground via; the VIN Bypass Capacitor sits between the VIN/thermal-pad copper and the GND copper below the package.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
