@@ -19118,5 +19118,379 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p5-automotive-stray-separator",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "| LTC2975IUP#WPBF | LTC2975IUP#WTRPBF | LTC2975UP | 64-Lead (9mm × 9mm) Plastic QFN | –40°C to 105°C |\n|-----------------|-------------------|-----------|---------------------------------|----------------|\n",
+    "new": "| LTC2975IUP#WPBF | LTC2975IUP#WTRPBF | LTC2975UP | 64-Lead (9mm × 9mm) Plastic QFN | –40°C to 105°C |\n",
+    "evidence": "PDF p5 (render): the AUTOMOTIVE PRODUCTS table has one data row; the md repeated the separator row after it.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p5-ec-title-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 5,
+    "old": "- [LGA and BGA Package and Tray Drawings](#)\n\n**ELECTRICAL CHARACTERISTICS** The ●",
+    "new": "- [LGA and BGA Package and Tray Drawings](#)\n\n## ELECTRICAL CHARACTERISTICS\n\nThe ●",
+    "evidence": "PDF p5 (PyMuPDF spans + render): 'ELECTRICAL CHARACTERISTICS' is the LinearBauhaus 18pt section title (H2, as on p9/p10); the md had it as bold text run into the conditions paragraph.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p6-ec-title-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "{5}------------------------------------------------\n\n**ELECTRICAL CHARACTERISTICS** The ●",
+    "new": "{5}------------------------------------------------\n\n## ELECTRICAL CHARACTERISTICS\n\nThe ●",
+    "evidence": "PDF p6 (PyMuPDF spans + render): 'ELECTRICAL CHARACTERISTICS' is the LinearBauhaus 18pt running section title (H2); the md had it as bold text run into the conditions paragraph.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p6-symbol-n-adc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| N <sub>ADC</sub>                                     | Voltage Sense Resolution (Note 5)        | 0V ≤ V <sub>IN_ADC</sub> ≤ 6V, READ_VOUT                                                                                            |     | 122  |       | µV/LSB       |",
+    "new": "| N_ADC                                     | Voltage Sense Resolution (Note 5)        | 0V ≤ V <sub>IN_ADC</sub> ≤ 6V, READ_VOUT                                                                                            |     | 122  |       | µV/LSB       |",
+    "evidence": "PDF p6 (PyMuPDF spans + render): symbol printed as 'N_ADC' (literal underscore after N/INL/DNL; only DAC is a subscript in the V_DAC forms); the md had 'N <sub>ADC</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p6-symbol-n-vdac",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| N <sub>VDAC</sub>                                    | Resolution                               |                                                                                                                                     |     | 10   |       | Bits         |",
+    "new": "| N_V<sub>DAC</sub>                                    | Resolution                               |                                                                                                                                     |     | 10   |       | Bits         |",
+    "evidence": "PDF p6 (PyMuPDF spans + render): symbol printed as 'N_V<sub>DAC</sub>' (literal underscore after N/INL/DNL; only DAC is a subscript in the V_DAC forms); the md had 'N <sub>VDAC</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p6-symbol-inl-vdac",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| INL <sub>VDAC</sub>                                  | Integral Nonlinearity                    | (Note 7)                                                                                                                            | ●   |      | ±2    | LSB          |",
+    "new": "| INL_V<sub>DAC</sub>                                  | Integral Nonlinearity                    | (Note 7)                                                                                                                            | ●   |      | ±2    | LSB          |",
+    "evidence": "PDF p6 (PyMuPDF spans + render): symbol printed as 'INL_V<sub>DAC</sub>' (literal underscore after N/INL/DNL; only DAC is a subscript in the V_DAC forms); the md had 'INL <sub>VDAC</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p6-symbol-dnl-vdac",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 6,
+    "old": "| DNL <sub>VDAC</sub>                                  | Differential Nonlinearity                | (Note 7)                                                                                                                            | ●   |      | ±2.4  | LSB          |",
+    "new": "| DNL_V<sub>DAC</sub>                                  | Differential Nonlinearity                | (Note 7)                                                                                                                            | ●   |      | ±2.4  | LSB          |",
+    "evidence": "PDF p6 (PyMuPDF spans + render): symbol printed as 'DNL_V<sub>DAC</sub>' (literal underscore after N/INL/DNL; only DAC is a subscript in the V_DAC forms); the md had 'DNL <sub>VDAC</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-ec-title-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "{6}------------------------------------------------\n\n**ELECTRICAL CHARACTERISTICS** The ●",
+    "new": "{6}------------------------------------------------\n\n## ELECTRICAL CHARACTERISTICS\n\nThe ●",
+    "evidence": "PDF p7 (PyMuPDF spans + render): 'ELECTRICAL CHARACTERISTICS' is the LinearBauhaus 18pt running section title (H2); the md had it as bold text run into the conditions paragraph.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-symbol-n-vs",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $N_{\\text{VS}}$                                              | Voltage Sensing Resolution                                                  | 0V to 3.8V Range: High Resolution Mode                                                                                                   |     | 4     |       | mV/LSB       |",
+    "new": "| N\\_VS                                              | Voltage Sensing Resolution                                                  | 0V to 3.8V Range: High Resolution Mode                                                                                                   |     | 4     |       | mV/LSB       |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): symbol printed 'N_VS' in plain text with a literal underscore (no subscript); the md had $N_{VS}$.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-symbol-n-cs",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $N_{\\text{CS}}$                                              | Current Sense Resolution                                                    | $I_{\\text{OUT\\_OC\\_FAULT\\_LIMIT}} \\cdot I_{\\text{OUT\\_CAL\\_GAIN}}$<br>$I_{\\text{OUT\\_UC\\_FAULT\\_LIMIT}} \\cdot I_{\\text{OUT\\_CAL\\_GAIN}}$ |     | 400   |       | μV/LSB       |",
+    "new": "| N\\_CS                                              | Current Sense Resolution                                                    | $I_{\\text{OUT\\_OC\\_FAULT\\_LIMIT}} \\cdot I_{\\text{OUT\\_CAL\\_GAIN}}$<br>$I_{\\text{OUT\\_UC\\_FAULT\\_LIMIT}} \\cdot I_{\\text{OUT\\_CAL\\_GAIN}}$ |     | 400   |       | μV/LSB       |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): symbol printed 'N_CS' in plain text with a literal underscore (no subscript); the md had $N_{CS}$.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-symbol-tue-vs",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $TUE_{\\text{VS}}$                                            | Total Unadjusted Error                                                      | $2\\text{V} \\leq V_{\\text{IN\\_VS}} \\leq 6\\text{V}$ , Low Resolution Mode                                                                  | ●   |       | ±1.25 | % of Reading |",
+    "new": "| TUE\\_VS                                            | Total Unadjusted Error                                                      | $2\\text{V} \\leq V_{\\text{IN\\_VS}} \\leq 6\\text{V}$ , Low Resolution Mode                                                                  | ●   |       | ±1.25 | % of Reading |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): symbol printed 'TUE_VS' in plain text with a literal underscore (no subscript); the md had $TUE_{VS}$.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-symbol-tue-cs",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $TUE_{\\text{CS}}$                                            | Total Unadjusted Error                                                      | $50\\text{mV} \\leq \\lvert V_{\\text{IN\\_CS}} \\rvert \\leq 170\\text{mV}$                                                                                 | ●   |       | ±3    | % of Reading |",
+    "new": "| TUE\\_CS                                            | Total Unadjusted Error                                                      | $50\\text{mV} \\leq \\lvert V_{\\text{IN\\_CS}} \\rvert \\leq 170\\text{mV}$                                                                                 | ●   |       | ±3    | % of Reading |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): symbol printed 'TUE_CS' in plain text with a literal underscore (no subscript); the md had $TUE_{CS}$.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-symbol-tue-vin",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $TUE_{\\text{VIN}}$                                           | READ_VIN Total Unadjusted Error                                             | $4.5\\text{V} \\leq V_{\\text{VIN\\_SNS}} \\leq 15\\text{V}$ (Note 12)                                                                         | ●   |       | ±0.5  | % of Reading |",
+    "new": "| TUE\\_VIN                                           | READ_VIN Total Unadjusted Error                                             | $4.5\\text{V} \\leq V_{\\text{VIN\\_SNS}} \\leq 15\\text{V}$ (Note 12)                                                                         | ●   |       | ±0.5  | % of Reading |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): symbol printed 'TUE_VIN' in plain text (no subscript); the md had $TUE_{VIN}$. (TUE_VIN_SNS above is printed with a subscript and is kept.)",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-symbol-fs-iin",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $FS_{\\text{IIN}}$ | Full-Scale Input Current Sense Voltage Range | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ High Range | ● -100 |  | 100 | mV |",
+    "new": "| FS\\_IIN | Full-Scale Input Current Sense Voltage Range | Referred to $(V_{\\text{IIN\\_SNSP}} - V_{\\text{IIN\\_SNSM}})$ High Range | ● -100 |  | 100 | mV |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): symbol printed 'FS_IIN' in plain text (no subscript); the md had $FS_{IIN}$.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-n-cs-command-names",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "$I_{\\text{OUT\\_OC\\_FAULT\\_LIMIT}} \\cdot I_{\\text{OUT\\_CAL\\_GAIN}}$<br>$I_{\\text{OUT\\_UC\\_FAULT\\_LIMIT}} \\cdot I_{\\text{OUT\\_CAL\\_GAIN}}$",
+    "new": "IOUT\\_OC\\_FAULT\\_LIMIT • IOUT\\_CAL\\_GAIN<br>IOUT\\_UC\\_FAULT\\_LIMIT • IOUT\\_CAL\\_GAIN",
+    "evidence": "PDF p7 N_CS conditions (PyMuPDF spans: plain LinearHelvCond, no subscripts; render): the PMBus command names 'IOUT_OC_FAULT_LIMIT • IOUT_CAL_GAIN' / 'IOUT_UC_FAULT_LIMIT • IOUT_CAL_GAIN'; the md turned them into I with subscripts OUT_OC_FAULT_LIMIT, OUT_CAL_GAIN.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p7-vin-sns-input-current-param",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "| $V_{\\text{IN\\_SNS}}$ Input Current |",
+    "new": "| VIN\\_SNS Input Current |",
+    "evidence": "PDF p7 (PyMuPDF spans + render): the I_VIN_SNS parameter is printed 'VIN_SNS Input Current' in plain text (no subscript, unlike the V_IN_SNS row above).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p7-vin-on-off-param",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 7,
+    "old": "$V_{\\text{IN\\_ON}}$ , $V_{\\text{IN\\_OFF}}$ Threshold Total Unadjusted Error",
+    "new": "VIN\\_ON, VIN\\_OFF Threshold Total Unadjusted Error",
+    "evidence": "PDF p7 (PyMuPDF spans + render): the TUE_VIN_SNS parameter names the PMBus commands 'VIN_ON, VIN_OFF' in plain text; the md had V with subscripts IN_ON/IN_OFF.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p8-ec-title-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "{7}------------------------------------------------\n\n### **ELECTRICAL CHARACTERISTICS**\n",
+    "new": "{7}------------------------------------------------\n\n## ELECTRICAL CHARACTERISTICS\n",
+    "evidence": "PDF p8 (PyMuPDF spans + render): 'ELECTRICAL CHARACTERISTICS' is the LinearBauhaus 18pt running section title (H2 as on p9/p10); the md had H3 with bold markup.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-heading-external-temperature-sensor-characterist",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "\n### **External Temperature Sensor Characteristics (READ\\_TEMPERATURE\\_1)**\n",
+    "new": "\n### External Temperature Sensor Characteristics (READ\\_TEMPERATURE\\_1)\n",
+    "evidence": "PDF p8: table group row in bold (LinearHelvCond-Bold 8.8pt); kept as H3 like the other group headings but without the redundant ** markup inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-heading-internal-temperature-sensor-characterist",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "\n### **Internal Temperature Sensor Characteristics (READ\\_TEMPERATURE\\_2)**\n",
+    "new": "\n### Internal Temperature Sensor Characteristics (READ\\_TEMPERATURE\\_2)\n",
+    "evidence": "PDF p8: table group row in bold (LinearHelvCond-Bold 8.8pt); kept as H3 like the other group headings but without the redundant ** markup inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-heading-vout-enable-output-vout-en-3-0-character",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "\n### **V<sub>OUT</sub> Enable Output (V<sub>OUT\\_EN</sub> [3:0]) Characteristics**\n",
+    "new": "\n### V<sub>OUT</sub> Enable Output (V<sub>OUT\\_EN</sub> [3:0]) Characteristics\n",
+    "evidence": "PDF p8: table group row in bold (LinearHelvCond-Bold 8.8pt); kept as H3 like the other group headings but without the redundant ** markup inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-heading-energy-meter-characteristics",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "\n### **Energy Meter Characteristics**\n",
+    "new": "\n### Energy Meter Characteristics\n",
+    "evidence": "PDF p8: table group row in bold (LinearHelvCond-Bold 8.8pt); kept as H3 like the other group headings but without the redundant ** markup inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-heading-auxfaultb-characteristics",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "\n#### **General Purpose Output (AUXFAULTB) Characteristics**\n",
+    "new": "\n### General Purpose Output (AUXFAULTB) Characteristics\n",
+    "evidence": "PDF p8: 'General Purpose Output (AUXFAULTB) Characteristics' is a table group row in the same bold style as the neighbouring groups (H3 in the md); the md had H4 with ** markup.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p8-tue-ts2-stray-separator",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 8,
+    "old": "| TUE_TS2 | Total Unadjusted Error |  |  | ±1 |  | °C |\n|---------|------------------------|--|--|----|--|----|\n",
+    "new": "| TUE_TS2 | Total Unadjusted Error |  |  | ±1 |  | °C |\n",
+    "evidence": "PDF p8 (render): the internal temperature sensor group has one row; the md repeated the separator row after it.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p9-controln-italic-1",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "|  |  | CONTROL <sub>n</sub> Only | ● 1.85 |  |  | V |",
+    "new": "|  |  | CONTROL*n* Only | ● 1.85 |  |  | V |",
+    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p9-controln-italic-2",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "|                                                                                                          |                                                         | CONTROL <sub>n</sub> Only                                                  | ●   |                         | 1.6     | V      |",
+    "new": "|                                                                                                          |                                                         | CONTROL*n* Only                                                  | ●   |                         | 1.6     | V      |",
+    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p9-controln-italic-3",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "| t <sub>SP</sub>                                                                                          | Pulse Width of Spike Suppressed                         | FAULTB0, FAULTB1, CONTROL <sub>n</sub>                                     |     | 10                      |         | μs     |",
+    "new": "| t <sub>SP</sub>                                                                                          | Pulse Width of Spike Suppressed                         | FAULTB0, FAULTB1, CONTROL*n*                                     |     | 10                      |         | μs     |",
+    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p9-asel-group-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 9,
+    "old": "<b>Digital Inputs ASEL0, ASEL1</b>",
+    "new": "<b>Digital Inputs ASEL0,ASEL1</b>",
+    "evidence": "PDF p9 (pdftotext + render): the group row is printed 'Digital Inputs ASEL0,ASEL1' without a space.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p10-toff-stray-separator",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 10,
+    "old": "| t <sub>OFF_MIN</sub> | Minimum Off-Time for Any Channel | | | 100 | | ms |\n|----------------------|----------------------------------|--|-----|--|----|\n",
+    "new": "| t <sub>OFF_MIN</sub> | Minimum Off-Time for Any Channel | | | 100 | | ms |\n",
+    "evidence": "PDF p10 (render): the Additional Digital Timing Characteristics table has one row; the md had a stray 6-column separator row after it.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
