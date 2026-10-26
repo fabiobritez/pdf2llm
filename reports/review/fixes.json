@@ -16434,5 +16434,118 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p54-fig101-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 54,
+    "old": "Register layout diagram for DAC_CHn. It shows a 16-bit register with bits 15 down to 0. Bits 15-8 are grouped as [15:8] DAC_VAL (R/W) and bits 7-0 are grouped as [7:0] DAC_VAL (R/W). The entire register is labeled [15:0] DAC_VAL (R/W).",
+    "new": "Register layout diagram for DAC_CHn. It shows a 16-bit register with bits 15 down to 0, all set to 0. A single bracket under bits 15 to 0 is labeled [15:0] DAC_VAL (R/W).",
+    "evidence": "PDF p54 Figure 101 (render): one bracket, [15:0] DAC_VAL (R/W), spans bits 15 to 0, and all 16 bits show 0 (reset 0x0000); there are no [15:8]/[7:0] sub-brackets as the AI text said.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p54-fig101-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 54,
+    "old": "Register layout diagram for DAC\\_CHn. It shows a 16-bit register with bits 15 down to 0. Bits 15-8 are grouped as [15:8] DAC\\_VAL (R/W) and bits 7-0 are grouped as [7:0] DAC\\_VAL (R/W). The entire register is labeled [15:0] DAC\\_VAL (R/W).",
+    "new": "Register layout diagram for DAC\\_CHn. It shows a 16-bit register with bits 15 down to 0, all set to 0. A single bracket under bits 15 to 0 is labeled [15:0] DAC\\_VAL (R/W).",
+    "evidence": "Same as ad5711r-ad5710r-p54-fig101-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p54-fig102-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 54,
+    "old": "Register layout diagram for MULTI_DAC_VAL. It shows a 16-bit register with bits 15 down to 0. Bits 15-8 are grouped as [15:8] MULTI_DAC_VAL (R/W) and bits 7-0 are grouped as [7:0] MULTI_DAC_VAL (R/W). The entire register is labeled [15:0] MULTI_DAC_VAL (R/W).",
+    "new": "Register layout diagram for MULTI_DAC_CH. It shows a 16-bit register with bits 15 down to 0, all set to 0. A single bracket under bits 15 to 0 is labeled [15:0] MULTI_DAC_VAL (R/W).",
+    "evidence": "PDF p54 Figure 102 (render): one bracket, [15:0] MULTI_DAC_VAL (R/W), spans bits 15 to 0, and all 16 bits show 0 (reset 0x0000); there are no [15:8]/[7:0] sub-brackets, and the register is MULTI_DAC_CH (the field is MULTI_DAC_VAL).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p54-fig102-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 54,
+    "old": "Register layout diagram for MULTI\\_DAC\\_VAL. It shows a 16-bit register with bits 15 down to 0. Bits 15-8 are grouped as [15:8] MULTI\\_DAC\\_VAL (R/W) and bits 7-0 are grouped as [7:0] MULTI\\_DAC\\_VAL (R/W). The entire register is labeled [15:0] MULTI\\_DAC\\_VAL (R/W).",
+    "new": "Register layout diagram for MULTI\\_DAC\\_CH. It shows a 16-bit register with bits 15 down to 0, all set to 0. A single bracket under bits 15 to 0 is labeled [15:0] MULTI\\_DAC\\_VAL (R/W).",
+    "evidence": "Same as ad5711r-ad5710r-p54-fig102-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p56-registers-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 56,
+    "old": "\n### REGISTERS\n\nTable 44.",
+    "new": "\n## REGISTERS\n\nTable 44.",
+    "evidence": "PDF p56 (PyMuPDF spans + render): the repeated 'REGISTERS' page header is the blue Arial-Bold 11pt section title (H2), as on p40-p58; the md had H3 on this page only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p56-fig104-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 56,
+    "old": "The diagram shows bit 7 as a single bit and bits 6-0 as a 3-bit field.](",
+    "new": "The diagram shows bit 7 as a single bit and bits 6-0 as a 7-bit field; all eight bits are 0.](",
+    "evidence": "PDF p56 Figure 104 (render): the [6:0] RESERVED bracket covers seven bits (6 to 0), and all eight bits show 0 (reset 0x00); the AI text called bits 6-0 'a 3-bit field'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p56-fig104-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 56,
+    "old": "The diagram shows bit 7 as a single bit and bits 6-0 as a 3-bit field.\n\nFigure 104",
+    "new": "The diagram shows bit 7 as a single bit and bits 6-0 as a 7-bit field; all eight bits are 0.\n\nFigure 104",
+    "evidence": "Same as ad5711r-ad5710r-p56-fig104-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p56-fig105-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 56,
+    "old": "Register layout diagram for MULTI_INPUT_VAL. It shows a 16-bit register with bits 15 down to 0.",
+    "new": "Register layout diagram for MULTI_INPUT_CH. It shows a 16-bit register with bits 15 down to 0, all set to 0.",
+    "evidence": "PDF p56 Figure 105 (render + caption): the register is MULTI_INPUT_CH (MULTI_INPUT_VAL is its [15:0] field) and all 16 bits show 0 (reset 0x0000); the AI text named the register after the field and omitted the values.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p56-fig105-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 56,
+    "old": "Register layout diagram for MULTI\\_INPUT\\_VAL. It shows a 16-bit register with bits 15 down to 0.",
+    "new": "Register layout diagram for MULTI\\_INPUT\\_CH. It shows a 16-bit register with bits 15 down to 0, all set to 0.",
+    "evidence": "Same as ad5711r-ad5710r-p56-fig105-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
