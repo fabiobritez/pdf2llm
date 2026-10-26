@@ -13764,5 +13764,350 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p1-title-missing",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 1,
+    "old": "{0}------------------------------------------------\n\n# 8-channel",
+    "new": "{0}------------------------------------------------\n\n# AD5711R/AD5710R\n\n# 8-channel",
+    "evidence": "PDF p1 header prints the part number 'AD5711R/AD5710R' above the subtitle (pdftotext + render); the md started at the subtitle.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p1-fig1-block-diagram-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 1,
+    "old": "![Functional block diagram of the AD5711R/AD5710R. The diagram shows an 8-channel architecture. On the left, control pins include CS, SCLK, SDI, SDO, RESET, and LDAC. The internal logic consists of an 'INTERFACE LOGIC' block that feeds into 'n' parallel channels. Each channel contains an 'INPUT REGISTER', a 'DAC REGISTER', and an 'IDAC/VDAC' output stage. The IDAC/VDAC stages are connected to a common VREF and VDD. On the right, output pins include IOUT0, IOUT7, and a multiplexed MUX_OUT. The MUX_OUT is controlled by a 'MUX' block that selects from various internal and external sources: OUTx_VMON, OUTx_IMON, PVDDx, and AGND. Power pins at the top include IOVDD, AVDD, GND, VREF, PVDD0, and PVDD1. Address pins A1 and A0 are at the bottom left.](",
+    "new": "![Functional block diagram of the AD5711R/AD5710R (description written from the PDF drawing). Pins: IOVDD, AVDD, GND, VREF, PVDD0 and PVDD1 at the top; CS, SCLK, SDI, SDO, RESET, LDAC (CS, RESET and LDAC drawn with an overbar), A1 and A0 on the left; IOUT0 OR VOUT0 to IOUT7 OR VOUT7 and MUX_OUT on the right. Inside: an INTERFACE LOGIC block whose n-bit bus feeds the channels; each channel (channel 0 and channel 7 drawn, the others dashed) is INPUT REGISTER → DAC REGISTER → IDAC/VDAC output stage driving its IOUTx OR VOUTx pin; an IDAC/VDAC control line (IDAC drawn with an overbar) runs from the interface logic to the output stages; a VREF block connects to the VREF pin and to the output stages; a MUX selects OUTx_VMON, OUTx_IMON, PVDDx, AGND or the TEMPERATURE SENSORS block, and its output goes through a buffer amplifier to MUX_OUT.](",
+    "evidence": "PDF p1 Figure 1 (render 250 dpi): the outputs are 'IOUT0 OR VOUT0' to 'IOUT7 OR VOUT7' (not IOUT0/IOUT7), there is no VDD in the drawing, the MUX inputs are internal (OUTx_VMON, OUTx_IMON, PVDDx, AGND, TEMPERATURE SENSORS) and drive MUX_OUT through a buffer; the AI text omitted the VREF block, the IDAC/VDAC control line, the temperature sensors and the overbars. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p1-fig1-block-diagram-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 1,
+    "old": ")\n\nFunctional block diagram of the AD5711R/AD5710R. The diagram shows an 8-channel architecture. On the left, control pins include CS, SCLK, SDI, SDO, RESET, and LDAC. The internal logic consists of an 'INTERFACE LOGIC' block that feeds into 'n' parallel channels. Each channel contains an 'INPUT REGISTER', a 'DAC REGISTER', and an 'IDAC/VDAC' output stage. The IDAC/VDAC stages are connected to a common VREF and VDD. On the right, output pins include IOUT0, IOUT7, and a multiplexed MUX\\_OUT. The MUX\\_OUT is controlled by a 'MUX' block that selects from various internal and external sources: OUTx\\_VMON, OUTx\\_IMON, PVDDx, and AGND. Power pins at the top include IOVDD, AVDD, GND, VREF, PVDD0, and PVDD1. Address pins A1 and A0 are at the bottom left.\n",
+    "new": ")\n\nFunctional block diagram of the AD5711R/AD5710R (description written from the PDF drawing). Pins: IOVDD, AVDD, GND, VREF, PVDD0 and PVDD1 at the top; CS, SCLK, SDI, SDO, RESET, LDAC (CS, RESET and LDAC drawn with an overbar), A1 and A0 on the left; IOUT0 OR VOUT0 to IOUT7 OR VOUT7 and MUX_OUT on the right. Inside: an INTERFACE LOGIC block whose n-bit bus feeds the channels; each channel (channel 0 and channel 7 drawn, the others dashed) is INPUT REGISTER → DAC REGISTER → IDAC/VDAC output stage driving its IOUTx OR VOUTx pin; an IDAC/VDAC control line (IDAC drawn with an overbar) runs from the interface logic to the output stages; a VREF block connects to the VREF pin and to the output stages; a MUX selects OUTx_VMON, OUTx_IMON, PVDDx, AGND or the TEMPERATURE SENSORS block, and its output goes through a buffer amplifier to MUX_OUT.\n",
+    "evidence": "Same as ad5711r-ad5710r-p1-fig1-block-diagram-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p2-toc-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 2,
+    "old": "\n# **TABLE OF CONTENTS**\n",
+    "new": "\n## **TABLE OF CONTENTS**\n",
+    "evidence": "PDF p2 (PyMuPDF spans + render): 'TABLE OF CONTENTS' is a blue 11pt Arial-Bold section title like FEATURES (H2); the md had H1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p2-revision-history-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 2,
+    "old": "\n## **REVISION HISTORY**\n",
+    "new": "\n### **REVISION HISTORY**\n",
+    "evidence": "PDF p2 (PyMuPDF spans + render): 'REVISION HISTORY' is a black bold caps subsection (11pt Arial-Bold, black), the style of 'DC SPECIFICATIONS' (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p2-rev-c-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 2,
+    "old": "\n### **3/2026—Rev. B to Rev. C**\n",
+    "new": "\n#### **3/2026—Rev. B to Rev. C**\n",
+    "evidence": "PDF p2 (PyMuPDF spans + render): revision entry titles are black bold subsections under the black caps 'REVISION HISTORY' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p2-rev-b-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 2,
+    "old": "\n### **1/2026—Rev. A to Rev. B**\n",
+    "new": "\n#### **1/2026—Rev. A to Rev. B**\n",
+    "evidence": "PDF p2 (PyMuPDF spans + render): revision entry title under 'REVISION HISTORY' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p3-rev-a-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 3,
+    "old": "\n### **1/2026—Rev. 0 to Rev. A**\n",
+    "new": "\n#### **1/2026—Rev. 0 to Rev. A**\n",
+    "evidence": "PDF p3 (PyMuPDF spans + render): revision entry title under 'REVISION HISTORY' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p3-rev-0-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 3,
+    "old": "\n### **10/2025—Revision 0: Initial Version**\n",
+    "new": "\n#### **10/2025—Revision 0: Initial Version**\n",
+    "evidence": "PDF p3 (PyMuPDF spans + render): revision entry title under 'REVISION HISTORY' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p4-dc-specifications-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 4,
+    "old": "\n## DC SPECIFICATIONS\n",
+    "new": "\n### DC SPECIFICATIONS\n",
+    "evidence": "PDF p4 (PyMuPDF spans + render): 'DC SPECIFICATIONS' is a black bold caps subsection under the blue 'ELECTRICAL CHARACTERISTICS' title, like 'AC SPECIFICATIONS' (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p7-ixternal-as-printed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 7,
+    "old": "| 131  |     | nV/√Hz | Range = 0 to 2 × VREF and internal reference ",
+    "new": "| 131  |     | nV/√Hz | Range = 0 to 2 × VREF and ixternal reference ",
+    "evidence": "PDF p7 Table 3 (pdftotext + PyMuPDF words): the 131 nV/√Hz row condition is printed 'Range = 0 to 2 × VREF and ixternal reference' (manufacturer typo, kept as printed); the md had 'internal'.",
+    "sources": [
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p9-fig2-description",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 9,
+    "old": "The diagram illustrates the timing for serial read and write operations. It shows the relationship between the Serial Clock (SCLK), Chip Select (CS), Serial Data Input (SDI), Serial Data Output (SDO), and the output signal (OUTn). Key timing parameters include t<sub>1</sub> (SCLK period), t<sub>2</sub> (SCLK high/low time), t<sub>3</sub> (SCLK rise/fall time), t<sub>4</sub> (CS to SCLK), t<sub>5</sub> (SCLK to CS), t<sub>6</sub> (CS to SCLK), t<sub>7</sub> (CS rise/fall time), t<sub>8</sub> (SDI to SCLK), t<sub>9</sub> (SCLK to SDI), t<sub>10</sub> (CS to SDI), t<sub>11</sub> (SDO to SCLK), t<sub>12</sub> (SCLK to SDO), t<sub>13</sub> (CS to SDO), t<sub>14</sub> (SDI to SDO), and t<sub>OUT\\_SYNC</sub> (SCLK to OUTn). The SDI line shows a sequence of R/W, A<sub>14</sub><sup>1</sup>, A<sub>13</sub><sup>1</sup>, A<sub>12</sub><sup>1</sup>, A<sub>0</sub>, D<sub>n</sub>, D<sub>n-1</sub>, ..., D<sub>1</sub>, D<sub>0</sub>. The SDO line shows a sequence of Z, D<sub>n</sub>, D<sub>n-1</sub>, ..., D<sub>1</sub>, D<sub>0</sub>, Z. The OUTn signal transitions at the end of the data sequence. A note states: <sup>1</sup>THESE BITS CORRESPOND TO THE DEVICE ADDRESSING (SEE DEVICE ADDRESSING SECTION).",
+    "new": "The diagram (description written from the PDF drawing) shows SCLK, CS (drawn with an overbar), SDI, SDO and OUTn. CS is high for t<sub>10</sub> and then low for the whole frame; t<sub>4</sub> runs from an SCLK rising edge to the CS falling edge and t<sub>5</sub> from the CS falling edge to the first SCLK rising edge; t<sub>1</sub> is the SCLK period, t<sub>2</sub> and t<sub>3</sub> the SCLK high and low times; t<sub>6</sub> runs from the last SCLK rising edge to the CS rising edge and t<sub>7</sub> from the CS rising edge to the next SCLK rising edge. SDI carries X, R/W (W drawn with an overbar), A<sub>14</sub><sup>1</sup>, A<sub>13</sub><sup>1</sup>, A<sub>12</sub><sup>1</sup>, …, A<sub>0</sub>, D<sub>n</sub>, D<sub>n − 1</sub>, …, D<sub>1</sub>, D<sub>0</sub>, X, with data setup time t<sub>9</sub> and hold time t<sub>8</sub> around the SCLK rising edge. SDO is Z, then D<sub>n</sub>, D<sub>n − 1</sub>, …, D<sub>1</sub>, D<sub>0</sub>, then Z again; t<sub>14</sub> (SCLK falling edge to SDO enabled), t<sub>11</sub> (SCLK falling edge to SDO data available), t<sub>12</sub> (SCLK falling edge to SDO data remains valid) and t<sub>13</sub> (CS rising edge to SDO disabled) are marked. OUTn starts its transition t<sub>OUT_SYNC</sub> after the last SCLK rising edge. Note: <sup>1</sup>THESE BITS CORRESPOND TO THE DEVICE ADDRESSING (SEE DEVICE ADDRESSING SECTION).",
+    "evidence": "PDF p9 Figure 2 (render 230 dpi) and Table 4: the AI paragraph gave wrong meanings for most parameters (t3 'SCLK rise/fall time', t4 'CS to SCLK', t7 'CS rise/fall time', t10 'CS to SDI', t14 'SDI to SDO', ...) and omitted the X fields. Rewritten from the drawing using the Table 4 definitions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p9-fig3-description-outn-z",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 9,
+    "old": "The SPI\\_CMD signal shows a 'REG\\_ACCESS' transaction starting after t<sub>SPI\\_RDY</sub>.",
+    "new": "OUTn ramps down after t<sub>OUT\\_RESET</sub> and is then Z. The SPI\\_CMD signal shows a 'REG\\_ACCESS' transaction starting after t<sub>SPI\\_RDY</sub>.",
+    "evidence": "PDF p9 Figure 3 (render 230 dpi): OUTn ramps down after t_OUT_RESET and is marked Z afterwards; the description omitted it.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p9-table4-notes-split",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 9,
+    "old": "- <sup>1</sup>\n\nEquivalent to 50MHz for write operation only.\n- <sup>2</sup>\n\nEquivalent to 25MHz for read operation only.\n- <sup>3</sup>\n\nOnly applicable",
+    "new": "- <sup>1</sup> Equivalent to 50MHz for write operation only.\n- <sup>2</sup> Equivalent to 25MHz for read operation only.\n- <sup>3</sup> Only applicable",
+    "evidence": "PDF p9 (pdftotext + render): each Table 4 note is printed as one line, number followed by its text; the md split the note numbers from their text into separate paragraphs.",
+    "sources": [
+      "pdftotext",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p10-fig4-description",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 10,
+    "old": "The timing diagram illustrates the LDAC operation. The  $\\overline{\\text{CS}}$  signal is active low. The SDI signal shows a sequence of bits: a high-impedance state (X), followed by the  $\\overline{\\text{W}}$  INPUT REG, then BYTE1, BYTE0, BYTE1, and BYTE0, ending with another high-impedance state (X). The LDAC signal is a pulse that coincides with the second BYTE0. The OUTn signal shows the digital-to-analog conversion output. Timing parameters are defined as follows:  $t_{L1}$  is the time from the falling edge of LDAC to the start of the output transition;  $t_{L2}$  is the time from the falling edge of LDAC to the end of the output transition;  $t_{L3}$  is the time from the rising edge of LDAC to the start of the output transition; and  $t_{L4}$  is the time from the rising edge of LDAC to the end of the output transition. A small '004' label is present at the bottom right of the diagram.",
+    "new": "The timing diagram (description written from the PDF drawing) shows CS, SDI, LDAC and OUTn (CS, LDAC and the W of 'W INPUT REG' drawn with an overbar). CS goes low for one frame. SDI carries X, W INPUT REG, BYTE1, BYTE0, BYTE1, BYTE0, X (two data writes). LDAC pulses low twice: t<sub>L1</sub> is the low pulse width; t<sub>L2</sub> runs from the first LDAC falling edge to the SPI DAC update at the end of the first BYTE0; t<sub>L3</sub> runs from that SPI DAC update to the second LDAC falling edge. OUTn rises after the first LDAC falling edge and falls after the second, each transition starting t<sub>L4</sub> after the LDAC falling edge. A small '004' label is present at the bottom right of the diagram.",
+    "evidence": "PDF p10 Figure 4 (render) and Table 5: the AI text called X a high-impedance state, put a single LDAC pulse on the second BYTE0 and defined t_L1-t_L4 as output-transition start/end times from LDAC edges. The drawing has two LDAC low pulses, t_L1 = pulse width, t_L2 = LDAC falling edge to SPI DAC update, t_L3 = SPI DAC update to LDAC falling edge, t_L4 = LDAC falling edge to OUTn transition. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p11-absmax-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 11,
+    "old": "\n### ABSOLUTE MAXIMUM RATINGS\n",
+    "new": "\n## ABSOLUTE MAXIMUM RATINGS\n",
+    "evidence": "PDF p11 (PyMuPDF spans + render): 'ABSOLUTE MAXIMUM RATINGS' is the blue 11pt section title at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p12-fig5-ball-map-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 12,
+    "old": "![Figure 5. WLCSP Pin Configuration. A top-down view of the 5x5 WLCSP package for AD5711R/AD5710R. Pin 1 is at the top left, labeled 'BALL A1 INDICATOR'. The pins are arranged in a 5x5 grid. Row A: Pin 1 (MUX_OUT), Pin 2 (OUT3), Pin 3 (OUT2), Pin 4 (OUT1), Pin 5 (LDAC). Row B: Pin 1 (AVDD), Pin 2 (PVDD0), Pin 3 (GND), Pin 4 (OUT0), Pin 5 (SCLK). Row C: Pin 1 (A1), Pin 2 (A0), Pin 3 (IOVDD), Pin 4 (RESET), Pin 5 (SDO). Row D: Pin 1 (VREF), Pin 2 (PVDD1), Pin 3 (GND), Pin 4 (OUT4), Pin 5 (CS). Row E: Pin 1 (GND), Pin 2 (OUT7), Pin 3 (OUT6), Pin 4 (OUT5), Pin 5 (SDI).](",
+    "new": "![Figure 5. WLCSP Pin Configuration (description written from the PDF drawing). TOP VIEW (BALL SIDE DOWN), Not to Scale, of the 25-ball AD5711R/AD5710R WLCSP: rows A to E, columns 1 to 5, with the BALL A1 INDICATOR at the top left corner. Row A: A1 MUX_OUT, A2 OUT3, A3 OUT2, A4 OUT1, A5 LDAC. Row B: B1 AVDD, B2 PVDD0, B3 GND, B4 OUT0, B5 SCLK. Row C: C1 A1, C2 A0, C3 IOVDD, C4 RESET, C5 SDO. Row D: D1 VREF, D2 PVDD1, D3 GND, D4 OUT4, D5 CS. Row E: E1 GND, E2 OUT7, E3 OUT6, E4 OUT5, E5 SDI. LDAC, RESET and CS are drawn with an overbar.](",
+    "evidence": "PDF p12 Figure 5 (render 250 dpi): the drawing labels balls by row letter and column number (A1-E5), not 'Pin 1'-'Pin 5' per row; the TOP VIEW (BALL SIDE DOWN) note and the LDAC/RESET/CS overbars were missing. Ball assignments unchanged (they match the drawing and Table 8).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p12-fig5-ball-map-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 12,
+    "old": ")\n\nFigure 5. WLCSP Pin Configuration. A top-down view of the 5x5 WLCSP package for AD5711R/AD5710R. Pin 1 is at the top left, labeled 'BALL A1 INDICATOR'. The pins are arranged in a 5x5 grid. Row A: Pin 1 (MUX\\_OUT), Pin 2 (OUT3), Pin 3 (OUT2), Pin 4 (OUT1), Pin 5 (LDAC). Row B: Pin 1 (AVDD), Pin 2 (PVDD0), Pin 3 (GND), Pin 4 (OUT0), Pin 5 (SCLK). Row C: Pin 1 (A1), Pin 2 (A0), Pin 3 (IOVDD), Pin 4 (RESET), Pin 5 (SDO). Row D: Pin 1 (VREF), Pin 2 (PVDD1), Pin 3 (GND), Pin 4 (OUT4), Pin 5 (CS). Row E: Pin 1 (GND), Pin 2 (OUT7), Pin 3 (OUT6), Pin 4 (OUT5), Pin 5 (SDI).\n",
+    "new": ")\n\nFigure 5. WLCSP Pin Configuration (description written from the PDF drawing). TOP VIEW (BALL SIDE DOWN), Not to Scale, of the 25-ball AD5711R/AD5710R WLCSP: rows A to E, columns 1 to 5, with the BALL A1 INDICATOR at the top left corner. Row A: A1 MUX_OUT, A2 OUT3, A3 OUT2, A4 OUT1, A5 LDAC. Row B: B1 AVDD, B2 PVDD0, B3 GND, B4 OUT0, B5 SCLK. Row C: C1 A1, C2 A0, C3 IOVDD, C4 RESET, C5 SDO. Row D: D1 VREF, D2 PVDD1, D3 GND, D4 OUT4, D5 CS. Row E: E1 GND, E2 OUT7, E3 OUT6, E4 OUT5, E5 SDI. LDAC, RESET and CS are drawn with an overbar.\n",
+    "evidence": "Same as ad5711r-ad5710r-p12-fig5-ball-map-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-tpc-conditions-subscripts",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": "VREF = 2.5V internal, and TA = 25°C. For VDAC channels RL = 2kΩ to GND, CL = 200pF to GND. For IDAC channels RL = 50Ω to GND.",
+    "new": "VREF = 2.5V internal, and T<sub>A</sub> = 25°C. For VDAC channels R<sub>L</sub> = 2kΩ to GND, C<sub>L</sub> = 200pF to GND. For IDAC channels R<sub>L</sub> = 50Ω to GND.",
+    "evidence": "PDF p13 (PyMuPDF spans + render): T_A, R_L (twice) and C_L are printed with subscripts in the conditions paragraph; the md had plain TA/RL/CL.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig6-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": "![Figure 6: INL Error vs. Code, AD5710R. This line graph plots INL error in LSB16 against digital code from 0 to 65536. Three data series are shown: VDAC with RANGE = VREF (blue), VDAC with RANGE = 2 x VREF (green), and IDAC (red). The IDAC series shows a significant U-shaped error curve, while the VDAC series remain relatively flat near zero error.](",
+    "new": "![Figure 6: INL Error vs. Code, AD5710R. This line graph plots INL (LSB16) against CODE from 0 to 65536. Three data series are shown: VDAC, RANGE = VREF (light blue), VDAC, RANGE = 2 × VREF (teal), and IDAC (red). The IDAC curve dips to its most negative values in the upper half of the code range and returns toward zero at full scale; the two VDAC curves also wander by a few LSB around zero, with the RANGE = VREF curve showing the larger swing.](",
+    "evidence": "PDF p13 Figure 6 (render): the VDAC, RANGE = VREF curve is not flat near zero; it swings positive and negative by a few LSB. Description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig6-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": ")\n\nFigure 6: INL Error vs. Code, AD5710R. This line graph plots INL error in LSB16 against digital code from 0 to 65536. Three data series are shown: VDAC with RANGE = VREF (blue), VDAC with RANGE = 2 x VREF (green), and IDAC (red). The IDAC series shows a significant U-shaped error curve, while the VDAC series remain relatively flat near zero error.\n",
+    "new": ")\n\nFigure 6: INL Error vs. Code, AD5710R. This line graph plots INL (LSB16) against CODE from 0 to 65536. Three data series are shown: VDAC, RANGE = VREF (light blue), VDAC, RANGE = 2 × VREF (teal), and IDAC (red). The IDAC curve dips to its most negative values in the upper half of the code range and returns toward zero at full scale; the two VDAC curves also wander by a few LSB around zero, with the RANGE = VREF curve showing the larger swing.\n",
+    "evidence": "Same as ad5711r-ad5710r-p13-fig6-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig10-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": "![Figure 10: INL Error vs. Temperature. This line graph plots INL error in LSB16 against temperature from -40 to 125 °C. Three data series are shown: IDAC (blue), VDAC (green), and IDAC (red). The IDAC series show a positive temperature coefficient, while the VDAC series show a slight negative coefficient. A circle highlights the VDAC data point at 84 °C.](",
+    "new": "![Figure 10: INL Error vs. Temperature. This line graph plots INL (LSB16) against TEMPERATURE (°C) from -40 to 125. Two pairs of curves are shown, each pair giving the positive and the negative INL: IDAC (light blue, labeled IDAC above and below) and VDAC (red, labeled VDAC with an ellipse around both red curves at 84°C). The upper IDAC curve rises with temperature; the lower IDAC curve and both VDAC curves stay nearly flat.](",
+    "evidence": "PDF p13 Figure 10 (render): there are two series (IDAC in blue, VDAC in red), each drawn as a positive and a negative INL curve; the AI text listed 'IDAC (blue), VDAC (green), and IDAC (red)', a VDAC negative coefficient and a single highlighted point. Rewritten from the plot.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig10-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": ")\n\nFigure 10: INL Error vs. Temperature. This line graph plots INL error in LSB16 against temperature from -40 to 125 °C. Three data series are shown: IDAC (blue), VDAC (green), and IDAC (red). The IDAC series show a positive temperature coefficient, while the VDAC series show a slight negative coefficient. A circle highlights the VDAC data point at 84 °C.\n",
+    "new": ")\n\nFigure 10: INL Error vs. Temperature. This line graph plots INL (LSB16) against TEMPERATURE (°C) from -40 to 125. Two pairs of curves are shown, each pair giving the positive and the negative INL: IDAC (light blue, labeled IDAC above and below) and VDAC (red, labeled VDAC with an ellipse around both red curves at 84°C). The upper IDAC curve rises with temperature; the lower IDAC curve and both VDAC curves stay nearly flat.\n",
+    "evidence": "Same as ad5711r-ad5710r-p13-fig10-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig8-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": "![Figure 8: DNL Error vs. Code, AD5710R. This line graph plots DNL error in LSB16 against digital code from 0 to 65536. Three data series are shown: VDAC with RANGE = 2 x VREF (blue), VDAC with RANGE = VREF (green), and IDAC (red). The IDAC series shows significant noise and larger error magnitude than the VDAC series.](",
+    "new": "![Figure 8: DNL Error vs. Code, AD5710R. This line graph plots DNL (LSB16) against CODE from 0 to 65536. Three data series are shown: VDAC, RANGE = 2 × VREF (light blue), VDAC, RANGE = VREF (teal), and IDAC (red). All three overlap in a noisy band around zero; the VDAC, RANGE = VREF curve shows the largest excursions, growing toward higher codes.](",
+    "evidence": "PDF p13 Figure 8 (render): the IDAC curve does not have a larger error magnitude than the VDAC curves; the VDAC, RANGE = VREF (teal) curve has the largest excursions. Description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig8-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": ")\n\nFigure 8: DNL Error vs. Code, AD5710R. This line graph plots DNL error in LSB16 against digital code from 0 to 65536. Three data series are shown: VDAC with RANGE = 2 x VREF (blue), VDAC with RANGE = VREF (green), and IDAC (red). The IDAC series shows significant noise and larger error magnitude than the VDAC series.\n",
+    "new": ")\n\nFigure 8: DNL Error vs. Code, AD5710R. This line graph plots DNL (LSB16) against CODE from 0 to 65536. Three data series are shown: VDAC, RANGE = 2 × VREF (light blue), VDAC, RANGE = VREF (teal), and IDAC (red). All three overlap in a noisy band around zero; the VDAC, RANGE = VREF curve shows the largest excursions, growing toward higher codes.\n",
+    "evidence": "Same as ad5711r-ad5710r-p13-fig8-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig11-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": "![Figure 11: DNL Error vs. Temperature. This line graph plots DNL error in LSB16 against temperature from -40 to 125 °C. One data series is shown: VDAC (red). The error remains relatively constant and small across the temperature range.](",
+    "new": "![Figure 11: DNL Error vs. Temperature. This line graph plots DNL (LSB16) against TEMPERATURE (°C) from -40 to 125. One data series is shown, VDAC (red), drawn as two curves (positive and negative DNL). Both remain nearly constant across the temperature range.](",
+    "evidence": "PDF p13 Figure 11 (render): the VDAC series is drawn as two curves (positive and negative DNL), not a single curve.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p13-fig11-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 13,
+    "old": ")\n\nFigure 11: DNL Error vs. Temperature. This line graph plots DNL error in LSB16 against temperature from -40 to 125 °C. One data series is shown: VDAC (red). The error remains relatively constant and small across the temperature range.\n",
+    "new": ")\n\nFigure 11: DNL Error vs. Temperature. This line graph plots DNL (LSB16) against TEMPERATURE (°C) from -40 to 125. One data series is shown, VDAC (red), drawn as two curves (positive and negative DNL). Both remain nearly constant across the temperature range.\n",
+    "evidence": "Same as ad5711r-ad5710r-p13-fig11-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
