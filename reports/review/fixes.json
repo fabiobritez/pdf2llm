@@ -10441,5 +10441,70 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p24-pkg-number",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 24,
+    "old": "\nPKG-00000000\n",
+    "new": "\nPKG-006559\n",
+    "evidence": "PDF p24 prints the rotated package number 'PKG-006559' at the lower left of the drawing (PyMuPDF words); the md had a placeholder 'PKG-00000000'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p24-wlcsp-views-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 24,
+    "old": "\nThe diagram shows the top and bottom views of the WLCSP package. The top view (ball side down) shows a square package with dimensions 1.680, 1.640 SQ, and 1.600. A small circle in the top-left corner is labeled 'BALL A1 IDENTIFIER'. The bottom view (ball side up) shows a 4x4 grid of balls. The columns are numbered 4, 3, 2, 1 from left to right. The rows are labeled A, B, C, D from top to bottom. Vertical dimensions on the left indicate the distance from the center of the top row to the center of the bottom row is 1.20 REF, and the distance from the center of the bottom row to the center of the bottom ball is 0.40 REF.\n",
+    "new": "\nThe diagram shows the top and bottom views of the WLCSP package. The TOP VIEW (BALL SIDE DOWN) shows a square package with the side dimension 1.680 / 1.640 SQ / 1.600 and a small circle in the top-left corner labeled 'BALL A1 IDENTIFIER'. The BOTTOM VIEW (BALL SIDE UP) shows a 4x4 grid of balls. The columns are numbered 4, 3, 2, 1 from left to right. The rows are labeled A, B, C, D from top to bottom. Dimensions on the left: 1.20 REF from the center of row A to the center of row D, and 0.40 REF from the center of row C to the center of row D (ball pitch).\n",
+    "evidence": "PDF p24 bottom view (render): the 0.40 REF dimension is between the centers of rows C and D (the ball pitch), not 'from the center of the bottom row to the center of the bottom ball'; the view labels are TOP VIEW (BALL SIDE DOWN) and BOTTOM VIEW (BALL SIDE UP).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p24-wlcsp-end-view-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 24,
+    "old": "\nThe end view shows the package profile. The package thickness is 0.560, 0.500, and 0.440. The ball diameter is 0.300, 0.300, and 0.270. The ball pitch is 0.300, 0.260, and 0.220. The ball height from the seating plane is 0.230, 0.200, and 0.170. A coplanarity specification of 0.05 is shown for the top of the package relative to the seating plane.\n",
+    "new": "\nThe END VIEW shows the package profile. The overall height from the SEATING PLANE to the top of the package is 0.560 / 0.500 / 0.440. A second vertical dimension, 0.330 / 0.300 / 0.270, is drawn at the right side of the package body above the balls. The ball width, measured horizontally on one ball, is 0.300 / 0.260 / 0.220. The ball height from the seating plane is 0.230 / 0.200 / 0.170. A COPLANARITY 0.05 specification is shown at the bottom of the balls, at the seating plane.\n",
+    "evidence": "PDF p24 end view (render): the AI text gave a 'ball diameter 0.300, 0.300, 0.270' (PDF: 0.330/0.300/0.270, a vertical body dimension) and a 'ball pitch 0.300, 0.260, 0.220' (horizontal width of one ball), and placed the coplanarity at 'the top of the package' (it is at the ball bottoms/seating plane).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p26-ta07-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 26,
+    "old": "![Circuit diagram of the LTC3315A in a dual buck regulator configuration with supply sequencing. The input voltage V_IN ranges from 2.25V to 5.5V. The LTC3315A is configured with two buck regulators. The first regulator (top) has a switching frequency f_SW = 2MHz and outputs V_OUT1 = 1.2V, 2A. The second regulator (bottom) has a switching frequency f_SW = 2MHz and outputs V_OUT2 = 1.8V, 2A. The LTC3315A is controlled by a 169k resistor and a 100k resistor, with a 0.1µF capacitor. The output of the first regulator is connected to the input of the second regulator. The output of the second regulator is connected to the input of the first regulator. The LTC3315A is also connected to a 1M resistor and a 100k resistor. The diagram includes labels for V_IN, EN1, EN2, SW1, SW2, FB1, FB2, MODE/SYNC, GND, PGOOD, and V_OUT1, V_OUT2.](",
+    "new": "![Circuit diagram of the LTC3315A dual buck regulators with supply sequencing (description written from the PDF drawing). Input: V_IN 2.25V TO 5.5V connected to both V_IN pins, each decoupled to ground by a 10µF capacitor and a 1µF 0201 capacitor. EN1 and MODE/SYNC are drawn with input arrows. GND goes to ground, labeled f_SW = 2MHz. Output 1: SW1 drives an 880nH inductor to V_OUT1 1.2V, 2A, which has a 33µF capacitor to ground; FB1 connects to a 140k/100k divider from V_OUT1 to ground, with 6.8pF across the 140k resistor. Output 2: SW2 drives a 1.0µH inductor to V_OUT2 1.8V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 261k/100k divider from V_OUT2 to ground, with 4.7pF across the 261k resistor. Sequencing: V_OUT1 is wired to a 169k/100k divider to ground whose middle node drives EN2, with a 0.1µF capacitor across the 100k resistor, so buck 2 is enabled from the output of buck 1. PGOOD connects through a 1M resistor to V_OUT1.](",
+    "evidence": "PDF p26 TA07 schematic (render): the AI text invented that the output of each regulator feeds the input of the other and that 'the LTC3315A is controlled by' the 169k/100k/0.1µF network; in the drawing V_OUT1 drives the 169k/100k divider (0.1µF across the 100k) whose middle node is EN2, EN1 and MODE/SYNC are input arrows, and the 10µF/1µF 0201 input capacitors, 140k/261k feedback resistors with 6.8pF/4.7pF, 880nH/1.0µH inductors and 33µF/22µF output capacitors were missing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p26-ta07-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 26,
+    "old": "\nCircuit diagram of the LTC3315A in a dual buck regulator configuration with supply sequencing. The input voltage V\\_IN ranges from 2.25V to 5.5V. The LTC3315A is configured with two buck regulators. The first regulator (top) has a switching frequency f\\_SW = 2MHz and outputs V\\_OUT1 = 1.2V, 2A. The second regulator (bottom) has a switching frequency f\\_SW = 2MHz and outputs V\\_OUT2 = 1.8V, 2A. The LTC3315A is controlled by a 169k resistor and a 100k resistor, with a 0.1µF capacitor. The output of the first regulator is connected to the input of the second regulator. The output of the second regulator is connected to the input of the first regulator. The LTC3315A is also connected to a 1M resistor and a 100k resistor. The diagram includes labels for V\\_IN, EN1, EN2, SW1, SW2, FB1, FB2, MODE/SYNC, GND, PGOOD, and V\\_OUT1, V\\_OUT2.\n",
+    "new": "\nCircuit diagram of the LTC3315A dual buck regulators with supply sequencing (description written from the PDF drawing). Input: V\\_IN 2.25V TO 5.5V connected to both V\\_IN pins, each decoupled to ground by a 10µF capacitor and a 1µF 0201 capacitor. EN1 and MODE/SYNC are drawn with input arrows. GND goes to ground, labeled f\\_SW = 2MHz. Output 1: SW1 drives an 880nH inductor to V\\_OUT1 1.2V, 2A, which has a 33µF capacitor to ground; FB1 connects to a 140k/100k divider from V\\_OUT1 to ground, with 6.8pF across the 140k resistor. Output 2: SW2 drives a 1.0µH inductor to V\\_OUT2 1.8V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 261k/100k divider from V\\_OUT2 to ground, with 4.7pF across the 261k resistor. Sequencing: V\\_OUT1 is wired to a 169k/100k divider to ground whose middle node drives EN2, with a 0.1µF capacitor across the 100k resistor, so buck 2 is enabled from the output of buck 1. PGOOD connects through a 1M resistor to V\\_OUT1.\n\n3315A TA07\n",
+    "evidence": "PDF p26 TA07 schematic (render): the AI text invented that the output of each regulator feeds the input of the other and that 'the LTC3315A is controlled by' the 169k/100k/0.1µF network; in the drawing V_OUT1 drives the 169k/100k divider (0.1µF across the 100k) whose middle node is EN2, EN1 and MODE/SYNC are input arrows, and the 10µF/1µF 0201 input capacitors, 140k/261k feedback resistors with 6.8pF/4.7pF, 880nH/1.0µH inductors and 33µF/22µF output capacitors were missing. Rewritten from the drawing. Drawing number '3315A TA07' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
