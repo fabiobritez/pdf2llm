@@ -16009,5 +16009,172 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p37-column-split",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 37,
+    "old": "every CRC\n\ncode in a SPI frame",
+    "new": "every CRC code in a SPI frame",
+    "evidence": "PDF p37 (render + PyMuPDF): 'When using single instruction mode, every CRC' ends the left column and 'code in a SPI frame uses 0xA5…' continues the same paragraph at the top of the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p37-device-reset-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 37,
+    "old": "\n## DEVICE RESET\n",
+    "new": "\n### DEVICE RESET\n",
+    "evidence": "PDF p37 (PyMuPDF spans + render): 'DEVICE RESET' is black Arial-Bold 11pt caps under the blue 'DIGITAL INTERFACE' section title, like 'DEVICE STATUS ERRORS' and 'CYCLIC REDUNDANCY CHECK (CRC) ERROR DETECTION' on p36 (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p37-reset-reading-order-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 37,
+    "old": "### Software Reset\n\nThe INTERFACE\\_CONFIG\\_A register includes two control bits, SW\\_RESET and RESET\\_SW used to initiate a software reset through the serial interface. Both bits must be set simultaneously within the same data phase to successfully trigger the reset. Once the software reset transaction is completed, the device performs a POR sequence followed by digital core initialization. All registers are reset to their default values, except for the INTERFACE\\_CONFIG\\_A register, which retains its current configuration.\n\n### Power-On Reset (POR)\n\nA POR signal is generated when the supply voltage first crosses the nominal threshold of 2.5V on AVDD. The POR resets the state of the user programmable registers if the supply voltage on AVDD drops below this threshold. On power-up, all registers are reset to their default values. Meanwhile, the POR circuit ensures that the output stages of all DAC channels are powered down (see the DAC Operating Modes section) until the output operating mode for the channel is changed.\n\n### Hardware Reset\n\nRESET is an active low signal that is low level triggered. Asserting RESET sets the device into the POR state. While RESET is asserted, all SPI transactions and LDAC pulses are ignored, and the SDO output is in a high-Z state. When the RESET is deasserted, the digital core initialization is performed, and all registers are reset to their default values.\n",
+    "new": "#### Power-On Reset (POR)\n\nA POR signal is generated when the supply voltage first crosses the nominal threshold of 2.5V on AVDD. The POR resets the state of the user programmable registers if the supply voltage on AVDD drops below this threshold. On power-up, all registers are reset to their default values. Meanwhile, the POR circuit ensures that the output stages of all DAC channels are powered down (see the DAC Operating Modes section) until the output operating mode for the channel is changed.\n\n#### Hardware Reset\n\nRESET is an active low signal that is low level triggered. Asserting RESET sets the device into the POR state. While RESET is asserted, all SPI transactions and LDAC pulses are ignored, and the SDO output is in a high-Z state. When the RESET is deasserted, the digital core initialization is performed, and all registers are reset to their default values.\n\n#### Software Reset\n\nThe INTERFACE\\_CONFIG\\_A register includes two control bits, SW\\_RESET and RESET\\_SW used to initiate a software reset through the serial interface. Both bits must be set simultaneously within the same data phase to successfully trigger the reset. Once the software reset transaction is completed, the device performs a POR sequence followed by digital core initialization. All registers are reset to their default values, except for the INTERFACE\\_CONFIG\\_A register, which retains its current configuration.\n",
+    "evidence": "PDF p37 (render + PyMuPDF block positions): below Table 14 the left column has DEVICE RESET, Power-On Reset (POR) and Hardware Reset, and the right column has only the software reset subsection (x=330, y=368); in column order it comes after Hardware Reset, matching the text's order 'power-on reset (POR), hardware reset, and software reset'. The title-case bold subsections are H4 under the H3 DEVICE RESET, as on p36; the md had them as H3 with the software reset first.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p37-sofware-reset-as-printed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 37,
+    "old": "#### Software Reset\n",
+    "new": "#### Sofware Reset\n",
+    "evidence": "PDF p37 (PyMuPDF spans + render): the subsection title is printed 'Sofware Reset' (manufacturer typo, Arial-Bold 11pt span 'Sofware Reset'). Kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p37-hardware-reset-overbars",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 37,
+    "old": "RESET is an active low signal that is low level triggered. Asserting RESET sets the device into the POR state. While RESET is asserted, all SPI transactions and LDAC pulses are ignored, and the SDO output is in a high-Z state. When the RESET is deasserted, the digital core initialization is performed, and all registers are reset to their default values.",
+    "new": "$\\overline{\\text{RESET}}$ is an active low signal that is low level triggered. Asserting $\\overline{\\text{RESET}}$ sets the device into the POR state. While $\\overline{\\text{RESET}}$ is asserted, all SPI transactions and $\\overline{\\text{LDAC}}$ pulses are ignored, and the SDO output is in a high-Z state. When the $\\overline{\\text{RESET}}$ is deasserted, the digital core initialization is performed, and all registers are reset to their default values.",
+    "evidence": "PDF p37 Hardware Reset (render 200/300 dpi): RESET is printed with an overbar all four times and LDAC with an overbar ('LDAC pulses'), as in the rest of the md ($\\overline{\\text{RESET}}$, $\\overline{\\text{LDAC}}$); the md had them plain.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-fig76-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "![Schematic diagram showing the SPI interface between the ADuCM320 and the AD5711R/AD5710R. The ADuCM320 pins are: P0.3/IRQ0/CS0/PLACLK0/PLAI[3], P0.0/SCLK0/PLAI[0], P0.2/MOSI0/PLAI[2], P0.1/MISO0/PLAI[1], P1.4/PWM2/SCLK1/PLAO[10], and P1.5/PWM3/MISO1/PLAO[11]. The AD5711R/AD5710R pins are: CS, SCLK, SDI, SDO, RESET, and LDAC. Arrows indicate the signal flow: CS from ADuCM320 to AD5711R; SCLK from ADuCM320 to AD5711R; SDI from AD5711R to ADuCM320; SDO from ADuCM320 to AD5711R; RESET from ADuCM320 to AD5711R; and LDAC from ADuCM320 to AD5711R.](",
+    "new": "![Schematic diagram of the SPI interface between the ADuCM320 and the AD5711R/AD5710R (description written from the PDF drawing). Six connections, ADuCM320 pin to AD5711R/AD5710R pin: P0.3/IRQ0/CS0/PLACLK0/PLAI[3] to CS (overbar); P0.0/SCLK0/PLAI[0] to SCLK; P0.2/MOSI0/PLAI[2] to SDI; SDO to P0.1/MISO0/PLAI[1] (the only signal from the AD5711R/AD5710R to the ADuCM320); P1.4/PWM2/SCLK1/PLAO[10] to RESET (overbar); P1.5/PWM3/MISO1/PLAO[11] to LDAC (printed without overbar).](",
+    "evidence": "PDF p38 Figure 76 (render 400 dpi): the arrows go P0.2/MOSI0 → SDI and SDO → P0.1/MISO0; the AI text had 'SDI from AD5711R to ADuCM320; SDO from ADuCM320 to AD5711R', did not say which ADuCM320 pin drives which input, and lost the CS/RESET overbars. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-fig76-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": ")\n\nSchematic diagram showing the SPI interface between the ADuCM320 and the AD5711R/AD5710R. The ADuCM320 pins are: P0.3/IRQ0/CS0/PLACLK0/PLAI[3], P0.0/SCLK0/PLAI[0], P0.2/MOSI0/PLAI[2], P0.1/MISO0/PLAI[1], P1.4/PWM2/SCLK1/PLAO[10], and P1.5/PWM3/MISO1/PLAO[11]. The AD5711R/AD5710R pins are: CS, SCLK, SDI, SDO, RESET, and LDAC. Arrows indicate the signal flow: CS from ADuCM320 to AD5711R; SCLK from ADuCM320 to AD5711R; SDI from AD5711R to ADuCM320; SDO from ADuCM320 to AD5711R; RESET from ADuCM320 to AD5711R; and LDAC from ADuCM320 to AD5711R.\n",
+    "new": ")\n\nSchematic diagram of the SPI interface between the ADuCM320 and the AD5711R/AD5710R (description written from the PDF drawing). Six connections, ADuCM320 pin to AD5711R/AD5710R pin: P0.3/IRQ0/CS0/PLACLK0/PLAI[3] to CS (overbar); P0.0/SCLK0/PLAI[0] to SCLK; P0.2/MOSI0/PLAI[2] to SDI; SDO to P0.1/MISO0/PLAI[1] (the only signal from the AD5711R/AD5710R to the ADuCM320); P1.4/PWM2/SCLK1/PLAO[10] to RESET (overbar); P1.5/PWM3/MISO1/PLAO[11] to LDAC (printed without overbar).\n",
+    "evidence": "Same as ad5711r-ad5710r-p38-fig76-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-applications-information-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "\n# APPLICATIONS INFORMATION\n\n## POWER SUPPLY RECOMMENDATIONS\n",
+    "new": "\n## APPLICATIONS INFORMATION\n\n### POWER SUPPLY RECOMMENDATIONS\n",
+    "evidence": "PDF p38 (PyMuPDF spans + render): 'APPLICATIONS INFORMATION' is the blue Arial-Bold 11pt section title (H2, like DIGITAL INTERFACE), and 'POWER SUPPLY RECOMMENDATIONS' is a black Arial-Bold 11pt caps subsection (H3); the md had H1/H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-microprocessor-interfacing-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "\n## MICROPROCESSOR INTERFACING\n",
+    "new": "\n### MICROPROCESSOR INTERFACING\n",
+    "evidence": "PDF p38 (PyMuPDF spans + render): 'MICROPROCESSOR INTERFACING' is a black Arial-Bold 11pt caps subsection under APPLICATIONS INFORMATION (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-layout-guidelines-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "\n## LAYOUT GUIDELINES AND ASSEMBLY GUIDELINES\n",
+    "new": "\n### LAYOUT GUIDELINES AND ASSEMBLY GUIDELINES\n",
+    "evidence": "PDF p38 (PyMuPDF spans + render): 'LAYOUT GUIDELINES AND ASSEMBLY GUIDELINES' is a black Arial-Bold 11pt caps subsection under APPLICATIONS INFORMATION (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-thermal-considerations-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "\n## THERMAL CONSIDERATIONS\n",
+    "new": "\n### THERMAL CONSIDERATIONS\n",
+    "evidence": "PDF p38 (PyMuPDF spans + render): 'THERMAL CONSIDERATIONS' is a black Arial-Bold 11pt caps subsection under APPLICATIONS INFORMATION (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p38-column-split",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 38,
+    "old": "(for example,\n\nceramic) provides",
+    "new": "(for example, ceramic) provides",
+    "evidence": "PDF p38 (render): '…of the silicon (for example,' ends the left column and 'ceramic) provides the optimal mechanical performance.' continues the same paragraph at the top of the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p39-applications-information-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 39,
+    "old": "\n# APPLICATIONS INFORMATION\n\n**Table 16.",
+    "new": "\n## APPLICATIONS INFORMATION\n\n**Table 16.",
+    "evidence": "PDF p39 (PyMuPDF spans + render): the repeated 'APPLICATIONS INFORMATION' page header is the blue Arial-Bold 11pt section title (H2), as on p38; the md had H1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
