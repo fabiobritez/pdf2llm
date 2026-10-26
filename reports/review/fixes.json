@@ -5735,5 +5735,369 @@
       "pdf-words"
     ],
     "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p1-title-missing",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 1,
+    "old": "{0}------------------------------------------------\n\n# FEATURES\n",
+    "new": "{0}------------------------------------------------\n\n# LT1965 Series\n\n## 1.1A, Low Noise, Low Dropout Linear Regulator\n\n# FEATURES\n",
+    "evidence": "PDF p1 header prints 'LT1965 Series' and '1.1A, Low Noise, Low Dropout Linear Regulator' (pdftotext + render); the md started directly at FEATURES.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p1-ta01-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 1,
+    "old": "**3.3V to 2.5V Regulator**\n\n\\*CERAMIC OR TANTALUM\n",
+    "new": "**3.3V to 2.5V Regulator**\n\n\\*CERAMIC OR TANTALUM\n\n1965 TA01\n",
+    "evidence": "PDF p1 prints the drawing number '1965 TA01' under the regulator schematic (pdftotext + render); the md kept '1965 TA01b' of the plot but dropped this one.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p3-ms8e-3.3-marking-e",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 3,
+    "old": "| LT1965EMS8E-3.3#PBF | LT1965EMS8E-3.3#TRPBF | LTDMD         |",
+    "new": "| LT1965EMS8E-3.3#PBF | LT1965EMS8E-3.3#TRPBF | LTDMF         |",
+    "evidence": "PDF p3 Order Information: part marking for LT1965EMS8E-3.3 is 'LTDMF' (pdftotext words + render); md had LTDMD (the DFN marking).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p3-ms8e-3.3-marking-i",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 3,
+    "old": "| LT1965IMS8E-3.3#PBF | LT1965IMS8E-3.3#TRPBF | LTDMD         |",
+    "new": "| LT1965IMS8E-3.3#PBF | LT1965IMS8E-3.3#TRPBF | LTDMF         |",
+    "evidence": "PDF p3 Order Information: part marking for LT1965IMS8E-3.3 is 'LTDMF' (pdftotext words + render); md had LTDMD.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p7-g15-label-asterisks-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under light load. Three curves are shown for different load conditions: RL = 30ohm, IL = 50mA; RL = 150ohm, IL = 10mA; and RL = 1.5k, IL = 1mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.5V.](",
+    "new": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under light load. Three curves are shown for different load conditions: RL = 30ohm, IL = 50mA*; RL = 150ohm, IL = 10mA*; and RL = 1.5k, IL = 1mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.5V.](",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g15-label-asterisks-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under light load. Three curves are shown for different load conditions: RL = 30ohm, IL = 50mA; RL = 150ohm, IL = 10mA; and RL = 1.5k, IL = 1mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.5V.\n",
+    "new": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under light load. Three curves are shown for different load conditions: RL = 30ohm, IL = 50mA*; RL = 150ohm, IL = 10mA*; and RL = 1.5k, IL = 1mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.5V.\n",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g16-label-asterisks-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under heavy load. Three curves are shown for different load conditions: RL = 1.363ohm, IL = 1.1A; RL = 3ohm, IL = 500mA; and RL = 15ohm, IL = 100mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.5V.](",
+    "new": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under heavy load. Three curves are shown for different load conditions: RL = 1.363ohm, IL = 1.1A*; RL = 3ohm, IL = 500mA*; and RL = 15ohm, IL = 100mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.5V.](",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g16-label-asterisks-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under heavy load. Three curves are shown for different load conditions: RL = 1.363ohm, IL = 1.1A; RL = 3ohm, IL = 500mA; and RL = 15ohm, IL = 100mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.5V.\n",
+    "new": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.5 under heavy load. Three curves are shown for different load conditions: RL = 1.363ohm, IL = 1.1A*; RL = 3ohm, IL = 500mA*; and RL = 15ohm, IL = 100mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.5V.\n",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g17-label-asterisks-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under light load. Three curves are shown for different load conditions: RL = 36ohm, IL = 50mA; RL = 180ohm, IL = 10mA; and RL = 1.8k, IL = 1mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.8V.](",
+    "new": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under light load. Three curves are shown for different load conditions: RL = 36ohm, IL = 50mA*; RL = 180ohm, IL = 10mA*; and RL = 1.8k, IL = 1mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.8V.](",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g17-label-asterisks-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under light load. Three curves are shown for different load conditions: RL = 36ohm, IL = 50mA; RL = 180ohm, IL = 10mA; and RL = 1.8k, IL = 1mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.8V.\n",
+    "new": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under light load. Three curves are shown for different load conditions: RL = 36ohm, IL = 50mA*; RL = 180ohm, IL = 10mA*; and RL = 1.8k, IL = 1mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.8V.\n",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g18-label-asterisks-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under heavy load. Three curves are shown for different load conditions: RL = 1.636ohm, IL = 1.1A; RL = 3.6ohm, IL = 500mA; and RL = 18ohm, IL = 100mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.8V.](",
+    "new": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under heavy load. Three curves are shown for different load conditions: RL = 1.636ohm, IL = 1.1A*; RL = 3.6ohm, IL = 500mA*; and RL = 18ohm, IL = 100mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.8V.](",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g18-label-asterisks-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under heavy load. Three curves are shown for different load conditions: RL = 1.636ohm, IL = 1.1A; RL = 3.6ohm, IL = 500mA; and RL = 18ohm, IL = 100mA. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, FOR VOUT = 1.8V.\n",
+    "new": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-1.8 under heavy load. Three curves are shown for different load conditions: RL = 1.636ohm, IL = 1.1A*; RL = 3.6ohm, IL = 500mA*; and RL = 18ohm, IL = 100mA*. All curves show a peak at low input voltages. Conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.8V.\n",
+    "evidence": "PDF p7 plot labels print an asterisk on each load label (e.g. 'IL = 50mA*') referring to '*FOR VOUT = 1.5V' (render + pdftotext); the AI description dropped both asterisks.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g14-adjustable-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "![Graph of Quiescent Current (mA) vs Input Voltage (V) for the general LT1965 family. The graph shows a sharp increase in quiescent current at low input voltages, leveling off around 0.5mA. Two curves are shown: VSHDN = VIN (upper) and VSHDN = 0V (lower). Conditions: TJ = 25°C, RL = 4.02k.](",
+    "new": "![Graph of Quiescent Current (mA) vs Input Voltage (V) for the LT1965 (adjustable version). The graph shows a sharp increase in quiescent current at low input voltages, leveling off around 0.5mA. Two curves are shown: VSHDN = VIN (upper) and VSHDN = 0V (lower). Conditions: TJ = 25°C, RL = 4.02k.](",
+    "evidence": "PDF p7 G14 is titled 'LT1965 Quiescent Current' with RL = 4.02k; in this datasheet 'LT1965' alone is the adjustable version (G10-G13 cover the fixed versions). The AI description called it 'the general LT1965 family'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p7-g14-adjustable-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 7,
+    "old": "\nGraph of Quiescent Current (mA) vs Input Voltage (V) for the general LT1965 family. The graph shows a sharp increase in quiescent current at low input voltages, leveling off around 0.5mA. Two curves are shown: VSHDN = VIN (upper) and VSHDN = 0V (lower). Conditions: TJ = 25°C, RL = 4.02k.\n",
+    "new": "\nGraph of Quiescent Current (mA) vs Input Voltage (V) for the LT1965 (adjustable version). The graph shows a sharp increase in quiescent current at low input voltages, leveling off around 0.5mA. Two curves are shown: VSHDN = VIN (upper) and VSHDN = 0V (lower). Conditions: TJ = 25°C, RL = 4.02k.\n",
+    "evidence": "PDF p7 G14 is titled 'LT1965 Quiescent Current' with RL = 4.02k; in this datasheet 'LT1965' alone is the adjustable version (G10-G13 cover the fixed versions). The AI description called it 'the general LT1965 family'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g19-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-2.5 under light load conditions. The graph shows three curves for different load currents: 10mA (RL = 250Ω), 1mA (RL = 2.5k), and 50mA (RL = 50Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 2.5V.\n",
+    "new": "\n1965 G19\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-2.5 under light load conditions. The graph shows three curves for different load currents: 10mA (RL = 250Ω), 1mA (RL = 2.5k), and 50mA (RL = 50Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 2.5V.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g20-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-2.5 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 2.272Ω), 500mA (RL = 5Ω), and 100mA (RL = 25Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 2.5V.\n",
+    "new": "\n1965 G20\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-2.5 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 2.272Ω), 500mA (RL = 5Ω), and 100mA (RL = 25Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 2.5V.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g21-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-3.3 under light load conditions. The graph shows three curves for different load currents: 10mA (RL = 330Ω), 1mA (RL = 3.3k), and 50mA (RL = 66Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 3.3V.\n",
+    "new": "\n1965 G21\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-3.3 under light load conditions. The graph shows three curves for different load currents: 10mA (RL = 330Ω), 1mA (RL = 3.3k), and 50mA (RL = 66Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 3.3V.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g22-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-3.3 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 3Ω), 500mA (RL = 6.6Ω), and 100mA (RL = 33Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 3.3V.\n",
+    "new": "\n1965 G22\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965-3.3 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 3Ω), 500mA (RL = 6.6Ω), and 100mA (RL = 33Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 3.3V.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g23-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under light load conditions. The graph shows three curves for different load currents: 50mA (RL = 24Ω), 10mA (RL = 120Ω), and 1mA (RL = 1.2k). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "new": "\n1965 G23\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under light load conditions. The graph shows three curves for different load currents: 50mA (RL = 24Ω), 10mA (RL = 120Ω), and 1mA (RL = 1.2k). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g23-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under light load conditions. The graph shows three curves for different load currents: 50mA (RL = 24Ω), 10mA (RL = 120Ω), and 1mA (RL = 1.2k). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.2V.](",
+    "new": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under light load conditions. The graph shows three curves for different load currents: 50mA (RL = 24Ω), 10mA (RL = 120Ω), and 1mA (RL = 1.2k). All curves rise sharply at about 1.5V input voltage and then level off; there is no peak. Test conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.2V.](",
+    "evidence": "PDF p8 G23 (LT1965 GND Pin Current, Light Load): the three curves step up near 1.5V and stay flat; the AI text claimed a peak around 2V.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g23-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\n1965 G23\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under light load conditions. The graph shows three curves for different load currents: 50mA (RL = 24Ω), 10mA (RL = 120Ω), and 1mA (RL = 1.2k). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "new": "\n1965 G23\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under light load conditions. The graph shows three curves for different load currents: 50mA (RL = 24Ω), 10mA (RL = 120Ω), and 1mA (RL = 1.2k). All curves rise sharply at about 1.5V input voltage and then level off; there is no peak. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "evidence": "Same correction as lt1965fb-p8-g23-desc-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g24-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 1.091Ω), 500mA (RL = 2.4Ω), and 100mA (RL = 12Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "new": "\n1965 G24\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 1.091Ω), 500mA (RL = 2.4Ω), and 100mA (RL = 12Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g24-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 1.091Ω), 500mA (RL = 2.4Ω), and 100mA (RL = 12Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.2V.](",
+    "new": "![Graph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 1.091Ω), 500mA (RL = 2.4Ω), and 100mA (RL = 12Ω). The curves rise sharply at about 1.7V input voltage; the 1.1A curve is highest at that step and then decreases with increasing input voltage, the 500mA and 100mA curves stay nearly flat. Test conditions: TJ = 25°C, VSHDN = VIN, *FOR VOUT = 1.2V.](",
+    "evidence": "PDF p8 G24 (LT1965 GND Pin Current, Heavy Load): the 1.1A curve jumps to its maximum at about 1.7V and then falls; 500mA/100mA curves are flat. No peak around 2V.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g24-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\n1965 G24\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 1.091Ω), 500mA (RL = 2.4Ω), and 100mA (RL = 12Ω). All curves show a peak in current around 2V input voltage. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "new": "\n1965 G24\n\nGraph of GND Pin Current (mA) vs Input Voltage (V) for LT1965 under heavy load conditions. The graph shows three curves for different load currents: 1.1A (RL = 1.091Ω), 500mA (RL = 2.4Ω), and 100mA (RL = 12Ω). The curves rise sharply at about 1.7V input voltage; the 1.1A curve is highest at that step and then decreases with increasing input voltage, the 500mA and 100mA curves stay nearly flat. Test conditions: TJ = 25°C, VSHDN = VIN, \\*FOR VOUT = 1.2V.\n",
+    "evidence": "Same correction as lt1965fb-p8-g24-desc-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g25-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of GND Pin Current (mA) vs Load Current (A). The graph shows a single curve for VIN = VOUT(NOMINAL) + 1V. The current increases linearly from approximately 1.5mA at 0A load to 22.5mA at 1.1A load.\n",
+    "new": "\n1965 G25\n\nGraph of GND Pin Current (mA) vs Load Current (A). The graph shows a single curve for VIN = VOUT(NOMINAL) + 1V. The current increases linearly from approximately 1.5mA at 0A load to 22.5mA at 1.1A load.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g25-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "![Graph of GND Pin Current (mA) vs Load Current (A). The graph shows a single curve for VIN = VOUT(NOMINAL) + 1V. The current increases linearly from approximately 1.5mA at 0A load to 22.5mA at 1.1A load.](",
+    "new": "![Graph of GND Pin Current (mA) vs Load Current (A). The graph shows a single curve for VIN = VOUT(NOMINAL) + 1V. The current increases with load current, from under 1mA at 0A load to about 22.5mA at 1.1A load; the curve bends upward (not linear).](",
+    "evidence": "PDF p8 G25 (GND Pin Current vs ILOAD): the curve starts below 1mA at 0A (axis 0-2.50 mA) and bends upward; the AI text said 'linearly from approximately 1.5mA'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g25-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\n1965 G25\n\nGraph of GND Pin Current (mA) vs Load Current (A). The graph shows a single curve for VIN = VOUT(NOMINAL) + 1V. The current increases linearly from approximately 1.5mA at 0A load to 22.5mA at 1.1A load.\n",
+    "new": "\n1965 G25\n\nGraph of GND Pin Current (mA) vs Load Current (A). The graph shows a single curve for VIN = VOUT(NOMINAL) + 1V. The current increases with load current, from under 1mA at 0A load to about 22.5mA at 1.1A load; the curve bends upward (not linear).\n",
+    "evidence": "Same correction as lt1965fb-p8-g25-desc-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p8-g26-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 8,
+    "old": "\nGraph of SHDN Pin Threshold (V) vs Temperature (°C). The graph shows two curves: 'OFF TO ON' (red) and 'ON TO OFF' (blue). The OFF TO ON threshold starts at ~0.9V at -50°C and decreases to ~0.7V at 150°C. The ON TO OFF threshold starts at ~0.7V at -50°C and decreases to ~0.3V at 150°C.\n",
+    "new": "\n1965 G26\n\nGraph of SHDN Pin Threshold (V) vs Temperature (°C). The graph shows two curves: 'OFF TO ON' (red) and 'ON TO OFF' (blue). The OFF TO ON threshold starts at ~0.9V at -50°C and decreases to ~0.7V at 150°C. The ON TO OFF threshold starts at ~0.7V at -50°C and decreases to ~0.3V at 150°C.\n",
+    "evidence": "PDF p8 prints a drawing number under each plot (1965 G19 ... 1965 G26; pdftotext + render); the md dropped them on this page (p6/p7 keep them).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
