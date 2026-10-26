@@ -23476,5 +23476,182 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p36-bqb-generic-view-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 36,
+    "old": "The image displays two 3D models of a Texas Instruments WQFN (Wide Quad Flat No-lead) package. The first model shows the top of the package, which is black with a textured surface. It features the Texas Instruments logo and the text 'TEXAS INSTRUMENTS' in white. The second model shows the bottom of the package, revealing the 16 pins arranged in a 4x4 grid. The pins are silver-colored with orange-tinted tips. The central area of the package is a light gray rectangle representing the die.",
+    "new": "The image displays two 3D models of a Texas Instruments WQFN (plastic quad flatpack - no lead) package. The first model shows the top of the package, which is black with a textured surface. It features the Texas Instruments logo and the text 'TEXAS INSTRUMENTS' in white. The second model shows the bottom of the package, with 16 silver-colored pads around the perimeter (copper-colored where they reach the package edge) and a central light gray exposed thermal pad with one chamfered corner.",
+    "evidence": "PDF p36 BQB GENERIC PACKAGE VIEW: the bottom shows 16 pads around the perimeter and a central exposed thermal pad, not 'pins in a 4x4 grid' and 'the die'; 'Wide' is not what the W stands for (the page says PLASTIC QUAD FLATPACK - NO LEAD).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p36-bqb-generic-view-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 36,
+    "old": "One shows the top of the package with the Texas Instruments logo and 'TEXAS INSTRUMENTS' text. The other shows the bottom of the package with the 16 pins and the central die area.](",
+    "new": "One shows the top of the package with the Texas Instruments logo and 'TEXAS INSTRUMENTS' text. The other shows the bottom of the package with the 16 perimeter pads and the central exposed thermal pad.](",
+    "evidence": "PDF p36 BQB GENERIC PACKAGE VIEW: the bottom shows 16 pads around the perimeter and a central exposed thermal pad, not 'pins in a 4x4 grid' and 'the die'; 'Wide' is not what the W stands for (the page says PLASTIC QUAD FLATPACK - NO LEAD).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p36-bqb-generic-view-alt-repeat",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 36,
+    "old": "One shows the top of the package with the Texas Instruments logo and 'TEXAS INSTRUMENTS' text. The other shows the bottom of the package with the 16 pins and the central die area.\n\n{36}",
+    "new": "One shows the top of the package with the Texas Instruments logo and 'TEXAS INSTRUMENTS' text. The other shows the bottom of the package with the 16 perimeter pads and the central exposed thermal pad.\n\n4226161/A\n\n{36}",
+    "evidence": "PDF p36 BQB GENERIC PACKAGE VIEW: the bottom shows 16 pads around the perimeter and a central exposed thermal pad, not 'pins in a 4x4 grid' and 'the die'; 'Wide' is not what the W stands for (the page says PLASTIC QUAD FLATPACK - NO LEAD). Same as -alt (repeated alt line); the drawing number '4226161/A' printed at the bottom right was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p37-bqb-outline-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 37,
+    "old": "The figure shows the package outline for a WQFN (Quad Flat No-Lead) package. It includes three views: a top view, a side view, and a bottom view.\n\n- Top View:** Shows a rectangular package with a shaded 'PIN 1 INDEX AREA' in the top-left corner. Dimensions for the index area are 2.6/2.4 mm width and 3.6/3.4 mm height. Callouts A and B indicate the edges of the package.\n- Side View:** Shows the profile of the package. The height is 0.8 mm maximum. It includes a 'SEATING PLANE' callout and a profile tolerance of 0.08 C. Dimensions for the leads are (0.16) and (0.23), with a typical width of (0.15) TYP. A note reference 'NOTE 4' is also present.\n- Bottom View:** Shows the underside of the package with 16 leads. Dimensions include 10X 0.5 mm for the lead pitch, 2X 2.5 mm for the lead spread, and 16X 0.30/0.18 mm for the lead width. Symmetry (SYMM) is indicated for the lead layout. A 'PIN 1 ID (OPTIONAL)' callout points to a specific lead. A profile tolerance of (0.2) TYP is also shown.\n\nA feature control frame at the bottom right specifies a profile tolerance of 0.1 M relative to datums C, A, and B, and a flatness tolerance of 0.05 M relative to datum C.",
+    "new": "The figure shows the package outline for the BQB0016A WQFN (Quad Flat No-Lead) package (description written from the PDF drawing, values in mm as printed, max over min). It includes three views: a top view, a side view, and a bottom view.\n\n- Top View: rectangular body 2.6/2.4 wide (datum B) by 3.6/3.4 long (datum A), shaded 'PIN 1 INDEX AREA' in the top-left corner.\n- Side View: height 0.8/0.7, standoff 0.05/0.00, 'SEATING PLANE' (datum C), surface profile 0.08 C; reference dimensions (0.16), (0.23) and (0.15) TYP (NOTE 4).\n- Bottom View: pins 2-7 on the left side (7 at the top), 8 and 9 on the top edge, 10-15 on the right side (10 at the top), 1 and 16 on the bottom edge. Pitch 10X 0.5 along the sides and 2X 0.5 between pins 8-9 and 1-16; side-row span 2X 2.5 (pins 2 to 7); terminal width 16X 0.30/0.18 with position tolerances 0.1 (M) C A B and 0.05 (M) C; terminal length 16X 0.5/0.3. Exposed thermal pad 1.1/0.9 by 2.1/1.9 with a chamfered 'PIN 1 ID (OPTIONAL)' corner; SYMM centerlines; side profile (0.2) TYP.",
+    "evidence": "PDF p37 BQB0016A outline: 2.6/2.4 and 3.6/3.4 are the body dimensions (the old text gave them as the pin 1 index area), the height is 0.8/0.7 (not '0.8 maximum'), 0.1 (M) C A B / 0.05 (M) C are position tolerances (not profile/flatness), and the thermal pad 1.1/0.9 x 2.1/1.9, the terminal length 16X 0.5/0.3, the standoff 0.05/0.00 and the pin numbering were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p37-bqb-outline-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 37,
+    "old": "{36}------------------------------------------------\n\n![Technical drawing of WQFN package outline",
+    "new": "{36}------------------------------------------------\n\n#### PACKAGE OUTLINE\n\nBQB0016A\n\n**WQFN - 0.8 mm max height**\n\nPLASTIC QUAD FLAT PACK-NO LEAD\n\n![Technical drawing of WQFN package outline",
+    "evidence": "PDF p37 title block 'BQB0016A / PACKAGE OUTLINE / WQFN - 0.8 mm max height / PLASTIC QUAD FLAT PACK-NO LEAD' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p38-bqb-land-pattern-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 38,
+    "old": "The diagram shows a land pattern for a WQFN package. It features a central rectangular area with two circular vias. Surrounding this are 16 rectangular pads arranged in a 4x4 grid. Dimensions are provided in millimeters: the overall width is (2.3), the overall height is (3.3), and the pitch between pads is (1). Specific pad dimensions are given as 2X (0.5) for width and 2X (0.75) for height. Other dimensions include 10X (0.5), 2X (2.5), 16X (0.24), and 16X (0.6). Pin numbers 1, 2, 7, 8, 9, 10, 15, and 16 are indicated. Symmetry markers (SYMM) are shown with center lines. A via is labeled (Ø0.2) VIA TYP and (R0.05) TYP.",
+    "new": "The diagram shows the land pattern for the BQB0016A WQFN package (description written from the PDF drawing, values in mm as printed). A central thermal pad (1) wide by (2) long carries two (Ø0.2) VIA TYP, spaced 2X (0.75) from the horizontal centerline. 16 rounded-rectangle pads surround it: 2-7 on the left side and 10-15 on the right side at 10X (0.5) pitch (span 2X (2.5) from pad 2 to pad 7), pads 1 and 16 at the top and 8 and 9 at the bottom, 2X (0.5) apart. Pad width 16X (0.24), pad length 16X (0.6), corner radius (R0.05) TYP. Pad-row centerline spans: (2.3) horizontally and (3.3) vertically. SYMM centerlines.",
+    "evidence": "PDF p38 BQB0016A land pattern: 16 perimeter pads (6 per long side, 2 per short side), not a 4x4 grid; (1) and (2) are the thermal pad width and length (the old text called (1) a pad pitch and omitted (2)); 2X (0.75) is the via offset from the centerline, 16X (0.24) the pad width and 16X (0.6) the pad length.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p38-bqb-solder-mask-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 38,
+    "old": "On the left, 'NON-SOLDER MASK DEFINED (PREFERRED)' shows a pad with a green border for 'EXPOSED METAL' and a blue border for 'SOLDER MASK OPENING'. A dimension of '0.07 MAX ALL AROUND' is shown. On the right, 'SOLDER MASK DEFINED' shows a pad with a blue border for 'SOLDER MASK OPENING' and a green border for 'METAL UNDER SOLDER MASK'. A dimension of '0.07 MIN ALL AROUND' is shown.",
+    "new": "On the left, 'NON-SOLDER MASK DEFINED (PREFERRED)' shows a pad whose blue outline is the 'METAL' (EXPOSED METAL inside) and whose green outline around it is the 'SOLDER MASK OPENING', '0.07 MAX ALL AROUND'. On the right, 'SOLDER MASK DEFINED' shows the green 'SOLDER MASK OPENING' inside the blue dashed 'METAL UNDER SOLDER MASK', '0.07 MIN ALL AROUND'.",
+    "evidence": "PDF p38 solder mask details: blue = metal, green = solder mask opening in both cases (blue dashed = metal under solder mask); the old text had the colors and labels swapped.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p38-bqb-board-layout-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 38,
+    "old": "{37}------------------------------------------------\n\n![Land pattern example for WQFN package",
+    "new": "{37}------------------------------------------------\n\n#### EXAMPLE BOARD LAYOUT\n\nBQB0016A\n\n**WQFN - 0.8 mm max height**\n\nPLASTIC QUAD FLAT PACK-NO LEAD\n\n![Land pattern example for WQFN package",
+    "evidence": "PDF p38 title block 'BQB0016A / EXAMPLE BOARD LAYOUT / WQFN - 0.8 mm max height / PLASTIC QUAD FLAT PACK-NO LEAD' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p38-bqb-notes-5-6-numbered",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 38,
+    "old": "- 5. This package is designed to be soldered to a thermal pad on the board.",
+    "new": "5. This package is designed to be soldered to a thermal pad on the board.",
+    "evidence": "PDF p38: notes 5 and 6 are numbered notes, not bullets.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p38-bqb-notes-6-numbered",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 38,
+    "old": "- 6. Vias are optional depending on application",
+    "new": "6. Vias are optional depending on application",
+    "evidence": "PDF p38: note 6 is a numbered note, not a bullet.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p39-bqb-stencil-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 39,
+    "old": "The drawing shows a central exposed pad (blue outline) surrounded by 16 solder pads (red outlines) in a 4x4 grid. Dimensions are provided in millimeters: total width (2.3), total height (3.3), and pitch (0.6). A 0.5 mm margin is shown around the central pad. Symmetry markers (SYMM) and a rounded corner radius (R0.05) are also indicated.](",
+    "new": "The drawing (description written from the PDF drawing, values in mm as printed) shows the EXPOSED METAL thermal pad (blue outline) with one large paste aperture (red) (0.95) wide by (1.79) long, and 16 perimeter paste apertures (red): 2-7 and 10-15 on the long sides at 10X (0.5) pitch (span 2X (2.5)), 1 and 16 at the top and 8 and 9 at the bottom, 2X (0.5) apart; aperture width 16X (0.24), length 16X (0.6), corner radius (R0.05) TYP. Centerline spans (2.3) and (3.3); SYMM centerlines; the two thermal-pad via positions are drawn dashed.](",
+    "evidence": "PDF p39 BQB0016A stencil: 16 perimeter apertures (not a 4x4 grid), the thermal-pad aperture is (0.95) x (1.79) (85% coverage), (0.6) is the aperture length not a pitch, and there is no '0.5 mm margin' around the center pad.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p39-bqb-stencil-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 39,
+    "old": "The drawing shows a central exposed pad (blue outline) surrounded by 16 solder pads (red outlines) in a 4x4 grid. Dimensions are provided in millimeters: total width (2.3), total height (3.3), and pitch (0.6). A 0.5 mm margin is shown around the central pad. Symmetry markers (SYMM) and a rounded corner radius (R0.05) are also indicated.\n",
+    "new": "The drawing (description written from the PDF drawing, values in mm as printed) shows the EXPOSED METAL thermal pad (blue outline) with one large paste aperture (red) (0.95) wide by (1.79) long, and 16 perimeter paste apertures (red): 2-7 and 10-15 on the long sides at 10X (0.5) pitch (span 2X (2.5)), 1 and 16 at the top and 8 and 9 at the bottom, 2X (0.5) apart; aperture width 16X (0.24), length 16X (0.6), corner radius (R0.05) TYP. Centerline spans (2.3) and (3.3); SYMM centerlines; the two thermal-pad via positions are drawn dashed.\n",
+    "evidence": "Same as -alt (repeated alt line).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p39-bqb-stencil-description-text",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 39,
+    "old": "It features a central exposed pad (blue outline) and 16 solder pads (red outlines) arranged in a 4x4 grid. Key dimensions include a total width of 2.3 mm, a total height of 3.3 mm, and a pitch of 0.6 mm between solder pads. A 0.5 mm margin is maintained around the central pad. Symmetry markers (SYMM) and a rounded corner radius of 0.05 mm are also indicated.",
+    "new": "It features the exposed thermal pad (blue outline) with one paste aperture (0.95) x (1.79) and 16 perimeter paste apertures (red outlines), 6 on each long side and 2 on each short side, 16X (0.24) wide and 16X (0.6) long at 0.5 pitch. The centerline spans are (2.3) and (3.3) mm. Symmetry markers (SYMM) and a rounded corner radius of 0.05 mm are also indicated.",
+    "evidence": "Same correction as -alt for the middle description paragraph.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p39-bqb-stencil-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 39,
+    "old": "{38}------------------------------------------------\n\n![Technical drawing of a solder paste stencil",
+    "new": "{38}------------------------------------------------\n\n#### EXAMPLE STENCIL DESIGN\n\nBQB0016A\n\n**WQFN - 0.8 mm max height**\n\nPLASTIC QUAD FLAT PACK-NO LEAD\n\n![Technical drawing of a solder paste stencil",
+    "evidence": "PDF p39 title block 'BQB0016A / EXAMPLE STENCIL DESIGN / WQFN - 0.8 mm max height / PLASTIC QUAD FLAT PACK-NO LEAD' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
