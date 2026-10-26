@@ -25055,5 +25055,239 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63070-p1-simplified-schematic-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 1,
+    "old": "Simplified Schematic\n\n![](img/92af9ea374bdbe7e2a8d62b3c410cd6d_img.jpg)\n",
+    "new": "Simplified Schematic\n\n![Simplified schematic of the TPS63070 buck-boost converter with input VIN = 2.0 V to 16 V and output VOUT = 2.5 V to 9 V.](img/92af9ea374bdbe7e2a8d62b3c410cd6d_img.jpg)\n\nDescription written from the drawing: the input VIN = 2.0 V to 16 V drives the VIN pin, decoupled by CIN (2x10 µF, 0805) and C1 (10 µF, 0603) to ground. R5 (10 kΩ) connects VIN to EN, and EN is tied to PS/SYNC. VSEL and FB2 are connected to ground. VAUX has CVAUX (100 nF) to ground. The inductor L (1.5 µH) connects L1 and L2. VOUT is decoupled by C4 (10 µF, 0603) and COUT (3x22 µF, 0805) to ground and is the output VOUT = 2.5 V to 9 V. The divider R1/R2 from VOUT to ground sets FB. R4 (100 kΩ) pulls PG up to VOUT. PGND and GND are connected to ground.\n\nCopyright © 2016, Texas Instruments Incorporated\n\nEfficiency vs Output Current; Vo = 5 V\n\n*[Graph not extracted as an image in this conversion; see PDF p1. Description written from the drawing.]*\n\nLine graph of Efficiency (0 to 100%) versus Output Current (A) on a logarithmic axis from 100µ to 2, with one curve per input voltage: 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). Efficiency rises with output current and flattens out at higher currents; at light load the lower input voltages give higher efficiency. At the highest currents the 3 V curve drops steeply and the 4.2 V curve drops less. Read values from the PDF.\n\nD001\n",
+    "evidence": "PDF p1: the Simplified Schematic image had an empty alt text and no description, and the 'Copyright © 2016, Texas Instruments Incorporated' line printed in the drawing was missing; the 'Efficiency vs Output Current; Vo = 5 V' graph (vector, no image file was extracted) with its legend and 'D001' tag was missing entirely. Descriptions written from the rendered page (connections, part values and curve order only).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p3-pinout-alt-vout-pin7",
+    "file": "output/tps63070/tps63070.md",
+    "page": 3,
+    "old": "![Top View diagram of the QFN package showing pin numbers 1-15 and their functions: VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (8), EN (14), FB2 (6), FB (5), VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4). Bottom View diagram of the QFN package showing pin numbers 1-15 and their functions: VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4), FB (5), FB2 (6), EN (14), VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (8).]",
+    "new": "![Top View diagram of the QFN package showing pin numbers 1-15 and their functions: VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (7, 8), EN (14), FB2 (6), FB (5), VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4). Bottom View diagram of the QFN package showing pin numbers 1-15 and their functions: VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4), FB (5), FB2 (6), EN (14), VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (7, 8).]",
+    "evidence": "PDF p3 pinout drawing: the VOUT pad spans pins 7 and 8 (pin numbers '8' and '7' printed next to it in both views; Pin Functions lists VOUT 7,8); the description only gave VOUT (8).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p3-pinout-desc-vout-pin7",
+    "file": "output/tps63070/tps63070.md",
+    "page": 3,
+    "old": "\n\nTop View diagram of the QFN package showing pin numbers 1-15 and their functions: VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (8), EN (14), FB2 (6), FB (5), VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4). Bottom View diagram of the QFN package showing pin numbers 1-15 and their functions: VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4), FB (5), FB2 (6), EN (14), VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (8).\n",
+    "new": "\n\nTop View diagram of the QFN package showing pin numbers 1-15 and their functions: VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (7, 8), EN (14), FB2 (6), FB (5), VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4). Bottom View diagram of the QFN package showing pin numbers 1-15 and their functions: VSEL (15), PS/S (1), PG (2), VAUX (3), GND (4), FB (5), FB2 (6), EN (14), VIN (12, 13), L1 (11), PGND (10), L2 (9), VOUT (7, 8).\n",
+    "evidence": "PDF p3 pinout drawing: the VOUT pad spans pins 7 and 8 (pin numbers '8' and '7' printed next to it in both views; Pin Functions lists VOUT 7,8); the description only gave VOUT (8).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p3-pin-functions-vout-7-8-as-printed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 3,
+    "old": "| VOUT     | 7, 8   | O   |",
+    "new": "| VOUT     | 7,8    | O   |",
+    "evidence": "PDF p3 Pin Functions: VOUT NO. is printed '7,8' without a space (VIN is '12, 13').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p4-roc-duty-cycle-row-as-printed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 4,
+    "old": "output capacitance C <sub>out,eff</sub> ≥ 40µF; effective inductance L <sub>eff</sub> = 0.7µH to 1.8µH |",
+    "new": "output capacitance Cout,eff ≥ 40uF; effective inductance L,eff = 0.7µH to 1.8uH                             |",
+    "evidence": "PDF p4 ROC (spans): 'Cout,eff ≥ 40uF; effective inductance L,eff = 0.7µH to 1.8uH' all 8-pt full-size text, with plain 'u' in 40uF and 1.8uH and a comma in 'L,eff'; the md had subscripts, 'L eff' and µ.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p4-roc-tj-uppercase",
+    "file": "output/tps63070/tps63070.md",
+    "page": 4,
+    "old": "| Operating junction temperature range, T <sub>j</sub>          ",
+    "new": "| Operating junction temperature range, T <sub>J</sub>          ",
+    "evidence": "PDF p4 ROC: 'Operating junction temperature range, TJ' with an uppercase subscript J (the Abs Max row uses lowercase Tj).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p5-thermal-psi-lowercase",
+    "file": "output/tps63070/tps63070.md",
+    "page": 5,
+    "old": "| Ψ <sub>JT</sub>               | Junction-to-top characterization parameter   | 2.4       | °C/W |\n| Ψ <sub>JB</sub>  ",
+    "new": "| ψ <sub>JT</sub>               | Junction-to-top characterization parameter   | 2.4       | °C/W |\n| ψ <sub>JB</sub>  ",
+    "evidence": "PDF p5 Thermal Information: the symbols are lowercase psi 'ψJT' / 'ψJB' (pdftotext and render); the md had uppercase Ψ.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p6-ec-iq-isd-subscripts",
+    "file": "output/tps63070/tps63070.md",
+    "page": 6,
+    "old": "| IQ                                          | Quiescent current                                                                             | into VIN; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, PFM VOUT = 5 V; Tj = -40°C to 85°C        |      | 54   | 103  | µA   |\n| IQ                                          | Quiescent current                                                                             | into VIN; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, PFM VOUT = 5 V; Tj = -40°C to 125°C       |      |      | 133  | µA   |\n| IQ                                          | Quiescent current                                                                             | into VOUT; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, VOUT = 5 V, PFM Tj = -40°C to 85°C       |      | 5    | 9    | µA   |\n| IQ                                          | Quiescent current                                                                             | into VOUT; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, VOUT = 5 V, PFM Tj = -40°C to 125°C      |      |      | 17   | µA   |\n| ISD                                         | Shutdown current                                                                              | V <sub>EN</sub> = 0 V; Tj = -40°C to 85°C; VIN = 5V                                          |      | 2    | 12   | µA   |\n| ISD                                         | Shutdown current                                                                              | V <sub>EN</sub> = 0 V; Tj = -40°C to 85°C                                                    |      |      | 26   | µA   |\n",
+    "new": "| I <sub>Q</sub>                              | Quiescent current                                                                             | into VIN; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, PFM VOUT = 5 V; Tj = -40°C to 85°C        |      | 54   | 103  | µA   |\n| I <sub>Q</sub>                              | Quiescent current                                                                             | into VIN; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, PFM VOUT = 5 V; Tj = -40°C to 125°C       |      |      | 133  | µA   |\n| I <sub>Q</sub>                              | Quiescent current                                                                             | into VOUT; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, VOUT = 5 V, PFM Tj = -40°C to 85°C       |      | 5    | 9    | µA   |\n| I <sub>Q</sub>                              | Quiescent current                                                                             | into VOUT; IOUT= 0 mA, V <sub>EN</sub> = VIN = 6 V, VOUT = 5 V, PFM Tj = -40°C to 125°C      |      |      | 17   | µA   |\n| I <sub>SD</sub>                             | Shutdown current                                                                              | V <sub>EN</sub> = 0 V; Tj = -40°C to 85°C; VIN = 5V                                          |      | 2    | 12   | µA   |\n| I <sub>SD</sub>                             | Shutdown current                                                                              | V <sub>EN</sub> = 0 V; Tj = -40°C to 85°C                                                    |      |      | 26   | µA   |\n",
+    "evidence": "PDF p6 EC (spans): the symbols are 'I' + 6-pt subscript 'Q' (four quiescent-current rows) and 'I' + subscript 'SD' (two shutdown-current rows); the md had plain 'IQ'/'ISD' while V_UVLO, T_SD etc. kept their subscripts.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p7-ec-iin-max-as-printed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 7,
+    "old": "| I <sub>IN,max</sub>       | Average, positive input current limit                  |",
+    "new": "| IIN,max                   | Average, positive input current limit                  |",
+    "evidence": "PDF p7 EC (spans): the symbol is printed 'IIN,max' as one 8-pt full-size span in both input-current-limit rows (other symbols such as f_SW, R_DS(ON) use 6-pt subscripts); the md made it I<sub>IN,max</sub>.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p7-ec-iin-max-negative-as-printed",
+    "file": "output/tps63070/tps63070.md",
+    "page": 7,
+    "old": "| I <sub>IN,max</sub>       | Average, negative input current limit                  |",
+    "new": "| IIN,max                   | Average, negative input current limit                  |",
+    "evidence": "PDF p7 EC (spans): 'IIN,max' printed full-size, as in the positive current limit row.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig1-conditions-caption",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "\n\nFigure 1. Rds(on) of High-side Buck Switch\n",
+    "new": "\n\nVout = 5V\n\nI = 1A\n\n**Figure 1. Rds(on) of High-side Buck Switch**\n",
+    "evidence": "PDF p8: 'Vout = 5V' and 'I = 1A' are printed under the Figure 1 graph (only inside the AI description in the md); the caption is bold.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig2-conditions-caption",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "\n\nFigure 2. Rds(on) of High-side Boost Switch\n",
+    "new": "\n\nVout = 5V\n\nI = 1A\n\n**Figure 2. Rds(on) of High-side Boost Switch**\n",
+    "evidence": "PDF p8: 'Vout = 5V' and 'I = 1A' are printed under the Figure 2 graph (only inside the AI description in the md); the caption is bold.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig3-conditions-caption",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "\n\nFigure 3. Rds(on) of Low-side Boost Switch\n",
+    "new": "\n\nVout = 5V\n\nI = 1A\n\n**Figure 3. Rds(on) of Low-side Boost Switch**\n",
+    "evidence": "PDF p8: 'Vout = 5V' and 'I = 1A' are printed under the Figure 3 graph (only inside the AI description in the md); the caption is bold.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig4-conditions-caption",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "\n\nFigure 4. Rds(on) of Low-side Buck Switch\n",
+    "new": "\n\nVout = 5V\n\nI = 1A\n\n**Figure 4. Rds(on) of Low-side Buck Switch**\n",
+    "evidence": "PDF p8: 'Vout = 5V' and 'I = 1A' are printed under the Figure 4 graph (only inside the AI description in the md); the caption is bold.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig2-shape-alt",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "![Figure 2: Rds(on) of High-side Boost Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 80°C (grey), and 125°C (blue). Rds(on) decreases slightly as VIN increases from 2V to 10V.",
+    "new": "![Figure 2: Rds(on) of High-side Boost Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 80°C (grey), and 125°C (blue). Rds(on) is flat at low VIN, decreases in the middle of the VIN range and is flat again at high VIN; the legend prints 80 for the gray curve.",
+    "evidence": "PDF p8 Figure 2: every curve is flat at low VIN, steps down in the middle of the range and is flat at high VIN (not a slight decrease from 2 V to 10 V); the legend entry is '80', not 85 as in Figures 1, 3 and 4.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig1-shape-alt",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "![Figure 1: Rds(on) of High-side Buck Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 85°C (grey), and 125°C (blue). Rds(on) increases with VIN and temperature.",
+    "new": "![Figure 1: Rds(on) of High-side Buck Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 85°C (grey), and 125°C (blue). Rds(on) is higher at higher temperature; it rises with VIN at low VIN and is nearly flat at high VIN.",
+    "evidence": "PDF p8 Figure 1: the curves rise with VIN at low VIN and are nearly flat at high VIN (the -40 and 30 curves are almost flat throughout).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig2-shape-desc",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "\n\nFigure 2: Rds(on) of High-side Boost Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 80°C (grey), and 125°C (blue). Rds(on) decreases slightly as VIN increases from 2V to 10V.",
+    "new": "\n\nFigure 2: Rds(on) of High-side Boost Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 80°C (grey), and 125°C (blue). Rds(on) is flat at low VIN, decreases in the middle of the VIN range and is flat again at high VIN; the legend prints 80 for the gray curve.",
+    "evidence": "PDF p8 Figure 2: every curve is flat at low VIN, steps down in the middle of the range and is flat at high VIN (not a slight decrease from 2 V to 10 V); the legend entry is '80', not 85 as in Figures 1, 3 and 4.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p8-fig1-shape-desc",
+    "file": "output/tps63070/tps63070.md",
+    "page": 8,
+    "old": "\n\nFigure 1: Rds(on) of High-side Buck Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 85°C (grey), and 125°C (blue). Rds(on) increases with VIN and temperature.",
+    "new": "\n\nFigure 1: Rds(on) of High-side Buck Switch. A line graph showing Rds(on) [mΩ] vs VIN [V] for Vout = 5V and I = 1A. Four curves are shown for temperatures: -40°C (black), 30°C (red), 85°C (grey), and 125°C (blue). Rds(on) is higher at higher temperature; it rises with VIN at low VIN and is nearly flat at high VIN.",
+    "evidence": "PDF p8 Figure 1: the curves rise with VIN at low VIN and are nearly flat at high VIN (the -40 and 30 curves are almost flat throughout).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
