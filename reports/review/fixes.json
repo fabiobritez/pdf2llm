@@ -20124,5 +20124,187 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p76-mfr-fault-log-restore-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "\n#### ***MFR\\_FAULT\\_LOG\\_RESTORE***\n",
+    "new": "\n#### MFR\\_FAULT\\_LOG\\_RESTORE\n",
+    "evidence": "PDF p76 (PyMuPDF spans + render): 'MFR_FAULT_LOG_RESTORE' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md wrapped it in *** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p76-mfr-fault-log-clear-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "\n#### ***MFR\\_FAULT\\_LOG\\_CLEAR***\n",
+    "new": "\n#### MFR\\_FAULT\\_LOG\\_CLEAR\n",
+    "evidence": "PDF p76 (PyMuPDF spans + render): 'MFR_FAULT_LOG_CLEAR' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md wrapped it in *** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p76-mfr-fault-log-status-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "\n#### ***MFR\\_FAULT\\_LOG\\_STATUS***\n",
+    "new": "\n#### MFR\\_FAULT\\_LOG\\_STATUS\n",
+    "evidence": "PDF p76 (PyMuPDF spans + render): 'MFR_FAULT_LOG_STATUS' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md wrapped it in *** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p76-mfr-fault-log-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "\n#### ***MFR\\_FAULT\\_LOG***\n",
+    "new": "\n#### MFR\\_FAULT\\_LOG\n",
+    "evidence": "PDF p76 (PyMuPDF spans + render): 'MFR_FAULT_LOG' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md wrapped it in *** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p76-mfr-fault-log-status-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "\n##### **MFR\\_FAULT\\_LOG\\_STATUS Data Contents**\n",
+    "new": "\n**MFR\\_FAULT\\_LOG\\_STATUS Data Contents**\n",
+    "evidence": "PDF p76 (PyMuPDF spans + render): 'MFR_FAULT_LOG_STATUS Data Contents' is a 9.7pt bold table caption, not a section heading; written as a bold caption like the other ltc2975 Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p76-mfr-fault-log-restore-space-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 76,
+    "old": "after a MFR\\_FAULT\\_LOG\\_RESTORE to indicate",
+    "new": "after a MFR\\_FAULT\\_ LOG\\_RESTORE to indicate",
+    "evidence": "PDF p76 (PyMuPDF words + render): the second paragraph of MFR_FAULT_LOG_STATUS prints 'MFR_FAULT_ LOG_RESTORE' with a space after the underscore, mid-line (words 'MFR_FAULT_' x=225-287 and 'LOG_RESTORE' x=290); kept as printed, as for 'REGISTER_ PARTIAL_ACCESS_ERR' in ad5711r.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p79-data-block-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 79,
+    "old": "\n#### Data Block Contents\n",
+    "new": "\n**Data Block Contents**\n",
+    "evidence": "PDF p79 (PyMuPDF spans + render): 'Data Block Contents' is a 9.7pt bold table caption (LinearHelvCond-Bold), not a section heading; the md had ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p79-preamble-information-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 79,
+    "old": "\n#### PREAMBLE INFORMATION\n",
+    "new": "\n**PREAMBLE INFORMATION**\n",
+    "evidence": "PDF p79 (PyMuPDF spans + render): 'PREAMBLE INFORMATION' is the 8.8pt bold title band at the top of the table (between rules, same font as the column headers), not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p79-mfr-vin-peak-min-underscore-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 79,
+    "old": "| 19                        | 13                    |  | Mfr_vin_peak[7:0]           |                                                                                           |\n| 20                        | 14                    |  | Mfr_vin_peak[15:8]          |                                                                                           |\n| 21                        | 15                    |  | Mfr_vin_min[7:0]            |                                                                                           |\n| 22                        | 16                    |  | Mfr_vin_min[15:8]           |                                                                                           |",
+    "new": "| 19                        | 13                    |  | Mfr_vin_peak_[7:0]          |                                                                                           |\n| 20                        | 14                    |  | Mfr_vin_peak_[15:8]          |                                                                                           |\n| 21                        | 15                    |  | Mfr_vin_min_[7:0]           |                                                                                           |\n| 22                        | 16                    |  | Mfr_vin_min_[15:8]          |                                                                                           |",
+    "evidence": "PDF p79 read example, bytes 19-22 (PyMuPDF words + render): printed 'Mfr_vin_peak_[7:0]', 'Mfr_vin_peak_[15:8]', 'Mfr_vin_min_[7:0]', 'Mfr_vin_min_[15:8]' with an underscore before the bracket; the md dropped it. Kept as printed (Table 6 on p77 prints them without the underscore).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p79-preamble-information-cont-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 79,
+    "old": "Mfr_pin_peak[7:0]           |                                                                                           |\n\n#### PREAMBLE INFORMATION (CONT.)\n",
+    "new": "Mfr_pin_peak[7:0]           |                                                                                           |\n\n**PREAMBLE INFORMATION (CONT.)**\n",
+    "evidence": "PDF p79 (PyMuPDF spans + render): 'PREAMBLE INFORMATION (CONT.)' is the 8.8pt bold title band at the top of the right-column table, not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p80-preamble-information-cont-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 80,
+    "old": "{79}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n#### PREAMBLE INFORMATION (CONT.)\n",
+    "new": "{79}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n**PREAMBLE INFORMATION (CONT.)**\n",
+    "evidence": "PDF p80 (PyMuPDF spans + render): 'PREAMBLE INFORMATION (CONT.)' is the 8.8pt bold title band at the top of the table, not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p80-cyclical-mux-loop-data-partial-loop-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 80,
+    "old": "\n#### CYCLICAL MUX LOOP DATA PARTIAL LOOP\n",
+    "new": "\n**CYCLICAL MUX LOOP DATA PARTIAL LOOP**\n",
+    "evidence": "PDF p80 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA PARTIAL LOOP' is the 8.8pt bold title band at the top of the table (between rules, same font as the column headers), not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p80-cyclical-mux-loop-data-partial-loop-cont-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 80,
+    "old": "\n#### CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)\n",
+    "new": "\n**CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)**\n",
+    "evidence": "PDF p80 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)' is the 8.8pt bold title band at the top of the table (between rules, same font as the column headers), not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p80-cyclical-mux-loop-data-full-loop-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 80,
+    "old": "5C              | 0                        | Read_temperature_2[7:0]    |                   |\n\n#### CYCLICAL MUX LOOP DATA FULL LOOP\n",
+    "new": "5C              | 0                        | Read_temperature_2[7:0]    |                   |\n\n**CYCLICAL MUX LOOP DATA FULL LOOP**\n",
+    "evidence": "PDF p80 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA FULL LOOP' is the 8.8pt bold title band at the top of the table, not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
