@@ -11085,5 +11085,406 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "max31730-p22-register-map-heading-level",
+    "file": "output/max31730/max31730.md",
+    "page": 22,
+    "old": "\n### Register Map\n",
+    "new": "\n## Register Map\n",
+    "evidence": "PDF p22 (render): 'Register Map' is a teal section title like 'Block Diagram' and 'Detailed Description' (H2 in the md); the md had H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p23-register-map-continued-heading",
+    "file": "output/max31730/max31730.md",
+    "page": 23,
+    "old": "### **Register Map (continued)**",
+    "new": "## Register Map (continued)",
+    "evidence": "PDF p23 (render): teal section title (H2), not bold-wrapped H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p24-register-map-continued-heading",
+    "file": "output/max31730/max31730.md",
+    "page": 24,
+    "old": "\n### Register Map (continued)\n",
+    "new": "\n## Register Map (continued)\n",
+    "evidence": "PDF p24 (render): teal section title (H2); the md had H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p25-reg01h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 25,
+    "old": "| 01h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    |    |\n|               | Bit 0           |                 |                 |                 |    |    |    |    |\n",
+    "new": "| 01h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    | Bit 0 |\n",
+    "evidence": "PDF p25 Register 01h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p25-reg02h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 25,
+    "old": "| 02h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                |                |\n|               | Bit 0 |                |                |                |                |                |                |                |\n",
+    "new": "| 02h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |\n",
+    "evidence": "PDF p25 Register 02h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p25-reg03h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 25,
+    "old": "| 03h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    |    |\n|               | Bit 0           |                 |                 |                 |    |    |    |    |\n",
+    "new": "| 03h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    | Bit 0 |\n",
+    "evidence": "PDF p25 Register 03h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p25-reg04h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 25,
+    "old": "| 04h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                |                |\n|               | Bit 0 |                |                |                |                |                |                |                |\n",
+    "new": "| 04h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |\n",
+    "evidence": "PDF p25 Register 04h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p26-reg05h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 26,
+    "old": "| 05h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    |    |\n|               | Bit 0           |                 |                 |                 |    |    |    |    |\n",
+    "new": "| 05h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    | Bit 0 |\n",
+    "evidence": "PDF p26 Register 05h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p26-reg06h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 26,
+    "old": "| 06h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                |                |\n|               | Bit 0 |                |                |                |                |                |                |                |\n",
+    "new": "| 06h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |\n",
+    "evidence": "PDF p26 Register 06h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p26-reg07h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 26,
+    "old": "| 07h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    |    |\n|               | Bit 0           |                 |                 |                 |    |    |    |    |\n",
+    "new": "| 07h           | D7              | D6              | D5              | D4              | D3 | D2 | D1 | D0 |\n| °C            | 2 <sup>-1</sup> | 2 <sup>-2</sup> | 2 <sup>-3</sup> | 2 <sup>-4</sup> | 0  | 0  | 0  | 0  |\n|               | Bit 7           |                 |                 |                 |    |    |    | Bit 0 |\n",
+    "evidence": "PDF p26 Register 07h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p26-reg10h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 26,
+    "old": "| 10h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                |                |\n|               | Bit 0 |                |                |                |                |                |                |                |\n",
+    "new": "| 10h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |\n",
+    "evidence": "PDF p26 Register 10h (render): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column, on one line below the table; the md put 'Bit 0' on a separate row under the first bit column (same defect as the earlier max31730-p35/p43 bit0-column fixes).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p28-reg13h-bit-row",
+    "file": "output/max31730/max31730.md",
+    "page": 28,
+    "old": "| 13h           | STOP | POR | TIMEOUT | INTERRUPT /<br>COMPARATOR | FAULT<br>QUEUE | FAULT<br>QUEUE | EXTRANGE | ONE SHOT |\n| Bit 7         |      |     |         | Bit 0                     |                |                |          |          |",
+    "new": "| 13h           | STOP | POR | TIMEOUT | INTERRUPT /<br>COMPARATOR | FAULT<br>QUEUE | FAULT<br>QUEUE | EXTRANGE | ONE SHOT |\n|               | Bit 7 |     |         |                           |                |                |          | Bit 0    |",
+    "evidence": "PDF p28 Register 13h (render): 'Bit 7' is printed under STOP (first bit column) and 'Bit 0' under ONE SHOT (last bit column); the md had 'Bit 7' in the row-label column and 'Bit 0' under INTERRUPT/COMPARATOR (bit 4).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p28-reg14h-bit-rows",
+    "file": "output/max31730/max31730.md",
+    "page": 28,
+    "old": "| See Table 8   |     |     |     |       |     |     |     |     |\n| Bit 7         |     |     |     | Bit 0 |     |     |     |     |",
+    "new": "|               | See Table 8 |     |     |       |     |     |     |     |\n|               | Bit 7 |     |     |       |     |     |     | Bit 0 |",
+    "evidence": "PDF p28 Register 14h (render): 'See Table 8' (as printed; the ideality table is Table 9) is a cell spanning the D7-D0 columns, not the row-label column; 'Bit 7' is under D7 and 'Bit 0' under D0, while the md had 'Bit 7' in the label column and 'Bit 0' under D4.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p33-reg1bh-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 33,
+    "old": "|               |          |          |          |          |            |            |            |            |\n|---------------|----------|----------|----------|----------|------------|------------|------------|------------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R          | R          | R          | R          |\n| 1Bh           | Reserved | Reserved | Reserved | Reserved | Beta Value | Beta Value | Beta Value | Beta Value |\n|               | Bit 7    |          |          |          | Bit 0      |            |            |            |\n",
+    "new": "|               |          |          |          |          |            |            |            |            |\n|---------------|----------|----------|----------|----------|------------|------------|------------|------------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R          | R          | R          | R          |\n| 1Bh           | Reserved | Reserved | Reserved | Reserved | Beta Value | Beta Value | Beta Value | Beta Value |\n|               | Bit 7    |          |          |          |            |            |            | Bit 0      |\n",
+    "evidence": "PDF p33 Register 1Bh (render, pdftotext): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column; the md had 'Bit 0' under a middle column.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p33-reg20h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 33,
+    "old": "|               |       |                |                |                |                |                |                |                |\n|---------------|-------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|\n| Memory Access | R/W   | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            |\n| 20h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                | Bit 0          |                |                |                |\n",
+    "new": "|               |       |                |                |                |                |                |                |                |\n|---------------|-------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|\n| Memory Access | R/W   | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            |\n| 20h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |\n",
+    "evidence": "PDF p33 Register 20h (render, pdftotext): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column; the md had 'Bit 0' under a middle column.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p33-reg1ch-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 33,
+    "old": "|               |          |          |          |          |            |            |            |            |\n|---------------|----------|----------|----------|----------|------------|------------|------------|------------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R          | R          | R          | R          |\n| 1Ch           | Reserved | Reserved | Reserved | Reserved | Beta Value | Beta Value | Beta Value | Beta Value |\n|               | Bit 7    |          |          |          | Bit 0      |            |            |            |\n",
+    "new": "|               |          |          |          |          |            |            |            |            |\n|---------------|----------|----------|----------|----------|------------|------------|------------|------------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R          | R          | R          | R          |\n| 1Ch           | Reserved | Reserved | Reserved | Reserved | Beta Value | Beta Value | Beta Value | Beta Value |\n|               | Bit 7    |          |          |          |            |            |            | Bit 0      |\n",
+    "evidence": "PDF p33 Register 1Ch (render, pdftotext): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column; the md had 'Bit 0' under a middle column.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p35-reg24h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 35,
+    "old": "#### **Register 24h: Remote 2 Thermal High Limit MSB**",
+    "new": "#### Register 24h: Remote 2 Thermal High Limit MSB",
+    "evidence": "PDF p35 (render): the 'Register 24h: Remote 2 Thermal High Limit MSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p35-reg25h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 35,
+    "old": "#### **Register 25h: Remote 2 Thermal High Limit LSB**",
+    "new": "#### Register 25h: Remote 2 Thermal High Limit LSB",
+    "evidence": "PDF p35 (render): the 'Register 25h: Remote 2 Thermal High Limit LSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p35-reg26h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 35,
+    "old": "#### **Register 26h: Remote 3 Thermal High Limit MSB**",
+    "new": "#### Register 26h: Remote 3 Thermal High Limit MSB",
+    "evidence": "PDF p35 (render): the 'Register 26h: Remote 3 Thermal High Limit MSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p36-reg27h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 36,
+    "old": "#### **Register 27h: Remote 3 Thermal High Limit LSB**",
+    "new": "#### Register 27h: Remote 3 Thermal High Limit LSB",
+    "evidence": "PDF p36 (render): the 'Register 27h: Remote 3 Thermal High Limit LSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p36-reg30h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 36,
+    "old": "#### **Register 30h: Thermal Low Limit (All Channels) MSB**",
+    "new": "#### Register 30h: Thermal Low Limit (All Channels) MSB",
+    "evidence": "PDF p36 (render): the 'Register 30h: Thermal Low Limit (All Channels) MSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p36-reg31h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 36,
+    "old": "#### **Register 31h: Thermal Low Limit (All Channels) LSB**",
+    "new": "#### Register 31h: Thermal Low Limit (All Channels) LSB",
+    "evidence": "PDF p36 (render): the 'Register 31h: Thermal Low Limit (All Channels) LSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p43-reg44h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 43,
+    "old": "#### **Register 44h: Remote 2 Reference Temperature MSB**",
+    "new": "#### Register 44h: Remote 2 Reference Temperature MSB",
+    "evidence": "PDF p43 (render): the 'Register 44h: Remote 2 Reference Temperature MSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p43-reg45h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 43,
+    "old": "#### **Register 45h: Remote 2 Reference Temperature LSB**",
+    "new": "#### Register 45h: Remote 2 Reference Temperature LSB",
+    "evidence": "PDF p43 (render): the 'Register 45h: Remote 2 Reference Temperature LSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p43-reg46h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 43,
+    "old": "#### **Register 46h: Remote 3 Reference Temperature MSB**",
+    "new": "#### Register 46h: Remote 3 Reference Temperature MSB",
+    "evidence": "PDF p43 (render): the 'Register 46h: Remote 3 Reference Temperature MSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p44-reg47h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 44,
+    "old": "#### **Register 47h: Remote 3 Reference Temperature LSB**",
+    "new": "#### Register 47h: Remote 3 Reference Temperature LSB",
+    "evidence": "PDF p44 (render): the 'Register 47h: Remote 3 Reference Temperature LSB' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p44-reg50h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 44,
+    "old": "#### **Register 50h: Manufacturer ID**",
+    "new": "#### Register 50h: Manufacturer ID",
+    "evidence": "PDF p44 (render): the 'Register 50h: Manufacturer ID' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p44-reg51h-heading-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 44,
+    "old": "#### **Register 51h: Revision Code**",
+    "new": "#### Register 51h: Revision Code",
+    "evidence": "PDF p44 (render): the 'Register 51h: Revision Code' title has the same style as every other register title (plain #### in the md); the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p37-reg32h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 37,
+    "old": "|               |          |          |          |          |          |          |          |       |       |\n|---------------|----------|----------|----------|----------|----------|----------|----------|-------|-------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R        | R        | R        | R     |       |\n| 32h           | Reserved | Reserved | Reserved | Reserved | Remote 3 | Remote 2 | Remote 1 | Local |       |\n|               | Bit 7    |          |          |          |          |          |          |       | Bit 0 |\n",
+    "new": "|               |          |          |          |          |          |          |          |       |\n|---------------|----------|----------|----------|----------|----------|----------|----------|-------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R        | R        | R        | R     |\n| 32h           | Reserved | Reserved | Reserved | Reserved | Remote 3 | Remote 2 | Remote 1 | Local |\n|               | Bit 7    |          |          |          |          |          |          | Bit 0 |\n",
+    "evidence": "PDF p37 Register 32h (render, pdftotext): the bit table has 8 bit columns (Reserved x4, Remote 3, Remote 2, Remote 1, Local) with 'Bit 0' printed under Local; the md had a spurious 10th column holding 'Bit 0'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p38-reg33h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 38,
+    "old": "|               |          |          |          |          |          |          |          |       |\n|---------------|----------|----------|----------|----------|----------|----------|----------|-------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R        | R        | R        | R     |\n| 33h           | Reserved | Reserved | Reserved | Reserved | Remote 3 | Remote 2 | Remote 1 | Local |\n|               | Bit 7    |          |          |          | Bit 0    |          |          |       |\n",
+    "new": "|               |          |          |          |          |          |          |          |       |\n|---------------|----------|----------|----------|----------|----------|----------|----------|-------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R        | R        | R        | R     |\n| 33h           | Reserved | Reserved | Reserved | Reserved | Remote 3 | Remote 2 | Remote 1 | Local |\n|               | Bit 7    |          |          |          |          |          |          | Bit 0 |\n",
+    "evidence": "PDF p38 Register 33h (render, pdftotext): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column; the md had 'Bit 0' under a middle column.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p41-reg36h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 41,
+    "old": "|               |          |          |          |          |          |          |          |          |\n|---------------|----------|----------|----------|----------|----------|----------|----------|----------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R/W      | R/W      | R/W      | N/A      |\n| 36h           | Reserved | Reserved | Reserved | Reserved | Remote 3 | Remote 2 | Remote 1 | Reserved |\n|               | Bit 7    |          |          |          | Bit 0    |          |          |          |\n",
+    "new": "|               |          |          |          |          |          |          |          |          |\n|---------------|----------|----------|----------|----------|----------|----------|----------|----------|\n| Memory Access | N/A      | N/A      | N/A      | N/A      | R/W      | R/W      | R/W      | N/A      |\n| 36h           | Reserved | Reserved | Reserved | Reserved | Remote 3 | Remote 2 | Remote 1 | Reserved |\n|               | Bit 7    |          |          |          |          |          |          | Bit 0    |\n",
+    "evidence": "PDF p41 Register 36h (render, pdftotext): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column; the md had 'Bit 0' under a middle column.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p41-reg40h-bit0-column",
+    "file": "output/max31730/max31730.md",
+    "page": 41,
+    "old": "|               |       |                |                |                |                |                |                |                |\n|---------------|-------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|\n| Memory Access | R/W   | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            |\n| 40h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                | Bit 0          |                |                |                |\n",
+    "new": "|               |       |                |                |                |                |                |                |                |\n|---------------|-------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|\n| Memory Access | R/W   | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            | R/W            |\n| 40h           | D15   | D14            | D13            | D12            | D11            | D10            | D9             | D8             |\n| °C            | Sign  | 2 <sup>6</sup> | 2 <sup>5</sup> | 2 <sup>4</sup> | 2 <sup>3</sup> | 2 <sup>2</sup> | 2 <sup>1</sup> | 2 <sup>0</sup> |\n|               | Bit 7 |                |                |                |                |                |                | Bit 0          |\n",
+    "evidence": "PDF p41 Register 40h (render, pdftotext): 'Bit 7' is printed under the first bit column and 'Bit 0' under the last bit column; the md had 'Bit 0' under a middle column.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
   }
 ]
