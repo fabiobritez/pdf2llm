@@ -10311,5 +10311,135 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p19-thermal-column-split",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 19,
+    "old": "low-thermal-resistance vias, the\n\n$\\theta_{JA}$  would have been",
+    "new": "low-thermal-resistance vias, the  $\\theta_{JA}$  would have been",
+    "evidence": "PDF p19: '…if the test PCB had low-thermal-resistance vias, the / θJA would have been reduced…' continues from the left column to the right column mid-sentence; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p19-fig4-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 19,
+    "old": "\nThe diagram illustrates the thermal path from the die to the ambient environment. The die is shown within the LQFN package substrate. Power dissipation ( $P_D$ ) leads to a junction temperature ( $T_J$ ). The thermal resistance from the junction to the top of the package is  $\\theta_{JCTOP}$ , and from the junction to the bottom is  $\\theta_{JCBOTTOM}$ . The ambient temperature at the top is  $T_A$ , with a resistance  $\\theta_{CA}$ . The package is mounted on a multi-layer PCB. The thermal resistance from the package bottom to the PCB is  $\\theta_{CB}$ , and from the PCB to the ambient is  $\\theta_{BA}$ . The PCB itself has a thermal resistance  $\\theta_{CB}$  and a thermal via resistance  $\\theta_{VIA}$  between its layers. The ambient temperature at the bottom is also  $T_A$ , with a resistance  $\\theta_{BA}$ . The diagram shows multiple thermal vias connecting the top and bottom layers of the PCB, which act as a heat sink. The label '3315ab F04' is present in the bottom right corner of the PCB.\n",
+    "new": "\nThe diagram illustrates the thermal path from the die to the ambient environment (description written from the PDF drawing). The DIE sits in the LQFN package on the PACKAGE SUBSTRATE; a current source P<sub>D</sub> feeds the junction node T<sub>J</sub>. From T<sub>J</sub>, θ<sub>JCTOP</sub> and θ<sub>CA</sub> in series lead up to T<sub>A</sub>, and θ<sub>JCBOTTOM</sub> leads down to the top-layer node of the PCB under the package. In the PCB, θ<sub>CB</sub> resistors spread heat sideways on the top layer and on the bottom layer, on both sides, and θ<sub>VIA</sub> connects the top-layer and bottom-layer nodes under the package. At each side, the top-layer and bottom-layer nodes connect through θ<sub>BA</sub> to T<sub>A</sub> (four θ<sub>BA</sub> paths in total).\n",
+    "evidence": "PDF p19 Figure 4 (render): θ_CB is the lateral spreading resistance inside the PCB layers (drawn twice per side), not the package-to-PCB resistance (that is θ_JCBOTTOM); θ_BA appears four times, from the top and bottom PCB layers on each side to T_A; the drawing number is printed text, not 'a label in the PCB'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p19-fig4-drawing-number-caption",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 19,
+    "old": "\n\nFigure 4. Multi-Layer PCB with Thermal Vias Acts as a Heat Sink",
+    "new": "\n\n3315ab F04\n\n**Figure 4. Multi-Layer PCB with Thermal Vias Acts as a Heat Sink**",
+    "evidence": "PDF p19 prints the drawing number '3315ab F04' at the bottom right of the drawing and the Figure 4 caption in bold (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p20-ta02-description",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 20,
+    "old": "\nThe diagram illustrates a dual buck regulator configuration using the LTC3315A IC. The input voltage is  $V_{IN} = 2.5V$ . The IC is configured to output two different voltages:  $V_{OUT1} = 1.5V, 2A$  and  $V_{OUT2} = 1.8V, 2A$ . The switching frequency is  $f_{SW} = 2MHz$ .\n\n**Input and Control Section:**\n\n- $V_{IN}$  is connected to the top rail, with a 10 $\\mu F$  capacitor and a 1 $\\mu F$  0201 capacitor in parallel to ground.\n- $EN1$  and  $EN2$  pins are connected to the input rail.\n- $V_{IN}$  is also connected to the second input rail, with a 10 $\\mu F$  capacitor and a 1 $\\mu F$  0201 capacitor in parallel to ground.\n- $MODE/SYNC$  pin is connected to ground.\n- $GND$  pin is connected to ground.\n- $PGOOD$  pin is connected to  $V_{OUT2}$  through a 1M resistor.\n\n**Output Section:**\n\n- Output 1 (1.5V, 2A):** SW1 pin is connected to the input of a 470nH inductor. The output of the inductor is connected to a 200k resistor and a 3.3pF capacitor in parallel to ground. The feedback pin (FB1) is connected to the junction between the 200k resistor and a 100k resistor. The output voltage  $V_{OUT1}$  is taken across a 22 $\\mu F$  capacitor to ground.\n- Output 2 (1.8V, 2A):** SW2 pin is connected to the input of a 470nH inductor. The output of the inductor is connected to a 261k resistor and a 3.3pF capacitor in parallel to ground. The feedback pin (FB2) is connected to the junction between the 261k resistor and a 100k resistor. The output voltage  $V_{OUT2}$  is taken across a 22 $\\mu F$  capacitor to ground.\n\nThe diagram is labeled \"3315A TA02\" at the bottom right.\n",
+    "new": "\nTypical application schematic (description written from the PDF drawing). Input: V<sub>IN</sub> 2.5V connected to both V<sub>IN</sub> pins, each decoupled to ground by a 10µF capacitor and a 1µF 0201 capacitor. EN1 and EN2 are connected to V<sub>IN</sub>. MODE/SYNC is drawn with an input arrow. GND goes to ground, labeled f<sub>SW</sub> = 2MHz. Output 1: SW1 drives a 470nH inductor to V<sub>OUT1</sub> 1.5V, 2A, which has a 22µF capacitor to ground; FB1 connects to a 200k/100k divider from V<sub>OUT1</sub> to ground, with 3.3pF across the 200k resistor. Output 2: SW2 drives a 470nH inductor to V<sub>OUT2</sub> 1.8V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 261k/100k divider from V<sub>OUT2</sub> to ground, with 3.3pF across the 261k resistor. PGOOD connects through a 1M resistor to V<sub>OUT2</sub>.\n\n3315A TA02\n",
+    "evidence": "PDF p20 TA02 schematic (render): MODE/SYNC is an input arrow, not connected to ground; the 200k/261k resistors and 3.3pF capacitors sit between V_OUT and FB (the 3.3pF across the upper resistor), not 'in parallel to ground' from the inductor; the 100k resistors go from FB to ground; the 'Output 1/2 (…):**' bold markers were broken; 'labeled 3315A TA02' was AI text. Rewritten from the drawing, drawing number added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p21-ta03-description",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 21,
+    "old": "\nThis schematic diagram shows the LTC3315A dual buck regulator configured for a 3.3V input. The input section features a 10µF capacitor on the top rail and a 10µF capacitor on the bottom rail, both connected to ground. The LTC3315A IC is shown with pins labeled  $V_{IN}$ ,  $EN1$ ,  $EN2$ ,  $MODE/SYNC$ ,  $GND$ ,  $PGOOD$ ,  $SW1$ ,  $FB1$ ,  $SW2$ ,  $FB2$ , and  $V_{OUT1}$ . The output section consists of two parallel buck converter stages. The first stage (top) has a 680nH inductor, a 140k resistor, a 6.8pF capacitor, and a 33µF capacitor, with a feedback network of 100k resistors. The second stage (bottom) has a 560nH inductor, a 60.4k resistor, a 10pF capacitor, and a 33µF capacitor, with a feedback network of 100k resistors. The  $PGOOD$  pin is connected to  $V_{OUT1}$  through a 1M resistor. The switching frequency is indicated as  $f_{SW} = 2MHz$ . The diagram is labeled 3315A TA03.\n",
+    "new": "\nTypical application schematic (description written from the PDF drawing). Input: V<sub>IN</sub> 3.3V connected to both V<sub>IN</sub> pins, each decoupled to ground by a 10µF capacitor. EN1 and EN2 are drawn with input arrows. MODE/SYNC is drawn with an input arrow. GND goes to ground, labeled f<sub>SW</sub> = 2MHz. Output 1: SW1 drives a 680nH inductor to V<sub>OUT1</sub> 1.2V, 2A, which has a 33µF capacitor to ground; FB1 connects to a 140k/100k divider from V<sub>OUT1</sub> to ground, with 6.8pF across the 140k resistor. Output 2: SW2 drives a 560nH inductor to V<sub>OUT2</sub> 0.8V, 2A, which has a 33µF capacitor to ground; FB2 connects to a 60.4k/100k divider from V<sub>OUT2</sub> to ground, with 10pF across the 60.4k resistor. PGOOD connects through a 1M resistor to V<sub>OUT1</sub>.\n\n3315A TA03\n",
+    "evidence": "PDF p21 TA03 schematic (render): the AI text listed V_OUT1 as an IC pin and gave component values without connections ('a feedback network of 100k resistors'); the 140k/60.4k resistors with 6.8pF/10pF across them go from V_OUT to FB, the 100k from FB to ground; EN1/EN2/MODE/SYNC are input arrows; 'The diagram is labeled 3315A TA03' was AI text. Rewritten from the drawing, drawing number added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p21-ta04-description",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 21,
+    "old": "\nThis schematic diagram shows the LTC3315A dual buck regulator configured for a 5V input. The input section features a 10µF capacitor on the top rail and a 10µF capacitor on the bottom rail, both connected to ground. The LTC3315A IC is shown with pins labeled  $V_{IN}$ ,  $EN1$ ,  $EN2$ ,  $MODE/SYNC$ ,  $GND$ ,  $PGOOD$ ,  $SW1$ ,  $FB1$ ,  $SW2$ ,  $FB2$ , and  $V_{OUT1}$ . The output section consists of two parallel buck converter stages. The first stage (top) has a 1.2µH inductor, a 562k resistor, a 2.7pF capacitor, and a 22µF capacitor, with a feedback network of 100k resistors. The second stage (bottom) has a 1.2µH inductor, a 402k resistor, a 3.3pF capacitor, and a 22µF capacitor, with a feedback network of 100k resistors. The  $PGOOD$  pin is connected to  $V_{IN}$  through a 1M resistor. The switching frequency is indicated as  $f_{SW} = 2MHz$ . The diagram is labeled 3315A TA04.\n",
+    "new": "\nTypical application schematic (description written from the PDF drawing). Input: V<sub>IN</sub> 5V connected to both V<sub>IN</sub> pins, each decoupled to ground by a 10µF capacitor and a 1µF 0201 capacitor. EN1 and EN2 are drawn with input arrows. MODE/SYNC is drawn with an input arrow. GND goes to ground, labeled f<sub>SW</sub> = 2MHz. Output 1: SW1 drives a 1.2µH inductor to V<sub>OUT1</sub> 3.3V, 2A, which has a 22µF capacitor to ground; FB1 connects to a 562k/100k divider from V<sub>OUT1</sub> to ground, with 2.7pF across the 562k resistor. Output 2: SW2 drives a 1.2µH inductor to V<sub>OUT2</sub> 2.5V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 402k/100k divider from V<sub>OUT2</sub> to ground, with 3.3pF across the 402k resistor. PGOOD connects through a 1M resistor to V<sub>IN</sub>.\n\n3315A TA04\n",
+    "evidence": "PDF p21 TA04 schematic (render): the AI text omitted the two 1µF 0201 input capacitors, listed V_OUT1 as an IC pin and gave component values without connections; the 562k/402k resistors with 2.7pF/3.3pF across them go from V_OUT to FB, the 100k from FB to ground; 'The diagram is labeled 3315A TA04' was AI text. Rewritten from the drawing, drawing number added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p22-ta05-description",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 22,
+    "old": "\nThis diagram shows the LTC3315A IC configured as a dual buck regulator. The input voltage  $V_{IN}$  is 3.3V. The input capacitors are 22µF. The mode/sync input is a 1MHz square wave. The output voltages are  $V_{OUT1} = 1.2V$  and  $V_{OUT2} = 0.8V$ , both with a 2A load. The output capacitors are 47µF and 68µF respectively. The inductors are 1.2µH and 1.0µH. The feedback resistors are 140k, 100k, 60.4k, and 100k. The PGOOD pin is connected to  $V_{IN}$  through a 1M resistor. The diagram is labeled 3315A TA05 and  $f_{SW} = 1MHz$ .\n",
+    "new": "\nTypical application schematic (description written from the PDF drawing). Input: V<sub>IN</sub> 3.3V connected to both V<sub>IN</sub> pins, each decoupled to ground by a 22µF capacitor. EN1 and EN2 are drawn with input arrows. MODE/SYNC is driven by a 1MHz clock (drawn as a square wave labeled 1MHz). GND goes to ground, labeled f<sub>SW</sub> = 1MHz. Output 1: SW1 drives a 1.2µH inductor to V<sub>OUT1</sub> 1.2V, 2A, which has a 47µF capacitor to ground; FB1 connects to a 140k/100k divider from V<sub>OUT1</sub> to ground, with 6.8pF across the 140k resistor. Output 2: SW2 drives a 1.0µH inductor to V<sub>OUT2</sub> 0.8V, 2A, which has a 68µF capacitor to ground; FB2 connects to a 60.4k/100k divider from V<sub>OUT2</sub> to ground, with 20pF across the 60.4k resistor. PGOOD connects through a 1M resistor to V<sub>IN</sub>.\n\n3315A TA05\n",
+    "evidence": "PDF p22 TA05 schematic (render): the AI text omitted the 6.8pF and 20pF capacitors across the 140k/60.4k feedback resistors and gave values without connections; 'The diagram is labeled 3315A TA05' was AI text. Rewritten from the drawing, drawing number added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p22-ta06-description",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 22,
+    "old": "\nThis diagram shows the LTC3315A IC configured as a dual buck regulator. The input voltage  $V_{IN}$  is 3.3V. The input capacitors are 4.7µF. The mode/sync input is a 3MHz square wave. The output voltages are  $V_{OUT1} = 1.2V$  and  $V_{OUT2} = 0.8V$ , both with a 2A load. The output capacitors are 22µF and 22µF respectively. The inductors are 470nH and 330nH. The feedback resistors are 140k, 100k, 60.4k, and 100k. The PGOOD pin is connected to  $V_{IN}$  through a 1M resistor. The diagram is labeled 3315A TA06 and  $f_{SW} = 3MHz$ .\n",
+    "new": "\nTypical application schematic (description written from the PDF drawing). Input: V<sub>IN</sub> 3.3V connected to both V<sub>IN</sub> pins, each decoupled to ground by a 4.7µF capacitor. EN1 and EN2 are drawn with input arrows. MODE/SYNC is driven by a 3MHz clock (drawn as a square wave labeled 3MHz). GND goes to ground, labeled f<sub>SW</sub> = 3MHz. Output 1: SW1 drives a 470nH inductor to V<sub>OUT1</sub> 1.2V, 2A, which has a 22µF capacitor to ground; FB1 connects to a 140k/100k divider from V<sub>OUT1</sub> to ground, with 4.7pF across the 140k resistor. Output 2: SW2 drives a 330nH inductor to V<sub>OUT2</sub> 0.8V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 60.4k/100k divider from V<sub>OUT2</sub> to ground, with 6.8pF across the 60.4k resistor. PGOOD connects through a 1M resistor to V<sub>IN</sub>.\n\n3315A TA06\n",
+    "evidence": "PDF p22 TA06 schematic (render): the AI text omitted the 4.7pF and 6.8pF capacitors across the 140k/60.4k feedback resistors and gave values without connections; 'The diagram is labeled 3315A TA06' was AI text. Rewritten from the drawing, drawing number added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p23-dimension-table-nom-column",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 23,
+    "old": "| D          | 2.00     |      |      |               |\n| E          | 2.00     |      |      |               |\n| D1         | 0.70     |      |      |               |\n| E1         | 0.70     |      |      |               |\n| e          | 0.50     |      |      |               |\n| H1         | 0.24 REF |      |      | SUBSTRATE THK |\n| H2         | 0.50 REF |      |      | MOLD CAP HT   |",
+    "new": "| D          |          | 2.00     |      |               |\n| E          |          | 2.00     |      |               |\n| D1         |          | 0.70     |      |               |\n| E1         |          | 0.70     |      |               |\n| e          |          | 0.50     |      |               |\n| H1         |          | 0.24 REF |      | SUBSTRATE THK |\n| H2         |          | 0.50 REF |      | MOLD CAP HT   |",
+    "evidence": "PDF p23 LQFN dimension table (PyMuPDF word positions of the rotated table): D, E (2.00), D1, E1 (0.70), e (0.50), H1 (0.24 REF) and H2 (0.50 REF) are in the NOM column, at the same position as the NOM values 0.74/0.02/0.40/0.25; the md had them under MIN.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p23-drawing-number",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 23,
+    "old": "\n\nTechnical mechanical drawing showing PACKAGE TOP VIEW, DETAIL B, DETAIL C, DETAIL A, and SUGGESTED PCB LAYOUT TOP VIEW.\n",
+    "new": "\n\nTechnical mechanical drawing showing PACKAGE TOP VIEW, DETAIL B, DETAIL C, DETAIL A, and SUGGESTED PCB LAYOUT TOP VIEW.\n\nLQFN 12 0618 REV B\n",
+    "evidence": "PDF p23 prints the drawing number 'LQFN 12 0618 REV B' at the bottom of the package drawing (pdftotext); it was missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
