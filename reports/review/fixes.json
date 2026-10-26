@@ -8621,5 +8621,330 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g25-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "This graph shows the start-up waveforms for the LTC3313 in Pulse-Skipping Mode. The top trace is the enable (EN) signal, which transitions from low to high. The second trace is the output voltage (V<sub>OUT</sub>), which ramps up from 0V to approximately 1.2V. The third trace is the power good (PGOOD) signal, which transitions from low to high once the output voltage is stable. The bottom trace is the load current (I<sub>L</sub>), which shows a series of pulses that decrease in amplitude as the output voltage rises, eventually settling to a steady-state current of 1mA. The horizontal scale is 500µs/DIV.",
+    "new": "This graph shows the start-up waveforms for the LTC3313 in Pulse-Skipping Mode. The top trace is the enable (EN) signal, which steps from low to high. The second trace is the output voltage (V<sub>OUT</sub>), which starts to ramp linearly a short time after EN goes high and reaches its final level (1.2V) about 1ms later. The third trace is the power good (PGOOD) signal, which goes high a short time after V<sub>OUT</sub> reaches its final level. The bottom trace is the inductor current (I<sub>L</sub>): a few tall spikes at the start of the ramp, dense switching during the ramp, and only sparse, isolated pulses once V<sub>OUT</sub> is in regulation at the 1mA load. The horizontal scale is 500µs/DIV.",
+    "evidence": "PDF p8 G25 scope (render): I_L is the inductor current, not the load current; it does not 'settle to 1mA' but shows dense switching during the soft-start ramp and sparse pulses afterwards; PGOOD rises after V_OUT has reached its final level.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g26-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "This graph shows the start-up waveforms for the LTC3313 in Forced Continuous Mode. The top trace is the enable (EN) signal, which transitions from low to high. The second trace is the output voltage (V<sub>OUT</sub>), which ramps up from 0V to approximately 1.2V. The third trace is the power good (PGOOD) signal, which transitions from low to high once the output voltage is stable. The bottom trace is the load current (I<sub>L</sub>), which shows a series of pulses that decrease in amplitude as the output voltage rises, eventually settling to a steady-state current of 1mA. The horizontal scale is 500µs/DIV.",
+    "new": "This graph shows the start-up waveforms for the LTC3313 in Forced Continuous Mode. The top trace is the enable (EN) signal, which steps from low to high. The second trace is the output voltage (V<sub>OUT</sub>), which starts to ramp linearly a short time after EN goes high and reaches its final level (1.2V) about 1ms later. The third trace is the power good (PGOOD) signal, which goes high a short time after V<sub>OUT</sub> reaches its final level. The bottom trace is the inductor current (I<sub>L</sub>): a few tall spikes at the start of the ramp, dense switching during the ramp, and only sparse, isolated pulses once V<sub>OUT</sub> is in regulation at the 1mA load. The horizontal scale is 500µs/DIV.",
+    "evidence": "PDF p8 G26 scope (render): same as G25; I_L is the inductor current, with dense switching during the ramp and sparse pulses after V_OUT reaches its final level, as drawn; it does not 'settle to 1mA'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g27-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "This graph shows the switching waveforms for the LTC3313 in Pulse-Skipping Mode. The top trace is the switch (SW) signal, which is a square wave with a frequency of 2MHz. The second trace is the load current (I<sub>L</sub>), which shows a triangular waveform with a peak current of 200mA. The third trace is the output voltage (V<sub>OUT</sub>), which shows a small ripple around 1.2V. The horizontal scale is 200ns/DIV.",
+    "new": "This graph shows the switching waveforms for the LTC3313 in Pulse-Skipping Mode. The top trace is the switch node (SW): short high pulses, each followed by a low interval and then a damped ringing until the next pulse. The second trace is the inductor current (I<sub>L</sub>), which shows a triangular pulse for each SW pulse and small ringing near zero between the pulses. The third trace is the output voltage ripple (V<sub>OUT</sub>, 5mV/DIV). The horizontal scale is 200ns/DIV; the load is I<sub>LOAD</sub> = 200mA.",
+    "evidence": "PDF p8 G27 scope (render): SW is not a square wave (pulses with ringing between them, discontinuous conduction); I_L is the inductor current, and its 'peak current of 200mA' was invented (200mA is the load current I_LOAD).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g28-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "This graph shows the switching waveforms for the LTC3313 in Forced Continuous Mode. The top trace is the switch (SW) signal, which is a square wave with a frequency of 2MHz. The second trace is the load current (I<sub>L</sub>), which shows a triangular waveform with a peak current of 200mA. The third trace is the output voltage (V<sub>OUT</sub>), which shows a small ripple around 1.2V. The horizontal scale is 200ns/DIV.",
+    "new": "This graph shows the switching waveforms for the LTC3313 in Forced Continuous Mode. The top trace is the switch node (SW), a rectangular pulse train at 2MHz. The second trace is the inductor current (I<sub>L</sub>), a continuous triangular waveform. The third trace is the output voltage ripple (V<sub>OUT</sub>, 5mV/DIV). The horizontal scale is 200ns/DIV; the load is I<sub>LOAD</sub> = 200mA.",
+    "evidence": "PDF p8 G28 scope (render): I_L is the inductor current, a continuous triangle at 2A/DIV; the 'peak current of 200mA' was invented (200mA is the load current I_LOAD).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g29-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "This graph shows the load transient response for the LTC3313 in Pulse-Skipping Mode. The top trace is the load current (I<sub>LOAD</sub>), which steps from 0.1A to 7.5A in 1µs. The bottom trace is the output voltage (V<sub>OUT</sub>), which shows a transient dip and recovery during the load step. The horizontal scale is 10µs/DIV.",
+    "new": "This graph shows the load transient response for the LTC3313 in Pulse-Skipping Mode. The top trace is the load current (I<sub>LOAD</sub>), which steps from 0.1A to 7.5A in 1µs and back. The bottom trace is the output voltage (V<sub>OUT</sub>, 50mV/DIV): a dip and recovery at the load step up, and at the load step down an overshoot followed by a slow decay back to the regulated level within the screen. The horizontal scale is 10µs/DIV.",
+    "evidence": "PDF p8 G29 scope (render): the load also steps back down, and V_OUT shows an overshoot there that the description omitted; in pulse-skipping mode (G29) it decays slowly and is still decaying at the right edge, in forced continuous mode (G30) it settles quickly.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g29-cout-x6-as-printed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "C<sub>OUT</sub> = 22µF × 6, 0805, X7R  \nLOAD STEP: 0.1A TO 7.5A IN 1µs\n\nThis graph shows the load transient response for the LTC3313 in Pulse-Skipping Mode.",
+    "new": "C<sub>OUT</sub> = 22µF ×6, 0805, X7R  \nLOAD STEP: 0.1A TO 7.5A IN 1µs\n\nThis graph shows the load transient response for the LTC3313 in Pulse-Skipping Mode.",
+    "evidence": "PDF p8 G29 prints 'C_OUT = 22µF ×6' with no space after × (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g30-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "This graph shows the load transient response for the LTC3313 in Forced Continuous Mode. The top trace is the load current (I<sub>LOAD</sub>), which steps from 0.1A to 7.5A in 1µs. The bottom trace is the output voltage (V<sub>OUT</sub>), which shows a transient dip and recovery during the load step. The horizontal scale is 10µs/DIV.",
+    "new": "This graph shows the load transient response for the LTC3313 in Forced Continuous Mode. The top trace is the load current (I<sub>LOAD</sub>), which steps from 0.1A to 7.5A in 1µs and back. The bottom trace is the output voltage (V<sub>OUT</sub>, 50mV/DIV): a dip and recovery at the load step up, and at the load step down a short overshoot that settles back to the regulated level within a few divisions. The horizontal scale is 10µs/DIV.",
+    "evidence": "PDF p8 G30 scope (render): the load also steps back down, and V_OUT shows an overshoot there that the description omitted; in pulse-skipping mode (G29) it decays slowly and is still decaying at the right edge, in forced continuous mode (G30) it settles quickly.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p8-g30-cout-x6-as-printed",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 8,
+    "old": "C<sub>OUT</sub> = 22µF × 6, 0805, X7R  \nLOAD STEP: 0.1A TO 7.5A IN 1µs\n\nThis graph shows the load transient response for the LTC3313 in Forced Continuous Mode.",
+    "new": "C<sub>OUT</sub> = 22µF ×6, 0805, X7R  \nLOAD STEP: 0.1A TO 7.5A IN 1µs\n\nThis graph shows the load transient response for the LTC3313 in Forced Continuous Mode.",
+    "evidence": "PDF p8 G30 prints 'C_OUT = 22µF ×6' with no space after × (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p9-sstt-10ua",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 9,
+    "old": "An internal 10 $\\mu$ A current",
+    "new": "An internal 10µA current",
+    "evidence": "PDF p9 SSTT pin description prints '10µA' as one word (pdftotext + render); the md had '10 $\\mu$ A' with spaces.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p10-block-diagram-description",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 10,
+    "old": "The diagram illustrates the internal architecture of the LTC3313 buck converter. Key components and their connections are as follows:\n\n- Power and Input:**  $V_{IN}$  is connected to the input pin and the internal reference.  $C_{IN}$  is connected to the input pin.\n- Reference and Control:** The **INTERNAL REFERENCE** block provides 0.55V, 0.5V, and 0.49V references. The **EN** pin is connected to a voltage divider ( $R1_{OPT}$ ,  $R2_{OPT}$ ) and the reference. The **RT** pin is connected to a resistor  $R_T$  and the **OSCILLATOR**. The **MODE/SYNC** pin is connected to a resistor and the **OSCILLATOR**.\n- Switching and Sense:** The **OSCILLATOR** drives an **S Q R** flip-flop, which feeds into **SWITCH LOGIC AND ANTI-SHOOT THROUGH**. This block controls the **SW** (Switch) and **PGND** (Power Ground) pins. **SENSE<sup>+</sup>** and **SENSE<sup>-</sup>** pins are connected to the output and input pins, respectively.\n- Control and Error:** The **ERROR AMP** compares the **FB** (Feedback) pin voltage (0.5V) with a reference. The **SLOPE COMP** (Slope Compensator) is connected to the **FB** pin. The **FB** pin is also connected to a resistor divider ( $R_A$ ,  $R_B$ ) and a capacitor  $C_{FF}$ . The **AGND** (Analog Ground) pin is connected to ground.\n- Temperature and Fault:** The **SSTT** (Supply Temperature) pin is connected to a capacitor  $C_{SS}$  and a temperature sensor. The **FAULT** pin is connected to a fault detector and a transistor. The **PGOOD** (Power Good) pin is connected to a transistor and a fault detector.\n- Output:** The **SW** pin drives the inductor  $L$  and the output capacitor  $C_{OUT}$ . The **V<sub>OUT</sub>** is taken from the output node.",
+    "new": "The diagram illustrates the internal architecture of the LTC3313 buck converter. Key components and their connections are as follows:\n\n- **EN:** Connected to the R1/R2 (OPT) resistor divider from  $V_{IN}$ . EN drives the + input of a comparator with hysteresis whose – input is at 0.4V; the comparator output enables the INTERNAL REFERENCE block (0.55V, 0.5V and 0.49V outputs).\n- **RT:** Connected to a resistor  $R_T$  to ground and to the OSCILLATOR.\n- **MODE/SYNC:** Drawn with a two-way arrow to a clock waveform (clock input or output) and connected to the OSCILLATOR.\n- **Current loop:** The OSCILLATOR drives the S input of the S-R latch, whose Q output drives the SWITCH LOGIC AND ANTI-SHOOT THROUGH block. That block drives the top and bottom power MOSFETs through two drivers (the bottom driver is supplied from  $V_{IN}$ ). The current comparator has SENSE<sup>+</sup> (through a resistor) on its + input and SENSE<sup>–</sup> on its – input, and drives the R input of the latch. SLOPE COMP and the ITH voltage are summed (Σ) and the sum is connected to the + input node of the current comparator.\n- **ERROR AMP:** Transconductance amplifier with its – input on FB and two + inputs, 0.5V and the SSTT node; its output is the ITH node, compensated externally by  $R_C$  in series with  $C_C$  (dashed connection).\n- **SSTT:** Connected to the external capacitor  $C_{SS}$ , charged by a 10µA current source and pulled to ground by an N-channel MOSFET driven by FAULT. A buffer amplifier with  $V_{TEMP}$  on its + input and its output fed back to its – input also drives the SSTT node.\n- **PGOOD:** Open-drain N-channel MOSFET driven by an OR gate (labeled FAULT) of two comparators with hysteresis that compare FB with 0.49V and 0.55V.\n- **V<sub>IN</sub>:** Supply of the top switch and its driver, bypassed by  $C_{IN}$  to ground.\n- **SW:** Switch node between the two MOSFETs, connected to the inductor  $L$ ; the output node  $V_{OUT}$  has the output capacitor  $C_{OUT}$  to ground.\n- **PGND:** Source of the bottom MOSFET, connected to ground.\n- **FB and AGND:** FB is connected to the  $R_A$ / $R_B$  divider from  $V_{OUT}$ , with  $C_{FF}$  across  $R_A$ ; the bottom of  $R_B$  is connected to AGND and to ground.",
+    "evidence": "PDF p10 block diagram (render, 220 dpi crop): the AI bullet list had broken bold markers ('Power and Input:**'), invented a 'FAULT pin' (FAULT is an internal signal driving the SSTT pull-down and the OR gate output), called SSTT 'Supply Temperature' (PDF p9: Soft-Start, Track, Temperature Monitor), said MODE/SYNC was connected to a resistor, SENSE+/SENSE- were 'pins connected to the output and input pins', and SLOPE COMP was connected to FB (it is summed with ITH into the current comparator). It also omitted ITH, R_C/C_C, the 10µA source, the V_TEMP buffer and the 0.49V/0.55V PGOOD comparators. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p11-silent-switcher-column-split",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 11,
+    "old": "while simultaneously achieving good EMI\n\nperformance. Ceramic capacitors",
+    "new": "while simultaneously achieving good EMI performance. Ceramic capacitors",
+    "evidence": "PDF p11: the Silent Switcher paragraph continues from the bottom of the left column ('good EMI') to the top of the right column ('performance.'); one sentence, no paragraph break (render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p11-curly-apostrophe",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 11,
+    "old": "The LTC3313's internal oscillator",
+    "new": "The LTC3313’s internal oscillator",
+    "evidence": "PDF p11 prints a curly apostrophe (U+2019) in 'LTC3313’s' (pdftotext + PyMuPDF).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p12-low-supply-column-split",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 12,
+    "old": "An important thermal design\n\nconsideration is that",
+    "new": "An important thermal design consideration is that",
+    "evidence": "PDF p12: the Low Supply Operation sentence continues from the bottom of the left column ('thermal design') to the top of the right column ('consideration'); no paragraph break (render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p13-fig1-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 13,
+    "old": "![Figure 1: Feedback Resistor Network. A block diagram of the LTC3313 showing the SW pin connected to an inductor L, which is connected to the output node VOUT. The FB pin is connected to a resistor divider consisting of RA and RB. RA is connected between VOUT and the FB pin, and RB is connected between the FB pin and ground. A capacitor CFF is connected between VOUT and ground, labeled as (OPTIONAL). Another capacitor COUT is connected between VOUT and ground. The part number 3313 F01 is at the bottom of the block diagram.](",
+    "new": "![Figure 1: Feedback Resistor Network. A box labeled BUCK SWITCHING REGULATOR has its SW pin connected to an inductor L, which is connected to the output node VOUT. The FB pin is connected to a resistor divider consisting of RA and RB. RA is connected between VOUT and the FB pin, and RB is connected between the FB pin and ground. A capacitor CFF, labeled (OPTIONAL), is connected across RA from VOUT to the FB node (dashed connection). The output capacitor COUT is connected between VOUT and ground.](",
+    "evidence": "PDF p13 Figure 1 (render): the box is a generic 'BUCK SWITCHING REGULATOR', not 'a block diagram of the LTC3313', and the optional C_FF is connected across R_A (V_OUT to FB, dashed line), not between V_OUT and ground. '3313 F01' is the drawing number, not a part number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p13-fig1-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 13,
+    "old": "\nFigure 1: Feedback Resistor Network. A block diagram of the LTC3313 showing the SW pin connected to an inductor L, which is connected to the output node VOUT. The FB pin is connected to a resistor divider consisting of RA and RB. RA is connected between VOUT and the FB pin, and RB is connected between the FB pin and ground. A capacitor CFF is connected between VOUT and ground, labeled as (OPTIONAL). Another capacitor COUT is connected between VOUT and ground. The part number 3313 F01 is at the bottom of the block diagram.\n",
+    "new": "\nFigure 1: Feedback Resistor Network. A box labeled BUCK SWITCHING REGULATOR has its SW pin connected to an inductor L, which is connected to the output node VOUT. The FB pin is connected to a resistor divider consisting of RA and RB. RA is connected between VOUT and the FB pin, and RB is connected between the FB pin and ground. A capacitor CFF, labeled (OPTIONAL), is connected across RA from VOUT to the FB node (dashed connection). The output capacitor COUT is connected between VOUT and ground.\n",
+    "evidence": "PDF p13 Figure 1 (render): the box is a generic 'BUCK SWITCHING REGULATOR', not 'a block diagram of the LTC3313', and the optional C_FF is connected across R_A (V_OUT to FB, dashed line), not between V_OUT and ground. '3313 F01' is the drawing number, not a part number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p13-fig1-drawing-number-caption",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 13,
+    "old": "Figure 1: Feedback Resistor Network. A box labeled BUCK SWITCHING REGULATOR has its SW pin connected to an inductor L, which is connected to the output node VOUT. The FB pin is connected to a resistor divider consisting of RA and RB. RA is connected between VOUT and the FB pin, and RB is connected between the FB pin and ground. A capacitor CFF, labeled (OPTIONAL), is connected across RA from VOUT to the FB node (dashed connection). The output capacitor COUT is connected between VOUT and ground.\n\nFigure 1. Feedback Resistor Network\n",
+    "new": "Figure 1: Feedback Resistor Network. A box labeled BUCK SWITCHING REGULATOR has its SW pin connected to an inductor L, which is connected to the output node VOUT. The FB pin is connected to a resistor divider consisting of RA and RB. RA is connected between VOUT and the FB pin, and RB is connected between the FB pin and ground. A capacitor CFF, labeled (OPTIONAL), is connected across RA from VOUT to the FB node (dashed connection). The output capacitor COUT is connected between VOUT and ground.\n\n3313 F01\n\n**Figure 1. Feedback Resistor Network**\n",
+    "evidence": "PDF p13 prints the drawing number '3313 F01' under Figure 1 and the caption in bold, as Figure 2 already is in the md (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p13-fswmax-column-split",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 13,
+    "old": "imposes a minimum operating duty cycle. The highest\n\nswitching frequency",
+    "new": "imposes a minimum operating duty cycle. The highest switching frequency",
+    "evidence": "PDF p13: the sentence continues from the bottom of the left column ('The highest') to the top of the right column ('switching frequency'); no paragraph break (render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p15-voltage-rating-curly-apostrophe",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 15,
+    "old": "exceeding the LTC3313's voltage rating",
+    "new": "exceeding the LTC3313’s voltage rating",
+    "evidence": "PDF p15 prints a curly apostrophe (U+2019) in 'LTC3313’s voltage rating' (pdftotext + PyMuPDF).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p15-control-loop-curly-apostrophe",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 15,
+    "old": "stabilize the LTC3313's control loop",
+    "new": "stabilize the LTC3313’s control loop",
+    "evidence": "PDF p15 prints a curly apostrophe (U+2019) in 'LTC3313’s control loop' (pdftotext + PyMuPDF).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p16-fig2-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 16,
+    "old": "![Figure 2: Phase Programming circuit diagram. The LTC3313 IC is shown with pins FB and RT. A resistor R3 is connected between V_IN and the node between R3 and R4. Resistor R4 is connected between that node and AGND. The FB pin is also connected to V_IN. The pinout is labeled 3313 F02.](",
+    "new": "![Figure 2: Phase Programming circuit diagram. The LTC3313 IC is shown with pins FB and RT. The FB pin is connected to V_IN. A resistor R3 is connected between V_IN and the RT pin, and resistor R4 between the RT pin and AGND.](",
+    "evidence": "PDF p16 Figure 2 (render): the RT pin is the R3/R4 junction (the description never connected RT); '3313 F02' is the drawing number, not a pinout label.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p16-fig2-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 16,
+    "old": "\nFigure 2: Phase Programming circuit diagram. The LTC3313 IC is shown with pins FB and RT. A resistor R3 is connected between V\\_IN and the node between R3 and R4. Resistor R4 is connected between that node and AGND. The FB pin is also connected to V\\_IN. The pinout is labeled 3313 F02.\n",
+    "new": "\nFigure 2: Phase Programming circuit diagram. The LTC3313 IC is shown with pins FB and RT. The FB pin is connected to V\\_IN. A resistor R3 is connected between V\\_IN and the RT pin, and resistor R4 between the RT pin and AGND.\n",
+    "evidence": "PDF p16 Figure 2 (render): the RT pin is the R3/R4 junction (the description never connected RT); '3313 F02' is the drawing number, not a pinout label.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p16-fig2-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 16,
+    "old": "Figure 2: Phase Programming circuit diagram. The LTC3313 IC is shown with pins FB and RT. The FB pin is connected to V\\_IN. A resistor R3 is connected between V\\_IN and the RT pin, and resistor R4 between the RT pin and AGND.\n\n**Figure 2. Phase Programming**",
+    "new": "Figure 2: Phase Programming circuit diagram. The LTC3313 IC is shown with pins FB and RT. The FB pin is connected to V\\_IN. A resistor R3 is connected between V\\_IN and the RT pin, and resistor R4 between the RT pin and AGND.\n\n3313 F02\n\n**Figure 2. Phase Programming**",
+    "evidence": "PDF p16 prints the drawing number '3313 F02' in Figure 2 (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p16-table6-vin-space",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 16,
+    "old": "| V <sub>IN</sub>   | Clock Input              |",
+    "new": "| V<sub>IN</sub>    | Clock Input              |",
+    "evidence": "PDF p16 Table 6 prints V_IN (subscript IN) with no space; the md had 'V <sub>IN</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p16-table6-vin-space-2",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 16,
+    "old": "| V <sub>IN</sub>   | AGND                     |",
+    "new": "| V<sub>IN</sub>    | AGND                     |",
+    "evidence": "PDF p16 Table 6 prints V_IN (subscript IN) with no space; the md had 'V <sub>IN</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p16-table6-vin-space-3",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 16,
+    "old": "| V <sub>IN</sub>   | V <sub>IN</sub>          |",
+    "new": "| V<sub>IN</sub>    | V<sub>IN</sub>           |",
+    "evidence": "PDF p16 Table 6 prints V_IN (subscript IN) with no space; the md had 'V <sub>IN</sub>'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
