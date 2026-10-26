@@ -6723,5 +6723,83 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p20-to220-dimension-meanings",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 20,
+    "old": "**Front View Dimensions:**\n\n- Hole Diameter:  $\\frac{.147 - .155}{(3.734 - 3.937)}$  DIA\n- Tab Top to Hole Center:  $\\frac{.230 - .270}{(5.842 - 6.858)}$\n- Body Width:  $\\frac{.390 - .415}{(9.906 - 10.541)}$\n- Tab Height:  $\\frac{.570 - .620}{(14.478 - 15.748)}$\n- Plastic Body Height:  $\\frac{.460 - .500}{(11.684 - 12.700)}$\n- Hole Center to Body Bottom:  $\\frac{.330 - .370}{(8.382 - 9.398)}$\n- Lead Pitch:  $\\frac{.067}{(1.70)}$  BSC\n- Lead Width:  $\\frac{.028 - .038}{(0.711 - 0.965)}$\n\n**Side View Dimensions:**\n\n- Package Thickness (Top):  $\\frac{.165 - .180}{(4.191 - 4.572)}$\n- Tab Thickness:  $\\frac{.045 - .055}{(1.143 - 1.397)}$\n- Total Plastic and Tab Height:  $\\frac{.620}{(15.75)}$  TYP\n- Total Height to Lead Bend:  $\\frac{.700 - .728}{(17.78 - 18.491)}$\n- Seating Plane to Lead Bend:  $\\frac{.152 - .202}{(3.861 - 5.131)}$\n- Seating Plane to Lead Tip:  $\\frac{.260 - .320}{(6.60 - 8.13)}$\n- Lead Bend Standoff:  $\\frac{.095 - .115}{(2.413 - 2.921)}$\n- Lead Center to Back:  $\\frac{.155 - .195*}{(3.937 - 4.953)}$\n- Lead Thickness:  $\\frac{.013 - .023}{(0.330 - 0.584)}$\n- Seating Plane to Body Bottom:  $\\frac{.135 - .165}{(3.429 - 4.191)}$",
+    "new": "**Front View Dimensions:**\n\n- Body width: .390 – .415 (9.906 – 10.541)\n- Mounting hole: .147 – .155 (3.734 – 3.937) DIA\n- Tab top to top of plastic body: .230 – .270 (5.842 – 6.858)\n- Plastic body height: .330 – .370 (8.382 – 9.398)\n- Tab top to bottom of plastic body: .570 – .620 (14.478 – 15.748)\n- Hole center to bottom of plastic body: .460 – .500 (11.684 – 12.700)\n- Lead pitch: .067 (1.70) BSC\n- Lead width: .028 – .038 (0.711 – 0.965)\n\n**Side View Dimensions:**\n\n- Package thickness: .165 – .180 (4.191 – 4.572)\n- Tab thickness: .045 – .055 (1.143 – 1.397)\n- Hole center line down to the lead bend: .620 (15.75) TYP\n- Hole center line to SEATING PLANE: .700 – .728 (17.78 – 18.491)\n- SEATING PLANE to the tips of the shorter (offset) leads: .152 – .202 (3.861 – 5.131)\n- SEATING PLANE to the tips of the longer leads: .260 – .320 (6.60 – 8.13)\n- .095 – .115 (2.413 – 2.921) (horizontal, between the leads and the tab side below the body)\n- Longer leads to the back of the tab: .155 – .195* (3.937 – 4.953)\n- Lead thickness: .013 – .023 (0.330 – 0.584)\n- Offset between the two lead rows: .135 – .165 (3.429 – 4.191)",
+    "evidence": "PDF p20 T5 TO-220 drawing (render + PDF words): the AI dimension names were wrong for most labels: .460 – .500 runs from the hole center to the body bottom (not 'plastic body height'), .330 – .370 is the plastic body height (not 'hole center to body bottom'), .230 – .270 is tab top to plastic body top (not to the hole center), .700 – .728 ends at the SEATING PLANE, .152 – .202 is to the short lead tips, and .135 – .165 is the offset between the two lead rows (not 'seating plane to body bottom'). Values unchanged; names corrected from the drawing geometry.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p22-ta04-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 22,
+    "old": "\nCircuit diagram of an adjustable current source using the LT1965. The circuit includes an LT1004-1.2 diode, a 10µF capacitor C1, a 1k resistor R1, an 80.6k resistor R2, a 2k resistor R3, a 0.01Ω sense resistor R5, a 2.2k resistor R4, a 2.2k resistor R6, a 1µF capacitor C3, an LT1965 IC, a 10µF capacitor C4, a 100k resistor R8, a 470Ω resistor R7, and a load. A 1/2 LT1366 op-amp is used for feedback. A note states: 'ADJUST R1 FOR 0A TO 1.1A CONSTANT-CURRENT'.\n\n## RELATED PARTS",
+    "new": "\nCircuit diagram of an adjustable current source using the LT1965. The circuit includes an LT1004-1.2 diode, a 10µF capacitor C1, a 1k resistor R1, an 80.6k resistor R2, a 2k resistor R3, a 0.01Ω sense resistor R5, a 2.2k resistor R4, a 2.2k resistor R6, a 1µF capacitor C3, an LT1965 IC, a 10µF capacitor C4, a 100k resistor R8, a 470Ω resistor R7, and a load. A 1/2 LT1366 op-amp is used for feedback. A note states: 'ADJUST R1 FOR 0A TO 1.1A CONSTANT-CURRENT'.\n\n1965 TA04\n\n## RELATED PARTS",
+    "evidence": "PDF p22 prints drawing number '1965 TA04' at the Adjustable Current Source schematic (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p22-related-lt1764-curly-quotes",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 22,
+    "old": "< 40µV <sub>RMS</sub> , \"A\" Version Stable with Ceramic Capacitors, DD and TO220-5 Packages",
+    "new": "< 40µV <sub>RMS</sub> , “A” Version Stable with Ceramic Capacitors, DD and TO220-5 Packages",
+    "evidence": "PDF p22 Related Parts LT1764/LT1764A prints “A” with curly quotes (pdftotext U+201C/U+201D); md had straight quotes.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p22-related-lt1963-curly-quotes",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 22,
+    "old": "< 40µV <sub>RMS</sub> , \"A\" Version Stable with Ceramic Capacitors; DD",
+    "new": "< 40µV <sub>RMS</sub> , “A” Version Stable with Ceramic Capacitors; DD",
+    "evidence": "PDF p22 Related Parts LT1963/LT1963A prints “A” with curly quotes (pdftotext U+201C/U+201D); md had straight quotes.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p22-ta04-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 22,
+    "old": "![Circuit diagram of an adjustable current source using the LT1965. The circuit includes an LT1004-1.2 diode, a 10µF capacitor C1, a 1k resistor R1, an 80.6k resistor R2, a 2k resistor R3, a 0.01Ω sense resistor R5, a 2.2k resistor R4, a 2.2k resistor R6, a 1µF capacitor C3, an LT1965 IC, a 10µF capacitor C4, a 100k resistor R8, a 470Ω resistor R7, and a load. A 1/2 LT1366 op-amp is used for feedback. A note states: 'ADJUST R1 FOR 0A TO 1.1A CONSTANT-CURRENT'.](",
+    "new": "![Circuit diagram of an adjustable current source using the LT1965, powered from V_IN > 2.7V. The circuit includes an LT1004-1.2 reference (drawn with a diode symbol), a 10µF capacitor C1, a 1k resistor R1, an 80.6k resistor R2, a 2k resistor R3, a 3.3µF capacitor C2, a 0.01Ω sense resistor R5, a 2.2k resistor R4, a 2.2k resistor R6, a 1µF capacitor C3, an LT1965 IC, a 10µF capacitor C4, a 100k resistor R8, a 470Ω resistor R7, and a load. A 1/2 LT1366 op-amp is used for feedback. A note states: 'ADJUST R1 FOR 0A TO 1.1A CONSTANT-CURRENT'.](",
+    "evidence": "PDF p22 'Adjustable Current Source' (render + PDF words): the AI component list omitted C2 (3.3µF) and the input label 'VIN > 2.7V', and called the LT1004-1.2 reference a diode.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p22-ta04-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 22,
+    "old": "\nCircuit diagram of an adjustable current source using the LT1965. The circuit includes an LT1004-1.2 diode, a 10µF capacitor C1, a 1k resistor R1, an 80.6k resistor R2, a 2k resistor R3, a 0.01Ω sense resistor R5, a 2.2k resistor R4, a 2.2k resistor R6, a 1µF capacitor C3, an LT1965 IC, a 10µF capacitor C4, a 100k resistor R8, a 470Ω resistor R7, and a load. A 1/2 LT1366 op-amp is used for feedback. A note states: 'ADJUST R1 FOR 0A TO 1.1A CONSTANT-CURRENT'.\n",
+    "new": "\nCircuit diagram of an adjustable current source using the LT1965, powered from V_IN > 2.7V. The circuit includes an LT1004-1.2 reference (drawn with a diode symbol), a 10µF capacitor C1, a 1k resistor R1, an 80.6k resistor R2, a 2k resistor R3, a 3.3µF capacitor C2, a 0.01Ω sense resistor R5, a 2.2k resistor R4, a 2.2k resistor R6, a 1µF capacitor C3, an LT1965 IC, a 10µF capacitor C4, a 100k resistor R8, a 470Ω resistor R7, and a load. A 1/2 LT1366 op-amp is used for feedback. A note states: 'ADJUST R1 FOR 0A TO 1.1A CONSTANT-CURRENT'.\n",
+    "evidence": "PDF p22 'Adjustable Current Source' (render + PDF words): the AI component list omitted C2 (3.3µF) and the input label 'VIN > 2.7V', and called the LT1004-1.2 reference a diode.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
