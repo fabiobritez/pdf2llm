@@ -28038,5 +28038,200 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p16-heading-no-emphasis",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 16,
+    "old": "### **Parameter Measurement Information (continued)**\n\n![Figure 26",
+    "new": "### Parameter Measurement Information (continued)\n\n![Figure 26",
+    "evidence": "PDF p16: 'Parameter Measurement Information (continued)' is a plain heading; ** removed inside the ### heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p16-fig26-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 16,
+    "old": "![Figure 26: Charge Injection (Qc) test circuit and waveforms. The circuit shows a switch (NC or NO) controlled by a logic input (VI) through an inverter. The switch connects COM to NC or NO. A voltage source VGEN is connected to NC through a resistor RGEN. The output is taken from COM through a capacitor CL(1) to ground. Waveforms show the logic input switching between VIL and VIH, and the resulting change in COM voltage (Delta VCOM).](a83ba9e3e2c1e21dd69953a7b09e45b4_img.jpg)",
+    "new": "![Figure 26: Charge injection test circuit and waveforms](a83ba9e3e2c1e21dd69953a7b09e45b4_img.jpg)",
+    "evidence": "PDF p16 Figure 26: the control is a buffer (no inverter), C_L loads the VCOM node, and the second NC/NO pin is unconnected; the waveform labels OFF/ON/OFF were not mentioned. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p16-fig26-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 16,
+    "old": "\nFigure 26: Charge Injection (Qc) test circuit and waveforms. The circuit shows a switch (NC or NO) controlled by a logic input (VI) through an inverter. The switch connects COM to NC or NO. A voltage source VGEN is connected to NC through a resistor RGEN. The output is taken from COM through a capacitor CL(1) to ground. Waveforms show the logic input switching between VIL and VIH, and the resulting change in COM voltage (Delta VCOM).\n",
+    "new": "\nFigure 26: Charge Injection (Q<sub>C</sub>) test circuit and waveforms (description written from the drawing). A grounded source V<sub>GEN</sub> drives one NC or NO pin through R<sub>GEN</sub>; the other NC or NO pin is drawn with an unconnected lead. The internal switch is drawn connecting COM to the driven pin; the V<sub>COM</sub> node is loaded by C<sub>L</sub> <sup>(1)</sup> to ground. A pulse generator (Logic Input <sup>(2)</sup>) supplies V<sub>I</sub> to IN or EN (EN with an overbar) through a buffer that controls the switch. V<sub>+</sub> at the top, GND at the bottom. Waveforms: Logic Input (V<sub>I</sub>) goes OFF, ON, OFF between V<sub>IL</sub> and V<sub>IH</sub> (drawn solid and dashed for both polarities); V<sub>COM</sub> steps up and back down, the step height being marked ΔV<sub>COM</sub>.\n",
+    "evidence": "PDF p16 Figure 26: the control is a buffer (no inverter), C_L loads the VCOM node, and the second NC/NO pin is unconnected; the waveform labels OFF/ON/OFF were not mentioned. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p16-fig27-description-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 16,
+    "old": "![Figure 27: Total Harmonic Distortion (THD) test circuit. An audio analyzer provides a source signal through a 600 ohm resistor to a node. This node is also connected to a 600 ohm resistor to ground and a 10 uF capacitor to the COM pin of the switch. The switch (COM to NC) is controlled by a voltage source VI. The output is taken from the NC pin through a load resistor RL and a 10 uF capacitor to ground. The output voltage is measured across a capacitor CL(1).](b90144cfbb81a2d610d920240fda689d_img.jpg)",
+    "new": "![Figure 27: Total harmonic distortion test circuit](b90144cfbb81a2d610d920240fda689d_img.jpg)",
+    "evidence": "PDF p16 Figure 27: R_L goes to V+/2 (not ground), the second 10 µF capacitor couples NC to the analyzer's 600 Ω input, and C_L is a load, not the measurement point. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p16-fig27-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 16,
+    "old": "\nFigure 27: Total Harmonic Distortion (THD) test circuit. An audio analyzer provides a source signal through a 600 ohm resistor to a node. This node is also connected to a 600 ohm resistor to ground and a 10 uF capacitor to the COM pin of the switch. The switch (COM to NC) is controlled by a voltage source VI. The output is taken from the NC pin through a load resistor RL and a 10 uF capacitor to ground. The output voltage is measured across a capacitor CL(1).\n",
+    "new": "\nFigure 27: Total Harmonic Distortion (THD) test circuit (description written from the drawing). Inside the Audio Analyzer, the Source Signal drives a node through a 600 Ω resistor; the node is terminated by 600 Ω to ground and coupled through a 10 µF capacitor to COM. The internal switch is drawn connecting COM to NC; NO is drawn with an unconnected lead. The NC node is biased by R<sub>L</sub> to V<sub>+</sub>/2, loaded by C<sub>L</sub> <sup>(1)</sup> to ground and coupled through a second 10 µF capacitor back to the analyzer input, which is terminated by 600 Ω to ground. A grounded DC source V<sub>I</sub> drives IN or EN (EN with an overbar) through a buffer. V<sub>+</sub> at the top, GND at the bottom.\n",
+    "evidence": "PDF p16 Figure 27: R_L goes to V+/2 (not ground), the second 10 µF capacitor couples NC to the analyzer's 600 Ω input, and C_L is a load, not the measurement point. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p17-functional-block-diagram-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 17,
+    "old": "![Functional block diagram of a single SPDT switch. The input EN is inverted. The inverted EN and the input IN are connected to the inputs of a 2-input AND gate. The output of the AND gate controls a PMOS pass transistor connecting the COM pin to the NC pin. The input IN and the output of the AND gate are connected to the inputs of a 2-input AND gate. The output of this second AND gate controls a PMOS pass transistor connecting the COM pin to the NO pin. The COM pin is the common output of the switch, and the NC and NO pins are the two possible output paths.](29f586959675cafdf81cf934954908eb_img.jpg)\n\nFunctional block diagram of a single SPDT switch. The input EN is inverted. The inverted EN and the input IN are connected to the inputs of a 2-input AND gate. The output of the AND gate controls a PMOS pass transistor connecting the COM pin to the NC pin. The input IN and the output of the AND gate are connected to the inputs of a 2-input AND gate. The output of this second AND gate controls a PMOS pass transistor connecting the COM pin to the NO pin. The COM pin is the common output of the switch, and the NC and NO pins are the two possible output paths.",
+    "new": "![Functional block diagram of each switch (description written from the drawing; same drawing as the p1 Block Diagram). The EN input (printed with an overbar) goes through a buffer whose output enables two gate drivers. IN drives both: an inverting driver (output bubble) controls the gate of the switch between COM and NC, a non-inverting driver controls the gate of the switch between COM and NO. COM is connected to both switches; NC and NO are the two switched terminals.](29f586959675cafdf81cf934954908eb_img.jpg)\n\nFunctional block diagram of each switch (description written from the drawing; same drawing as the p1 Block Diagram). The EN input (printed with an overbar) goes through a buffer whose output enables two gate drivers. IN drives both: an inverting driver (output bubble) controls the gate of the switch between COM and NC, a non-inverting driver controls the gate of the switch between COM and NO. COM is connected to both switches; NC and NO are the two switched terminals.",
+    "evidence": "PDF p17 Functional Block Diagram (Each Switch) is the p1 block diagram: EN-bar buffer, inverting and non-inverting drivers from IN, two pass switches. There are no AND gates and the switches are not drawn as PMOS. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ts3a5018-p18-fig28-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 18,
+    "old": "![Figure 28. System Schematic for TS3A5018. The schematic shows a block diagram of the TS3A5018 switch. On the left, a block labeled 'C or System Logic' is connected to the device. The TS3A5018 has pins for V+, EN, IN, COM1, COM4, GND, NO1, NC1, NO4, and NC4. A 1.8V supply is connected to V+ with a decoupling capacitor. Pull-up resistors are shown on the EN and IN pins. The output pins (NO1, NO4) are connected to 'To/From System' lines, and the common pins (COM1, COM4) are connected to the 'C or System Logic' block. The NC pins are shown as open.](124c6108c63173818afb8ed49521e22d_img.jpg)\n\nFigure 28. System Schematic for TS3A5018. The schematic shows a block diagram of the TS3A5018 switch. On the left, a block labeled 'C or System Logic' is connected to the device. The TS3A5018 has pins for V+, EN, IN, COM1, COM4, GND, NO1, NC1, NO4, and NC4. A 1.8V supply is connected to V+ with a decoupling capacitor. Pull-up resistors are shown on the EN and IN pins. The output pins (NO1, NO4) are connected to 'To/From System' lines, and the common pins (COM1, COM4) are connected to the 'C or System Logic' block. The NC pins are shown as open.",
+    "new": "![Figure 28. System Schematic for TS3A5018 (description written from the drawing). A 1.8 V supply connects to V+ with a decoupling capacitor to ground; GND is grounded. A block labeled 'C or System Logic' (as printed) drives EN (with an overbar) and IN; each of these two lines has a pulldown resistor to ground. COM1 to COM4 are wired to the logic block (bidirectional arrow, dots for the channels in between). NO1/NC1 and NO4/NC4 (dots for the channels in between) are wired to the right, labeled 'To/From System' with bidirectional arrows.](124c6108c63173818afb8ed49521e22d_img.jpg)\n\nFigure 28. System Schematic for TS3A5018 (description written from the drawing). A 1.8 V supply connects to V+ with a decoupling capacitor to ground; GND is grounded. A block labeled 'C or System Logic' (as printed) drives EN (with an overbar) and IN; each of these two lines has a pulldown resistor to ground. COM1 to COM4 are wired to the logic block (bidirectional arrow, dots for the channels in between). NO1/NC1 and NO4/NC4 (dots for the channels in between) are wired to the right, labeled 'To/From System' with bidirectional arrows.",
+    "evidence": "PDF p18 Figure 28: the resistors on EN-bar and IN go to ground (pulldowns, as 9.2.2 says 'pulled low to GND'), not pull-ups; the NC pins are wired 'To/From System' like the NO pins, not open. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p18-fig29-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 18,
+    "old": "![Figure 29. Gain vs Frequency Bandwidth (V+ = 1.8 V). The graph plots Gain in dB on the y-axis (from -10 to 0) against Frequency in MHz on a logarithmic x-axis (from 1 to 1000). The gain is approximately -0.5 dB at 1 MHz, remains flat until about 50 MHz, then drops to -2 dB at 100 MHz, -4 dB at 200 MHz, and reaches -10 dB at approximately 500 MHz.](3d827c43b44a567da971c01073295d3d_img.jpg)\n\nFigure 29. Gain vs Frequency Bandwidth (V+ = 1.8 V). The graph plots Gain in dB on the y-axis (from -10 to 0) against Frequency in MHz on a logarithmic x-axis (from 1 to 1000). The gain is approximately -0.5 dB at 1 MHz, remains flat until about 50 MHz, then drops to -2 dB at 100 MHz, -4 dB at 200 MHz, and reaches -10 dB at approximately 500 MHz.",
+    "new": "![Figure 29. Gain vs Frequency Bandwidth (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The gain is flat slightly below 0 dB at low frequency, starts to roll off below 100 MHz, shows a shoulder, then falls steeply to a deep notch near the high-frequency end, with a partial recovery peak after it. Read values from the image/PDF.](3d827c43b44a567da971c01073295d3d_img.jpg)\n\nFigure 29. Gain vs Frequency Bandwidth (V<sub>+</sub> = 1.8 V). Gain - dB versus f - Frequency - MHz on a logarithmic axis from 1 to 1000, one black curve. The gain is flat slightly below 0 dB at low frequency, starts to roll off below 100 MHz, shows a shoulder, then falls steeply to a deep notch near the high-frequency end, with a partial recovery peak after it. Read values from the image/PDF.",
+    "evidence": "PDF p18 Figure 29: axis labels 'Gain - dB' and 'f - Frequency - MHz'. The AI text gave gain values at several frequencies read off the curve. Rewritten from the graph: shape only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p18-fig28-caption-bold",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 18,
+    "old": "\n\nFigure 28. System Schematic for TS3A5018\n\n#### 9.2.1",
+    "new": "\n\n**Figure 28. System Schematic for TS3A5018**\n\n#### 9.2.1",
+    "evidence": "PDF p18: the Figure 28 caption is bold, like the other figure captions of the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p18-fig29-caption-bold",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 18,
+    "old": "\n\nFigure 29. Gain vs Frequency Bandwidth ( $V_+ = 1.8\\text{ V}$ )\n",
+    "new": "\n\n**Figure 29. Gain vs Frequency Bandwidth ( $V_+ = 1.8\\text{ V}$ )**\n",
+    "evidence": "PDF p18: the Figure 29 caption is bold, like the other figure captions of the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p18-vplus-pin-full-size",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 18,
+    "old": "A decoupling capacitor is recommended on the  $V_+$  pin.",
+    "new": "A decoupling capacitor is recommended on the V+ pin.",
+    "evidence": "PDF p18 9.2.1: 'on the V+ pin' is printed full-size (one 10-pt span 'V+'), unlike the two subscripted V+ earlier in the paragraph.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p19-fig30-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 19,
+    "old": "![Figure 30: Trace Example showing three ways to round a 90-degree corner: WORST (sharp 90-degree turn), BETTER (45-degree mitered turn with width annotations), and BEST (smooth rounded turn).](b23644e38264f693c16b356d02e4d6f6_img.jpg)\n\nThe figure illustrates three methods for a 90-degree corner in a PCB trace:\n\n- WORST:** A sharp 90-degree corner where the trace width increases significantly at the vertex.\n- BETTER:** A 45-degree mitered corner. Annotations show the trace width as  $W$  before the corner,  $2W$  at the apex, and  $1W \\text{ min.}$  after the corner.\n- BEST:** A smooth, rounded corner that maintains a constant trace width throughout the turn.\n\nFigure 30: Trace Example showing three ways to round a 90-degree corner: WORST (sharp 90-degree turn), BETTER (45-degree mitered turn with width annotations), and BEST (smooth rounded turn).\n\nFigure 30. Trace Example",
+    "new": "![Figure 30: Three 90° trace corners labeled WORST, BETTER and BEST](b23644e38264f693c16b356d02e4d6f6_img.jpg)\n\nFigure 30: Trace Example (description written from the drawing). Three 90° trace corners labeled WORST, BETTER and BEST. WORST: a sharp right-angle corner. BETTER: the outer corner is cut at 45°; the trace width is marked W, the 45° cut 2W and the inner chamfer '1W min.'. BEST: a rounded corner that keeps the trace width constant.\n\n**Figure 30. Trace Example**",
+    "evidence": "PDF p19 Figure 30: the BETTER drawing marks W (trace width), 2W (the 45° cut) and '1W min.' (inner chamfer); the AI text placed W/2W/1W min. 'before the corner/at the apex/after the corner', the bullets had stray '**' and the alt text was repeated. Rewritten from the drawing; caption bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p19-vcc-pins-full-size",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 19,
+    "old": "because the  $V_{CC}$  pins will be tied together internally",
+    "new": "because the VCC pins will be tied together internally",
+    "evidence": "PDF p19: 'the VCC pins will be tied together' is printed full-size (one 10-pt span 'VCC'), unlike the other subscripted V_CC in the paragraph.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p19-self-inductance-en-dash",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 19,
+    "old": "self-inductance of the trace",
+    "new": "self–inductance of the trace",
+    "evidence": "PDF p19 11.1: printed 'self–inductance' with an en dash (span 'self–inductance').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p20-xtalk-space-before-period",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 20,
+    "old": "adjacent ON channel (NC1 to NC2). This is measured",
+    "new": "adjacent ON channel (NC1 to NC2) .This is measured",
+    "evidence": "PDF p20 Table 2 X_TALK row prints '(NC1 to NC2) .This is' (space before the period, none after), kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
