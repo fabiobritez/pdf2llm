@@ -24535,5 +24535,135 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps22990-p15-fig34-description",
+    "file": "output/tps22990/tps22990.md",
+    "page": 15,
+    "old": "The diagram shows the timing test circuit for the TPS22990. The device is a 10-pin IC with pins labeled: CT, NC, VIN, VBIAS, ON, PG, VOUT (three pins), and GND. The test circuit includes:\n \n\n- A power supply connected to VIN and VBIAS.\n- A timing capacitor  $C_T$  connected between CT and GND.\n- A switchable power supply connected to the ON pin, with positions for ON and OFF.\n- A load network on the VOUT pins consisting of a resistor  $R_{PU}$  in series with a parallel combination of a capacitor  $C_L$  and a resistor  $R_L$ .\n- A ground connection for the PG pin.",
+    "new": "The diagram shows the timing test circuit for the TPS22990 (pins CT, NC, VIN, VBIAS, ON on the left; VOUT, VOUT, VOUT, PG, GND on the right). The test circuit includes:\n \n\n- A Power Supply connected to VIN, with an input capacitor  $C_{IN}$  from VIN to ground.\n- A second, separate Power Supply connected to VBIAS.\n- A capacitor  $C_T$  from CT to ground; NC unconnected.\n- An ON/OFF step signal driving the ON pin.\n- The three VOUT pins tied together, with a load capacitor  $C_L$  and a load resistor  $R_L$  in parallel from VOUT to GND.\n- A pull-up resistor  $R_{PU}$  from VOUT to the PG pin, which is the PG output (arrow).\n- GND connected to ground.",
+    "evidence": "PDF p15 Figure 34 drawing: VIN and VBIAS have separate Power Supplies, C_IN on VIN; R_PU goes from VOUT to PG (not in series with the load, PG not grounded); C_L and R_L are in parallel from VOUT to GND.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p15-fig35-description",
+    "file": "output/tps22990/tps22990.md",
+    "page": 15,
+    "old": "The diagram shows timing waveforms for  $V_{ON}$ ,  $V_{OUT}$ , and  $V_{PG}$ . \n \n\n- $V_{ON}$  is a square wave with 50% rise/fall times.  $t_{ON}$  is the time from 50% rise to 90% rise.  $t_{OFF}$  is the time from 90% fall to 50% fall.\n- $V_{OUT}$  shows turn-on (rise) and turn-off (fall) times. Turn-on:  $t_D$  (delay),  $t_R$  (rise time from 10% to 90%). Turn-off:  $t_F$  (fall time from 90% to 10%).\n- $V_{PG}$  is a square wave with 50% rise/fall times.  $t_{PG,ON}$  is the time from  $V_{ON}$  50% rise to  $V_{PG}$  50% rise.  $t_{PG,OFF}$  is the time from  $V_{ON}$  50% fall to  $V_{PG}$  50% fall.",
+    "new": "The diagram shows timing waveforms for  $V_{ON}$ ,  $V_{OUT}$ , and  $V_{PG}$ . \n \n\n- $V_{ON}$  steps high and later low; both edges are referenced at their 50% points.\n- $V_{OUT}$  turn-on:  $t_D$  runs from the  $V_{ON}$  50% rising point to  $V_{OUT}$  10%,  $t_R$  from  $V_{OUT}$  10% to 90%, and  $t_{ON}$  from the  $V_{ON}$  50% rising point to  $V_{OUT}$  50%. Turn-off:  $t_{OFF}$  runs from the  $V_{ON}$  50% falling point to  $V_{OUT}$  50%, and  $t_F$  from  $V_{OUT}$  90% to 10%.\n- $V_{PG}$ :  $t_{PG,ON}$  runs from the  $V_{ON}$  50% rising point to the  $V_{PG}$  50% rising point, and  $t_{PG,OFF}$  from the  $V_{ON}$  50% falling point to the  $V_{PG}$  50% falling point.",
+    "evidence": "PDF p15 Figure 35 drawing: t_ON and t_OFF are measured from V_ON 50% to V_OUT 50% (not 50% to 90% of V_ON); t_D from V_ON 50% to V_OUT 10%; V_ON/V_PG are not 'square waves with 50% rise/fall times'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p16-block-diagram-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 16,
+    "old": "![Functional Block Diagram of the TPS22990 device. The diagram shows the internal components and their connections. On the left, there are pins for VIN, VBIAS, ON, and CT. VIN and VBIAS are connected to a 'Control Logic' block and a 'Charge Pump' block. The 'Control Logic' block also receives input from the ON pin and provides output to a 'Driver' block. The 'Driver' block drives the gate of an N-channel MOSFET. The MOSFET's source is connected to GND, and its drain is connected to the VOUT pin. A 'PG' (Power Good) pin is connected to the drain of the MOSFET through a pull-down network. A dashed box labeled 'TPS22990 Only' contains an inverter and a MOSFET, which is connected to the CT pin and the VOUT pin. The VOUT pin is also connected to the drain of the MOSFET in the dashed box.]",
+    "new": "![Functional Block Diagram of the TPS22990 device. Pins VIN, VBIAS, ON and CT are on the left, PG and VOUT on the right, GND at the bottom. VIN connects to the drain of the N-channel pass MOSFET (drawn with its body diode); its source is the VOUT pin. VBIAS supplies a 'Charge Pump' block, which powers the 'Driver'. The ON pin feeds the 'Control Logic' block, whose output drives the 'Driver' input; the Driver output drives the pass MOSFET gate, and the CT pin connects to this gate node. The Control Logic also drives the gate of an open-drain N-channel MOSFET whose drain is the PG pin and whose source is grounded. A dashed box labeled 'TPS22990 Only' contains an inverter, fed from the Control Logic output, that drives an N-channel MOSFET from VOUT to GND (quick output discharge).]",
+    "evidence": "PDF p16 Functional Block Diagram: VIN goes to the pass FET drain and VOUT is its source (the AI text had source to GND); VBIAS feeds only the Charge Pump, which powers the Driver; CT connects to the gate node; PG is an open-drain FET driven by the Control Logic; the TPS22990-only inverter/FET discharges VOUT to GND and is not connected to CT.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p16-block-diagram-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 16,
+    "old": "\n\nFunctional Block Diagram of the TPS22990 device. The diagram shows the internal components and their connections. On the left, there are pins for VIN, VBIAS, ON, and CT. VIN and VBIAS are connected to a 'Control Logic' block and a 'Charge Pump' block. The 'Control Logic' block also receives input from the ON pin and provides output to a 'Driver' block. The 'Driver' block drives the gate of an N-channel MOSFET. The MOSFET's source is connected to GND, and its drain is connected to the VOUT pin. A 'PG' (Power Good) pin is connected to the drain of the MOSFET through a pull-down network. A dashed box labeled 'TPS22990 Only' contains an inverter and a MOSFET, which is connected to the CT pin and the VOUT pin. The VOUT pin is also connected to the drain of the MOSFET in the dashed box.\n",
+    "new": "\n\nFunctional Block Diagram of the TPS22990 device. Pins VIN, VBIAS, ON and CT are on the left, PG and VOUT on the right, GND at the bottom. VIN connects to the drain of the N-channel pass MOSFET (drawn with its body diode); its source is the VOUT pin. VBIAS supplies a 'Charge Pump' block, which powers the 'Driver'. The ON pin feeds the 'Control Logic' block, whose output drives the 'Driver' input; the Driver output drives the pass MOSFET gate, and the CT pin connects to this gate node. The Control Logic also drives the gate of an open-drain N-channel MOSFET whose drain is the PG pin and whose source is grounded. A dashed box labeled 'TPS22990 Only' contains an inverter, fed from the Control Logic output, that drives an N-channel MOSFET from VOUT to GND (quick output discharge).\n",
+    "evidence": "PDF p16 Functional Block Diagram: description paragraph rewritten from the drawing, as the alt text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p17-eq1-number-not-bullet",
+    "file": "output/tps22990/tps22990.md",
+    "page": 17,
+    "old": "- $C_T$  is the capacitance value on the CT pin (in pF)\n- (1)\n\n[Table 1]",
+    "new": "- $C_T$  is the capacitance value on the CT pin (in pF)\n\n(1)\n\n[Table 1]",
+    "evidence": "PDF p17: '(1)' is the right-aligned equation number, not a fourth 'where' bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p17-vin-vbias-full-size",
+    "file": "output/tps22990/tps22990.md",
+    "page": 17,
+    "old": "power-up sequence where  $V_{IN}$  and  $V_{BIAS}$  are already in steady state",
+    "new": "power-up sequence where VIN and VBIAS are already in steady state",
+    "evidence": "PDF p17: 'where VIN and VBIAS are already in steady state' is printed full-size, without subscripts.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p17-table1-uF-as-printed",
+    "file": "output/tps22990/tps22990.md",
+    "page": 17,
+    "old": "$C_L = 0.1 \\mu F$ , $C_{IN} = 1 \\mu F$ , $R_L = 10 \\Omega$ , $V_{BIAS} = 5 V$",
+    "new": "$C_L$ = 0.1 uF, $C_{IN}$ = 1 uF, $R_L = 10 \\Omega$ , $V_{BIAS} = 5 V$",
+    "evidence": "PDF p17 Table 1 header: printed 'CL = 0.1 uF, CIN = 1 uF' with a plain u, not µ.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p17-pg-vout-vbias-full-size",
+    "file": "output/tps22990/tps22990.md",
+    "page": 17,
+    "old": "This voltage source can be  $V_{OUT}$  from the TPS22990 or another external voltage.  $V_{BIAS}$  is required",
+    "new": "This voltage source can be VOUT from the TPS22990 or another external voltage. VBIAS is required",
+    "evidence": "PDF p17 9.3.3: 'VOUT from the TPS22990' and 'VBIAS is required' are printed full-size.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p17-eq2-asterisks",
+    "file": "output/tps22990/tps22990.md",
+    "page": 17,
+    "old": "$$t_{PG,ON} = (0.013 \\times V_{IN} + 0.04) \\times C_T + 4.7 \\times V_{IN} + 129$$",
+    "new": "$$t_{PG,ON} = (0.013 * V_{IN} + 0.04) * C_T + 4.7 * V_{IN} + 129$$",
+    "evidence": "PDF p17 Equation 2 is printed with '*' as the multiplication sign (Equation 1 uses ×).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p17-eq2-number-not-bullet",
+    "file": "output/tps22990/tps22990.md",
+    "page": 17,
+    "old": "- $C_T$  is the capacitance value on the CT pin (in pF)\n- (2)\n",
+    "new": "- $C_T$  is the capacitance value on the CT pin (in pF)\n\n(2)\n",
+    "evidence": "PDF p17: '(2)' is the right-aligned equation number, not a fourth 'where' bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
