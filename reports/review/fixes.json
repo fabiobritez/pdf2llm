@@ -27173,5 +27173,207 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63802-p35-title-block",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "{34}------------------------------------------------\n\n![Technical drawing of the DLA0010A",
+    "new": "{34}------------------------------------------------\n\n### PACKAGE OUTLINE\n\nDLA0010A\n\nVSON-HR - 1 mm max height\n\nPLASTIC SMALL OUTLINE - NO LEAD\n\n![Technical drawing of the DLA0010A",
+    "evidence": "PDF p35 title block 'DLA0010A / PACKAGE OUTLINE / VSON-HR - 1 mm max height / PLASTIC SMALL OUTLINE - NO LEAD' was missing (written as in tps63070 p39).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p35-outline-alt",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "![Technical drawing of the DLA0010A VSON-HR package outline. The drawing includes three views: a top view, a side view, and a front view. The top view shows a rectangular package with a shaded 'PIN 1 INDEX AREA' in the upper left corner. Dimensions for the top view include a width of 2.1 (1.9) mm and a height of 3.1 (2.9) mm. The side view shows the package profile with a height of 1.0 (0.8) mm and a thickness of 0.05 (0.00) mm. It also indicates a 'SEATING PLANE' and a flatness tolerance of 0.08 C. The front view shows the package with 10 pins, arranged in two rows of five. Dimensions for the front view include a width of 1.2 (1) mm, a height of 10 mm, and a pitch of 2 mm. It also shows a pin diameter of 0.5 mm and a pin length of 0.3 (0.2) mm. Symmetry symbols (SYMM) are used to indicate the pin arrangement. A table of tolerances is provided at the bottom right.]",
+    "new": "![Technical drawing of the DLA0010A VSON-HR package outline: top view, side view, bottom view and end view with dimensions.]",
+    "evidence": "PDF p35 DLA0010A outline drawing: the AI alt text called the bottom view a 'front view', gave a '10 mm' height and a '2 mm' pitch (10 and 2 are a pin number and a basic dimension; the pitch is 8X 0.5), a '0.5 mm pin diameter' and a 'table of tolerances' (feature control frame). Replaced with a neutral alt; the drawing is described in the paragraph below.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p35-outline-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "\n\nTechnical drawing of the DLA0010A VSON-HR package outline. The drawing includes three views: a top view, a side view, and a front view. The top view shows a rectangular package with a shaded 'PIN 1 INDEX AREA' in the upper left corner. Dimensions for the top view include a width of 2.1 (1.9) mm and a height of 3.1 (2.9) mm. The side view shows the package profile with a height of 1.0 (0.8) mm and a thickness of 0.05 (0.00) mm. It also indicates a 'SEATING PLANE' and a flatness tolerance of 0.08 C. The front view shows the package with 10 pins, arranged in two rows of five. Dimensions for the front view include a width of 1.2 (1) mm, a height of 10 mm, and a pitch of 2 mm. It also shows a pin diameter of 0.5 mm and a pin length of 0.3 (0.2) mm. Symmetry symbols (SYMM) are used to indicate the pin arrangement. A table of tolerances is provided at the bottom right.\n\n4223750/D 03/2019",
+    "new": "\n\nThe figure shows the package outline for the DLA0010A VSON-HR package (all dimensions in mm):\n\n- Top View: body 2.1/1.9 wide (datum B) and 3.1/2.9 long (datum A); a dotted \"PIN 1 INDEX AREA\" in the top-left corner.\n- Side View: 1.0/0.8 height above the \"SEATING PLANE\" (datum C), standoff 0.05/0.00, with a 0.08 C surface-profile tolerance on the terminals.\n- Bottom View: pins 1-5 on the left side (pin 1 at the bottom, with a square end; the others have rounded ends), pins 6-10 on the right side (pin 6 at the top, pin 10 at the bottom). Pin 8 (right side, on the horizontal SYMM centerline) is a long finger that reaches past the vertical SYMM centerline, length 1.2/1 from the body edge. Left terminals: lengths 5X 0.5/0.3, widths 5X 0.3/0.2. Right terminals: lengths 4X 0.8/0.6, widths 5X 0.3/0.2. Basic dimensions: 8X 0.5 pitch, 2 between the pin 6 and pin 10 centerlines. Position tolerances 0.1 Ⓜ C A B and 0.05 Ⓜ C. SYMM centerlines are marked.\n- End View: the terminals are dimensioned (0.1) TYP.\n\n4223750/D 03/2019",
+    "evidence": "PDF p35 DLA0010A outline drawing: the AI text gave the 2.1/1.9 x 3.1/2.9 body as '2.1 (1.9) mm' (parentheses mean reference dimensions), the standoff as a 'thickness', the surface-profile tolerance as 'flatness', called the bottom view a 'front view', and invented a '10 mm' height, a '2 mm' pitch (8X 0.5 pitch; 2 is the pin 6 to pin 10 basic dimension), a '0.5 mm pin diameter' and a 'table of tolerances'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p35-datum-b-label",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "PIN 1 INDEX AREA\n\n2.1  \n1.9",
+    "new": "PIN 1 INDEX AREA\n\nB\n\n2.1  \n1.9",
+    "evidence": "PDF p35: the datum label B on the 2.1/1.9 width dimension was missing among the transcribed drawing labels (pdftotext 'B').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p35-symm-centerline-symbol",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "SYMM  \n⌀\n\n5X 0.5",
+    "new": "SYMM  \n℄\n\n5X 0.5",
+    "evidence": "PDF p35: the symbol under SYMM is the centerline symbol ℄, not a diameter sign.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p35-symm-centerline-symbol-2",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "SYMM  \n⌀\n\n1\n",
+    "new": "SYMM  \n℄\n\n1\n",
+    "evidence": "PDF p35: the symbol under the second SYMM label is the centerline symbol ℄, not a diameter sign.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p35-position-tolerance-symbol",
+    "file": "output/tps63802/tps63802.md",
+    "page": 35,
+    "old": "⌀ 0.1(M) C A B",
+    "new": "⊕ 0.1(M) C A B",
+    "evidence": "PDF p35: the feature control frame uses the position symbol (circle with cross, as written ⊕ in tps63070), not a diameter sign.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p36-title-block",
+    "file": "output/tps63802/tps63802.md",
+    "page": 36,
+    "old": "{35}------------------------------------------------\n\n![LAND PATTERN EXAMPLE",
+    "new": "{35}------------------------------------------------\n\n### EXAMPLE BOARD LAYOUT\n\nDLA0010A\n\nVSON-HR - 1 mm max height\n\nPLASTIC SMALL OUTLINE - NO LEAD\n\n![LAND PATTERN EXAMPLE",
+    "evidence": "PDF p36 title block 'DLA0010A / EXAMPLE BOARD LAYOUT / VSON-HR - 1 mm max height / PLASTIC SMALL OUTLINE - NO LEAD' was missing (written as in tps63070 p40).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p36-land-pattern-alt",
+    "file": "output/tps63802/tps63802.md",
+    "page": 36,
+    "old": "![LAND PATTERN EXAMPLE diagram showing a 30X scale layout of exposed metal pads for a VSON-HR package. The diagram includes dimensions for pad sizes (5X 0.6, 5X 0.9, 4X 0.75, 4X 0.25), pitch (8X 0.5, 10, 6), and package centerlines (PKG CL).]",
+    "new": "![LAND PATTERN EXAMPLE diagram showing the 10-pad DLA0010A land pattern with pad numbers and reference dimensions.]",
+    "evidence": "PDF p36 land pattern drawing: the AI alt text listed '10, 6' as pitch (they are pad numbers) and dropped the parentheses that mark every dimension as reference. Replaced with a neutral alt; the drawing is described in the paragraph below.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p36-land-pattern-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 36,
+    "old": "SCALE: 30X\n\nLAND PATTERN EXAMPLE diagram showing a 30X scale layout of exposed metal pads for a VSON-HR package. The diagram includes dimensions for pad sizes (5X 0.6, 5X 0.9, 4X 0.75, 4X 0.25), pitch (8X 0.5, 10, 6), and package centerlines (PKG CL).\n",
+    "new": "SCALE: 30X\n\nLAND PATTERN EXAMPLE diagram (top view, all dimensions in mm for reference). Pads 1-5 run down the left side (pad 1 at the top) and pads 6-10 up the right side (pad 6 at the bottom, pad 10 at the top). Pad 8 (on the horizontal PKG centerline) is a long pad that reaches past the vertical PKG centerline, (1.3) long and (0.25) wide. Left pads 5X (0.6) long and 5X (0.25) wide; right pads 4X (0.9) long and 4X (0.25) wide; corner radius (R0.05) TYP. Pitch 8X (0.5), (2) between the pad 6 and pad 10 centerlines. 5X (0.9) from the left pad centers to the vertical PKG centerline, 4X (0.75) from that centerline to the right pad centers and (0.55) to the center of pad 8. PKG centerlines are marked.\n",
+    "evidence": "PDF p36 land pattern drawing: the AI text listed the pad numbers 10 and 6 as pitch values, wrote the reference dimensions without parentheses and omitted (0.55), (2), (1.3), (0.25) and (R0.05) TYP. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p36-solder-mask-labels",
+    "file": "output/tps63802/tps63802.md",
+    "page": 36,
+    "old": "Both show 'METAL', 'SOLDER MASK OPENING', and 'EXPOSED METAL'.]",
+    "new": "The left one labels 'METAL', 'SOLDER MASK OPENING' and 'EXPOSED METAL'; the right one labels 'SOLDER MASK OPENING', 'METAL UNDER SOLDER MASK' and 'EXPOSED METAL'.]",
+    "evidence": "PDF p36 SOLDER MASK DETAILS: the solder mask defined (right) detail labels 'METAL UNDER SOLDER MASK', not 'METAL'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p36-solder-mask-labels-desc",
+    "file": "output/tps63802/tps63802.md",
+    "page": 36,
+    "old": "Both show 'METAL', 'SOLDER MASK OPENING', and 'EXPOSED METAL'.\n",
+    "new": "The left one labels 'METAL', 'SOLDER MASK OPENING' and 'EXPOSED METAL'; the right one labels 'SOLDER MASK OPENING', 'METAL UNDER SOLDER MASK' and 'EXPOSED METAL'.\n",
+    "evidence": "PDF p36 SOLDER MASK DETAILS: the solder mask defined (right) detail labels 'METAL UNDER SOLDER MASK', not 'METAL'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p37-title-block",
+    "file": "output/tps63802/tps63802.md",
+    "page": 37,
+    "old": "{36}------------------------------------------------\n\n![Diagram showing the solder paste example",
+    "new": "{36}------------------------------------------------\n\n### EXAMPLE STENCIL DESIGN\n\nDLA0010A\n\nVSON-HR - 1 mm max height\n\nPLASTIC SMALL OUTLINE - NO LEAD\n\n![Diagram showing the solder paste example",
+    "evidence": "PDF p37 title block 'DLA0010A / EXAMPLE STENCIL DESIGN / VSON-HR - 1 mm max height / PLASTIC SMALL OUTLINE - NO LEAD' was missing (written as in tps63070 p41).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p37-stencil-alt",
+    "file": "output/tps63802/tps63802.md",
+    "page": 37,
+    "old": "![Diagram showing the solder paste example for a VSON-HR package. The diagram illustrates the layout of solder paste pads on a 0.1 mm thick stencil. It includes dimensions for pad spacing and package centerlines. The package is labeled 'VSON-HR' and 'PLASTIC SMALL OUTLINE - NO LEAD'. Dimensions include 5X (0.6), 5X (0.9), 4X (0.75), 10, 8X (0.5), 2X (0.25), (2), (0.5), 6, 4X (0.25), (0.75), 4X (0.9), 2X (0.55), (0.175), 5X (0.25), 1, and (R0.05) TYP. The package centerline is marked with 'PKG' and a centerline symbol.]",
+    "new": "![Diagram showing the solder paste example for the DLA0010A VSON-HR package on a 0.1 mm thick stencil, with aperture numbers and reference dimensions.]",
+    "evidence": "PDF p37 stencil drawing: the AI alt text listed the pad numbers 10, 6 and 1 among the dimensions. Replaced with a neutral alt; the drawing is described in the paragraph below.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p37-stencil-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 37,
+    "old": "The diagram shows a top-down view of a VSON-HR package with solder paste pads. The package is centered on a grid. Dimensions are provided for the distance between the package centerline and the pads, as well as the spacing between the pads themselves. The package centerline is marked with 'PKG' and a centerline symbol. The package is labeled 'VSON-HR' and 'PLASTIC SMALL OUTLINE - NO LEAD'. Dimensions include 5X (0.6), 5X (0.9), 4X (0.75), 10, 8X (0.5), 2X (0.25), (2), (0.5), 6, 4X (0.25), (0.75), 4X (0.9), 2X (0.55), (0.175), 5X (0.25), 1, and (R0.05) TYP.\n\nDiagram showing the solder paste example for a VSON-HR package. The diagram illustrates the layout of solder paste pads on a 0.1 mm thick stencil. It includes dimensions for pad spacing and package centerlines. The package is labeled 'VSON-HR' and 'PLASTIC SMALL OUTLINE - NO LEAD'. Dimensions include 5X (0.6), 5X (0.9), 4X (0.75), 10, 8X (0.5), 2X (0.25), (2), (0.5), 6, 4X (0.25), (0.75), 4X (0.9), 2X (0.55), (0.175), 5X (0.25), 1, and (R0.05) TYP. The package centerline is marked with 'PKG' and a centerline symbol.",
+    "new": "The diagram shows the solder paste apertures (top view, all dimensions in mm for reference). Apertures 1-5 run down the left side (1 at the top) and apertures 6-10 up the right side (6 at the bottom, 10 at the top). Pad 8 (on the horizontal PKG centerline) is printed as two separate apertures, 2X (0.55) long and 2X (0.25) wide. Left apertures 5X (0.6) long and 5X (0.25) wide; right apertures 4X (0.9) long and 4X (0.25) wide; corner radius (R0.05) TYP. Pitch 8X (0.5), (0.5) between the aperture 6 and 7 centerlines, (2) between the aperture 6 and 10 centerlines. 5X (0.9) from the left aperture centers to the vertical PKG centerline and 4X (0.75) from that centerline to the right aperture centers; a line (0.175) right of the PKG centerline is dimensioned (0.75) to the center of the outer pad 8 aperture. PKG centerlines are marked.",
+    "evidence": "PDF p37 stencil drawing: the AI text listed the pad numbers 10, 6 and 1 as dimensions, did not say that pad 8 is split into two apertures, and repeated the same paragraph twice. Rewritten from the drawing (one description paragraph, as on p36).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p37-note5-number",
+    "file": "output/tps63802/tps63802.md",
+    "page": 37,
+    "old": "- Laser cutting apertures",
+    "new": "5. Laser cutting apertures",
+    "evidence": "PDF p37: the note is numbered '5.' (continuing notes 1-4 of p35-p36); the md turned it into an unnumbered bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
