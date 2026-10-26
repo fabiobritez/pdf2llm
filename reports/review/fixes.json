@@ -14109,5 +14109,882 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig12-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": "![Figure 12: INL Error vs. Supply Voltage. A line graph showing INL (LSB16) on the y-axis ranging from -32.0 to 32.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 1.7 to 5.5. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC is relatively flat near 0. IDAC shows a slight positive slope from approximately -12.8 at 1.7V to -6.4 at 5.5V. A small oval highlights the IDAC line at the lower voltage end.](",
+    "new": "![Figure 12: INL Error vs. Supply Voltage. A line graph showing INL (LSB16) on the y-axis ranging from -32.0 to 32.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 1.7 to 5.5. Two series are shown, each as a pair of curves (positive and negative INL): VDAC (red, starting near 2.7V) and IDAC (light blue, from 1.7V, marked with an ellipse at the low-voltage end). The VDAC pair is nearly flat on either side of zero; the upper IDAC curve stays near zero while the lower IDAC curve rises from its most negative value at 1.7V toward zero as PVDD increases. Read values from the image/PDF.](",
+    "evidence": "PDF p14 Figure 12 (render): the colors were swapped (VDAC is red, IDAC is light blue), each series is a pair of positive/negative INL curves, and the VDAC curves start near 2.7V; estimated IDAC values removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig12-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": ")\n\nFigure 12: INL Error vs. Supply Voltage. A line graph showing INL (LSB16) on the y-axis ranging from -32.0 to 32.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 1.7 to 5.5. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC is relatively flat near 0. IDAC shows a slight positive slope from approximately -12.8 at 1.7V to -6.4 at 5.5V. A small oval highlights the IDAC line at the lower voltage end.\n",
+    "new": ")\n\nFigure 12: INL Error vs. Supply Voltage. A line graph showing INL (LSB16) on the y-axis ranging from -32.0 to 32.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 1.7 to 5.5. Two series are shown, each as a pair of curves (positive and negative INL): VDAC (red, starting near 2.7V) and IDAC (light blue, from 1.7V, marked with an ellipse at the low-voltage end). The VDAC pair is nearly flat on either side of zero; the upper IDAC curve stays near zero while the lower IDAC curve rises from its most negative value at 1.7V toward zero as PVDD increases. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p14-fig12-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig15-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": "![Figure 15: Gain Error vs. Supply Voltage. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. A single data series for VDAC (black line) is shown, which is nearly horizontal at approximately -0.08%.](",
+    "new": "![Figure 15: Gain Error vs. Supply Voltage. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. A single data series for VDAC (black line), starting near 2.7V, is shown slightly below zero; it drops a little up to about 3.3V and is nearly horizontal above that. Read values from the image/PDF.](",
+    "evidence": "PDF p14 Figure 15 (render): the estimated level '-0.08%' was removed and the start voltage and the initial small drop added. Description of shape only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig15-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": ")\n\nFigure 15: Gain Error vs. Supply Voltage. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. A single data series for VDAC (black line) is shown, which is nearly horizontal at approximately -0.08%.\n",
+    "new": ")\n\nFigure 15: Gain Error vs. Supply Voltage. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. A single data series for VDAC (black line), starting near 2.7V, is shown slightly below zero; it drops a little up to about 3.3V and is nearly horizontal above that. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p14-fig15-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig13-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": "![Figure 13: DNL Error vs. Supply Voltage. A line graph showing DNL (LSB16) on the y-axis ranging from -1.0 to 1.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC is relatively flat near 0. IDAC shows a slight positive slope from approximately -0.4 at 2.5V to -0.2 at 5.5V.](",
+    "new": "![Figure 13: DNL Error vs. Supply Voltage. A line graph showing DNL (LSB16) on the y-axis ranging from -1.0 to 1.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. One series is shown, VDAC (red), drawn as two curves: the positive DNL curve is nearly flat, and the negative DNL curve moves slightly toward zero as PVDD increases. Read values from the image/PDF.](",
+    "evidence": "PDF p14 Figure 13 (render): the legend has only VDAC (red), drawn as positive and negative DNL curves; there is no IDAC series and no blue line. Rewritten from the plot; estimated values removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig13-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": ")\n\nFigure 13: DNL Error vs. Supply Voltage. A line graph showing DNL (LSB16) on the y-axis ranging from -1.0 to 1.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC is relatively flat near 0. IDAC shows a slight positive slope from approximately -0.4 at 2.5V to -0.2 at 5.5V.\n",
+    "new": ")\n\nFigure 13: DNL Error vs. Supply Voltage. A line graph showing DNL (LSB16) on the y-axis ranging from -1.0 to 1.0, and PVDD SUPPLY VOLTAGE (V) on the x-axis ranging from 2.5 to 5.5. One series is shown, VDAC (red), drawn as two curves: the positive DNL curve is nearly flat, and the negative DNL curve moves slightly toward zero as PVDD increases. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p14-fig13-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig16-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": "![Figure 16: Offset Error vs. Temperature. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is TEMPERATURE (°C) from -45 to 125. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC offset error is approximately 1 mV. IDAC offset error is approximately 41 μA.](",
+    "new": "![Figure 16: Offset Error vs. Temperature. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is TEMPERATURE (°C) from -45 to 125. Two data series are shown: VDAC (light blue line, read on the left axis) and IDAC (red line, read on the right axis). Both are nearly flat over temperature. Read values from the image/PDF.](",
+    "evidence": "PDF p14 Figure 16 (render): estimated levels ('approximately 1 mV', 'approximately 41 μA') removed; the IDAC line is not at the 41 μA grid line. Description of shape only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig16-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": ")\n\nFigure 16: Offset Error vs. Temperature. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is TEMPERATURE (°C) from -45 to 125. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC offset error is approximately 1 mV. IDAC offset error is approximately 41 μA.\n",
+    "new": ")\n\nFigure 16: Offset Error vs. Temperature. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is TEMPERATURE (°C) from -45 to 125. Two data series are shown: VDAC (light blue line, read on the left axis) and IDAC (red line, read on the right axis). Both are nearly flat over temperature. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p14-fig16-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig14-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": "![Figure 14: Gain Error vs. Temperature. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and TEMPERATURE (°C) on the x-axis ranging from -45 to 125. A single data series for VDAC (black line) is shown, which is nearly horizontal at approximately -0.08%.](",
+    "new": "![Figure 14: Gain Error vs. Temperature. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and TEMPERATURE (°C) on the x-axis ranging from -45 to 125. A single data series for VDAC (black line) is shown; it decreases from -45°C to about 23°C and is nearly flat above that. Read values from the image/PDF.](",
+    "evidence": "PDF p14 Figure 14 (render): the curve is not horizontal; it decreases from -45°C to about room temperature, then flattens. Estimated level removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig14-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": ")\n\nFigure 14: Gain Error vs. Temperature. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and TEMPERATURE (°C) on the x-axis ranging from -45 to 125. A single data series for VDAC (black line) is shown, which is nearly horizontal at approximately -0.08%.\n",
+    "new": ")\n\nFigure 14: Gain Error vs. Temperature. A line graph showing VDAC GAIN ERROR (% OF FSR) on the y-axis ranging from -0.3 to 0.3, and TEMPERATURE (°C) on the x-axis ranging from -45 to 125. A single data series for VDAC (black line) is shown; it decreases from -45°C to about 23°C and is nearly flat above that. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p14-fig14-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig17-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": "![Figure 17: Offset Error vs. Supply Voltage. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is PVDD SUPPLY VOLTAGE (V) from 1.5 to 5.5. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC offset error is approximately 1 mV. IDAC offset error is approximately 41 μA.](",
+    "new": "![Figure 17: Offset Error vs. Supply Voltage. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is PVDD SUPPLY VOLTAGE (V) from 1.5 to 5.5. Two data series are shown: VDAC (light blue line, left axis, starting near 2.7V) and IDAC (red line, right axis, from about 1.7V). Both are nearly flat over supply voltage. Read values from the image/PDF.](",
+    "evidence": "PDF p14 Figure 17 (render): estimated levels ('approximately 1 mV', 'approximately 41 μA') removed; start voltages of the two curves added. Description of shape only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p14-fig17-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 14,
+    "old": ")\n\nFigure 17: Offset Error vs. Supply Voltage. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is PVDD SUPPLY VOLTAGE (V) from 1.5 to 5.5. Two data series are shown: VDAC (blue line) and IDAC (red line). VDAC offset error is approximately 1 mV. IDAC offset error is approximately 41 μA.\n",
+    "new": ")\n\nFigure 17: Offset Error vs. Supply Voltage. A line graph with two y-axes. The left y-axis is VDAC OFFSET ERROR (mV) from -5 to 5. The right y-axis is IDAC OFFSET ERROR (μA) from 15 to 145. The x-axis is PVDD SUPPLY VOLTAGE (V) from 1.5 to 5.5. Two data series are shown: VDAC (light blue line, left axis, starting near 2.7V) and IDAC (red line, right axis, from about 1.7V). Both are nearly flat over supply voltage. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p14-fig17-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig18-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": "![Figure 18: Dropout Across Different PVDD Supply Ranges. A line graph showing IDAC output current (mA) on the y-axis (0 to 60) versus dropout voltage PVDDX - VOUTX (mV) on the x-axis (0 to 300). Three curves are shown for different PVDD supply voltages: 1.71V (red), 3.3V (blue), and 5.5V (green). All curves show a linear increase in current with dropout voltage until they reach a plateau at approximately 55 mA. The 5.5V curve reaches the plateau at the lowest dropout voltage, followed by 3.3V and then 1.71V.](",
+    "new": "![Figure 18: Dropout Across Different PVDD Supply Ranges. A line graph (IOUT0) showing IDAC OUTPUT CURRENT (mA) on the y-axis (0 to 60) versus DROPOUT VOLTAGE P_VDDX − V_OUTX (mV) on the x-axis (0 to 300). Three curves are shown for different PVDD supply voltages: PVDD = 1.71V (red), 3.3V (light blue), and 5.5V (teal). All curves show a linear increase in current with dropout voltage until they reach a plateau. The 5.5V curve reaches the plateau at the lowest dropout voltage, followed by 3.3V and then 1.71V. Read values from the image/PDF.](",
+    "evidence": "PDF p15 Figure 18 (render): the IOUT0 label was missing, the 5.5V curve is teal (not green), and the estimated plateau level was removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig18-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": ")\n\nFigure 18: Dropout Across Different PVDD Supply Ranges. A line graph showing IDAC output current (mA) on the y-axis (0 to 60) versus dropout voltage PVDDX - VOUTX (mV) on the x-axis (0 to 300). Three curves are shown for different PVDD supply voltages: 1.71V (red), 3.3V (blue), and 5.5V (green). All curves show a linear increase in current with dropout voltage until they reach a plateau at approximately 55 mA. The 5.5V curve reaches the plateau at the lowest dropout voltage, followed by 3.3V and then 1.71V.\n",
+    "new": ")\n\nFigure 18: Dropout Across Different PVDD Supply Ranges. A line graph (IOUT0) showing IDAC OUTPUT CURRENT (mA) on the y-axis (0 to 60) versus DROPOUT VOLTAGE P_VDDX − V_OUTX (mV) on the x-axis (0 to 300). Three curves are shown for different PVDD supply voltages: PVDD = 1.71V (red), 3.3V (light blue), and 5.5V (teal). All curves show a linear increase in current with dropout voltage until they reach a plateau. The 5.5V curve reaches the plateau at the lowest dropout voltage, followed by 3.3V and then 1.71V. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p15-fig18-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig21-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": "![Figure 21: IDDD vs. Temperature. A line graph showing current (mA) on the y-axis (0 to 5) versus temperature (°C) on the x-axis (-40 to 125). It displays current consumption for different operating modes: IDAC mode (AVDD and PVDD) and VDAC mode (AVDD and PVDD). In IDAC mode, current is relatively constant around 3-4.5 mA. In VDAC mode, current is lower, around 1-1.5 mA. The graph also shows curves for internal and external VREF.](",
+    "new": "![Figure 21: I_DD vs. Temperature. A line graph showing CURRENT (mA) on the y-axis (0 to 5) versus TEMPERATURE (°C) on the x-axis (-40 to 125), with RANGE = VREF, OUT = ZS. Legend: AVDD (red), PVDD (teal). The dashed teal PVDD curve is labeled ALL CHANNELS IN IDAC MODE and is the highest; the two red AVDD curves, labeled INTERNAL VREF (upper, dashed) and EXTERNAL VREF (lower, solid), lie close together in the middle; the solid teal PVDD curve labeled ALL CHANNELS IN VDAC MODE is the lowest. All curves are nearly flat over temperature. Read values from the image/PDF.](",
+    "evidence": "PDF p15 Figure 21 (render): the AI text mixed the AVDD and PVDD curves ('IDAC mode ... around 3-4.5 mA', 'VDAC mode ... around 1-1.5 mA') and omitted the legend (AVDD red, PVDD teal) and the RANGE = VREF, OUT = ZS condition. Rewritten from the plot without estimated levels.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig21-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": ")\n\nFigure 21: IDDD vs. Temperature. A line graph showing current (mA) on the y-axis (0 to 5) versus temperature (°C) on the x-axis (-40 to 125). It displays current consumption for different operating modes: IDAC mode (AVDD and PVDD) and VDAC mode (AVDD and PVDD). In IDAC mode, current is relatively constant around 3-4.5 mA. In VDAC mode, current is lower, around 1-1.5 mA. The graph also shows curves for internal and external VREF.\n",
+    "new": ")\n\nFigure 21: I_DD vs. Temperature. A line graph showing CURRENT (mA) on the y-axis (0 to 5) versus TEMPERATURE (°C) on the x-axis (-40 to 125), with RANGE = VREF, OUT = ZS. Legend: AVDD (red), PVDD (teal). The dashed teal PVDD curve is labeled ALL CHANNELS IN IDAC MODE and is the highest; the two red AVDD curves, labeled INTERNAL VREF (upper, dashed) and EXTERNAL VREF (lower, solid), lie close together in the middle; the solid teal PVDD curve labeled ALL CHANNELS IN VDAC MODE is the lowest. All curves are nearly flat over temperature. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p15-fig21-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig22-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": "![Figure 22: IDDD vs. Supply Voltage. A line graph showing current (mA) on the y-axis (0 to 5) versus supply voltage (V) on the x-axis (1.7 to 5.5). It shows current consumption for IDAC and VDAC modes across different supply voltages. Current consumption generally increases slightly with supply voltage, with IDAC mode consuming more than VDAC mode.](",
+    "new": "![Figure 22: I_DD vs. Supply Voltage. A line graph showing CURRENT (mA) on the y-axis (0 to 5) versus SUPPLY VOLTAGE (V) on the x-axis (1.7 to 5.5), with RANGE = VREF, OUT = ZS. Legend: PVDD (red), AVDD (teal). The solid red PVDD curve labeled ALL CHANNELS IN IDAC MODE is the highest and rises slightly with supply voltage; the two teal AVDD curves, labeled INTERNAL VREF (dashed) and EXTERNAL VREF (solid), start near 2.7V and lie close together in the middle; the dashed red PVDD curve labeled ALL CHANNELS IN VDAC MODE, also from about 2.7V, is the lowest. Read values from the image/PDF.](",
+    "evidence": "PDF p15 Figure 22 (render): the AI text gave only a generic trend; the legend (PVDD red, AVDD teal, swapped relative to Figure 21), the curve labels and the RANGE = VREF, OUT = ZS condition were missing. Rewritten from the plot.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig22-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": ")\n\nFigure 22: IDDD vs. Supply Voltage. A line graph showing current (mA) on the y-axis (0 to 5) versus supply voltage (V) on the x-axis (1.7 to 5.5). It shows current consumption for IDAC and VDAC modes across different supply voltages. Current consumption generally increases slightly with supply voltage, with IDAC mode consuming more than VDAC mode.\n",
+    "new": ")\n\nFigure 22: I_DD vs. Supply Voltage. A line graph showing CURRENT (mA) on the y-axis (0 to 5) versus SUPPLY VOLTAGE (V) on the x-axis (1.7 to 5.5), with RANGE = VREF, OUT = ZS. Legend: PVDD (red), AVDD (teal). The solid red PVDD curve labeled ALL CHANNELS IN IDAC MODE is the highest and rises slightly with supply voltage; the two teal AVDD curves, labeled INTERNAL VREF (dashed) and EXTERNAL VREF (solid), start near 2.7V and lie close together in the middle; the dashed red PVDD curve labeled ALL CHANNELS IN VDAC MODE, also from about 2.7V, is the lowest. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p15-fig22-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig21-caption-idd",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": "\nFigure 21. IDDD vs. Temperature\n",
+    "new": "\nFigure 21. I<sub>DD</sub> vs. Temperature\n",
+    "evidence": "PDF p15 (PyMuPDF spans): the Figure 21 caption is 'I' + subscript 'DD' (I_DD); the md had 'IDDD'.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig22-caption-idd",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": "\nFigure 22. IDDD vs. Supply Voltage\n",
+    "new": "\nFigure 22. I<sub>DD</sub> vs. Supply Voltage\n",
+    "evidence": "PDF p15 (PyMuPDF spans): the Figure 22 caption is 'I' + subscript 'DD' (I_DD); the md had 'IDDD'.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p15-fig20-caption-times",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 15,
+    "old": "\nFigure 20. VDAC Source and Sink Capability at RANGE = 2 x VREF\n",
+    "new": "\nFigure 20. VDAC Source and Sink Capability at RANGE = 2 × VREF\n",
+    "evidence": "PDF p15 (pdftotext): the Figure 20 caption prints '2 × VREF' (multiplication sign); the md had '2 x VREF'.",
+    "sources": [
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig24-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": "![Figure 24: IDAC Output Settling Time. A line graph showing IDAC output current (mA) on the y-axis (0 to 50) versus time (μs) on the x-axis (-3 to 6). The graph shows seven curves (OUT0 to OUT7) that are constant at approximately 13 mA until t=0, then rise sharply to approximately 40 mA by t=2 μs and remain stable. Text in the graph: OUT = 1/4 TO 3/4 SCALE, R_LOAD = 50Ω.](",
+    "new": "![Figure 24: IDAC Output Settling Time. A line graph showing IDAC OUTPUT CURRENT (mA) on the y-axis (0 to 50) versus TIME (μs) on the x-axis (-3 to 6). Eight overlapping curves (OUT0 to OUT7) are constant until t = 0, then rise and settle at a higher constant level within a few microseconds. Text in the graph: OUT = 1/4 TO 3/4 SCALE, R_LOAD = 50Ω. Read values from the image/PDF.](",
+    "evidence": "PDF p16 Figure 24 (render): the legend has eight channels (OUT0-OUT7), not seven; estimated current levels and settling time removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig24-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": ")\n\nFigure 24: IDAC Output Settling Time. A line graph showing IDAC output current (mA) on the y-axis (0 to 50) versus time (μs) on the x-axis (-3 to 6). The graph shows seven curves (OUT0 to OUT7) that are constant at approximately 13 mA until t=0, then rise sharply to approximately 40 mA by t=2 μs and remain stable. Text in the graph: OUT = 1/4 TO 3/4 SCALE, R\\_LOAD = 50Ω.\n",
+    "new": ")\n\nFigure 24: IDAC Output Settling Time. A line graph showing IDAC OUTPUT CURRENT (mA) on the y-axis (0 to 50) versus TIME (μs) on the x-axis (-3 to 6). Eight overlapping curves (OUT0 to OUT7) are constant until t = 0, then rise and settle at a higher constant level within a few microseconds. Text in the graph: OUT = 1/4 TO 3/4 SCALE, R_LOAD = 50Ω. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p16-fig24-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig27-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": "![Figure 27: Digital-to-Analog Glitch Impulse Ascending. A dual-axis graph showing VDAC amplitude (mV) on the left y-axis (-10 to 10) and IDAC amplitude (μA) on the right y-axis (-100 to 100) versus time (μs) on the x-axis (-5 to 5). It shows a positive impulse at t=0. Text in graph: AD5710R, AD5711R, AC COUPLED.](",
+    "new": "![Figure 27: Digital-to-Analog Glitch Impulse Ascending. A dual-axis graph showing VDAC AMPLITUDE (mV) on the left y-axis (-10 to 10) and IDAC AMPLITUDE (μA) on the right y-axis (-100 to 100) versus TIME (μs) on the x-axis (-5 to 5). Legend: IDAC (red), VDAC (light blue). Text in graph: AD5710R OUTPUT = 0xBFFF TO 0xC000; AD5711R OUTPUT = 0xBFF TO 0xC00; the AD5710R, AC COUPLED and AD5711R, AC COUPLED labels point to the two curves of each color. After t = 0 the curves show a small positive blip followed by a negative dip, deepest on the IDAC curves, and then return to the baseline within about 2 μs. Read values from the image/PDF.](",
+    "evidence": "PDF p16 Figure 27 (render): the glitch is mainly a negative dip (after a small positive blip), not a positive impulse; the legend and the printed code transitions were missing. Rewritten from the plot.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig27-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": ")\n\nFigure 27: Digital-to-Analog Glitch Impulse Ascending. A dual-axis graph showing VDAC amplitude (mV) on the left y-axis (-10 to 10) and IDAC amplitude (μA) on the right y-axis (-100 to 100) versus time (μs) on the x-axis (-5 to 5). It shows a positive impulse at t=0. Text in graph: AD5710R, AD5711R, AC COUPLED.\n",
+    "new": ")\n\nFigure 27: Digital-to-Analog Glitch Impulse Ascending. A dual-axis graph showing VDAC AMPLITUDE (mV) on the left y-axis (-10 to 10) and IDAC AMPLITUDE (μA) on the right y-axis (-100 to 100) versus TIME (μs) on the x-axis (-5 to 5). Legend: IDAC (red), VDAC (light blue). Text in graph: AD5710R OUTPUT = 0xBFFF TO 0xC000; AD5711R OUTPUT = 0xBFF TO 0xC00; the AD5710R, AC COUPLED and AD5711R, AC COUPLED labels point to the two curves of each color. After t = 0 the curves show a small positive blip followed by a negative dip, deepest on the IDAC curves, and then return to the baseline within about 2 μs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p16-fig27-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig25-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": "![Figure 25: VDAC Output Settling Time at Various Capacitive Loads. A line graph showing VDAC output voltage (V) on the y-axis (0 to 2.50) versus time (μs) on the x-axis (15 to 35). Multiple curves represent different capacitive loads (0.2nF to 47nF). All curves rise from ~0.65V to ~1.85V starting at t=20 μs. Text in graph: AVDD = PVDD = 3.3V, R_L = 2kΩ.](",
+    "new": "![Figure 25: VDAC Output Settling Time at Various Capacitive Loads. A line graph showing VDAC OUTPUT VOLTAGE (V) on the y-axis (0 to 2.50) versus TIME (μs) on the x-axis (15 to 35). Seven curves represent capacitive loads of 0.2nF, 2.2nF, 4.7nF, 6.8nF, 10nF, 22nF and 47nF. All curves rise from the same low level to the same final level starting near 20 μs; the larger loads rise slightly later and show more overshoot and ringing before settling. Text in graph: AVDD = PVDD = 3.3V, R_L = 2kΩ. Read values from the image/PDF.](",
+    "evidence": "PDF p16 Figure 25 (render): estimated start/end levels removed; the overshoot and ringing at large capacitive loads were not mentioned. Description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig25-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": ")\n\nFigure 25: VDAC Output Settling Time at Various Capacitive Loads. A line graph showing VDAC output voltage (V) on the y-axis (0 to 2.50) versus time (μs) on the x-axis (15 to 35). Multiple curves represent different capacitive loads (0.2nF to 47nF). All curves rise from ~0.65V to ~1.85V starting at t=20 μs. Text in graph: AVDD = PVDD = 3.3V, R\\_L = 2kΩ.\n",
+    "new": ")\n\nFigure 25: VDAC Output Settling Time at Various Capacitive Loads. A line graph showing VDAC OUTPUT VOLTAGE (V) on the y-axis (0 to 2.50) versus TIME (μs) on the x-axis (15 to 35). Seven curves represent capacitive loads of 0.2nF, 2.2nF, 4.7nF, 6.8nF, 10nF, 22nF and 47nF. All curves rise from the same low level to the same final level starting near 20 μs; the larger loads rise slightly later and show more overshoot and ringing before settling. Text in graph: AVDD = PVDD = 3.3V, R_L = 2kΩ. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p16-fig25-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig28-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": "![Figure 28: Digital-to-Analog Glitch Impulse Descending. A dual-axis graph showing VDAC amplitude (mV) on the left y-axis (-2 to 10) and IDAC amplitude (μA) on the right y-axis (-30 to 150) versus time (μs) on the x-axis (-5 to 5). It shows a negative impulse at t=0. Text in graph: AD5710R, AD5711R, AC COUPLED.](",
+    "new": "![Figure 28: Digital-to-Analog Glitch Impulse Descending. A dual-axis graph showing VDAC AMPLITUDE (mV) on the left y-axis (-2 to 10) and IDAC AMPLITUDE (μA) on the right y-axis (-30 to 150) versus TIME (μs) on the x-axis (-5 to 5). Legend: VDAC (light blue), IDAC (red). Text in graph: AD5710R OUTPUT = 0xC000 TO 0xBFFF; AD5711R OUTPUT = 0xC00 TO 0xBFF; labels AD5711R, AC COUPLED and AD5710R, AC COUPLED point to the curves. After t = 0 the curves show a positive peak, highest on the IDAC curves, and then return to the baseline within about 2 μs. Read values from the image/PDF.](",
+    "evidence": "PDF p16 Figure 28 (render): the glitch is a positive peak, not a negative impulse; the legend and the printed code transitions were missing. Rewritten from the plot.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig28-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": ")\n\nFigure 28: Digital-to-Analog Glitch Impulse Descending. A dual-axis graph showing VDAC amplitude (mV) on the left y-axis (-2 to 10) and IDAC amplitude (μA) on the right y-axis (-30 to 150) versus time (μs) on the x-axis (-5 to 5). It shows a negative impulse at t=0. Text in graph: AD5710R, AD5711R, AC COUPLED.\n",
+    "new": ")\n\nFigure 28: Digital-to-Analog Glitch Impulse Descending. A dual-axis graph showing VDAC AMPLITUDE (mV) on the left y-axis (-2 to 10) and IDAC AMPLITUDE (μA) on the right y-axis (-30 to 150) versus TIME (μs) on the x-axis (-5 to 5). Legend: VDAC (light blue), IDAC (red). Text in graph: AD5710R OUTPUT = 0xC000 TO 0xBFFF; AD5711R OUTPUT = 0xC00 TO 0xBFF; labels AD5711R, AC COUPLED and AD5710R, AC COUPLED point to the curves. After t = 0 the curves show a positive peak, highest on the IDAC curves, and then return to the baseline within about 2 μs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p16-fig28-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig26-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": "![Figure 26: IDAC and VDAC Channel Exiting Power-Down to Midscale. A dual-axis graph showing IDAC output current (mA) on the left y-axis (0 to 35) and output voltage (V) on the right y-axis (0 to 5) versus time (μs) on the x-axis (-1 to 10). It shows a transition from power-down to midscale. Text in graph: OUT = 0.5 x FS, IDAC R_LOAD = 50Ω, VDAC R_LOAD = 2kΩ, C_LOAD = 200pF.](",
+    "new": "![Figure 26: IDAC and VDAC Channel Exiting Power-Down to Midscale. A dual-axis graph showing IDAC OUTPUT CURRENT (mA) on the left y-axis (0 to 35) and OUTPUT VOLTAGE (V) on the right y-axis (0 to 5) versus TIME (μs) on the x-axis (-1 to 10). Legend: VOUT0, RANGE = VREF (red), VOUT0, RANGE = 2 × VREF (light blue), IOUT0 (teal), SCLK (dark blue). The SCLK burst ends at t = 0; the two VOUT0 curves start rising a little after 2 μs and level off (the 2 × VREF curve higher and later); IOUT0 rises steeply after about 3 μs, with a small overshoot, and stays constant. Text in graph: OUT = 0.5 × FS, IDAC R_LOAD = 50Ω, VDAC R_LOAD = 2kΩ, C_LOAD = 200pF. Read values from the image/PDF.](",
+    "evidence": "PDF p16 Figure 26 (render): the legend (VOUT0 for both ranges, IOUT0, SCLK) and the curve shapes were missing; '0.5 x FS' is printed '0.5 × FS'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig26-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": ")\n\nFigure 26: IDAC and VDAC Channel Exiting Power-Down to Midscale. A dual-axis graph showing IDAC output current (mA) on the left y-axis (0 to 35) and output voltage (V) on the right y-axis (0 to 5) versus time (μs) on the x-axis (-1 to 10). It shows a transition from power-down to midscale. Text in graph: OUT = 0.5 x FS, IDAC R\\_LOAD = 50Ω, VDAC R\\_LOAD = 2kΩ, C\\_LOAD = 200pF.\n",
+    "new": ")\n\nFigure 26: IDAC and VDAC Channel Exiting Power-Down to Midscale. A dual-axis graph showing IDAC OUTPUT CURRENT (mA) on the left y-axis (0 to 35) and OUTPUT VOLTAGE (V) on the right y-axis (0 to 5) versus TIME (μs) on the x-axis (-1 to 10). Legend: VOUT0, RANGE = VREF (red), VOUT0, RANGE = 2 × VREF (light blue), IOUT0 (teal), SCLK (dark blue). The SCLK burst ends at t = 0; the two VOUT0 curves start rising a little after 2 μs and level off (the 2 × VREF curve higher and later); IOUT0 rises steeply after about 3 μs, with a small overshoot, and stays constant. Text in graph: OUT = 0.5 × FS, IDAC R_LOAD = 50Ω, VDAC R_LOAD = 2kΩ, C_LOAD = 200pF. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p16-fig26-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig29-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": "![Figure 29: IDAC and VDAC Digital Feedthrough, OUT1 and OUT2. A dual-axis graph showing IDAC output current (μA) on the left y-axis (-10 to 10) and VDAC output voltage (μV) on the right y-axis (-200 to 200) versus time (μs) on the x-axis (-34 to 5). It shows high-frequency noise. Text in graph: OUTPUT = 0.5 x FS, ATTACKER CHANNELS = ZS TO FS.](",
+    "new": "![Figure 29: IDAC and VDAC Digital Feedthrough, OUT1 and OUT2. A dual-axis graph showing IDAC OUTPUT CURRENT (μA), AC COUPLED on the left y-axis (-10 to 10) and VDAC OUTPUT VOLTAGE (μV), AC COUPLED on the right y-axis (-200 to 200) versus TIME (μs) on the x-axis (-34 to 5). Legend: VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow). All four traces show small periodic feedthrough spikes around their baselines from -34 μs to about 0 μs. Text in graph: OUTPUT = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS. Read values from the image/PDF.](",
+    "evidence": "PDF p16 Figure 29 (render): the legend (VOUT1, VOUT2, IOUT1, IOUT2) was missing, the axes are AC coupled, and '0.5 x FS' is printed '0.5 × FS'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p16-fig29-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 16,
+    "old": ")\n\nFigure 29: IDAC and VDAC Digital Feedthrough, OUT1 and OUT2. A dual-axis graph showing IDAC output current (μA) on the left y-axis (-10 to 10) and VDAC output voltage (μV) on the right y-axis (-200 to 200) versus time (μs) on the x-axis (-34 to 5). It shows high-frequency noise. Text in graph: OUTPUT = 0.5 x FS, ATTACKER CHANNELS = ZS TO FS.\n",
+    "new": ")\n\nFigure 29: IDAC and VDAC Digital Feedthrough, OUT1 and OUT2. A dual-axis graph showing IDAC OUTPUT CURRENT (μA), AC COUPLED on the left y-axis (-10 to 10) and VDAC OUTPUT VOLTAGE (μV), AC COUPLED on the right y-axis (-200 to 200) versus TIME (μs) on the x-axis (-34 to 5). Legend: VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow). All four traces show small periodic feedthrough spikes around their baselines from -34 μs to about 0 μs. Text in graph: OUTPUT = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p16-fig29-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig30-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": "![Figure 30: IDAC and VDAC Digital Feedthrough, OUT0 and OUT4. This line graph plots IDAC output current (µA) and VDAC output voltage (mV) against time (µs). The x-axis ranges from -34 to 5 µs. The left y-axis for IDAC ranges from -400 to 400 µA, and the right y-axis for VDAC ranges from -5 to 5 mV. The plot shows a steady-state oscillation for VOUT0 (red) and IOUT0 (yellow) around 0, while VOUT4 (cyan) and IOUT4 (green) show a high-frequency oscillation between approximately -100 and 100 µA and -1 and 1 mV. Text in the plot area specifies: 'OUTPUT = 0.5 x FS', 'ATTACKERS CHANNELS = FS'.](",
+    "new": "![Figure 30: IDAC and VDAC Digital Feedthrough, OUT0 and OUT4. Dual-axis plot of IDAC OUTPUT CURRENT (μA), AC COUPLED (left y-axis, -400 to 400) and VDAC OUTPUT VOLTAGE (mV), AC COUPLED (right y-axis, -5 to 5) against TIME (μs) from -34 to 5. Legend: VOUT0 (red), VOUT4 (light blue), IOUT4 (teal), IOUT0 (yellow). From about -33 μs to 0 μs the VOUT4, IOUT4 and IOUT0 traces show a regular train of feedthrough spikes of similar size; VOUT0 stays near zero apart from isolated spikes at the start and end of the burst. Text in the plot area: 'OUTPUT = 0.5 × FS', 'ATTACKERS CHANNELS = FS'. Read values from the image/PDF.](",
+    "evidence": "PDF p17 Figure 30 (render): the AI text assigned VOUT0 red / IOUT0 yellow 'around 0' and VOUT4 cyan / IOUT4 green oscillating; in the drawing VOUT4, IOUT4 and IOUT0 all carry the spike train and VOUT0 is quiet. Rewritten from the plot; estimated levels removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig30-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": ")\n\nFigure 30: IDAC and VDAC Digital Feedthrough, OUT0 and OUT4. This line graph plots IDAC output current (µA) and VDAC output voltage (mV) against time (µs). The x-axis ranges from -34 to 5 µs. The left y-axis for IDAC ranges from -400 to 400 µA, and the right y-axis for VDAC ranges from -5 to 5 mV. The plot shows a steady-state oscillation for VOUT0 (red) and IOUT0 (yellow) around 0, while VOUT4 (cyan) and IOUT4 (green) show a high-frequency oscillation between approximately -100 and 100 µA and -1 and 1 mV. Text in the plot area specifies: 'OUTPUT = 0.5 x FS', 'ATTACKERS CHANNELS = FS'.\n",
+    "new": ")\n\nFigure 30: IDAC and VDAC Digital Feedthrough, OUT0 and OUT4. Dual-axis plot of IDAC OUTPUT CURRENT (μA), AC COUPLED (left y-axis, -400 to 400) and VDAC OUTPUT VOLTAGE (mV), AC COUPLED (right y-axis, -5 to 5) against TIME (μs) from -34 to 5. Legend: VOUT0 (red), VOUT4 (light blue), IOUT4 (teal), IOUT0 (yellow). From about -33 μs to 0 μs the VOUT4, IOUT4 and IOUT0 traces show a regular train of feedthrough spikes of similar size; VOUT0 stays near zero apart from isolated spikes at the start and end of the burst. Text in the plot area: 'OUTPUT = 0.5 × FS', 'ATTACKERS CHANNELS = FS'. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p17-fig30-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig33-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": "![Figure 33: VDAC Analog Crosstalk, OUT0. This line graph plots VDAC output voltage (mV) against time (µs). The x-axis ranges from -1 to 7 µs. The y-axis ranges from -15 to 15 mV. It shows the response of VOUT0 (red) and IOUT0 (yellow) to changes in attacker channels VOUT1 (cyan), VOUT2 (green), IOUT1 (dark blue), and IOUT2 (orange). VOUT0 remains near 0, while IOUT0 shows a significant negative excursion reaching about -11 mV between 3 and 4 µs. Text in the plot area specifies: 'VOUT0 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.](",
+    "new": "![Figure 33: VDAC Analog Crosstalk, OUT0. This line graph plots VDAC OUTPUT VOLTAGE (mV), AC COUPLED (-15 to 15) against TIME (μs) from -1 to 7. The victim is VOUT0 (VOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); each curve is the VOUT0 response for one attacker channel: VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow). The VOUT1 and VOUT2 attackers cause only small bumps near 2 μs to 3 μs; the IOUT1 attacker causes a negative step starting a little after 2 μs that recovers by about 6 μs; the IOUT2 attacker causes the largest, sharp negative spike a little after 3 μs, then follows the IOUT1 recovery. Read values from the image/PDF.](",
+    "evidence": "PDF p17 Figure 33 (render): VOUT0 is the victim, not a trace beside IOUT0; the legend lists the attacker channels VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow), and the AI text's 'VOUT0 (red) and IOUT0 (yellow)' traces do not exist. Rewritten from the plot; estimated levels removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig33-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": ")\n\nFigure 33: VDAC Analog Crosstalk, OUT0. This line graph plots VDAC output voltage (mV) against time (µs). The x-axis ranges from -1 to 7 µs. The y-axis ranges from -15 to 15 mV. It shows the response of VOUT0 (red) and IOUT0 (yellow) to changes in attacker channels VOUT1 (cyan), VOUT2 (green), IOUT1 (dark blue), and IOUT2 (orange). VOUT0 remains near 0, while IOUT0 shows a significant negative excursion reaching about -11 mV between 3 and 4 µs. Text in the plot area specifies: 'VOUT0 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.\n",
+    "new": ")\n\nFigure 33: VDAC Analog Crosstalk, OUT0. This line graph plots VDAC OUTPUT VOLTAGE (mV), AC COUPLED (-15 to 15) against TIME (μs) from -1 to 7. The victim is VOUT0 (VOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); each curve is the VOUT0 response for one attacker channel: VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow). The VOUT1 and VOUT2 attackers cause only small bumps near 2 μs to 3 μs; the IOUT1 attacker causes a negative step starting a little after 2 μs that recovers by about 6 μs; the IOUT2 attacker causes the largest, sharp negative spike a little after 3 μs, then follows the IOUT1 recovery. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p17-fig33-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig31-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": "![Figure 31: IDAC and VDAC Digital Crosstalk, OUT0. This line graph plots IDAC output current (µA) and VDAC output voltage (mV) against time (µs). The x-axis ranges from -0.5 to 4.0 µs. The left y-axis for IDAC ranges from -200 to 200 µA, and the right y-axis for VDAC ranges from -5 to 5 mV. It shows the response of VOUT0 (red) and IOUT0 (yellow) to changes in attacker channel VOUT1 (cyan). VOUT0 shows a negative excursion to about -40 µA, while IOUT0 shows a large negative excursion to about -120 µA. Text in the plot area specifies: 'OUT0 (VICTIM) = 0.5 x FS', 'ATTACKERS CHANNELS = ZS TO FS'.](",
+    "new": "![Figure 31: IDAC and VDAC Digital Crosstalk, OUT0. Dual-axis plot of IDAC OUTPUT CURRENT (μA), AC COUPLED (left y-axis, -200 to 200) and VDAC OUTPUT VOLTAGE (mV), AC COUPLED (right y-axis, -5 to 5) against TIME (μs) from -0.5 to 4.0. The victim is OUT0 (OUT0 (VICTIM) = 0.5 × FS, ATTACKERS CHANNELS = ZS TO FS); the curves are for the attacker channels VOUT1 (red) and IOUT1 (light blue). The IOUT1 curve starts high, swings to a deep negative dip before 0.5 μs and overshoots once before settling; the VOUT1 curve has a smaller positive bump followed by a negative dip near 0.7 μs. Both settle by about 2 μs. Read values from the image/PDF.](",
+    "evidence": "PDF p17 Figure 31 (render): the legend lists the attacker channels VOUT1 (red) and IOUT1 (light blue); the AI text described 'VOUT0 (red) and IOUT0 (yellow)' responding to 'VOUT1 (cyan)'. Rewritten from the plot; estimated levels removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig31-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": ")\n\nFigure 31: IDAC and VDAC Digital Crosstalk, OUT0. This line graph plots IDAC output current (µA) and VDAC output voltage (mV) against time (µs). The x-axis ranges from -0.5 to 4.0 µs. The left y-axis for IDAC ranges from -200 to 200 µA, and the right y-axis for VDAC ranges from -5 to 5 mV. It shows the response of VOUT0 (red) and IOUT0 (yellow) to changes in attacker channel VOUT1 (cyan). VOUT0 shows a negative excursion to about -40 µA, while IOUT0 shows a large negative excursion to about -120 µA. Text in the plot area specifies: 'OUT0 (VICTIM) = 0.5 x FS', 'ATTACKERS CHANNELS = ZS TO FS'.\n",
+    "new": ")\n\nFigure 31: IDAC and VDAC Digital Crosstalk, OUT0. Dual-axis plot of IDAC OUTPUT CURRENT (μA), AC COUPLED (left y-axis, -200 to 200) and VDAC OUTPUT VOLTAGE (mV), AC COUPLED (right y-axis, -5 to 5) against TIME (μs) from -0.5 to 4.0. The victim is OUT0 (OUT0 (VICTIM) = 0.5 × FS, ATTACKERS CHANNELS = ZS TO FS); the curves are for the attacker channels VOUT1 (red) and IOUT1 (light blue). The IOUT1 curve starts high, swings to a deep negative dip before 0.5 μs and overshoots once before settling; the VOUT1 curve has a smaller positive bump followed by a negative dip near 0.7 μs. Both settle by about 2 μs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p17-fig31-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig34-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": "![Figure 34: IDAC Analog Crosstalk, OUT0. This line graph plots IDAC output current (µA) against time (µs). The x-axis ranges from -1 to 10 µs. The y-axis ranges from -100 to 100 µA. It shows the response of IOUT0 (yellow) to changes in attacker channels VOUT1 (cyan), VOUT2 (green), IOUT1 (dark blue), and IOUT2 (orange). IOUT0 shows small oscillations around 0 µA. Text in the plot area specifies: 'IOUT0 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.](",
+    "new": "![Figure 34: IDAC Analog Crosstalk, OUT0. This line graph plots IDAC OUTPUT CURRENT (μA), AC COUPLED (-100 to 100) against TIME (μs); the x-axis labels are printed -1, 0, 1, 2, 3, 5, 6, 7, 8, 9, 10 (no 4). The victim is IOUT0 (IOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); each curve is the IOUT0 response for one attacker channel: VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow). All curves show small glitches near 0 μs to 1 μs; the IOUT1 attacker adds a small positive step from about 2 μs, and the IOUT2 attacker gives the largest positive/negative spike a little after 2 μs. Read values from the image/PDF.](",
+    "evidence": "PDF p17 Figure 34 (render): IOUT0 is the victim; the curves are for attackers VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow), not an IOUT0 trace. The x-axis skips 4 as printed. Rewritten from the plot; estimated levels removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig34-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": ")\n\nFigure 34: IDAC Analog Crosstalk, OUT0. This line graph plots IDAC output current (µA) against time (µs). The x-axis ranges from -1 to 10 µs. The y-axis ranges from -100 to 100 µA. It shows the response of IOUT0 (yellow) to changes in attacker channels VOUT1 (cyan), VOUT2 (green), IOUT1 (dark blue), and IOUT2 (orange). IOUT0 shows small oscillations around 0 µA. Text in the plot area specifies: 'IOUT0 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.\n",
+    "new": ")\n\nFigure 34: IDAC Analog Crosstalk, OUT0. This line graph plots IDAC OUTPUT CURRENT (μA), AC COUPLED (-100 to 100) against TIME (μs); the x-axis labels are printed -1, 0, 1, 2, 3, 5, 6, 7, 8, 9, 10 (no 4). The victim is IOUT0 (IOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); each curve is the IOUT0 response for one attacker channel: VOUT1 (red), VOUT2 (light blue), IOUT1 (teal), IOUT2 (yellow). All curves show small glitches near 0 μs to 1 μs; the IOUT1 attacker adds a small positive step from about 2 μs, and the IOUT2 attacker gives the largest positive/negative spike a little after 2 μs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p17-fig34-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig32-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": "![Figure 32: IDAC and VDAC Digital Crosstalk, OUT4. This line graph plots IDAC output current (mA) and VDAC output voltage (mV) against time (µs). The x-axis ranges from -0.5 to 4.0 µs. The left y-axis for IDAC ranges from -200 to 200 mA, and the right y-axis for VDAC ranges from -8 to 8 mV. It shows the response of VOUT0 (red) and IOUT0 (yellow) to changes in attacker channel IOUT4 (green). VOUT0 shows a positive excursion to about 40 mA, while IOUT0 shows a large positive excursion to about 100 mA. Text in the plot area specifies: 'OUT4 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.](",
+    "new": "![Figure 32: IDAC and VDAC Digital Crosstalk, OUT4. Dual-axis plot of IDAC OUTPUT CURRENT(mA), AC COUPLED (left y-axis as printed, -200 to 200) and VDAC OUTPUT VOLTAGE (mV), AC COUPLED (right y-axis, -8 to 8) against TIME (μs) from -0.5 to 4.0. The victim is OUT4 (OUT4 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); the curves are for the attacker channels VOUT0 (red) and IOUT0 (light blue). The IOUT0 curve has a large positive peak near 0.4 μs followed by a negative dip; the VOUT0 curve has a small spike near 0.3 μs and a smaller positive bump. Both settle by about 1.5 μs to 2 μs. Read values from the image/PDF.](",
+    "evidence": "PDF p17 Figure 32 (render): the legend lists the attacker channels VOUT0 (red) and IOUT0 (light blue); the AI text described 'VOUT0 (red) and IOUT0 (yellow)' responding to 'IOUT4 (green)'. The left-axis unit '(mA)' is kept as printed. Rewritten from the plot; estimated levels removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig32-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": ")\n\nFigure 32: IDAC and VDAC Digital Crosstalk, OUT4. This line graph plots IDAC output current (mA) and VDAC output voltage (mV) against time (µs). The x-axis ranges from -0.5 to 4.0 µs. The left y-axis for IDAC ranges from -200 to 200 mA, and the right y-axis for VDAC ranges from -8 to 8 mV. It shows the response of VOUT0 (red) and IOUT0 (yellow) to changes in attacker channel IOUT4 (green). VOUT0 shows a positive excursion to about 40 mA, while IOUT0 shows a large positive excursion to about 100 mA. Text in the plot area specifies: 'OUT4 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.\n",
+    "new": ")\n\nFigure 32: IDAC and VDAC Digital Crosstalk, OUT4. Dual-axis plot of IDAC OUTPUT CURRENT(mA), AC COUPLED (left y-axis as printed, -200 to 200) and VDAC OUTPUT VOLTAGE (mV), AC COUPLED (right y-axis, -8 to 8) against TIME (μs) from -0.5 to 4.0. The victim is OUT4 (OUT4 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); the curves are for the attacker channels VOUT0 (red) and IOUT0 (light blue). The IOUT0 curve has a large positive peak near 0.4 μs followed by a negative dip; the VOUT0 curve has a small spike near 0.3 μs and a smaller positive bump. Both settle by about 1.5 μs to 2 μs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p17-fig32-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig35-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": "![Figure 35: VDAC Analog Crosstalk, OUT5. This line graph plots VDAC output voltage (mV) against time (µs). The x-axis ranges from 0 to 10 µs. The y-axis ranges from -30 to 30 mV. It shows the response of VOUT5 (red) and IOUT5 (yellow) to changes in attacker channels VOUT4 (cyan), VOUT6 (green), VOUT7 (dark blue), IOUT4 (orange), IOUT6 (black), and IOUT7 (purple). VOUT5 remains near 0, while IOUT5 shows a significant negative excursion reaching about -18 mV between 4 and 5 µs. Text in the plot area specifies: 'VOUT5 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.](",
+    "new": "![Figure 35: VDAC Analog Crosstalk, OUT5. This line graph plots VDAC OUTPUT VOLTAGE (mV), AC COUPLED (-30 to 30) against TIME (μs) from 0 to 10. The victim is VOUT5 (VOUT5 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); each curve is the VOUT5 response for one attacker channel: VOUT4 (red), VOUT6 (light blue), VOUT7 (teal), IOUT4 (yellow), IOUT6 (black), IOUT7 (purple). The VDAC attackers cause only small bumps near 3 μs; IOUT7 gives a small negative shift between about 1.5 μs and 4 μs; IOUT6 gives the deepest negative spike a little before 4 μs; IOUT4 gives a negative spike near 6 μs followed by ringing. Read values from the image/PDF.](",
+    "evidence": "PDF p17 Figure 35 (render): VOUT5 is the victim; the six curves are for the attackers VOUT4, VOUT6, VOUT7, IOUT4, IOUT6, IOUT7 with different colors than the AI text listed, and the largest excursions belong to IOUT6 and IOUT4, not 'IOUT5'. Rewritten from the plot; estimated levels removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p17-fig35-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 17,
+    "old": ")\n\nFigure 35: VDAC Analog Crosstalk, OUT5. This line graph plots VDAC output voltage (mV) against time (µs). The x-axis ranges from 0 to 10 µs. The y-axis ranges from -30 to 30 mV. It shows the response of VOUT5 (red) and IOUT5 (yellow) to changes in attacker channels VOUT4 (cyan), VOUT6 (green), VOUT7 (dark blue), IOUT4 (orange), IOUT6 (black), and IOUT7 (purple). VOUT5 remains near 0, while IOUT5 shows a significant negative excursion reaching about -18 mV between 4 and 5 µs. Text in the plot area specifies: 'VOUT5 (VICTIM) = 0.5 x FS', 'ATTACKER CHANNELS = ZS TO FS'.\n",
+    "new": ")\n\nFigure 35: VDAC Analog Crosstalk, OUT5. This line graph plots VDAC OUTPUT VOLTAGE (mV), AC COUPLED (-30 to 30) against TIME (μs) from 0 to 10. The victim is VOUT5 (VOUT5 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS); each curve is the VOUT5 response for one attacker channel: VOUT4 (red), VOUT6 (light blue), VOUT7 (teal), IOUT4 (yellow), IOUT6 (black), IOUT7 (purple). The VDAC attackers cause only small bumps near 3 μs; IOUT7 gives a small negative shift between about 1.5 μs and 4 μs; IOUT6 gives the deepest negative spike a little before 4 μs; IOUT4 gives a negative spike near 6 μs followed by ringing. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p17-fig35-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig36-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": "![Figure 36: IDAC Analog Crosstalk, OUT5. A line graph showing IDAC output current in microamperes (µA) over time in microseconds (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -1 to 11 µs. The victim channel is IOUT5 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT4, VOUT6, IOUT4, and IOUT6. The graph shows significant crosstalk spikes from the attacker channels, particularly IOUT4 and IOUT6, reaching up to 160 µA and down to -160 µA around 6-7 µs.](",
+    "new": "![Figure 36: IDAC Analog Crosstalk, OUT5. A line graph showing IDAC OUTPUT CURRENT (µA), AC COUPLED over TIME (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -1 to 11 µs. The victim channel is IOUT5 (IOUT5 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the IOUT5 response for one attacker channel: VOUT4 (red), VOUT6 (light blue), IOUT4 (teal), IOUT6 (yellow). The IOUT4 attacker gives the largest response, a positive spike a little after 6 µs followed by a positive plateau that decays by about 9 µs; the IOUT6 attacker gives small positive/negative spikes between about 3.5 µs and 5 µs; VOUT4 gives a small positive bump between about 3 µs and 7 µs; VOUT6 stays near zero. Read values from the image/PDF.](",
+    "evidence": "PDF p18 Figure 36 (render): the AI text put spikes 'up to 160 µA and down to -160 µA around 6-7 µs' on both IOUT4 and IOUT6; the IOUT4 response is a positive spike after 6 µs, the IOUT6 response is small and earlier, and there is no -160 µA excursion. Estimated levels removed; description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig36-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": ")\n\nFigure 36: IDAC Analog Crosstalk, OUT5. A line graph showing IDAC output current in microamperes (µA) over time in microseconds (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -1 to 11 µs. The victim channel is IOUT5 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT4, VOUT6, IOUT4, and IOUT6. The graph shows significant crosstalk spikes from the attacker channels, particularly IOUT4 and IOUT6, reaching up to 160 µA and down to -160 µA around 6-7 µs.\n",
+    "new": ")\n\nFigure 36: IDAC Analog Crosstalk, OUT5. A line graph showing IDAC OUTPUT CURRENT (µA), AC COUPLED over TIME (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -1 to 11 µs. The victim channel is IOUT5 (IOUT5 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the IOUT5 response for one attacker channel: VOUT4 (red), VOUT6 (light blue), IOUT4 (teal), IOUT6 (yellow). The IOUT4 attacker gives the largest response, a positive spike a little after 6 µs followed by a positive plateau that decays by about 9 µs; the IOUT6 attacker gives small positive/negative spikes between about 3.5 µs and 5 µs; VOUT4 gives a small positive bump between about 3 µs and 7 µs; VOUT6 stays near zero. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p18-fig36-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig39-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": "![Figure 39: VDAC DAC-to-DAC Crosstalk, OUT5. A line graph showing VDAC output voltage in millivolts (mV) over time in microseconds (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 6.5 µs. The victim channel is VOUT5 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT4, IOUT4, IOUT6, and IOUT7. The graph shows crosstalk voltage spikes from the attacker channels, with peaks around 3 mV and troughs around -8 mV between 0.5 and 3.5 µs.](",
+    "new": "![Figure 39: VDAC DAC-to-DAC Crosstalk, OUT5. A line graph showing VDAC OUTPUT VOLTAGE (mV), AC COUPLED over TIME (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 6.5 µs. The victim channel is VOUT5 (VOUT5 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the VOUT5 response for one attacker channel: VOUT4 (red), IOUT4 (light blue), IOUT6 (teal), IOUT7 (yellow). The IOUT6 and IOUT4 attackers cause the deepest negative dips near 1 µs; IOUT7 causes a broad negative excursion from about 0.3 µs to 3 µs; the VOUT4 attacker causes a small positive offset that returns to zero after about 4.5 µs. Read values from the image/PDF.](",
+    "evidence": "PDF p18 Figure 39 (render): the curve colors and the assignment of the dips and the positive offset to the attackers were missing. Estimated levels removed; description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig39-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": ")\n\nFigure 39: VDAC DAC-to-DAC Crosstalk, OUT5. A line graph showing VDAC output voltage in millivolts (mV) over time in microseconds (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 6.5 µs. The victim channel is VOUT5 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT4, IOUT4, IOUT6, and IOUT7. The graph shows crosstalk voltage spikes from the attacker channels, with peaks around 3 mV and troughs around -8 mV between 0.5 and 3.5 µs.\n",
+    "new": ")\n\nFigure 39: VDAC DAC-to-DAC Crosstalk, OUT5. A line graph showing VDAC OUTPUT VOLTAGE (mV), AC COUPLED over TIME (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 6.5 µs. The victim channel is VOUT5 (VOUT5 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the VOUT5 response for one attacker channel: VOUT4 (red), IOUT4 (light blue), IOUT6 (teal), IOUT7 (yellow). The IOUT6 and IOUT4 attackers cause the deepest negative dips near 1 µs; IOUT7 causes a broad negative excursion from about 0.3 µs to 3 µs; the VOUT4 attacker causes a small positive offset that returns to zero after about 4.5 µs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p18-fig39-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig37-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": "![Figure 37: VDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing VDAC output voltage in millivolts (mV) over time in microseconds (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 5.5 µs. The victim channel is VOUT0 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT1 and IOUT1. The graph shows a negative voltage sag from the attacker channels, reaching approximately -6 mV between 0.6 and 2.2 µs.](",
+    "new": "![Figure 37: VDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing VDAC OUTPUT VOLTAGE (mV), AC COUPLED over TIME (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 5.5 µs. The victim channel is VOUT0 (VOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the VOUT0 response for one attacker channel: VOUT1 (red) and IOUT1 (light blue). The VOUT1 attacker causes only a small dip before about 0.6 µs; the IOUT1 attacker causes a negative sag that starts near 0.3 µs, stays roughly flat until about 3.9 µs and then recovers by about 5 µs. Read values from the image/PDF.](",
+    "evidence": "PDF p18 Figure 37 (render): the sag caused by the IOUT1 attacker lasts until about 3.9 µs, not 'between 0.6 and 2.2 µs'; curve colors added. Estimated levels removed; description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig37-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": ")\n\nFigure 37: VDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing VDAC output voltage in millivolts (mV) over time in microseconds (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 5.5 µs. The victim channel is VOUT0 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT1 and IOUT1. The graph shows a negative voltage sag from the attacker channels, reaching approximately -6 mV between 0.6 and 2.2 µs.\n",
+    "new": ")\n\nFigure 37: VDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing VDAC OUTPUT VOLTAGE (mV), AC COUPLED over TIME (µs). The y-axis ranges from -15 to 15 mV, and the x-axis ranges from -0.5 to 5.5 µs. The victim channel is VOUT0 (VOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the VOUT0 response for one attacker channel: VOUT1 (red) and IOUT1 (light blue). The VOUT1 attacker causes only a small dip before about 0.6 µs; the IOUT1 attacker causes a negative sag that starts near 0.3 µs, stays roughly flat until about 3.9 µs and then recovers by about 5 µs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p18-fig37-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig40-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": "![Figure 40: IDAC DAC-to-DAC Crosstalk, OUT4. A line graph showing IDAC output current in microamperes (µA) over time in microseconds (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -0.5 to 1.5 µs. The victim channel is IOUT4 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT0 and IOUT0. The graph shows a positive current spike from the attacker channels, reaching approximately 80 µA around 0.1 µs.](",
+    "new": "![Figure 40: IDAC DAC-to-DAC Crosstalk, OUT4. A line graph showing IDAC OUTPUT CURRENT (µA), AC COUPLED over TIME (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -0.5 to 1.5 µs. The victim channel is IOUT4 (OUT4 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the IOUT4 response for one attacker channel: VOUT0 (red) and IOUT0 (teal). Both show nearly the same positive bump peaking near 0.4 µs, followed by a small negative undershoot near 0.8 µs and a slow return to zero. Read values from the image/PDF.](",
+    "evidence": "PDF p18 Figure 40 (render): the positive bump peaks near 0.4 µs (not 'around 0.1 µs') and is followed by a small undershoot; curve colors added. Estimated levels removed; description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig40-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": ")\n\nFigure 40: IDAC DAC-to-DAC Crosstalk, OUT4. A line graph showing IDAC output current in microamperes (µA) over time in microseconds (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -0.5 to 1.5 µs. The victim channel is IOUT4 at 0.5 FS. Attacker channels are ZS to FS, specifically VOUT0 and IOUT0. The graph shows a positive current spike from the attacker channels, reaching approximately 80 µA around 0.1 µs.\n",
+    "new": ")\n\nFigure 40: IDAC DAC-to-DAC Crosstalk, OUT4. A line graph showing IDAC OUTPUT CURRENT (µA), AC COUPLED over TIME (µs). The y-axis ranges from -400 to 400 µA, and the x-axis ranges from -0.5 to 1.5 µs. The victim channel is IOUT4 (OUT4 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the IOUT4 response for one attacker channel: VOUT0 (red) and IOUT0 (teal). Both show nearly the same positive bump peaking near 0.4 µs, followed by a small negative undershoot near 0.8 µs and a slow return to zero. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p18-fig40-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig38-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": "![Figure 38: IDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing IDAC output current in microamperes (µA) over time in microseconds (µs). The y-axis ranges from -200 to 200 µA, and the x-axis ranges from -0.5 to 4.0 µs. The victim channel is IOUT0 at 0.5 FS. Attacker channels are ZS to FS, specifically IOUT1 and VOUT1. The graph shows a negative current spike from the attacker channels, reaching approximately -100 µA around 0.1 µs.](",
+    "new": "![Figure 38: IDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing IDAC OUTPUT CURRENT (µA), AC COUPLED over TIME (µs). The y-axis ranges from -200 to 200 µA, and the x-axis ranges from -0.5 to 4.0 µs. The victim channel is IOUT0 (IOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the IOUT0 response for one attacker channel: IOUT1 (red) and VOUT1 (light blue). Both start with a negative spike at the left edge of the plot (before 0 µs), recover with a small overshoot near 0 µs and then stay close to zero; the IOUT1 curve keeps a slight positive offset until about 2.5 µs. Read values from the image/PDF.](",
+    "evidence": "PDF p18 Figure 38 (render): the negative spike is at the left edge of the plot (before 0 µs), not 'around 0.1 µs'; curve colors added. Estimated levels removed; description of shapes only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p18-fig38-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 18,
+    "old": ")\n\nFigure 38: IDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing IDAC output current in microamperes (µA) over time in microseconds (µs). The y-axis ranges from -200 to 200 µA, and the x-axis ranges from -0.5 to 4.0 µs. The victim channel is IOUT0 at 0.5 FS. Attacker channels are ZS to FS, specifically IOUT1 and VOUT1. The graph shows a negative current spike from the attacker channels, reaching approximately -100 µA around 0.1 µs.\n",
+    "new": ")\n\nFigure 38: IDAC DAC-to-DAC Crosstalk, OUT0. A line graph showing IDAC OUTPUT CURRENT (µA), AC COUPLED over TIME (µs). The y-axis ranges from -200 to 200 µA, and the x-axis ranges from -0.5 to 4.0 µs. The victim channel is IOUT0 (IOUT0 (VICTIM) = 0.5 × FS, ATTACKER CHANNELS = ZS TO FS). Each curve is the IOUT0 response for one attacker channel: IOUT1 (red) and VOUT1 (light blue). Both start with a negative spike at the left edge of the plot (before 0 µs), recover with a small overshoot near 0 µs and then stay close to zero; the IOUT1 curve keeps a slight positive offset until about 2.5 µs. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p18-fig38-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p19-fig45-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 19,
+    "old": "![Figure 45: Internal Reference NSD. A log-log plot of VREF output noise spectral density in nV/√Hz versus frequency in Hz. The y-axis ranges from 0 to 700 nV/√Hz, and the x-axis ranges from 10 Hz to 10 MHz. The noise decreases with frequency, leveling off around 100 Hz. Test conditions: AVDD = PVDD = 3.3V, RANGE = VREF, NO CAP LOAD.](",
+    "new": "![Figure 45: Internal Reference NSD. A plot of VREF OUTPUT NSD (nV/√Hz) on a linear y-axis (0 to 700) versus FREQUENCY (Hz) on a logarithmic x-axis (10 Hz to 10 MHz), legend VREF. The noise falls steeply from 10 Hz to about 1 kHz, is nearly flat from about 1 kHz to 1 MHz, rises slightly to a small peak near 2 MHz to 3 MHz and then drops toward 10 MHz. Test conditions: AVDD = PVDD = 3.3V, RANGE = VREF, NO CAP LOAD. Read values from the image/PDF.](",
+    "evidence": "PDF p19 Figure 45 (render): the y-axis is linear (only the frequency axis is logarithmic), so the plot is not log-log; the noise keeps falling until about 1 kHz (not 'leveling off around 100 Hz') and has a small peak near 2-3 MHz.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p19-fig45-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 19,
+    "old": ")\n\nFigure 45: Internal Reference NSD. A log-log plot of VREF output noise spectral density in nV/√Hz versus frequency in Hz. The y-axis ranges from 0 to 700 nV/√Hz, and the x-axis ranges from 10 Hz to 10 MHz. The noise decreases with frequency, leveling off around 100 Hz. Test conditions: AVDD = PVDD = 3.3V, RANGE = VREF, NO CAP LOAD.\n",
+    "new": ")\n\nFigure 45: Internal Reference NSD. A plot of VREF OUTPUT NSD (nV/√Hz) on a linear y-axis (0 to 700) versus FREQUENCY (Hz) on a logarithmic x-axis (10 Hz to 10 MHz), legend VREF. The noise falls steeply from 10 Hz to about 1 kHz, is nearly flat from about 1 kHz to 1 MHz, rises slightly to a small peak near 2 MHz to 3 MHz and then drops toward 10 MHz. Test conditions: AVDD = PVDD = 3.3V, RANGE = VREF, NO CAP LOAD. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p19-fig45-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p19-fig43-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 19,
+    "old": "![Figure 43: VDAC and IDAC Noise Spectral Density (NSD). A log-log plot showing the noise spectral density for VDAC and IDAC outputs in nV/√Hz and nA/√Hz versus frequency in Hz. The left y-axis is VDAC output NSD (0 to 400 nV/√Hz), the right y-axis is IDAC output NSD (0 to 30 nA/√Hz), and the x-axis is frequency (10 Hz to 10 MHz). Both signals decrease with frequency. Test conditions: AVDD = PVDD = 3.3V, OUT0 = 0.5 x FS, NO REFERENCE CAP LOAD.](",
+    "new": "![Figure 43: VDAC and IDAC Noise Spectral Density (NSD). A plot with a logarithmic frequency axis and linear y-axes showing the noise spectral density of the VDAC output (red, labeled VDAC) and the IDAC output (light blue, labeled IDAC). The left y-axis is VDAC OUTPUT NSD (0 to 400 nV/√Hz), the right y-axis is IDAC OUTPUT NSD (0 to 30 nA/√Hz), and the x-axis is FREQUENCY (Hz) from 10 Hz to 10 MHz. Both fall steeply at low frequency and then flatten; the VDAC curve drops again above about 100 kHz and the IDAC curve above about 1 MHz. Test conditions: AVDD = PVDD = 3.3V, OUT0 = 0.5 × FS, NO REFERENCE CAP LOAD. Read values from the image/PDF.](",
+    "evidence": "PDF p19 Figure 43 (render): the y-axes are linear (not log-log); curve colors/labels and the high-frequency roll-offs added.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p19-fig43-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 19,
+    "old": ")\n\nFigure 43: VDAC and IDAC Noise Spectral Density (NSD). A log-log plot showing the noise spectral density for VDAC and IDAC outputs in nV/√Hz and nA/√Hz versus frequency in Hz. The left y-axis is VDAC output NSD (0 to 400 nV/√Hz), the right y-axis is IDAC output NSD (0 to 30 nA/√Hz), and the x-axis is frequency (10 Hz to 10 MHz). Both signals decrease with frequency. Test conditions: AVDD = PVDD = 3.3V, OUT0 = 0.5 x FS, NO REFERENCE CAP LOAD.\n",
+    "new": ")\n\nFigure 43: VDAC and IDAC Noise Spectral Density (NSD). A plot with a logarithmic frequency axis and linear y-axes showing the noise spectral density of the VDAC output (red, labeled VDAC) and the IDAC output (light blue, labeled IDAC). The left y-axis is VDAC OUTPUT NSD (0 to 400 nV/√Hz), the right y-axis is IDAC OUTPUT NSD (0 to 30 nA/√Hz), and the x-axis is FREQUENCY (Hz) from 10 Hz to 10 MHz. Both fall steeply at low frequency and then flatten; the VDAC curve drops again above about 100 kHz and the IDAC curve above about 1 MHz. Test conditions: AVDD = PVDD = 3.3V, OUT0 = 0.5 × FS, NO REFERENCE CAP LOAD. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p19-fig43-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p19-fig44-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 19,
+    "old": "![Figure 44: MUX_OUT NSD. A log-log plot of MUX_OUT noise spectral density in nV/√Hz versus frequency in Hz. The y-axis ranges from 0 to 1000 nV/√Hz, and the x-axis ranges from 10 Hz to 10 MHz. The noise decreases with frequency. Test conditions: AVDD = PVDD = 3.3V, VOUT0 = 0.5 x FS, NO REFERENCE CAP LOAD.](",
+    "new": "![Figure 44: MUX_OUT NSD. A plot of MUX_OUT NSD (nV/√Hz) on a linear y-axis (0 to 1000) versus FREQUENCY (Hz) on a logarithmic x-axis (10 Hz to 10 MHz), legend VMON0. The noise falls steeply up to about 1 kHz, is nearly flat to about 100 kHz and then drops further toward 10 MHz. Test conditions: AVDD = PVDD = 3.3V, VOUT0 = 0.5 × FS, NO REFERENCE CAP LOAD. Read values from the image/PDF.](",
+    "evidence": "PDF p19 Figure 44 (render): the y-axis is linear (not log-log) and the legend VMON0 was missing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p19-fig44-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 19,
+    "old": ")\n\nFigure 44: MUX\\_OUT NSD. A log-log plot of MUX\\_OUT noise spectral density in nV/√Hz versus frequency in Hz. The y-axis ranges from 0 to 1000 nV/√Hz, and the x-axis ranges from 10 Hz to 10 MHz. The noise decreases with frequency. Test conditions: AVDD = PVDD = 3.3V, VOUT0 = 0.5 x FS, NO REFERENCE CAP LOAD.\n",
+    "new": ")\n\nFigure 44: MUX_OUT NSD. A plot of MUX_OUT NSD (nV/√Hz) on a linear y-axis (0 to 1000) versus FREQUENCY (Hz) on a logarithmic x-axis (10 Hz to 10 MHz), legend VMON0. The noise falls steeply up to about 1 kHz, is nearly flat to about 100 kHz and then drops further toward 10 MHz. Test conditions: AVDD = PVDD = 3.3V, VOUT0 = 0.5 × FS, NO REFERENCE CAP LOAD. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p19-fig44-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p20-fig51-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 20,
+    "old": "![Figure 51: MUX_OUT Error vs. Output Current. A line graph showing MUX_OUT VOLTAGE ERROR (mV) on the y-axis (-10 to 10) versus VDAC OUTPUT CURRENT (mA) on the x-axis (-10 to 50). The graph shows a single curve for AVDD = PVDD = 5.5V, RANGE = VREF, and VOUT = 0.5 x FS. The error is near zero across the entire current range.](",
+    "new": "![Figure 51: MUX_OUT Error vs. Output Current. A line graph with the y-axis label printed 'MUX_OOUT VOLTAGE ERROR (mV)' (-10 to 10) versus VDAC OUTPUT CURRENT (mA) on the x-axis (-10 to 50). The graph shows a single curve (light blue) for AVDD = PVDD = 5.5V, RANGE = VREF, and VOUT = 0.5 × FS. The error is close to zero, decreasing slightly from a small positive value at -10mA to a small negative value at 50mA. Read values from the image/PDF.](",
+    "evidence": "PDF p20 Figure 51 (render): the y-axis label is printed 'MUX_OOUT VOLTAGE ERROR (mV)' (manufacturer typo, kept as printed); the curve has a slight negative slope rather than being flat at zero.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p20-fig51-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 20,
+    "old": ")\n\nFigure 51: MUX\\_OUT Error vs. Output Current. A line graph showing MUX\\_OUT VOLTAGE ERROR (mV) on the y-axis (-10 to 10) versus VDAC OUTPUT CURRENT (mA) on the x-axis (-10 to 50). The graph shows a single curve for AVDD = PVDD = 5.5V, RANGE = VREF, and VOUT = 0.5 x FS. The error is near zero across the entire current range.\n",
+    "new": ")\n\nFigure 51: MUX_OUT Error vs. Output Current. A line graph with the y-axis label printed 'MUX_OOUT VOLTAGE ERROR (mV)' (-10 to 10) versus VDAC OUTPUT CURRENT (mA) on the x-axis (-10 to 50). The graph shows a single curve (light blue) for AVDD = PVDD = 5.5V, RANGE = VREF, and VOUT = 0.5 × FS. The error is close to zero, decreasing slightly from a small positive value at -10mA to a small negative value at 50mA. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p20-fig51-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p20-fig52-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 20,
+    "old": "![Figure 52: MUX_OUT to VOUTx Glitch. A graph showing VDAC OUTPUT VOLTAGE, AC COUPLED (mV) and VOLTAGE (V) on the y-axis (-2.0 to 3.0) versus TIME (μs) on the x-axis (-5 to 25). It illustrates a glitch event when the MUX_OUT channel changes from POWERDOWN to VOLTAGE MONITOR CH0. The graph includes traces for CS (yellow), VOUT0 (VICTIM) = FS (red), and various monitor channels.](",
+    "new": "![Figure 52: MUX_OUT to VOUTx Glitch. A dual-axis graph showing VDAC OUTPUT VOLTAGE, AC COUPLED (mV) on the left y-axis (-2.0 to 3.0) and VOLTAGE (V) on the right y-axis (-2.0 to 3.0) versus TIME (μs) on the x-axis (-5 to 25), with VOUT0 (VICTIM) = FS. The legend 'MUX_OUT CHANNEL OPTION' lists POWERDOWN (red), VOLTAGE MONITOR CH0 (light blue) and PVDD0 FOR CH0 (teal), plus the CS signal (yellow). The three VOUT0 traces overlap: they oscillate around zero until the CS rising edge just after 0 μs and then settle to zero within about 2 μs; CS stays high afterwards. Read values from the image/PDF.](",
+    "evidence": "PDF p20 Figure 52 (render 250 dpi): the red trace is the POWERDOWN MUX_OUT option, not 'VOUT0 (VICTIM) = FS'; the three MUX_OUT options (POWERDOWN, VOLTAGE MONITOR CH0, PVDD0 FOR CH0) are separate overlapping traces, not a change 'from POWERDOWN to VOLTAGE MONITOR CH0'. Rewritten from the plot.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p20-fig52-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 20,
+    "old": ")\n\nFigure 52: MUX\\_OUT to VOUTx Glitch. A graph showing VDAC OUTPUT VOLTAGE, AC COUPLED (mV) and VOLTAGE (V) on the y-axis (-2.0 to 3.0) versus TIME (μs) on the x-axis (-5 to 25). It illustrates a glitch event when the MUX\\_OUT channel changes from POWERDOWN to VOLTAGE MONITOR CH0. The graph includes traces for CS (yellow), VOUT0 (VICTIM) = FS (red), and various monitor channels.\n",
+    "new": ")\n\nFigure 52: MUX_OUT to VOUTx Glitch. A dual-axis graph showing VDAC OUTPUT VOLTAGE, AC COUPLED (mV) on the left y-axis (-2.0 to 3.0) and VOLTAGE (V) on the right y-axis (-2.0 to 3.0) versus TIME (μs) on the x-axis (-5 to 25), with VOUT0 (VICTIM) = FS. The legend 'MUX_OUT CHANNEL OPTION' lists POWERDOWN (red), VOLTAGE MONITOR CH0 (light blue) and PVDD0 FOR CH0 (teal), plus the CS signal (yellow). The three VOUT0 traces overlap: they oscillate around zero until the CS rising edge just after 0 μs and then settle to zero within about 2 μs; CS stays high afterwards. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p20-fig52-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p20-fig53-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 20,
+    "old": "![Figure 53: AVDD AC PSRR vs. Frequency. A log-log plot showing AC PSRR (dB) on the y-axis (-120 to -10) versus FREQUENCY (Hz) on the x-axis (10 to 1M). Three curves are shown: VOUT, RANGE = VREF (red), VOUT, RANGE = 2 x VREF (blue), and IOUT (black). The PSRR is approximately -80 dB at 10 Hz and degrades to about -20 dB at 1 MHz. Test conditions: AVDD = 5V ± 100mV, PVDD = 4.5V, OUT = 0.5 x FS, VOUT RLOAD = 2kΩ, IOUT RLOAD = 50Ω.](",
+    "new": "![Figure 53: AVDD AC PSRR vs. Frequency. A plot with a logarithmic frequency axis showing AC PSRR (dB) on the linear y-axis (-120 to -10) versus FREQUENCY (Hz) on the x-axis (10 to 1M). Three curves are shown: VOUT, RANGE = VREF (red), VOUT, RANGE = 2 × VREF (light blue), and IOUT (black). The curves are flat and noisy at low frequency (the 2 × VREF curve lowest), start rising above a few hundred hertz and rise steadily toward the top of the plot near 1 MHz. Test conditions: AVDD = 5V ± 100mV, PVDD = 4.5V, OUT = 0.5 × FS, VOUT R_LOAD = 2kΩ, IOUT R_LOAD = 50Ω. Read values from the image/PDF.](",
+    "evidence": "PDF p20 Figure 53 (render): the dB axis is linear (not log-log); the estimated levels ('approximately -80 dB at 10 Hz', 'about -20 dB at 1 MHz') were removed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p20-fig53-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 20,
+    "old": ")\n\nFigure 53: AVDD AC PSRR vs. Frequency. A log-log plot showing AC PSRR (dB) on the y-axis (-120 to -10) versus FREQUENCY (Hz) on the x-axis (10 to 1M). Three curves are shown: VOUT, RANGE = VREF (red), VOUT, RANGE = 2 x VREF (blue), and IOUT (black). The PSRR is approximately -80 dB at 10 Hz and degrades to about -20 dB at 1 MHz. Test conditions: AVDD = 5V ± 100mV, PVDD = 4.5V, OUT = 0.5 x FS, VOUT RLOAD = 2kΩ, IOUT RLOAD = 50Ω.\n",
+    "new": ")\n\nFigure 53: AVDD AC PSRR vs. Frequency. A plot with a logarithmic frequency axis showing AC PSRR (dB) on the linear y-axis (-120 to -10) versus FREQUENCY (Hz) on the x-axis (10 to 1M). Three curves are shown: VOUT, RANGE = VREF (red), VOUT, RANGE = 2 × VREF (light blue), and IOUT (black). The curves are flat and noisy at low frequency (the 2 × VREF curve lowest), start rising above a few hundred hertz and rise steadily toward the top of the plot near 1 MHz. Test conditions: AVDD = 5V ± 100mV, PVDD = 4.5V, OUT = 0.5 × FS, VOUT R_LOAD = 2kΩ, IOUT R_LOAD = 50Ω. Read values from the image/PDF.\n",
+    "evidence": "Same as ad5711r-ad5710r-p20-fig53-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p22-glitch-impulse-column-split",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 22,
+    "old": "when the input code in the DAC register changes\n\nstate. For VDAC",
+    "new": "when the input code in the DAC register changes state. For VDAC",
+    "evidence": "PDF p22 (pdftotext + render): the Digital-to-Analog Glitch Impulse paragraph continues from the left column ('...changes') to the right column ('state. For VDAC...'); the md split it into two paragraphs at the column break.",
+    "sources": [
+      "pdftotext",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p22-tue-ideal-as-printed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 22,
+    "old": "versus the ideal. The ideal output is based on an exact 5.000V reference.",
+    "new": "versus the ideal . The Ideal output is based on an exact 5.000V reference.",
+    "evidence": "PDF p22 (pdftotext + PyMuPDF words): the TUE definition is printed 'versus the ideal . The Ideal output is based on an exact 5.000V reference.' (space before the period, capital 'Ideal'); kept as printed.",
+    "sources": [
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p23-digital-crosstalk-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 23,
+    "old": "\n## DIGITAL CROSSTALK\n",
+    "new": "\n### DIGITAL CROSSTALK\n",
+    "evidence": "PDF p23 (PyMuPDF spans + render): 'DIGITAL CROSSTALK' is a black bold caps subsection under the blue 'TERMINOLOGY' title, like 'DAC-TO-DAC CROSSTALK' and 'ANALOG CROSSTALK' (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
