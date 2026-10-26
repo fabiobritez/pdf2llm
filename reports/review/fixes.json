@@ -16949,5 +16949,109 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p66-status-mfr-dot-specific-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 66,
+    "old": "| A manufacturer specific fault has occurred. See STATUS_MFR_SPECIFIC. ",
+    "new": "| A manufacturer specific fault has occurred. See STATUS_MFR._SPECIFIC.",
+    "evidence": "PDF p66 STATUS_WORD b[12] (pdftotext + PyMuPDF span y=474): printed 'See STATUS_MFR._SPECIFIC.' (manufacturer typo with a stray period); the md had silently corrected it to 'STATUS_MFR_SPECIFIC'. Copied as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p68-status-temperature-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 68,
+    "old": "\n#### STATUS\\_TEMPERATURE Data Contents\n",
+    "new": "\n**STATUS\\_TEMPERATURE Data Contents**\n",
+    "evidence": "PDF p68: 'STATUS_TEMPERATURE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p68-status-cml-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 68,
+    "old": "\n#### STATUS\\_CML Data Contents\n",
+    "new": "\n**STATUS\\_CML Data Contents**\n",
+    "evidence": "PDF p68: 'STATUS_CML Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p69-status-mfr-specific-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 69,
+    "old": "\n#### STATUS\\_MFR\\_SPECIFIC Data Contents\n",
+    "new": "\n**STATUS\\_MFR\\_SPECIFIC Data Contents**\n",
+    "evidence": "PDF p69: 'STATUS_MFR_SPECIFIC Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p69-mfr-pads-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 69,
+    "old": "\n### MFR\\_PADS\n",
+    "new": "\n#### MFR\\_PADS\n",
+    "evidence": "PDF p69 (PyMuPDF span y=396): 'MFR_PADS' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) like STATUS_MFR_SPECIFIC; the md had H3, command headings are H4 per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p69-mfr-pads-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 69,
+    "old": "\n#### MFR\\_PADS\n\nThe MFR\\_PADS command provides read-only access of digital pads (pins). The input values are before any deglitching logic.\n\n#### MFR\\_PADS Data Contents\n",
+    "new": "\n#### MFR\\_PADS\n\nThe MFR\\_PADS command provides read-only access of digital pads (pins). The input values are before any deglitching logic.\n\n**MFR\\_PADS Data Contents**\n",
+    "evidence": "PDF p69 (PyMuPDF span y=439): 'MFR_PADS Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p70-mfr-pads-cont-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 70,
+    "old": "\n#### MFR\\_PADS Data Contents\n",
+    "new": "\n**MFR\\_PADS Data Contents**\n",
+    "evidence": "PDF p70: 'MFR_PADS Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p70-mfr-common-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 70,
+    "old": "\n#### MFR\\_COMMON Data Contents\n",
+    "new": "\n**MFR\\_COMMON Data Contents**\n",
+    "evidence": "PDF p70: 'MFR_COMMON Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
