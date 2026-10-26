@@ -12503,5 +12503,339 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5593r-p18-fig34-drawing-number-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 18,
+    "old": "![Figure 34: Output Voltage Range of the DAC with Gain = 2 (Unloaded Condition). The graph shows a sinusoidal wave oscillating between 0V and VDD. A horizontal line at VREF = 0.5 * VDD intersects the wave. The peak of the wave is labeled 'UPPER DEADBAND OF 10mV WHEN VREF = 0.5*VDD'. The trough is labeled 'LOWER DEADBAND OF ~4.88mV'. The vertical axis is labeled with VDD, VREF, and 0V. The horizontal axis is labeled with 035.](",
+    "new": "![Figure 34: Output Voltage Range of the DAC with Gain = 2 (Unloaded Condition). The graph shows a sinusoidal wave oscillating between 0V and VDD. A horizontal line at VREF = 0.5 * VDD intersects the wave. The peak of the wave is labeled 'UPPER DEADBAND OF 10mV WHEN VREF = 0.5*VDD'. The trough is labeled 'LOWER DEADBAND OF ~4.88mV'. The vertical axis is labeled with VDD, VREF, and 0V. The drawing number 035 is printed at the bottom right (there is no horizontal axis label).](",
+    "evidence": "PDF p18 Figure 34 (render): '035' at the bottom right is the drawing number (rotated), not a horizontal-axis label.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p18-fig34-drawing-number-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 18,
+    "old": "~4.88mV'. The vertical axis is labeled with VDD, VREF, and 0V. The horizontal axis is labeled with 035.\n",
+    "new": "~4.88mV'. The vertical axis is labeled with VDD, VREF, and 0V. The drawing number 035 is printed at the bottom right (there is no horizontal axis label).\n",
+    "evidence": "Same as ad5593r-p18-fig34-drawing-number-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p19-fig35-adc-input-structure-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 19,
+    "old": "![Figure 35. ADC Input Structure. A schematic diagram showing the internal structure of the ADC input. It includes a multiplexer (MUX) with inputs I/O0 through I/O7. The MUX output is connected to the non-inverting input (+) of an operational amplifier (U1). A switch S1 connects the output of U1 to ground through a 5.8pF capacitor. Switch S2 connects the output of U1 to the input of a comparator. Switch S3 connects the input of the comparator to ground through a 23.1pF capacitor. A 300Ω resistor is in series between the output of U1 and the input of the comparator. Switch S4 connects the input of the comparator to ground. The comparator output is connected to a block labeled 'CONTROL LOGIC'.](",
+    "new": "![Figure 35. ADC Input Structure (description written from the PDF drawing). A multiplexer (MUX) with inputs I/O0 through I/O7. The MUX output node has a 5.8pF capacitor to ground and drives the non-inverting input (+) of buffer amplifier U1, whose output is fed back to its inverting input (-). Switch S2 connects the U1 output to a second node; switch S1 bypasses U1, connecting the MUX output node directly to that second node. Switch S3 connects the 23.1pF capacitor either to that node or to ground. The 23.1pF capacitor is followed by a 300Ω series resistor to the non-inverting input (+) of a COMPARATOR; switch S4 connects that comparator input to ground, and the inverting input (-) is grounded. The comparator output goes to a block labeled 'CONTROL LOGIC'. The drawing number 033 is printed at the right.](",
+    "evidence": "PDF p19 Figure 35 (300-400 dpi crop): the 5.8pF capacitor is on the MUX output node, not switched by S1 from the U1 output; S1 bypasses U1 (unbuffered mode, as in the p18 text); S3 selects the 23.1pF capacitor input; the 300Ω resistor is after the 23.1pF capacitor; U1 is a unity-gain buffer. The AI text had these connections wrong.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p19-fig35-adc-input-structure-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 19,
+    "old": ")\n\nFigure 35. ADC Input Structure. A schematic diagram showing the internal structure of the ADC input. It includes a multiplexer (MUX) with inputs I/O0 through I/O7. The MUX output is connected to the non-inverting input (+) of an operational amplifier (U1). A switch S1 connects the output of U1 to ground through a 5.8pF capacitor. Switch S2 connects the output of U1 to the input of a comparator. Switch S3 connects the input of the comparator to ground through a 23.1pF capacitor. A 300Ω resistor is in series between the output of U1 and the input of the comparator. Switch S4 connects the input of the comparator to ground. The comparator output is connected to a block labeled 'CONTROL LOGIC'.\n",
+    "new": ")\n\nFigure 35. ADC Input Structure (description written from the PDF drawing). A multiplexer (MUX) with inputs I/O0 through I/O7. The MUX output node has a 5.8pF capacitor to ground and drives the non-inverting input (+) of buffer amplifier U1, whose output is fed back to its inverting input (-). Switch S2 connects the U1 output to a second node; switch S1 bypasses U1, connecting the MUX output node directly to that second node. Switch S3 connects the 23.1pF capacitor either to that node or to ground. The 23.1pF capacitor is followed by a 300Ω series resistor to the non-inverting input (+) of a COMPARATOR; switch S4 connects that comparator input to ground, and the inverting input (-) is grounded. The comparator output goes to a block labeled 'CONTROL LOGIC'. The drawing number 033 is printed at the right.\n",
+    "evidence": "Same as ad5593r-p19-fig35-adc-input-structure-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p19-reset-column-split",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 19,
+    "old": "do not write new data to the\n\nAD5593R during this time.",
+    "new": "do not write new data to the AD5593R during this time.",
+    "evidence": "PDF p19 (render): the RESET FUNCTION paragraph continues from the bottom of the left column ('do not write new data to the') to the top of the right column ('AD5593R during this time.'); the md split the sentence into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p20-fig36-frame-bits-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 20,
+    "old": "![Timing diagram for a 4-byte I2C write sequence. It shows SCL and SDA lines. The sequence includes: 1. START BY MASTER. 2. FRAME 1 SLAVE ADDRESS (9 clock pulses, with A0 and R/W bits). 3. ACK. BY AD5593R. 4. FRAME 2 POINTER BYTE (9 clock pulses). 5. ACK. BY AD5593R. 6. FRAME 3 MOST SIGNIFICANT DATA BYTE (9 clock pulses). 7. ACK. BY AD5593R. 8. FRAME 4 LEAST SIGNIFICANT DATA BYTE (9 clock pulses). 9. ACK. BY AD5593R. 10. STOP BY MASTER. The SDA line shows the data bits DB15 through DB0 for each byte.](",
+    "new": "![Timing diagram for a 4-byte I2C write sequence. It shows SCL and SDA lines. The sequence includes: 1. START BY MASTER. 2. FRAME 1 SLAVE ADDRESS (9 clock pulses, with A0 and R/W bits, W with an overbar). 3. ACK. BY AD5593R. 4. FRAME 2 POINTER BYTE (9 clock pulses). 5. ACK. BY AD5593R. 6. FRAME 3 MOST SIGNIFICANT DATA BYTE (9 clock pulses). 7. ACK. BY AD5593R. 8. FRAME 4 LEAST SIGNIFICANT DATA BYTE (9 clock pulses). 9. ACK. BY AD5593R. 10. STOP BY MASTER. On SDA, Frame 1 carries the address bits 0, 0, 1, 0, 0, 0, A0 and R/W; Frame 2 carries D7 to D0; Frame 3 carries DB15 to DB8; Frame 4 carries DB7 to DB0.](",
+    "evidence": "PDF p20 Figure 36 (render): the SDA bits differ per frame (address 0 0 1 0 0 0 A0 R/W with W overbarred, pointer D7-D0, MSB DB15-DB8, LSB DB7-DB0); the AI text said DB15 to DB0 for each byte.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p20-fig36-frame-bits-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 20,
+    "old": ")\n\nTiming diagram for a 4-byte I2C write sequence. It shows SCL and SDA lines. The sequence includes: 1. START BY MASTER. 2. FRAME 1 SLAVE ADDRESS (9 clock pulses, with A0 and R/W bits). 3. ACK. BY AD5593R. 4. FRAME 2 POINTER BYTE (9 clock pulses). 5. ACK. BY AD5593R. 6. FRAME 3 MOST SIGNIFICANT DATA BYTE (9 clock pulses). 7. ACK. BY AD5593R. 8. FRAME 4 LEAST SIGNIFICANT DATA BYTE (9 clock pulses). 9. ACK. BY AD5593R. 10. STOP BY MASTER. The SDA line shows the data bits DB15 through DB0 for each byte.\n",
+    "new": ")\n\nTiming diagram for a 4-byte I2C write sequence. It shows SCL and SDA lines. The sequence includes: 1. START BY MASTER. 2. FRAME 1 SLAVE ADDRESS (9 clock pulses, with A0 and R/W bits, W with an overbar). 3. ACK. BY AD5593R. 4. FRAME 2 POINTER BYTE (9 clock pulses). 5. ACK. BY AD5593R. 6. FRAME 3 MOST SIGNIFICANT DATA BYTE (9 clock pulses). 7. ACK. BY AD5593R. 8. FRAME 4 LEAST SIGNIFICANT DATA BYTE (9 clock pulses). 9. ACK. BY AD5593R. 10. STOP BY MASTER. On SDA, Frame 1 carries the address bits 0, 0, 1, 0, 0, 0, A0 and R/W; Frame 2 carries D7 to D0; Frame 3 carries DB15 to DB8; Frame 4 carries DB7 to DB0.\n",
+    "evidence": "Same as ad5593r-p20-fig36-frame-bits-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p20-column-split",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 20,
+    "old": "The transi-\n\ntions on the SDA line",
+    "new": "The transitions on the SDA line",
+    "evidence": "PDF p20 (render): 'The transi-' ends the left column and 'tions on the SDA line' starts the right column; one hyphenated word split into two paragraphs in the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p20-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 20,
+    "old": "### SERIAL INTERFACE\n\nThe AD5593R has a 2-wire",
+    "new": "## SERIAL INTERFACE\n\nThe AD5593R has a 2-wire",
+    "evidence": "PDF p20-p26 (PyMuPDF spans + render): 'SERIAL INTERFACE' is a blue section title (H2), repeated at the top of each page; its subsections (WRITE OPERATION, READ OPERATION, ...) are black bold caps (H3). The md had it at H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p21-fig37-read-sequence-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 21,
+    "old": "![Timing diagram for Figure 37: Read One 16-Bit Word. It shows three I2C frames. Frame 1: Master starts, sends address (0010000A0), AD5593R acknowledges with low SDA, then master sends pointer byte (9100000000000000). Frame 2: Master continues, AD5593R starts sending data from D15 to D8. Master acknowledges each bit. Frame 3: Master continues, AD5593R sends D7 to D0. Master acknowledges, then master stops.](",
+    "new": "![Timing diagram for Figure 37: Read One 16-Bit Word (description written from the PDF drawing). SCL and SDA in two transactions. Write phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, W (with an overbar), ACK. BY AD5593R; Frame 2 pointer byte D7 to D0, ACK. BY AD5593R; STOP BY MASTER. Read phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, R, ACK. BY AD5593R; Frame 2 most significant data byte D15 to D8 from the AD5593R, ACK. BY MASTER; Frame 3 least significant data byte D7 to D0, NACK. BY MASTER; STOP BY MASTER.](",
+    "evidence": "PDF p21 Figure 37 (220 dpi crops): a write transaction (address with W, pointer byte D7-D0, stop) followed by a read transaction (address with R, D15-D8 ACK by master, D7-D0 NACK by master, stop). The AI text invented a pointer byte '9100000000000000', had the master acknowledge each bit and omitted the stop/start between the two transactions.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p21-fig37-read-sequence-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 21,
+    "old": ")\n\nTiming diagram for Figure 37: Read One 16-Bit Word. It shows three I2C frames. Frame 1: Master starts, sends address (0010000A0), AD5593R acknowledges with low SDA, then master sends pointer byte (9100000000000000). Frame 2: Master continues, AD5593R starts sending data from D15 to D8. Master acknowledges each bit. Frame 3: Master continues, AD5593R sends D7 to D0. Master acknowledges, then master stops.\n",
+    "new": ")\n\nTiming diagram for Figure 37: Read One 16-Bit Word (description written from the PDF drawing). SCL and SDA in two transactions. Write phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, W (with an overbar), ACK. BY AD5593R; Frame 2 pointer byte D7 to D0, ACK. BY AD5593R; STOP BY MASTER. Read phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, R, ACK. BY AD5593R; Frame 2 most significant data byte D15 to D8 from the AD5593R, ACK. BY MASTER; Frame 3 least significant data byte D7 to D0, NACK. BY MASTER; STOP BY MASTER.\n",
+    "evidence": "Same as ad5593r-p21-fig37-read-sequence-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p21-fig38-read-sequence-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 21,
+    "old": "![Timing diagram for Figure 38: Read One 16-Bit Word, Maintain Control of the Bus. It shows three I2C frames. Frame 1: Master starts, sends address (0010000A0), AD5593R acknowledges with low SDA, then master sends pointer byte (9100000000000000). Frame 2: Master continues, AD5593R starts sending data from D15 to D8. Master acknowledges each bit. Frame 3: Master continues, AD5593R sends D7 to D0. Master acknowledges, then master stops. This diagram is similar to Figure 37 but emphasizes maintaining control of the bus.](",
+    "new": "![Timing diagram for Figure 38: Read One 16-Bit Word, Maintain Control of the Bus (description written from the PDF drawing). SCL and SDA. Write phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, W (with an overbar), ACK. BY AD5593R; Frame 2 pointer byte D7 to D0, ACK. BY AD5593R (no stop condition). Then REPEAT START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, R, ACK. BY AD5593R; Frame 2 most significant data byte D15 to D8 from the AD5593R, ACK. BY MASTER; Frame 3 least significant data byte D7 to D0, ACK. BY MASTER; STOP BY MASTER.](",
+    "evidence": "PDF p21 Figure 38 (220 dpi crops): like Figure 37 but with REPEAT START BY MASTER instead of stop + start, and the last byte is followed by 'ACK. BY MASTER' as printed. The AI text copied the wrong Figure 37 text.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p21-fig38-read-sequence-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 21,
+    "old": ")\n\nTiming diagram for Figure 38: Read One 16-Bit Word, Maintain Control of the Bus. It shows three I2C frames. Frame 1: Master starts, sends address (0010000A0), AD5593R acknowledges with low SDA, then master sends pointer byte (9100000000000000). Frame 2: Master continues, AD5593R starts sending data from D15 to D8. Master acknowledges each bit. Frame 3: Master continues, AD5593R sends D7 to D0. Master acknowledges, then master stops. This diagram is similar to Figure 37 but emphasizes maintaining control of the bus.\n",
+    "new": ")\n\nTiming diagram for Figure 38: Read One 16-Bit Word, Maintain Control of the Bus (description written from the PDF drawing). SCL and SDA. Write phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, W (with an overbar), ACK. BY AD5593R; Frame 2 pointer byte D7 to D0, ACK. BY AD5593R (no stop condition). Then REPEAT START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, R, ACK. BY AD5593R; Frame 2 most significant data byte D15 to D8 from the AD5593R, ACK. BY MASTER; Frame 3 least significant data byte D7 to D0, ACK. BY MASTER; STOP BY MASTER.\n",
+    "evidence": "Same as ad5593r-p21-fig38-read-sequence-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p21-column-split",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 21,
+    "old": "A repeat start or a new I<sup>2</sup>C transmission can then\n\nfollow to read",
+    "new": "A repeat start or a new I<sup>2</sup>C transmission can then follow to read",
+    "evidence": "PDF p21 (render): the sentence continues from the bottom of the left column ('can then') to the top of the right column ('follow to read two bytes'); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p21-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 21,
+    "old": "### SERIAL INTERFACE\n\n### READ OPERATION",
+    "new": "## SERIAL INTERFACE\n\n### READ OPERATION",
+    "evidence": "PDF p21 (PyMuPDF spans + render): repeated blue section title 'SERIAL INTERFACE' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p22-fig39-block-read-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 22,
+    "old": "![Timing diagram for I²C Block Read showing SCL and SDA lines across five frames. Frame 1: Slave Address (A0-W) with START BY MASTER and ACK BY AD5593R. Frame 2: Pointer Byte (D7-D0) with START OF ADC CONVERSION and ACK BY AD5593R. Frame 3: Most Significant Data Byte (D15-D8) with REPEAT START BY MASTER, ACK BY AD5593R, and ACK BY MASTER. Frame 4: Least Significant Data Byte (D7-D0) with ACK BY MASTER. Frame 5: Least Significant Data Byte (D7-D0) with NACK BY MASTER and STOP BY MASTER. A note indicates Frame 5 is only applicable if an ADC sequence has been selected.](",
+    "new": "![Timing diagram for I²C Block Read showing SCL and SDA lines (description written from the PDF drawing). Write phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, W (with an overbar), ACK. BY AD5593R; Frame 2 pointer byte D7 to D0, ACK. BY AD5593R. Read phase: REPEAT START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, R, ACK. BY AD5593R, with 'START OF ADC CONVERSION¹' marked at the ninth clock; Frame 2 most significant data byte D15 to D8, ACK. BY MASTER; Frame 3 least significant data byte D7 to D0, ACK. BY MASTER; Frame 4 most significant data byte D15 to D8, ACK. BY MASTER; Frame 5 least significant data byte D7 to D0, NACK. BY MASTER; STOP BY MASTER. Note 1: ONLY APPLICABLE IF AN ADC SEQUENCE HAS BEEN SELECTED.](",
+    "evidence": "PDF p22 Figure 39 (220 dpi crops): Frame 3 is the least significant byte and Frame 4 the most significant byte of the next word, both ACK by master; REPEAT START precedes the second address frame, not Frame 3; note 1 belongs to 'START OF ADC CONVERSION', not to Frame 5. The AI text had these wrong.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p22-fig39-block-read-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 22,
+    "old": ")\n\nTiming diagram for I²C Block Read showing SCL and SDA lines across five frames. Frame 1: Slave Address (A0-W) with START BY MASTER and ACK BY AD5593R. Frame 2: Pointer Byte (D7-D0) with START OF ADC CONVERSION and ACK BY AD5593R. Frame 3: Most Significant Data Byte (D15-D8) with REPEAT START BY MASTER, ACK BY AD5593R, and ACK BY MASTER. Frame 4: Least Significant Data Byte (D7-D0) with ACK BY MASTER. Frame 5: Least Significant Data Byte (D7-D0) with NACK BY MASTER and STOP BY MASTER. A note indicates Frame 5 is only applicable if an ADC sequence has been selected.\n",
+    "new": ")\n\nTiming diagram for I²C Block Read showing SCL and SDA lines (description written from the PDF drawing). Write phase: START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, W (with an overbar), ACK. BY AD5593R; Frame 2 pointer byte D7 to D0, ACK. BY AD5593R. Read phase: REPEAT START BY MASTER; Frame 1 slave address 0, 0, 1, 0, 0, 0, A0, R, ACK. BY AD5593R, with 'START OF ADC CONVERSION¹' marked at the ninth clock; Frame 2 most significant data byte D15 to D8, ACK. BY MASTER; Frame 3 least significant data byte D7 to D0, ACK. BY MASTER; Frame 4 most significant data byte D15 to D8, ACK. BY MASTER; Frame 5 least significant data byte D7 to D0, NACK. BY MASTER; STOP BY MASTER. Note 1: ONLY APPLICABLE IF AN ADC SEQUENCE HAS BEEN SELECTED.\n",
+    "evidence": "Same as ad5593r-p22-fig39-block-read-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p22-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 22,
+    "old": "### SERIAL INTERFACE\n\n![Timing diagram for I²C Block Read",
+    "new": "## SERIAL INTERFACE\n\n![Timing diagram for I²C Block Read",
+    "evidence": "PDF p22 (PyMuPDF spans + render): repeated blue section title 'SERIAL INTERFACE' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p23-column-split",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 23,
+    "old": "both a general-purpose input and output,\n\nthe primary function is as an output pin.",
+    "new": "both a general-purpose input and output, the primary function is as an output pin.",
+    "evidence": "PDF p23 (render): the sentence continues from the bottom of the left column ('input and output,') to the top of the right column ('the primary function is as an output pin'); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p23-fig40-stray-separator",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 23,
+    "old": "0b10000010 | A | P |\n|---|-------------------|---|----------------------------|---|------------------------------------------|---|-------------------------------------------|---|---|\n",
+    "new": "0b10000010 | A | P |\n",
+    "evidence": "PDF p23 Figure 40 (render): the byte sequence is a single row; the md table had a second separator row after it, which renders as a spurious '---' row.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p23-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 23,
+    "old": "### SERIAL INTERFACE\n\nset the corresponding bit",
+    "new": "## SERIAL INTERFACE\n\nset the corresponding bit",
+    "evidence": "PDF p23 (PyMuPDF spans + render): repeated blue section title 'SERIAL INTERFACE' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p24-fig41-sequence-table",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 24,
+    "old": "|                                                                                                           |                   |   |            |     |    |                   |\n|-----------------------------------------------------------------------------------------------------------|-------------------|---|------------|-----|----|-------------------|\n| POINTER BYTE                                                                                              |                   |   |            |     |    |                   |\n| S                                                                                                         | SLAVE ADDRESS + W | A | 0b01010010 | A   | RS | SLAVE ADDRESS + R |\n| ...                                                                                                       |                   |   |            |     |    |                   |\n| DAC ADDRESS AND 4 MSBs                                                                                    |                   | A | DAC LSBs   | A/A | P  |                   |\n| S = START CONDITION<br>P = STOP CONDITION<br>A = ACKNOWLEDGE<br>A̅ = NOT ACKNOWLEDGE<br>RS = REPEAT START |                   |   |            |     |    |                   |\n",
+    "new": "|   |                     |   | POINTER BYTE |   |    |                   |   |     |\n|---|---------------------|---|--------------|---|----|-------------------|---|-----|\n| S | SLAVE ADDRESS + W̅ | A | 0b01010010   | A | RS | SLAVE ADDRESS + R | A | ... |\n\n|     | DACADDRESS AND 4 MSBs |   | DAC LSBs  |     |   |\n|-----|-----------------------|---|-----------|-----|---|\n| ... | 0b1010XXX             | A | 0bXXXXXXX | A/A̅ | P |\n\nS = START CONDITION  \nP = STOP CONDITION  \nA = ACKNOWLEDGE  \nA̅ = NOT ACKNOWLEDGE  \nRS = REPEAT START\n",
+    "evidence": "PDF p24 Figure 41 (300 dpi crop): the second row prints the byte values '0b1010XXX' under 'DACADDRESS AND 4 MSBs' (as printed, no space) and '0bXXXXXXX' under 'DAC LSBs', an A after 'SLAVE ADDRESS + R', and the first-row W and the final NOT ACKNOWLEDGE A carry overbars. The md table dropped both byte values and the A, put 'POINTER BYTE' in a data row and the legend in a table cell.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p24-fig41-description-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 24,
+    "old": "![Figure 41: DAC Input Register Readback sequence diagram. The diagram shows two I2C transactions. The first transaction is a write: S | SLAVE ADDRESS + W | A | 0b01010010 | A | RS | SLAVE ADDRESS + R | A. The second transaction is a read: ... | DAC ADDRESS AND 4 MSBs | A | DAC LSBs | A/A | P. A legend defines S as START CONDITION, P as STOP CONDITION, A as ACKNOWLEDGE, A with a bar as NOT ACKNOWLEDGE, and RS as REPEAT START.](",
+    "new": "![Figure 41: DAC Input Register Readback sequence diagram. The diagram shows one I2C sequence drawn in two rows. First row: S | SLAVE ADDRESS + W (W with an overbar) | A | pointer byte 0b01010010 | A | RS | SLAVE ADDRESS + R | A | ... Second row: ... | DACADDRESS AND 4 MSBs 0b1010XXX | A | DAC LSBs 0bXXXXXXX | A/A (second A with an overbar) | P. A legend defines S as START CONDITION, P as STOP CONDITION, A as ACKNOWLEDGE, A with a bar as NOT ACKNOWLEDGE, and RS as REPEAT START.](",
+    "evidence": "PDF p24 Figure 41 (300 dpi crop): a single sequence with a repeat start, not two transactions; the printed byte values 0b1010XXX and 0bXXXXXXX were missing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p24-fig41-description-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 24,
+    "old": "\nFigure 41: DAC Input Register Readback sequence diagram. The diagram shows two I2C transactions. The first transaction is a write: S | SLAVE ADDRESS + W | A | 0b01010010 | A | RS | SLAVE ADDRESS + R | A. The second transaction is a read: ... | DAC ADDRESS AND 4 MSBs | A | DAC LSBs | A/A | P. A legend defines S as START CONDITION, P as STOP CONDITION, A as ACKNOWLEDGE, A with a bar as NOT ACKNOWLEDGE, and RS as REPEAT START.\n\nFigure 41. DAC",
+    "new": "\nFigure 41: DAC Input Register Readback sequence diagram. The diagram shows one I2C sequence drawn in two rows. First row: S | SLAVE ADDRESS + W (W with an overbar) | A | pointer byte 0b01010010 | A | RS | SLAVE ADDRESS + R | A | ... Second row: ... | DACADDRESS AND 4 MSBs 0b1010XXX | A | DAC LSBs 0bXXXXXXX | A/A (second A with an overbar) | P. A legend defines S as START CONDITION, P as STOP CONDITION, A as ACKNOWLEDGE, A with a bar as NOT ACKNOWLEDGE, and RS as REPEAT START.\n\nFigure 41. DAC",
+    "evidence": "Same as ad5593r-p24-fig41-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p24-column-split",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 24,
+    "old": "After loading the input registers with the desired values and setting\n\nthe LDAC mode bits to 10,",
+    "new": "After loading the input registers with the desired values and setting the LDAC mode bits to 10,",
+    "evidence": "PDF p24 (render): the sentence continues from the bottom of the left column ('and setting') to the top of the right column ('the LDAC mode bits to 10'); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p24-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 24,
+    "old": "### SERIAL INTERFACE\n\n### DAC WRITE OPERATION",
+    "new": "## SERIAL INTERFACE\n\n### DAC WRITE OPERATION",
+    "evidence": "PDF p24 (PyMuPDF spans + render): repeated blue section title 'SERIAL INTERFACE' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p23-fig40-w-overbar",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 23,
+    "old": "| S | SLAVE ADDRESS + W | A | POINTER BYTE<br>0b00000101 |",
+    "new": "| S | SLAVE ADDRESS + W̅ | A | POINTER BYTE<br>0b00000101 |",
+    "evidence": "PDF p23 Figure 40 (render): 'SLAVE ADDRESS + W' is printed with an overbar on W, as in Figures 36-41.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
