@@ -22448,5 +22448,122 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p105-umodule",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 105,
+    "old": "MAY VARY AMONG  $\\mu$ Module PRODUCTS.",
+    "new": "MAY VARY AMONG µModule PRODUCTS.",
+    "evidence": "PDF p105 (pdftotext): 'µModule' is printed as one word (U+00B5 + 'Module'); the md's LaTeX '$\\mu$ Module' renders with a space.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p105-bga-pinout-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 105,
+    "old": "\n## LTC2975 Component BGA Pinout\n",
+    "new": "\n**LTC2975 Component BGA Pinout**\n",
+    "evidence": "PDF p105 (PyMuPDF spans): 'LTC2975 Component BGA Pinout' is a LinearHelvCond-Bold 9.7pt table caption (same style as the 'Data Contents' and figure captions), not a section title; convention: bold caption paragraph.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p106-bottom-view-detail-b-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 106,
+    "old": "![PACKAGE BOTTOM VIEW showing a 7x9 array of solder balls labeled columns 7 to 1 and rows A to J, with dimensions e, b, G, F, and callout to DETAIL A and DETAIL B.](",
+    "new": "![PACKAGE BOTTOM VIEW showing a 7x9 array of solder balls labeled columns 7 to 1 and rows A to J, with dimensions e, b, G, F, a DETAIL A circle around PIN 1 (ball A1), and SEE NOTES 7 and SEE NOTES 3 callouts.](",
+    "evidence": "PDF p106 (render rotated, and the image itself): the PACKAGE BOTTOM VIEW only has the DETAIL A circle (around PIN 1); DETAIL B belongs to the PACKAGE SIDE VIEW.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p106-bottom-view-detail-b-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 106,
+    "old": "\nPACKAGE BOTTOM VIEW showing a 7x9 array of solder balls labeled columns 7 to 1 and rows A to J, with dimensions e, b, G, F, and callout to DETAIL A and DETAIL B.\n",
+    "new": "\nPACKAGE BOTTOM VIEW showing a 7x9 array of solder balls labeled columns 7 to 1 and rows A to J, with dimensions e, b, G, F, a DETAIL A circle around PIN 1 (ball A1), and SEE NOTES 7 and SEE NOTES 3 callouts.\n",
+    "evidence": "Same as ltc2975-p106-bottom-view-detail-b-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p106-notes-not-bullet",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 106,
+    "old": "\n- NOTES:\n1. DIMENSIONING",
+    "new": "\nNOTES:\n\n1. DIMENSIONING",
+    "evidence": "PDF p106: 'NOTES:' is a plain label above the numbered notes, not a bullet item.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p107-status-plusn-italic",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 107,
+    "old": "for MFR_STATUS_PLUS <sub>n</sub> registers.",
+    "new": "for MFR_STATUS_PLUS*n* registers.",
+    "evidence": "PDF p107 (PyMuPDF spans + render): 'MFR_STATUS_PLUSn' is printed with an italic full-size 'n' directly after PLUS, not a spaced subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p108-typical-application-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 108,
+    "old": "![Typical application circuit diagram for the LTC2975. The diagram shows a central LTC2975 IC with 65 pins, surrounded by four DC/DC converter modules. Each module includes a transformer-coupled inverter, a diode rectifier, and a DC/DC converter (labeled 'DC/DC CONVERSION'). The LTC2975 is connected to an 'INTERMEDIATE BUS' via a sense resistor (RSENSE) and a 10nF capacitor. It also connects to a 3.3V supply and ground. The diagram includes various components like capacitors (330nF, 0.1uF, 10nF), resistors (10k, 5.49k), and transistors (MMBT3906). The LTC2975 pins are labeled with functions such as TSENSE0, TSENSE1, TSENSE2, TSENSE3, VDAC0, VDAC1, VDAC2, VDAC3, VSENSE0, VSENSE1, VSENSE2, VSENSE3, ISENSE0, ISENSE1, ISENSE2, ISENSE3, VOUT_EN0, VOUT_EN1, VOUT_EN2, VOUT_EN3, REFP, REFM, AUXFAULTB, FAULTB1, FAULTB0, SHARE_CLK, SDA, SCL, ALERTB, PWRGD, CONTROL3, CONTROL2, CONTROL1, CONTROL0, WDI/RESETB, and VOUT_EN3. The diagram also shows connections to other LTC power system managers and microcontrollers.](",
+    "new": "![Typical application circuit for the LTC2975 (description written from the PDF drawing, QFN pin numbers as printed): the LTC2975 manages four identical DC/DC CONVERTER channels (channels 0 and 1 on the left, 2 and 3 on the right). Each converter (V_IN, TG, SWX, BG, V_FB, RUN/SS, SGND, PGND) drives two external MOSFETs from the INTERMEDIATE BUS; its inductor has an R-C DCR sense network to I_SENSEPn/I_SENSEMn; V_SENSEPn/V_SENSEMn sense across the LOAD through series resistors with filter capacitors to ground; V_DACn connects through a resistor to the V_FB node of the feedback divider; V_OUT_ENn drives RUN/SS; T_SENSEn connects to an MMBT3906 sense transistor with 330nF. Channel pins: T_SENSE0 15, V_DAC0 53, V_SENSEP0 1, V_SENSEM0 2, I_SENSEM0 42, I_SENSEP0 41, V_OUT_EN0 3; T_SENSE1 16, V_DAC1 54, V_SENSEP1 63, V_SENSEM1 64, I_SENSEM1 44, I_SENSEP1 43, V_OUT_EN1 4; T_SENSE2 27, V_DAC2 57, V_SENSEP2 61, V_SENSEM2 62, I_SENSEM2 46, I_SENSEP2 45, V_OUT_EN2 5; T_SENSE3 34, V_DAC3 58, V_SENSEP3 49, V_SENSEM3 50, I_SENSEM3 48, I_SENSEP3 47, V_OUT_EN3 6. REFP 38 - REFM 40 with 0.1µF. Top pins: GND 65 and WP 28 to ground; V_DD25 13, 14 with 0.1µF; V_DD33 11, 12, V_PWR 10, ASEL1 36 and ASEL0 35 on 3.3V with 0.1µF; DNC 8; I_IN_SNSM 56 and I_IN_SNSP 55 across R_SENSE in the INTERMEDIATE BUS; V_IN_SNS 9 on the bus; V_IN_SNS_CAP 51 with 10nF to ground. GND pins 19, 20, 21, 37, 39, 52, 59, 60 grounded. AUXFAULTB 7 connects through a resistor to an LED from 3.3V (labels 3.3V and 0V). Bottom pins FAULTB1 26, FAULTB0 25, SHARE_CLK 18, SDA 29, SCL 30, ALERTB 31, PWRGD 17, CONTROL3 23, CONTROL2 22, CONTROL1 33, CONTROL0 32, WDI/RESETB 24 go TO/FROM OTHER LTC POWER SYSTEM MANAGERS AND MICROCONTROLLER, with pull-ups to 3.3V: 10k on FAULTB1, FAULTB0, SDA, SCL and ALERTB, 5.49k on SHARE_CLK, and 10k on PWRGD, CONTROL3, CONTROL2, CONTROL1, CONTROL0 and WDI/RESETB. Drawing number 2975 TA02.](",
+    "evidence": "PDF p108 Typical Application (render + 300/400 dpi crops): the AI text invented 'transformer-coupled inverter', 'diode rectifier' and 'DC/DC CONVERSION' modules; the 10nF capacitor is on V_IN_SNS_CAP, not the R_SENSE connection; pin names were wrong (VSENSE0/ISENSE0 instead of V_SENSEPn/V_SENSEMn/I_SENSEPn/I_SENSEMn, V_OUT_EN3 listed twice, V_DD33/V_DD25/V_PWR/ASEL/I_IN_SNS pins missing). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p108-typical-application-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 108,
+    "old": "\nTypical application circuit diagram for the LTC2975. The diagram shows a central LTC2975 IC with 65 pins, surrounded by four DC/DC converter modules. Each module includes a transformer-coupled inverter, a diode rectifier, and a DC/DC converter (labeled 'DC/DC CONVERSION'). The LTC2975 is connected to an 'INTERMEDIATE BUS' via a sense resistor (RSENSE) and a 10nF capacitor. It also connects to a 3.3V supply and ground. The diagram includes various components like capacitors (330nF, 0.1uF, 10nF), resistors (10k, 5.49k), and transistors (MMBT3906). The LTC2975 pins are labeled with functions such as TSENSE0, TSENSE1, TSENSE2, TSENSE3, VDAC0, VDAC1, VDAC2, VDAC3, VSENSE0, VSENSE1, VSENSE2, VSENSE3, ISENSE0, ISENSE1, ISENSE2, ISENSE3, VOUT\\_EN0, VOUT\\_EN1, VOUT\\_EN2, VOUT\\_EN3, REFP, REFM, AUXFAULTB, FAULTB1, FAULTB0, SHARE\\_CLK, SDA, SCL, ALERTB, PWRGD, CONTROL3, CONTROL2, CONTROL1, CONTROL0, WDI/RESETB, and VOUT\\_EN3. The diagram also shows connections to other LTC power system managers and microcontrollers.\n",
+    "new": "\nTypical application circuit for the LTC2975 (description written from the PDF drawing, QFN pin numbers as printed): the LTC2975 manages four identical DC/DC CONVERTER channels (channels 0 and 1 on the left, 2 and 3 on the right). Each converter (V_IN, TG, SWX, BG, V_FB, RUN/SS, SGND, PGND) drives two external MOSFETs from the INTERMEDIATE BUS; its inductor has an R-C DCR sense network to I_SENSEPn/I_SENSEMn; V_SENSEPn/V_SENSEMn sense across the LOAD through series resistors with filter capacitors to ground; V_DACn connects through a resistor to the V_FB node of the feedback divider; V_OUT_ENn drives RUN/SS; T_SENSEn connects to an MMBT3906 sense transistor with 330nF. Channel pins: T_SENSE0 15, V_DAC0 53, V_SENSEP0 1, V_SENSEM0 2, I_SENSEM0 42, I_SENSEP0 41, V_OUT_EN0 3; T_SENSE1 16, V_DAC1 54, V_SENSEP1 63, V_SENSEM1 64, I_SENSEM1 44, I_SENSEP1 43, V_OUT_EN1 4; T_SENSE2 27, V_DAC2 57, V_SENSEP2 61, V_SENSEM2 62, I_SENSEM2 46, I_SENSEP2 45, V_OUT_EN2 5; T_SENSE3 34, V_DAC3 58, V_SENSEP3 49, V_SENSEM3 50, I_SENSEM3 48, I_SENSEP3 47, V_OUT_EN3 6. REFP 38 - REFM 40 with 0.1µF. Top pins: GND 65 and WP 28 to ground; V_DD25 13, 14 with 0.1µF; V_DD33 11, 12, V_PWR 10, ASEL1 36 and ASEL0 35 on 3.3V with 0.1µF; DNC 8; I_IN_SNSM 56 and I_IN_SNSP 55 across R_SENSE in the INTERMEDIATE BUS; V_IN_SNS 9 on the bus; V_IN_SNS_CAP 51 with 10nF to ground. GND pins 19, 20, 21, 37, 39, 52, 59, 60 grounded. AUXFAULTB 7 connects through a resistor to an LED from 3.3V (labels 3.3V and 0V). Bottom pins FAULTB1 26, FAULTB0 25, SHARE_CLK 18, SDA 29, SCL 30, ALERTB 31, PWRGD 17, CONTROL3 23, CONTROL2 22, CONTROL1 33, CONTROL0 32, WDI/RESETB 24 go TO/FROM OTHER LTC POWER SYSTEM MANAGERS AND MICROCONTROLLER, with pull-ups to 3.3V: 10k on FAULTB1, FAULTB0, SDA, SCL and ALERTB, 5.49k on SHARE_CLK, and 10k on PWRGD, CONTROL3, CONTROL2, CONTROL1, CONTROL0 and WDI/RESETB. Drawing number 2975 TA02.\n",
+    "evidence": "Same as ltc2975-p108-typical-application-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p108-i2c-spacing",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 108,
+    "old": "| Dual I <sup>2</sup> C Power Supply Monitor",
+    "new": "| Dual I<sup>2</sup>C Power Supply Monitor",
+    "evidence": "PDF p108 Related Parts: 'I2C' is printed as one word with a superscript 2 ('Dual I²C Power Supply Monitor'); the md had spaces around the <sup>.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
