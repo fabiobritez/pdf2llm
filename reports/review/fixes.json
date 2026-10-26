@@ -28597,5 +28597,252 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p1-simplified-schematic-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 1,
+    "old": "![Simplified Schematic diagram of the TPS6287Bxx converter. The diagram shows the input section with VIN (2.7V to 6V), VIN pin, and a soft-start network with R_EN and C_IN. The converter core includes MODE/SYNC, EN, VOSNS, GOSNS, SDA, SCL, VSET1, VSET2, COMP, PG, SYNC_OUT, AGND, and GND pins. The output section features a power switch (SW), an inductor (L), an output capacitor (COUT), and a load. A remote sense network with R_Z, C_C, and C_C2 is connected to the COMP pin. A power-good output (PG) is shown with a resistor R_PG and a capacitor C_PG to ground.](4d4c0d9569f139f1b68b2c2549c9a299_img.jpg)\n\nSimplified Schematic diagram of the TPS6287Bxx converter. The diagram shows the input section with VIN (2.7V to 6V), VIN pin, and a soft-start network with R\\_EN and C\\_IN. The converter core includes MODE/SYNC, EN, VOSNS, GOSNS, SDA, SCL, VSET1, VSET2, COMP, PG, SYNC\\_OUT, AGND, and GND pins. The output section features a power switch (SW), an inductor (L), an output capacitor (COUT), and a load. A remote sense network with R\\_Z, C\\_C, and C\\_C2 is connected to the COMP pin. A power-good output (PG) is shown with a resistor R\\_PG and a capacitor C\\_PG to ground.",
+    "new": "![Simplified Schematic of the TPS6287Bx (description written from the drawing): the input V_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C_IN to ground; R_EN connects EN to V_IN. SDA and SCL form the I2C bus, each pulled up to V_IO by a resistor. VSET1 and VSET2 each go to ground through R_VSET1 and R_VSET2. The two SW pins drive the inductor L; C_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R_Z in series with C_C, with C_C2 in parallel. PG is pulled up to V_IO by R_PG and is the PG output. SYNC_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed.](4d4c0d9569f139f1b68b2c2549c9a299_img.jpg)\n\nSimplified Schematic of the TPS6287Bx (description written from the drawing): the input V\\_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C\\_IN to ground; R\\_EN connects EN to V\\_IN. SDA and SCL form the I2C bus, each pulled up to V\\_IO by a resistor. VSET1 and VSET2 each go to ground through R\\_VSET1 and R\\_VSET2. The two SW pins drive the inductor L; C\\_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R\\_Z in series with C\\_C, with C\\_C2 in parallel. PG is pulled up to V\\_IO by R\\_PG and is the PG output. SYNC\\_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed.",
+    "evidence": "PDF p1 Simplified Schematic: the AI text called R_EN/C_IN a soft-start network, R_Z/C_C/C_C2 a remote sense network and invented a C_PG capacitor. The drawing has C_IN to ground, R_EN from V_IN to EN, MODE/SYNC tied to VIN, I2C pull-ups to V_IO, R_VSET1/R_VSET2 to ground, the COMP network to ground, R_PG pull-up to V_IO, SYNC_OUT unconnected and VOSNS/GOSNS sensing at the load. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p1-load-acute-accent",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 1,
+    "old": "adapt the load's power",
+    "new": "adapt the load´s power",
+    "evidence": "PDF p1 Description: printed 'load´s' with an acute accent (U+00B4), kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p3-table4-3-empty-columns",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 3,
+    "old": "| DEVICE NUMBER      | OUTPUT CURRENT | HICCUP | START-UP OUTPUT VOLTAGE    | DEFAULT SWITCHING FREQUENCY | DROOP COMPENSATION    | SPREAD SPECTRUM CLOCKING | SOFT-START TIME       | PINS 19, 20 |  |  |  |  |  |  |\n|--------------------|----------------|--------|----------------------------|-----------------------------|-----------------------|--------------------------|-----------------------|-------------|--|--|--|--|--|--|\n| TPS6287B10VA0WRZVR | 10A            | Off    | 0.4V to 1.675V, Selectable | 1.5MHz                      | Default setting = off | Default setting = off    | Default setting = 1ms | VSET4/VSET3 |  |  |  |  |  |  |\n| TPS6287B10VA1WRZVR | 10A            | On     |                            |                             |                       |                          |                       |             |  |  |  |  |  |  |\n| TPS6287B15VA0WRZVR | 15A            | Off    |                            |                             |                       |                          |                       |             |  |  |  |  |  |  |\n| TPS6287B20VA0WRZVR | 20A            |        |                            |                             |                       |                          |                       |             |  |  |  |  |  |  |\n| TPS6287B25VA0WRZVR | 25A            |        |                            |                             |                       |                          |                       |             |  |  |  |  |  |  |",
+    "new": "| DEVICE NUMBER      | OUTPUT CURRENT | HICCUP | START-UP OUTPUT VOLTAGE    | DEFAULT SWITCHING FREQUENCY | DROOP COMPENSATION    | SPREAD SPECTRUM CLOCKING | SOFT-START TIME       | PINS 19, 20 |\n|--------------------|----------------|--------|----------------------------|-----------------------------|-----------------------|--------------------------|-----------------------|-------------|\n| TPS6287B10VA0WRZVR | 10A            | Off    | 0.4V to 1.675V, Selectable | 1.5MHz                      | Default setting = off | Default setting = off    | Default setting = 1ms | VSET4/VSET3 |\n| TPS6287B10VA1WRZVR | 10A            | On     |                            |                             |                       |                          |                       |             |\n| TPS6287B15VA0WRZVR | 15A            | Off    |                            |                             |                       |                          |                       |             |\n| TPS6287B20VA0WRZVR | 20A            |        |                            |                             |                       |                          |                       |             |\n| TPS6287B25VA0WRZVR | 25A            |        |                            |                             |                       |                          |                       |             |",
+    "evidence": "PDF p3 Table 4-3 has nine columns (DEVICE NUMBER ... PINS 19, 20); the md table had six extra empty columns.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p4-pinout-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 4,
+    "old": "![Figure 5-1. RZV Package 24 Pin WQFN-FCRLF. The diagram shows the top and bottom views of a 24-pin WQFN package. The top view shows pin numbers 1-8 on the left and 20-13 on the right. The bottom view shows pin numbers 20-13 on the left and 1-8 on the right. Pin functions are labeled: 1: VOSNS, 2: EN, 3: VSET1 or FSET, 4: VSET2, 5, 6: VIN, 7, 8: GND, 9-12: SW, 13-16: GND, 17: SYNC_OUT, 18: MODE/ SYNC, 19: SDA or VSET4, 20: SCL or VSET3, 21: PG, 22: AGND, 23: COMP, 24: GOSNS.](d3ca266c298aeb34b019960c6c36f187_img.jpg)\n\nFigure 5-1. RZV Package 24 Pin WQFN-FCRLF. The diagram shows the top and bottom views of a 24-pin WQFN package. The top view shows pin numbers 1-8 on the left and 20-13 on the right. The bottom view shows pin numbers 20-13 on the left and 1-8 on the right. Pin functions are labeled: 1: VOSNS, 2: EN, 3: VSET1 or FSET, 4: VSET2, 5, 6: VIN, 7, 8: GND, 9-12: SW, 13-16: GND, 17: SYNC\\_OUT, 18: MODE/ SYNC, 19: SDA or VSET4, 20: SCL or VSET3, 21: PG, 22: AGND, 23: COMP, 24: GOSNS.",
+    "new": "![Figure 5-1. RZV Package 24 Pin WQFN-FCRLF (description written from the drawing). TOP VIEW (pads dashed, pin 1 dot at upper left) and BOTTOM VIEW (mirrored). Top view: left side from top 1 VOSNS, 2 EN, 3 VSET1 or FSET, 4 VSET2, 5 VIN, 6 VIN, 7 GND, 8 GND; bottom edge from left 9, 10, 11, 12 SW; right side from bottom 13 GND, 14 GND, 15 VIN, 16 VIN, 17 SYNC_OUT, 18 MODE/SYNC, 19 SDA or VSET4, 20 SCL or VSET3; top edge from right 21 PG, 22 AGND, 23 COMP, 24 GOSNS. The bottom view shows the same pins mirrored (1 to 8 on the right, 13 to 20 on the left, 12 to 9 along the bottom edge, 21 to 24 along the top edge) and three large exposed pads (two upper, one lower) in the center.](d3ca266c298aeb34b019960c6c36f187_img.jpg)\n\nFigure 5-1. RZV Package 24 Pin WQFN-FCRLF (description written from the drawing). TOP VIEW (pads dashed, pin 1 dot at upper left) and BOTTOM VIEW (mirrored). Top view: left side from top 1 VOSNS, 2 EN, 3 VSET1 or FSET, 4 VSET2, 5 VIN, 6 VIN, 7 GND, 8 GND; bottom edge from left 9, 10, 11, 12 SW; right side from bottom 13 GND, 14 GND, 15 VIN, 16 VIN, 17 SYNC\\_OUT, 18 MODE/SYNC, 19 SDA or VSET4, 20 SCL or VSET3; top edge from right 21 PG, 22 AGND, 23 COMP, 24 GOSNS. The bottom view shows the same pins mirrored (1 to 8 on the right, 13 to 20 on the left, 12 to 9 along the bottom edge, 21 to 24 along the top edge) and three large exposed pads (two upper, one lower) in the center.",
+    "evidence": "PDF p4 Figure 5-1: the AI text gave '5, 6: VIN', '13-16: GND' and placed 20-13 on the right in the top view; the drawing and Table 5-1 have VIN on 5, 6, 15, 16 and GND on 7, 8, 13, 14, pins 13 to 20 bottom-to-top on the right side and 21 to 24 right-to-left on the top edge. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p7-isd-125c-spacing",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 7,
+    "old": "max value at $T_J = 125\\text{ °C}$",
+    "new": "max value at $T_J = 125\\text{°C}$",
+    "evidence": "PDF p7 EC I_SD condition printed 'max value at TJ = 125°C' without a space.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p7-vit-uvlo-symbol-space",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 7,
+    "old": "| $V_{IT+ (UVLO)}$ |",
+    "new": "| $V_{IT+(UVLO)}$ |",
+    "evidence": "PDF p7 EC symbol is VIT+(UVLO) wrapped over two lines in the cell; the space in the md came from the line wrap (the minus rows print VIT-(UVLO)).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p7-vit-ovlo-symbol-space",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 7,
+    "old": "| $V_{IT+ (OVLO)}$ |",
+    "new": "| $V_{IT+(OVLO)}$ |",
+    "evidence": "PDF p7 EC symbol is VIT+(OVLO) wrapped over two lines in the cell; the space in the md came from the line wrap.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p8-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 8,
+    "old": "### **6.5 Electrical Characteristics (continued)**",
+    "new": "### 6.5 Electrical Characteristics (continued)",
+    "evidence": "PDF p8: the continued table heading is a plain heading like 6.5 on p7; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p8-td-ramp-symbol",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 8,
+    "old": "| $t_d(\\text{Ramp})$           |",
+    "new": "| $td_{(Ramp)}$           |",
+    "evidence": "PDF p8 EC symbol printed 'td(' at full size and 'Ramp)' subscripted (PyMuPDF spans 'td('@8.0, 'Ramp)'@6.0), unlike t_d(EN)1; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p10-fssc-fsw-full-size",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 10,
+    "old": "|  | $f_{SW}/2048$ |  | kHz |",
+    "new": "|  | fsw/2048 |  | kHz |",
+    "evidence": "PDF p10 EC f_SSC TYP is printed 'fsw/2048' in lowercase at full size (PyMuPDF span 'fsw/2048'@8.0), unlike the subscripted f_SW in the next row; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p10-gm-full-size",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 10,
+    "old": "| $g_m$ | Transconductance",
+    "new": "| gm | Transconductance",
+    "evidence": "PDF p10 EC symbol printed 'gm' at full size (span 'gm'@8.0), not g with subscript m.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p11-thd-tsta-symbol",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 11,
+    "old": "| t <sub>HD, t<sub>STA</sub></sub> | Hold time (repeated",
+    "new": "| t <sub>HD</sub> , t <sub>STA</sub> | Hold time (repeated",
+    "evidence": "PDF p11 I2C timing symbol printed 'tHD, tSTA' (two subscripted symbols separated by a comma); the md nested the second symbol inside the first subscript.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p11-tsu-tsta-symbol",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 11,
+    "old": "| t <sub>SU, t<sub>STA</sub></sub> | Setup time for a re",
+    "new": "| t <sub>SU</sub> , t <sub>STA</sub> | Setup time for a re",
+    "evidence": "PDF p11 I2C timing symbol printed 'tSU, tSTA' (two subscripted symbols separated by a comma); the md nested the second symbol inside the first subscript.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p11-tsu-tdat-symbol",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 11,
+    "old": "| t <sub>SU, t<sub>DAT</sub></sub> | Data setup time",
+    "new": "| t <sub>SU</sub> , t <sub>DAT</sub> | Data setup time",
+    "evidence": "PDF p11 I2C timing symbol printed 'tSU, tDAT' (two subscripted symbols separated by a comma); the md nested the second symbol inside the first subscript.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p11-thd-tdat-symbol",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 11,
+    "old": "| t <sub>HD, t<sub>DAT</sub></sub> | Data hold time",
+    "new": "| t <sub>HD</sub> , t <sub>DAT</sub> | Data hold time",
+    "evidence": "PDF p11 I2C timing symbol printed 'tHD, tDAT' (two subscripted symbols separated by a comma); the md nested the second symbol inside the first subscript.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p12-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 12,
+    "old": "### **6.6 I<sup>2</sup>C Interface Timing Requirements (continued)**",
+    "new": "### 6.6 I<sup>2</sup>C Interface Timing Requirements (continued)",
+    "evidence": "PDF p12: plain continued-table heading like 6.6 on p11; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p13-fig6-2-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 13,
+    "old": "![Figure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).](8791f79b259a7463279c1aeb14c31580_img.jpg)\n\nFigure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(on) in mΩ on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).",
+    "new": "![Figure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(ON) (mΩ, axis label as printed) on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).](8791f79b259a7463279c1aeb14c31580_img.jpg)\n\nFigure 6-2: RDS(on) of Low Side Switch. A line graph showing RDS(ON) (mΩ, axis label as printed) on the y-axis (ranging from 1 to 4) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). All curves show a positive linear correlation between temperature and on-resistance, with higher VIN values resulting in lower RDS(on).",
+    "evidence": "PDF p13 Figure 6-2: the y-axis label is printed 'RDS(ON) (mΩ)' (Figure 6-1 prints 'RDS(on)').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p13-fig6-3-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 13,
+    "old": "![Figure 6-3: Shutdown Current vs Temperature. A line graph showing Shutdown Current (ISD) in µA on the y-axis (ranging from 10 to 70) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). The curves show a gradual increase in shutdown current with temperature, followed by a sharp increase starting around 120°C.](c222a9006d6d60a8d81e6ffbfc0e74ad_img.jpg)\n\nFigure 6-3: Shutdown Current vs Temperature. A line graph showing Shutdown Current (ISD) in µA on the y-axis (ranging from 10 to 70) versus Junction Temperature in °C on the x-axis (ranging from -40 to 160). Five curves are plotted for different input voltages: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue), and VIN = 6.0 V (green). The curves show a gradual increase in shutdown current with temperature, followed by a sharp increase starting around 120°C.",
+    "new": "![Figure 6-3: Shutdown Current vs Temperature (description written from the graph; read values from the image/PDF). Line graph of I_SD (µA) on the y-axis (10 to 70) versus Junction Temperature (°C) on the x-axis (-40 to 160), D002. Five curves: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue) and VIN = 6.0 V (green). All curves rise slowly and close together at low temperature; above about 90 °C the slope increases in two steps and the curves spread, with VIN = 6.0 V highest, then 5.0 V, 4.0 V, and 3.3 V and 2.7 V lowest at the hot end.](c222a9006d6d60a8d81e6ffbfc0e74ad_img.jpg)\n\nFigure 6-3: Shutdown Current vs Temperature (description written from the graph; read values from the image/PDF). Line graph of I\\_SD (µA) on the y-axis (10 to 70) versus Junction Temperature (°C) on the x-axis (-40 to 160), D002. Five curves: VIN = 2.7 V (black), VIN = 3.3 V (red), VIN = 4.0 V (grey), VIN = 5.0 V (blue) and VIN = 6.0 V (green). All curves rise slowly and close together at low temperature; above about 90 °C the slope increases in two steps and the curves spread, with VIN = 6.0 V highest, then 5.0 V, 4.0 V, and 3.3 V and 2.7 V lowest at the hot end.",
+    "evidence": "PDF p13 Figure 6-3: the AI text put the sharp increase 'around 120°C'; the curves bend upward at about 90 °C and again near 130 °C, with VIN = 6.0 V on top. Rewritten from the graph (shapes and order only).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p13-fig6-5-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 13,
+    "old": "![Figure 6-5: Switching Frequency vs Temperature. A line graph showing Switching Frequency in MHz on the y-axis (ranging from 1.45 to 1.55) versus Junction Temperature in °C on the x-axis (ranging from -40 to 140). Two curves are plotted: VIN = 5.0 V (black) and VIN = 3.3 V (red). Both curves show a slight increase in switching frequency with temperature, with the VIN = 3.3 V curve consistently higher than the VIN = 5.0 V curve.](3084f66c81a49b6225666f212179642c_img.jpg)\n\nFigure 6-5: Switching Frequency vs Temperature. A line graph showing Switching Frequency in MHz on the y-axis (ranging from 1.45 to 1.55) versus Junction Temperature in °C on the x-axis (ranging from -40 to 140). Two curves are plotted: VIN = 5.0 V (black) and VIN = 3.3 V (red). Both curves show a slight increase in switching frequency with temperature, with the VIN = 3.3 V curve consistently higher than the VIN = 5.0 V curve.",
+    "new": "![Figure 6-5: Switching Frequency vs Temperature (description written from the graph; read values from the image/PDF). Line graph of Switching Frequency (MHz) on the y-axis (1.45 to 1.55) versus Junction Temperature (°C) on the x-axis (-40 to 140). Two curves, VIN= 5.0 V (black) and VIN= 3.3 V (red), lie on top of each other: the frequency rises from just below 1.5 MHz at -40 °C, more steeply up to 0 °C and then slowly, flattening toward 140 °C.](3084f66c81a49b6225666f212179642c_img.jpg)\n\nFigure 6-5: Switching Frequency vs Temperature (description written from the graph; read values from the image/PDF). Line graph of Switching Frequency (MHz) on the y-axis (1.45 to 1.55) versus Junction Temperature (°C) on the x-axis (-40 to 140). Two curves, VIN= 5.0 V (black) and VIN= 3.3 V (red), lie on top of each other: the frequency rises from just below 1.5 MHz at -40 °C, more steeply up to 0 °C and then slowly, flattening toward 140 °C.",
+    "evidence": "PDF p13 Figure 6-5: the AI text said the VIN = 3.3 V curve is consistently higher than the 5.0 V curve; the two curves overlap over the whole range. Rewritten from the graph (shapes only).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
