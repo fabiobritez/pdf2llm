@@ -68,9 +68,9 @@ Before figure deduplication (diagnostic only): source numeric tokens 1846, compa
 
 Spec tables: 6; rows: 72; nonempty cells checked: 309; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 1986, compact 1986; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2066, compact 2066; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2176, compact 1986; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2250, compact 2066; equal: False; source subset: False.
 
 ## max31730
 
