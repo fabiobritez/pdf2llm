@@ -9440,5 +9440,213 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p1-title-missing",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 1,
+    "old": "{0}------------------------------------------------\n\n# Dual 5V",
+    "new": "{0}------------------------------------------------\n\n# LTC3315A\n\n# Dual 5V",
+    "evidence": "PDF p1 header prints the part number 'LTC3315A' above the subtitle (pdftotext + render); the md started at the subtitle.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p1-ta01a-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 1,
+    "old": "![Schematic diagram of the LTC3315A dual 2A buck regulators. The diagram shows a 12-lead LQFN package with two identical buck converter sections. Input: VIN (2.25V to 5.5V) connected to both VIN pins, with 10µF capacitors to ground. Enable pins: EN1 and EN2 connected to VIN. Switching frequency: fSW = 2MHz connected to the MODE/SYNC pin. Output 1: SW1 pin connected to an 880nH inductor, which is connected to a 140k resistor and a 6.8pF capacitor to the VOUT1 pin (1.2V, 2A). FB1 pin is connected to a voltage divider (100k and 140k resistors) between VOUT1 and ground. Output 2: SW2 pin connected to a 1µH inductor, which is connected to a 261k resistor and a 4.7pF capacitor to the VOUT2 pin (1.8V, 2A). FB2 pin is connected to a voltage divider (100k and 261k resistors) between VOUT2 and ground. Power Good: PGOOD pin is shown. Reference: 3315A TA01a.](",
+    "new": "![Schematic diagram of the LTC3315A dual 2A buck regulators. Input: V<sub>IN</sub> 2.25V TO 5.5V connected to both V<sub>IN</sub> pins, each decoupled by a 10µF capacitor to ground. EN1, EN2 and MODE/SYNC are drawn with input arrows; PGOOD with an output arrow. GND goes to ground, labeled f<sub>SW</sub> = 2MHz. Output 1: SW1 drives an 880nH inductor to V<sub>OUT1</sub> 1.2V, 2A, which has a 33µF capacitor to ground; FB1 connects to a 140k/100k divider from V<sub>OUT1</sub> to ground, with 6.8pF across the 140k resistor. Output 2: SW2 drives a 1µH inductor to V<sub>OUT2</sub> 1.8V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 261k/100k divider from V<sub>OUT2</sub> to ground, with 4.7pF across the 261k resistor.](",
+    "evidence": "PDF p1 TA01a schematic (render): EN1/EN2 are input arrows, not connected to VIN; f_SW = 2MHz is a label at the GND pin, not a connection to MODE/SYNC (MODE/SYNC is an input arrow); the 140k and 6.8pF sit between V_OUT1 and FB1, not between the inductor and a 'VOUT1 pin' (likewise 261k/4.7pF); the 33µF and 22µF output capacitors were missing; the drawing shows no '12-lead LQFN package'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p1-ta01a-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 1,
+    "old": "\nSchematic diagram of the LTC3315A dual 2A buck regulators. The diagram shows a 12-lead LQFN package with two identical buck converter sections. Input: VIN (2.25V to 5.5V) connected to both VIN pins, with 10µF capacitors to ground. Enable pins: EN1 and EN2 connected to VIN. Switching frequency: fSW = 2MHz connected to the MODE/SYNC pin. Output 1: SW1 pin connected to an 880nH inductor, which is connected to a 140k resistor and a 6.8pF capacitor to the VOUT1 pin (1.2V, 2A). FB1 pin is connected to a voltage divider (100k and 140k resistors) between VOUT1 and ground. Output 2: SW2 pin connected to a 1µH inductor, which is connected to a 261k resistor and a 4.7pF capacitor to the VOUT2 pin (1.8V, 2A). FB2 pin is connected to a voltage divider (100k and 261k resistors) between VOUT2 and ground. Power Good: PGOOD pin is shown. Reference: 3315A TA01a.\n",
+    "new": "\nSchematic diagram of the LTC3315A dual 2A buck regulators. Input: V<sub>IN</sub> 2.25V TO 5.5V connected to both V<sub>IN</sub> pins, each decoupled by a 10µF capacitor to ground. EN1, EN2 and MODE/SYNC are drawn with input arrows; PGOOD with an output arrow. GND goes to ground, labeled f<sub>SW</sub> = 2MHz. Output 1: SW1 drives an 880nH inductor to V<sub>OUT1</sub> 1.2V, 2A, which has a 33µF capacitor to ground; FB1 connects to a 140k/100k divider from V<sub>OUT1</sub> to ground, with 6.8pF across the 140k resistor. Output 2: SW2 drives a 1µH inductor to V<sub>OUT2</sub> 1.8V, 2A, which has a 22µF capacitor to ground; FB2 connects to a 261k/100k divider from V<sub>OUT2</sub> to ground, with 4.7pF across the 261k resistor.\n\n3315A TA01a\n",
+    "evidence": "PDF p1 TA01a schematic (render): EN1/EN2 are input arrows, not connected to VIN; f_SW = 2MHz is a label at the GND pin, not a connection to MODE/SYNC (MODE/SYNC is an input arrow); the 140k and 6.8pF sit between V_OUT1 and FB1, not between the inductor and a 'VOUT1 pin' (likewise 261k/4.7pF); the 33µF and 22µF output capacitors were missing; the drawing shows no '12-lead LQFN package'. Drawing number '3315A TA01a' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p1-ta01b-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 1,
+    "old": "![Graph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for Burst Mode Operation. The graph has two y-axes: Efficiency (%) from 0 to 100 on the left, and Power Loss (W) from 0 to 1.0 on the right. The x-axis is Load Current (A) on a logarithmic scale from 1m to 2. Efficiency (red solid line) starts at ~80% at 1mA, rises to ~90% at 10mA, and stays high. Power Loss (blue dashed line) starts near 0 at 1mA, remains low until ~100mA, then rises sharply to ~0.3W at 2A. Text in the graph: 'Burst Mode OPERATION', 'VIN = 3.3V, VOUT = 1.2V', 'L = 880nH, L DCR = 19mΩ', 'fSW = 2MHz'. Reference: 3315A TA01b.](",
+    "new": "![Graph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for Burst Mode Operation. The graph has two y-axes: Efficiency (%) from 0 to 100 on the left, and Power Loss (W) from 0 to 1.0 on the right. The x-axis is Load Current (A) on a logarithmic scale from 1m to 2. Efficiency (red solid line) starts at ~80% at 1mA, rises to ~90% at 10mA, stays near 90% and turns down slightly above 1A. Power Loss (blue dashed line) starts near 0 at 1mA, remains low until ~100mA, then rises sharply to ~0.3W at 2A. Text in the graph: 'Burst Mode OPERATION', 'VIN = 3.3V, VOUT = 1.2V', 'L = 880nH, L DCR = 19mΩ', 'fSW = 2MHz'.](",
+    "evidence": "PDF p1 efficiency plot (render): the efficiency curve dips at the right end (above 1A) rather than staying flat. 'Reference: 3315A TA01b' was AI text; the drawing number is printed under the plot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p1-ta01b-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 1,
+    "old": "\nGraph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for Burst Mode Operation. The graph has two y-axes: Efficiency (%) from 0 to 100 on the left, and Power Loss (W) from 0 to 1.0 on the right. The x-axis is Load Current (A) on a logarithmic scale from 1m to 2. Efficiency (red solid line) starts at ~80% at 1mA, rises to ~90% at 10mA, and stays high. Power Loss (blue dashed line) starts near 0 at 1mA, remains low until ~100mA, then rises sharply to ~0.3W at 2A. Text in the graph: 'Burst Mode OPERATION', 'VIN = 3.3V, VOUT = 1.2V', 'L = 880nH, L DCR = 19mΩ', 'fSW = 2MHz'. Reference: 3315A TA01b.\n",
+    "new": "\nGraph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for Burst Mode Operation. The graph has two y-axes: Efficiency (%) from 0 to 100 on the left, and Power Loss (W) from 0 to 1.0 on the right. The x-axis is Load Current (A) on a logarithmic scale from 1m to 2. Efficiency (red solid line) starts at ~80% at 1mA, rises to ~90% at 10mA, stays near 90% and turns down slightly above 1A. Power Loss (blue dashed line) starts near 0 at 1mA, remains low until ~100mA, then rises sharply to ~0.3W at 2A. Text in the graph: 'Burst Mode OPERATION', 'VIN = 3.3V, VOUT = 1.2V', 'L = 880nH, L DCR = 19mΩ', 'fSW = 2MHz'.\n\n3315A TA01b\n",
+    "evidence": "PDF p1 efficiency plot (render): the efficiency curve dips at the right end (above 1A) rather than staying flat. 'Reference: 3315A TA01b' was AI text; the drawing number is printed under the plot. Drawing number '3315A TA01b' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p2-wlcsp-thermal-trailing-comma",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 2,
+    "old": "$\\Psi_{JB} = 15^{\\circ}C/W$ ,  \n",
+    "new": "$\\Psi_{JB} = 15^{\\circ}C/W$  \n",
+    "evidence": "PDF p2 WLCSP thermal line ends 'ΨJB = 15°C/W' with no comma (pdftotext + render); the md added a trailing comma.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p3-order-notes-bullet-level",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 3,
+    "old": "J-STD-609.\n  - Device temperature grade is indicated by a label on the shipping container.\n  - TRM = 500 pieces.",
+    "new": "J-STD-609.\n- Device temperature grade is indicated by a label on the shipping container.\n- TRM = 500 pieces.",
+    "evidence": "PDF p3 order notes: 'Device temperature grade…' and 'TRM = 500 pieces.' are bullets at the same level as 'Contact the factory…' (render); the md nested them as sub-items.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p3-order-links-bullet-level",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 3,
+    "old": "Procedures](#)\n  - [LGA and BGA Package and Tray Drawings](#)\n  - [Tape and reel specifications](#).",
+    "new": "Procedures](#)\n- [LGA and BGA Package and Tray Drawings](#)\n- [Tape and reel specifications](#).",
+    "evidence": "PDF p3: the three link bullets in the right column are at the same level (render); the md nested the second and third.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p4-note2-column-split",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 4,
+    "old": "consistent with these specifications is\n\ndetermined by",
+    "new": "consistent with these specifications is determined by",
+    "evidence": "PDF p4 Note 2 continues from the bottom of the left column ('…these specifications is') to the top of the right column ('determined by specific operating conditions…') mid-sentence; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p5-g06-title-vin-subscript",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "### Oscillator Frequency vs VIN\n",
+    "new": "### Oscillator Frequency vs V<sub>IN</sub>\n",
+    "evidence": "PDF p5 G06 title prints 'Oscillator Frequency vs V_IN' with IN as subscript (render, PyMuPDF spans), like the other subscripted titles on the page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p5-g05-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "![Graph of Oscillator Frequency vs Temperature. The y-axis is FREQUENCY (MHz) from 1.80 to 2.20. The x-axis is TEMPERATURE (°C) from -50 to 150. Three lines are shown: VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dashed green). All show a slight downward trend with temperature.](",
+    "new": "![Graph of Oscillator Frequency vs Temperature. The y-axis is FREQUENCY (MHz) from 1.80 to 2.20. The x-axis is TEMPERATURE (°C) from -50 to 150. Three lines are shown: VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dashed green). Each curve rises slightly from -50°C to a flat maximum around 0°C to 25°C and then decreases toward 150°C.](",
+    "evidence": "PDF p5 G05 (render): the curves are not monotonic; each rises slightly from -50°C to a maximum around 0-25°C before falling.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p5-g05-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 5,
+    "old": "\nGraph of Oscillator Frequency vs Temperature. The y-axis is FREQUENCY (MHz) from 1.80 to 2.20. The x-axis is TEMPERATURE (°C) from -50 to 150. Three lines are shown: VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dashed green). All show a slight downward trend with temperature.\n",
+    "new": "\nGraph of Oscillator Frequency vs Temperature. The y-axis is FREQUENCY (MHz) from 1.80 to 2.20. The x-axis is TEMPERATURE (°C) from -50 to 150. Three lines are shown: VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dashed green). Each curve rises slightly from -50°C to a flat maximum around 0°C to 25°C and then decreases toward 150°C.\n",
+    "evidence": "PDF p5 G05 (render): the curves are not monotonic; each rises slightly from -50°C to a maximum around 0-25°C before falling.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p6-g15-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 6,
+    "old": "![Graph of Efficiency vs ILOAD Syncing, Forced Continuous. The y-axis is Efficiency (%) from 0 to 100. The x-axis is Load Current (A) on a log scale from 1m to 2. Two conditions are specified: VIN = 3.3V, VOUT = 1.2V. Three curves are shown for different frequencies and inductors: 1MHz, L = 1.5µH, DCR = 33mΩ (solid red); 2MHz, L = 880nH, DCR = 19mΩ (dashed blue); 3MHz, L = 560nH, DCR = 16mΩ (dotted green). All curves show a peak efficiency around 100-200mA.](",
+    "new": "![Graph of Efficiency vs ILOAD Syncing, Forced Continuous. The y-axis is Efficiency (%) from 0 to 100. The x-axis is Load Current (A) on a log scale from 1m to 2. Two conditions are specified: VIN = 3.3V, VOUT = 1.2V. Three curves are shown for different frequencies and inductors: 1MHz, L = 1.5µH, DCR = 33mΩ (solid red); 2MHz, L = 880nH, DCR = 19mΩ (dashed blue); 3MHz, L = 560nH, DCR = 16mΩ (dotted green). Efficiency rises from near 5% at 1mA, the 1MHz curve highest and the 3MHz curve lowest at light load; all curves peak between about 0.5A and 1A and then turn down toward 2A.](",
+    "evidence": "PDF p6 G15 (render): the curves are still around 75-85% at 100-200mA; the peak (low 90s) is between about 0.5A and 1A.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p6-g15-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 6,
+    "old": "\nGraph of Efficiency vs ILOAD Syncing, Forced Continuous. The y-axis is Efficiency (%) from 0 to 100. The x-axis is Load Current (A) on a log scale from 1m to 2. Two conditions are specified: VIN = 3.3V, VOUT = 1.2V. Three curves are shown for different frequencies and inductors: 1MHz, L = 1.5µH, DCR = 33mΩ (solid red); 2MHz, L = 880nH, DCR = 19mΩ (dashed blue); 3MHz, L = 560nH, DCR = 16mΩ (dotted green). All curves show a peak efficiency around 100-200mA.\n",
+    "new": "\nGraph of Efficiency vs ILOAD Syncing, Forced Continuous. The y-axis is Efficiency (%) from 0 to 100. The x-axis is Load Current (A) on a log scale from 1m to 2. Two conditions are specified: VIN = 3.3V, VOUT = 1.2V. Three curves are shown for different frequencies and inductors: 1MHz, L = 1.5µH, DCR = 33mΩ (solid red); 2MHz, L = 880nH, DCR = 19mΩ (dashed blue); 3MHz, L = 560nH, DCR = 16mΩ (dotted green). Efficiency rises from near 5% at 1mA, the 1MHz curve highest and the 3MHz curve lowest at light load; all curves peak between about 0.5A and 1A and then turn down toward 2A.\n",
+    "evidence": "PDF p6 G15 (render): the curves are still around 75-85% at 100-200mA; the peak (low 90s) is between about 0.5A and 1A.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p6-g09-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 6,
+    "old": "![Graph of VIN Quiescent Current vs Temperature, Burst Mode, Sleeping. The y-axis is Ivin (µA) from 30.0 to 100.0. The x-axis is Temperature (°C) from -50 to 150. Two regions are labeled: 'BOTH BUCKS ENABLED' (top) and 'ONE BUCK ENABLED' (bottom). Each region has three curves for VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dotted green). Current increases with temperature, especially in the 'BOTH BUCKS ENABLED' region.](",
+    "new": "![Graph of VIN Quiescent Current vs Temperature, Burst Mode, Sleeping. The y-axis is Ivin (µA) from 30.0 to 100.0. The x-axis is Temperature (°C) from -50 to 150. Two regions are labeled: 'BOTH BUCKS ENABLED' (top) and 'ONE BUCK ENABLED' (bottom). Each region has three curves for VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dotted green). In both regions the current increases with temperature, with a steeper rise above about 100°C.](",
+    "evidence": "PDF p6 G09 (render): both groups of curves rise with temperature with a similar shape and a steeper rise above about 100°C; nothing in the plot supports 'especially in the BOTH BUCKS ENABLED region'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p6-g09-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 6,
+    "old": "\nGraph of VIN Quiescent Current vs Temperature, Burst Mode, Sleeping. The y-axis is Ivin (µA) from 30.0 to 100.0. The x-axis is Temperature (°C) from -50 to 150. Two regions are labeled: 'BOTH BUCKS ENABLED' (top) and 'ONE BUCK ENABLED' (bottom). Each region has three curves for VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dotted green). Current increases with temperature, especially in the 'BOTH BUCKS ENABLED' region.\n",
+    "new": "\nGraph of VIN Quiescent Current vs Temperature, Burst Mode, Sleeping. The y-axis is Ivin (µA) from 30.0 to 100.0. The x-axis is Temperature (°C) from -50 to 150. Two regions are labeled: 'BOTH BUCKS ENABLED' (top) and 'ONE BUCK ENABLED' (bottom). Each region has three curves for VIN = 5.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 2.25V (dotted green). In both regions the current increases with temperature, with a steeper rise above about 100°C.\n",
+    "evidence": "PDF p6 G09 (render): both groups of curves rise with temperature with a similar shape and a steeper rise above about 100°C; nothing in the plot supports 'especially in the BOTH BUCKS ENABLED region'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
