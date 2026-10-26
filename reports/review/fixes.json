@@ -23050,5 +23050,55 @@
       "pdftotext"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p25-tube-description-dimensions",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 25,
+    "old": "On the left, a cross-sectional view shows the tube's profile with labels: 'T - Tube height' for the overall height, 'W - Tube width' for the width of the tube body, and 'B - Alignment groove width' for the width of the groove at the bottom.",
+    "new": "On the left, a cross-sectional view shows the tube's profile with labels (as drawn in the PDF): 'T - Tube height' dimensioned horizontally across the profile, 'W - Tube width' dimensioned vertically, and 'B - Alignment groove width' for the groove cut into the left side of the profile.",
+    "evidence": "PDF p25 TUBE drawing: T is the horizontal dimension above the cross-section, W the vertical one at its right, and the alignment groove B is on the left side of the profile, not at the bottom.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p26-rsv-generic-view-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 26,
+    "old": "On the left is a top-down view of the package, which is black with the Texas Instruments logo and name printed in white. On the right is a side view of the same package, showing its low profile and the 16 leads arranged in a quad flat configuration. The leads are silver-colored with a copper-colored base.",
+    "new": "On the left the package is shown from above at an angle: a black body with the Texas Instruments logo and name printed in white, with pad ends visible along its lower edge. On the right the package is shown upside down, showing the bottom with the silver-colored, copper-edged pads around its perimeter (no leads; no-lead package).",
+    "evidence": "PDF p26 RSV GENERIC PACKAGE VIEW: the right-hand rendering is the bottom of the package (pads around the perimeter), not a side view, and the package has pads, not leads.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p26-rsv-generic-view-drawing-number",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 26,
+    "old": "Two views of a Texas Instruments UQFN package: top view and side view.\n\n{26}",
+    "new": "Two views of a Texas Instruments UQFN package: top view and side view.\n\n4231225/A\n\n{26}",
+    "evidence": "PDF p26 prints the drawing number '4231225/A' at the bottom right; it was missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p27-rsv-outline-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 27,
+    "old": "Package Outline drawing showing: Top view (1.85/1.75 mm width by 2.65/2.55 mm length, Pin 1 index area in top-left corner), Side view (0.55/0.45 mm height, 0.05/0.00 mm seating plane offset, 0.05 C coplanarity), and Bottom view with 16 pins arranged on the periphery (0.45/0.35 mm pin length, 0.25/0.15 mm pin width, 0.4 mm pitch, Pin 1 ID chamfer 45° x 0.1, 1.2 mm center-to-center span). Side profile showing (0.13) TYP reference.",
+    "new": "Package Outline drawing (SCALE 5.000; values as printed, max over min in mm): Top view: body 1.85/1.75 wide (datum B) by 2.65/2.55 long (datum A), PIN 1 INDEX AREA in the top-left corner. Side view: height 0.55/0.45, standoff 0.05/0.00 above the SEATING PLANE (datum C), surface profile 0.05 C. Bottom view: 16 pads, pins 1-4 on the left side (pin 1 at the bottom), 5-8 along the top, 9-12 on the right side and 13-16 along the bottom; pad width 16X 0.25/0.15 with position tolerance 0.07 (M) C A B and 0.05 (M); pad length 15X 0.45/0.35, pin 1 pad 0.55/0.45 long with PIN 1 ID (45° X 0.1) chamfer; pitch 12X 0.4; basic spans 2X 1.2 (pads 5 to 8, and pads 1 to 4); SYMM centerlines. Side profile: (0.13) TYP.",
+    "evidence": "PDF p27 RSV0016A outline: the pad length 0.45/0.35 applies to 15 pads (15X) while pin 1 is 0.55/0.45 long; 16X 0.25/0.15 pad width with 0.07 (M) C A B / 0.05 (M) position tolerances; 12X 0.4 pitch; 2X 1.2 basic spans (pads 5-8 and 1-4); pin numbering 1-4 left, 5-8 top, 9-12 right, 13-16 bottom; SCALE 5.000. The old text gave one pad length, called 1.2 a 'center-to-center span' and omitted the pin numbering, pin-1 pad length, tolerances and scale.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
