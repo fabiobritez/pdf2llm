@@ -6099,5 +6099,304 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g35-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "![Graph of Ripple Rejection (dB) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to 100 dB, and the x-axis ranges from -50 to 150 °C. A single red curve shows a gradual decrease in ripple rejection as temperature increases. Test conditions: I_L = 0.75A, V_IN = V_OUT(NOMINAL) + 1V + 0.5p.p. RIPPLE AT f = 120Hz.](",
+    "new": "![Graph of Ripple Rejection (dB) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to 100 dB, and the x-axis ranges from -50 to 150 °C. A single red curve shows a gradual decrease in ripple rejection as temperature increases. Test conditions: I_L = 0.75A, V_IN = V_OUT(NOMINAL) + 1V + 0.5P-P RIPPLE AT f = 120Hz.](",
+    "evidence": "PDF p10 G35 label prints 'VIN = VOUT(NOMINAL) + 1V + 0.5P-P RIPPLE AT f = 120Hz' (PDF words '0.5P-P'); the AI text had '0.5p.p.'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g35-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "\nGraph of Ripple Rejection (dB) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to 100 dB, and the x-axis ranges from -50 to 150 °C. A single red curve shows a gradual decrease in ripple rejection as temperature increases. Test conditions: I\\_L = 0.75A, V\\_IN = V\\_OUT(NOMINAL) + 1V + 0.5p.p. RIPPLE AT f = 120Hz.\n",
+    "new": "\nGraph of Ripple Rejection (dB) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to 100 dB, and the x-axis ranges from -50 to 150 °C. A single red curve shows a gradual decrease in ripple rejection as temperature increases. Test conditions: I\\_L = 0.75A, V\\_IN = V\\_OUT(NOMINAL) + 1V + 0.5P-P RIPPLE AT f = 120Hz.\n",
+    "evidence": "PDF p10 G35 label prints 'VIN = VOUT(NOMINAL) + 1V + 0.5P-P RIPPLE AT f = 120Hz' (PDF words '0.5P-P'); the AI text had '0.5p.p.'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g37-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "![Graph of Load Regulation (mV) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to -50 mV, and the x-axis ranges from -50 to 150 °C. Curves are shown for LT1965, LT1965-1.5, LT1965-1.8, LT1965-2.5, and LT1965-3.3. Load regulation becomes more negative (worse) as temperature increases and load current increases.](",
+    "new": "![Graph of Load Regulation (mV) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to -50 mV, and the x-axis ranges from -50 to 150 °C. Curves are shown for LT1965, LT1965-1.5, LT1965-1.8, LT1965-2.5, and LT1965-3.3. Load regulation becomes more negative (worse) as temperature increases, falling steeply near 150°C. Test conditions: V_IN = V_OUT(NOMINAL) + 1V (LT1965-1.5/-1.8/-2.5/-3.3), V_IN = 2.3V (LT1965), ΔI_L = 1mA TO 1.1A.](",
+    "evidence": "PDF p10 G37: the x-axis is temperature only and every curve uses the same load step 'ΔIL = 1mA TO 1.1A' printed in the plot with 'VIN = VOUT(NOMINAL) + 1V (LT1965-1.5/-1.8/-2.5/-3.3)' and 'VIN = 2.3V (LT1965)' (PDF words). The AI text claimed a load-current dependence and omitted the printed conditions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g37-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "\nGraph of Load Regulation (mV) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to -50 mV, and the x-axis ranges from -50 to 150 °C. Curves are shown for LT1965, LT1965-1.5, LT1965-1.8, LT1965-2.5, and LT1965-3.3. Load regulation becomes more negative (worse) as temperature increases and load current increases.\n",
+    "new": "\nGraph of Load Regulation (mV) vs Temperature (°C) for LT1965. The y-axis ranges from 0 to -50 mV, and the x-axis ranges from -50 to 150 °C. Curves are shown for LT1965, LT1965-1.5, LT1965-1.8, LT1965-2.5, and LT1965-3.3. Load regulation becomes more negative (worse) as temperature increases, falling steeply near 150°C. Test conditions: V\\_IN = V\\_OUT(NOMINAL) + 1V (LT1965-1.5/-1.8/-2.5/-3.3), V\\_IN = 2.3V (LT1965), ΔI\\_L = 1mA TO 1.1A.\n",
+    "evidence": "PDF p10 G37: the x-axis is temperature only and every curve uses the same load step 'ΔIL = 1mA TO 1.1A' printed in the plot with 'VIN = VOUT(NOMINAL) + 1V (LT1965-1.5/-1.8/-2.5/-3.3)' and 'VIN = 2.3V (LT1965)' (PDF words). The AI text claimed a load-current dependence and omitted the printed conditions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g38-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "![Graph of Output Noise Spectral Density (µV/Hz) vs Frequency (Hz) for LT1965. The y-axis is logarithmic from 0.01 to 1.00 µV/Hz, and the x-axis is logarithmic from 10 to 100k Hz. Curves are shown for LT1965-2.5, LT1965-3.3, LT1965-1.8, and LT1965. Test conditions: C_OUT = 10µF, I_L = 1.1A.](",
+    "new": "![Graph of Output Noise Spectral Density (µV/√Hz) vs Frequency (Hz) for LT1965. The y-axis is logarithmic from 0.01 to 1.00 µV/√Hz, and the x-axis is logarithmic from 10 to 100k Hz. Curves are shown for LT1965-2.5, LT1965-3.3, LT1965-1.8, LT1965-1.5 and LT1965. Test conditions: C_OUT = 10µF, I_L = 1.1A.](",
+    "evidence": "PDF p10 G38: y-axis 'OUTPUT NOISE SPECTRAL DENSITY (µV/√Hz)' and five curve labels including LT1965-1.5 (render + PDF words); the AI text had µV/Hz and listed four curves.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g38-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "\nGraph of Output Noise Spectral Density (µV/Hz) vs Frequency (Hz) for LT1965. The y-axis is logarithmic from 0.01 to 1.00 µV/Hz, and the x-axis is logarithmic from 10 to 100k Hz. Curves are shown for LT1965-2.5, LT1965-3.3, LT1965-1.8, and LT1965. Test conditions: C\\_OUT = 10µF, I\\_L = 1.1A.\n",
+    "new": "\nGraph of Output Noise Spectral Density (µV/√Hz) vs Frequency (Hz) for LT1965. The y-axis is logarithmic from 0.01 to 1.00 µV/√Hz, and the x-axis is logarithmic from 10 to 100k Hz. Curves are shown for LT1965-2.5, LT1965-3.3, LT1965-1.8, LT1965-1.5 and LT1965. Test conditions: C\\_OUT = 10µF, I\\_L = 1.1A.\n",
+    "evidence": "PDF p10 G38: y-axis 'OUTPUT NOISE SPECTRAL DENSITY (µV/√Hz)' and five curve labels including LT1965-1.5 (render + PDF words); the AI text had µV/Hz and listed four curves.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g41-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "![Two stacked graphs showing the transient response of the LT1965-3.3. The top graph shows Output Voltage Deviation (mV) vs Time (µs) with a step change in load current. The bottom graph shows Load Current (A) vs Time (µs) with a step change from 0 to 1.1A at 30µs. Test conditions: V_OUT = 3.3V, V_IN = 4.3V, C_IN = 10µF CERAMIC, C_OUT = 10µF CERAMIC.](",
+    "new": "![Two stacked graphs showing the transient response of the LT1965-3.3. The top graph shows Output Voltage Deviation (mV) vs Time (µs) with a step change in load current. The bottom graph shows Load Current (A) vs Time (µs) with a pulse from a low level up to about 1.1A at about 3µs, stepping back down at 30µs; the output deviates negative at the rising step and positive at the falling step. Test conditions: V_OUT = 3.3V, V_IN = 4.3V, C_IN = 10µF CERAMIC, C_OUT = 10µF CERAMIC.](",
+    "evidence": "PDF p10 G41 render: the load-current trace rises to ~1.1A near 3µs and falls at 30µs (not 'from 0 to 1.1A at 30µs'); the output deviation dips at the rising edge and spikes positive at the falling edge.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g41-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "\nTwo stacked graphs showing the transient response of the LT1965-3.3. The top graph shows Output Voltage Deviation (mV) vs Time (µs) with a step change in load current. The bottom graph shows Load Current (A) vs Time (µs) with a step change from 0 to 1.1A at 30µs. Test conditions: V\\_OUT = 3.3V, V\\_IN = 4.3V, C\\_IN = 10µF CERAMIC, C\\_OUT = 10µF CERAMIC.\n",
+    "new": "\nTwo stacked graphs showing the transient response of the LT1965-3.3. The top graph shows Output Voltage Deviation (mV) vs Time (µs) with a step change in load current. The bottom graph shows Load Current (A) vs Time (µs) with a pulse from a low level up to about 1.1A at about 3µs, stepping back down at 30µs; the output deviates negative at the rising step and positive at the falling step. Test conditions: V\\_OUT = 3.3V, V\\_IN = 4.3V, C\\_IN = 10µF CERAMIC, C\\_OUT = 10µF CERAMIC.\n",
+    "evidence": "PDF p10 G41 render: the load-current trace rises to ~1.1A near 3µs and falls at 30µs (not 'from 0 to 1.1A at 30µs'); the output deviation dips at the rising edge and spikes positive at the falling edge.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g42-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "![Graph showing the Soft Start (SHDN) and Output voltage response for the LT1965-2.5. The y-axis is SHDN and Output Voltage (V) from 0 to 4.0 V, and the x-axis is Time (µs) from 0 to 100. The SHDN signal (red) steps up at 20µs, and the output (blue) ramps up to 2.5V by 40µs. Test conditions: V_IN = 3.3V, C_OUT = 10µF CERAMIC, R_L = 2.5k, I_L = 1mA FOR V_OUT = 2.5V.](",
+    "new": "![Graph showing the SHDN and Output voltage response for the LT1965-2.5. The y-axis is SHDN and Output Voltage (V) from 0 to 4.0 V, and the x-axis is Time (µs) from 0 to 100. The SHDN signal (red) steps up at about 15µs, and the output (blue) ramps up to 2.5V by 40µs. Test conditions: V_IN = 3.3V, C_OUT = 10µF CERAMIC, R_L = 2.5k, I_L = 1mA FOR V_OUT = 2.5V.](",
+    "evidence": "PDF p10 G42 'LT1965-2.5 SHDN Transient Response' (no 'Soft Start' in the PDF); in the render the SHDN trace steps up at about 15µs, not 20µs (output starts ramping near 23µs and reaches 2.5V at 40µs).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p10-g42-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 10,
+    "old": "\nGraph showing the Soft Start (SHDN) and Output voltage response for the LT1965-2.5. The y-axis is SHDN and Output Voltage (V) from 0 to 4.0 V, and the x-axis is Time (µs) from 0 to 100. The SHDN signal (red) steps up at 20µs, and the output (blue) ramps up to 2.5V by 40µs. Test conditions: V\\_IN = 3.3V, C\\_OUT = 10µF CERAMIC, R\\_L = 2.5k, I\\_L = 1mA FOR V\\_OUT = 2.5V.\n",
+    "new": "\nGraph showing the SHDN and Output voltage response for the LT1965-2.5. The y-axis is SHDN and Output Voltage (V) from 0 to 4.0 V, and the x-axis is Time (µs) from 0 to 100. The SHDN signal (red) steps up at about 15µs, and the output (blue) ramps up to 2.5V by 40µs. Test conditions: V\\_IN = 3.3V, C\\_OUT = 10µF CERAMIC, R\\_L = 2.5k, I\\_L = 1mA FOR V\\_OUT = 2.5V.\n",
+    "evidence": "PDF p10 G42 'LT1965-2.5 SHDN Transient Response' (no 'Soft Start' in the PDF); in the render the SHDN trace steps up at about 15µs, not 20µs (output starts ramping near 23µs and reaches 2.5V at 40µs).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p11-sense-rp-subscript",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 11,
+    "old": "the resistance ( $R_p$ ) of PCB traces",
+    "new": "the resistance ( $R_P$ ) of PCB traces",
+    "evidence": "PDF p11 SENSE pin text prints 'RP' with a capital P subscript (pdftotext 'RP', render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p11-f01-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 11,
+    "old": "\n\nFigure 1. Kelvin Sense Connection\n",
+    "new": "\n\n1965 F01\n\nFigure 1. Kelvin Sense Connection\n",
+    "evidence": "PDF p11 prints drawing number '1965 F01' at the Figure 1 schematic (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p11-fig1-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 11,
+    "old": "![Figure 1: Kelvin Sense Connection circuit diagram. The diagram shows the LT1965 regulator with pins IN, OUT, SHDN, SENSE, and GND. The IN pin is connected to the input voltage source V_IN and a bypass capacitor. The SHDN pin is connected to the input voltage source. The SENSE pin is connected to the output of the regulator through a resistor R_p. The OUT pin is connected to the load through a resistor R_p. The GND pin is connected to the ground of the input voltage source and the ground of the load. The load is represented by a box labeled 'LOAD'.](",
+    "new": "![Figure 1: Kelvin Sense Connection circuit diagram. The diagram shows the LT1965 regulator with pins IN, OUT, SHDN, SENSE, and GND. The IN pin is connected to the input voltage source V_IN and a bypass capacitor. The SHDN pin is connected to the input voltage source. The OUT pin is connected to the load through a PCB trace resistance R_P. The SENSE pin is connected directly to the load end of that trace (Kelvin connection at the load), not to the OUT pin. An output capacitor is connected across the load. The GND pin is connected to the load ground, which returns to the input ground through a second trace resistance R_P. The load is represented by a box labeled 'LOAD'.](",
+    "evidence": "PDF p11 Figure 1 render: SENSE goes straight to the load side of the upper R_P (not through a resistor to the regulator output); GND joins the load ground and the lower R_P sits between that node and the input ground; a polarized capacitor is across the load; the label is R_P (capital P subscript).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p11-fig1-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 11,
+    "old": "\nFigure 1: Kelvin Sense Connection circuit diagram. The diagram shows the LT1965 regulator with pins IN, OUT, SHDN, SENSE, and GND. The IN pin is connected to the input voltage source V\\_IN and a bypass capacitor. The SHDN pin is connected to the input voltage source. The SENSE pin is connected to the output of the regulator through a resistor R\\_p. The OUT pin is connected to the load through a resistor R\\_p. The GND pin is connected to the ground of the input voltage source and the ground of the load. The load is represented by a box labeled 'LOAD'.\n",
+    "new": "\nFigure 1: Kelvin Sense Connection circuit diagram. The diagram shows the LT1965 regulator with pins IN, OUT, SHDN, SENSE, and GND. The IN pin is connected to the input voltage source V\\_IN and a bypass capacitor. The SHDN pin is connected to the input voltage source. The OUT pin is connected to the load through a PCB trace resistance R\\_P. The SENSE pin is connected directly to the load end of that trace (Kelvin connection at the load), not to the OUT pin. An output capacitor is connected across the load. The GND pin is connected to the load ground, which returns to the input ground through a second trace resistance R\\_P. The load is represented by a box labeled 'LOAD'.\n",
+    "evidence": "PDF p11 Figure 1 render: SENSE goes straight to the load side of the upper R_P (not through a resistor to the regulator output); GND joins the load ground and the lower R_P sits between that node and the input ground; a polarized capacitor is across the load; the label is R_P (capital P subscript).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p12-f02-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 12,
+    "old": "\n\nFigure 2. Adjustable Operation\n",
+    "new": "\n\n1965 F02\n\nFigure 2. Adjustable Operation\n",
+    "evidence": "PDF p12 prints drawing number '1965 F02' in the Figure 2 schematic (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p12-fig2-eq-r1-r2-as-printed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 12,
+    "old": "$$V_{OUT} = 1.20V \\left(1 + \\frac{R_2}{R_1}\\right) + I_{ADJ} \\cdot R_2$$",
+    "new": "$$V_{OUT} = 1.20V \\left(1 + \\frac{R2}{R1}\\right) + I_{ADJ} \\cdot R2$$",
+    "evidence": "PDF p12 Figure 2 equation prints R2/R1 and IADJ • R2 with plain (not subscripted) resistor names, matching the R1/R2 labels in the schematic and text (PyMuPDF spans: same size/baseline).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p12-fig2-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 12,
+    "old": "![Circuit diagram of the LT1965 adjustable regulator. The IC is shown with pins IN, OUT, ADJ, and GND. An input voltage VIN is connected to the IN pin. The ADJ pin is connected to ground through resistor R1. Resistor R2 is connected between the ADJ pin and the output. The output is connected to the OUT pin and also to a load through a capacitor. The output voltage is labeled VOUT. The diagram includes the following equations: VOUT = 1.20V * (1 + R2/R1) + IADJ * R2, VADJ = 1.20V, IADJ = 1.3μA AT 25°C, and OUTPUT RANGE = 1.20V TO 19.5V.](",
+    "new": "![Circuit diagram of the LT1965 adjustable regulator. The IC is shown with pins IN, OUT, ADJ, and GND. An input voltage VIN is connected to the IN pin. The ADJ pin is connected to ground through resistor R1. Resistor R2 is connected between the ADJ pin and the output. An output capacitor is connected from the OUT pin (VOUT) to ground; no load is drawn. The output voltage is labeled VOUT. The diagram includes the following equations: VOUT = 1.20V * (1 + R2/R1) + IADJ * R2, VADJ = 1.20V, IADJ = 1.3μA AT 25°C, and OUTPUT RANGE = 1.20V TO 19.5V.](",
+    "evidence": "PDF p12 Figure 2 render: the polarized capacitor goes from the VOUT node to ground; no load is drawn (the AI text said the output goes 'to a load through a capacitor').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p12-fig2-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 12,
+    "old": "\nCircuit diagram of the LT1965 adjustable regulator. The IC is shown with pins IN, OUT, ADJ, and GND. An input voltage VIN is connected to the IN pin. The ADJ pin is connected to ground through resistor R1. Resistor R2 is connected between the ADJ pin and the output. The output is connected to the OUT pin and also to a load through a capacitor. The output voltage is labeled VOUT. The diagram includes the following equations: VOUT = 1.20V \\* (1 + R2/R1) + IADJ \\* R2, VADJ = 1.20V, IADJ = 1.3μA AT 25°C, and OUTPUT RANGE = 1.20V TO 19.5V.\n",
+    "new": "\nCircuit diagram of the LT1965 adjustable regulator. The IC is shown with pins IN, OUT, ADJ, and GND. An input voltage VIN is connected to the IN pin. The ADJ pin is connected to ground through resistor R1. Resistor R2 is connected between the ADJ pin and the output. An output capacitor is connected from the OUT pin (VOUT) to ground; no load is drawn. The output voltage is labeled VOUT. The diagram includes the following equations: VOUT = 1.20V \\* (1 + R2/R1) + IADJ \\* R2, VADJ = 1.20V, IADJ = 1.3μA AT 25°C, and OUTPUT RANGE = 1.20V TO 19.5V.\n",
+    "evidence": "PDF p12 Figure 2 render: the polarized capacitor goes from the VOUT node to ground; no load is drawn (the AI text said the output goes 'to a load through a capacitor').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p13-f03-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "\n\nFigure 3. Ceramic Capacitor DC Bias Characteristics\n",
+    "new": "\n\n1965 F03\n\nFigure 3. Ceramic Capacitor DC Bias Characteristics\n",
+    "evidence": "PDF p13 prints drawing number '1965 F03' at Figure 3 (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p13-f04-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "\n\nFigure 4. Ceramic Capacitor Temperature Characteristics\n",
+    "new": "\n\n1965 F04\n\nFigure 4. Ceramic Capacitor Temperature Characteristics\n",
+    "evidence": "PDF p13 prints drawing number '1965 F04' at Figure 4 (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p13-f05-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "\n\nFigure 5. Noise Resulting from Tapping on a Ceramic Capacitor\n",
+    "new": "\n\n1965 F05\n\nFigure 5. Noise Resulting from Tapping on a Ceramic Capacitor\n",
+    "evidence": "PDF p13 prints drawing number '1965 F05' at Figure 5 (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p13-fig4-y5v-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "![Figure 4: Ceramic Capacitor Temperature Characteristics. A line graph showing the percentage change in value versus temperature for X5R and Y5V capacitors. Both are 16V, 1210 case size, 10µF. The X5R curve (red) is relatively flat, staying near 0% between -25°C and 75°C, then slightly decreasing. The Y5V curve (blue) peaks at 20% around 0°C and then drops sharply to -80% at 75°C.](",
+    "new": "![Figure 4: Ceramic Capacitor Temperature Characteristics. A line graph showing the percentage change in value versus temperature for X5R and Y5V capacitors. Both are 16V, 1210 case size, 10µF. The X5R curve (red) is relatively flat, staying near 0% between -25°C and 75°C, then slightly decreasing. The Y5V curve (blue) is drawn from -25°C to about 80°C: it peaks at about 20% around 0°C, crosses 0% at 25°C and then drops sharply to about -65% at its end near 80°C.](",
+    "evidence": "PDF p13 Figure 4 render: the Y5V curve ends near 80°C at about -65% (above the -80 gridline), not '-80% at 75°C'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p13-fig4-y5v-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 13,
+    "old": "\nFigure 4: Ceramic Capacitor Temperature Characteristics. A line graph showing the percentage change in value versus temperature for X5R and Y5V capacitors. Both are 16V, 1210 case size, 10µF. The X5R curve (red) is relatively flat, staying near 0% between -25°C and 75°C, then slightly decreasing. The Y5V curve (blue) peaks at 20% around 0°C and then drops sharply to -80% at 75°C.\n",
+    "new": "\nFigure 4: Ceramic Capacitor Temperature Characteristics. A line graph showing the percentage change in value versus temperature for X5R and Y5V capacitors. Both are 16V, 1210 case size, 10µF. The X5R curve (red) is relatively flat, staying near 0% between -25°C and 75°C, then slightly decreasing. The Y5V curve (blue) is drawn from -25°C to about 80°C: it peaks at about 20% around 0°C, crosses 0% at 25°C and then drops sharply to about -65% at its end near 80°C.\n",
+    "evidence": "PDF p13 Figure 4 render: the Y5V curve ends near 80°C at about -65% (above the -80 gridline), not '-80% at 75°C'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
