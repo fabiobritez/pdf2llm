@@ -16370,5 +16370,69 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p47-interface-configuration-c-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 47,
+    "old": "\n### Interface Configuration C Register\n",
+    "new": "\n#### Interface Configuration C Register\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): 'Interface Configuration C Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p49-fig93-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 49,
+    "old": "[7:6] MODE_CH_7 (R/W) and [5:4] MODE_CH_6 (R/W) are connected to bits 7-4;",
+    "new": "[7:6] MODE_CH_7 (R/W) is connected to bits 7-6; [5:4] MODE_CH_6 (R/W) is connected to bits 5-4;",
+    "evidence": "PDF p49 Figure 93 (render): separate brackets connect [7:6] MODE_CH_7 (R/W) to bits 7-6 and [5:4] MODE_CH_6 (R/W) to bits 5-4 (also Table 34); the AI text joined both labels to 'bits 7-4'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p49-fig93-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 49,
+    "old": "[7:6] MODE\\_CH\\_7 (R/W) and [5:4] MODE\\_CH\\_6 (R/W) are connected to bits 7-4;",
+    "new": "[7:6] MODE\\_CH\\_7 (R/W) is connected to bits 7-6; [5:4] MODE\\_CH\\_6 (R/W) is connected to bits 5-4;",
+    "evidence": "Same as ad5711r-ad5710r-p49-fig93-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p50-multiplexer-group-select-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 50,
+    "old": "\n##### Multiplexer Group Select Register\n",
+    "new": "\n#### Multiplexer Group Select Register\n",
+    "evidence": "PDF p50 (PyMuPDF spans + render): 'Multiplexer Group Select Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H5.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p50-multiplexer-input-select-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 50,
+    "old": "\n##### Multiplexer Input Select Register\n",
+    "new": "\n#### Multiplexer Input Select Register\n",
+    "evidence": "PDF p50 (PyMuPDF spans + render): 'Multiplexer Input Select Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H5.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
