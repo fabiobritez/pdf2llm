@@ -22950,5 +22950,105 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p16-fig8-1-typical-application-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 16,
+    "old": "The MCU's GPIO1 is connected to the SN74AVC4T774's OE input. The SN74AVC4T774's DIR1, DIR2, and DIR4 inputs are tied to 1.8V. Its VCCA and VCCB pins are connected to 1.8V and 3.3V respectively. The SN74AVC4T774's A1, A2, A3, and A4 inputs are connected to the MCU's CLK, SDO, SDI, and CS pins. The SN74AVC4T774's B1, B2, B3, and B4 outputs are connected to the SPI Peripheral's CLK, SDI, SDO, and CS pins. The SN74AVC4T774's GND pin is connected to ground. A note indicates that pullup resistors keep the device disabled during power up, and OE inputs may also be tied to GND to keep the device enabled.](",
+    "new": "The MCU's GPIO1 is connected to the SN74AVC4T774's OE input, which has a pullup resistor (drawn dashed) to the 1.8 V rail. The SN74AVC4T774's DIR1, DIR2, and DIR4 inputs are tied to 1.8V and DIR3 is tied to ground. Its VCCA and VCCB pins are connected to 1.8V and 3.3V respectively, each with a 0.1 µF capacitor to ground; the MCU is supplied from the 1.8 V rail and the SPI Peripheral from the 3.3 V rail. The MCU's CLK, SDO and CS drive A1, A2 and A4, and A3 drives the MCU's SDI. B1, B2 and B4 drive the SPI Peripheral's CLK, SDI and CS, and the SPI Peripheral's SDO drives B3 (description written from the PDF drawing). The SN74AVC4T774's GND pin is connected to ground. A note indicates that pullup resistors keep the device disabled during power up, and OE inputs may also be tied to GND to keep the device enabled.](",
+    "evidence": "PDF p16 Figure 8-1 (same drawing as the p2 Typical Application Schematic): DIR3 is tied to ground, A3/B3 carry SDO from the SPI Peripheral to the MCU's SDI (B3 is an input, A3 an output), OE has a dashed pullup to 1.8 V, and VCCA/VCCB have 0.1 µF capacitors. The old text called A1-A4 'inputs' and B1-B4 'outputs' and omitted DIR3, the pullup and the capacitors.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p16-fig8-1-typical-application-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 16,
+    "old": "The MCU's GPIO1 is connected to the SN74AVC4T774's OE input. The SN74AVC4T774's DIR1, DIR2, and DIR4 inputs are tied to 1.8V. Its VCCA and VCCB pins are connected to 1.8V and 3.3V respectively. The SN74AVC4T774's A1, A2, A3, and A4 inputs are connected to the MCU's CLK, SDO, SDI, and CS pins. The SN74AVC4T774's B1, B2, B3, and B4 outputs are connected to the SPI Peripheral's CLK, SDI, SDO, and CS pins. The SN74AVC4T774's GND pin is connected to ground. A note indicates that pullup resistors keep the device disabled during power up, and OE inputs may also be tied to GND to keep the device enabled.\n",
+    "new": "The MCU's GPIO1 is connected to the SN74AVC4T774's OE input, which has a pullup resistor (drawn dashed) to the 1.8 V rail. The SN74AVC4T774's DIR1, DIR2, and DIR4 inputs are tied to 1.8V and DIR3 is tied to ground. Its VCCA and VCCB pins are connected to 1.8V and 3.3V respectively, each with a 0.1 µF capacitor to ground; the MCU is supplied from the 1.8 V rail and the SPI Peripheral from the 3.3 V rail. The MCU's CLK, SDO and CS drive A1, A2 and A4, and A3 drives the MCU's SDI. B1, B2 and B4 drive the SPI Peripheral's CLK, SDI and CS, and the SPI Peripheral's SDO drives B3 (description written from the PDF drawing). The SN74AVC4T774's GND pin is connected to ground. A note indicates that pullup resistors keep the device disabled during power up, and OE inputs may also be tied to GND to keep the device enabled.\n",
+    "evidence": "PDF p16 Figure 8-1 (same drawing as the p2 Typical Application Schematic): DIR3 is tied to ground, A3/B3 carry SDO from the SPI Peripheral to the MCU's SDI (B3 is an input, A3 an output), OE has a dashed pullup to 1.8 V, and VCCA/VCCB have 0.1 µF capacitors. The old text called A1-A4 'inputs' and B1-B4 'outputs' and omitted DIR3, the pullup and the capacitors. Same as -alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p16-table8-1-caption-bold",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 16,
+    "old": "\nTable 8-1. Design Parameters\n",
+    "new": "\n**Table 8-1. Design Parameters**\n",
+    "evidence": "PDF p16: the Table 8-1 caption is bold like the other table captions.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p17-fig8-2-scope-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 17,
+    "old": "![Figure 8-2: Translation Up (1.2 V to 3.3 V) at 2.5 MHz. This is a logic level transition diagram showing an input signal (purple) and an output signal (green) on a grid. The input is a square wave with a 2.00 V high level and 1.16 V low level. The output is a square wave with a 3.3 V high level and 2.00 V low level. The signals are in phase. The frequency is 2.5 MHz. The time scale is 200 ns per division. The voltage scale is 2.00 V per division. The legend indicates Input(1.2V) in purple and Output(3.3V) in green.](",
+    "new": "![Figure 8-2: Translation Up (1.2 V to 3.3 V) at 2.5 MHz. Oscilloscope screenshot titled '1.2V to 3.3V Voltage Translation(2.5MHz)' (description written from the PDF image): the Input(1.2V) trace (purple, lower) and the Output(3.3V) trace (green, upper, larger amplitude) are in-phase square waves, about five periods across the screen. Status bar: purple channel 2.00 V, green channel 2.00 V (per division), 200ns (per division), 2.50GS/s, 1.16 V (trigger level). Read levels from the image/PDF.](",
+    "evidence": "PDF p17 Figure 8-2 (scope screenshot): '2.00 V' (purple) and '2.00 V' (green) are channel scales, '200ns' the time base, '2.50GS/s' the sample rate and '1.16 V' the trigger level. The old text read them as signal high/low levels ('input 2.00 V high, 1.16 V low; output 2.00 V low'), which is wrong; the screenshot title '1.2V to 3.3V Voltage Translation(2.5MHz)' was missing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p17-fig8-2-scope-description-text",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 17,
+    "old": "Figure 8-2 shows a logic level transition diagram for the SN74AVC4T774 device. The input signal (purple) is a square wave with a 2.00 V high level and 1.16 V low level. The output signal (green) is a square wave with a 3.3 V high level and 2.00 V low level. The signals are in phase. The frequency is 2.5 MHz. The time scale is 200 ns per division. The voltage scale is 2.00 V per division. The legend indicates Input(1.2V) in purple and Output(3.3V) in green.",
+    "new": "Figure 8-2 shows a logic level transition for the SN74AVC4T774 device: the Input(1.2V) square wave (purple) and the translated Output(3.3V) square wave (green) are in phase. The 2.00 V values in the status bar are the vertical scales of the two channels, 200ns is the time scale, 2.50GS/s the sample rate and 1.16 V the trigger level; they are not signal levels.",
+    "evidence": "PDF p17 Figure 8-2 (scope screenshot): '2.00 V' (purple) and '2.00 V' (green) are channel scales, '200ns' the time base, '2.50GS/s' the sample rate and '1.16 V' the trigger level. The old text read them as signal high/low levels ('input 2.00 V high, 1.16 V low; output 2.00 V low'), which is wrong; the screenshot title '1.2V to 3.3V Voltage Translation(2.5MHz)' was missing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p17-fig8-2-scope-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 17,
+    "old": "\nFigure 8-2: Translation Up (1.2 V to 3.3 V) at 2.5 MHz. This is a logic level transition diagram showing an input signal (purple) and an output signal (green) on a grid. The input is a square wave with a 2.00 V high level and 1.16 V low level. The output is a square wave with a 3.3 V high level and 2.00 V low level. The signals are in phase. The frequency is 2.5 MHz. The time scale is 200 ns per division. The voltage scale is 2.00 V per division. The legend indicates Input(1.2V) in purple and Output(3.3V) in green.\n",
+    "new": "\nFigure 8-2: Translation Up (1.2 V to 3.3 V) at 2.5 MHz. Oscilloscope screenshot titled '1.2V to 3.3V Voltage Translation(2.5MHz)' (description written from the PDF image): the Input(1.2V) trace (purple, lower) and the Output(3.3V) trace (green, upper, larger amplitude) are in-phase square waves, about five periods across the screen. Status bar: purple channel 2.00 V, green channel 2.00 V (per division), 200ns (per division), 2.50GS/s, 1.16 V (trigger level). Read levels from the image/PDF.\n",
+    "evidence": "PDF p17 Figure 8-2 (scope screenshot): '2.00 V' (purple) and '2.00 V' (green) are channel scales, '200ns' the time base, '2.50GS/s' the sample rate and '1.16 V' the trigger level. The old text read them as signal high/low levels ('input 2.00 V high, 1.16 V low; output 2.00 V low'), which is wrong; the screenshot title '1.2V to 3.3V Voltage Translation(2.5MHz)' was missing. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p18-fig8-3-layout-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 18,
+    "old": "![Solid circle symbol Shaded rectangle symbol Dashed circle symbol PCB layout diagram for SN74AVC4T774. The diagram shows a 16-pin IC with pins 1-8 on the left and 9-16 on the right. Pin 1 is DIR1, connected to VCCA through a resistor and a solid circle (VIA to Power Plane). Pin 2 is DIR2, connected to a ground symbol (dashed circle) through a resistor. Pin 3 is A1, labeled 'From Controller'. Pin 4 is A2, labeled 'To Controller'. Pin 5 is A3, labeled 'From Controller'. Pin 6 is A4, labeled 'From Controller'. Pin 7 is DIR3, connected to VCCA through a resistor and a solid circle. Pin 8 is DIR4, connected to VCCA through a resistor and a solid circle. Pin 9 is OE, connected to ground through a resistor. Pin 10 is GND, connected to a ground symbol (dashed circle) through a resistor. Pin 11 is B4, labeled 'To System'. Pin 12 is B3, labeled 'To System'. Pin 13 is B2, labeled 'From System'. Pin 14 is B1, labeled 'To System'. Pin 15 is VCCB, connected to a bypass capacitor (two parallel lines) and a ground symbol (dashed circle) through a resistor. Pin 16 is VCCA, connected to a bypass capacitor (two parallel lines) and a ground symbol (dashed circle) through a resistor. The diagram also shows power planes (shaded areas) and ground planes (dashed circles) for VCCA and VCCB. A note at the bottom right says 'Keep OE high until VCCA and VCCB are powered up'.](",
+    "new": "![PCB layout diagram for SN74AVC4T774 (description written from the PDF drawing). Legend: solid-outline circle = VIA to Power Plane, dashed circle = VIA to GND Plane (Inner Layer), shaded area = Polygonal Copper Pour. The 16-pin IC has pins 1-8 on the left and 9-16 on the right. Pin 1 DIR1, pin 7 DIR3 and pin 8 DIR4 each connect through a resistor to a VCCA power-plane via. Pin 2 DIR2 connects through a resistor to a GND-plane via. Pins 3 A1, 5 A3 and 6 A4 are labeled 'From Controller' and pin 4 A2 'To Controller'. Pins 14 B1, 12 B3 and 11 B4 are labeled 'To System' and pin 13 B2 'From System'. Pin 10 GND connects directly to a GND-plane via. Pin 9 OE connects through a pullup resistor to a VCCA power-plane via, with the note 'Keep OE high until VCCA and VCCB are powered up'. Pin 16 VCCA and pin 15 VCCB are routed by copper pours to VCCA and VCCB power-plane vias, each with a Bypass Capacitor to a GND-plane via. The IC is labeled SN74AVC4T774.](",
+    "evidence": "PDF p18 Figure 8-3: OE (pin 9) has a pullup resistor to a VCCA via, GND (pin 10) goes straight to a GND via, VCCA/VCCB (pins 16/15) have bypass capacitors (labeled 'Bypass Capacitor') to GND vias, not resistors. The old text said OE 'connected to ground through a resistor', GND, VCCA and VCCB 'through a resistor', and called the dashed GND vias 'ground planes'; it also began with stray 'Solid circle symbol Shaded rectangle symbol Dashed circle symbol'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p18-fig8-3-layout-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 18,
+    "old": "\nSolid circle symbol Shaded rectangle symbol Dashed circle symbol PCB layout diagram for SN74AVC4T774. The diagram shows a 16-pin IC with pins 1-8 on the left and 9-16 on the right. Pin 1 is DIR1, connected to VCCA through a resistor and a solid circle (VIA to Power Plane). Pin 2 is DIR2, connected to a ground symbol (dashed circle) through a resistor. Pin 3 is A1, labeled 'From Controller'. Pin 4 is A2, labeled 'To Controller'. Pin 5 is A3, labeled 'From Controller'. Pin 6 is A4, labeled 'From Controller'. Pin 7 is DIR3, connected to VCCA through a resistor and a solid circle. Pin 8 is DIR4, connected to VCCA through a resistor and a solid circle. Pin 9 is OE, connected to ground through a resistor. Pin 10 is GND, connected to a ground symbol (dashed circle) through a resistor. Pin 11 is B4, labeled 'To System'. Pin 12 is B3, labeled 'To System'. Pin 13 is B2, labeled 'From System'. Pin 14 is B1, labeled 'To System'. Pin 15 is VCCB, connected to a bypass capacitor (two parallel lines) and a ground symbol (dashed circle) through a resistor. Pin 16 is VCCA, connected to a bypass capacitor (two parallel lines) and a ground symbol (dashed circle) through a resistor. The diagram also shows power planes (shaded areas) and ground planes (dashed circles) for VCCA and VCCB. A note at the bottom right says 'Keep OE high until VCCA and VCCB are powered up'.\n",
+    "new": "\nPCB layout diagram for SN74AVC4T774 (description written from the PDF drawing). Legend: solid-outline circle = VIA to Power Plane, dashed circle = VIA to GND Plane (Inner Layer), shaded area = Polygonal Copper Pour. The 16-pin IC has pins 1-8 on the left and 9-16 on the right. Pin 1 DIR1, pin 7 DIR3 and pin 8 DIR4 each connect through a resistor to a VCCA power-plane via. Pin 2 DIR2 connects through a resistor to a GND-plane via. Pins 3 A1, 5 A3 and 6 A4 are labeled 'From Controller' and pin 4 A2 'To Controller'. Pins 14 B1, 12 B3 and 11 B4 are labeled 'To System' and pin 13 B2 'From System'. Pin 10 GND connects directly to a GND-plane via. Pin 9 OE connects through a pullup resistor to a VCCA power-plane via, with the note 'Keep OE high until VCCA and VCCB are powered up'. Pin 16 VCCA and pin 15 VCCB are routed by copper pours to VCCA and VCCB power-plane vias, each with a Bypass Capacitor to a GND-plane via. The IC is labeled SN74AVC4T774.\n",
+    "evidence": "PDF p18 Figure 8-3: OE (pin 9) has a pullup resistor to a VCCA via, GND (pin 10) goes straight to a GND via, VCCA/VCCB (pins 16/15) have bypass capacitors (labeled 'Bypass Capacitor') to GND vias, not resistors. The old text said OE 'connected to ground through a resistor', GND, VCCA and VCCB 'through a resistor', and called the dashed GND vias 'ground planes'; it also began with stray 'Solid circle symbol Shaded rectangle symbol Dashed circle symbol'. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
   }
 ]
