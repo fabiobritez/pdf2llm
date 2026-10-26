@@ -12837,5 +12837,480 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5593r-p25-fig42-header-row",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "|       | S   | SLAVE ADDRESS + $\\overline{W}$ | A | POINTER BYTE<br>0b00000100 | A  | MOST SIGNIFICANT DATA BYTE<br>0b00000000 | A | LEAST SIGNIFICANT DATA BYTE<br>0b10000001 | A | P   |\n",
+    "new": "|       |     |                                |   | POINTER BYTE                |    | MOST SIGNIFICANT DATA BYTE               |   | LEAST SIGNIFICANT DATA BYTE               |   |     |\n",
+    "evidence": "PDF p25 Figure 42 (250 dpi crop): the column labels POINTER BYTE, MOST SIGNIFICANT DATA BYTE and LEAST SIGNIFICANT DATA BYTE are printed above the STEP1 row only; the md header row repeated the whole STEP1 sequence (S, address, values, P) as if it were a separate row.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p25-fig42-final-ack-nack",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "| ADC7 RESULT (LSB)           | A̅ | P ",
+    "new": "| ADC7 RESULT (LSB)           | A/A̅ | P ",
+    "evidence": "PDF p25 Figure 42 (250 dpi crop): the last row prints 'A/A' (second A with an overbar) after ADC7 RESULT (LSB), as in Figure 41; the md had only the overbarred A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p25-column-split",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "the ADC repeats the\n\nsequence. If the REP bit is clear",
+    "new": "the ADC repeats the sequence. If the REP bit is clear",
+    "evidence": "PDF p25 (render): the sentence continues from the bottom of the left column ('the ADC repeats the') to the top of the right column ('sequence.'); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p25-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "### SERIAL INTERFACE\n\n### ADC OPERATION",
+    "new": "## SERIAL INTERFACE\n\n### ADC OPERATION",
+    "evidence": "PDF p25 (PyMuPDF spans + render): repeated blue section title 'SERIAL INTERFACE' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p25-fig42-description-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "![Figure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b00000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b00000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write to the ADC sequence register (0b01000000) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and then reading ADC7. The diagram shows the SCL line with start (S), stop (P), and acknowledge (A) conditions. A legend defines S as Start Condition, P as Stop Condition, A as Acknowledge, and A̅ as Not Acknowledge.](",
+    "new": "![Figure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b00000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b00000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write the pointer byte 0b01000000 (followed by a stop) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and then reading ADC7. Each step is drawn as a row of byte boxes with start (S), stop (P) and acknowledge (A) fields; the last ADC7 result is followed by A/A (second A with an overbar) and P. A legend defines S as Start Condition, P as Stop Condition, A as Acknowledge, and A̅ as Not Acknowledge.](",
+    "evidence": "PDF p25 Figure 42 (250 dpi crop) and p25 text: Step 3 is a pointer byte write (0b01000000, ADC readback mode), not a write to the ADC sequence register; the figure has no SCL line, only byte boxes.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p25-fig42-description-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 25,
+    "old": "\nFigure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b00000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b00000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write to the ADC sequence register (0b01000000) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and then reading ADC7. The diagram shows the SCL line with start (S), stop (P), and acknowledge (A) conditions. A legend defines S as Start Condition, P as Stop Condition, A as Acknowledge, and A̅ as Not Acknowledge.\n\nFigure 42. Configuring",
+    "new": "\nFigure 42: Configuring the ADC for Conversion. This diagram illustrates a four-step I2C communication sequence to configure the ADC. Step 1: Write to the Pointer Byte (0b00000100) to configure I/O7 and I/O0 as ADCs. Step 2: Write to the ADC sequence register (0b00000010) to set the REP bit and select ADC7 and ADC0. Step 3: Write the pointer byte 0b01000000 (followed by a stop) to select the ADCs for reading. Step 4: Read the ADC results, starting with ADC0 and then reading ADC7. Each step is drawn as a row of byte boxes with start (S), stop (P) and acknowledge (A) fields; the last ADC7 result is followed by A/A (second A with an overbar) and P. A legend defines S as Start Condition, P as Stop Condition, A as Acknowledge, and A̅ as Not Acknowledge.\n\nFigure 42. Configuring",
+    "evidence": "Same as ad5593r-p25-fig42-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p19-io-not-subscript-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 19,
+    "old": "Each of the eight I/O<sub>x</sub> pins can be configured as a general-purpose digital input by programming the GPIO read configuration register or output pin by programming the GPIO write configuration register. When an I/O<sub>x</sub> pin is configured as an output, the pin can be set high or low by programming the GPIO write data register. Logic levels for general-purpose outputs are relative to V<sub>DD</sub> and GND. When an I/O<sub>x</sub> pin is configured as an input, its status can be determined by setting the pointer byte to 0b01100000. When an I/O<sub>x</sub> pin is set as an output, it is possible to read its status by also setting it as an input pin. When reading the status of the I/O<sub>x</sub> pins set as inputs the status of an I/O<sub>x</sub> pin set as both and input and output pin is also returned.",
+    "new": "Each of the eight I/Ox pins can be configured as a general-purpose digital input by programming the GPIO read configuration register or output pin by programming the GPIO write configuration register. When an I/Ox pin is configured as an output, the pin can be set high or low by programming the GPIO write data register. Logic levels for general-purpose outputs are relative to V<sub>DD</sub> and GND. When an I/Ox pin is configured as an input, its status can be determined by setting the pointer byte to 0b01100000. When an I/Ox pin is set as an output, it is possible to read its status by also setting it as an input pin. When reading the status of the I/Ox pins set as inputs the status of an I/Ox pin set as both and input and output pin is also returned.",
+    "evidence": "PDF p19 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "Each of the I/O<sub>x</sub> pins of the AD5593R can be configured to operate as a general-purpose, digital input or output pin. The function of the pins is determined by writing to the appropriate bit in the GPIO read configuration register and the GPIO write configuration register using the 4-byte I<sup>2</sup>C write shown in [Figure 36](#).",
+    "new": "Each of the I/Ox pins of the AD5593R can be configured to operate as a general-purpose, digital input or output pin. The function of the pins is determined by writing to the appropriate bit in the GPIO read configuration register and the GPIO write configuration register using the 4-byte I<sup>2</sup>C write shown in [Figure 36](#).",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "To set a pin as a general-purpose output, set the appropriate bit in the GPIO write configuration register (pointer byte = 0b00001000) to 1. For example, setting Bit 0 to 1 enables I/O<sub>0</sub> as a general-purpose output.",
+    "new": "To set a pin as a general-purpose output, set the appropriate bit in the GPIO write configuration register (pointer byte = 0b00001000) to 1. For example, setting Bit 0 to 1 enables I/O0 as a general-purpose output.",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-3",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "To set an I/O<sub>x</sub> pin as a general-purpose input, set the appropriate bit in the GPIO read configuration register (pointer byte = 0b00001010) to 1. For example, setting Bit 0 to 1 enables I/O<sub>0</sub> as a general-purpose input. To read the state of general-purpose inputs, set the pointer byte to 0b01100000 (see [Table 9](#)) using any of the read operations shown in [Figure 37](#), [Figure 38](#), and [Figure 39](#). The status of any I/O pin set as a general-purpose input appears in the appropriate bit location in the least significant data byte.",
+    "new": "To set an I/Ox pin as a general-purpose input, set the appropriate bit in the GPIO read configuration register (pointer byte = 0b00001010) to 1. For example, setting Bit 0 to 1 enables I/O0 as a general-purpose input. To read the state of general-purpose inputs, set the pointer byte to 0b01100000 (see [Table 9](#)) using any of the read operations shown in [Figure 37](#), [Figure 38](#), and [Figure 39](#). The status of any I/O pin set as a general-purpose input appears in the appropriate bit location in the least significant data byte.",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-4",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "The I/O<sub>x</sub> pins can be set to three-state by writing to the three-state configuration register (pointer byte = 0b00001101) as shown in [Table 29](#).",
+    "new": "The I/Ox pins can be set to three-state by writing to the three-state configuration register (pointer byte = 0b00001101) as shown in [Table 29](#).",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-5",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "The I/O<sub>x</sub> pins can be connected to GND via a pull-down resistor (85 k $\\Omega$ ) by setting the appropriate bits in the pull-down configuration register (pointer byte = 0b00000110) as shown in [Table 22](#).",
+    "new": "The I/Ox pins can be connected to GND via a pull-down resistor (85 k $\\Omega$ ) by setting the appropriate bits in the pull-down configuration register (pointer byte = 0b00000110) as shown in [Table 22](#).",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-6",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "There is no dedicated power-down function for the ADC, but the ADC is automatically powered down if none of the I/O<sub>x</sub> pins are selected as ADCs. The ADC powers up if a read of the temperature indicator is initiated. The PD\\_ALL bit powers down all the DACs, the reference, its buffer, and the ADC. The PD\\_ALL bit also overrides the settings of Bits[9:0]. [Table 27](#) shows the power-down register.",
+    "new": "There is no dedicated power-down function for the ADC, but the ADC is automatically powered down if none of the I/Ox pins are selected as ADCs. The ADC powers up if a read of the temperature indicator is initiated. The PD\\_ALL bit powers down all the DACs, the reference, its buffer, and the ADC. The PD\\_ALL bit also overrides the settings of Bits[9:0]. [Table 27](#) shows the power-down register.",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-io-not-subscript-7",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "The AD5593R can be reset to its default conditions by writing 0x0DAC to the software reset register (pointer byte = 0b00001111). This resets all registers to their default values and reconfigures the I/O<sub>x</sub> pins to their default values (85 k $\\Omega$  pull-down to GND). The reset function is triggered on the SCL falling edge of the eighth bit of the least significant byte (Bit 0 of Frame 4 in [Figure 36](#)), and the AD5593R does not generate an ACK signal for this byte of data. The AD5593R has a $\\overline{\\text{RESET}}$ pin that performs the same function. For normal operation, $\\overline{\\text{RESET}}$ is tied high. A falling edge on $\\overline{\\text{RESET}}$ triggers the reset function. Both the hardware and the software reset functions take 250  $\\mu$ s maximum and there must be no activity on the SCL pin of the AD5593R during this time.",
+    "new": "The AD5593R can be reset to its default conditions by writing 0x0DAC to the software reset register (pointer byte = 0b00001111). This resets all registers to their default values and reconfigures the I/Ox pins to their default values (85 k $\\Omega$  pull-down to GND). The reset function is triggered on the SCL falling edge of the eighth bit of the least significant byte (Bit 0 of Frame 4 in [Figure 36](#)), and the AD5593R does not generate an ACK signal for this byte of data. The AD5593R has a $\\overline{\\text{RESET}}$ pin that performs the same function. For normal operation, $\\overline{\\text{RESET}}$ is tied high. A falling edge on $\\overline{\\text{RESET}}$ triggers the reset function. Both the hardware and the software reset functions take 250  $\\mu$ s maximum and there must be no activity on the SCL pin of the AD5593R during this time.",
+    "evidence": "PDF p26 (PyMuPDF spans): 'I/Ox' and 'I/O0' are printed in the body font at full size (9.5 pt), not with a subscript x/0; the md had I/O<sub>x</sub>.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-setting-outputs-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "\n### Setting Pins as Outputs\n",
+    "new": "\n#### Setting Pins as Outputs\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Setting Pins as Outputs' is a bold black title-case subheading under the caps subsection 'GPIO OPERATION' (H3), like 'LDAC Mode Operation' (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-setting-inputs-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "\n### Setting Pins as Inputs\n",
+    "new": "\n#### Setting Pins as Inputs\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Setting Pins as Inputs' is a bold black title-case subheading under 'GPIO OPERATION' (H3).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-85k-pulldown-heading",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "\n#### 85 K $\\Omega$ PULL-DOWN PINS\n",
+    "new": "\n### 85 KΩ PULL-DOWN PINS\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): '85 KΩ PULL-DOWN PINS' is a bold black caps subsection like 'THREE-STATE PINS' and 'POWER-DOWN/REFERENCE CONTROL' (H3), printed with an uppercase K and Ω inline; the md had H4 and a LaTeX Ω with spaces.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-250us",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "take 250  $\\mu$ s maximum",
+    "new": "take 250 μs maximum",
+    "evidence": "PDF p26 (pdftotext): '250 µs maximum'; the md split the unit as ' $\\mu$ s'.",
+    "sources": [
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p26-serial-interface-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 26,
+    "old": "### SERIAL INTERFACE\n\n### GPIO OPERATION",
+    "new": "## SERIAL INTERFACE\n\n### GPIO OPERATION",
+    "evidence": "PDF p26 (PyMuPDF spans + render): repeated blue section title 'SERIAL INTERFACE' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p27-layout-guidelines-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 27,
+    "old": "\n## LAYOUT GUIDELINES\n",
+    "new": "\n### LAYOUT GUIDELINES\n",
+    "evidence": "PDF p27 (PyMuPDF spans + render) and TOC p2: 'LAYOUT GUIDELINES' is a bold black caps subsection of the blue 'APPLICATIONS INFORMATION' section, like 'MICROPROCESSOR INTERFACING' (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p27-fig43-reset-overbar",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 27,
+    "old": "the following connections:\n \n\n- ADSP-BF537 SCL to AD5593R SCL\n- ADSP-BF537 SDA to AD5593R SDA\n- ADSP-BF537 PF8 to AD5593R RESET\n",
+    "new": "the following connections:\n\n- ADSP-BF537 SCL to AD5593R SCL\n- ADSP-BF537 SDA to AD5593R SDA\n- ADSP-BF537 PF8 to AD5593R RESET (drawn with an overbar)\n",
+    "evidence": "PDF p27 Figure 43 (render): the AD5593R RESET pin label carries an overbar (active low); the md list also had a stray whitespace-only line.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p28-reading-order",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 28,
+    "old": "section for details about the functions of each of the bits.\n\nSee the [Register Details: AD5593R Control Register Map](#) section for details about the functions of each of the bits.\n\nThe [Register Details: AD5593R ADC and DAC Readback](#) section provides data formats for the ADC and the DAC readback.\n\nTable 10 shows a complete list of the control registers that configure the I/O pins and various operating parameters in the AD5593R.\n",
+    "new": "section for details about the functions of each of the bits.\n\nTable 10 shows a complete list of the control registers that configure the I/O pins and various operating parameters in the AD5593R.\n\nSee the [Register Details: AD5593R Control Register Map](#) section for details about the functions of each of the bits.\n\nThe [Register Details: AD5593R ADC and DAC Readback](#) section provides data formats for the ADC and the DAC readback.\n",
+    "evidence": "PDF p28 (render + word positions): the 'Table 10 shows a complete list...' paragraph is the second paragraph of the left column; 'See the Register Details: AD5593R Control Register Map...' and 'The Register Details: AD5593R ADC and DAC Readback...' are in the right column. The md put the Table 10 paragraph last.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p29-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 29,
+    "old": "{28}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{28}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p29 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p30-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 30,
+    "old": "{29}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{29}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p31-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 31,
+    "old": "{30}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{30}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p31 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p32-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 32,
+    "old": "{31}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{31}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p32 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p33-gen-ctrl-bitmap-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 33,
+    "old": "![Bit layout diagram for the General-Purpose Control Register (GEN_CTRL_REG). The register is 16 bits wide, indexed from 15 down to 0. Bits 15-10 are shaded gray and labeled '[15:10] RESERVED'. Bit 9 is labeled '[9] ADC_BUF_PRECH (R/W) ADC buffer precharge.' Bit 8 is labeled '[8] ADC_BUF_EN (R/W) ADC buffer enable.' Bit 7 is labeled '[7] IO_LOCK (R/W) Lock configuration.' Bits 6-3 are shaded gray and labeled '[6:3] RESERVED'. Bit 2 is labeled '[2] DAC_RANGE (R/W) DAC output range select.' Bit 1 is labeled '[1] ADC_RANGE (R/W) ADC input range select.' Bit 0 is labeled '[0] ALL_DAC (R/W) Write all DACs.'](",
+    "new": "![Bit layout diagram for the General-Purpose Control Register (GEN_CTRL_REG). The register is 16 bits wide, indexed from 15 down to 0. Bits 15-10 are shaded gray and labeled '[15:10] RESERVED'. Bit 9 is labeled '[9] ADC_BUF_PRECH (R/W) ADC buffer precharge.' Bit 8 is labeled '[8] ADC_BUF_EN (R/W) ADC buffer enable.' Bit 7 is labeled '[7] IO_LOCK (R/W) Lock configuration.' Bit 6 is labeled '[6] ALL_DAC (R/W) Write all DACs.' Bit 5 is labeled '[5] ADC_RANGE (R/W) ADC input range select.' Bit 4 is labeled '[4] DAC_RANGE (R/W) DAC output range select.' Bits 3-0 are labeled '[3:0] RESERVED'. All bits show 0.](",
+    "evidence": "PDF p33 GEN_CTRL_REG bit map (render + PDF text labels): [6] ALL_DAC, [5] ADC_RANGE, [4] DAC_RANGE and [3:0] RESERVED, consistent with Table 19 and the p17/p18 text (DAC range Bit 4, ADC range Bit 5). The AI text had [6:3] RESERVED, [2] DAC_RANGE, [1] ADC_RANGE, [0] ALL_DAC.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p33-gen-ctrl-bitmap-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 33,
+    "old": "\nBit layout diagram for the General-Purpose Control Register (GEN\\_CTRL\\_REG). The register is 16 bits wide, indexed from 15 down to 0. Bits 15-10 are shaded gray and labeled '[15:10] RESERVED'. Bit 9 is labeled '[9] ADC\\_BUF\\_PRECH (R/W) ADC buffer precharge.' Bit 8 is labeled '[8] ADC\\_BUF\\_EN (R/W) ADC buffer enable.' Bit 7 is labeled '[7] IO\\_LOCK (R/W) Lock configuration.' Bits 6-3 are shaded gray and labeled '[6:3] RESERVED'. Bit 2 is labeled '[2] DAC\\_RANGE (R/W) DAC output range select.' Bit 1 is labeled '[1] ADC\\_RANGE (R/W) ADC input range select.' Bit 0 is labeled '[0] ALL\\_DAC (R/W) Write all DACs.'\n",
+    "new": "\nBit layout diagram for the General-Purpose Control Register (GEN\\_CTRL\\_REG). The register is 16 bits wide, indexed from 15 down to 0. Bits 15-10 are shaded gray and labeled '[15:10] RESERVED'. Bit 9 is labeled '[9] ADC\\_BUF\\_PRECH (R/W) ADC buffer precharge.' Bit 8 is labeled '[8] ADC\\_BUF\\_EN (R/W) ADC buffer enable.' Bit 7 is labeled '[7] IO\\_LOCK (R/W) Lock configuration.' Bit 6 is labeled '[6] ALL\\_DAC (R/W) Write all DACs.' Bit 5 is labeled '[5] ADC\\_RANGE (R/W) ADC input range select.' Bit 4 is labeled '[4] DAC\\_RANGE (R/W) DAC output range select.' Bits 3-0 are labeled '[3:0] RESERVED'. All bits show 0.\n",
+    "evidence": "Same as ad5593r-p33-gen-ctrl-bitmap-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p33-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 33,
+    "old": "{32}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{32}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p33 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p34-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 34,
+    "old": "{33}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{33}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p34 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p35-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 35,
+    "old": "{34}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{34}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p35 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p36-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 36,
+    "old": "{35}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{35}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p36 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p37-gpio-config-bitmap-labels-1",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 37,
+    "old": "![Register diagram for GPIO_CONFIG showing bits 15-0. Bits 15-8 are labeled [15:8] RESERVED. Bits 7-4 are labeled [7:4] GPIO7 (R/W) through [4] GPIO4 (R/W), each with the description 'Select the I/O7 pin as GPIO output' through 'Select the I/O4 pin as GPIO output'. Bits 3-0 are labeled [3:0] GPIO3 (R/W) through [0] GPIO0 (R/W), each with the description 'Select the I/O3 pin as GPIO output' through 'Select the I/O0 pin as GPIO output'.](img/a9bd36d25444d896e8d6941ff59d8f2d_img.jpg)",
+    "new": "![Register diagram for GPIO_CONFIG showing bits 15-0. Bits 15-8 are labeled [15:8] RESERVED. Bits 7-4 are labeled [7] GPIO7 (R/W) through [4] GPIO4 (R/W), each with the description 'Select the I/O7 pin as GPIO output' through 'Select the I/O4 pin as GPIO output'. Bits 3-0 are labeled [3] GPIO3 (R/W) through [0] GPIO0 (R/W), each with the description 'Select the I/O3 pin as GPIO output' through 'Select the I/O0 pin as GPIO output'.](img/a9bd36d25444d896e8d6941ff59d8f2d_img.jpg)",
+    "evidence": "PDF p37 GPIO_CONFIG bit map (render + PDF text): each bit has its own label, '[7] GPIO7 (R/W)' ... '[0] GPIO0 (R/W)'; there is no '[7:4] GPIO7' or '[3:0] GPIO3' field.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p37-gpio-config-bitmap-labels-2",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 37,
+    "old": "- Bits 7-4: [7:4] GPIO7 (R/W) through [4] GPIO4 (R/W) - Select the I/O7 pin as GPIO output through Select the I/O4 pin as GPIO output.",
+    "new": "- Bits 7-4: [7] GPIO7 (R/W) through [4] GPIO4 (R/W) - Select the I/O7 pin as GPIO output through Select the I/O4 pin as GPIO output.",
+    "evidence": "Same as ad5593r-p37-gpio-config-bitmap-labels-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p37-gpio-config-bitmap-labels-3",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 37,
+    "old": "- Bits 3-0: [3:0] GPIO3 (R/W) through [0] GPIO0 (R/W) - Select the I/O3 pin as GPIO output through Select the I/O0 pin as GPIO output.",
+    "new": "- Bits 3-0: [3] GPIO3 (R/W) through [0] GPIO0 (R/W) - Select the I/O3 pin as GPIO output through Select the I/O0 pin as GPIO output.",
+    "evidence": "Same as ad5593r-p37-gpio-config-bitmap-labels-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p37-gpio-config-bitmap-labels-4",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 37,
+    "old": "Register diagram for GPIO\\_CONFIG showing bits 15-0. Bits 15-8 are labeled [15:8] RESERVED. Bits 7-4 are labeled [7:4] GPIO7 (R/W) through [4] GPIO4 (R/W), each with the description 'Select the I/O7 pin as GPIO output' through 'Select the I/O4 pin as GPIO output'. Bits 3-0 are labeled [3:0] GPIO3 (R/W) through [0] GPIO0 (R/W), each with the description 'Select the I/O3 pin as GPIO output' through 'Select the I/O0 pin as GPIO output'.",
+    "new": "Register diagram for GPIO\\_CONFIG showing bits 15-0. Bits 15-8 are labeled [15:8] RESERVED. Bits 7-4 are labeled [7] GPIO7 (R/W) through [4] GPIO4 (R/W), each with the description 'Select the I/O7 pin as GPIO output' through 'Select the I/O4 pin as GPIO output'. Bits 3-0 are labeled [3] GPIO3 (R/W) through [0] GPIO0 (R/W), each with the description 'Select the I/O3 pin as GPIO output' through 'Select the I/O0 pin as GPIO output'.",
+    "evidence": "Same as ad5593r-p37-gpio-config-bitmap-labels-1 (repeated description text).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p37-register-map-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 37,
+    "old": "{36}------------------------------------------------\n\n### REGISTER MAP\n",
+    "new": "{36}------------------------------------------------\n\n## REGISTER MAP\n",
+    "evidence": "PDF p37 (PyMuPDF spans + render): repeated blue section title 'REGISTER MAP' at the top of the page (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
