@@ -10194,5 +10194,122 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p16-cout-column-split",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 16,
+    "old": "affects the bandwidth of\n\nthe system,",
+    "new": "affects the bandwidth of the system,",
+    "evidence": "PDF p16: 'The selection of C_OUT affects the bandwidth of / the system, but…' continues from the left column to the right column mid-sentence; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p16-curly-apostrophe",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 16,
+    "old": "stabilize the LTC3315A's control loop",
+    "new": "stabilize the LTC3315A’s control loop",
+    "evidence": "PDF p16 prints 'LTC3315A’s' with a curly apostrophe (pdftotext).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p17-fig2-drawing-number-caption",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 17,
+    "old": "The EN pin is also connected to the regulator block.\n\nFigure 2. EN Divider\n",
+    "new": "The EN pin is also connected to the regulator block.\n\n3315ab F02\n\n**Figure 2. EN Divider**\n",
+    "evidence": "PDF p17 prints the drawing number '3315ab F02' next to the EN divider drawing and the caption 'Figure 2. EN Divider' in bold (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p17-pcb-considerations-heading-level",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 17,
+    "old": "\n## PCB Considerations\n",
+    "new": "\n### PCB Considerations\n",
+    "evidence": "PDF p17 'PCB Considerations' is a bold subsection heading of APPLICATIONS INFORMATION, printed like 'Using the Precision Enable Threshold' (render); the md made it an H2 section like APPLICATIONS INFORMATION.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p18-fig3-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 18,
+    "old": "![Figure 3: Recommended LTC3315A LQFN PCB Layout. This schematic diagram shows the recommended PCB layout for the LTC3315A LQFN package. The LQFN package is centered, with pins 1, 4, 7, 10, 13, and 18 labeled. Input capacitors C1N1 and C1N2 are placed near pins 10 and 7 respectively, connected to VIN. Input inductors L1 and L2 are placed near pins 10 and 7 respectively, connected to VOUT1 and VOUT2. Output capacitors COUT1 and COUT2 are placed near pins 1 and 4 respectively, connected to VOUT1 and VOUT2. Feedback capacitors CFF1 and CFF2 are placed near pins 1 and 4 respectively, connected to the feedback nodes. Resistor R1 is placed near pin 13, connected to the feedback node. Resistor R2 is placed near pin 1, connected to the feedback node. Resistor R3 is placed near pin 4, connected to the feedback node. Resistor R4 is placed near pin 13, connected to the feedback node. A ground plane is shown on layer 2, connected to the feedback nodes. A note indicates that R1, R3, and R4 should be connected to GND on layer 4 to vias on the exposed pad, pin 13. The ground plane is also shown on layer 2.](",
+    "new": "![Figure 3: Recommended LTC3315A LQFN PCB Layout (description written from the PDF drawing). The LQFN footprint is in the center, with pins 1, 4, 7, 10 and the exposed pad 13 numbered. V<sub>IN</sub> copper on the left carries the input capacitors C<sub>IN2</sub> (top) and C<sub>IN1</sub> (bottom) and two smaller capacitors placed directly next to the package between the V<sub>IN</sub> and GND pins. Inductor L2 at the top runs from the package to the V<sub>OUT2</sub> copper and L1 at the bottom to the V<sub>OUT1</sub> copper; C<sub>OUT2</sub> and C<sub>OUT1</sub> connect V<sub>OUT2</sub> and V<sub>OUT1</sub> to the GND copper on the right. Between the package and the GND copper, from top to bottom, are C<sub>FF2</sub>, R4, R3, R1, R2 and C<sub>FF1</sub>, connected by traces to the pins on the right side of the package. Labels: 'R1, R3 KELVIN TO GND ON LAYER 4 TO VIAS ON EXPOSED PAD, PIN 13', 'GND', 'GROUND PLANE ON LAYER 2'. Vias are drawn in the V<sub>IN</sub> and GND areas.](",
+    "evidence": "PDF p18 Figure 3 (render): the AI text invented a pin 18 (the LQFN has 12 pins plus pad 13), misread C_IN1/C_IN2 as 'C1N1/C1N2', called L1/L2 'input inductors', placed C_OUT1/C_OUT2 near pins 1 and 4, put R1/R4 'near pin 13' and said 'R1, R3, and R4' are Kelvin-connected (PDF note: 'R1, R3 KELVIN TO GND ON LAYER 4 TO VIAS ON EXPOSED PAD, PIN 13') and connected the ground plane to 'the feedback nodes'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p18-fig3-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 18,
+    "old": "\nFigure 3: Recommended LTC3315A LQFN PCB Layout. This schematic diagram shows the recommended PCB layout for the LTC3315A LQFN package. The LQFN package is centered, with pins 1, 4, 7, 10, 13, and 18 labeled. Input capacitors C1N1 and C1N2 are placed near pins 10 and 7 respectively, connected to VIN. Input inductors L1 and L2 are placed near pins 10 and 7 respectively, connected to VOUT1 and VOUT2. Output capacitors COUT1 and COUT2 are placed near pins 1 and 4 respectively, connected to VOUT1 and VOUT2. Feedback capacitors CFF1 and CFF2 are placed near pins 1 and 4 respectively, connected to the feedback nodes. Resistor R1 is placed near pin 13, connected to the feedback node. Resistor R2 is placed near pin 1, connected to the feedback node. Resistor R3 is placed near pin 4, connected to the feedback node. Resistor R4 is placed near pin 13, connected to the feedback node. A ground plane is shown on layer 2, connected to the feedback nodes. A note indicates that R1, R3, and R4 should be connected to GND on layer 4 to vias on the exposed pad, pin 13. The ground plane is also shown on layer 2.\n",
+    "new": "\nFigure 3: Recommended LTC3315A LQFN PCB Layout (description written from the PDF drawing). The LQFN footprint is in the center, with pins 1, 4, 7, 10 and the exposed pad 13 numbered. V<sub>IN</sub> copper on the left carries the input capacitors C<sub>IN2</sub> (top) and C<sub>IN1</sub> (bottom) and two smaller capacitors placed directly next to the package between the V<sub>IN</sub> and GND pins. Inductor L2 at the top runs from the package to the V<sub>OUT2</sub> copper and L1 at the bottom to the V<sub>OUT1</sub> copper; C<sub>OUT2</sub> and C<sub>OUT1</sub> connect V<sub>OUT2</sub> and V<sub>OUT1</sub> to the GND copper on the right. Between the package and the GND copper, from top to bottom, are C<sub>FF2</sub>, R4, R3, R1, R2 and C<sub>FF1</sub>, connected by traces to the pins on the right side of the package. Labels: 'R1, R3 KELVIN TO GND ON LAYER 4 TO VIAS ON EXPOSED PAD, PIN 13', 'GND', 'GROUND PLANE ON LAYER 2'. Vias are drawn in the V<sub>IN</sub> and GND areas.\n\n3315ab F03\n",
+    "evidence": "PDF p18 Figure 3 (render): the AI text invented a pin 18 (the LQFN has 12 pins plus pad 13), misread C_IN1/C_IN2 as 'C1N1/C1N2', called L1/L2 'input inductors', placed C_OUT1/C_OUT2 near pins 1 and 4, put R1/R4 'near pin 13' and said 'R1, R3, and R4' are Kelvin-connected (PDF note: 'R1, R3 KELVIN TO GND ON LAYER 4 TO VIAS ON EXPOSED PAD, PIN 13') and connected the ground plane to 'the feedback nodes'. Rewritten from the drawing. Drawing number '3315ab F03' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p18-fig3-caption-bold",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 18,
+    "old": "\n\nFigure 3. Recommended LTC3315A LQFN PCB Layout\n",
+    "new": "\n\n**Figure 3. Recommended LTC3315A LQFN PCB Layout**\n",
+    "evidence": "PDF p18 prints the Figure 3 caption in bold (render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p18-pcb-list-numbering",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 18,
+    "old": "- top of the PCB board to bypass capacitors on  $V_{IN}$  and then via to a ground plane on the next layer. Ball B4 can via directly to the ground plane on the next layer.\n- Both of the input supply pins",
+    "new": "   top of the PCB board to bypass capacitors on  $V_{IN}$  and then via to a ground plane on the next layer. Ball B4 can via directly to the ground plane on the next layer.\n\n2. Both of the input supply pins",
+    "evidence": "PDF p18: 'top of the PCB board to bypass capacitors…' is the continuation of item 1 from p17 (not a new bullet), and the PCB Considerations list is numbered 1-4 (render); the md used unnumbered bullets.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p18-pcb-list-item3",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 18,
+    "old": "- The switching power traces connecting SW1 and SW2 to their respective inductors should be minimized to reduce radiated EMI and parasitic coupling. Due to the large voltage swing on the switching nodes, high\n\ninput impedance sensitive nodes, such as the feedback nodes, should be kept far away or shielded from the switching nodes or poor performance could result.\n\n- The GND side",
+    "new": "3. The switching power traces connecting SW1 and SW2 to their respective inductors should be minimized to reduce radiated EMI and parasitic coupling. Due to the large voltage swing on the switching nodes, high input impedance sensitive nodes, such as the feedback nodes, should be kept far away or shielded from the switching nodes or poor performance could result.\n4. The GND side",
+    "evidence": "PDF p18: items 3 and 4 of the numbered PCB list; item 3 continues from the left column ('…switching nodes, high') to the right column ('input impedance sensitive nodes…') mid-sentence and was split into a paragraph outside the list.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
