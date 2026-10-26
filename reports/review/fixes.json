@@ -29559,5 +29559,785 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p40-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 40,
+    "old": "### **9.1 VSET Register (Offset = 0h) [Reset = XXh]**",
+    "new": "### 9.1 VSET Register (Offset = 0h) [Reset = XXh]",
+    "evidence": "PDF p40: register heading in the same style as 9.2 and 9.4; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p42-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 42,
+    "old": "### **9.3 CONTROL2 Register (Offset = 2h) [Reset = 0Xh]**",
+    "new": "### 9.3 CONTROL2 Register (Offset = 2h) [Reset = 0Xh]",
+    "evidence": "PDF p42: register heading in the same style as 9.2 and 9.4; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p44-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 44,
+    "old": "### **9.5 STATUS Register (Offset = 4h) [Reset = 00h]**",
+    "new": "### 9.5 STATUS Register (Offset = 4h) [Reset = 00h]",
+    "evidence": "PDF p44: register heading in the same style as 9.2 and 9.4; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p44-hiccup-occured",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 44,
+    "old": "0b = No hiccup event occurred",
+    "new": "0b = No hiccup event occured",
+    "evidence": "PDF p44 Table 9-7 HICCUP prints '0b = No hiccup event occured' (manufacturer typo); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p44-ilim-occured",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 44,
+    "old": "0b = No current limit event occurred",
+    "new": "0b = No current limit event occured",
+    "evidence": "PDF p44 Table 9-7 ILIM prints '0b = No current limit event occured' (manufacturer typo); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p45-fig10-1-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 45,
+    "old": "![Typical Application Schematic for TPS6287Bx. The diagram shows a buck converter circuit. Input voltage VIN (2.7V to 6V) is connected to the VIN pin and a 2.2µF input capacitor CIN. The output voltage VOUT is set by a resistor divider RSET1 and RSET2 connected to the VSET1 and VSET2 pins. The output is connected to a load through an inductor L and an output capacitor COUT. The SW pin is connected to the inductor. The MODE/SYNC pin is connected to the output of a comparator (COMP) which also receives feedback from the output voltage through a resistor RZ and capacitor CC. The PG pin is connected to the output of a power good detector (PGD) which also receives feedback from the output voltage through a resistor RPG. The SDA and SCL pins are connected to an I2C interface. The SYNC_OUT pin is shown with a cross, indicating it is not used. The AGND, GND, and PGND pins are connected to ground.](9edb407536d4d4d4a6ac391527af047c_img.jpg)\n\nTypical Application Schematic for TPS6287Bx. The diagram shows a buck converter circuit. Input voltage VIN (2.7V to 6V) is connected to the VIN pin and a 2.2µF input capacitor CIN. The output voltage VOUT is set by a resistor divider RSET1 and RSET2 connected to the VSET1 and VSET2 pins. The output is connected to a load through an inductor L and an output capacitor COUT. The SW pin is connected to the inductor. The MODE/SYNC pin is connected to the output of a comparator (COMP) which also receives feedback from the output voltage through a resistor RZ and capacitor CC. The PG pin is connected to the output of a power good detector (PGD) which also receives feedback from the output voltage through a resistor RPG. The SDA and SCL pins are connected to an I2C interface. The SYNC\\_OUT pin is shown with a cross, indicating it is not used. The AGND, GND, and PGND pins are connected to ground.",
+    "new": "![Typical Application Schematic for TPS6287Bx (Figure 10-1; description written from the drawing; it is the same schematic as the Simplified Schematic on page 1): the input V_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C_IN to ground; R_EN connects EN to V_IN. SDA and SCL form the I2C bus, each pulled up to V_IO by a resistor. VSET1 and VSET2 each go to ground through R_VSET1 and R_VSET2. The two SW pins drive the inductor L; C_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R_Z in series with C_C, with C_C2 in parallel. PG is pulled up to V_IO by R_PG and is the PG output. SYNC_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed.](9edb407536d4d4d4a6ac391527af047c_img.jpg)\n\nTypical Application Schematic for TPS6287Bx (Figure 10-1; description written from the drawing; it is the same schematic as the Simplified Schematic on page 1): the input V\\_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C\\_IN to ground; R\\_EN connects EN to V\\_IN. SDA and SCL form the I2C bus, each pulled up to V\\_IO by a resistor. VSET1 and VSET2 each go to ground through R\\_VSET1 and R\\_VSET2. The two SW pins drive the inductor L; C\\_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R\\_Z in series with C\\_C, with C\\_C2 in parallel. PG is pulled up to V\\_IO by R\\_PG and is the PG output. SYNC\\_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed.",
+    "evidence": "PDF p45 Figure 10-1: the AI text invented a '2.2µF' C_IN, an R_SET divider setting V_OUT, a comparator driving MODE/SYNC, a 'power good detector (PGD)' and a PGND pin. The drawing is the page-1 application schematic (MODE/SYNC tied to VIN, R_VSET1/R_VSET2 to ground, RC network from COMP to ground, R_PG pull-up to V_IO). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p46-eq6-fsw-lowercase",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 46,
+    "old": "{L \\times f_{SW}} \\right) \\quad (6)",
+    "new": "{L \\times f_{sw}} \\right) \\quad (6)",
+    "evidence": "PDF p46 Equation 6 prints 'L × fsw' with a lowercase subscript.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p46-heading-preliminary-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 46,
+    "old": "##### **Preliminary Calculations**",
+    "new": "##### Preliminary Calculations",
+    "evidence": "PDF p46: heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p46-heading-10-2-2-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 46,
+    "old": "#### **10.2.2 Detailed Design Procedure**",
+    "new": "#### 10.2.2 Detailed Design Procedure",
+    "evidence": "PDF p46: heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p46-heading-10-2-2-1-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 46,
+    "old": "##### **10.2.2.1 Inductor Selection**",
+    "new": "##### 10.2.2.1 Inductor Selection",
+    "evidence": "PDF p46: heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p48-heading-10-2-2-3-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 48,
+    "old": "##### **10.2.2.3 Selecting the Compensation Resistor**",
+    "new": "##### 10.2.2.3 Selecting the Compensation Resistor",
+    "evidence": "PDF p48: heading in the same style as 10.2.2.2; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p48-heading-10-2-2-4-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 48,
+    "old": "##### **10.2.2.4 Selecting the Output Capacitors**",
+    "new": "##### 10.2.2.4 Selecting the Output Capacitors",
+    "evidence": "PDF p48: heading in the same style as 10.2.2.2; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p49-eq16-il-pp",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 49,
+    "old": "\\frac{I_L(PP)}{2}",
+    "new": "\\frac{I_{L(PP)}}{2}",
+    "evidence": "PDF p49 Equation 16 prints I with subscript L(PP), as in Equation 6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p49-1-8nf-spacing",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 49,
+    "old": "the E12 series is 1.8 nF.",
+    "new": "the E12 series is 1.8nF.",
+    "evidence": "PDF p49 prints '1.8nF' without a space.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p49-cc2-pf-spacing",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 49,
+    "old": "10 pF or 22 pF capacitors",
+    "new": "10pF or 22pF capacitors",
+    "evidence": "PDF p49 prints '10pF or 22pF' without spaces.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p50-fig10-2-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 50,
+    "old": "![Figure 10-2: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (45 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.](c22de2cf24282469c2a2cf1018928116_img.jpg)\n\n$V_{IN} = 5.0\\text{V}$  FPWM  $T_A = 25^\\circ\\text{C}$\n\nFigure 10-2: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (45 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.",
+    "new": "![Figure 10-2: Efficiency vs Output Current, VIN = 5.0V, FPWM, TA = 25°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (45 to 95) versus Output Current (A) on the x-axis (0 to 30), eight curves V_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V_OUT = 1.5V highest and V_OUT = 0.4V lowest, with the spread widening at high current.](c22de2cf24282469c2a2cf1018928116_img.jpg)\n\n$V_{IN} = 5.0\\text{V}$  FPWM  $T_A = 25^\\circ\\text{C}$\n\nFigure 10-2: Efficiency vs Output Current, VIN = 5.0V, FPWM, TA = 25°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (45 to 95) versus Output Current (A) on the x-axis (0 to 30), eight curves V\\_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V\\_OUT = 1.5V highest and V\\_OUT = 0.4V lowest, with the spread widening at high current.",
+    "evidence": "PDF p50 Figure 10-2: the AI text gave efficiency levels read off the plot ('above 8x% for currents up to about 10A'); rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p50-fig10-3-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 50,
+    "old": "![Figure 10-3: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.](ac7113ab2270f2d29fbc296fe31432b5_img.jpg)\n\n$V_{IN} = 5.0\\text{V}$  FPWM  $T_A = 85^\\circ\\text{C}$\n\nFigure 10-3: Efficiency vs Output Current graph for VIN = 5.0V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.",
+    "new": "![Figure 10-3: Efficiency vs Output Current, VIN = 5.0V, FPWM, TA = 85°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (30 to 95) versus Output Current (A) on the x-axis (0 to 30), eight curves V_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V_OUT = 1.5V highest and V_OUT = 0.4V lowest, with the spread widening at high current.](ac7113ab2270f2d29fbc296fe31432b5_img.jpg)\n\n$V_{IN} = 5.0\\text{V}$  FPWM  $T_A = 85^\\circ\\text{C}$\n\nFigure 10-3: Efficiency vs Output Current, VIN = 5.0V, FPWM, TA = 85°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (30 to 95) versus Output Current (A) on the x-axis (0 to 30), eight curves V\\_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V\\_OUT = 1.5V highest and V\\_OUT = 0.4V lowest, with the spread widening at high current.",
+    "evidence": "PDF p50 Figure 10-3: the AI text gave efficiency levels read off the plot ('above 8x% for currents up to about 10A'); rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p50-fig10-4-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 50,
+    "old": "![Figure 10-4: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (30 to 100) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.](1c4139270d1edff9631800a63eabf7f5_img.jpg)\n\n$V_{IN} = 3.3\\text{V}$  FPWM  $T_A = 25^\\circ\\text{C}$\n\nFigure 10-4: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (30 to 100) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 85%) for currents up to about 10A and then gradually decreases.",
+    "new": "![Figure 10-4: Efficiency vs Output Current, VIN = 3.3V, FPWM, TA = 25°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (30 to 100) versus Output Current (A) on the x-axis (0 to 30), eight curves V_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V_OUT = 1.5V highest and V_OUT = 0.4V lowest, with the spread widening at high current.](1c4139270d1edff9631800a63eabf7f5_img.jpg)\n\n$V_{IN} = 3.3\\text{V}$  FPWM  $T_A = 25^\\circ\\text{C}$\n\nFigure 10-4: Efficiency vs Output Current, VIN = 3.3V, FPWM, TA = 25°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (30 to 100) versus Output Current (A) on the x-axis (0 to 30), eight curves V\\_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V\\_OUT = 1.5V highest and V\\_OUT = 0.4V lowest, with the spread widening at high current.",
+    "evidence": "PDF p50 Figure 10-4: the AI text gave efficiency levels read off the plot ('above 8x% for currents up to about 10A'); rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p50-fig10-5-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 50,
+    "old": "![Figure 10-5: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.](4386b8117f7248610045728eb21e1764_img.jpg)\n\n$V_{IN} = 3.3\\text{V}$  FPWM  $T_A = 85^\\circ\\text{C}$\n\nFigure 10-5: Efficiency vs Output Current graph for VIN = 3.3V, FPWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (30 to 95) versus output current (A) on the x-axis (0 to 30). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1.0V, 1.2V, 1.35V, and 1.5V. Efficiency is high (above 80%) for currents up to about 10A and then gradually decreases.",
+    "new": "![Figure 10-5: Efficiency vs Output Current, VIN = 3.3V, FPWM, TA = 85°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (30 to 95) versus Output Current (A) on the x-axis (0 to 30), eight curves V_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V_OUT = 1.5V highest and V_OUT = 0.4V lowest, with the spread widening at high current.](4386b8117f7248610045728eb21e1764_img.jpg)\n\n$V_{IN} = 3.3\\text{V}$  FPWM  $T_A = 85^\\circ\\text{C}$\n\nFigure 10-5: Efficiency vs Output Current, VIN = 3.3V, FPWM, TA = 85°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (30 to 95) versus Output Current (A) on the x-axis (0 to 30), eight curves V\\_OUT = 0.4V (black), 0.5V (red), 0.6V (dark blue), 0.8V (cyan), 1.0V (green), 1.2V (brown-red), 1.35V (purple) and 1.5V (olive). All curves rise steeply at light load, reach a broad maximum at a few amperes and then decrease slowly toward 30 A. Efficiency is ordered by output voltage: V\\_OUT = 1.5V highest and V\\_OUT = 0.4V lowest, with the spread widening at high current.",
+    "evidence": "PDF p50 Figure 10-5: the AI text gave efficiency levels read off the plot ('above 8x% for currents up to about 10A'); rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p50-fig10-6-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 50,
+    "old": "![Figure 10-6: Safe Operating Area graph for VIN = 5.0V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.](b72e949fbca2c3abfa1505dc14880f48_img.jpg)\n\n$V_{IN} = 5.0\\text{V}$  Nat. convection  $T_{JMAX} = 125^\\circ\\text{C}$\n\nFigure 10-6: Safe Operating Area graph for VIN = 5.0V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.",
+    "new": "![Figure 10-6: Safe Operating Area, VIN = 5.0V, Nat. convection, TJMAX = 125°C (description written from the graph; read values from the image/PDF). Output Current (A) on the y-axis (0 to 33) versus Ambient Temperature (°C) on the x-axis (75 to 120), eight curves V_OUT = 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V and 1.5V. Each curve is flat at the 30-A level at low ambient temperature and then bends down, falling faster as the temperature approaches 120 °C. The higher output voltages start to derate at lower temperatures: V_OUT = 0.4V is the highest curve and V_OUT = 1.5V the lowest.](b72e949fbca2c3abfa1505dc14880f48_img.jpg)\n\n$V_{IN} = 5.0\\text{V}$  Nat. convection  $T_{JMAX} = 125^\\circ\\text{C}$\n\nFigure 10-6: Safe Operating Area, VIN = 5.0V, Nat. convection, TJMAX = 125°C (description written from the graph; read values from the image/PDF). Output Current (A) on the y-axis (0 to 33) versus Ambient Temperature (°C) on the x-axis (75 to 120), eight curves V\\_OUT = 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V and 1.5V. Each curve is flat at the 30-A level at low ambient temperature and then bends down, falling faster as the temperature approaches 120 °C. The higher output voltages start to derate at lower temperatures: V\\_OUT = 0.4V is the highest curve and V\\_OUT = 1.5V the lowest.",
+    "evidence": "PDF p50 Figure 10-6: the AI text gave read-off values ('around 30A at 75°C ... about 10A at 120°C'); rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p50-fig10-7-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 50,
+    "old": "![Figure 10-7: Safe Operating Area graph for VIN = 3.3V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.](3f213c9d6480f675a138b7213a9fd4c8_img.jpg)\n\n$V_{IN} = 3.3\\text{V}$  Nat. convection  $T_{JMAX} = 125^\\circ\\text{C}$\n\nFigure 10-7: Safe Operating Area graph for VIN = 3.3V, Nat. convection, TJMAX = 125°C. The graph shows output current (A) on the y-axis (0 to 33) versus ambient temperature (°C) on the x-axis (75 to 120). Multiple curves are plotted for different VOUT values: 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V, and 1.5V. The curves show a decreasing trend of output current as ambient temperature increases, starting from around 30A at 75°C and dropping to about 10A at 120°C.",
+    "new": "![Figure 10-7: Safe Operating Area, VIN = 3.3V, Nat. convection, TJMAX = 125°C (description written from the graph; read values from the image/PDF). Output Current (A) on the y-axis (0 to 33) versus Ambient Temperature (°C) on the x-axis (75 to 120), eight curves V_OUT = 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V and 1.5V. Each curve is flat at the 30-A level at low ambient temperature and then bends down, falling faster as the temperature approaches 120 °C. The higher output voltages start to derate at lower temperatures: V_OUT = 0.4V is the highest curve and V_OUT = 1.5V the lowest.](3f213c9d6480f675a138b7213a9fd4c8_img.jpg)\n\n$V_{IN} = 3.3\\text{V}$  Nat. convection  $T_{JMAX} = 125^\\circ\\text{C}$\n\nFigure 10-7: Safe Operating Area, VIN = 3.3V, Nat. convection, TJMAX = 125°C (description written from the graph; read values from the image/PDF). Output Current (A) on the y-axis (0 to 33) versus Ambient Temperature (°C) on the x-axis (75 to 120), eight curves V\\_OUT = 0.4V, 0.5V, 0.6V, 0.8V, 1V, 1.2V, 1.35V and 1.5V. Each curve is flat at the 30-A level at low ambient temperature and then bends down, falling faster as the temperature approaches 120 °C. The higher output voltages start to derate at lower temperatures: V\\_OUT = 0.4V is the highest curve and V\\_OUT = 1.5V the lowest.",
+    "evidence": "PDF p50 Figure 10-7: the AI text gave read-off values ('around 30A at 75°C ... about 10A at 120°C'); rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p51-fig10-8-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 51,
+    "old": "![Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The y-axis ranges from 0.397 to 0.4015 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](242fdee4611b447a4206005652ea3c19_img.jpg)\n\nGraph of Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The y-axis ranges from 0.397 to 0.4015 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.",
+    "new": "![Figure 10-8: Output Voltage vs Output Current, V_IN = 5.0V, FPWM, TPS6287B25, V_OUT = 0.4V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.397 to 0.4015) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat over the whole current range, bending slightly down at high current; the T_amb = 25 °C curve is the highest, the -40 °C curve starts near it at no load and drops toward the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together.](242fdee4611b447a4206005652ea3c19_img.jpg)\n\nFigure 10-8: Output Voltage vs Output Current, V\\_IN = 5.0V, FPWM, TPS6287B25, V\\_OUT = 0.4V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.397 to 0.4015) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat over the whole current range, bending slightly down at high current; the T\\_amb = 25 °C curve is the highest, the -40 °C curve starts near it at no load and drops toward the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together.",
+    "evidence": "PDF p51 Figure 10-8: the AI text said 'six curves' (five are plotted). Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p51-fig10-9-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 51,
+    "old": "![Graph of Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The y-axis ranges from 0.3874 to 0.4114 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-8, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](4134b40f9161ec8fcd3c28bdb48f80b0_img.jpg)\n\nGraph of Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The y-axis ranges from 0.3874 to 0.4114 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-8, with the 25 °C curve being the highest and the 125 °C curve being the lowest.",
+    "new": "![Figure 10-9: Output Voltage vs Output Current, V_IN = 5.0V, FPWM, TPS6287B25, V_OUT = 0.4V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.3874 to 0.4114) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves are straight lines falling from the top left to the bottom right of the plot (the output voltage decreases linearly with output current); the curves lie close together, with T_amb = 25 °C slightly the highest.](4134b40f9161ec8fcd3c28bdb48f80b0_img.jpg)\n\nFigure 10-9: Output Voltage vs Output Current, V\\_IN = 5.0V, FPWM, TPS6287B25, V\\_OUT = 0.4V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.3874 to 0.4114) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves are straight lines falling from the top left to the bottom right of the plot (the output voltage decreases linearly with output current); the curves lie close together, with T\\_amb = 25 °C slightly the highest.",
+    "evidence": "PDF p51 Figure 10-9: the AI text said 'six curves' (five are plotted) and described the droop-enabled curves as only \"more linear and lower\" than the droop-disabled ones (they fall linearly across the full axis). Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p51-fig10-10-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 51,
+    "old": "![Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The y-axis ranges from 0.794 to 0.8036 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](d4852169b63bedb68b1f3c5b3b9b0cc0_img.jpg)\n\nGraph of Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The y-axis ranges from 0.794 to 0.8036 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.",
+    "new": "![Figure 10-10: Output Voltage vs Output Current, V_IN = 5.0V, FPWM, TPS6287B25, V_OUT = 0.8V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.794 to 0.8036) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat over the whole current range, bending slightly down at high current; the T_amb = 25 °C curve is the highest, the -40 °C curve starts near it at no load and drops toward the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together.](d4852169b63bedb68b1f3c5b3b9b0cc0_img.jpg)\n\nFigure 10-10: Output Voltage vs Output Current, V\\_IN = 5.0V, FPWM, TPS6287B25, V\\_OUT = 0.8V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.794 to 0.8036) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat over the whole current range, bending slightly down at high current; the T\\_amb = 25 °C curve is the highest, the -40 °C curve starts near it at no load and drops toward the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together.",
+    "evidence": "PDF p51 Figure 10-10: the AI text said 'six curves' (five are plotted). Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p51-fig10-11-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 51,
+    "old": "![Graph of Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The y-axis ranges from 0.7869 to 0.8133 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-10, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](38d1e71b35df502515a0d850a7966dae_img.jpg)\n\nGraph of Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The y-axis ranges from 0.7869 to 0.8133 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-10, with the 25 °C curve being the highest and the 125 °C curve being the lowest.",
+    "new": "![Figure 10-11: Output Voltage vs Output Current, V_IN = 5.0V, FPWM, TPS6287B25, V_OUT = 0.8V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.7869 to 0.8133) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves are straight lines falling from the top left to the bottom right of the plot (the output voltage decreases linearly with output current); the curves lie close together, with T_amb = 25 °C slightly the highest.](38d1e71b35df502515a0d850a7966dae_img.jpg)\n\nFigure 10-11: Output Voltage vs Output Current, V\\_IN = 5.0V, FPWM, TPS6287B25, V\\_OUT = 0.8V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.7869 to 0.8133) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves are straight lines falling from the top left to the bottom right of the plot (the output voltage decreases linearly with output current); the curves lie close together, with T\\_amb = 25 °C slightly the highest.",
+    "evidence": "PDF p51 Figure 10-11: the AI text said 'six curves' (five are plotted) and described the droop-enabled curves as only \"more linear and lower\" than the droop-disabled ones (they fall linearly across the full axis). Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p51-fig10-12-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 51,
+    "old": "![Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The y-axis ranges from 1.662 to 1.683 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.](6c5332a475cc3b84f0989ed3df1e1ebd_img.jpg)\n\nGraph of Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The y-axis ranges from 1.662 to 1.683 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, and the 125 °C curve is the lowest. All curves show a slight downward trend as current increases.",
+    "new": "![Figure 10-12: Output Voltage vs Output Current, V_IN = 5.0V, FPWM, TPS6287B25, V_OUT = 1.675V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.662 to 1.683) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat over the whole current range, bending slightly down at high current; the T_amb = 25 °C curve is the highest, the -40 °C curve starts near it at no load and drops toward the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together.](6c5332a475cc3b84f0989ed3df1e1ebd_img.jpg)\n\nFigure 10-12: Output Voltage vs Output Current, V\\_IN = 5.0V, FPWM, TPS6287B25, V\\_OUT = 1.675V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.662 to 1.683) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat over the whole current range, bending slightly down at high current; the T\\_amb = 25 °C curve is the highest, the -40 °C curve starts near it at no load and drops toward the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together.",
+    "evidence": "PDF p51 Figure 10-12: the AI text said 'six curves' (five are plotted). Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p51-fig10-13-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 51,
+    "old": "![Graph of Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The y-axis ranges from 1.6603 to 1.6891 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-12, with the 25 °C curve being the highest and the 125 °C curve being the lowest.](d3d1e4301584c9d0fc1fb134382303e3_img.jpg)\n\nGraph of Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The y-axis ranges from 1.6603 to 1.6891 V, and the x-axis ranges from 0 to 30 A. Six curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The curves are more linear and lower than in Figure 10-12, with the 25 °C curve being the highest and the 125 °C curve being the lowest.",
+    "new": "![Figure 10-13: Output Voltage vs Output Current, V_IN = 5.0V, FPWM, TPS6287B25, V_OUT = 1.675V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.6603 to 1.6891) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves are straight lines falling from the top left to the bottom right of the plot (the output voltage decreases linearly with output current); the curves lie close together, with T_amb = 25 °C slightly the highest.](d3d1e4301584c9d0fc1fb134382303e3_img.jpg)\n\nFigure 10-13: Output Voltage vs Output Current, V\\_IN = 5.0V, FPWM, TPS6287B25, V\\_OUT = 1.675V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.6603 to 1.6891) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves are straight lines falling from the top left to the bottom right of the plot (the output voltage decreases linearly with output current); the curves lie close together, with T\\_amb = 25 °C slightly the highest.",
+    "evidence": "PDF p51 Figure 10-13: the AI text said 'six curves' (five are plotted) and described the droop-enabled curves as only \"more linear and lower\" than the droop-disabled ones (they fall linearly across the full axis). Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p52-fig10-14-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 52,
+    "old": "![Figure 10-14: Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.397 to 0.4015) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](4666738057044ad78ced4dbbc0c1bfb3_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.4V$   \ndroop disabled\n\nFigure 10-14: Output Voltage vs Output Current for VOUT = 0.4V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.397 to 0.4015) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.",
+    "new": "![Figure 10-14: Output Voltage vs Output Current, V_IN = 3.3V, FPWM, TPS6287B25, V_OUT = 0.4V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.397 to 0.4015) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat, bending down at high current; the T_amb = 25 °C curve is the highest over most of the range, the -40 °C curve falls least at high current and ends above the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together and lowest.](4666738057044ad78ced4dbbc0c1bfb3_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.4V$   \ndroop disabled\n\nFigure 10-14: Output Voltage vs Output Current, V\\_IN = 3.3V, FPWM, TPS6287B25, V\\_OUT = 0.4V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.397 to 0.4015) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat, bending down at high current; the T\\_amb = 25 °C curve is the highest over most of the range, the -40 °C curve falls least at high current and ends above the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together and lowest.",
+    "evidence": "PDF p52 Figure 10-14: the AI text ordered the curves '25 °C, 85 °C, 105 °C, 125 °C, and -40 °C' (lowest); in the graph the -40 °C curve stays above the hot curves. Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p52-fig10-15-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 52,
+    "old": "![Figure 10-15: Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.3877 to 0.4117) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](11a2ed9ad059f4289e4475247d633e88_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.4V$   \ndroop enabled\n\nFigure 10-15: Output Voltage vs Output Current for VOUT = 0.4V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.3877 to 0.4117) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.",
+    "new": "![Figure 10-15: Output Voltage vs Output Current, V_IN = 3.3V, FPWM, TPS6287B25, V_OUT = 0.4V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.3877 to 0.4117) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves fall linearly from the top left to the bottom right of the plot; they lie close together, the T_amb = 25 °C curve slightly the highest and the 85 °C, 105 °C and 125 °C curves the lowest.](11a2ed9ad059f4289e4475247d633e88_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.4V$   \ndroop enabled\n\nFigure 10-15: Output Voltage vs Output Current, V\\_IN = 3.3V, FPWM, TPS6287B25, V\\_OUT = 0.4V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.3877 to 0.4117) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves fall linearly from the top left to the bottom right of the plot; they lie close together, the T\\_amb = 25 °C curve slightly the highest and the 85 °C, 105 °C and 125 °C curves the lowest.",
+    "evidence": "PDF p52 Figure 10-15: the AI text ordered the curves '25 °C, 85 °C, 105 °C, 125 °C, and -40 °C' (lowest); in the graph the -40 °C curve stays above the hot curves. Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p52-fig10-16-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 52,
+    "old": "![Figure 10-16: Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.793 to 0.8034) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](caeb46d58919c727aa9d338ae9492077_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.8V$   \ndroop disabled\n\nFigure 10-16: Output Voltage vs Output Current for VOUT = 0.8V, droop disabled. The graph shows Output Voltage (V) on the y-axis (0.793 to 0.8034) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.",
+    "new": "![Figure 10-16: Output Voltage vs Output Current, V_IN = 3.3V, FPWM, TPS6287B25, V_OUT = 0.8V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.793 to 0.8034) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat, bending down at high current; the T_amb = 25 °C curve is the highest over most of the range, the -40 °C curve falls least at high current and ends above the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together and lowest. Near 30 A the -40 °C and 25 °C curves meet.](caeb46d58919c727aa9d338ae9492077_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.8V$   \ndroop disabled\n\nFigure 10-16: Output Voltage vs Output Current, V\\_IN = 3.3V, FPWM, TPS6287B25, V\\_OUT = 0.8V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.793 to 0.8034) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat, bending down at high current; the T\\_amb = 25 °C curve is the highest over most of the range, the -40 °C curve falls least at high current and ends above the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together and lowest. Near 30 A the -40 °C and 25 °C curves meet.",
+    "evidence": "PDF p52 Figure 10-16: the AI text ordered the curves '25 °C, 85 °C, 105 °C, 125 °C, and -40 °C' (lowest); in the graph the -40 °C curve stays above the hot curves and crosses the 25 °C curve. Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p52-fig10-17-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 52,
+    "old": "![Figure 10-17: Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.7868 to 0.8132) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](2120c62a6ad82bcbf85ab00f39f70964_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.8V$   \ndroop enabled\n\nFigure 10-17: Output Voltage vs Output Current for VOUT = 0.8V, droop enabled. The graph shows Output Voltage (V) on the y-axis (0.7868 to 0.8132) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.",
+    "new": "![Figure 10-17: Output Voltage vs Output Current, V_IN = 3.3V, FPWM, TPS6287B25, V_OUT = 0.8V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.7868 to 0.8132) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves fall linearly from the top left to the bottom right of the plot; they lie close together, the T_amb = 25 °C curve slightly the highest and the 85 °C, 105 °C and 125 °C curves the lowest.](2120c62a6ad82bcbf85ab00f39f70964_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 0.8V$   \ndroop enabled\n\nFigure 10-17: Output Voltage vs Output Current, V\\_IN = 3.3V, FPWM, TPS6287B25, V\\_OUT = 0.8V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.7868 to 0.8132) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves fall linearly from the top left to the bottom right of the plot; they lie close together, the T\\_amb = 25 °C curve slightly the highest and the 85 °C, 105 °C and 125 °C curves the lowest.",
+    "evidence": "PDF p52 Figure 10-17: the AI text ordered the curves '25 °C, 85 °C, 105 °C, 125 °C, and -40 °C' (lowest); in the graph the -40 °C curve stays above the hot curves. Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p52-fig10-18-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 52,
+    "old": "![Figure 10-18: Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The graph shows Output Voltage (V) on the y-axis (1.66 to 1.6808) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.](9b79cf921e66c449b06621743d69070d_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 1.675V$   \ndroop disabled\n\nFigure 10-18: Output Voltage vs Output Current for VOUT = 1.675V, droop disabled. The graph shows Output Voltage (V) on the y-axis (1.66 to 1.6808) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a slight downward trend as current increases.",
+    "new": "![Figure 10-18: Output Voltage vs Output Current, V_IN = 3.3V, FPWM, TPS6287B25, V_OUT = 1.675V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.66 to 1.6808) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat, bending down at high current; the T_amb = 25 °C curve is the highest over most of the range, the -40 °C curve falls least at high current and ends above the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together and lowest. At high current the -40 °C curve crosses above the 25 °C curve.](9b79cf921e66c449b06621743d69070d_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 1.675V$   \ndroop disabled\n\nFigure 10-18: Output Voltage vs Output Current, V\\_IN = 3.3V, FPWM, TPS6287B25, V\\_OUT = 1.675V, droop disabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.66 to 1.6808) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop disabled the curves are nearly flat, bending down at high current; the T\\_amb = 25 °C curve is the highest over most of the range, the -40 °C curve falls least at high current and ends above the hot curves, and the 85 °C, 105 °C and 125 °C curves lie close together and lowest. At high current the -40 °C curve crosses above the 25 °C curve.",
+    "evidence": "PDF p52 Figure 10-18: the AI text ordered the curves '25 °C, 85 °C, 105 °C, 125 °C, and -40 °C' (lowest); in the graph the -40 °C curve stays above the hot curves and crosses the 25 °C curve. Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p52-fig10-19-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 52,
+    "old": "![Figure 10-19: Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The graph shows Output Voltage (V) on the y-axis (1.657 to 1.6882) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.](90a707f5e8b944c0fbb3be48addd16ae_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 1.675V$   \ndroop enabled\n\nFigure 10-19: Output Voltage vs Output Current for VOUT = 1.675V, droop enabled. The graph shows Output Voltage (V) on the y-axis (1.657 to 1.6882) and Output Current (A) on the x-axis (0 to 30). Five curves are shown for ambient temperatures: -40 °C (black), 25 °C (red), 85 °C (blue), 105 °C (cyan), and 125 °C (green). The 25 °C curve is the highest, followed by 85 °C, 105 °C, 125 °C, and -40 °C. All curves show a significant downward trend as current increases.",
+    "new": "![Figure 10-19: Output Voltage vs Output Current, V_IN = 3.3V, FPWM, TPS6287B25, V_OUT = 1.675V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.657 to 1.6882) versus Output Current (A) on the x-axis (0 to 30), five curves T_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves fall linearly from the top left to the bottom right of the plot; they lie close together, the T_amb = 25 °C curve slightly the highest and the 85 °C, 105 °C and 125 °C curves the lowest. At high current the -40 °C curve crosses above the 25 °C curve.](90a707f5e8b944c0fbb3be48addd16ae_img.jpg)\n\n$V_{IN} = 3.3V$  FPWM; TPS6287B25  $V_{OUT} = 1.675V$   \ndroop enabled\n\nFigure 10-19: Output Voltage vs Output Current, V\\_IN = 3.3V, FPWM, TPS6287B25, V\\_OUT = 1.675V, droop enabled (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (1.657 to 1.6882) versus Output Current (A) on the x-axis (0 to 30), five curves T\\_amb = -40 °C (black), 25 °C (red), 85 °C (dark blue), 105 °C (cyan) and 125 °C (green). With droop enabled all curves fall linearly from the top left to the bottom right of the plot; they lie close together, the T\\_amb = 25 °C curve slightly the highest and the 85 °C, 105 °C and 125 °C curves the lowest. At high current the -40 °C curve crosses above the 25 °C curve.",
+    "evidence": "PDF p52 Figure 10-19: the AI text ordered the curves '25 °C, 85 °C, 105 °C, 125 °C, and -40 °C' (lowest); in the graph the -40 °C curve stays above the hot curves and crosses the 25 °C curve. Rewritten from the graph with shapes and curve order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-20-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "![Oscilloscope screenshot showing start-up timing. The top trace is VIN, which steps up from 0V to 5V. The bottom trace is VOUT, which rises from 0V to 0.75V. The PWM signal is shown as a high-frequency square wave starting after VIN steps up. Scale bars: 200µs, 500k points, 1.60V.](b1601cda0f9b4fadfd55056c4f8ebce1_img.jpg)\n\nOscilloscope screenshot showing start-up timing. The top trace is VIN, which steps up from 0V to 5V. The bottom trace is VOUT, which rises from 0V to 0.75V. The PWM signal is shown as a high-frequency square wave starting after VIN steps up. Scale bars: 200µs, 500k points, 1.60V.",
+    "new": "![Oscilloscope screenshot for Figure 10-20, Start-Up Timing (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 VEN (dark blue, 2.00 V/div) and channel 2 VOUT (cyan, 200mV/div); 200µs/div, 500MS/s, 1M points, trigger on channel 1 rising edge at 1.60 V. VEN steps from low to high; after a delay VOUT starts to rise and ramps linearly to its final level, then stays flat.](b1601cda0f9b4fadfd55056c4f8ebce1_img.jpg)\n\nOscilloscope screenshot for Figure 10-20, Start-Up Timing (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 VEN (dark blue, 2.00 V/div) and channel 2 VOUT (cyan, 200mV/div); 200µs/div, 500MS/s, 1M points, trigger on channel 1 rising edge at 1.60 V. VEN steps from low to high; after a delay VOUT starts to rise and ramps linearly to its final level, then stays flat.",
+    "evidence": "PDF p53 Figure 10-20: the AI text called the upper trace VIN stepping 0 V to 5 V, described a 'PWM signal ... square wave' that is not in the capture and gave '500k points'; the screen labels the traces VEN (channel 1, 2.00 V) and VOUT (channel 2, 200mV), 500MS/s, 1M points. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-21-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "![Oscilloscope screenshot showing output voltage ripple. The trace shows a steady-state voltage with small high-frequency oscillations (ripple). Scale bars: 200µs, 500k points, 1.60V.](8e8ee6d2f8a17f2da03923bc97e226d7_img.jpg)\n\nOscilloscope screenshot showing output voltage ripple. The trace shows a steady-state voltage with small high-frequency oscillations (ripple). Scale bars: 200µs, 500k points, 1.60V.",
+    "new": "![Oscilloscope screenshot for Figure 10-21, Output Voltage Ripple (description written from the screenshot; read values from the image/PDF). Teledyne LeCroy capture: C2 (magenta, BwL DC50, 5.00 mV/div, offset -746.80 mV) shows the output voltage ripple as a small periodic waveform with a dip once per switching cycle around the center line; timebase 2.00 µs/div (20.00 µs Tbase, 50 kS, 2.5 GS/s), trigger C2 DC, edge positive at 749.15 mV.](8e8ee6d2f8a17f2da03923bc97e226d7_img.jpg)\n\nOscilloscope screenshot for Figure 10-21, Output Voltage Ripple (description written from the screenshot; read values from the image/PDF). Teledyne LeCroy capture: C2 (magenta, BwL DC50, 5.00 mV/div, offset -746.80 mV) shows the output voltage ripple as a small periodic waveform with a dip once per switching cycle around the center line; timebase 2.00 µs/div (20.00 µs Tbase, 50 kS, 2.5 GS/s), trigger C2 DC, edge positive at 749.15 mV.",
+    "evidence": "PDF p53 Figure 10-21: the AI text gave the scale bars of a different capture ('200µs, 500k points, 1.60V'); the screen shows a LeCroy C2 trace at 5.00 mV/div and 2.00 µs/div. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-22-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "![Oscilloscope screenshot showing load transient response with droop disabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](e4d74b50fc10b0f0a08cb2db56123cb9_img.jpg)\n\nOscilloscope screenshot showing load transient response with droop disabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.",
+    "new": "![Oscilloscope screenshot for Figure 10-22, Load Transient Response, droop disabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 output current (dark blue, 4.00 A/div) and channel 2 VOUT (cyan, 10.0mV/div, AC coupled); 100µs/div, 10.0MS/s, 10k points, trigger on channel 1 rising edge at 8.56 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2 (Value, Mean, Min, Max, Std Dev). The load current steps up and, about 0.36 ms later, back down; VOUT shows a short undershoot at the rising load step and a short overshoot at the falling load step, and returns to the same level in between (droop disabled).](e4d74b50fc10b0f0a08cb2db56123cb9_img.jpg)\n\nOscilloscope screenshot for Figure 10-22, Load Transient Response, droop disabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 output current (dark blue, 4.00 A/div) and channel 2 VOUT (cyan, 10.0mV/div, AC coupled); 100µs/div, 10.0MS/s, 10k points, trigger on channel 1 rising edge at 8.56 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2 (Value, Mean, Min, Max, Std Dev). The load current steps up and, about 0.36 ms later, back down; VOUT shows a short undershoot at the rising load step and a short overshoot at the falling load step, and returns to the same level in between (droop disabled).",
+    "evidence": "PDF p53 Figure 10-22: the AI text called the upper trace 'VIN stepping up' and described only 'a small transient dip'; the upper trace is the load current (channel 1, 4.00 A/div, trigger 8.56 A) stepping up and down, and channel 2 is VOUT at 10.0mV/div. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-23-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "![Oscilloscope screenshot showing load transient response with droop enabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a larger transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](280b9e93811b0d5daa35d0911d48d61f_img.jpg)\n\nOscilloscope screenshot showing load transient response with droop enabled. The top trace shows VIN stepping up. The bottom trace shows VOUT with a larger transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.",
+    "new": "![Oscilloscope screenshot for Figure 10-23, Load Transient Response, droop enabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 output current (dark blue, 4.00 A/div) and channel 2 VOUT (cyan, 10.0mV/div, AC coupled); 100µs/div, 10.0MS/s, 10k points, trigger on channel 1 rising edge at 8.56 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2 (Value, Mean, Min, Max, Std Dev). The load current steps up and, about 0.36 ms later, back down; VOUT steps down to a lower level while the load current is high and back up when it falls, with short spikes at both edges (droop enabled).](280b9e93811b0d5daa35d0911d48d61f_img.jpg)\n\nOscilloscope screenshot for Figure 10-23, Load Transient Response, droop enabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 output current (dark blue, 4.00 A/div) and channel 2 VOUT (cyan, 10.0mV/div, AC coupled); 100µs/div, 10.0MS/s, 10k points, trigger on channel 1 rising edge at 8.56 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2 (Value, Mean, Min, Max, Std Dev). The load current steps up and, about 0.36 ms later, back down; VOUT steps down to a lower level while the load current is high and back up when it falls, with short spikes at both edges (droop enabled).",
+    "evidence": "PDF p53 Figure 10-23: the AI text called the upper trace 'VIN stepping up' and described only 'a larger transient dip'; the upper trace is the load current (channel 1, 4.00 A/div, trigger 8.56 A) stepping up and down, and channel 2 is VOUT at 10.0mV/div. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-24-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "![Oscilloscope screenshot showing line transient response. The top trace shows VIN stepping up from 3.0V to 4.5V. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.](32c8cb1f18ae0cd32fa6d7fd312104ef_img.jpg)\n\nOscilloscope screenshot showing line transient response. The top trace shows VIN stepping up from 3.0V to 4.5V. The bottom trace shows VOUT with a small transient dip. Scale bars: 100µs, 10.0MS/s, 10k points, 8.56A.",
+    "new": "![Oscilloscope screenshot for Figure 10-24, Line Transient Response (description written from the screenshot; read values from the image/PDF). Teledyne LeCroy capture: C4 (green, BwL DC1M, 500 mV/div, offset -3.1500 V) is the input voltage, which rises from the lower level to the upper level, stays there and falls back with a small undershoot; C2 (magenta, DC50, 20.0 mV/div, offset -797.50 mV) is the output voltage, a wide switching-ripple band whose center shifts slightly at each input step. Timebase 100 µs/div (2.5 MS, 2.5 GS/s), trigger C4 DC, auto, edge positive at 3.815 V. A Measure table lists P1:max(C4), P2:min(C4) and P3:pkpk(C2).](32c8cb1f18ae0cd32fa6d7fd312104ef_img.jpg)\n\nOscilloscope screenshot for Figure 10-24, Line Transient Response (description written from the screenshot; read values from the image/PDF). Teledyne LeCroy capture: C4 (green, BwL DC1M, 500 mV/div, offset -3.1500 V) is the input voltage, which rises from the lower level to the upper level, stays there and falls back with a small undershoot; C2 (magenta, DC50, 20.0 mV/div, offset -797.50 mV) is the output voltage, a wide switching-ripple band whose center shifts slightly at each input step. Timebase 100 µs/div (2.5 MS, 2.5 GS/s), trigger C4 DC, auto, edge positive at 3.815 V. A Measure table lists P1:max(C4), P2:min(C4) and P3:pkpk(C2).",
+    "evidence": "PDF p53 Figure 10-24: the AI text said VOUT shows 'a small transient dip' and gave the scale bars of the Tektronix captures ('10.0MS/s, 10k points, 8.56A'); this is a LeCroy capture with C4 (input, 500 mV/div) and C2 (output, 20.0 mV/div) at 100 µs/div. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-21-iout-plain",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "I<sub>OUT</sub> = 11.3A",
+    "new": "Iout = 11.3A",
+    "evidence": "PDF p53 Figure 10-21 condition prints 'Iout = 11.3A' in plain text (span 'Iout = 11.3A'@8.0).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-22-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "V<sub>OUT</sub> = 0.75V      PWM,      T<sub>A</sub> = 25°C  \nTPS6287B25 droop      I<sub>OUT</sub> = 8.75A to 16.25A to 8.75A  \ndisabled",
+    "new": "V<sub>OUT</sub> = 0.75V      PWM,      T<sub>A</sub> = 25°C  \nTPS6287B25 droop  \ndisabled  \nV<sub>IN</sub> = 3.3V      Iout = 8.75A to 16.25A to 8.75A",
+    "evidence": "PDF p53 Figure 10-22 conditions: 'VIN = 3.3V' was missing and the load step is printed 'Iout = 8.75A to 16.25A to 8.75A' in plain text on the last line, after 'TPS6287B25 droop disabled'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p53-fig10-23-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 53,
+    "old": "V<sub>OUT</sub> = 0.75V      PWM,      T<sub>A</sub> = 25°C  \nTPS6287B25 droop      I<sub>OUT</sub> = 8.75A to 16.25A to 8.75A  \nenabled",
+    "new": "V<sub>OUT</sub> = 0.75V      PWM,      T<sub>A</sub> = 25°C  \nTPS6287B25 droop  \nenabled  \nV<sub>IN</sub> = 3.3V      Iout = 8.75A to 16.25A to 8.75A",
+    "evidence": "PDF p53 Figure 10-23 conditions: 'VIN = 3.3V' was missing and the load step is printed 'Iout = 8.75A to 16.25A to 8.75A' in plain text on the last line, after 'TPS6287B25 droop enabled'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p54-fig10-25-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 54,
+    "old": "![Typical Application Schematic for TPS6287BxV. The diagram shows a buck converter circuit. The input voltage VIN (2.7V to 6V) is connected to the VIN pin and a filter network consisting of REN and CIN. The EN pin is connected to the output of the filter. The VSET4, VSET3, VSET2, and VSET1 pins are connected to ground. The MODE/SYNC pin is connected to the output of a compensation network consisting of RZ, CC, and CC2. The COMP pin is connected to the output of the compensation network. The PG pin is connected to the output of a resistor RPG. The SW pin is connected to the SW pin of the load. The VOSNS and GOSNS pins are connected to the load. The SYNC_OUT pin is connected to the output of the load. The AGND, GND, and GND pins are connected to ground.](0a73b03fba21af142d619a9a662e6490_img.jpg)\n\nTypical Application Schematic for TPS6287BxV. The diagram shows a buck converter circuit. The input voltage VIN (2.7V to 6V) is connected to the VIN pin and a filter network consisting of REN and CIN. The EN pin is connected to the output of the filter. The VSET4, VSET3, VSET2, and VSET1 pins are connected to ground. The MODE/SYNC pin is connected to the output of a compensation network consisting of RZ, CC, and CC2. The COMP pin is connected to the output of the compensation network. The PG pin is connected to the output of a resistor RPG. The SW pin is connected to the SW pin of the load. The VOSNS and GOSNS pins are connected to the load. The SYNC\\_OUT pin is connected to the output of the load. The AGND, GND, and GND pins are connected to ground.",
+    "new": "![Typical Application Schematic for TPS6287BxV (Figure 10-25; description written from the drawing): the input V_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C_IN to ground; R_EN connects EN to V_IN. VSET4, VSET3, VSET2 and VSET1 are tied together to ground. The two SW pins drive the inductor L; C_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R_Z in series with C_C, with C_C2 in parallel. PG is pulled up to V_IO by R_PG and is the PG output. SYNC_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed.](0a73b03fba21af142d619a9a662e6490_img.jpg)\n\nTypical Application Schematic for TPS6287BxV (Figure 10-25; description written from the drawing): the input V\\_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C\\_IN to ground; R\\_EN connects EN to V\\_IN. VSET4, VSET3, VSET2 and VSET1 are tied together to ground. The two SW pins drive the inductor L; C\\_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R\\_Z in series with C\\_C, with C\\_C2 in parallel. PG is pulled up to V\\_IO by R\\_PG and is the PG output. SYNC\\_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed.",
+    "evidence": "PDF p54 Figure 10-25: the AI text described R_EN/C_IN as a filter, MODE/SYNC connected to the compensation network, SW 'connected to the SW pin of the load' and SYNC_OUT connected to the load output; in the drawing MODE/SYNC is tied to VIN, COMP has the R_Z/C_C/C_C2 network to ground, SW drives L and SYNC_OUT is unconnected (X). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p54-fig10-25-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 54,
+    "old": "\n\nFigure 10-25. Typical Application Schematic for TPS6287BxV\n",
+    "new": "\n\n**Figure 10-25. Typical Application Schematic for TPS6287BxV**\n",
+    "evidence": "PDF p54: Figure 10-25 caption is bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p54-table10-5-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 54,
+    "old": "\n\nTable 10-5. Design Parameters\n",
+    "new": "\n\n**Table 10-5. Design Parameters**\n",
+    "evidence": "PDF p54: Table 10-5 caption is bold like the other table captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p55-fig10-26-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 55,
+    "old": "![](9e8ebf03cae78f4f81b697548c2d7250_img.jpg)\n\n**Figure 10-26.",
+    "new": "![Schematic of two TPS6287Bx devices stacked for up to 50 A (Figure 10-26; description written from the drawing; it is the same schematic as Figure 8-16). Primary device (top): V_IN = 2.7 V to 6 V to both VIN pins and MODE/SYNC, C_IN to ground; R_EN from V_IN to EN; SDA and SCL form the I2C bus with pull-up resistors to V_IO; R_VSET1 and R_VSET2 from VSET1 and VSET2 to ground; SW drives a 100 nH inductor with C_OUT to ground at its output; VOSNS and GOSNS sense the output and its ground at the Load, where C_LOAD is connected; COMP has R_Z in series with C_C to AGND and C_C2 in parallel; PG is pulled up to V_IO by R_PG and is the PG output; AGND and both GND pins are grounded. SYNC_OUT of the primary drives MODE/SYNC of the secondary device. Secondary device (bottom): both VIN pins from the same V_IN with its own C_IN; EN tied to the common EN line; SDA, SCL, VSET1 and VSET2 tied to ground; VOSNS and GOSNS tied together to ground; SW drives its own 100 nH inductor and C_OUT, and its output joins the primary output; COMP and PG connect to the primary COMP and PG nets; SYNC_OUT has a 47 kΩ resistor to ground; AGND and both GND pins are grounded.](9e8ebf03cae78f4f81b697548c2d7250_img.jpg)\n\nSchematic of two TPS6287Bx devices stacked for up to 50 A (Figure 10-26; description written from the drawing; it is the same schematic as Figure 8-16). Primary device (top): V\\_IN = 2.7 V to 6 V to both VIN pins and MODE/SYNC, C\\_IN to ground; R\\_EN from V\\_IN to EN; SDA and SCL form the I2C bus with pull-up resistors to V\\_IO; R\\_VSET1 and R\\_VSET2 from VSET1 and VSET2 to ground; SW drives a 100 nH inductor with C\\_OUT to ground at its output; VOSNS and GOSNS sense the output and its ground at the Load, where C\\_LOAD is connected; COMP has R\\_Z in series with C\\_C to AGND and C\\_C2 in parallel; PG is pulled up to V\\_IO by R\\_PG and is the PG output; AGND and both GND pins are grounded. SYNC\\_OUT of the primary drives MODE/SYNC of the secondary device. Secondary device (bottom): both VIN pins from the same V\\_IN with its own C\\_IN; EN tied to the common EN line; SDA, SCL, VSET1 and VSET2 tied to ground; VOSNS and GOSNS tied together to ground; SW drives its own 100 nH inductor and C\\_OUT, and its output joins the primary output; COMP and PG connect to the primary COMP and PG nets; SYNC\\_OUT has a 47 kΩ resistor to ground; AGND and both GND pins are grounded.\n\n**Figure 10-26.",
+    "evidence": "PDF p55 Figure 10-26: the image had an empty alt text and no description. Description written from the drawing, which is the same two-device stack schematic as Figure 8-16 (same labels in the text layer).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p56-eq24-phi",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 56,
+    "old": "{4 \\times \\tau \\times N_{\\Phi} \\times \\Delta V_{OUT}}",
+    "new": "{4 \\times \\tau \\times N_{\\phi} \\times \\Delta V_{OUT}}",
+    "evidence": "PDF p56 Equation 24 prints the phase count as N with a lowercase phi subscript (text layer 'Nϕ'), unlike the 'NΦ' in the text and Table 10-6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p57-eq30-empty-set",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 57,
+    "old": "{2 \\times \\pi \\times \\frac{L}{N_\\phi} \\times C_{OUT,min} \\times k_{COUT}} \\quad (30)",
+    "new": "{2 \\times \\pi \\times \\frac{L}{N_\\varnothing} \\times C_{OUT,min} \\times k_{COUT}} \\quad (30)",
+    "evidence": "PDF p57 Equation 30 prints the phase count as N with an empty-set sign '∅' as subscript (text layer 'N∅'), unlike the ϕ in Equations 26 and 28; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "#### **10.4.3 Application Curves for Two Stacked Devices**",
+    "new": "#### 10.4.3 Application Curves for Two Stacked Devices",
+    "evidence": "PDF p58: heading in the same italic style as 10.2.3; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-27-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "![Figure 10-27: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 10A and then gradually declines as current increases to 50A.](3881b390d52f27a35faedfc170916c86_img.jpg)\n\nFigure 10-27: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency rises sharply from 0A to about 10A and then gradually declines as current increases to 50A.",
+    "new": "![Figure 10-27: Efficiency vs Output Current, two stacked devices, V_OUT = 0.8V, PWM, T_A = 25°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 50), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly toward 50 A. At light load the lowest input voltage (V_IN= 2.7 V) is the most efficient and V_IN= 6.0 V the least; at high current the order reverses, with V_IN= 2.7 V lowest and the 4.0 V to 6.0 V curves close together on top.](3881b390d52f27a35faedfc170916c86_img.jpg)\n\nFigure 10-27: Efficiency vs Output Current, two stacked devices, V\\_OUT = 0.8V, PWM, T\\_A = 25°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 50), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly toward 50 A. At light load the lowest input voltage (V\\_IN= 2.7 V) is the most efficient and V\\_IN= 6.0 V the least; at high current the order reverses, with V\\_IN= 2.7 V lowest and the 4.0 V to 6.0 V curves close together on top.",
+    "evidence": "PDF p58 Figure 10-27: the AI text gave read-off values ('rises sharply from 0A to about 10A') and no curve order; rewritten from the graph with shapes and order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-29-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "![Figure 10-29: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency is slightly lower than at 25°C, peaking around 90-92% at 10-15A.](ead8d1841c351608343c98f30e5f3f07_img.jpg)\n\nFigure 10-29: Efficiency vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows efficiency (%) on the y-axis (60 to 95) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Efficiency is slightly lower than at 25°C, peaking around 90-92% at 10-15A.",
+    "new": "![Figure 10-29: Efficiency vs Output Current, two stacked devices, V_OUT = 0.8V, PWM, T_A = 85°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 50), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly toward 50 A. At light load the lowest input voltage (V_IN= 2.7 V) is the most efficient and V_IN= 6.0 V the least; at high current the order reverses, with V_IN= 2.7 V lowest and the 4.0 V to 6.0 V curves close together on top.](ead8d1841c351608343c98f30e5f3f07_img.jpg)\n\nFigure 10-29: Efficiency vs Output Current, two stacked devices, V\\_OUT = 0.8V, PWM, T\\_A = 85°C (description written from the graph; read values from the image/PDF). Efficiency (%) on the y-axis (60 to 95) versus Output Current (A) on the x-axis (0 to 50), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves rise steeply at light load, peak and then fall slowly toward 50 A. At light load the lowest input voltage (V\\_IN= 2.7 V) is the most efficient and V\\_IN= 6.0 V the least; at high current the order reverses, with V\\_IN= 2.7 V lowest and the 4.0 V to 6.0 V curves close together on top.",
+    "evidence": "PDF p58 Figure 10-29: the AI text gave read-off values ('peaking around 90-92% at 10-15A') and no curve order; rewritten from the graph with shapes and order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-28-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "![Figure 10-28: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage remains relatively stable around 0.799V across the current range.](2c5884241ad393e03dd8e4ea25ff74a2_img.jpg)\n\nFigure 10-28: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 25°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage remains relatively stable around 0.799V across the current range.",
+    "new": "![Figure 10-28: Output Voltage vs Output Current, two stacked devices, V_OUT = 0.8V, PWM, T_A = 25°C (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 50), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other, just below the 0.8 V grid line, falling slightly toward 50 A; the V_IN= 2.7 V curve falls the most at high current.](2c5884241ad393e03dd8e4ea25ff74a2_img.jpg)\n\nFigure 10-28: Output Voltage vs Output Current, two stacked devices, V\\_OUT = 0.8V, PWM, T\\_A = 25°C (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 50), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other, just below the 0.8 V grid line, falling slightly toward 50 A; the V\\_IN= 2.7 V curve falls the most at high current.",
+    "evidence": "PDF p58 Figure 10-28: the AI text gave a read-off level ('around 0.799V'); rewritten from the graph with shapes and order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-30-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "![Figure 10-30: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage is stable around 0.799V.](fe8672dfa08ec40ce3d9eb6277780260_img.jpg)\n\nFigure 10-30: Output Voltage vs Output Current graph for VOUT = 0.8V, PWM, TA = 85°C. The graph shows output voltage (V) on the y-axis (0.792 to 0.808) versus output current (A) on the x-axis (0 to 50). Five curves are shown for different VIN values: 2.7V (black), 3.3V (red), 4.0V (blue), 5.0V (cyan), and 6.0V (green). Output voltage is stable around 0.799V.",
+    "new": "![Figure 10-30: Output Voltage vs Output Current, two stacked devices, V_OUT = 0.8V, PWM, T_A = 85°C (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 50), five curves V_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other, just below the 0.8 V grid line, falling slightly toward 50 A; the V_IN= 2.7 V curve falls the most at high current.](fe8672dfa08ec40ce3d9eb6277780260_img.jpg)\n\nFigure 10-30: Output Voltage vs Output Current, two stacked devices, V\\_OUT = 0.8V, PWM, T\\_A = 85°C (description written from the graph; read values from the image/PDF). Output Voltage (V) on the y-axis (0.792 to 0.808) versus Output Current (A) on the x-axis (0 to 50), five curves V\\_IN= 2.7 V (black), 3.3 V (red), 4.0 V (dark blue), 5.0 V (cyan) and 6.0 V (green). All curves are nearly flat and lie on top of each other, just below the 0.8 V grid line, falling slightly toward 50 A; the V\\_IN= 2.7 V curve falls the most at high current.",
+    "evidence": "PDF p58 Figure 10-30: the AI text gave a read-off level ('around 0.799V'); rewritten from the graph with shapes and order only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-31-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "![Figure 10-31: Load Transient Response graph for VOUT = 0.75V, PWM; TPS6287B25, droop disabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a small dip during the load increase. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.](79607caa47ed192b11a2c7b17f0b88dd_img.jpg)\n\nFigure 10-31: Load Transient Response graph for VOUT = 0.75V, PWM; TPS6287B25, droop disabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a small dip during the load increase. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.",
+    "new": "![Oscilloscope screenshot for Figure 10-31, Load Transient Response, two stacked devices, V_OUT = 0.75V, PWM; TPS6287B25, droop disabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 load current (dark blue, 10.0 A/div) and channel 2 VOUT (cyan, 20.0mV/div, AC coupled); 40.0µs/div, 25.0MS/s, 10k points, trigger on channel 1 rising edge at 22.8 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2. The load current steps up and later back down; VOUT shows a short undershoot at the rising load step and a short overshoot at the falling step and otherwise stays at the same level (droop disabled).](79607caa47ed192b11a2c7b17f0b88dd_img.jpg)\n\nOscilloscope screenshot for Figure 10-31, Load Transient Response, two stacked devices, V\\_OUT = 0.75V, PWM; TPS6287B25, droop disabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 load current (dark blue, 10.0 A/div) and channel 2 VOUT (cyan, 20.0mV/div, AC coupled); 40.0µs/div, 25.0MS/s, 10k points, trigger on channel 1 rising edge at 22.8 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2. The load current steps up and later back down; VOUT shows a short undershoot at the rising load step and a short overshoot at the falling step and otherwise stays at the same level (droop disabled).",
+    "evidence": "PDF p58 Figure 10-31: the AI text described only a dip at the load increase; the capture shows channel 1 load current at 10.0 A/div and channel 2 VOUT at 20.0mV/div, with an undershoot and an overshoot at the two edges. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-32-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "![Figure 10-32: Load Transient Response graph for VOUT = 0.75V, PWM; TPS628776, droop enabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a more pronounced dip during the load increase compared to Figure 10-31. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.](7c186315a28490783b9bfd6b885caa49_img.jpg)\n\nFigure 10-32: Load Transient Response graph for VOUT = 0.75V, PWM; TPS628776, droop enabled, TA = 25°C. The graph shows two waveforms: a top blue waveform for output current and a bottom green waveform for output voltage. The current is stepped from 13.0A to 37.0A and back to 13.0A. The voltage shows a more pronounced dip during the load increase compared to Figure 10-31. Text below the graph specifies: VIN = 5V, Iout = 13.0A to 37.0A to 13.0A.",
+    "new": "![Oscilloscope screenshot for Figure 10-32, Load Transient Response, two stacked devices, V_OUT = 0.75V, PWM; TPS62876, droop enabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 load current (dark blue, 10.0 A/div) and channel 2 VOUT (cyan, 20.0mV/div, AC coupled); 40.0µs/div, 25.0MS/s, 10k points, trigger on channel 1 rising edge at 22.8 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2. The load current steps up and later back down; VOUT steps down to a lower level while the load current is high and returns when it falls, with short spikes at both edges (droop enabled).](7c186315a28490783b9bfd6b885caa49_img.jpg)\n\nOscilloscope screenshot for Figure 10-32, Load Transient Response, two stacked devices, V\\_OUT = 0.75V, PWM; TPS62876, droop enabled (description written from the screenshot; read values from the image/PDF). Tektronix capture: channel 1 load current (dark blue, 10.0 A/div) and channel 2 VOUT (cyan, 20.0mV/div, AC coupled); 40.0µs/div, 25.0MS/s, 10k points, trigger on channel 1 rising edge at 22.8 A. A measurement table lists Peak-Peak, Max and Min of channel 1 and Peak-Peak of channel 2. The load current steps up and later back down; VOUT steps down to a lower level while the load current is high and returns when it falls, with short spikes at both edges (droop enabled).",
+    "evidence": "PDF p58 Figure 10-32: the AI text called the device TPS628776 (printed: TPS62876) and described only a dip at the load increase; the capture shows channel 1 load current at 10.0 A/div and channel 2 VOUT at 20.0mV/div, with VOUT stepping down during the high-current phase. Rewritten from the screenshot.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-27-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "\n\n**Figure 10-27. Efficiency vs Output Current**",
+    "new": "\n\nV<sub>OUT</sub> = 0.8V      PWM      T<sub>A</sub> = 25°C\n\n**Figure 10-27. Efficiency vs Output Current**",
+    "evidence": "PDF p58 Figure 10-27: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-28-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "\n\n**Figure 10-28. Output Voltage vs Output Current**",
+    "new": "\n\nV<sub>OUT</sub> = 0.8V      PWM      T<sub>A</sub> = 25°C\n\n**Figure 10-28. Output Voltage vs Output Current**",
+    "evidence": "PDF p58 Figure 10-28: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-29-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "\n\n**Figure 10-29. Efficiency vs Output Current**",
+    "new": "\n\nV<sub>OUT</sub> = 0.8V      PWM      T<sub>A</sub> = 85°C\n\n**Figure 10-29. Efficiency vs Output Current**",
+    "evidence": "PDF p58 Figure 10-29: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-30-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "\n\n**Figure 10-30. Output Voltage vs Output Current**",
+    "new": "\n\nV<sub>OUT</sub> = 0.8V      PWM      T<sub>A</sub> = 85°C\n\n**Figure 10-30. Output Voltage vs Output Current**",
+    "evidence": "PDF p58 Figure 10-30: the printed test conditions under the graph were missing; added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-31-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "\n\n**Figure 10-31. Load Transient Response**",
+    "new": "\n\nV<sub>OUT</sub> = 0.75V      PWM; TPS6287B25      T<sub>A</sub> = 25°C  \ndroop disabled  \nV<sub>IN</sub> = 5V      Iout = 13.0A to 37.0A to 13.0A\n\n**Figure 10-31. Load Transient Response**",
+    "evidence": "PDF p58 Figure 10-31: the printed test conditions under the graph were missing; added as printed (Iout in plain text).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p58-fig10-32-conditions",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 58,
+    "old": "\n\n**Figure 10-32. Load Transient Response**",
+    "new": "\n\nV<sub>OUT</sub> = 0.75V      PWM; TPS62876      T<sub>A</sub> = 25°C  \ndroop enabled  \nV<sub>IN</sub> = 5V      Iout = 13.0A to 37.0A to 13.0A\n\n**Figure 10-32. Load Transient Response**",
+    "evidence": "PDF p58 Figure 10-32: the printed test conditions under the graph were missing; added as printed (Iout in plain text, device printed TPS62876).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
