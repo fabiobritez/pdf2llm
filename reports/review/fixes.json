@@ -5190,5 +5190,223 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ina190-p20-fig39-ref-gnd-enable-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 20,
+    "old": "The REF pin is connected to the ADC reference input. The supply voltage (VS) is connected to a 0.1 µF capacitor. The ground (GND) is connected to the ADC ground. The ENABLE pin is shown with a switch symbol, indicating it can be controlled externally or connected to VS.]",
+    "new": "The REF pin is drawn connected to ground (the note below the figure recommends connecting REF to the ADC reference input). The supply voltage (VS, 1.7 V to 5.5 V) has a 0.1 µF bypass capacitor to ground. The GND pin is connected to ground. The ENABLE pin is driven by a digital pulse symbol. Bias currents of 0.5 nA (typ) are shown flowing into IN+ and IN-.]",
+    "evidence": "AI figure description contradicted PDF p20 Figure 39 (render): REF is wired to a ground symbol, GND to a ground symbol (no ADC ground wire), ENABLE has a pulse symbol, not a switch; the '0.5 nA (typ)' labels were omitted.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p20-fig39-ref-gnd-enable-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 20,
+    "old": "The diagram illustrates the basic connections for the INA190. The device is connected to a current sense resistor (R<sub>SENSE</sub>) and a load. The input pins (IN+ and IN-) are connected to the sense resistor. The output (OUT) is connected to an ADC, which is then connected to a Microcontroller. The REF pin is connected to the ADC reference input. The supply voltage (VS) is connected to a 0.1 µF capacitor. The ground (GND) is connected to the ADC ground. The ENABLE pin is shown with a switch symbol, indicating it can be controlled externally or connected to VS.\n",
+    "new": "The diagram illustrates the basic connections for the INA190. The device is connected to a current sense resistor (R<sub>SENSE</sub>) and a load. The input pins (IN+ and IN-) are connected to the sense resistor. The output (OUT) is connected to an ADC, which is then connected to a Microcontroller. The REF pin is drawn connected to ground (the note below the figure recommends connecting REF to the ADC reference input). The supply voltage (VS, 1.7 V to 5.5 V) has a 0.1 µF bypass capacitor to ground. The GND pin is connected to ground. The ENABLE pin is driven by a digital pulse symbol. Bias currents of 0.5 nA (typ) are shown flowing into IN+ and IN-.\n",
+    "evidence": "AI figure description contradicted PDF p20 Figure 39 (render): REF is wired to a ground symbol, GND to a ground symbol (no ADC ground wire), ENABLE has a pulse symbol, not a switch; the '0.5 nA (typ)' labels were omitted. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p20-fig39-ref-gnd-enable-desc2",
+    "file": "output/ina190/ina190.md",
+    "page": 20,
+    "old": "\nFigure 39: Basic Connections for the INA190. The diagram shows the INA190 IC connected to a current sense resistor (RSENSE) and a load. The input pins (IN+ and IN-) are connected to the sense resistor. The output (OUT) is connected to an ADC, which is then connected to a Microcontroller. The REF pin is connected to the ADC reference input. The supply voltage (VS) is connected to a 0.1 µF capacitor. The ground (GND) is connected to the ADC ground. The ENABLE pin is shown with a switch symbol, indicating it can be controlled externally or connected to VS.\n",
+    "new": "\nFigure 39: Basic Connections for the INA190. The diagram shows the INA190 IC connected to a current sense resistor (RSENSE) and a load. The input pins (IN+ and IN-) are connected to the sense resistor. The output (OUT) is connected to an ADC, which is then connected to a Microcontroller. The REF pin is drawn connected to ground (the note below the figure recommends connecting REF to the ADC reference input). The supply voltage (VS, 1.7 V to 5.5 V) has a 0.1 µF bypass capacitor to ground. The GND pin is connected to ground. The ENABLE pin is driven by a digital pulse symbol. Bias currents of 0.5 nA (typ) are shown flowing into IN+ and IN-.\n",
+    "evidence": "AI figure description contradicted PDF p20 Figure 39 (render): REF is wired to a ground symbol, GND to a ground symbol (no ADC ground wire), ENABLE has a pulse symbol, not a switch; the '0.5 nA (typ)' labels were omitted. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p20-kelvin-connections-if-as-printed",
+    "file": "output/ina190/ina190.md",
+    "page": 20,
+    "old": "through kelvin connections. If present,",
+    "new": "through kelvin connections.If present,",
+    "evidence": "PDF p20 words: 'connections.If' is a single word (no space glyph) in 8.1.1 Basic Connections; kept as printed.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p22-fig40-filter-connections-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 22,
+    "old": "The input pins (IN- and IN+) are connected to the nodes between R sense and the load. A differential filter is implemented at the input pins using two feedback resistors (R F) and a shunt capacitor (C F). The formula for the 3dB bandwidth is given as f_3dB = 1 / (4 * pi * R_F * C_F). The INA190 is powered by a supply voltage (V_S) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C BYPASS) of 0.1 uF. The output (V OUT) is taken from the output pin, and the reference (REF) is connected to ground. The device is labeled 'Capacitively Coupled Amplifier' and 'INA190'.]",
+    "new": "IN+ is connected through a series resistor (R F) to the bus side of R sense, and IN- through a second R F to the load side. A differential filter is implemented at the input pins using the two series resistors (R F) and a capacitor (C F) across IN+ and IN-. The differential input impedance R DIFF is drawn between IN- and IN+ inside the capacitively coupled amplifier. The formula for the 3dB bandwidth is given as f_3dB = 1 / (4 * pi * R_F * C_F). The INA190 is powered by a supply voltage (V_S) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C BYPASS) of 0.1 uF. The output (V OUT) is taken from the output pin, and the reference (REF) is connected to ground. The device is labeled 'Capacitively Coupled Amplifier' and 'INA190'.]",
+    "evidence": "AI figure description contradicted PDF p22 Figure 40 (render): each input goes through its own series R_F to opposite ends of R_SENSE (IN+ bus side, IN- load side), not both to the R_SENSE/load node; the resistors are series filter resistors, not feedback resistors; R_DIFF (referred to in the text) was omitted.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p22-fig40-filter-connections-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 22,
+    "old": "The input pins (IN- and IN+) are connected to the nodes between R sense and the load. A differential filter is implemented at the input pins using two feedback resistors (R F) and a shunt capacitor (C F). The formula for the 3dB bandwidth is given as f\\_3dB = 1 / (4 \\* pi \\* R\\_F \\* C\\_F). The INA190 is powered by a supply voltage (V\\_S) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C BYPASS) of 0.1 uF. The output (V OUT) is taken from the output pin, and the reference (REF) is connected to ground. The device is labeled 'Capacitively Coupled Amplifier' and 'INA190'.\n",
+    "new": "IN+ is connected through a series resistor (R F) to the bus side of R sense, and IN- through a second R F to the load side. A differential filter is implemented at the input pins using the two series resistors (R F) and a capacitor (C F) across IN+ and IN-. The differential input impedance R DIFF is drawn between IN- and IN+ inside the capacitively coupled amplifier. The formula for the 3dB bandwidth is given as f\\_3dB = 1 / (4 \\* pi \\* R\\_F \\* C\\_F). The INA190 is powered by a supply voltage (V\\_S) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C BYPASS) of 0.1 uF. The output (V OUT) is taken from the output pin, and the reference (REF) is connected to ground. The device is labeled 'Capacitively Coupled Amplifier' and 'INA190'.\n",
+    "evidence": "AI figure description contradicted PDF p22 Figure 40 (render): each input goes through its own series R_F to opposite ends of R_SENSE (IN+ bus side, IN- load side), not both to the R_SENSE/load node; the resistors are series filter resistors, not feedback resistors; R_DIFF (referred to in the text) was omitted. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p24-fig42-bypass-enable-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 24,
+    "old": "has a bypass capacitor CBYPASS (0.1 μF) connected to its ENABLE pin. The output is taken from the OUT pin, and the reference is connected to GND.]",
+    "new": "has a bypass capacitor CBYPASS (0.1 μF) from the VS node to ground; ENABLE is tied to VS. The output is taken from the OUT pin, and the reference is connected to GND.]",
+    "evidence": "AI figure description contradicted PDF p24 Figure 42 (render): C_BYPASS goes from the VS supply node to ground; ENABLE is wired to the same VS node, not to the capacitor alone.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p24-fig42-bypass-enable-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 24,
+    "old": "has a bypass capacitor CBYPASS (0.1 μF) connected to its ENABLE pin. The output is taken from the OUT pin, and the reference is connected to GND.\n",
+    "new": "has a bypass capacitor CBYPASS (0.1 μF) from the VS node to ground; ENABLE is tied to VS. The output is taken from the OUT pin, and the reference is connected to GND.\n",
+    "evidence": "AI figure description contradicted PDF p24 Figure 42 (render): C_BYPASS goes from the VS supply node to ground; ENABLE is wired to the same VS node, not to the capacitor alone. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p24-fig43-bypass-enable-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 24,
+    "old": "a 0.1 μF bypass capacitor CBYPASS is connected to the ENABLE pin. The output and reference connections are the same as in Figure 42.]",
+    "new": "a 0.1 μF bypass capacitor CBYPASS is connected from the VS node to ground; ENABLE is tied to VS. The transzorb is labeled 'Transorb' in the drawing. The output and reference connections are the same as in Figure 42.]",
+    "evidence": "AI figure description contradicted PDF p24 Figure 43 (render): C_BYPASS goes from the VS node to ground and ENABLE is tied to VS. The drawing label is printed 'Transorb' (PDF words), unlike 'transzorb' in the text.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p24-fig43-bypass-enable-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 24,
+    "old": "a 0.1 μF bypass capacitor CBYPASS is connected to the ENABLE pin. The output and reference connections are the same as in Figure 42.\n",
+    "new": "a 0.1 μF bypass capacitor CBYPASS is connected from the VS node to ground; ENABLE is tied to VS. The transzorb is labeled 'Transorb' in the drawing. The output and reference connections are the same as in Figure 42.\n",
+    "evidence": "AI figure description contradicted PDF p24 Figure 43 (render): C_BYPASS goes from the VS node to ground and ENABLE is tied to VS. The drawing label is printed 'Transorb' (PDF words), unlike 'transzorb' in the text. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p27-fig46-rf-series-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 27,
+    "old": "This network includes a filter capacitor 'C_F' and two feedback resistors 'R_F' in parallel. A note states: 'Note: R_F and C_F are optional in low noise/ripple environments'. The differential input is connected to a shunt resistor 'RSHUNT' which is placed between two large vertical grey bars representing current leads. Pin 6 (OUT) is the 'Current Sense Output'.]",
+    "new": "This network includes a filter capacitor 'C_F' across the inputs and two series resistors 'R_F', one in each input trace. A note states: 'Note: R_F and C_F are optional in low noise/ripple environments'. The differential input is connected to a shunt resistor 'RSHUNT' which is placed between two large vertical grey bars representing current leads. Pin 6 (OUT) is the 'Current Sense Output'.]",
+    "evidence": "AI figure description: PDF p27 Figure 46 (render) shows each R_F in series between R_SHUNT and IN-/IN+ with C_F across the two traces (the input filter of Figure 40); they are not feedback resistors in parallel.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p27-fig46-rf-series-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 27,
+    "old": "This network includes a filter capacitor 'C\\_F' and two feedback resistors 'R\\_F' in parallel. A note states: 'Note: R\\_F and C\\_F are optional in low noise/ripple environments'. The differential input is connected to a shunt resistor 'RSHUNT' which is placed between two large vertical grey bars representing current leads. Pin 6 (OUT) is the 'Current Sense Output'.\n",
+    "new": "This network includes a filter capacitor 'C\\_F' across the inputs and two series resistors 'R\\_F', one in each input trace. A note states: 'Note: R\\_F and C\\_F are optional in low noise/ripple environments'. The differential input is connected to a shunt resistor 'RSHUNT' which is placed between two large vertical grey bars representing current leads. Pin 6 (OUT) is the 'Current Sense Output'.\n",
+    "evidence": "AI figure description: PDF p27 Figure 46 (render) shows each R_F in series between R_SHUNT and IN-/IN+ with C_F across the two traces (the input filter of Figure 40); they are not feedback resistors in parallel. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p28-fig47-connections-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 28,
+    "old": "Pin 1 is connected to a supply voltage (1.7 V to 5.5 V) through a bypass capacitor CBYPASS. Pin 2 is connected to the supply voltage if not used. Pin 3 is connected to GND, with a note to connect REF to GND for unidirectional measurement or to an external reference for bidirectional measurement. Pin 4 is connected to GND via a via to the ground plane. Pin 5 is the current sense output. Pins 7 and 8 are the inputs. A feedback network consisting of a feedback capacitor CF and two feedback resistors RF is connected between the inputs. A note indicates that RF and CF are optional in low noise/ripple environments. The inputs are connected to a shunt resistor RSHUNT, which is connected to a large capacitor.]",
+    "new": "Pin 1 is connected to a supply voltage (1.7 V to 5.5 V), with a bypass capacitor CBYPASS from VS to GND. Pin 2 (ENABLE) is labeled 'Connect to VS if not used'. Pin 3 (REF) is routed out with a note to connect REF to GND for unidirectional measurement or to an external reference for bidirectional measurement. Pin 4 is connected to GND via a via to the ground plane. Pin 5 is the current sense output. Pins 7 and 8 are the inputs. An input filter consisting of a capacitor CF across the inputs and two series resistors RF is placed between the inputs and the shunt. A note indicates that RF and CF are optional in low noise/ripple environments. The inputs are Kelvin-connected to a shunt resistor RSHUNT between two large current-carrying copper leads.]",
+    "evidence": "AI figure description contradicted PDF p28 Figure 47 (render): C_BYPASS sits between the VS and GND traces (not in series with the supply); REF is routed to the 'Connect REF to GND ...' note, not drawn to GND; R_F/C_F form the series input filter, not a feedback network; R_SHUNT sits between two large grey copper leads, there is no large capacitor.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p28-fig47-connections-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 28,
+    "old": "Pin 1 is connected to a supply voltage (1.7 V to 5.5 V) through a bypass capacitor CBYPASS. Pin 2 is connected to the supply voltage if not used. Pin 3 is connected to GND, with a note to connect REF to GND for unidirectional measurement or to an external reference for bidirectional measurement. Pin 4 is connected to GND via a via to the ground plane. Pin 5 is the current sense output. Pins 7 and 8 are the inputs. A feedback network consisting of a feedback capacitor CF and two feedback resistors RF is connected between the inputs. A note indicates that RF and CF are optional in low noise/ripple environments. The inputs are connected to a shunt resistor RSHUNT, which is connected to a large capacitor.\n",
+    "new": "Pin 1 is connected to a supply voltage (1.7 V to 5.5 V), with a bypass capacitor CBYPASS from VS to GND. Pin 2 (ENABLE) is labeled 'Connect to VS if not used'. Pin 3 (REF) is routed out with a note to connect REF to GND for unidirectional measurement or to an external reference for bidirectional measurement. Pin 4 is connected to GND via a via to the ground plane. Pin 5 is the current sense output. Pins 7 and 8 are the inputs. An input filter consisting of a capacitor CF across the inputs and two series resistors RF is placed between the inputs and the shunt. A note indicates that RF and CF are optional in low noise/ripple environments. The inputs are Kelvin-connected to a shunt resistor RSHUNT between two large current-carrying copper leads.\n",
+    "evidence": "AI figure description contradicted PDF p28 Figure 47 (render): C_BYPASS sits between the VS and GND traces (not in series with the supply); REF is routed to the 'Connect REF to GND ...' note, not drawn to GND; R_F/C_F form the series input filter, not a feedback network; R_SHUNT sits between two large grey copper leads, there is no large capacitor. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p29-fig48-filter-network-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 29,
+    "old": "Below this, a feedback network is enclosed in a dashed box, containing two feedback resistors  $R_F$  and a feedback capacitor  $C_F$ . A note indicates: \"Note:  $R_F$  and  $C_F$  are optional in low noise/ripple environments\". The UQFN package is shown with pins numbered 1 through 10. Pin 5 is NC, Pin 4 is IN-, Pin 3 is IN+, Pin 2 is NC, Pin 1 is NC, Pin 8 is REF, Pin 9 is GND, and Pin 10 is OUT. Pin 6 is VS, connected to a bypass capacitor  $C_{BYPASS}$  and a supply line labeled \"Connect to Supply (1.7 V to 5.5 V)\". Pin 7 is ENABLE, connected to a control line labeled \"Connect to Control or VS (Do Not Float)\". The REF pin (8) is connected to a \"VIA to Ground Plane\" and a note states: \"Connect REF to GND for Unidirectional Measurement or to External Reference for Bidirectional Measurement\". The GND pin (9) is connected to the ground plane. The OUT pin (10) is connected to the \"Current Sense Output\".\n",
+    "new": "Below this, an input filter network is enclosed in a dashed box, containing two series resistors  $R_F$  and a filter capacitor  $C_F$  across the inputs. A note indicates: \"Note:  $R_F$  and  $C_F$  are optional in low noise/ripple environments\". The UQFN package is shown with pins numbered 1 through 10. Pin 5 is NC, Pin 4 is IN-, Pin 3 is IN+, Pin 2 is NC, Pin 1 is NC, Pin 8 is REF, Pin 9 is GND, and Pin 10 is OUT. Pin 6 is VS, connected to a bypass capacitor  $C_{BYPASS}$  and a supply line labeled \"Connect to Supply (1.7 V to 5.5 V)\". Pin 7 is ENABLE, connected to a control line labeled \"Connect to Control or VS (Do Not Float)\". The REF pin (8) is connected to a \"VIA to Ground Plane\" and a note states: \"Connect REF to GND for Unidirectional Measurement or to External Reference for Bidirectional Measurement\". The GND pin (9) is connected to the ground plane. The OUT pin (10) is connected to the \"Current Sense Output\".\n",
+    "evidence": "AI figure description: in PDF p29 Figure 48 (render) the dashed box holds the series R_F resistors from R_SHUNT to IN-/IN+ and C_F across the two traces (input filter), not a feedback network. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p29-fig48-alt-filter-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 29,
+    "old": "showing connections for shunt resistor, feedback network, bypass capacitor, and ground plane.]",
+    "new": "showing connections for shunt resistor, input filter network, bypass capacitor, and ground plane.]",
+    "evidence": "AI figure description: PDF p29 Figure 48 shows an input RC filter (R_F, C_F), not a feedback network.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p29-fig48-alt-filter-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 29,
+    "old": "showing connections for shunt resistor, feedback network, bypass capacitor, and ground plane.\n",
+    "new": "showing connections for shunt resistor, input filter network, bypass capacitor, and ground plane.\n",
+    "evidence": "AI figure description: PDF p29 Figure 48 shows an input RC filter (R_F, C_F), not a feedback network. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p28-fig47-labels-rf-count",
+    "file": "output/ina190/ina190.md",
+    "page": 28,
+    "old": "$C_F$\n\n$R_F$\n\n$R_F$\n\n$R_F$\n\n$R_{SHUNT}$",
+    "new": "$C_F$\n\n$R_F$\n\nIN+\n\n$R_F$\n\n$R_{SHUNT}$",
+    "evidence": "PDF p28 Figure 47 label text (PyMuPDF/pdftotext): R_F is printed twice and a stray 'IN+' label sits under C_F; the md label list had R_F three times and no second IN+.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
