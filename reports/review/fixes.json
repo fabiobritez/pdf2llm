@@ -18097,5 +18097,278 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p51-mfr-iin-cal-gain-tc-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 51,
+    "old": "MFR\\_IIN\\_CAL\\_GAIN for details on proper usage.\n\n#### MFR\\_IOUT\\_CAL\\_GAIN\\_TC Data Contents\n",
+    "new": "MFR\\_IIN\\_CAL\\_GAIN for details on proper usage.\n\n**MFR\\_IOUT\\_CAL\\_GAIN\\_TC Data Contents**\n",
+    "evidence": "PDF p51 (PyMuPDF spans + render): 'MFR_IOUT_CAL_GAIN_TC Data Contents' is a 9.7pt bold table caption, written as a bold paragraph. The PDF prints IOUT here although the table is for MFR_IIN_CAL_GAIN_TC (manufacturer typo, kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p51-mfr-clear-energy-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 51,
+    "old": "\n### MFR\\_CLEAR\\_ENERGY\n",
+    "new": "\n#### MFR\\_CLEAR\\_ENERGY\n",
+    "evidence": "PDF p51 (PyMuPDF spans + render): 'MFR_CLEAR_ENERGY' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '###' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-vout-mode-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "\n### *VOUT\\_MODE*\n",
+    "new": "\n#### VOUT\\_MODE\n",
+    "evidence": "PDF p52 (PyMuPDF spans + render): 'VOUT_MODE' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '###' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-vout-mode-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "\n#### **VOUT\\_MODE Data Contents**\n",
+    "new": "\n**VOUT\\_MODE Data Contents**\n",
+    "evidence": "PDF p52 (PyMuPDF spans + render): 'VOUT_MODE Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-vout-limits-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "\n#### ***VOUT\\_COMMAND, VOUT\\_MAX, VOUT\\_MARGIN\\_HIGH, VOUT\\_MARGIN\\_LOW, VOUT\\_OV\\_FAULT\\_LIMIT, VOUT\\_OV\\_WARN\\_LIMIT, VOUT\\_UV\\_WARN\\_LIMIT, VOUT\\_UV\\_FAULT\\_LIMIT, POWER\\_GOOD\\_ON and POWER\\_GOOD\\_OFF***\n",
+    "new": "\n#### VOUT\\_COMMAND, VOUT\\_MAX, VOUT\\_MARGIN\\_HIGH, VOUT\\_MARGIN\\_LOW, VOUT\\_OV\\_FAULT\\_LIMIT, VOUT\\_OV\\_WARN\\_LIMIT, VOUT\\_UV\\_WARN\\_LIMIT, VOUT\\_UV\\_FAULT\\_LIMIT, POWER\\_GOOD\\_ON and POWER\\_GOOD\\_OFF\n",
+    "evidence": "PDF p52 (PyMuPDF spans + render): 'VOUT_COMMAND, VOUT_MAX, VOUT_MARGIN_HIGH, VOUT_MARGIN_LOW, VOUT_OV_FAULT_LIMIT, VOUT_OV_WARN_LIMIT, VOUT_UV_WARN_LIMIT, VOUT_UV_FAULT_LIMIT, POWER_GOOD_ON and POWER_GOOD_OFF' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-mfr-vout-discharge-threshold-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "\n#### ***MFR\\_VOUT\\_DISCHARGE\\_THRESHOLD***\n",
+    "new": "\n#### MFR\\_VOUT\\_DISCHARGE\\_THRESHOLD\n",
+    "evidence": "PDF p52 (PyMuPDF spans + render): 'MFR_VOUT_DISCHARGE_THRESHOLD' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-faultbn-not-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "bidirectional FAULTB<sub>n</sub> pins (refer to the MFR\\_FAULTB<sub>n</sub>\\_RESPONSE and MFR\\_FAULTB<sub>n</sub>\\_PROPOGATE registers)",
+    "new": "bidirectional FAULTBn pins (refer to the MFR\\_FAULTBn\\_RESPONSE and MFR\\_FAULTBn\\_PROPOGATE registers)",
+    "evidence": "PDF p52 (render at 250 dpi + PyMuPDF spans: one span, same size and baseline): the 'n' in FAULTBn, MFR_FAULTBn_RESPONSE and MFR_FAULTBn_PROPOGATE is an italic letter on the baseline, not a subscript; written FAULTBn as elsewhere in the md. 'PROPOGATE' is printed so.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-mfr-dac-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "\n#### ***MFR\\_DAC***\n",
+    "new": "\n#### MFR\\_DAC\n",
+    "evidence": "PDF p52 (PyMuPDF spans + render): 'MFR_DAC' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-on-state-ton-rise-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "to be in the ON state, TON\\_RISE to have expired",
+    "new": "to be in the ON state,TON\\_RISE to have expired",
+    "evidence": "PDF p52 (render at 300 dpi + PyMuPDF word 'state,TON_RISE'): printed without a space after the comma; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p52-mfr-dac-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 52,
+    "old": "\n#### **MFR\\_DAC Data Contents**\n",
+    "new": "\n**MFR\\_DAC Data Contents**\n",
+    "evidence": "PDF p52 (PyMuPDF spans + render): 'MFR_DAC Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p53-iout-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 53,
+    "old": "\nIOUT supervisor fault and warning limits.\n",
+    "new": "\nI<sub>OUT</sub> supervisor fault and warning limits.\n",
+    "evidence": "PDF p53 (render + PyMuPDF spans: 'OUT' in a smaller span below the baseline): 'I_OUT supervisor fault and warning limits.' has OUT as a subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p54-mfr-iout-cal-gain-tc-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 54,
+    "old": "\n#### MFR\\_IOUT\\_CAL\\_GAIN\\_TC Data Contents\n",
+    "new": "\n**MFR\\_IOUT\\_CAL\\_GAIN\\_TC Data Contents**\n",
+    "evidence": "PDF p54 (PyMuPDF spans + render): 'MFR_IOUT_CAL_GAIN_TC Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p55-ot-ut-limits-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "\n#### *OT\\_FAULT\\_LIMIT, OT\\_WARN\\_LIMIT, UT\\_WARN\\_LIMIT and UT\\_FAULT\\_LIMIT*\n",
+    "new": "\n#### OT\\_FAULT\\_LIMIT, OT\\_WARN\\_LIMIT, UT\\_WARN\\_LIMIT and UT\\_FAULT\\_LIMIT\n",
+    "evidence": "PDF p55 (PyMuPDF spans + render): 'OT_FAULT_LIMIT, OT_WARN_LIMIT, UT_WARN_LIMIT and UT_FAULT_LIMIT' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p55-mfr-temp-1-gain-offset-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "\n#### *MFR\\_TEMP\\_1\\_GAIN and MFR\\_TEMP\\_1\\_OFFSET*\n",
+    "new": "\n#### MFR\\_TEMP\\_1\\_GAIN and MFR\\_TEMP\\_1\\_OFFSET\n",
+    "evidence": "PDF p55 (PyMuPDF spans + render): 'MFR_TEMP_1_GAIN and MFR_TEMP_1_OFFSET' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p55-mfr-temp-1-gain-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "\n##### MFR\\_TEMP\\_1\\_GAIN Data Contents\n",
+    "new": "\n**MFR\\_TEMP\\_1\\_GAIN Data Contents**\n",
+    "evidence": "PDF p55 (PyMuPDF spans + render): 'MFR_TEMP_1_GAIN Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p55-self-heat-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "\n#### *MFR\\_T\\_SELF\\_HEAT, MFR\\_IOUT\\_CAL\\_GAIN\\_TAU\\_INV and MFR\\_IOUT\\_CAL\\_GAIN\\_THETA*\n",
+    "new": "\n#### MFR\\_T\\_SELF\\_HEAT, MFR\\_IOUT\\_CAL\\_GAIN\\_TAU\\_INV and MFR\\_IOUT\\_CAL\\_GAIN\\_THETA\n",
+    "evidence": "PDF p55 (PyMuPDF spans + render): 'MFR_T_SELF_HEAT, MFR_IOUT_CAL_GAIN_TAU_INV and MFR_IOUT_CAL_GAIN_THETA' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p55-fig21-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "![Circuit diagram showing an inductor temperature model. A current source I = P1 is connected in parallel with a capacitor C = Cτ and a resistor R = θIS. The voltage across the capacitor is labeled V1 = T1, and the voltage across the resistor is labeled VS = TS.](",
+    "new": "![Circuit diagram of the inductor temperature model (description written from the PDF drawing). A current source labeled I = P_I hangs from a supply rail at the top, its arrow pointing down, and drives the top node labeled V_I = T_I (subscript letter I, not 1). A capacitor C = C_τ and a resistor R = θ_IS are connected in parallel between that node and the bottom node labeled V_S = T_S, which is tied to ground.](",
+    "evidence": "PDF p55 Figure 21 (render at 250 dpi + PyMuPDF spans 'I = P_I', 'V_I = T_I', 'C = C_τ', 'R = θ_IS', 'V_S = T_S'): the labels use the letter I as subscript (P_I, V_I, T_I), not 1; the current source feeds the top node and is not in parallel with C and R; V_I = T_I and V_S = T_S are node labels (top node and grounded bottom node), not the voltages across the capacitor and the resistor.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p55-fig21-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": ")\n\nCircuit diagram showing an inductor temperature model. A current source I = P1 is connected in parallel with a capacitor C = Cτ and a resistor R = θIS. The voltage across the capacitor is labeled V1 = T1, and the voltage across the resistor is labeled VS = TS.\n",
+    "new": ")\n\nCircuit diagram of the inductor temperature model (description written from the PDF drawing). A current source labeled I = P_I hangs from a supply rail at the top, its arrow pointing down, and drives the top node labeled V_I = T_I (subscript letter I, not 1). A capacitor C = C_τ and a resistor R = θ_IS are connected in parallel between that node and the bottom node labeled V_S = T_S, which is tied to ground.\n",
+    "evidence": "Same as ltc2975-p55-fig21-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p55-fig21-legend-pi",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "- $P_1$  = CURRENT REPRESENTING",
+    "new": "- $P_I$  = CURRENT REPRESENTING",
+    "evidence": "PDF p55 Figure 21 legend (render + PyMuPDF span 'P_I' with subscript letter I): 'P_I =', not P_1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p55-fig21-legend-ti",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "- $T_1$  = VOLTAGE REPRESENTING THE TEMPERATURE OF THE INDUCTOR",
+    "new": "- $T_I$  = VOLTAGE REPRESENTING THE TEMPERATURE OF THE INDUCTOR",
+    "evidence": "PDF p55 Figure 21 legend (render + PyMuPDF span 'T_I' with subscript letter I): 'T_I =', not T_1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p55-fig21-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 55,
+    "old": "\nFigure 21. Electronic Analogy for Inductor Temperature Model\n",
+    "new": "\n**Figure 21. Electronic Analogy for Inductor Temperature Model**\n",
+    "evidence": "PDF p55 (PyMuPDF spans + render): the Figure 21 caption is LinearHelvCond-Bold 9.7pt; written as a bold paragraph like the other figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
