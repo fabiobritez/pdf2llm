@@ -8218,5 +8218,408 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-title-missing",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "{0}------------------------------------------------\n\n# 5V, 15A",
+    "new": "{0}------------------------------------------------\n\n# LTC3313\n\n# 5V, 15A",
+    "evidence": "PDF p1 header prints the part number 'LTC3313' above the subtitle (pdftotext + render); the md started at the subtitle.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p1-ltc-not-bold",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "The **LTC®3313** is",
+    "new": "The LTC®3313 is",
+    "evidence": "PDF p1 prints 'LTC®3313' in the body font as a blue link, not bold (render, PyMuPDF spans).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-ta01a-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "![Typical Application circuit diagram for the LTC3313. The diagram shows an 18-pin LQFN package with various pins connected to external components. The input voltage is 3V to 5.5V, connected to VIN and EN pins. The output is 1.2V, 15A, connected to SW and FB pins. The circuit includes an 80nH inductor, a 6.8pF capacitor, a 140k resistor, a 47μF capacitor, a 100k resistor, a 274k resistor, a 15k resistor, and a 470pF capacitor. The diagram is labeled 3313 TA01a.](",
+    "new": "![Typical Application circuit diagram for the LTC3313. The input V<sub>IN</sub> = 3V TO 5.5V is decoupled by 22μF, 0.1μF, 0.1μF and 22μF capacitors to ground and is connected to the V<sub>IN</sub> and EN pins. SW drives an 80nH inductor to the output V<sub>OUT</sub> = 1.2V, 15A, which has 47μF ×3 output capacitors. FB connects to a 140k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 140k resistor; a 1μF capacitor connects V<sub>IN</sub> to AGND. MODE/SYNC is drawn with an arrow to a clock waveform and PGOOD with an output arrow. SSTT has a 0.1μF capacitor to ground, ITH a 15k resistor in series with 470pF to ground, and RT a 274k resistor to ground; PGND goes to ground.](",
+    "evidence": "PDF p1 TA01a schematic (render, 300 dpi crop): the AI description invented an '18-pin LQFN package' drawing, said the output was connected to SW and FB (FB goes to the 140k/100k divider), listed a single 47µF capacitor (PDF: 47µF ×3), and omitted the 22µF/0.1µF input capacitors, the 1µF V_IN-AGND capacitor, the 0.1µF SSTT capacitor and which pins the 15k/470pF and 274k parts connect to. '3313 TA01a' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-ta01a-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "\nTypical Application circuit diagram for the LTC3313. The diagram shows an 18-pin LQFN package with various pins connected to external components. The input voltage is 3V to 5.5V, connected to VIN and EN pins. The output is 1.2V, 15A, connected to SW and FB pins. The circuit includes an 80nH inductor, a 6.8pF capacitor, a 140k resistor, a 47μF capacitor, a 100k resistor, a 274k resistor, a 15k resistor, and a 470pF capacitor. The diagram is labeled 3313 TA01a.\n",
+    "new": "\nTypical Application circuit diagram for the LTC3313. The input V<sub>IN</sub> = 3V TO 5.5V is decoupled by 22μF, 0.1μF, 0.1μF and 22μF capacitors to ground and is connected to the V<sub>IN</sub> and EN pins. SW drives an 80nH inductor to the output V<sub>OUT</sub> = 1.2V, 15A, which has 47μF ×3 output capacitors. FB connects to a 140k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 140k resistor; a 1μF capacitor connects V<sub>IN</sub> to AGND. MODE/SYNC is drawn with an arrow to a clock waveform and PGOOD with an output arrow. SSTT has a 0.1μF capacitor to ground, ITH a 15k resistor in series with 470pF to ground, and RT a 274k resistor to ground; PGND goes to ground.\n",
+    "evidence": "PDF p1 TA01a schematic (render, 300 dpi crop): the AI description invented an '18-pin LQFN package' drawing, said the output was connected to SW and FB (FB goes to the 140k/100k divider), listed a single 47µF capacitor (PDF: 47µF ×3), and omitted the 22µF/0.1µF input capacitors, the 1µF V_IN-AGND capacitor, the 0.1µF SSTT capacitor and which pins the 15k/470pF and 274k parts connect to. '3313 TA01a' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-ta01a-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "Typical Application circuit diagram for the LTC3313. The input V<sub>IN</sub> = 3V TO 5.5V is decoupled by 22μF, 0.1μF, 0.1μF and 22μF capacitors to ground and is connected to the V<sub>IN</sub> and EN pins. SW drives an 80nH inductor to the output V<sub>OUT</sub> = 1.2V, 15A, which has 47μF ×3 output capacitors. FB connects to a 140k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 140k resistor; a 1μF capacitor connects V<sub>IN</sub> to AGND. MODE/SYNC is drawn with an arrow to a clock waveform and PGOOD with an output arrow. SSTT has a 0.1μF capacitor to ground, ITH a 15k resistor in series with 470pF to ground, and RT a 274k resistor to ground; PGND goes to ground.\n\n![Efficiency vs Load Current graph.",
+    "new": "Typical Application circuit diagram for the LTC3313. The input V<sub>IN</sub> = 3V TO 5.5V is decoupled by 22μF, 0.1μF, 0.1μF and 22μF capacitors to ground and is connected to the V<sub>IN</sub> and EN pins. SW drives an 80nH inductor to the output V<sub>OUT</sub> = 1.2V, 15A, which has 47μF ×3 output capacitors. FB connects to a 140k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 140k resistor; a 1μF capacitor connects V<sub>IN</sub> to AGND. MODE/SYNC is drawn with an arrow to a clock waveform and PGOOD with an output arrow. SSTT has a 0.1μF capacitor to ground, ITH a 15k resistor in series with 470pF to ground, and RT a 274k resistor to ground; PGND goes to ground.\n\n3313 TA01a\n\n![Efficiency vs Load Current graph.",
+    "evidence": "PDF p1 prints the drawing number '3313 TA01a' under the schematic (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-ta01b-efficiency-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "![Efficiency vs Load Current graph. The graph shows Efficiency (%) on the left y-axis (0 to 100) and Power Loss (W) on the right y-axis (0 to 4.0) versus Load Current (A) on the x-axis (0 to 15). The Efficiency curve (red) starts at 100% at 0A, drops to about 85% at 2.5A, and then gradually decreases to about 80% at 15A. The Power Loss curve (blue) starts at 0W at 0A and increases to about 3.6W at 15A. The graph is labeled with VIN = 3.3V, VOUT = 1.2V, fSW = 2MHz, and COILCRAFT XEL4020-800MEC. The diagram is labeled 3313 TA01a.](",
+    "new": "![Efficiency vs Load Current graph. The graph shows Efficiency (%) on the left y-axis (0 to 100) and Power Loss (W) on the right y-axis (0 to 4.0) versus Load Current (A) on the x-axis (0 to 15). The Efficiency curve (red) rises steeply at light load, peaks between about 2.5A and 5A and then decreases slowly toward 15A. The Power Loss curve (blue) rises with load current with an increasing slope over the whole range. The graph is labeled with VIN = 3.3V, VOUT = 1.2V, fSW = 2MHz, and COILCRAFT XEL4020-800MEC.](",
+    "evidence": "PDF p1 efficiency plot (render): efficiency does not start at 100% at 0A, it rises from near 0 to about 90% within the first ampere, peaks above 90% around 2.5-5A and ends in the mid-80s at 15A; power loss ends near 2.8W, not 3.6W. Estimated levels replaced by the curve shape; read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-ta01b-efficiency-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "\nEfficiency vs Load Current graph. The graph shows Efficiency (%) on the left y-axis (0 to 100) and Power Loss (W) on the right y-axis (0 to 4.0) versus Load Current (A) on the x-axis (0 to 15). The Efficiency curve (red) starts at 100% at 0A, drops to about 85% at 2.5A, and then gradually decreases to about 80% at 15A. The Power Loss curve (blue) starts at 0W at 0A and increases to about 3.6W at 15A. The graph is labeled with VIN = 3.3V, VOUT = 1.2V, fSW = 2MHz, and COILCRAFT XEL4020-800MEC. The diagram is labeled 3313 TA01a.\n",
+    "new": "\nEfficiency vs Load Current graph. The graph shows Efficiency (%) on the left y-axis (0 to 100) and Power Loss (W) on the right y-axis (0 to 4.0) versus Load Current (A) on the x-axis (0 to 15). The Efficiency curve (red) rises steeply at light load, peaks between about 2.5A and 5A and then decreases slowly toward 15A. The Power Loss curve (blue) rises with load current with an increasing slope over the whole range. The graph is labeled with VIN = 3.3V, VOUT = 1.2V, fSW = 2MHz, and COILCRAFT XEL4020-800MEC.\n",
+    "evidence": "PDF p1 efficiency plot (render): efficiency does not start at 100% at 0A, it rises from near 0 to about 90% within the first ampere, peaks above 90% around 2.5-5A and ends in the mid-80s at 15A; power loss ends near 2.8W, not 3.6W. Estimated levels replaced by the curve shape; read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p1-ta01b-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 1,
+    "old": "Efficiency vs Load Current graph. The graph shows Efficiency (%) on the left y-axis (0 to 100) and Power Loss (W) on the right y-axis (0 to 4.0) versus Load Current (A) on the x-axis (0 to 15). The Efficiency curve (red) rises steeply at light load, peaks between about 2.5A and 5A and then decreases slowly toward 15A. The Power Loss curve (blue) rises with load current with an increasing slope over the whole range. The graph is labeled with VIN = 3.3V, VOUT = 1.2V, fSW = 2MHz, and COILCRAFT XEL4020-800MEC.\n",
+    "new": "Efficiency vs Load Current graph. The graph shows Efficiency (%) on the left y-axis (0 to 100) and Power Loss (W) on the right y-axis (0 to 4.0) versus Load Current (A) on the x-axis (0 to 15). The Efficiency curve (red) rises steeply at light load, peaks between about 2.5A and 5A and then decreases slowly toward 15A. The Power Loss curve (blue) rises with load current with an increasing slope over the whole range. The graph is labeled with VIN = 3.3V, VOUT = 1.2V, fSW = 2MHz, and COILCRAFT XEL4020-800MEC.\n\n3313 TA01a\n",
+    "evidence": "PDF p1 prints the drawing number '3313 TA01a' under the efficiency plot too (pdftotext + render; same number as the schematic, kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g01-line-styles",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "1A (solid red), 5A (dashed blue), 10A (dashed green), and 15A (dashed orange). All curves show a slight upward trend as input voltage increases.",
+    "new": "1A (solid red), 5A (dashed blue), 10A (dashed green), and 15A (dotted orange). All curves show a slight upward trend as input voltage increases.",
+    "evidence": "PDF p5 G01 legend (render): the I_LOAD = 15A curve is dotted (short dots), not dashed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g02-trend",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "2.5V (solid red), 3.3V (dashed blue), and 5V (dashed green). All curves show a slight upward trend as output current increases.",
+    "new": "2.5V (solid red), 3.3V (dashed blue), and 5V (dashed green). The 3.3V and 5V curves rise slightly as output current increases; the 2.5V curve rises slightly up to about 12A and then turns slightly down toward 15A.",
+    "evidence": "PDF p5 G02 (render): the V_IN = 2.5V curve peaks around 12A and falls slightly toward 15A; only the 3.3V and 5V curves rise over the whole range.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g03-fsw-label",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "The graph includes a vertical line indicating  $f_{SW} = 2MHz$  and a note for TDK CLT32-55N.\n\n3313 G03",
+    "new": "The graph is labeled  $f_{SW} = 2MHz$  and TDK CLT32-55N.\n\n3313 G03",
+    "evidence": "PDF p5 G03 (render): f_SW = 2MHz and TDK CLT32-55N are a text label in the top-left corner of the plot; there is no vertical line marking f_SW (the vertical lines are the log-scale grid).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g04-fsw-label",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "The graph includes a vertical line indicating  $f_{SW} = 2MHz$  and a note for TDK CLT32-55N.\n\n3313 G04",
+    "new": "The graph is labeled  $f_{SW} = 2MHz$  and TDK CLT32-55N.\n\n3313 G04",
+    "evidence": "PDF p5 G04 (render): f_SW = 2MHz and TDK CLT32-55N are a text label in the top-left corner of the plot; there is no vertical line marking f_SW (the vertical lines are the log-scale grid).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g05-fsw-label",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "The graph includes a vertical line indicating  $f_{SW} = 2MHz$  and a note for COILCRAFT XEL4020-800MEC.\n\n3313 G05",
+    "new": "The graph is labeled  $f_{SW} = 2MHz$  and COILCRAFT XEL4020-800MEC.\n\n3313 G05",
+    "evidence": "PDF p5 G05 (render): f_SW = 2MHz and COILCRAFT XEL4020-800MEC are a text label in the top-left corner of the plot; there is no vertical line marking f_SW (the vertical lines are the log-scale grid).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g06-fsw-label",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "The graph includes a vertical line indicating  $f_{SW} = 2MHz$  and a note for COILCRAFT XEL4020-800MEC.\n\n3313 G06",
+    "new": "The graph is labeled  $f_{SW} = 2MHz$  and COILCRAFT XEL4020-800MEC.\n\n3313 G06",
+    "evidence": "PDF p5 G06 (render): f_SW = 2MHz and COILCRAFT XEL4020-800MEC are a text label in the top-left corner of the plot; there is no vertical line marking f_SW (the vertical lines are the log-scale grid).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g07-fsw-label",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "The graph includes a vertical line indicating  $f_{SW} = 2MHz$  and a note for COILCRAFT XEL4020-800MEC.\n\n3313 G07",
+    "new": "The graph is labeled  $f_{SW} = 2MHz$  and COILCRAFT XEL4020-800MEC.\n\n3313 G07",
+    "evidence": "PDF p5 G07 (render): f_SW = 2MHz and COILCRAFT XEL4020-800MEC are a text label in the top-left corner of the plot; there is no vertical line marking f_SW (the vertical lines are the log-scale grid).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p5-g08-fsw-label",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 5,
+    "old": "The graph includes a vertical line indicating  $f_{SW} = 2MHz$  and a note for COILCRAFT XEL4020-800MEC.\n\n3313 G08",
+    "new": "The graph is labeled  $f_{SW} = 2MHz$  and COILCRAFT XEL4020-800MEC.\n\n3313 G08",
+    "evidence": "PDF p5 G08 (render): f_SW = 2MHz and COILCRAFT XEL4020-800MEC are a text label in the top-left corner of the plot; there is no vertical line marking f_SW (the vertical lines are the log-scale grid).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p6-g09-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "![Graph of Feedback Reference Voltage vs Temperature. The voltage is stable around 499.5 mV from -50°C to 150°C.](",
+    "new": "![Graph of Feedback Reference Voltage vs Temperature. The voltage rises from just below 499 mV at -50°C to about 500 mV around 25°C to 75°C, then decreases slightly toward 150°C.](",
+    "evidence": "PDF p6 G09 (render): the curve is not flat at 499.5 mV; it starts near 498.8 mV at -50°C, peaks at about 500 mV near 50°C and ends just below 500 mV at 150°C. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p6-g09-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "\nGraph of Feedback Reference Voltage vs Temperature. The voltage is stable around 499.5 mV from -50°C to 150°C.\n",
+    "new": "\nGraph of Feedback Reference Voltage vs Temperature. The voltage rises from just below 499 mV at -50°C to about 500 mV around 25°C to 75°C, then decreases slightly toward 150°C.\n",
+    "evidence": "PDF p6 G09 (render): the curve is not flat at 499.5 mV; it starts near 498.8 mV at -50°C, peaks at about 500 mV near 50°C and ends just below 500 mV at 150°C. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p6-g12-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "![Graph of Switch Leakage Current vs Temperature. PMOS leakage increases from ~1 μA to ~8 μA. NMOS leakage increases from ~1 μA to ~23 μA.](",
+    "new": "![Graph of Switch Leakage Current vs Temperature (25°C to 150°C). Both curves stay near zero (slightly below 0 μA) up to about 75°C and rise steeply above 100°C; at 150°C the NMOS leakage (about 23 μA) is well above the PMOS leakage (about 9 μA).](",
+    "evidence": "PDF p6 G12 (render): both curves start slightly below 0 μA at 25°C (axis from -1 μA), not at ~1 μA, and the PMOS curve ends near 9 μA, not 8 μA. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p6-g12-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "\nGraph of Switch Leakage Current vs Temperature. PMOS leakage increases from ~1 μA to ~8 μA. NMOS leakage increases from ~1 μA to ~23 μA.\n",
+    "new": "\nGraph of Switch Leakage Current vs Temperature (25°C to 150°C). Both curves stay near zero (slightly below 0 μA) up to about 75°C and rise steeply above 100°C; at 150°C the NMOS leakage (about 23 μA) is well above the PMOS leakage (about 9 μA).\n",
+    "evidence": "PDF p6 G12 (render): both curves start slightly below 0 μA at 25°C (axis from -1 μA), not at ~1 μA, and the PMOS curve ends near 9 μA, not 8 μA. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p6-g13-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "![Graph of Default Switching Frequency vs Temperature. Frequency is stable around 2.0 MHz from -50°C to 150°C.](",
+    "new": "![Graph of Default Switching Frequency vs Temperature. Frequency is about 2.0 MHz from -50°C to 25°C and decreases slightly toward 150°C.](",
+    "evidence": "PDF p6 G13 (render): the curve is near 2.0 MHz up to about 25°C and falls slowly to just below 1.96 MHz at 150°C. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p6-g13-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 6,
+    "old": "\nGraph of Default Switching Frequency vs Temperature. Frequency is stable around 2.0 MHz from -50°C to 150°C.\n",
+    "new": "\nGraph of Default Switching Frequency vs Temperature. Frequency is about 2.0 MHz from -50°C to 25°C and decreases slightly toward 150°C.\n",
+    "evidence": "PDF p6 G13 (render): the curve is near 2.0 MHz up to about 25°C and falls slowly to just below 1.96 MHz at 150°C. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g18-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": "The feedback voltage increases linearly from 0 mV at 0 mV SSTT to approximately 500 mV at 500 mV SSTT, then levels off.",
+    "new": "The feedback voltage stays at 0 mV until the SSTT voltage reaches a few tens of mV, then increases linearly to 500 mV at an SSTT voltage slightly above 500 mV, and stays at 500 mV beyond that.",
+    "evidence": "PDF p7 G18 (render): the FB curve leaves 0 mV at an SSTT voltage of about 35 mV (not at 0 mV) and reaches the 500 mV plateau at about 520 mV SSTT. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g19-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": "The current is relatively stable across the temperature range, with the 5.5V curve showing a slight increase above 100°C.",
+    "new": "The current is relatively stable across the temperature range and increases with input voltage; all three curves step up slightly between about 75°C and 100°C.",
+    "evidence": "PDF p7 G19 (render): the 2.25V and 3.3V curves show the same small step between 75°C and 100°C as the 5.5V curve, and the curves are ordered 5.5V > 3.3V > 2.25V.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g18-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G18.\n",
+    "new": "\n\n3313 G18\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G18' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g19-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G19.\n",
+    "new": "\n\n3313 G19\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G19' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g20-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G20.\n",
+    "new": "\n\n3313 G20\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G20' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g21-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G21.\n",
+    "new": "\n\n3313 G21\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G21' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g22-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G22.\n",
+    "new": "\n\n3313 G22\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G22' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g23-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G23.\n",
+    "new": "\n\n3313 G23\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G23' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p7-g24-drawing-number",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 7,
+    "old": " The graph is labeled 3313 G24.\n",
+    "new": "\n\n3313 G24\n",
+    "evidence": "PDF p7 prints the drawing number '3313 G24' under the plot (pdftotext + render); the md had it only inside the AI description. Written as a standalone line, as on p5/p6.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
