@@ -116,11 +116,11 @@ Before figure deduplication (diagnostic only): source numeric tokens 5422, compa
 
 Spec tables: 13; rows: 128; nonempty cells checked: 547; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2309, compact 2310; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2388, compact 2389; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2584, compact 2310; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2894, compact 2389; equal: False; source subset: False.
 
 ## tps63802
 
