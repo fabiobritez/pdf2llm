@@ -23924,5 +23924,616 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps22990-p9-fig1-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 9,
+    "old": "\n\n**Figure 1. Quiescent Current vs Bias Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 5 V, I<sub>OUT</sub> = 0 A, V<sub>IN</sub> = V<sub>BIAS</sub>\n\n**Figure 1. Quiescent Current vs Bias Voltage**",
+    "evidence": "PDF p9: the test conditions printed under the Figure 1 graph ('VON = 5 V, IOUT = 0 A, VIN = VBIAS') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p9-fig2-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 9,
+    "old": "\n\n**Figure 2. Bias Shutdown Current vs Bias Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 0 V, V<sub>OUT</sub> = 0 V, V<sub>IN</sub> = V<sub>BIAS</sub>\n\n**Figure 2. Bias Shutdown Current vs Bias Voltage**",
+    "evidence": "PDF p9: the test conditions printed under the Figure 2 graph ('VON = 0 V, VOUT = 0 V, VIN = VBIAS') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p9-fig3-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 9,
+    "old": "\n\n**Figure 3. Input Shutdown Current vs Input Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 0 V, V<sub>BIAS</sub> = 3.3 V, V<sub>OUT</sub> = 0 V\n\n**Figure 3. Input Shutdown Current vs Input Voltage**",
+    "evidence": "PDF p9: the test conditions printed under the Figure 3 graph ('VON = 0 V, VBIAS = 3.3 V, VOUT = 0 V') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p9-fig4-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 9,
+    "old": "\n\n**Figure 4. Input Shutdown Current vs Input Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 0 V, V<sub>BIAS</sub> = 5 V, V<sub>OUT</sub> = 0 V\n\n**Figure 4. Input Shutdown Current vs Input Voltage**",
+    "evidence": "PDF p9: the test conditions printed under the Figure 4 graph ('VON = 0 V, VBIAS = 5 V, VOUT = 0 V') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p9-fig5-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 9,
+    "old": "\n\n**Figure 5. On-Resistance vs Ambient Temperature**",
+    "new": "\n\nV<sub>ON</sub> = 5 V, V<sub>BIAS</sub> = 3.3 V, I<sub>OUT</sub> = –200mA\n\n**Figure 5. On-Resistance vs Ambient Temperature**",
+    "evidence": "PDF p9: the test conditions printed under the Figure 5 graph ('VON = 5 V, VBIAS = 3.3 V, IOUT = –200mA') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p9-fig6-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 9,
+    "old": "\n\n**Figure 6. On-Resistance vs Ambient Temperature**",
+    "new": "\n\nV<sub>ON</sub> = 5 V, V<sub>BIAS</sub> = 5 V, I<sub>OUT</sub> = –200mA\n\n**Figure 6. On-Resistance vs Ambient Temperature**",
+    "evidence": "PDF p9: the test conditions printed under the Figure 6 graph ('VON = 5 V, VBIAS = 5 V, IOUT = –200mA') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-fig7-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "\n\n**Figure 7. On-Resistance vs Input Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 5 V, V<sub>BIAS</sub> = 3.3 V, I<sub>OUT</sub> = –200mA\n\n**Figure 7. On-Resistance vs Input Voltage**",
+    "evidence": "PDF p10: the test conditions printed under the Figure 7 graph ('VON = 5 V, VBIAS = 3.3 V, IOUT = –200mA') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-fig8-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "\n\n**Figure 8. On-Resistance vs Input Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 5 V, V<sub>BIAS</sub> = 5 V, I<sub>OUT</sub> = –200mA\n\n**Figure 8. On-Resistance vs Input Voltage**",
+    "evidence": "PDF p10: the test conditions printed under the Figure 8 graph ('VON = 5 V, VBIAS = 5 V, IOUT = –200mA') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-fig9-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "\n\n**Figure 9. Output Pull-Down Resistance vs Bias Voltage**",
+    "new": "\n\nV<sub>ON</sub> = 0 V, V<sub>OUT</sub> = V<sub>IN</sub> = 1.05 V\n\n**Figure 9. Output Pull-Down Resistance vs Bias Voltage**",
+    "evidence": "PDF p10: the test conditions printed under the Figure 9 graph ('VON = 0 V, VOUT = VIN = 1.05 V') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-fig10-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "\n\n**Figure 10. High-Level Input Voltage vs Bias Voltage**",
+    "new": "\n\nI<sub>OUT</sub> = 0 A\n\n**Figure 10. High-Level Input Voltage vs Bias Voltage**",
+    "evidence": "PDF p10: the test conditions printed under the Figure 10 graph ('IOUT = 0 A') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-fig11-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "\n\n**Figure 11. Low-Level Input Voltage vs Bias Voltage**",
+    "new": "\n\nI<sub>OUT</sub> = 0 A\n\n**Figure 11. Low-Level Input Voltage vs Bias Voltage**",
+    "evidence": "PDF p10: the test conditions printed under the Figure 11 graph ('IOUT = 0 A') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-fig12-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "\n\n**Figure 12. Hysteresis vs Bias Voltage**",
+    "new": "\n\nI<sub>OUT</sub> = 0 A\n\n**Figure 12. Hysteresis vs Bias Voltage**",
+    "evidence": "PDF p10: the test conditions printed under the Figure 12 graph ('IOUT = 0 A') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-fig13-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "\n\n**Figure 13. Turnon Time vs Input Voltage**",
+    "new": "\n\nV<sub>BIAS</sub> = 3.3 V, V<sub>ON</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 13. Turnon Time vs Input Voltage**",
+    "evidence": "PDF p11: the test conditions printed under the Figure 13 graph ('VBIAS = 3.3 V, VON = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-fig14-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "\n\n**Figure 14. Turnon Time vs Input Voltage**",
+    "new": "\n\nV<sub>BIAS</sub> = 5 V, V<sub>ON</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 14. Turnon Time vs Input Voltage**",
+    "evidence": "PDF p11: the test conditions printed under the Figure 14 graph ('VBIAS = 5 V, VON = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-fig15-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "\n\n**Figure 15. Turnoff Time vs Input Voltage**",
+    "new": "\n\nV<sub>BIAS</sub> = 3.3 V, V<sub>ON</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 15. Turnoff Time vs Input Voltage**",
+    "evidence": "PDF p11: the test conditions printed under the Figure 15 graph ('VBIAS = 3.3 V, VON = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-fig16-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "\n\n**Figure 16. Turnoff Time vs Input Voltage**",
+    "new": "\n\nV<sub>BIAS</sub> = 5 V, V<sub>ON</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 16. Turnoff Time vs Input Voltage**",
+    "evidence": "PDF p11: the test conditions printed under the Figure 16 graph ('VBIAS = 5 V, VON = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-fig17-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "\n\n**Figure 17. Rise Time vs Input Voltage**",
+    "new": "\n\nV<sub>BIAS</sub> = 3.3 V, V<sub>ON</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 17. Rise Time vs Input Voltage**",
+    "evidence": "PDF p11: the test conditions printed under the Figure 17 graph ('VBIAS = 3.3 V, VON = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-fig18-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "\n\n**Figure 18. Rise Time vs Input Voltage**",
+    "new": "\n\nV<sub>BIAS</sub> = 5 V, V<sub>ON</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 18. Rise Time vs Input Voltage**",
+    "evidence": "PDF p11: the test conditions printed under the Figure 18 graph ('VBIAS = 5 V, VON = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p10-heading-level",
+    "file": "output/tps22990/tps22990.md",
+    "page": 10,
+    "old": "{9}------------------------------------------------\n\n### **Typical Characteristics (continued)**",
+    "new": "{9}------------------------------------------------\n\n### Typical Characteristics (continued)",
+    "evidence": "PDF p10: running '(continued)' section title in the same style as '7.8 Typical Characteristics' (H3), written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p11-heading-level",
+    "file": "output/tps22990/tps22990.md",
+    "page": 11,
+    "old": "{10}------------------------------------------------\n\n### **Typical Characteristics (continued)**",
+    "new": "{10}------------------------------------------------\n\n### Typical Characteristics (continued)",
+    "evidence": "PDF p11: running '(continued)' section title in the same style as '7.8 Typical Characteristics' (H3), written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p12-heading-level",
+    "file": "output/tps22990/tps22990.md",
+    "page": 12,
+    "old": "{11}------------------------------------------------\n\n#### **Typical Characteristics (continued)**",
+    "new": "{11}------------------------------------------------\n\n### Typical Characteristics (continued)",
+    "evidence": "PDF p12: running '(continued)' section title in the same style as '7.8 Typical Characteristics' (H3), written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig25-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 25: Rise Time vs Input Voltage graph. The graph plots Rise Time (µs) on the y-axis (10 to 37.5) against Input Voltage (V) on the x-axis (0.5 to 5.5). Four curves are shown for different VBIAS values: 2.5 V (black), 3.3 V (red), 5 V (grey), and 5.5 V (blue). The curves show that rise time increases with input voltage and is higher for higher VBIAS values. Test conditions: TA = 25°C, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "new": "![Figure 25: Rise Time vs Input Voltage graph. The graph plots Rise Time (µs) on the y-axis (10 to 37.5) against Input Voltage (V) on the x-axis (0.5 to 5.5). Four curves are shown for different VBIAS values: 2.5 V (black), 3.3 V (red), 5 V (grey), and 5.5 V (blue). Rise time increases with input voltage; the four curves lie almost on top of each other, and the 2.5 V and 3.3 V curves end at lower input voltages than the 5 V and 5.5 V curves. Test conditions: TA = 25°C, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p13 Figure 25 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig25-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 25: Rise Time vs Input Voltage graph. The graph plots Rise Time (µs) on the y-axis (10 to 37.5) against Input Voltage (V) on the x-axis (0.5 to 5.5). Four curves are shown for different VBIAS values: 2.5 V (black), 3.3 V (red), 5 V (grey), and 5.5 V (blue). The curves show that rise time increases with input voltage and is higher for higher VBIAS values. Test conditions: TA = 25°C, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.\n",
+    "new": "\nFigure 25: Rise Time vs Input Voltage graph. The graph plots Rise Time (µs) on the y-axis (10 to 37.5) against Input Voltage (V) on the x-axis (0.5 to 5.5). Four curves are shown for different VBIAS values: 2.5 V (black), 3.3 V (red), 5 V (grey), and 5.5 V (blue). Rise time increases with input voltage; the four curves lie almost on top of each other, and the 2.5 V and 3.3 V curves end at lower input voltages than the 5 V and 5.5 V curves. Test conditions: TA = 25°C, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.\n",
+    "evidence": "PDF p13 Figure 25 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig26-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 26: Turnon Response oscilloscope trace. The trace shows VIN, VOUT, and PG signals. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "new": "![Figure 26: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p13 Figure 26 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig26-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 26: Turnon Response oscilloscope trace. The trace shows VIN, VOUT, and PG signals. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 26: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p13 Figure 26 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig27-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 27: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "new": "![Figure 27: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p13 Figure 27 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig27-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 27: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 27: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p13 Figure 27 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig28-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 28: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "new": "![Figure 28: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p13 Figure 28 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig28-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 28: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 28: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p13 Figure 28 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig29-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 29: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "new": "![Figure 29: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p13 Figure 29 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig29-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 29: Turnon Response oscilloscope trace. Test conditions: VBIAS = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 29: Turnon Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN is already high; ON steps high, VOUT then ramps up to its final level, and PG goes high some time after VOUT has settled. The measurement panel lists the VOUT rise time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p13 Figure 29 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig30-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "![Figure 30: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "new": "![Figure 30: Oscilloscope screenshot (captioned Turnon Response) with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. This capture shows a turnoff: VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p13 Figure 30 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig30-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\nFigure 30: Turnon Response oscilloscope trace. Test conditions: VBIAS = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 30: Oscilloscope screenshot (captioned Turnon Response) with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. This capture shows a turnoff: VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p13 Figure 30 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig25-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\n\n**Figure 25. Rise Time vs Input Voltage**",
+    "new": "\n\nT<sub>A</sub>= 25°C, C<sub>L</sub> = 0.1 µF, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 25. Rise Time vs Input Voltage**",
+    "evidence": "PDF p13: the test conditions printed under the Figure 25 graph ('TA= 25°C, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig26-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\n\n**Figure 26. Turnon Response**",
+    "new": "\n\nV<sub>BIAS</sub> = 5 V, V<sub>IN</sub> = 1.05 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 26. Turnon Response**",
+    "evidence": "PDF p13: the test conditions printed under the Figure 26 graph ('VBIAS = 5 V, VIN = 1.05 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig27-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\n\n**Figure 27. Turnon Response**",
+    "new": "\n\nV<sub>BIAS</sub> = 5 V, V<sub>IN</sub> = 5 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 27. Turnon Response**",
+    "evidence": "PDF p13: the test conditions printed under the Figure 27 graph ('VBIAS = 5 V, VIN = 5 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig28-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\n\n**Figure 28. Turnon Response**",
+    "new": "\n\nV<sub>BIAS</sub> = 3.3 V, V<sub>IN</sub> = 1.05 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 28. Turnon Response**",
+    "evidence": "PDF p13: the test conditions printed under the Figure 28 graph ('VBIAS = 3.3 V, VIN = 1.05 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig29-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\n\n**Figure 29. Turnon Response**",
+    "new": "\n\nV<sub>BIAS</sub> = 3.3 V, V<sub>IN</sub> = 3.3 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 29. Turnon Response**",
+    "evidence": "PDF p13: the test conditions printed under the Figure 29 graph ('VBIAS = 3.3 V, VIN = 3.3 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-fig30-conditions-missing",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "\n\n**Figure 30. Turnon Response**",
+    "new": "\n\nV<sub>BIAS</sub> = 5 V, V<sub>IN</sub> = 1.05 V, C<sub>T</sub> = 0 pF, C<sub>IN</sub> = 1 µF, C<sub>L</sub> = 0.1 µF, R<sub>L</sub> = 10 Ω\n\n**Figure 30. Turnon Response**",
+    "evidence": "PDF p13: the test conditions printed under the Figure 30 graph ('VBIAS = 5 V, VIN = 1.05 V, CT = 0 pF, CIN = 1 µF, CL = 0.1 µF, RL = 10 Ω') were only inside the AI description, not as page text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p13-heading-level",
+    "file": "output/tps22990/tps22990.md",
+    "page": 13,
+    "old": "{12}------------------------------------------------\n\n#### **Typical Characteristics (continued)**",
+    "new": "{12}------------------------------------------------\n\n### Typical Characteristics (continued)",
+    "evidence": "PDF p13: running '(continued)' section title in the same style as '7.8 Typical Characteristics' (H3), written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-heading-level",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "{13}------------------------------------------------\n\n#### **Typical Characteristics (continued)**",
+    "new": "{13}------------------------------------------------\n\n### Typical Characteristics (continued)",
+    "evidence": "PDF p14: running '(continued)' section title in the same style as '7.8 Typical Characteristics' (H3), written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-fig31-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "![Figure 31: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals.]",
+    "new": "![Figure 31: Turnoff Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p14 Figure 31 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-fig31-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "\nFigure 31: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 31: Turnoff Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 5 V, VIN = 5 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p14 Figure 31 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-fig32-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "![Figure 32: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals.]",
+    "new": "![Figure 32: Turnoff Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p14 Figure 32 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-fig32-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "\nFigure 32: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 32: Turnoff Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 1.05 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p14 Figure 32 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-fig33-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "![Figure 33: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals.]",
+    "new": "![Figure 33: Turnoff Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω.]",
+    "evidence": "PDF p14 Figure 33 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p14-fig33-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 14,
+    "old": "\nFigure 33: Turnoff Response. Oscilloscope screenshot showing VIN, IN, VOUT, and PG signals. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "new": "\nFigure 33: Turnoff Response oscilloscope screenshot with four channels: 1 ON, 2 VIN, 3 VOUT, 4 PG. VIN stays high; ON steps low, PG goes low shortly afterwards, and VOUT then falls to 0 V. The measurement panel lists the VOUT fall time and the ON-to-VOUT and ON-to-PG delays. Test conditions: VBIAS = 3.3 V, VIN = 3.3 V, CL = 0.1 µF, CT = 0 pF, CIN = 1 µF, RL = 10 Ω. [Voltage levels and timing values are not transcribed; read them from the image/PDF.]\n",
+    "evidence": "PDF p14 Figure 33 drawing: description rewritten from the image (channels, edges, printed test conditions).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
