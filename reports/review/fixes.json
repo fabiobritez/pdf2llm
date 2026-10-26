@@ -27096,5 +27096,82 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63802-p29-faq-link-not-heading",
+    "file": "output/tps63802/tps63802.md",
+    "page": 29,
+    "old": "##### [QFN/SON Package FAQs](#)\n",
+    "new": "[QFN/SON Package FAQs](#)\n",
+    "evidence": "PDF p29: 'QFN/SON Package FAQs' is an italic blue link line in body-text size under 13.1.2 Development Support, not a numbered heading; the md made it an h5 heading above 13.1.2.1.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p33-heading-tape-reel-no-emphasis",
+    "file": "output/tps63802/tps63802.md",
+    "page": 33,
+    "old": "### **TAPE AND REEL INFORMATION**\n",
+    "new": "### TAPE AND REEL INFORMATION\n",
+    "evidence": "PDF p33: page heading 'TAPE AND REEL INFORMATION'; the md wrapped it in ** inside the heading (written without emphasis as in tps63070).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p33-reel-width-dimension",
+    "file": "output/tps63802/tps63802.md",
+    "page": 33,
+    "old": "A horizontal dimension line at the bottom indicates the **Reel Width (W1)**.",
+    "new": "A side view of the reel below it carries a vertical dimension across its thickness, labeled **Reel Width (W1)**.",
+    "evidence": "PDF p33 REEL DIMENSIONS drawing: Reel Width (W1) is dimensioned with vertical arrows across the thickness of the reel side view drawn below the reel, not by a horizontal dimension line.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p33-tape-k0-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 33,
+    "old": "**K0** (edge to first pocket)",
+    "new": "**K0** (pocket depth, dimensioned on the tape side profile at the left)",
+    "evidence": "PDF p33 TAPE DIMENSIONS drawing and its legend: K0 is dimensioned across the side profile of the tape at the left and is defined as 'Dimension designed to accommodate the component thickness', not the distance from the edge to the first pocket.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p33-heading-quadrant-no-emphasis",
+    "file": "output/tps63802/tps63802.md",
+    "page": 33,
+    "old": "### **QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE**\n",
+    "new": "### QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE\n",
+    "evidence": "PDF p33: heading 'QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE' without emphasis markup inside the heading (as in tps63070).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p34-heading-box-no-emphasis",
+    "file": "output/tps63802/tps63802.md",
+    "page": 34,
+    "old": "### **TAPE AND REEL BOX DIMENSIONS**\n",
+    "new": "### TAPE AND REEL BOX DIMENSIONS\n",
+    "evidence": "PDF p34: heading 'TAPE AND REEL BOX DIMENSIONS' without emphasis markup inside the heading (as in tps63070).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
