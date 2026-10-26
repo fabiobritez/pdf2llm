@@ -405,11 +405,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 2,
-      "missing_words": [
-        "psijb",
-        "psijt"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 5,
       "pdf_number_tokens": 20,
@@ -432,7 +429,7 @@
           "words": 1
         }
       },
-      "word_coverage": 0.9759036144578314
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
@@ -1003,23 +1000,26 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 10,
+      "extra_number_count": 14,
       "extra_numbers": [
         "0",
         "0.1",
         "0.5",
         "1",
+        "1.05",
         "10",
+        "2",
         "2.5",
+        "3",
         "3.3",
         "37.5",
+        "4",
         "5",
         "5.5"
       ],
-      "figure_alt_number_coverage": 0.6470588235294118,
+      "figure_alt_number_coverage": 0.7058823529411765,
       "figure_alt_word_coverage": 0.75,
       "figure_missing_numbers": [
-        "1.05",
         "12.5",
         "17.5",
         "22.5",
@@ -1105,34 +1105,26 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 7,
+      "extra_number_count": 10,
       "extra_numbers": [
         "0",
         "0.1",
         "1",
         "1.05",
         "10",
+        "2",
+        "3",
         "3.3",
+        "4",
         "5"
       ],
-      "figure_alt_number_coverage": 0.0,
-      "figure_alt_word_coverage": 0.14285714285714285,
-      "figure_missing_numbers": [
-        "0",
-        "0.1",
-        "1",
-        "1.05",
-        "10",
-        "3.3",
-        "5"
-      ],
+      "figure_alt_number_coverage": 1.0,
+      "figure_alt_word_coverage": 0.5714285714285714,
+      "figure_missing_numbers": [],
       "figure_missing_words": [
         "characteristics",
-        "cin",
         "continued",
-        "ohm",
-        "typical",
-        "vbias"
+        "typical"
       ],
       "figure_number_tokens": 7,
       "figure_reasons": [],
@@ -1797,12 +1789,11 @@
         "2016"
       ],
       "figure_alt_number_coverage": 1.0,
-      "figure_alt_word_coverage": 0.7647058823529411,
+      "figure_alt_word_coverage": 0.8235294117647058,
       "figure_missing_numbers": [],
       "figure_missing_words": [
         "application",
         "continued",
-        "gpio",
         "information"
       ],
       "figure_number_tokens": 0,
@@ -1927,17 +1918,13 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 9,
+      "extra_number_count": 5,
       "extra_numbers": [
         "1",
         "10.2",
-        "100",
         "2",
-        "200",
-        "297",
         "3",
-        "4",
-        "79.77"
+        "4"
       ],
       "figure_alt_number_coverage": 0.0,
       "figure_alt_word_coverage": 0.0,
@@ -2004,20 +1991,15 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 12,
+      "extra_number_count": 7,
       "extra_numbers": [
         "11",
         "12",
-        "2",
         "2016",
         "22990",
         "3",
-        "4",
         "5",
-        "6",
-        "7",
-        "8",
-        "9"
+        "6"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -2470,15 +2452,16 @@
     {
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
-      "classification": "text loss",
-      "extra_number_count": 6,
+      "classification": "text",
+      "extra_number_count": 7,
       "extra_numbers": [
         "0.1",
         "1.9",
         "2.1",
         "2.9",
         "3.1",
-        "6"
+        "6",
+        "8"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -2496,32 +2479,15 @@
       ],
       "figure_word_tokens": 0,
       "flags": [],
-      "missing_number_count": 11,
+      "missing_number_count": 1,
       "missing_numbers": [
-        "-0.8",
-        "0.02",
-        "0.15",
-        "0.19",
-        "0.23",
-        "0.29",
-        "0.33",
-        "0.35",
-        "0.56",
-        "4.5",
-        "7"
+        "4.5"
       ],
-      "missing_word_count": 8,
+      "missing_word_count": 1,
       "missing_words": [
-        "lead",
-        "max",
-        "optional",
-        "pkg",
-        "plastic",
-        "scale",
-        "small",
-        "typ"
+        "scale"
       ],
-      "number_coverage": 0.6333333333333333,
+      "number_coverage": 0.9666666666666667,
       "page": 31,
       "pdf_number_tokens": 30,
       "pdf_word_tokens": 51,
@@ -2543,7 +2509,7 @@
           "words": 0
         }
       },
-      "word_coverage": 0.8431372549019608
+      "word_coverage": 0.9803921568627451
     },
     {
       "alt_only_number_count": 0,
@@ -2564,14 +2530,11 @@
       "figure_regions": [],
       "figure_word_tokens": 0,
       "flags": [],
-      "missing_number_count": 2,
-      "missing_numbers": [
-        "0.5",
-        "2.6"
-      ],
+      "missing_number_count": 0,
+      "missing_numbers": [],
       "missing_word_count": 0,
       "missing_words": [],
-      "number_coverage": 0.9166666666666666,
+      "number_coverage": 1.0,
       "page": 32,
       "pdf_number_tokens": 24,
       "pdf_word_tokens": 58,
@@ -2599,8 +2562,9 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 19,
+      "extra_number_count": 23,
       "extra_numbers": [
+        "0.02",
         "0.05",
         "0.125",
         "0.24",
@@ -2609,8 +2573,10 @@
         "0.5",
         "0.56",
         "0.674",
+        "1",
         "1.038",
         "1.148",
+        "1.95",
         "11",
         "2",
         "2015",
@@ -2619,14 +2585,13 @@
         "4222524",
         "5",
         "7",
+        "8",
         "83"
       ],
-      "figure_alt_number_coverage": 0.6190476190476191,
-      "figure_alt_word_coverage": 0.375,
+      "figure_alt_number_coverage": 0.7142857142857143,
+      "figure_alt_word_coverage": 0.5416666666666666,
       "figure_missing_numbers": [
-        "0.02",
         "0.125",
-        "1.95",
         "11",
         "2015",
         "35",
@@ -2637,17 +2602,13 @@
         "based",
         "continued",
         "coverage",
-        "example",
         "lead",
         "notes",
         "outline",
-        "pad",
-        "paste",
         "plastic",
         "printed",
         "scale",
         "small",
-        "stencil",
         "thick"
       ],
       "figure_number_tokens": 21,
@@ -2750,11 +2711,11 @@
       "verified_ok": 128
     },
     "high_confidence_table_rows": 0,
-    "low_coverage_text_pages": 1,
-    "mean_number_coverage": 0.9300420168067226,
-    "mean_word_coverage": 0.9827829886382125,
+    "low_coverage_text_pages": 0,
+    "mean_number_coverage": 0.942296918767507,
+    "mean_word_coverage": 0.9875286147412405,
     "pages": 34,
-    "status": "REVIEW",
+    "status": "OK",
     "table_issue_counts": {
       "column shift": 0,
       "geometry column mismatch": 0,
