@@ -76,11 +76,11 @@ Before figure deduplication (diagnostic only): source numeric tokens 2250, compa
 
 Spec tables: 18; rows: 189; nonempty cells checked: 902; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2952, compact 2953; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2966, compact 2967; equal: False; source subset: True.
 
 - Extra numeric tokens: {'31730': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2970, compact 2953; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 3003, compact 2967; equal: False; source subset: False.
 
 ## sn74avc4t774
 
