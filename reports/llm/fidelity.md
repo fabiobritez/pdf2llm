@@ -44,9 +44,9 @@ Before figure deduplication (diagnostic only): source numeric tokens 3059, compa
 
 Spec tables: 32; rows: 470; nonempty cells checked: 3371; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 8403, compact 8403; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 9033, compact 9033; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 8799, compact 8403; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 9790, compact 9033; equal: False; source subset: False.
 
 ## ltc3309a
 

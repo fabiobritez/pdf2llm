@@ -19434,8 +19434,8 @@
     "file": "output/ltc2975/ltc2975.md",
     "page": 9,
     "old": "|  |  | CONTROL <sub>n</sub> Only | ● 1.85 |  |  | V |",
-    "new": "|  |  | CONTROL*n* Only | ● 1.85 |  |  | V |",
-    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript.",
+    "new": "|  |  | CONTROLn Only | ● 1.85 |  |  | V |",
+    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript. Written as plain 'CONTROLn' inside the EC table (no emphasis markup in spec-table cells, as for FAULTBn on p52), so the spec-table fidelity check compares the same word.",
     "sources": [
       "pdf-image",
       "pymupdf-text"
@@ -19447,8 +19447,8 @@
     "file": "output/ltc2975/ltc2975.md",
     "page": 9,
     "old": "|                                                                                                          |                                                         | CONTROL <sub>n</sub> Only                                                  | ●   |                         | 1.6     | V      |",
-    "new": "|                                                                                                          |                                                         | CONTROL*n* Only                                                  | ●   |                         | 1.6     | V      |",
-    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript.",
+    "new": "|                                                                                                          |                                                         | CONTROLn   Only                                                  | ●   |                         | 1.6     | V      |",
+    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript. Written as plain 'CONTROLn' inside the EC table (no emphasis markup in spec-table cells, as for FAULTBn on p52), so the spec-table fidelity check compares the same word.",
     "sources": [
       "pdf-image",
       "pymupdf-text"
@@ -19460,8 +19460,8 @@
     "file": "output/ltc2975/ltc2975.md",
     "page": 9,
     "old": "| t <sub>SP</sub>                                                                                          | Pulse Width of Spike Suppressed                         | FAULTB0, FAULTB1, CONTROL <sub>n</sub>                                     |     | 10                      |         | μs     |",
-    "new": "| t <sub>SP</sub>                                                                                          | Pulse Width of Spike Suppressed                         | FAULTB0, FAULTB1, CONTROL*n*                                     |     | 10                      |         | μs     |",
-    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript.",
+    "new": "| t <sub>SP</sub>                                                                                          | Pulse Width of Spike Suppressed                         | FAULTB0, FAULTB1, CONTROLn                                       |     | 10                      |         | μs     |",
+    "evidence": "PDF p9 (PyMuPDF spans: 'CONTROL' LinearHelvCond + 'n' HelveticaLTStd-CondObl at the same size and baseline; render): CONTROLn has an italic n, not a subscript. Written as plain 'CONTROLn' inside the EC table (no emphasis markup in spec-table cells, as for FAULTBn on p52), so the spec-table fidelity check compares the same word.",
     "sources": [
       "pdf-image",
       "pymupdf-text"
