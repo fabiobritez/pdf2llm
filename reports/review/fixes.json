@@ -10012,5 +10012,187 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p10-vin-curly-apostrophe",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 10,
+    "old": "to each buck's PMOS power switch",
+    "new": "to each buck’s PMOS power switch",
+    "evidence": "PDF p10 V_IN pin description prints 'buck’s' with a curly apostrophe (pdftotext), as kept in the other reviewed LTC sheets.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p11-block-diagram-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 11,
+    "old": "![Block diagram of the LTC3315A dual-buck converter showing internal components like ENBUCK1, ENBUCK2, OSCILLATOR, BUCK CONTROL, and SW1/SW2 drivers. It includes pin labels for V<sub>IN</sub>, SW1, FB1, EN1, MODE/SYNC, EN2, FB2, PGGOOD, and GND.](",
+    "new": "![Block diagram of the LTC3315A dual-buck converter showing internal components like ENBUCK1, ENBUCK2, OSCILLATOR, BUCK CONTROL, and SW1/SW2 drivers. It includes pin labels for V<sub>IN</sub>, SW1, FB1, EN1, MODE/SYNC, EN2, FB2, PGOOD, and GND.](",
+    "evidence": "PDF p11 block diagram prints the pin name PGOOD (pdftotext); the AI alt text had 'PGGOOD'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p11-block-diagram-alt-repeat",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 11,
+    "old": "\nBlock diagram of the LTC3315A dual-buck converter showing internal components like ENBUCK1, ENBUCK2, OSCILLATOR, BUCK CONTROL, and SW1/SW2 drivers. It includes pin labels for V<sub>IN</sub>, SW1, FB1, EN1, MODE/SYNC, EN2, FB2, PGGOOD, and GND.\n\n3315ab BD",
+    "new": "\nBlock diagram of the LTC3315A dual-buck converter showing internal components like ENBUCK1, ENBUCK2, OSCILLATOR, BUCK CONTROL, and SW1/SW2 drivers. It includes pin labels for V<sub>IN</sub>, SW1, FB1, EN1, MODE/SYNC, EN2, FB2, PGOOD, and GND.\n\n3315ab BD",
+    "evidence": "PDF p11: 'PGGOOD' → 'PGOOD' in the repeated alt text paragraph.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p11-pin-label-pgood",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 11,
+    "old": "PGGOOD 5, A1  \n",
+    "new": "PGOOD 5, A1  \n",
+    "evidence": "PDF p11 block diagram pin label is 'PGOOD 5, A1' (pdftotext); the md had 'PGGOOD'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p11-block-diagram-description",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 11,
+    "old": "\nThe diagram illustrates the internal architecture of the LTC3315A dual-buck converter. It features two parallel buck converter paths, BUCK1 and BUCK2. Each path includes a BUCK CONTROL block, a SWITCH LOGIC AND ANTI-SHOOT THROUGH block, and a switch driver stage consisting of two MOSFETs. The output of each buck converter is connected to an input pin (V<sub>IN</sub> 10, B1, D4 for BUCK1 and V<sub>IN</sub> 7, D1 for BUCK2) and a switch pin (SW1 11, C3, C4 and SW2 6, C1, C2). Feedback pins (FB1 2, A3 and FB2 3, A2) are connected to the output of each buck converter through a resistor and a transconductance amplifier (G<sub>M</sub>). The feedback loop for each buck converter includes a 0.5V reference and a 0.5V reference. The feedback signals are compared with 0.5V references and the outputs are combined with the enable signals (ENBUCK1 and ENBUCK2) using logic gates to control the switch drivers. The enable signals are derived from input pins EN1 (1, B3) and EN2 (4, B2) through 0.4V comparators. The mode detection block receives inputs from the mode/sync pin (12, A4) and the internal reference (0.55V, 0.5V, 0.49V, 0.4V) and outputs pulse skip, FC, and burst signals. The oscillator provides a 0° and 180° clock signal to the BUCK CONTROL blocks. An over temperature detect block monitors the temperature and provides an OT signal to the BUCK CONTROL blocks. The PGGOOD pin (5, A1) is connected to the output of a logic gate that combines the feedback signals and the enable signals. The ground pins (8, 9, 13) are connected to the exposed pad and the balls (B4, D2, D3).\n",
+    "new": "\nThe diagram illustrates the internal architecture of the LTC3315A (description written from the PDF drawing). EN1 (1, B3) and EN2 (4, B2) each go to a hysteretic comparator against 0.4V whose outputs are ENBUCK1 and ENBUCK2. MODE/SYNC (12, A4) goes to the MODE DETECTION block (outputs PULSE SKIP, FC, BURST) and to the OSCILLATOR. An OR gate of ENBUCK1 and ENBUCK2 enables the OSCILLATOR and the OVER TEMPERATURE DETECT block. The oscillator output drives BUCK1 at 0° and, through an inverter, BUCK2 at 180°; the OT signal goes to both BUCK CONTROL blocks. The INTERNAL REFERENCE block provides 0.55V, 0.5V, 0.49V and 0.4V. Each buck (BUCK1, BUCK2) contains a BUCK CONTROL block, a SWITCH LOGIC AND ANTI-SHOOT THROUGH block and two gate drivers for a PMOS high-side switch from V<sub>IN</sub> (with a current-sense element) and an NMOS low-side switch to ground, whose common node is SW. A G<sub>M</sub> error amplifier compares FB with 0.5V; its output V<sub>C1</sub>/V<sub>C2</sub> has an internal series R-C to ground and feeds BUCK CONTROL. BUCK1 uses V<sub>IN</sub> (10, B1, D4), SW1 (11, C3, C4) and FB1 (2, A3); BUCK2 uses V<sub>IN</sub> (7, D1), SW2 (6, C1, C2) and FB2 (3, A2). For power good, FB1 and FB2 each go to two hysteretic comparators (against 0.55V and 0.49V) whose outputs feed a NAND gate; each result is gated with ENBUCK1 or ENBUCK2 by a second NAND gate, and these two outputs and the OR of ENBUCK1/ENBUCK2 feed a final NAND gate that drives the gate of an N-channel open-drain transistor on PGOOD (5, A1). GND: pins 8, 9, 13 (exposed pad); balls B4, D2, D3.\n",
+    "evidence": "PDF p11 block diagram (render): the AI paragraph connected 'the output of each buck converter' to V_IN pins, put a resistor between FB and the G_M amplifier (FB goes directly to the G_M input, the R-C is the V_C compensation to ground), listed '0.5V reference and a 0.5V reference', said MODE DETECTION receives the internal references, called the pin PGGOOD, omitted the OR gate enabling the oscillator/OT detect, the 180° inverter, the 0.55V/0.49V PGOOD comparators and the open-drain NMOS. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3315a-p12-startup-column-split",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 12,
+    "old": "either buck is subsequently enabled,\n\nthere is a",
+    "new": "either buck is subsequently enabled, there is a",
+    "evidence": "PDF p12: the sentence 'When both bucks are disabled and either buck is subsequently enabled, / there is a 400µs (typical) delay…' continues from the left column to the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p12-regulators-curly-apostrophe",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 12,
+    "old": "In sleep most of the regulator's circuitry",
+    "new": "In sleep most of the regulator’s circuitry",
+    "evidence": "PDF p12 prints 'regulator’s' with a curly apostrophe (pdftotext).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p13-curly-apostrophe-1",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 13,
+    "old": "The LTC3315A's internal oscillator",
+    "new": "The LTC3315A’s internal oscillator",
+    "evidence": "PDF p13 prints the possessive with a curly apostrophe (pdftotext: LTC3315A’s, buck’s, regulator’s).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p13-curly-apostrophe-2",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 13,
+    "old": "If either enabled buck's internal PGOOD",
+    "new": "If either enabled buck’s internal PGOOD",
+    "evidence": "PDF p13 prints the possessive with a curly apostrophe (pdftotext: LTC3315A’s, buck’s, regulator’s).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p13-curly-apostrophe-3",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 13,
+    "old": "If either enabled buck regulator's output",
+    "new": "If either enabled buck regulator’s output",
+    "evidence": "PDF p13 prints the possessive with a curly apostrophe (pdftotext: LTC3315A’s, buck’s, regulator’s).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p14-regulators-curly-apostrophe",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 14,
+    "old": "from the switching regulator's output",
+    "new": "from the switching regulator’s output",
+    "evidence": "PDF p14 prints 'regulator’s' with a curly apostrophe (pdftotext).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p14-fig1-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 14,
+    "old": "![Figure 1: Feedback Components. A block diagram of the LTC3315A buck switching regulator. The output pin (VOUT) is connected to a resistor divider consisting of R2 and R1. R2 is connected between VOUT and the feedback pin (FB). R1 is connected between the FB pin and ground. An optional phase lead capacitor CFF is connected in parallel with R1. The output pin is also connected to the output capacitor COUT, which is connected to ground. The feedback pin is also connected to ground. The diagram is labeled 3315ab F01.](",
+    "new": "![Figure 1: Feedback Components. A block labeled BUCK SWITCHING REGULATOR with V<sub>OUT</sub> and FB pins. V<sub>OUT</sub> is connected to a resistor divider consisting of R2 and R1. R2 is connected between V<sub>OUT</sub> and the feedback pin (FB). R1 is connected between the FB pin and ground. An optional phase lead capacitor C<sub>FF</sub> (drawn dashed, labeled (OPTIONAL)) is connected in parallel with R2, between V<sub>OUT</sub> and FB. V<sub>OUT</sub> is also connected to the output capacitor C<sub>OUT</sub>, which is connected to ground.](",
+    "evidence": "PDF p14 Figure 1 (render): C_FF is connected across R2 (V_OUT to FB), not across R1; FB is not connected to ground (only through R1); the block is labeled 'BUCK SWITCHING REGULATOR'. 'The diagram is labeled 3315ab F01' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p14-fig1-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 14,
+    "old": "\nFigure 1: Feedback Components. A block diagram of the LTC3315A buck switching regulator. The output pin (VOUT) is connected to a resistor divider consisting of R2 and R1. R2 is connected between VOUT and the feedback pin (FB). R1 is connected between the FB pin and ground. An optional phase lead capacitor CFF is connected in parallel with R1. The output pin is also connected to the output capacitor COUT, which is connected to ground. The feedback pin is also connected to ground. The diagram is labeled 3315ab F01.\n",
+    "new": "\nFigure 1: Feedback Components. A block labeled BUCK SWITCHING REGULATOR with V<sub>OUT</sub> and FB pins. V<sub>OUT</sub> is connected to a resistor divider consisting of R2 and R1. R2 is connected between V<sub>OUT</sub> and the feedback pin (FB). R1 is connected between the FB pin and ground. An optional phase lead capacitor C<sub>FF</sub> (drawn dashed, labeled (OPTIONAL)) is connected in parallel with R2, between V<sub>OUT</sub> and FB. V<sub>OUT</sub> is also connected to the output capacitor C<sub>OUT</sub>, which is connected to ground.\n\n3315ab F01\n",
+    "evidence": "PDF p14 Figure 1 (render): C_FF is connected across R2 (V_OUT to FB), not across R1; FB is not connected to ground (only through R1); the block is labeled 'BUCK SWITCHING REGULATOR'. 'The diagram is labeled 3315ab F01' was AI text. Drawing number '3315ab F01' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p14-fig1-caption-bold",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 14,
+    "old": "\n\nFigure 1. Feedback Components\n",
+    "new": "\n\n**Figure 1. Feedback Components**\n",
+    "evidence": "PDF p14 prints the caption 'Figure 1. Feedback Components' in bold (render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
