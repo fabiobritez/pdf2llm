@@ -23653,5 +23653,159 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p40-dyy-outline-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 40,
+    "old": "The figure shows the mechanical specifications for the SOT-23-THIN package. It includes a top view, a side view, and a detail view (DETAIL A). Dimensions are provided in millimeters, with some values in parentheses for reference. The top view shows a 4-pin package with a body width of 2.1 mm (1.9 mm reference) and a total width of 3.36 mm (3.16 mm reference). The pin pitch is 1.6 mm (1.5 mm reference). The side view shows a maximum height of 1.1 mm and a maximum stand-off height of 0.25 mm. The detail view shows the lead profile with a 0°-8° angle and a 0.63 mm (0.33 mm reference) length from the body to the lead tip. The drawing also includes a datum reference frame and a surface finish symbol.",
+    "new": "The figure shows the mechanical specifications for the DYY0016A SOT-23-THIN 16-pin package (description written from the PDF drawing, values in mm as printed, max over min). It includes a top view, a side view, a lead view and a detail view (DETAIL A TYP). Top view: pins 1-8 on the left (pin 1 at the top), 9-16 on the right (pin 16 at the top), PIN 1 INDEX AREA at the top left; lead tip to lead tip 3.36/3.16; body length 4.3/4.1 (NOTE 3, datum A); body width 2.1/1.9 (datum B); pitch 14X 0.5; first-to-last lead span 2X 3.5 (basic); lead width 16X 0.3/0.11 with position tolerance 0.1 (M) C A B. Side views: SEATING PLANE (datum C), surface profile 0.1 C, height 1.1 MAX, body draft 4X 0° - 15° and 4X 4° - 15°, lead thickness 0.2/0.08 TYP. DETAIL A: 0.25 GAUGE PLANE, standoff 0.1/0.0, foot length 0.63/0.33, foot angle 0°- 8°.",
+    "evidence": "PDF p40 DYY0016A outline: a 16-pin package (the old text said '4-pin'), pitch 0.5 (14X), not '1.6 mm (1.5 mm reference)'; min/max pairs were given as 'value (reference)'; 0.25 is the gauge plane, not a 'maximum stand-off' (standoff 0.1/0.0); the body length 4.3/4.1, the 2X 3.5 span, the 16X 0.3/0.11 lead width and the lead thickness were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p41-dyy-land-pattern-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 41,
+    "old": "Dimensions include: 16X (1.05) for the pitch between the first two pads in a column; 16X (0.3) for the pitch between the first two pads in a column; 14X (0.5) for the pitch between the center pad and the pad next to it; (R0.05) TYP for the corner radius; and (3) for the distance between the centerlines of the two columns. Pin numbers 1, 8, 9, and 16 are indicated at the corners of the pads.](",
+    "new": "Dimensions (as printed, in mm) include: 16X (1.05) pad length; 16X (0.3) pad width; 14X (0.5) pad pitch; (R0.05) TYP corner radius; and (3) for the distance between the centerlines of the two columns. Pad 1 is at the top and 8 at the bottom of the left column, 16 at the top and 9 at the bottom of the right column.](",
+    "evidence": "PDF p41 DYY0016A land pattern: (1.05) is the pad length and (0.3) the pad width (both described as a pitch before), (0.5) the pad pitch.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p41-dyy-land-pattern-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 41,
+    "old": "Dimensions include: 16X (1.05) for the pitch between the first two pads in a column; 16X (0.3) for the pitch between the first two pads in a column; 14X (0.5) for the pitch between the center pad and the pad next to it; (R0.05) TYP for the corner radius; and (3) for the distance between the centerlines of the two columns. Pin numbers 1, 8, 9, and 16 are indicated at the corners of the pads.\n",
+    "new": "Dimensions (as printed, in mm) include: 16X (1.05) pad length; 16X (0.3) pad width; 14X (0.5) pad pitch; (R0.05) TYP corner radius; and (3) for the distance between the centerlines of the two columns. Pad 1 is at the top and 8 at the bottom of the left column, 16 at the top and 9 at the bottom of the right column.\n",
+    "evidence": "PDF p41 DYY0016A land pattern: (1.05) is the pad length and (0.3) the pad width (both described as a pitch before), (0.5) the pad pitch. Same as -alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p41-dyy-solder-mask-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 41,
+    "old": "The left diagram, labeled 'NON- SOLDER MASK DEFINED (PREFERRED)', shows a green pad with a blue 'SOLDER MASK OPENING' around it and a black 'METAL' layer on top. The right diagram, labeled 'SOLDER MASK DEFINED', shows a green pad with a dashed blue 'SOLDER MASK OPENING' around it and a black 'METAL UNDER SOLDER MASK' layer on top.](",
+    "new": "The left diagram, labeled 'NON- SOLDER MASK DEFINED (PREFERRED)', shows the pad 'METAL' (blue outline) inside a larger green 'SOLDER MASK OPENING'. The right diagram, labeled 'SOLDER MASK DEFINED', shows the green 'SOLDER MASK OPENING' inside the blue dashed 'METAL UNDER SOLDER MASK'. No clearance values are printed.](",
+    "evidence": "PDF p41 SOLDER MASK DETAILS: blue = metal (dashed blue = metal under solder mask), green = solder mask opening; there is no black metal layer.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p41-dyy-solder-mask-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 41,
+    "old": "The left diagram, labeled 'NON- SOLDER MASK DEFINED (PREFERRED)', shows a green pad with a blue 'SOLDER MASK OPENING' around it and a black 'METAL' layer on top. The right diagram, labeled 'SOLDER MASK DEFINED', shows a green pad with a dashed blue 'SOLDER MASK OPENING' around it and a black 'METAL UNDER SOLDER MASK' layer on top.\n",
+    "new": "The left diagram, labeled 'NON- SOLDER MASK DEFINED (PREFERRED)', shows the pad 'METAL' (blue outline) inside a larger green 'SOLDER MASK OPENING'. The right diagram, labeled 'SOLDER MASK DEFINED', shows the green 'SOLDER MASK OPENING' inside the blue dashed 'METAL UNDER SOLDER MASK'. No clearance values are printed.\n",
+    "evidence": "PDF p41 SOLDER MASK DETAILS: blue = metal (dashed blue = metal under solder mask), green = solder mask opening; there is no black metal layer. Same as -alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p42-dyy-stencil-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 42,
+    "old": "The diagram shows two columns of rectangular apertures. The left column is labeled with pin numbers 1, 8, and (R0.05) TYP. The right column is labeled with pin numbers 16, 9, and SYMM. Dimension lines indicate 16X (1.05) for the pitch between columns, 16X (0.3) for the pitch between rows, and 14X (0.5) for the pitch between rows. A center line is marked SYMM with a centerline symbol. A dimension (3) is shown between the columns.](",
+    "new": "The diagram shows two columns of eight rectangular apertures: 1 (top) to 8 (bottom) on the left, 16 (top) to 9 (bottom) on the right. Dimension lines (as printed, in mm) indicate 16X (1.05) aperture length, 16X (0.3) aperture width, 14X (0.5) pitch and (R0.05) TYP corner radius. Center lines are marked SYMM. A dimension (3) is shown between the column centerlines.](",
+    "evidence": "PDF p42 DYY0016A stencil: (1.05) is the aperture length and (0.3) the aperture width (the old text called them pitches), and (R0.05) TYP / SYMM are labels, not pin numbers.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p42-dyy-stencil-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 42,
+    "old": "The diagram shows two columns of rectangular apertures. The left column is labeled with pin numbers 1, 8, and (R0.05) TYP. The right column is labeled with pin numbers 16, 9, and SYMM. Dimension lines indicate 16X (1.05) for the pitch between columns, 16X (0.3) for the pitch between rows, and 14X (0.5) for the pitch between rows. A center line is marked SYMM with a centerline symbol. A dimension (3) is shown between the columns.\n",
+    "new": "The diagram shows two columns of eight rectangular apertures: 1 (top) to 8 (bottom) on the left, 16 (top) to 9 (bottom) on the right. Dimension lines (as printed, in mm) indicate 16X (1.05) aperture length, 16X (0.3) aperture width, 14X (0.5) pitch and (R0.05) TYP corner radius. Center lines are marked SYMM. A dimension (3) is shown between the column centerlines.\n",
+    "evidence": "PDF p42 DYY0016A stencil: (1.05) is the aperture length and (0.3) the aperture width (the old text called them pitches), and (R0.05) TYP / SYMM are labels, not pin numbers. Same as -alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p40-dyy-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 40,
+    "old": "{39}------------------------------------------------\n\n![Technical drawing of SOT-23-THIN package outline",
+    "new": "{39}------------------------------------------------\n\n#### PACKAGE OUTLINE\n\nDYY0016A\n\n**SOT-23-THIN - 1.1 mm max height**\n\nPLASTIC SMALL OUTLINE\n\n![Technical drawing of SOT-23-THIN package outline",
+    "evidence": "PDF p40 title block 'DYY0016A / PACKAGE OUTLINE / SOT-23-THIN - 1.1 mm max height / PLASTIC SMALL OUTLINE' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p41-dyy-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 41,
+    "old": "{40}------------------------------------------------\n\n![LAND PATTERN EXAMPLE diagram showing a 16-pin SOT-23-THIN",
+    "new": "{40}------------------------------------------------\n\n#### EXAMPLE BOARD LAYOUT\n\nDYY0016A\n\n**SOT-23-THIN - 1.1 mm max height**\n\nPLASTIC SMALL OUTLINE\n\n![LAND PATTERN EXAMPLE diagram showing a 16-pin SOT-23-THIN",
+    "evidence": "PDF p41 title block 'DYY0016A / EXAMPLE BOARD LAYOUT / SOT-23-THIN - 1.1 mm max height / PLASTIC SMALL OUTLINE' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p42-dyy-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 42,
+    "old": "{41}------------------------------------------------\n\n![Solder paste stencil design diagram for SOT-23-THIN",
+    "new": "{41}------------------------------------------------\n\n#### EXAMPLE STENCIL DESIGN\n\nDYY0016A\n\n**SOT-23-THIN - 1.1 mm max height**\n\nPLASTIC SMALL OUTLINE\n\n![Solder paste stencil design diagram for SOT-23-THIN",
+    "evidence": "PDF p42 title block 'DYY0016A / EXAMPLE STENCIL DESIGN / SOT-23-THIN - 1.1 mm max height / PLASTIC SMALL OUTLINE' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p41-dyy-notes-6-7-numbered",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 41,
+    "old": "- 6. Publication IPC-7351 may have alternate designs.\n- 7. Solder mask tolerances",
+    "new": "6. Publication IPC-7351 may have alternate designs.\n7. Solder mask tolerances",
+    "evidence": "PDF p41: notes 6 and 7 are numbered notes, not bullets.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p42-dyy-notes-8-9-numbered",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 42,
+    "old": "- 8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate design recommendations.\n- 9. Board assembly site may have different recommendations for stencil design.\n\n{42}",
+    "new": "8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate design recommendations.\n9. Board assembly site may have different recommendations for stencil design.\n\n{42}",
+    "evidence": "PDF p42: notes 8 and 9 are numbered notes, not bullets.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
