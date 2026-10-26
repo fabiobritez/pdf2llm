@@ -10705,5 +10705,385 @@
       "pdftotext"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "max31730-p9-curly-apostrophe",
+    "file": "output/max31730/max31730.md",
+    "page": 9,
+    "old": "second byte's contents",
+    "new": "second byte’s contents",
+    "evidence": "PDF p9 (PyMuPDF text): 'byte’s' with U+2019.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p10-fig1-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 10,
+    "old": "![](img/7801d00a216dc4dc8a7d210dcb5fe3c5_img.jpg)",
+    "new": "![I2C/SMBus format diagrams (description written from the PDF drawing; the frame fields are transcribed in the tables below). Shaded cells are slave transmissions: every ACK in the WRITE-BYTE, MULTIPLE WRITE-BYTE and SEND-BYTE formats; in the READ-BYTE format the three ACKs (after WR, REGISTER and RD) and DATA; in the MULTIPLE READ-BYTE format the ACKs after WR, REGISTER and RD and every DATA byte (the ACKs between data bytes and the final /// are not shaded); in the RECEIVE-BYTE format ACK and DATA.](img/7801d00a216dc4dc8a7d210dcb5fe3c5_img.jpg)",
+    "evidence": "PDF p10 Figure 1 (render): the image had empty alt text, and which frame cells are shaded (SHADED = SLAVE TRANSMISSION per the legend) is visible only in the drawing; the md tables cannot show it. Shading listed from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-fig2-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": "![Figure 2. SMBus/I²C Write Timing Diagram. This timing diagram illustrates the sequence of events for a write operation on the SMBus. It shows the SCL and SDA lines with various points labeled A through M. Point A is the start condition. Points B, C, and D mark the clocking of the address bits (MSB, LSB, and R/W bit) into the slave. Point E shows the slave pulling the SDA line low. Points F and G mark the clocking of the data bits (ACKnowledge and MSB of data) into the master. Point H shows the master pulling the SDA line low. Points I, J, and K mark the clocking of the data bits (MSB of data and ACKnowledge) into the slave. Point L is the stop condition, and point M is a new start condition. Timing parameters such as tLOW, tHIGH, tSU:STA, tHD:STA, tSU:DAT, tSU:STO, and tBUF are indicated.](",
+    "new": "![Figure 2. SMBus/I²C Write Timing Diagram (description written from the PDF drawing). SCL (top) and SDA (bottom) waveforms with points A through M marked by vertical dashed lines; the meaning of each letter is given in the legend below the drawing. Timing intervals drawn: t_SU:STA and t_HD:STA around the START condition (A), t_LOW and t_HIGH on one SCL period after A, t_SU:DAT from an SDA transition to the next SCL rising edge, t_SU:STO before the STOP condition (L) and t_BUF between the STOP (L) and the new START condition (M).](",
+    "evidence": "PDF p11 Figure 2 (render, 300 dpi crop): the AI text contradicted the printed legend (F and G 'into the master', H 'master pulling SDA low', I-K 'into the slave'); the legend says G/H = MSB/LSB of data clocked into slave, I = slave pulls SDA low, J = acknowledge clocked into master, K = acknowledge clock pulse. Rewritten: letters refer to the legend, timing intervals placed as drawn.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-fig2-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": "\n\nFigure 2. SMBus/I²C Write Timing Diagram. This timing diagram illustrates the sequence of events for a write operation on the SMBus. It shows the SCL and SDA lines with various points labeled A through M. Point A is the start condition. Points B, C, and D mark the clocking of the address bits (MSB, LSB, and R/W bit) into the slave. Point E shows the slave pulling the SDA line low. Points F and G mark the clocking of the data bits (ACKnowledge and MSB of data) into the master. Point H shows the master pulling the SDA line low. Points I, J, and K mark the clocking of the data bits (MSB of data and ACKnowledge) into the slave. Point L is the stop condition, and point M is a new start condition. Timing parameters such as tLOW, tHIGH, tSU:STA, tHD:STA, tSU:DAT, tSU:STO, and tBUF are indicated.\n",
+    "new": "\n\nFigure 2. SMBus/I²C Write Timing Diagram (description written from the PDF drawing). SCL (top) and SDA (bottom) waveforms with points A through M marked by vertical dashed lines; the meaning of each letter is given in the legend below the drawing. Timing intervals drawn: t_SU:STA and t_HD:STA around the START condition (A), t_LOW and t_HIGH on one SCL period after A, t_SU:DAT from an SDA transition to the next SCL rising edge, t_SU:STO before the STOP condition (L) and t_BUF between the STOP (L) and the new START condition (M).\n",
+    "evidence": "PDF p11 Figure 2 (render, 300 dpi crop): the AI text contradicted the printed legend (F and G 'into the master', H 'master pulling SDA low', I-K 'into the slave'); the legend says G/H = MSB/LSB of data clocked into slave, I = slave pulls SDA low, J = acknowledge clocked into master, K = acknowledge clock pulse. Rewritten: letters refer to the legend, timing intervals placed as drawn.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-fig3-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": "![Figure 3. SMBus/I²C Read Timing Diagram. This timing diagram illustrates the sequence of events for a read operation on the SMBus. It shows the SCL and SDA lines with various points labeled A through K. Point A is the start condition. Points B, C, and D mark the clocking of the address bits (MSB, LSB, and R/W bit) into the slave. Point E shows the slave pulling the SDA line low. Points F and G mark the clocking of the data bits (ACKnowledge and MSB of data) into the master. Point H shows the master pulling the SDA line low. Points I, J, and K mark the clocking of the data bits (MSB of data and ACKnowledge) into the slave. Timing parameters such as tLOW, tHIGH, tSU:STA, tHD:STA, tSU:DAT, tHD:DAT, tSU:STO, and tBUF are indicated.](",
+    "new": "![Figure 3. SMBus/I²C Read Timing Diagram (description written from the PDF drawing). SCL (top) and SDA (bottom) waveforms with points A through K marked by vertical dashed lines; the meaning of each letter is given in the legend below the drawing. Timing intervals drawn: t_SU:STA and t_HD:STA around the START condition (A), t_LOW and t_HIGH on one SCL period after A, t_SU:DAT from an SDA transition to the next SCL rising edge, t_HD:DAT from an SCL falling edge to the next SDA transition, t_SU:STO before the STOP condition (J) and t_BUF between the STOP (J) and the new START condition (K).](",
+    "evidence": "PDF p11 Figure 3 (render, 300 dpi crop): the AI text was a copy of the Figure 2 text and contradicted the printed Figure 3 legend (G/H = MSB/LSB of data clocked into master, I = acknowledge clock pulse, J = STOP, K = new START). Rewritten: letters refer to the legend, timing intervals placed as drawn.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-fig3-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": "\n\nFigure 3. SMBus/I²C Read Timing Diagram. This timing diagram illustrates the sequence of events for a read operation on the SMBus. It shows the SCL and SDA lines with various points labeled A through K. Point A is the start condition. Points B, C, and D mark the clocking of the address bits (MSB, LSB, and R/W bit) into the slave. Point E shows the slave pulling the SDA line low. Points F and G mark the clocking of the data bits (ACKnowledge and MSB of data) into the master. Point H shows the master pulling the SDA line low. Points I, J, and K mark the clocking of the data bits (MSB of data and ACKnowledge) into the slave. Timing parameters such as tLOW, tHIGH, tSU:STA, tHD:STA, tSU:DAT, tHD:DAT, tSU:STO, and tBUF are indicated.\n",
+    "new": "\n\nFigure 3. SMBus/I²C Read Timing Diagram (description written from the PDF drawing). SCL (top) and SDA (bottom) waveforms with points A through K marked by vertical dashed lines; the meaning of each letter is given in the legend below the drawing. Timing intervals drawn: t_SU:STA and t_HD:STA around the START condition (A), t_LOW and t_HIGH on one SCL period after A, t_SU:DAT from an SDA transition to the next SCL rising edge, t_HD:DAT from an SCL falling edge to the next SDA transition, t_SU:STO before the STOP condition (J) and t_BUF between the STOP (J) and the new START condition (K).\n",
+    "evidence": "PDF p11 Figure 3 (render, 300 dpi crop): the AI text was a copy of the Figure 2 text and contradicted the printed Figure 3 legend (G/H = MSB/LSB of data clocked into master, I = acknowledge clock pulse, J = STOP, K = new START). Rewritten: letters refer to the legend, timing intervals placed as drawn.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-fig2-rw-overbar",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": " D = R/W BIT CLOCKED INTO SLAVE  \n E = SLAVE PULLS SDA LINE LOW  \n F = ACKNOWLEDGE BIT CLOCKED INTO MASTER  \n G = MSB OF DATA CLOCKED INTO SLAVE",
+    "new": " D = R/<span style=\"text-decoration: overline;\">W</span> BIT CLOCKED INTO SLAVE  \n E = SLAVE PULLS SDA LINE LOW  \n F = ACKNOWLEDGE BIT CLOCKED INTO MASTER  \n G = MSB OF DATA CLOCKED INTO SLAVE",
+    "evidence": "PDF p11 Figure 2 legend (render): 'D = R/W BIT' is printed with an overbar on W (write active low).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-fig3-rw-overbar",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": " D = R/W BIT CLOCKED INTO SLAVE  \n E = SLAVE PULLS SDA LINE LOW  \n F = ACKNOWLEDGE BIT CLOCKED INTO MASTER  \n G = MSB OF DATA CLOCKED INTO MASTER",
+    "new": " D = R/<span style=\"text-decoration: overline;\">W</span> BIT CLOCKED INTO SLAVE  \n E = SLAVE PULLS SDA LINE LOW  \n F = ACKNOWLEDGE BIT CLOCKED INTO MASTER  \n G = MSB OF DATA CLOCKED INTO MASTER",
+    "evidence": "PDF p11 Figure 3 legend (render): 'D = R/W BIT' is printed with an overbar on W.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p11-ara-column-split",
+    "file": "output/max31730/max31730.md",
+    "page": 11,
+    "old": "If the condition that caused the alert still\n\nexists, the device",
+    "new": "If the condition that caused the alert still exists, the device",
+    "evidence": "PDF p11 (render): one paragraph continues from the bottom of the left column ('...alert still') to the top of the right column ('exists, the device...'); the md split it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p12-column-split",
+    "file": "output/max31730/max31730.md",
+    "page": 12,
+    "old": "The temperature data\n\nformat is 12 bits",
+    "new": "The temperature data format is 12 bits",
+    "evidence": "PDF p12 (render): the Temperature Register Format paragraph continues from the bottom of the left column ('The temperature data') to the top of the right column ('format is 12 bits...'); the md split it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p12-table1-caption-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 12,
+    "old": "\nTable 1. Temperature, Reference Temperature, Thermal-Limit Register Definition\n",
+    "new": "\n**Table 1. Temperature, Reference Temperature, Thermal-Limit Register Definition**\n",
+    "evidence": "PDF p12 (render): table title printed bold like Tables 3-8 (bold in the md); the md had it plain.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p12-table2-caption-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 12,
+    "old": "\nTable 2. Temperature Register Data Format\n",
+    "new": "\n**Table 2. Temperature Register Data Format**\n",
+    "evidence": "PDF p12 (render): table title printed bold like Tables 3-8; the md had it plain.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p13-column-split",
+    "file": "output/max31730/max31730.md",
+    "page": 13,
+    "old": "The Reference\n\nTemperature registers can",
+    "new": "The Reference Temperature registers can",
+    "evidence": "PDF p13 (render): the paragraph continues from the bottom of the left column ('The Reference') to the top of the right column ('Temperature registers can...'); the md split it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p13-curly-apostrophe",
+    "file": "output/max31730/max31730.md",
+    "page": 13,
+    "old": "Reference Temperature registers' (40h",
+    "new": "Reference Temperature registers’ (40h",
+    "evidence": "PDF p13 (PyMuPDF text): 'registers’' with U+2019.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p13-heading-level-temperature-channel-enable-register",
+    "file": "output/max31730/max31730.md",
+    "page": 13,
+    "old": "\n#### Temperature Channel Enable Register\n",
+    "new": "\n### Temperature Channel Enable Register\n",
+    "evidence": "PDF p13 (render): 'Temperature Channel Enable Register' has the same bold black subsection style as 'Temperature Register Format' / 'Comparator Mode' (H3 in the md); the md had H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p13-heading-level-highest-temperature-registers",
+    "file": "output/max31730/max31730.md",
+    "page": 13,
+    "old": "\n#### Highest Temperature Registers\n",
+    "new": "\n### Highest Temperature Registers\n",
+    "evidence": "PDF p13 (render): 'Highest Temperature Registers' has the same bold black subsection style as 'Temperature Register Format' / 'Comparator Mode' (H3 in the md); the md had H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p13-heading-level-highest-temperature-enable-register",
+    "file": "output/max31730/max31730.md",
+    "page": 13,
+    "old": "\n#### Highest Temperature Enable Register\n",
+    "new": "\n### Highest Temperature Enable Register\n",
+    "evidence": "PDF p13 (render): 'Highest Temperature Enable Register' has the same bold black subsection style as 'Temperature Register Format' / 'Comparator Mode' (H3 in the md); the md had H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p14-heading-level-thermal-limit-registers",
+    "file": "output/max31730/max31730.md",
+    "page": 14,
+    "old": "\n#### Thermal-Limit Registers\n",
+    "new": "\n### Thermal-Limit Registers\n",
+    "evidence": "PDF p14 (render): this subsection title has the same bold black style as 'Temperature Register Format' / 'Comparator Mode' (H3 in the md); the md had H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p14-heading-level-configuration-register",
+    "file": "output/max31730/max31730.md",
+    "page": 14,
+    "old": "\n#### Configuration Register\n",
+    "new": "\n### Configuration Register\n",
+    "evidence": "PDF p14 (render): this subsection title has the same bold black style as 'Temperature Register Format' / 'Comparator Mode' (H3 in the md); the md had H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p14-column-split",
+    "file": "output/max31730/max31730.md",
+    "page": 14,
+    "old": "or continuous-conversion mode.\n\nIn standby mode, the ADC",
+    "new": "or continuous-conversion mode. In standby mode, the ADC",
+    "evidence": "PDF p14 (render): the left-column line '...standby mode (stop) or continuous-conversion mode.' is fully justified, so the paragraph continues at the top of the right column ('In standby mode, the ADC...'); no paragraph spacing. The md split it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p15-heading-therm-mask",
+    "file": "output/max31730/max31730.md",
+    "page": 15,
+    "old": "#### **<span style=\"text-decoration: overline;\">THERM</span> Mask Register**",
+    "new": "### <span style=\"text-decoration: overline;\">THERM</span> Mask Register",
+    "evidence": "PDF p15 (render): same bold black subsection style as 'Status Register Functions' and the other H3 subsections; the md had a bold H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p15-heading-status-register-functions",
+    "file": "output/max31730/max31730.md",
+    "page": 15,
+    "old": "### **Status Register Functions**",
+    "new": "### Status Register Functions",
+    "evidence": "PDF p15 (render): H3 subsection title like the others; the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p17-curly-apostrophe-1",
+    "file": "output/max31730/max31730.md",
+    "page": 17,
+    "old": "If a remote channel's DXP",
+    "new": "If a remote channel’s DXP",
+    "evidence": "PDF p17 (PyMuPDF text): 'channel’s' with U+2019.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p17-curly-apostrophe-2",
+    "file": "output/max31730/max31730.md",
+    "page": 17,
+    "old": "beginning of each channel's temperature",
+    "new": "beginning of each channel’s temperature",
+    "evidence": "PDF p17 (PyMuPDF text): 'channel’s' with U+2019.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p18-table9-continued-caption-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 18,
+    "old": "\nTable 9. Custom Ideality Factor Register (14h) (continued)\n",
+    "new": "\n**Table 9. Custom Ideality Factor Register (14h) (continued)**\n",
+    "evidence": "PDF p18 (render): table title printed bold like Tables 3-8 (bold in the md); the md had it plain.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p18-table10-caption-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 18,
+    "old": "\nTable 10. Custom Ideality Enable Register (15h)\n",
+    "new": "\n**Table 10. Custom Ideality Enable Register (15h)**\n",
+    "evidence": "PDF p18 (render): table title printed bold like Tables 3-8 (bold in the md); the md had it plain.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p19-fig4-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 19,
+    "old": "![Figure 4: PNP Configuration for use with Beta Compensation. The diagram shows a PNP transistor with its collector connected to ground. The emitter is connected to a node labeled DXN. The base is connected to a node labeled DXP. A capacitor is connected between the DXP and DXN nodes.](",
+    "new": "![Figure 4: PNP Configuration for use with Beta Compensation. The diagram shows a PNP transistor with its collector connected to ground. The emitter is connected to a node labeled DXP. The base is connected to a node labeled DXN. A capacitor is connected between the DXP and DXN nodes.](",
+    "evidence": "PDF p19 Figure 4 (render, 300 dpi crop): the emitter (arrow) goes to DXP and the base to DXN, as the text also says ('bases and emitters connected to DXN_ and DXP_, respectively'); the AI text had them swapped.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p19-fig4-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 19,
+    "old": "\n\nFigure 4: PNP Configuration for use with Beta Compensation. The diagram shows a PNP transistor with its collector connected to ground. The emitter is connected to a node labeled DXN. The base is connected to a node labeled DXP. A capacitor is connected between the DXP and DXN nodes.\n",
+    "new": "\n\nFigure 4: PNP Configuration for use with Beta Compensation. The diagram shows a PNP transistor with its collector connected to ground. The emitter is connected to a node labeled DXP. The base is connected to a node labeled DXN. A capacitor is connected between the DXP and DXN nodes.\n",
+    "evidence": "PDF p19 Figure 4 (render, 300 dpi crop): the emitter (arrow) goes to DXP and the base to DXN, as the text also says ('bases and emitters connected to DXN_ and DXP_, respectively'); the AI text had them swapped.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p19-heading-level-beta-compensation",
+    "file": "output/max31730/max31730.md",
+    "page": 19,
+    "old": "\n#### Beta Compensation\n",
+    "new": "\n### Beta Compensation\n",
+    "evidence": "PDF p19 (render): 'Beta Compensation' has the same bold black subsection style as 'Noise Filter' (H3); the md had H4.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p20-table12-caption-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 20,
+    "old": "\nTable 12. Beta Compensation Values (Registers 1Ah, 1Bh, and1Ch) (Read Only)\n",
+    "new": "\n**Table 12. Beta Compensation Values (Registers 1Ah, 1Bh, and1Ch) (Read Only)**\n",
+    "evidence": "PDF p20 (render): table title printed bold like Tables 3-8 (bold in the md); the md had it plain. 'and1Ch' without a space is as printed.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p20-table13-caption-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 20,
+    "old": "\nTable 13. Filter Enable Register (18h)\n",
+    "new": "\n**Table 13. Filter Enable Register (18h)**\n",
+    "evidence": "PDF p20 (render): table title printed bold like Tables 3-8 (bold in the md); the md had it plain. 'and1Ch' without a space is as printed.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
