@@ -23344,5 +23344,137 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p33-rgy-mechanical-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 33,
+    "old": "The figure shows the mechanical dimensions of the RGY (R-PVQFN-N16) Plastic Quad Flatpack No-Lead package. It includes a top view, a side view, and a bottom view.\n\n**Top View:** Shows a square package with a 16-pin grid. The overall width is 4.15 mm (3.85 mm). The pin 1 index area is indicated by a shaded rectangle. Dimensions include 15, 10, 9, 8, 7, 2, 16, and 1. A callout 'Pin 1 Index Area Top and Bottom' points to the shaded area. A callout 'F' points to the top edge.\n\n**Side View:** Shows the package profile. The height is 1.00 mm (0.80 mm). The lead frame height is 0.20 mm nominal. The seating plane is indicated. A callout 'C' points to the seating plane. A callout 'B' points to the top edge. A callout 'A' points to the top edge. A callout 'F' points to the top edge.\n\n**Bottom View:** Shows the package from below. The thermal pad is indicated. Dimensions include 2.50, 0.50, 1.50, 16X 0.50/0.30, 16X 0.30/0.18, 15, 10, 8, 9, 1, and 16. A callout 'C' points to the seating plane. A callout 'B' points to the top edge. A callout 'A' points to the top edge. A callout 'F' points to the top edge.\n\n",
+    "new": "The figure shows the mechanical dimensions of the RGY (R-PVQFN-N16) Plastic Quad Flatpack No-Lead package (description written from the PDF drawing; dimensions in mm with comma decimals as printed, max over min). It includes a top view, a side view, and a bottom view.\n\n**Top View:** Body 4,15/3,85 wide (datum A) by 3,65/3,35 long (datum B). Pins 15 to 10 along the top edge, 9 and 8 on the right, 7 to 2 along the bottom edge, 1 and 16 on the left. The hatched lower-left quarter is the 'Pin 1 Index Area Top and Bottom' (note F).\n\n**Side View:** Height 1,00/0,80; standoff 0,05/0,00 'Seating Height'; '0,20 Nominal Lead Frame'; Seating Plane (datum C); surface profile 0,08 C.\n\n**Bottom View:** Pins 2 to 7 along the top edge, 8 and 9 on the right, 10 to 15 along the bottom edge, 1 and 16 on the left. Pitch 0,50; span 2,50 (pins 2 to 7) and 1,50 (pins 1 to 16); terminal length 16X 0,50/0,30; terminal width 16X 0,30/0,18 with position tolerances 0,10 (M) C A B and 0,05 (M) C. The central THERMAL PAD is marked 'SIZE AND SHAPE SHOWN ON SEPRATE SHEET' (sic).\n\n",
+    "evidence": "PDF p33 RGY mechanical drawing (vector, no text layer): the old text called the body square, gave only one body dimension (4,15/3,85), listed pin numbers as 'dimensions', invented callouts 'F/A/B point to the top edge', and omitted the 3,65/3,35 length, the 0,05/0,00 seating height, the 0,08 C profile and the pin numbering. 'SEPRATE' is the drawing's spelling.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p33-rgy-notes-letters",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 33,
+    "old": "- NOTES:\n- All linear dimensions are in millimeters. Dimensioning and tolerancing per ASME Y14.5M-1994.\n- This drawing is subject to change without notice.\n- QFN (Quad Flatpack No-Lead) package configuration.\n- The package thermal pad must be soldered to the board for thermal and mechanical performance.\n- See the additional figure in the Product Data Sheet for details regarding the exposed thermal pad features and dimensions.\n- Pin 1 identifiers are located on both top and bottom of the package and within the zone indicated. The Pin 1 identifiers are either a molded, marked, or metal feature.\n- Package complies to JEDEC MO-241 variation BA.\n",
+    "new": "NOTES:\n\n- A. All linear dimensions are in millimeters. Dimensioning and tolerancing per ASME Y14.5M-1994.\n- B. This drawing is subject to change without notice.\n- C. QFN (Quad Flatpack No-Lead) package configuration.\n- D. The package thermal pad must be soldered to the board for thermal and mechanical performance.\n- E. See the additional figure in the Product Data Sheet for details regarding the exposed thermal pad features and dimensions.\n- F. Pin 1 identifiers are located on both top and bottom of the package and within the zone indicated. The Pin 1 identifiers are either a molded, marked, or metal feature.\n- G. Package complies to JEDEC MO-241 variation BA.\n",
+    "evidence": "PDF p33: the notes are lettered A. to G. (F is drawn inside a triangle and referenced from the 'Pin 1 Index Area' callout); 'NOTES:' is a label, not a list item. The md had unlettered bullets, so the drawing's reference to note F could not be followed.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p33-rgy-mechanical-data-title",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 33,
+    "old": "{32}------------------------------------------------\n\nRGY (R-PVQFN-N16)\n",
+    "new": "{32}------------------------------------------------\n\n#### MECHANICAL DATA\n\nRGY (R-PVQFN-N16)\n",
+    "evidence": "PDF p33 page title 'MECHANICAL DATA' was missing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p34-rgy-thermal-pad-title",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 34,
+    "old": "{33}------------------------------------------------\n\nRGY (R-PVQFN-N16)\n",
+    "new": "{33}------------------------------------------------\n\n#### THERMAL PAD MECHANICAL DATA\n\nRGY (R-PVQFN-N16)\n",
+    "evidence": "PDF p34 page title 'THERMAL PAD MECHANICAL DATA' was missing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p34-rgy-thermal-pad-shape-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 34,
+    "old": "The package is a square with leads extending from the sides. The top leads are numbered 2 and 7, and the bottom leads are numbered 15 and 10. The left leads are numbered 1 and 16, and the right leads are numbered 8 and 9. A central crosshair indicates the center of the package. The exposed thermal pad is the central square area. Dimension lines indicate the width of the exposed thermal pad as 2,55 ± 0,10 mm and the height of the exposed thermal pad as 2,05 ± 0,10 mm. An arrow points to the central square area with the label 'Exposed Thermal Pad'.](",
+    "new": "The package outline is rectangular, with no-lead terminals along its edges. The top terminals are numbered 2 and 7, and the bottom terminals are numbered 15 and 10. The left terminals are numbered 1 and 16, and the right terminals are numbered 8 and 9. A central crosshair indicates the center of the package. The exposed thermal pad is the central rectangular area. Dimension lines indicate the width of the exposed thermal pad as 2,55 ± 0,10 mm and the height of the exposed thermal pad as 2,05 ± 0,10 mm. An arrow points to the central area with the label 'Exposed Thermal Pad'.](",
+    "evidence": "PDF p34: QFN terminals, not leads, and the outline and thermal pad are rectangles (2,55 x 2,05), not squares.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p34-rgy-thermal-pad-shape-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 34,
+    "old": "The package is a square with leads extending from the sides. The top leads are numbered 2 and 7, and the bottom leads are numbered 15 and 10. The left leads are numbered 1 and 16, and the right leads are numbered 8 and 9. A central crosshair indicates the center of the package. The exposed thermal pad is the central square area. Dimension lines indicate the width of the exposed thermal pad as 2,55 ± 0,10 mm and the height of the exposed thermal pad as 2,05 ± 0,10 mm. An arrow points to the central square area with the label 'Exposed Thermal Pad'.\n",
+    "new": "The package outline is rectangular, with no-lead terminals along its edges. The top terminals are numbered 2 and 7, and the bottom terminals are numbered 15 and 10. The left terminals are numbered 1 and 16, and the right terminals are numbered 8 and 9. A central crosshair indicates the center of the package. The exposed thermal pad is the central rectangular area. Dimension lines indicate the width of the exposed thermal pad as 2,55 ± 0,10 mm and the height of the exposed thermal pad as 2,05 ± 0,10 mm. An arrow points to the central area with the label 'Exposed Thermal Pad'.\n",
+    "evidence": "Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p35-rgy-land-pattern-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 35,
+    "old": "The figure includes four diagrams: 1. Example Board Layout showing a 4.80 x 4.30 mm footprint with 16 pins (0.85 x 16 PL) and a central thermal pad (2.55 x 2.05 mm). 2. Example Stencil Design for 0.125mm thickness showing a 4.75 x 4.25 mm footprint with various pad sizes (0.82, 1.07, 0.30 x 2 PL, 0.80 x 16 PL, 0.23 x 16 PL) and a 67% solder coverage note. 3. Non Solder Mask Defined Pad showing a circular pad with dimensions 0.08, 0.85, 0.28, 0.07, and R0.14. 4. Example Via Layout Design showing a 1.00 x 1.00 mm square with 6 vias of 0.3 mm diameter.](",
+    "new": "The figure includes four diagrams (description written from the PDF drawing): 1. Example Board Layout showing a 4.80 x 4.30 mm footprint (outer pad extents; 2.60 and 1.50 between pad rows) with 16 pads 0.85 long (0.85 X 16 PL.) and 0.28 wide (0.28 X 16 PL.) at 0.50 pitch (10x0,50), and a central thermal pad (2.55 x 2.05 mm, Note D). 2. Example Stencil Design for 0.125mm thickness showing a 4.75 x 4.25 mm footprint (2.65, 1.50) with 0.80 x 16 PL. by 0.23 x 16 PL. apertures and the center thermal pad split into four 0.82 x 1.07 apertures separated by 0.30 (0,30 x 2 PL), with the note '67% solder coverage by printed area on center thermal pad'. 3. Non Solder Mask Defined Pad detail: rounded-end pads with R0.14 ends, 0.85 long and 0.28 wide, 0.08 between solder mask openings, solder mask opening 0.07 All Around (Example Solder Mask Opening, Note F; Example Pad Geometry, Note C). 4. Example Via Layout Design (may vary depending on constraints, Note D, F): vias 6xØ0,3 on a 1.00 x 1.00 mm grid in the thermal pad. Values written with dots here; the drawing uses decimal commas.](",
+    "evidence": "PDF p35 RGY land pattern data: 0.85 is the pad length and 0.28 the pad width (16 PL.), the pads are rounded-end, not circular, the stencil thermal pad is four 0.82 x 1.07 windows separated by 0.30, and 1.00 x 1.00 is the via grid, not a square outline.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p35-rgy-land-pattern-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 35,
+    "old": "The figure includes four diagrams: 1. Example Board Layout showing a 4.80 x 4.30 mm footprint with 16 pins (0.85 x 16 PL) and a central thermal pad (2.55 x 2.05 mm). 2. Example Stencil Design for 0.125mm thickness showing a 4.75 x 4.25 mm footprint with various pad sizes (0.82, 1.07, 0.30 x 2 PL, 0.80 x 16 PL, 0.23 x 16 PL) and a 67% solder coverage note. 3. Non Solder Mask Defined Pad showing a circular pad with dimensions 0.08, 0.85, 0.28, 0.07, and R0.14. 4. Example Via Layout Design showing a 1.00 x 1.00 mm square with 6 vias of 0.3 mm diameter.\n",
+    "new": "The figure includes four diagrams (description written from the PDF drawing): 1. Example Board Layout showing a 4.80 x 4.30 mm footprint (outer pad extents; 2.60 and 1.50 between pad rows) with 16 pads 0.85 long (0.85 X 16 PL.) and 0.28 wide (0.28 X 16 PL.) at 0.50 pitch (10x0,50), and a central thermal pad (2.55 x 2.05 mm, Note D). 2. Example Stencil Design for 0.125mm thickness showing a 4.75 x 4.25 mm footprint (2.65, 1.50) with 0.80 x 16 PL. by 0.23 x 16 PL. apertures and the center thermal pad split into four 0.82 x 1.07 apertures separated by 0.30 (0,30 x 2 PL), with the note '67% solder coverage by printed area on center thermal pad'. 3. Non Solder Mask Defined Pad detail: rounded-end pads with R0.14 ends, 0.85 long and 0.28 wide, 0.08 between solder mask openings, solder mask opening 0.07 All Around (Example Solder Mask Opening, Note F; Example Pad Geometry, Note C). 4. Example Via Layout Design (may vary depending on constraints, Note D, F): vias 6xØ0,3 on a 1.00 x 1.00 mm grid in the thermal pad. Values written with dots here; the drawing uses decimal commas.\n",
+    "evidence": "PDF p35 RGY land pattern data: 0.85 is the pad length and 0.28 the pad width (16 PL.), the pads are rounded-end, not circular, the stencil thermal pad is four 0.82 x 1.07 windows separated by 0.30, and 1.00 x 1.00 is the via grid, not a square outline. Same as -alt.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p35-rgy-notes-letters-a-d",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 35,
+    "old": "- NOTES:\n- All linear dimensions are in millimeters.\n- This drawing is subject to change without notice.\n- Publication IPC-7351 is recommended for alternate designs.\n- This package is designed",
+    "new": "NOTES:\n\n- A. All linear dimensions are in millimeters.\n- B. This drawing is subject to change without notice.\n- C. Publication IPC-7351 is recommended for alternate designs.\n- D. This package is designed",
+    "evidence": "PDF p35: the notes are lettered A. to F. and the drawing refers to Note C, D, E and F; the md had unlettered bullets.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p35-rgy-notes-letters-e-f",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 35,
+    "old": "- Laser cutting apertures with trapezoidal walls and also rounding corners will offer better paste release. Customers should contact their board assembly site for stencil design recommendations. Refer to IPC 7525 for stencil design considerations.\n- Customers should contact their board fabrication site for minimum solder mask web tolerances between signal pads.\n",
+    "new": "- E. Laser cutting apertures with trapezoidal walls and also rounding corners will offer better paste release. Customers should contact their board assembly site for stencil design recommendations. Refer to IPC 7525 for stencil design considerations.\n- F. Customers should contact their board fabrication site for minimum solder mask web tolerances between signal pads.\n",
+    "evidence": "PDF p35: notes E. and F. lettered (see -a-d).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p35-rgy-land-pattern-data-title",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 35,
+    "old": "{34}------------------------------------------------\n\nRGY (R-PVQFN-N16)\n",
+    "new": "{34}------------------------------------------------\n\n#### LAND PATTERN DATA\n\nRGY (R-PVQFN-N16)\n",
+    "evidence": "PDF p35 page title 'LAND PATTERN DATA' was missing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
