@@ -19492,5 +19492,612 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p11-timing-diagram-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 11,
+    "old": "![Timing diagram for PMBUS showing SDA and SCL signals with various timing parameters such as t_f, t_LOW, t_r, t_HD(STA), t_HD(DAT), t_HIGH, t_SU(DAT), t_SU(STA), t_SU(STO), t_SP, tBUF, and t_BUF. It also marks START CONDITION, REPEATED START CONDITION, and STOP CONDITION.](",
+    "new": "![PMBus timing diagram (description written from the PDF drawing). Two waveforms, SDA (top) and SCL (bottom); dashed boxes mark, from left to right, START CONDITION, REPEATED START CONDITION, STOP CONDITION and START CONDITION. Labeled intervals: t_f (SDA fall at the first start); t_HD(STA) (from SDA falling to SCL falling at the start); t_LOW (SCL low); t_r (SCL rise); t_HD(DAT) (from SCL falling to the SDA data change); t_SU(DAT) (from the SDA data change to SCL rising); t_HIGH (SCL high); t_f (SCL fall); t_SU(STA) (from SCL rising to SDA falling at the repeated start); t_HD(STA) (from SDA falling to SCL falling after the repeated start); t_SP (a narrow spike on SDA and SCL that is suppressed); t_SU(STO) (from SCL rising to SDA rising at the stop); t_r (SDA rise at the stop); t_BUF (from the stop to the next start).](",
+    "evidence": "PDF p11 (render + 220 dpi crop): the AI description listed wrong conditions (START as SDA falling while SCL is low, 'DATA: SDA is high', STOP as SDA falling) and the alt text listed t_BUF twice ('tBUF, and t_BUF'). Rewritten from the drawing; the wrong bullet list was removed.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p11-timing-diagram-bullets-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 11,
+    "old": "The timing diagram illustrates the PMBUS protocol for the LTC2975. It shows the SDA and SCL signals with the following parameters:\n\n- START CONDITION:** SDA transitions from high to low while SCL is low ( $t_f$ ), or SCL transitions from low to high while SDA is low ( $t_r$ ).\n- START CONDITION:** SDA is low while SCL transitions from low to high ( $t_{HD(STA)}$ ).\n- LOW LEVEL:** SCL is low for a minimum duration  $t_{LOW}$ .\n- RISE TIME:** SCL rises from low to high ( $t_r$ ).\n- DATA:** SDA is high for a minimum duration  $t_{HD(DAT)}$  while SCL is high.\n- HIGH LEVEL:** SCL is high for a minimum duration  $t_{HIGH}$ .\n- FALL TIME:** SCL falls from high to low ( $t_f$ ).\n- SETUP TIME (DATA):** SDA is high for a minimum duration  $t_{SU(DAT)}$  before SCL falls.\n- SETUP TIME (START):** SDA is high for a minimum duration  $t_{SU(STA)}$  before SCL rises.\n- REPEATED START CONDITION:** SDA transitions from high to low while SCL is high ( $t_{HD(STA)}$ ), or SCL transitions from high to low while SDA is high ( $t_{SP}$ ).\n- SETUP TIME (STOP):** SDA is high for a minimum duration  $t_{SU(STO)}$  before SCL falls.\n- STOP CONDITION:** SDA transitions from high to low while SCL is high ( $t_r$ ), or SCL transitions from high to low while SDA is high ( $t_{BUF}$ ).\n- START CONDITION:** SDA is low while SCL transitions from low to high ( $t_{BUF}$ ).\n\n",
+    "new": "",
+    "evidence": "PDF p11 (render + 220 dpi crop): the AI description listed wrong conditions (START as SDA falling while SCL is low, 'DATA: SDA is high', STOP as SDA falling) and the alt text listed t_BUF twice ('tBUF, and t_BUF'). Rewritten from the drawing; the wrong bullet list was removed.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p11-timing-diagram-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 11,
+    "old": "2975 TD\n\nTiming diagram for PMBUS showing SDA and SCL signals with various timing parameters such as t\\_f, t\\_LOW, t\\_r, t\\_HD(STA), t\\_HD(DAT), t\\_HIGH, t\\_SU(DAT), t\\_SU(STA), t\\_SU(STO), t\\_SP, tBUF, and t\\_BUF. It also marks START CONDITION, REPEATED START CONDITION, and STOP CONDITION.\n",
+    "new": "2975 TD\n\nPMBus timing diagram (description written from the PDF drawing). Two waveforms, SDA (top) and SCL (bottom); dashed boxes mark, from left to right, START CONDITION, REPEATED START CONDITION, STOP CONDITION and START CONDITION. Labeled intervals: t\\_f (SDA fall at the first start); t\\_HD(STA) (from SDA falling to SCL falling at the start); t\\_LOW (SCL low); t\\_r (SCL rise); t\\_HD(DAT) (from SCL falling to the SDA data change); t\\_SU(DAT) (from the SDA data change to SCL rising); t\\_HIGH (SCL high); t\\_f (SCL fall); t\\_SU(STA) (from SCL rising to SDA falling at the repeated start); t\\_HD(STA) (from SDA falling to SCL falling after the repeated start); t\\_SP (a narrow spike on SDA and SCL that is suppressed); t\\_SU(STO) (from SCL rising to SDA rising at the stop); t\\_r (SDA rise at the stop); t\\_BUF (from the stop to the next start).\n",
+    "evidence": "Same as ltc2975-p11-timing-diagram-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p12-g01-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "![Line graph showing Reference Output Voltage (V) vs Temperature (°C) for three typical parts. The y-axis ranges from 1.2304 to 1.2324 V. The x-axis ranges from -50 to 100 °C. Three curves (red, blue, green) show a slight increase in voltage with temperature, with the red curve being the highest and the green curve the lowest.](",
+    "new": "![Line graph showing Reference Output Voltage (V) vs Temperature (°C) for three typical parts. The y-axis ranges from 1.2304 to 1.2324 V. The x-axis ranges from -50 to 100 °C. Three curves (red, blue, green): the red and blue curves lie close together near the top of the scale and the green curve lies well below them; each rises gently, falls to a minimum at high temperature and turns up again at the hot end. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p12 (render): the curves do not 'show a slight increase in voltage with temperature'; they rise, dip at high temperature and turn up again at the end, and the green curve is far below the other two.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g01-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "\nLine graph showing Reference Output Voltage (V) vs Temperature (°C) for three typical parts. The y-axis ranges from 1.2304 to 1.2324 V. The x-axis ranges from -50 to 100 °C. Three curves (red, blue, green) show a slight increase in voltage with temperature, with the red curve being the highest and the green curve the lowest.\n",
+    "new": "\nLine graph showing Reference Output Voltage (V) vs Temperature (°C) for three typical parts. The y-axis ranges from 1.2304 to 1.2324 V. The x-axis ranges from -50 to 100 °C. Three curves (red, blue, green): the red and blue curves lie close together near the top of the scale and the green curve lies well below them; each rises gently, falls to a minimum at high temperature and turns up again at the hot end. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p12-g01-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g04-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "![Histogram showing Error (LSBs) vs READ_VOUT (V). The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The distribution is centered around zero, with a spread of approximately ±2.5 LSBs.](",
+    "new": "![Plot of ADC READ_VOUT INL: ERROR (LSBs) vs READ_VOUT (V), 122µV/LSB. The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The dense, noisy trace forms an arch: near zero at both ends of the range and highest in the middle. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p12 (render): Figure G04 is an INL plot against READ_VOUT, not a histogram, and its trace is an arch above zero; the '±2.5 LSBs' spread was an estimate from the plot.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g04-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "\nHistogram showing Error (LSBs) vs READ\\_VOUT (V). The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The distribution is centered around zero, with a spread of approximately ±2.5 LSBs.\n",
+    "new": "\nPlot of ADC READ\\_VOUT INL: ERROR (LSBs) vs READ\\_VOUT (V), 122µV/LSB. The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The dense, noisy trace forms an arch: near zero at both ends of the range and highest in the middle. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p12-g04-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g05-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "![Histogram showing Error (LSBs) vs READ_VOUT (V). The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The distribution is centered around zero, with a spread of approximately ±1.5 LSBs.](",
+    "new": "![Plot of ADC READ_VOUT DNL: ERROR (LSBs) vs READ_VOUT (V), 122µV/LSB. The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The dense, noisy trace is a band centered on zero across the whole range. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p12 (render): Figure G05 is a DNL plot against READ_VOUT, not a histogram; the '±1.5 LSBs' spread was an estimate from the plot.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g05-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "\nHistogram showing Error (LSBs) vs READ\\_VOUT (V). The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The distribution is centered around zero, with a spread of approximately ±1.5 LSBs.\n",
+    "new": "\nPlot of ADC READ\\_VOUT DNL: ERROR (LSBs) vs READ\\_VOUT (V), 122µV/LSB. The y-axis ranges from -5 to 5 LSBs. The x-axis ranges from 0 to 6 V. The dense, noisy trace is a band centered on zero across the whole range. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p12-g05-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g06-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "![Histogram showing READ_IOUT Error (mA) vs READ_IOUT (A) on a log scale. The y-axis ranges from -75 to 75 mA. The x-axis ranges from 0.001 to 100 A. The error is mostly within ±25 mA for most of the range, but increases significantly at higher currents.](",
+    "new": "![Plot of READ_IOUT ERROR (mA) vs READ_IOUT (A) with a logarithmic x-axis, IOUT_CAL_GAIN = 2.1875mΩ. The y-axis ranges from -75 to 75 mA. The x-axis ranges from 0.001 to 100 A. The error trace stays close to zero at low currents; its spread widens as the current increases and is largest at the highest currents. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p12 (render): Figure G06 is an error plot, not a histogram; the '±25 mA' level was an estimate from the plot.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g06-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "\nHistogram showing READ\\_IOUT Error (mA) vs READ\\_IOUT (A) on a log scale. The y-axis ranges from -75 to 75 mA. The x-axis ranges from 0.001 to 100 A. The error is mostly within ±25 mA for most of the range, but increases significantly at higher currents.\n",
+    "new": "\nPlot of READ\\_IOUT ERROR (mA) vs READ\\_IOUT (A) with a logarithmic x-axis, IOUT\\_CAL\\_GAIN = 2.1875mΩ. The y-axis ranges from -75 to 75 mA. The x-axis ranges from 0.001 to 100 A. The error trace stays close to zero at low currents; its spread widens as the current increases and is largest at the highest currents. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p12-g06-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p12-g06-iout-cal-gain",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "\nIOOUT\\_CAL\\_GAIN = 2.1875mΩ\n",
+    "new": "\nIOUT\\_CAL\\_GAIN = 2.1875mΩ\n",
+    "evidence": "PDF p12 (pdftotext + render): the G06 label reads 'IOUT_CAL_GAIN = 2.1875mΩ'; the md had 'IOOUT_CAL_GAIN'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p12-g08-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "![Line graph showing Input Current (µA) vs VSENSE1 - VSENSEM1 (V). The y-axis ranges from -12 to 15 µA. The x-axis ranges from 0 to 6 V. Two curves are shown: I_VSENSEP1 (red, positive) and I_VSENSEM1 (blue, negative). Both increase linearly with differential voltage.](",
+    "new": "![Line graph showing INPUT CURRENT (µA) vs V_SENSEP1 - V_SENSEM1 (V), VOLTAGE SUPERVISOR LOW RES MODE, V_SENSEM1 = 0V. The y-axis ranges from -12 to 15 µA. The x-axis ranges from 0 to 6 V. Two curves: I_VSENSEP1 (red) rises linearly with the differential voltage; I_VSENSEM1 (blue) starts at zero and falls linearly (becomes more negative).](",
+    "evidence": "PDF p12 (render + pdftotext): the x-axis is V_SENSEP1 - V_SENSEM1 (the alt text had 'VSENSE1'), and the I_VSENSEM1 curve decreases; the alt text said both curves increase.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p12-g08-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "\nLine graph showing Input Current (µA) vs VSENSE1 - VSENSEM1 (V). The y-axis ranges from -12 to 15 µA. The x-axis ranges from 0 to 6 V. Two curves are shown: I\\_VSENSEP1 (red, positive) and I\\_VSENSEM1 (blue, negative). Both increase linearly with differential voltage.\n",
+    "new": "\nLine graph showing INPUT CURRENT (µA) vs V\\_SENSEP1 - V\\_SENSEM1 (V), VOLTAGE SUPERVISOR LOW RES MODE, V\\_SENSEM1 = 0V. The y-axis ranges from -12 to 15 µA. The x-axis ranges from 0 to 6 V. Two curves: I\\_VSENSEP1 (red) rises linearly with the differential voltage; I\\_VSENSEM1 (blue) starts at zero and falls linearly (becomes more negative).\n",
+    "evidence": "Same as ltc2975-p12-g08-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p12-g08-axis-label",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 12,
+    "old": "$V_{SENSE1} - V_{SENSEM1}$  (V)",
+    "new": "$V_{SENSEP1} - V_{SENSEM1}$  (V)",
+    "evidence": "PDF p12 (pdftotext 'VSENSEP1 – VSENSEM1 (V)' + render): the G08 x-axis label is V_SENSEP1 - V_SENSEM1; the md had V_SENSE1.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p13-g10-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**Current Sense Input Current vs Common Mode Voltage**\n\nThis graph shows the input current (I<sub>SENSE1</sub> and I<sub>SENSEM1</sub>) in microamperes versus common mode voltage in volts. The differential input voltage is 0V. The current is relatively stable around 1.0-1.1 µA until 2V, then increases linearly to about 1.4 µA at 6V.\n",
+    "new": "### Current Sense Input Current vs Common Mode Voltage\n\nThis graph shows INPUT CURRENT (µA), 0 to 1.6, versus COMMON MODE VOLTAGE (V), 0 to 6, with DIFFERENTIAL INPUT VOLTAGE = 0V. Two nearly overlapping curves are labeled I<sub>SENSEP1</sub> (red) and I<sub>SENSEM1</sub> (blue): the current first falls to a minimum in the lower part of the voltage range, then rises roughly linearly up to 6V. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): the AI text said the current is 'stable around 1.0-1.1 µA until 2V, then increases linearly to about 1.4 µA' (estimated values; the curves actually dip to a minimum first) and named the curves I_SENSE1/I_SENSEM1; the labels are I_SENSEP1 and I_SENSEM1. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p13-g11-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**Current Sense Differential Input Current vs Differential Input Voltage**\n\nThis graph shows the differential input current in microamperes versus differential input voltage in millivolts, with a common mode voltage (V<sub>CM</sub>) of 2.5V. The current increases linearly from 0 µA at 0 mV to approximately 1.3 µA at 175 mV.\n",
+    "new": "### Current Sense Differential Input Current vs Differential Input Voltage\n\nThis graph shows DIFFERENTIAL INPUT CURRENT (µA), 0 to 1.4, versus DIFFERENTIAL INPUT VOLTAGE (mV), 0 to 175, with V<sub>CM</sub> = 2.5V. A single red curve rises linearly from the origin across the whole range. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): removed the end value 'approximately 1.3 µA at 175 mV' estimated from the curve. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p13-g12-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**Voltage Supervisor Total Unadjusted Error vs Temperature**\n\nThis graph shows the supervisor error as a percentage of reading versus temperature in degrees Celsius. It includes three typical parts: a red line for High Res Mode (V<sub>IN</sub> = 1.5V), a blue line, and a green line. The red line shows the lowest error, staying between -0.05% and 0.25%.\n",
+    "new": "### Voltage Supervisor Total Unadjusted Error vs Temperature\n\nThis graph shows SUPERVISOR ERROR (% OF READING), -0.20 to 0.25, versus TEMPERATURE (°C), -50 to 100, in HIGH RES MODE with V<sub>IN</sub> = 1.5V, for THREE TYPICAL PARTS (red, blue and green curves). All three curves decrease as the temperature increases; the red curve is the highest, the blue curve is in the middle and the green curve is the lowest. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): the AI text described the red line as 'High Res Mode' and 'the lowest error, staying between -0.05% and 0.25%'; the HIGH RES MODE / V_IN = 1.5V label applies to all three parts, the red curve is the highest, and the range was an estimate. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p13-g13-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**Current Supervisor Total Unadjusted Error vs Temperature**\n\nThis graph shows the current supervisor error as a percentage of reading versus temperature in degrees Celsius. It includes two typical parts: a red line for 50mV and a blue line for 20mV. Both show significant variation with temperature, with peaks around 25°C and 100°C.\n",
+    "new": "### Current Supervisor Total Unadjusted Error vs Temperature\n\nThis graph shows SUPERVISOR ERROR (% OF READING), 0 to 1.4, versus TEMPERATURE (°C), -50 to 100, with two curves labeled 50mV (red) and 20mV (blue). Both curves decrease overall as the temperature increases, with ripples; each turns up briefly near the hot end and drops again at the last point. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): the two curves are the 50mV and 20mV sense-voltage conditions, not 'two typical parts', and they do not peak 'around 25°C and 100°C' as described; they decrease overall with ripples. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p13-g14-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**DAC Full-Scale Voltage vs Temperature, Gain Setting = 0**\n\nThis graph shows the DAC output full-scale voltage in volts versus temperature in degrees Celsius for a gain setting of 0. Three typical parts are shown: red, blue, and green. All three show a positive temperature coefficient, increasing from approximately 1.365V to 1.405V.\n",
+    "new": "### DAC Full-Scale Voltage vs Temperature, Gain Setting = 0\n\nThis graph shows DAC OUTPUT VOLTAGE (V), 1.360 to 1.405, versus TEMPERATURE (°C), -50 to 100, with GAIN SETTING = 0, for THREE TYPICAL PARTS (red, blue and green curves). All three rise with temperature, with a smaller slope at higher temperatures; the red curve is the highest and the green curve the lowest. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): removed the range 'from approximately 1.365V to 1.405V' estimated from the curves. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p13-g15-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**DAC Full-Scale Voltage vs Temperature, Gain Setting = 1**\n\nThis graph shows the DAC output full-scale voltage in volts versus temperature in degrees Celsius for a gain setting of 1. Three typical parts are shown: red, blue, and green. All three show a positive temperature coefficient, increasing from approximately 2.63V to 2.69V.\n",
+    "new": "### DAC Full-Scale Voltage vs Temperature, Gain Setting = 1\n\nThis graph shows DAC OUTPUT VOLTAGE (V), 2.62 to 2.70, versus TEMPERATURE (°C), -50 to 100, with GAIN SETTING = 1, for THREE TYPICAL PARTS (red, blue and green curves). All three rise with temperature, with a smaller slope at higher temperatures; the red curve is the highest and the green curve the lowest. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): removed the range 'from approximately 2.63V to 2.69V' estimated from the curves. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p13-g16-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**DAC Offset Voltage vs Temperature, Gain Setting = 0**\n\nThis graph shows the DAC output offset voltage in volts versus temperature in degrees Celsius for a gain setting of 0. Three typical parts are shown: red, blue, and green. The offset voltage increases slightly with temperature, from approximately 0.0008V to 0.0021V.\n",
+    "new": "### DAC Offset Voltage vs Temperature, Gain Setting = 0\n\nThis graph shows DAC OUTPUT VOLTAGE (V), 0 to 0.0025, versus TEMPERATURE (°C), -50 to 100, with GAIN SETTING = 0, for THREE TYPICAL PARTS (red, blue and green curves). All three rise slowly with temperature; the red and blue curves lie close together and the green curve lies well below them. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): removed the range 'from approximately 0.0008V to 0.0021V' estimated from the curves. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p13-g17-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**DAC Offset Voltage vs Temperature, Gain Setting = 1**\n\nThis graph shows the DAC output offset voltage in volts versus temperature in degrees Celsius for a gain setting of 1. Three typical parts are shown: red, blue, and green. The offset voltage increases with temperature, from approximately 0.0012V to 0.0036V.\n",
+    "new": "### DAC Offset Voltage vs Temperature, Gain Setting = 1\n\nThis graph shows DAC OUTPUT VOLTAGE (V), 0 to 0.0040, versus TEMPERATURE (°C), -50 to 100, with GAIN SETTING = 1, for THREE TYPICAL PARTS (red, blue and green curves). All three rise with temperature; the red curve is the highest, the blue curve slightly below it and the green curve the lowest. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): removed the range 'from approximately 0.0012V to 0.0036V' estimated from the curves. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p13-g18-title-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 13,
+    "old": "**Closed-Loop Servo Error**\n\nThis histogram shows the distribution of error percentages for 194 parts soldered down. The x-axis represents the error percentage from -0.25% to 0.25%, and the y-axis represents the number of parts from 0 to 80. The distribution is centered around -0.10%.\n",
+    "new": "### Closed-Loop Servo Error\n\nThis histogram shows NUMBER OF PARTS, 0 to 80, versus ERROR (%), -0.25 to 0.25, for 194 PARTS SOLDERED DOWN. The bars are grouped in a narrow band on the negative side of zero. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "PDF p13 (render): removed the center 'around -0.10%' estimated from the bars. The title is printed as the graph title (### like the other Typical Performance Characteristics graphs, not bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p14-g23-title-read-temperature-1",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "### External Temperature READ\\_TEMPperature\\_1 Error vs Temperature",
+    "new": "### External Temperature READ\\_TEMPERATURE\\_1 Error vs Temperature",
+    "evidence": "PDF p14 (pdftotext + render): the G23 title is 'External Temperature READ_ TEMPERATURE_1 Error vs Temperature'; the md had 'READ_TEMPperature_1'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g24-title-read-temperature-2",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "### READ\\_TEMPperature\\_2 Error vs Temperature",
+    "new": "### READ\\_TEMPERATURE\\_2 Error vs Temperature",
+    "evidence": "PDF p14 (pdftotext + render): the G24 title is 'READ_TEMPERATURE_2 Error vs Temperature'; the md had 'READ_TEMPperature_2'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g20-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of VDD33 Regulator Load Regulation. The y-axis is Output Voltage Delta (ppm) from 0 to -4000. The x-axis is Load Current Sourcing (mA) from 0 to 50. A single red line shows a linear decrease in regulation error as load current increases.](",
+    "new": "![Graph of VDD33 Regulator Load Regulation. The y-axis is Output Voltage Delta (ppm) from 0 to -4000. The x-axis is Load Current Sourcing (mA) from 0 to 50. A single red line falls linearly (the output voltage delta becomes more negative) as the load current increases.](",
+    "evidence": "PDF p14 (render): the line shows the output voltage delta falling with load current; 'a linear decrease in regulation error' inverted the meaning.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p14-g20-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of VDD33 Regulator Load Regulation. The y-axis is Output Voltage Delta (ppm) from 0 to -4000. The x-axis is Load Current Sourcing (mA) from 0 to 50. A single red line shows a linear decrease in regulation error as load current increases.\n",
+    "new": "\nGraph of VDD33 Regulator Load Regulation. The y-axis is Output Voltage Delta (ppm) from 0 to -4000. The x-axis is Load Current Sourcing (mA) from 0 to 50. A single red line falls linearly (the output voltage delta becomes more negative) as the load current increases.\n",
+    "evidence": "Same as ltc2975-p14-g20-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p14-g21-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of Output High Voltage vs Load Current. The y-axis is Output Voltage (V) from 9 to 14. The x-axis is Current Sourcing (μA) from 0 to 7. Three typical parts are shown: red, blue, and green. The voltage is stable until approximately 6 μA, then drops sharply.](",
+    "new": "![Graph of V_OUT_EN[0:3] and AUXFAULTB Output High Voltage vs Load Current. The y-axis is OUTPUT VOLTAGE (V) from 9 to 14. The x-axis is CURRENT SOURCING (μA) from 0 to 7. Three curves labeled 105°C (red), 25°C (green) and -40°C (blue): each is nearly flat, decreasing slightly with current, and then drops sharply near the right end of the range; the 105°C curve is the highest and the -40°C curve the lowest. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render): the curves are 105°C, 25°C and -40°C (the three curves are the temperatures printed on the plot, not 'three typical parts'); the knee position '6 μA' was an estimate.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g21-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of Output High Voltage vs Load Current. The y-axis is Output Voltage (V) from 9 to 14. The x-axis is Current Sourcing (μA) from 0 to 7. Three typical parts are shown: red, blue, and green. The voltage is stable until approximately 6 μA, then drops sharply.\n",
+    "new": "\nGraph of V\\_OUT\\_EN[0:3] and AUXFAULTB Output High Voltage vs Load Current. The y-axis is OUTPUT VOLTAGE (V) from 9 to 14. The x-axis is CURRENT SOURCING (μA) from 0 to 7. Three curves labeled 105°C (red), 25°C (green) and -40°C (blue): each is nearly flat, decreasing slightly with current, and then drops sharply near the right end of the range; the 105°C curve is the highest and the -40°C curve the lowest. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g21-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g22-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of Output Voltage (VOL) vs Load Current. The y-axis is VOL (V) from 0 to 1.4. The x-axis is Current Sourcing (μA) from 0 to 12. Three typical parts are shown: red, blue, and green. The voltage increases linearly with load current.](",
+    "new": "![Graph of V_OUT_EN[0:3] and AUXFAULTB VOL vs Load Current. The y-axis is VOL (V) from 0 to 1.4. The x-axis is CURRENT SOURCING (μA) from 0 to 12. Three curves labeled 105°C (red), 25°C (green) and -40°C (blue) rise from the origin almost linearly with load current; the 105°C curve is the highest and the -40°C curve the lowest. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render): the curves are 105°C, 25°C and -40°C (the three curves are the temperatures printed on the plot, not 'three typical parts').",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g22-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of Output Voltage (VOL) vs Load Current. The y-axis is VOL (V) from 0 to 1.4. The x-axis is Current Sourcing (μA) from 0 to 12. Three typical parts are shown: red, blue, and green. The voltage increases linearly with load current.\n",
+    "new": "\nGraph of V\\_OUT\\_EN[0:3] and AUXFAULTB VOL vs Load Current. The y-axis is VOL (V) from 0 to 1.4. The x-axis is CURRENT SOURCING (μA) from 0 to 12. Three curves labeled 105°C (red), 25°C (green) and -40°C (blue) rise from the origin almost linearly with load current; the 105°C curve is the highest and the -40°C curve the lowest. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g22-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g23-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of External Temperature READ_TEMPperature_1 Error vs Temperature. The y-axis is Error (°C) from -1.00 to 1.00. The x-axis is Temperature (°C) from -50 to 100. Three typical parts are shown: red, blue, and green. The error is near zero at room temperature and increases in magnitude at higher and lower temperatures.](",
+    "new": "![Graph of External Temperature READ_TEMPERATURE_1 Error vs Temperature. The y-axis is ERROR (°C) from -1.00 to 1.00. The x-axis is TEMPERATURE (°C) from -50 to 100. Conditions printed on the plot: MMBT3906 DIODE CONNECTED BJTS, MFR_TEMP_1_GAIN_ADJ = 0.984, MFR_EXT_TEMP_1_ADC_OFF = 0.7704°C. THREE TYPICAL PARTS (red, blue, green): each curve falls to a negative minimum in the middle of the temperature range and rises again toward the hot end; the green curve also has a local peak near the cold end. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render + pdftotext): the title is READ_TEMPERATURE_1 (md 'READ_TEMPperature_1'), and the curves are not 'near zero at room temperature'; they reach their negative minimum mid-range.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g23-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of External Temperature READ\\_TEMPperature\\_1 Error vs Temperature. The y-axis is Error (°C) from -1.00 to 1.00. The x-axis is Temperature (°C) from -50 to 100. Three typical parts are shown: red, blue, and green. The error is near zero at room temperature and increases in magnitude at higher and lower temperatures.\n",
+    "new": "\nGraph of External Temperature READ\\_TEMPERATURE\\_1 Error vs Temperature. The y-axis is ERROR (°C) from -1.00 to 1.00. The x-axis is TEMPERATURE (°C) from -50 to 100. Conditions printed on the plot: MMBT3906 DIODE CONNECTED BJTS, MFR\\_TEMP\\_1\\_GAIN\\_ADJ = 0.984, MFR\\_EXT\\_TEMP\\_1\\_ADC\\_OFF = 0.7704°C. THREE TYPICAL PARTS (red, blue, green): each curve falls to a negative minimum in the middle of the temperature range and rises again toward the hot end; the green curve also has a local peak near the cold end. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g23-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g24-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of READ_TEMPperature_2 Error vs Temperature. The y-axis is Error (°C) from -1.00 to 1.00. The x-axis is Temperature (°C) from -50 to 100. Three typical parts are shown: red, blue, and green. The error is near zero at room temperature and increases in magnitude at higher and lower temperatures.](",
+    "new": "![Graph of READ_TEMPERATURE_2 Error vs Temperature. The y-axis is ERROR (°C) from -1.00 to 1.00. The x-axis is TEMPERATURE (°C) from -50 to 100. V_DD33 = V_PWR = 3.3V, THREE TYPICAL PARTS (red, blue, green): the error is negative at low temperature, stays roughly flat over the lower part of the range and then rises steadily, becoming positive at the hot end. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render + pdftotext): the title is READ_TEMPERATURE_2 (md 'READ_TEMPperature_2'), and the error rises monotonically from negative to positive; it is not 'near zero at room temperature, increasing in magnitude at higher and lower temperatures'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g24-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of READ\\_TEMPperature\\_2 Error vs Temperature. The y-axis is Error (°C) from -1.00 to 1.00. The x-axis is Temperature (°C) from -50 to 100. Three typical parts are shown: red, blue, and green. The error is near zero at room temperature and increases in magnitude at higher and lower temperatures.\n",
+    "new": "\nGraph of READ\\_TEMPERATURE\\_2 Error vs Temperature. The y-axis is ERROR (°C) from -1.00 to 1.00. The x-axis is TEMPERATURE (°C) from -50 to 100. V\\_DD33 = V\\_PWR = 3.3V, THREE TYPICAL PARTS (red, blue, green): the error is negative at low temperature, stays roughly flat over the lower part of the range and then rises steadily, becoming positive at the hot end. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g24-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g25-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of TUE_VIN vs VIN_SNS. The y-axis is TUE_VIN (%) from -0.5 to 0.5. The x-axis is VIN_SNS (V) from 4.5 to 14.5. Three typical parts are shown: red, blue, and green. The error is very low, near zero, across the entire range.](",
+    "new": "![Graph of TUE_VIN vs VIN_SNS. The y-axis is TUE_VIN (%) from -0.5 to 0.5. The x-axis is VIN_SNS (V) from 4.5 to 14.5. Three curves labeled -40°C, 25°C and 105°C lie almost on top of each other, close to zero, across the entire range. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render): the curves are -40°C, 25°C and 105°C (the three curves are the temperatures printed on the plot, not 'three typical parts').",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g25-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of TUE\\_VIN vs VIN\\_SNS. The y-axis is TUE\\_VIN (%) from -0.5 to 0.5. The x-axis is VIN\\_SNS (V) from 4.5 to 14.5. Three typical parts are shown: red, blue, and green. The error is very low, near zero, across the entire range.\n",
+    "new": "\nGraph of TUE\\_VIN vs VIN\\_SNS. The y-axis is TUE\\_VIN (%) from -0.5 to 0.5. The x-axis is VIN\\_SNS (V) from 4.5 to 14.5. Three curves labeled -40°C, 25°C and 105°C lie almost on top of each other, close to zero, across the entire range. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g25-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g26-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of TUE_IIN vs VIN_SNS. The y-axis is TUE_IIN (% OF READING) from -0.6 to 0.6. The x-axis is VIN_SNS (V) from 4.5 to 14.5. Three typical parts are shown: red, blue, and green. The error is low, around ±0.1%.](",
+    "new": "![Graph of TUE_IIN vs VIN_SNS. The y-axis is TUE_IIN (% OF READING) from -0.6 to 0.6. The x-axis is VIN_SNS (V) from 4.5 to 14.5. Mfr_ein_config_iin_range = Medium, V_IIN_SNS = 50mV. Three curves labeled 25°C, -40°C and 105°C zigzag in a narrow band around zero across the range. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render): the curves are 25°C, -40°C and 105°C (the three curves are the temperatures printed on the plot, not 'three typical parts'); the level 'around ±0.1%' was an estimate.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g26-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of TUE\\_IIN vs VIN\\_SNS. The y-axis is TUE\\_IIN (% OF READING) from -0.6 to 0.6. The x-axis is VIN\\_SNS (V) from 4.5 to 14.5. Three typical parts are shown: red, blue, and green. The error is low, around ±0.1%.\n",
+    "new": "\nGraph of TUE\\_IIN vs VIN\\_SNS. The y-axis is TUE\\_IIN (% OF READING) from -0.6 to 0.6. The x-axis is VIN\\_SNS (V) from 4.5 to 14.5. Mfr\\_ein\\_config\\_iin\\_range = Medium, V\\_IIN\\_SNS = 50mV. Three curves labeled 25°C, -40°C and 105°C zigzag in a narrow band around zero across the range. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g26-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g27-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "![Graph of TUE_PIN vs VIN_SNS. The y-axis is TUE_PIN (% OF READING) from -1.00 to 1.00. The x-axis is VIN_SNS (V) from 4.5 to 14.5. Three typical parts are shown: red, blue, and green. The error is low, around ±0.1%.](",
+    "new": "![Graph of TUE_PIN vs VIN_SNS. The y-axis is TUE_PIN (% OF READING) from -1.00 to 1.00. The x-axis is VIN_SNS (V) from 4.5 to 14.5. Mfr_ein_config_iin_range = Medium, V_IIN_SNS = 50mV. Three curves labeled 25°C, -40°C and 105°C vary in a narrow band around zero across the range. Curve shapes only; read values from the image/PDF.](",
+    "evidence": "PDF p14 (render): the curves are 25°C, -40°C and 105°C (the three curves are the temperatures printed on the plot, not 'three typical parts'); the level 'around ±0.1%' was an estimate.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p14-g27-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 14,
+    "old": "\nGraph of TUE\\_PIN vs VIN\\_SNS. The y-axis is TUE\\_PIN (% OF READING) from -1.00 to 1.00. The x-axis is VIN\\_SNS (V) from 4.5 to 14.5. Three typical parts are shown: red, blue, and green. The error is low, around ±0.1%.\n",
+    "new": "\nGraph of TUE\\_PIN vs VIN\\_SNS. The y-axis is TUE\\_PIN (% OF READING) from -1.00 to 1.00. The x-axis is VIN\\_SNS (V) from 4.5 to 14.5. Mfr\\_ein\\_config\\_iin\\_range = Medium, V\\_IIN\\_SNS = 50mV. Three curves labeled 25°C, -40°C and 105°C vary in a narrow band around zero across the range. Curve shapes only; read values from the image/PDF.\n",
+    "evidence": "Same as ltc2975-p14-g27-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g28-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "![TUE_ETB vs VIN_SNS graph showing Total Unbalance Error (ETB) percentage versus VIN_SNS voltage for -40°C, 25°C, and 105°C.](",
+    "new": "![TUE_ETB vs VIN_SNS graph showing TUE_ETB (%) versus VIN_SNS (V) for -40°C, 25°C, and 105°C.](",
+    "evidence": "PDF p15 (render): TUE is the Total Unadjusted Error (EC table p8); the alt text expanded it as 'Total Unbalance Error (ETB) percentage'. Axis labels as printed: TUE_ETB (%), VIN_SNS (V).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g28-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "\nTUE\\_ETB vs VIN\\_SNS graph showing Total Unbalance Error (ETB) percentage versus VIN\\_SNS voltage for -40°C, 25°C, and 105°C.\n",
+    "new": "\nTUE\\_ETB vs VIN\\_SNS graph showing TUE\\_ETB (%) versus VIN\\_SNS (V) for -40°C, 25°C, and 105°C.\n",
+    "evidence": "Same as ltc2975-p15-g28-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g29-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "![TUE_EIN vs VIN_SNS graph showing Total Unbalance Error (EIN) percentage versus VIN_SNS voltage for -40°C, 25°C, and 105°C.](",
+    "new": "![TUE_EIN vs VIN_SNS graph showing TUE_EIN (% OF READING) versus VIN_SNS (V) for -40°C, 25°C, and 105°C.](",
+    "evidence": "PDF p15 (render): TUE is the Total Unadjusted Error (EC table p8); the alt text expanded it as 'Total Unbalance Error (EIN) percentage'. Axis labels as printed: TUE_EIN (% OF READING), VIN_SNS (V).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g29-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "\nTUE\\_EIN vs VIN\\_SNS graph showing Total Unbalance Error (EIN) percentage versus VIN\\_SNS voltage for -40°C, 25°C, and 105°C.\n",
+    "new": "\nTUE\\_EIN vs VIN\\_SNS graph showing TUE\\_EIN (% OF READING) versus VIN\\_SNS (V) for -40°C, 25°C, and 105°C.\n",
+    "evidence": "Same as ltc2975-p15-g29-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g28-title-iin-range",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "**TUE\\_ETB vs VIN\\_SNS**  \n Mfr\\_ein\\_config\\_iiin\\_range = Medium  \n V<sub>IIN\\_SNS</sub> = 50mV\n",
+    "new": "### TUE\\_ETB vs VIN\\_SNS\n\nMfr\\_ein\\_config\\_iin\\_range = Medium  \nV<sub>IIN\\_SNS</sub> = 50mV\n",
+    "evidence": "PDF p15 (pdftotext + render): the plot label reads 'Mfr_ein_config_iin_range = Medium'; the md had 'iiin'. The graph title is made a ### heading like the other Typical Performance Characteristics graphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g29-title-iin-range",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "**TUE\\_EIN vs VIN\\_SNS**  \n Mfr\\_ein\\_config\\_iiin\\_range = Medium  \n V<sub>IIN\\_SNS</sub> = 50mV\n",
+    "new": "### TUE\\_EIN vs VIN\\_SNS\n\nMfr\\_ein\\_config\\_iin\\_range = Medium  \nV<sub>IIN\\_SNS</sub> = 50mV\n",
+    "evidence": "PDF p15 (pdftotext + render): the plot label reads 'Mfr_ein_config_iin_range = Medium'; the md had 'iiin'. The graph title is made a ### heading like the other Typical Performance Characteristics graphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g30-title-iin-range",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "**READ\\_IIN Common Mode Gain vs Frequency**  \n Mfr\\_ein\\_config\\_iiin\\_range = Medium  \n V<sub>IIN\\_SNS</sub> = 50mV  \n V<sub>VIN\\_SNS</sub> = 12V ± 100mV\n",
+    "new": "### READ\\_IIN Common Mode Gain vs Frequency\n\nMfr\\_ein\\_config\\_iin\\_range = Medium  \nV<sub>IIN\\_SNS</sub> = 50mV  \nV<sub>VIN\\_SNS</sub> = 12V ± 100mV\n",
+    "evidence": "PDF p15 (pdftotext + render): the plot label reads 'Mfr_ein_config_iin_range = Medium'; the md had 'iiin'. The graph title is made a ### heading like the other Typical Performance Characteristics graphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p15-g31-title-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 15,
+    "old": "\n**V<sub>OUT\\_EN[3:0]</sub> Output Voltage vs V<sub>DD33</sub>**\n",
+    "new": "\n### V<sub>OUT\\_EN[3:0]</sub> Output Voltage vs V<sub>DD33</sub>\n",
+    "evidence": "PDF p15: graph title made a ### heading like the other Typical Performance Characteristics graphs (the md had bold text).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
