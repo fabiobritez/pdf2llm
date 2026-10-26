@@ -18682,5 +18682,287 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p36-operation-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 36,
+    "old": "\n### OPERATION\n",
+    "new": "\n#### OPERATION\n",
+    "evidence": "PDF p36 (PyMuPDF spans + render): 'OPERATION' is a bold-oblique command name (HelveticaLTStd-BoldCondO 11.7pt), H4 per the ltc2975 convention; md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p36-operation-data-contents-pmbus-1-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 36,
+    "old": "\n#### OPERATION Data Contents (On\\_off\\_config\\_use\\_pmbus = 1)\n",
+    "new": "\n**OPERATION Data Contents (On\\_off\\_config\\_use\\_pmbus = 1)**\n",
+    "evidence": "PDF p36 (PyMuPDF spans + render): 'OPERATION Data Contents (On_off_config_use_pmbus = 1)' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p36-margin-high-paren-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 36,
+    "old": "| Margin high (ignore faults and warnings)                   |",
+    "new": "| Margin high (ignore faults and warnings                    |",
+    "evidence": "PDF p36 OPERATION Data Contents (render + pdftotext -layout): the fifth row prints 'Margin high (ignore faults and warnings' without the closing parenthesis (manufacturer typo, kept as printed); md had added ')'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p37-operation-data-contents-pmbus-0-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 37,
+    "old": "\n#### OPERATION Data Contents (On\\_off\\_config\\_use\\_pmbus = 0) On or Off\n",
+    "new": "\n**OPERATION Data Contents (On\\_off\\_config\\_use\\_pmbus = 0) On or Off**\n",
+    "evidence": "PDF p37 (PyMuPDF spans + render): 'OPERATION Data Contents (On_off_config_use_pmbus = 0) On or Off' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p37-margin-high-paren-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 37,
+    "old": "| Margin high (ignore faults and warnings) | 00, 01 or 10 ",
+    "new": "| Margin high (ignore faults and warnings  | 00, 01 or 10 ",
+    "evidence": "PDF p37 OPERATION Data Contents (On_off_config_use_pmbus = 0) (render + pdftotext -layout): the 'Margin high (ignore faults and / warnings' row has no closing parenthesis (manufacturer typo, as on p36; the Margin low row has it); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p37-vin-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 37,
+    "old": "After VIN is initially applied",
+    "new": "After  $V_{IN}$  is initially applied",
+    "evidence": "PDF p37 ON_OFF_CONFIG paragraph (render + PyMuPDF spans): 'After V_IN is initially applied' prints IN as a subscript, like t_INIT / t_UPDATE_ADC in the same paragraph (written in LaTeX in the md); md had plain 'VIN'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p37-on-off-config-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 37,
+    "old": "\n#### ON\\_OFF\\_CONFIG Data Contents\n",
+    "new": "\n**ON\\_OFF\\_CONFIG Data Contents**\n",
+    "evidence": "PDF p37 (PyMuPDF spans + render): 'ON_OFF_CONFIG Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p38-mfr-config-ltc2975-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 38,
+    "old": "for each channel.\n\n#### MFR\\_CONFIG\\_LTC2975 Data Contents\n",
+    "new": "for each channel.\n\n**MFR\\_CONFIG\\_LTC2975 Data Contents**\n",
+    "evidence": "PDF p38 (PyMuPDF spans + render): 'MFR_CONFIG_LTC2975 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p38-control0-space-comma-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 38,
+    "old": "(CONTROL0, CONTROL1, CONTROL2 or CONTROL3) for this channel.",
+    "new": "(CONTROL0 , CONTROL1, CONTROL2 or CONTROL3) for this channel.",
+    "evidence": "PDF p38 MFR_CONFIG_LTC2975 b[13:12] (PyMuPDF spans + pdftotext): printed '(CONTROL0 , CONTROL1, ...' with a space before the comma; kept as printed.",
+    "sources": [
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p38-mfr-config-dac-mode-spaces-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 38,
+    "old": "target. Only applies when Mfr_config_dac_mode = 00b.<br>",
+    "new": "target. Only applies when Mfr_ config _dac_mode = 00b.<br>",
+    "evidence": "PDF p38 MFR_CONFIG_LTC2975 b[7] (render + PyMuPDF spans + pdftotext): printed 'Mfr_ config _dac_mode = 00b' with two spaces inside the name (manufacturer typesetting, as 'REGISTER_ PARTIAL_ACCESS_ERR' in ad5711r); md had closed them up.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p38-servo-on-warn-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 38,
+    "old": "Only applies when Mfr_config_dac_mode = 00b and Mfr_config_servo_continuous = 0.<br>0: Do not allow the unit to re-servo when a VOUT warning threshold is met or exceeded.<br>1: Allow the unit to re-servo VOUT to nominal target if<br>$V_{OUT} \\geq V(V_{out\\_ov\\_warn\\_limit})$ or<br>$V_{OUT} \\leq V(V_{out\\_uv\\_warn\\_limit})$ .",
+    "new": "Only applies when Mfr_ config _dac_mode = 00b and Mfr_config_servo_continuous = 0.<br>0: Do not allow the unit to re-servo when a VOUT warning threshold is met or exceeded.<br>1: Allow the unit to re-servo VOUT to nominal target if<br>VOUT ≥ V(Vout_ov_warn_limit) or<br>VOUT ≤ V(Vout_uv_warn_limit).",
+    "evidence": "PDF p38 MFR_CONFIG_LTC2975 b[6] (render + PyMuPDF spans + pdftotext): printed 'Mfr_ config _dac_mode' with two spaces (as in b[7]; 'Mfr_config_' / 'servo_continuous' is only a line wrap), and the conditions are plain text 'VOUT ≥ V(Vout_ov_warn_limit) or' / 'VOUT ≤ V(Vout_uv_warn_limit).' with no subscripts (all spans same size/baseline); md had LaTeX V_{OUT} and V_{out_ov_warn_limit} subscripts and a space before the final period.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p39-mfr-config-ltc2975-data-contents-cont-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 39,
+    "old": "\n#### MFR\\_CONFIG\\_LTC2975 Data Contents\n",
+    "new": "\n**MFR\\_CONFIG\\_LTC2975 Data Contents**\n",
+    "evidence": "PDF p39 (PyMuPDF spans + render): 'MFR_CONFIG_LTC2975 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p39-mfr-config-dac-pol-space-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 39,
+    "old": "| b[0]   | Mfr_config_dac_pol  |",
+    "new": "| b[0]   | Mfr_config_ dac_pol |",
+    "evidence": "PDF p39 MFR_CONFIG_LTC2975 b[0] symbol (render + PyMuPDF words: 'Mfr_config_' and 'dac_pol' are separate words on one line): printed 'Mfr_config_ dac_pol'; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p39-fig15-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 39,
+    "old": "![Figure 15: LTC2975 Configured to Cascade Sequence ON and Time-Base Sequence OFF. The diagram shows a master LTC2975 and four slave LTC2975s. The master's CONTROL0 pin is connected to a common CONTROL0 line. Its FAULTB0 pin is connected to a common FAULTB0 line. Its VOUT_EN0 pin is connected to the RUN pin of the first slave. Its POWERGOOD0 pin is connected to the CONTROL1 pin of the second slave. Its VOUT_EN1 pin is connected to the RUN pin of the second slave. Its POWERGOOD1 pin is connected to the CONTROL2 pin of the third slave. Its VOUT_EN2 pin is connected to the RUN pin of the third slave. Its POWERGOOD2 pin is connected to the CONTROL3 pin of the fourth slave. Its VOUT_EN3 pin is connected to the RUN pin of the fourth slave. Its POWERGOOD3 pin is connected to the next CONTROL pin. Each slave has a DC/DC converter, a LOAD, and sense pins (VSENSEP0 to VSENSEM3).](",
+    "new": "![Figure 15: LTC2975 Configured to Cascade Sequence ON and Time-Base Sequence OFF (description written from the PDF drawing). One LTC2975 manages four DC/DC converters. The external CONTROL0 and FAULTB0 lines connect to the LTC2975 CONTROL0 and FAULTB0 pins; a dashed link between the CONTROL0 and FAULTB0 lines is labeled 'RECOMMENDED CONNECTION WHEN HARDWARE ON/OFF CONTROL IS REQUIRED'. V_OUT_EN0 to V_OUT_EN3 drive the RUN pins of the four DC/DC converters. POWERGOOD0 of the first converter (MASTER) goes to the LTC2975 CONTROL1 input, POWERGOOD1 to CONTROL2, POWERGOOD2 to CONTROL3, and POWERGOOD3 to 'TO NEXT CONTROL PIN'; the second to fourth converters are bracketed as SLAVES. Each converter's V_OUTP and V_OUTM outputs feed a LOAD, sensed at V_SENSEP0/V_SENSEM0 to V_SENSEP3/V_SENSEM3. Drawing number 2975 F15.](",
+    "evidence": "PDF p39 Figure 15 (render, 250 dpi crops): the drawing has a single LTC2975 and four DC/DC converter boxes (the first labeled MASTER, the other three bracketed SLAVES), not 'a master LTC2975 and four slave LTC2975s'. POWERGOOD0 feeds the LTC2975's own CONTROL1 pin (and POWERGOOD1 → CONTROL2, POWERGOOD2 → CONTROL3, POWERGOOD3 → TO NEXT CONTROL PIN), the LTC2975 FAULTB0/CONTROL0 pins connect to external lines with the dashed recommended connection; there is no 'POWERGOOD3 to the next CONTROL pin of a slave'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p39-fig15-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 39,
+    "old": "\n\nFigure 15: LTC2975 Configured to Cascade Sequence ON and Time-Base Sequence OFF. The diagram shows a master LTC2975 and four slave LTC2975s. The master's CONTROL0 pin is connected to a common CONTROL0 line. Its FAULTB0 pin is connected to a common FAULTB0 line. Its VOUT\\_EN0 pin is connected to the RUN pin of the first slave. Its POWERGOOD0 pin is connected to the CONTROL1 pin of the second slave. Its VOUT\\_EN1 pin is connected to the RUN pin of the second slave. Its POWERGOOD1 pin is connected to the CONTROL2 pin of the third slave. Its VOUT\\_EN2 pin is connected to the RUN pin of the third slave. Its POWERGOOD2 pin is connected to the CONTROL3 pin of the fourth slave. Its VOUT\\_EN3 pin is connected to the RUN pin of the fourth slave. Its POWERGOOD3 pin is connected to the next CONTROL pin. Each slave has a DC/DC converter, a LOAD, and sense pins (VSENSEP0 to VSENSEM3).\n",
+    "new": "\n\nFigure 15: LTC2975 Configured to Cascade Sequence ON and Time-Base Sequence OFF (description written from the PDF drawing). One LTC2975 manages four DC/DC converters. The external CONTROL0 and FAULTB0 lines connect to the LTC2975 CONTROL0 and FAULTB0 pins; a dashed link between the CONTROL0 and FAULTB0 lines is labeled 'RECOMMENDED CONNECTION WHEN HARDWARE ON/OFF CONTROL IS REQUIRED'. V\\_OUT\\_EN0 to V\\_OUT\\_EN3 drive the RUN pins of the four DC/DC converters. POWERGOOD0 of the first converter (MASTER) goes to the LTC2975 CONTROL1 input, POWERGOOD1 to CONTROL2, POWERGOOD2 to CONTROL3, and POWERGOOD3 to 'TO NEXT CONTROL PIN'; the second to fourth converters are bracketed as SLAVES. Each converter's V\\_OUTP and V\\_OUTM outputs feed a LOAD, sensed at V\\_SENSEP0/V\\_SENSEM0 to V\\_SENSEP3/V\\_SENSEM3. Drawing number 2975 F15.\n",
+    "evidence": "Same as ltc2975-p39-fig15-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p39-fig15-labels-faultb0-pin",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 39,
+    "old": "LTC2975  \nCONTROL0  \nVOUT\\_EN0",
+    "new": "LTC2975  \nFAULTB0  \nCONTROL0  \nVOUT\\_EN0",
+    "evidence": "PDF p39 Figure 15 (render + PyMuPDF words): the LTC2975 box carries a FAULTB0 pin label (below 'LTC2975', above CONTROL0) besides the external FAULTB0 line label; the md label list had only the external one.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p39-fig15-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 39,
+    "old": "\nFigure 15. LTC2975 Configured to Cascade Sequence ON and Time-Base Sequence OFF\n",
+    "new": "\n**Figure 15. LTC2975 Configured to Cascade Sequence ON and Time-Base Sequence OFF**\n",
+    "evidence": "PDF p39 (PyMuPDF spans + render): Figure 15 caption is LinearHelvCond-Bold 9.7pt; bold caption per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p40-fig16-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 40,
+    "old": "![Timing diagram for Figure 16: Cascade Sequence ON with Time Based Sequence Down on FAULT0. The diagram shows the relationship between VOUT0, VOUT1, VOUT2, VOUT3 and control signals CONTROL-FAULTB0, POWERGOOD0, POWERGOOD1, POWERGOOD2, and POWERGOOD3. Time delays TOFF_DELAY0 through TOFF_DELAY3 are indicated between the falling edges of the VOUT signals and the corresponding POWERGOOD signals. CONTROL-FAULTB0 is shown going low before the sequence begins.](",
+    "new": "![Figure 16: Cascade Sequence ON with Time Based Sequence Down on FAULT0 (description written from the PDF drawing). Waveforms, top to bottom: V_OUT0, V_OUT1, V_OUT2, V_OUT3 (drawn as nested ramps), then the logic traces CONTROL-FAULTB0, POWERGOOD0, POWERGOOD1, POWERGOOD2 and POWERGOOD3. Turn-on: CONTROL-FAULTB0 goes high and V_OUT0 ramps up; when POWERGOOD0 goes high V_OUT1 ramps up, POWERGOOD1 starts V_OUT2 and POWERGOOD2 starts V_OUT3 (cascade); POWERGOOD3 goes high last. Turn-off: CONTROL-FAULTB0 goes low; the arrows TOFF_DELAY3, TOFF_DELAY2, TOFF_DELAY1 and TOFF_DELAY0 run from that falling edge to the start of the V_OUT3, V_OUT2, V_OUT1 and V_OUT0 ramp-downs, TOFF_DELAY3 the shortest and TOFF_DELAY0 the longest, so the outputs turn off in the order V_OUT3, V_OUT2, V_OUT1, V_OUT0, each POWERGOOD going low as its output falls. Drawing number 2975 F16.](",
+    "evidence": "PDF p40 Figure 16 (render): the AI text said the TOFF_DELAYn times run 'between the falling edges of the VOUT signals and the corresponding POWERGOOD signals' and that CONTROL-FAULTB0 'is shown going low before the sequence begins'. In the drawing CONTROL-FAULTB0 goes high to start the cascade (each POWERGOODn starts the next VOUT ramp), and the TOFF_DELAY3..0 arrows run from the CONTROL-FAULTB0 falling edge to the start of each VOUT ramp-down (VOUT3 first, VOUT0 last). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p40-fig16-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 40,
+    "old": "\n\nTiming diagram for Figure 16: Cascade Sequence ON with Time Based Sequence Down on FAULT0. The diagram shows the relationship between VOUT0, VOUT1, VOUT2, VOUT3 and control signals CONTROL-FAULTB0, POWERGOOD0, POWERGOOD1, POWERGOOD2, and POWERGOOD3. Time delays TOFF\\_DELAY0 through TOFF\\_DELAY3 are indicated between the falling edges of the VOUT signals and the corresponding POWERGOOD signals. CONTROL-FAULTB0 is shown going low before the sequence begins.\n",
+    "new": "\n\nFigure 16: Cascade Sequence ON with Time Based Sequence Down on FAULT0 (description written from the PDF drawing). Waveforms, top to bottom: V\\_OUT0, V\\_OUT1, V\\_OUT2, V\\_OUT3 (drawn as nested ramps), then the logic traces CONTROL-FAULTB0, POWERGOOD0, POWERGOOD1, POWERGOOD2 and POWERGOOD3. Turn-on: CONTROL-FAULTB0 goes high and V\\_OUT0 ramps up; when POWERGOOD0 goes high V\\_OUT1 ramps up, POWERGOOD1 starts V\\_OUT2 and POWERGOOD2 starts V\\_OUT3 (cascade); POWERGOOD3 goes high last. Turn-off: CONTROL-FAULTB0 goes low; the arrows TOFF\\_DELAY3, TOFF\\_DELAY2, TOFF\\_DELAY1 and TOFF\\_DELAY0 run from that falling edge to the start of the V\\_OUT3, V\\_OUT2, V\\_OUT1 and V\\_OUT0 ramp-downs, TOFF\\_DELAY3 the shortest and TOFF\\_DELAY0 the longest, so the outputs turn off in the order V\\_OUT3, V\\_OUT2, V\\_OUT1, V\\_OUT0, each POWERGOOD going low as its output falls. Drawing number 2975 F16.\n",
+    "evidence": "Same as ltc2975-p40-fig16-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p40-fig16-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 40,
+    "old": "\nFigure 16. Cascade Sequence ON with Time Based Sequence Down on FAULT0\n",
+    "new": "\n**Figure 16. Cascade Sequence ON with Time Based Sequence Down on FAULT0**\n",
+    "evidence": "PDF p40 (PyMuPDF spans + render): Figure 16 caption is LinearHelvCond-Bold 9.7pt; bold caption per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p40-vout-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 40,
+    "old": "determines whether VOUT overvoltage",
+    "new": "determines whether  $V_{OUT}$  overvoltage",
+    "evidence": "PDF p40 MFR_CONFIG2_LTC2975 paragraph (render + PyMuPDF spans): 'V_OUT overvoltage' prints OUT as a subscript; md had plain 'VOUT'. LaTeX form as used for subscripts in the neighbouring paragraphs (p37).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p40-mfr-config2-ltc2975-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 40,
+    "old": "pulled low.\n\n#### MFR\\_CONFIG2\\_LTC2975 Data Contents\n",
+    "new": "pulled low.\n\n**MFR\\_CONFIG2\\_LTC2975 Data Contents**\n",
+    "evidence": "PDF p40 (PyMuPDF spans + render): 'MFR_CONFIG2_LTC2975 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
