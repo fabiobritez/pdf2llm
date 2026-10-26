@@ -17504,5 +17504,351 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p23-table3-empty-column",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 23,
+    "old": "| ADDRESS PINS |       | DESCRIPTION    | HEX DEVICE ADDRESS |       | BINARY DEVICE ADDRESS |   |   |   |   |   |   |  | R/W |\n|--------------|-------|----------------|--------------------|-------|-----------------------|---|---|---|---|---|---|--|-----|\n| ASEL1        | ASEL0 |                | 7-Bit              | 8-Bit | 6                     | 5 | 4 | 3 | 2 | 1 | 0 |  |     |\n| X            | X     | Alert Response | 0C                 | 19    | 0                     | 0 | 0 | 1 | 1 | 0 | 0 |  | 1   |\n| X            | X     | Global         | 5B                 | B6    | 1                     | 0 | 1 | 1 | 0 | 1 | 1 |  | 0   |\n| L            | L     | N = 0          | 5C*                | B8    | 1                     | 0 | 1 | 1 | 1 | 0 | 0 |  | 0   |\n| L            | NC    | N = 1          | 5D                 | BA    | 1                     | 0 | 1 | 1 | 1 | 0 | 1 |  | 0   |\n| L            | H     | N = 2          | 5E                 | BC    | 1                     | 0 | 1 | 1 | 1 | 1 | 0 |  | 0   |\n| NC           | L     | N = 3          | 5F                 | BE    | 1                     | 0 | 1 | 1 | 1 | 1 | 1 |  | 0   |\n| NC           | NC    | N = 4          | 60                 | C0    | 1                     | 1 | 0 | 0 | 0 | 0 | 0 |  | 0   |\n| NC           | H     | N = 5          | 61                 | C2    | 1                     | 1 | 0 | 0 | 0 | 0 | 1 |  | 0   |\n| H            | L     | N = 6          | 62                 | C4    | 1                     | 1 | 0 | 0 | 0 | 1 | 0 |  | 0   |\n| H            | NC    | N = 7          | 63                 | C6    | 1                     | 1 | 0 | 0 | 0 | 1 | 1 |  | 0   |\n| H            | H     | N = 8          | 64                 | C8    | 1                     | 1 | 0 | 0 | 1 | 0 | 0 |  | 0   |",
+    "new": "| ADDRESS PINS |       | DESCRIPTION    | HEX DEVICE ADDRESS |       | BINARY DEVICE ADDRESS |   |   |   |   |   |   | R/W |\n|--------------|-------|----------------|--------------------|-------|-----------------------|---|---|---|---|---|---|-----|\n| ASEL1        | ASEL0 |                | 7-Bit              | 8-Bit | 6                     | 5 | 4 | 3 | 2 | 1 | 0 |     |\n| X            | X     | Alert Response | 0C                 | 19    | 0                     | 0 | 0 | 1 | 1 | 0 | 0 | 1   |\n| X            | X     | Global         | 5B                 | B6    | 1                     | 0 | 1 | 1 | 0 | 1 | 1 | 0   |\n| L            | L     | N = 0          | 5C*                | B8    | 1                     | 0 | 1 | 1 | 1 | 0 | 0 | 0   |\n| L            | NC    | N = 1          | 5D                 | BA    | 1                     | 0 | 1 | 1 | 1 | 0 | 1 | 0   |\n| L            | H     | N = 2          | 5E                 | BC    | 1                     | 0 | 1 | 1 | 1 | 1 | 0 | 0   |\n| NC           | L     | N = 3          | 5F                 | BE    | 1                     | 0 | 1 | 1 | 1 | 1 | 1 | 0   |\n| NC           | NC    | N = 4          | 60                 | C0    | 1                     | 1 | 0 | 0 | 0 | 0 | 0 | 0   |\n| NC           | H     | N = 5          | 61                 | C2    | 1                     | 1 | 0 | 0 | 0 | 0 | 1 | 0   |\n| H            | L     | N = 6          | 62                 | C4    | 1                     | 1 | 0 | 0 | 0 | 1 | 0 | 0   |\n| H            | NC    | N = 7          | 63                 | C6    | 1                     | 1 | 0 | 0 | 0 | 1 | 1 | 0   |\n| H            | H     | N = 8          | 64                 | C8    | 1                     | 1 | 0 | 0 | 1 | 0 | 0 | 0   |",
+    "evidence": "PDF p23 Table 3 (render + word positions): the BINARY DEVICE ADDRESS bits 6 to 0 are followed directly by R/W; the md had an extra empty column between bit 0 and R/W on every row.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig6-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 6. Write Word Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), A (1), P (1).](",
+    "new": "![Figure 6. Write Word Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), A (1), P (1).](",
+    "evidence": "PDF p24 Figure 6 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig6-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 6. Write Word Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 6. Write Word Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), A (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig6-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig6-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 6. Write Word Protocol with PEC\n",
+    "new": "\n\n2975 F06\n\n**Figure 6. Write Word Protocol with PEC**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F06' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig7-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 7. Send Byte Protocol. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), P (1).](",
+    "new": "![Figure 7. Send Byte Protocol. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), P (1).](",
+    "evidence": "PDF p24 Figure 7 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig7-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 7. Send Byte Protocol. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 7. Send Byte Protocol. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig7-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig7-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 7. Send Byte Protocol\n",
+    "new": "\n\n2975 F07\n\n**Figure 7. Send Byte Protocol**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F07' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig8-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 8. Send Byte Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), PEC (8), A (1), P (1).](",
+    "new": "![Figure 8. Send Byte Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), PEC (8), A (1), P (1).](",
+    "evidence": "PDF p24 Figure 8 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig8-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 8. Send Byte Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), PEC (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 8. Send Byte Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), PEC (8), A (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig8-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig8-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 8. Send Byte Protocol with PEC\n",
+    "new": "\n\n2975 F08\n\n**Figure 8. Send Byte Protocol with PEC**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F08' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig9-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 9. Read Word Protocol. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), P (1).](",
+    "new": "![Figure 9. Read Word Protocol. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), Ā (1), P (1).](",
+    "evidence": "PDF p24 Figure 9 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits. The acknowledge before P is drawn as A with an overbar (NOT ACKNOWLEDGE, Figure 2 key), not A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig9-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 9. Read Word Protocol. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 9. Read Word Protocol. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), Ā (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig9-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig9-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 9. Read Word Protocol\n",
+    "new": "\n\n2975 F09\n\n**Figure 9. Read Word Protocol**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F09' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig10-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 10. Read Word Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), A (1), P (1).](",
+    "new": "![Figure 10. Read Word Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), Ā (1), P (1).](",
+    "evidence": "PDF p24 Figure 10 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits. The acknowledge before P is drawn as A with an overbar (NOT ACKNOWLEDGE, Figure 2 key), not A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig10-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 10. Read Word Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 10. Read Word Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE LOW (8), A (1), DATA BYTE HIGH (8), A (1), PEC (8), Ā (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig10-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig10-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 10. Read Word Protocol with PEC\n",
+    "new": "\n\n2975 F10\n\n**Figure 10. Read Word Protocol with PEC**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F10' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig11-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 11. Read Byte Protocol. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), A (1), P (1).](",
+    "new": "![Figure 11. Read Byte Protocol. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), Ā (1), P (1).](",
+    "evidence": "PDF p24 Figure 11 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits. The acknowledge before P is drawn as A with an overbar (NOT ACKNOWLEDGE, Figure 2 key), not A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig11-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 11. Read Byte Protocol. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 11. Read Byte Protocol. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), Ā (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig11-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig11-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 11. Read Byte Protocol\n",
+    "new": "\n\n2975 F11\n\n**Figure 11. Read Byte Protocol**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F11' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig12-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 12. Read Byte Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), A (1), PEC (8), A (1), P (1).](",
+    "new": "![Figure 12. Read Byte Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), A (1), PEC (8), Ā (1), P (1).](",
+    "evidence": "PDF p24 Figure 12 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits. The acknowledge before P is drawn as A with an overbar (NOT ACKNOWLEDGE, Figure 2 key), not A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig12-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 12. Read Byte Protocol with PEC. A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), A (1), PEC (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 12. Read Byte Protocol with PEC. Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), DATA BYTE (8), A (1), PEC (8), Ā (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig12-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig12-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 12. Read Byte Protocol with PEC\n",
+    "new": "\n\n2975 F12\n\n**Figure 12. Read Byte Protocol with PEC**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F12' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig13-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 13. Block Read. Two parts: 1) A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) A 16-bit bus sequence: DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), A (1), P (1).](",
+    "new": "![Figure 13. Block Read. Two parts: 1) Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) Bus sequence (field widths in bits): DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), Ā (1), P (1).](",
+    "evidence": "PDF p24 Figure 13 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits. The acknowledge before P is drawn as A with an overbar (NOT ACKNOWLEDGE, Figure 2 key), not A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig13-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 13. Block Read. Two parts: 1) A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) A 16-bit bus sequence: DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 13. Block Read. Two parts: 1) Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) Bus sequence (field widths in bits): DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), Ā (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig13-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig13-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 13. Block Read\n",
+    "new": "\n\n2975 F13\n\n**Figure 13. Block Read**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F13' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p24-fig14-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "![Figure 14. Block Read with PEC. Two parts: 1) A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) A 16-bit bus sequence: DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), A (1), PEC (8), A (1), P (1).](",
+    "new": "![Figure 14. Block Read with PEC. Two parts: 1) Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) Bus sequence (field widths in bits): DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), A (1), PEC (8), Ā (1), P (1).](",
+    "evidence": "PDF p24 Figure 14 (render 200 dpi): the frame is not a '16-bit bus sequence'; the numbers above the fields are field widths in bits. The acknowledge before P is drawn as A with an overbar (NOT ACKNOWLEDGE, Figure 2 key), not A.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig14-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": ")\n\nFigure 14. Block Read with PEC. Two parts: 1) A 16-bit bus sequence: S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) A 16-bit bus sequence: DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), A (1), PEC (8), A (1), P (1).\n",
+    "new": ")\n\nFigure 14. Block Read with PEC. Two parts: 1) Bus sequence (field widths in bits): S (1), SLAVE ADDRESS (7), Wr (1), A (1), COMMAND CODE (8), A (1), Sr (1), SLAVE ADDRESS (7), Rd (1), A (1), BYTE COUNT = N (8), A (1), followed by an ellipsis. 2) Bus sequence (field widths in bits): DATA BYTE 1 (8), A (1), DATA BYTE 2 (8), A (1), ..., DATA BYTE N (8), A (1), PEC (8), Ā (1), P (1).\n",
+    "evidence": "Same as ltc2975-p24-fig14-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p24-fig14-drawing-number-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 24,
+    "old": "\n\nFigure 14. Block Read with PEC\n",
+    "new": "\n\n2975 F14\n\n**Figure 14. Block Read with PEC**\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): the caption is LinearHelvCond-Bold 9.7pt (bold) and the drawing number '2975 F14' is printed under the frame, as already transcribed for Figures 2 to 5 on p23.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
