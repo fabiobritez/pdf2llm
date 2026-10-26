@@ -25861,5 +25861,200 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63070-p26-fig37-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 26,
+    "old": "![Circuit diagram of the TPS630701 buck converter in a fixed voltage configuration. The input voltage VIN is 2.0 V to 16 V. The output voltage VOUT is 5 V. The circuit includes an input capacitor CIN (2x10 µF, 0805), a 10 µF 0603 capacitor C1 at the VIN pin, a 1.5 µH inductor L, a 10 µF 0603 capacitor C4 at the VOUT pin, a 3x22 µF 0805 capacitor COUT, a 100 kΩ resistor R4, a 10 kΩ resistor R5, and a 100 nF capacitor CVAUX. The device pins are labeled VIN, VSEL, EN, PS/SYNC, VAUX, L1, L2, VOUT, FB, FB2, PG, PGND, and GND.](e821c3d8a87ee2a9ff6b8644ffe6bdae_img.jpg)\n\nCircuit diagram of the TPS630701 buck converter in a fixed voltage configuration. The input voltage VIN is 2.0 V to 16 V. The output voltage VOUT is 5 V. The circuit includes an input capacitor CIN (2x10 µF, 0805), a 10 µF 0603 capacitor C1 at the VIN pin, a 1.5 µH inductor L, a 10 µF 0603 capacitor C4 at the VOUT pin, a 3x22 µF 0805 capacitor COUT, a 100 kΩ resistor R4, a 10 kΩ resistor R5, and a 100 nF capacitor CVAUX. The device pins are labeled VIN, VSEL, EN, PS/SYNC, VAUX, L1, L2, VOUT, FB, FB2, PG, PGND, and GND.\n\n",
+    "new": "![Figure 37: Typical application circuit of the fixed-voltage TPS630701 with VIN = 2.0 V to 16 V and VOUT = 5 V.](e821c3d8a87ee2a9ff6b8644ffe6bdae_img.jpg)\n\nSchematic written from the drawing: the input VIN = 2.0 V to 16 V drives the VIN pin of the TPS630701, decoupled by CIN (2x10 µF, 0805) and C1 (10 µF, 0603) to ground. R5 (10 kΩ) connects VIN to EN, and EN is tied to PS/SYNC. VSEL and FB2 are connected to ground. VAUX has CVAUX (100 nF) to ground. The inductor L (1.5 µH) connects L1 and L2. VOUT is decoupled by C4 (10 µF, 0603) and COUT (3x22 µF, 0805) to ground and is the output VOUT = 5 V; FB is connected directly to VOUT (no divider). R4 (100 kΩ) pulls PG up to VOUT. PGND and GND are connected to ground.\n\n",
+    "evidence": "PDF p26 Figure 37: the AI text called the TPS630701 a 'buck converter' and only listed parts and pin names without connections (FB tied directly to VOUT, R4 from VOUT to PG, R5 from VIN to EN/PS/SYNC, VSEL/FB2 grounded). Description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p27-units-plain",
+    "file": "output/tps63070/tps63070.md",
+    "page": 27,
+    "old": "on the output (in  $\\mu\\text{F}$ ) needs to be at least 15 times higher than the effective inductance (in  $\\mu\\text{H}$ ) to ensure",
+    "new": "on the output (in µF) needs to be at least 15 times higher than the effective inductance (in µH) to ensure",
+    "evidence": "PDF p27: '(in µF)' and '(in µH)' are plain running text, written as such in the identical p17 sentence; the md used LaTeX with stray spaces.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p28-fig38-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 28,
+    "old": "![Figure 38: Efficiency vs Output Current (PFM) graph. The y-axis is Efficiency (0-100%) and the x-axis is Output Current (A) on a log scale (100µ to 2). Curves are shown for input voltages of 3V, 4.2V, 5V, 7V, 9V, and 12V. Efficiency increases with current and input voltage, peaking around 90-95% for higher voltages at currents above 10mA. Vout = 5 V, T = 25 °C.](6fc99b56d4021cf515d190c3a0da183f_img.jpg)\n\nD001\n\nFigure 38: Efficiency vs Output Current (PFM) graph. The y-axis is Efficiency (0-100%) and the x-axis is Output Current (A) on a log scale (100µ to 2). Curves are shown for input voltages of 3V, 4.2V, 5V, 7V, 9V, and 12V. Efficiency increases with current and input voltage, peaking around 90-95% for higher voltages at currents above 10mA. Vout = 5 V, T = 25 °C.\n\nFigure 38. Efficiency vs Output Current\n",
+    "new": "![Figure 38: Efficiency vs Output Current, PFM, Vout = 5 V, T = 25 °C. Efficiency (0 to 100%) versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). Efficiency rises with output current and flattens out; at light load the lower input voltages give higher efficiency and the 12 V curve is lowest. At the highest currents the 3 V curve drops steeply and the 4.2 V curve drops less. Read values from the image/PDF.](6fc99b56d4021cf515d190c3a0da183f_img.jpg)\n\nD001\n\nFigure 38: Efficiency vs Output Current, PFM, Vout = 5 V, T = 25 °C. Efficiency (0 to 100%) versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). Efficiency rises with output current and flattens out; at light load the lower input voltages give higher efficiency and the 12 V curve is lowest. At the highest currents the 3 V curve drops steeply and the 4.2 V curve drops less. Read values from the image/PDF.\n\nVout = 5 V\n\nPFM\n\nT = 25 °C\n\n**Figure 38. Efficiency vs Output Current**\n",
+    "evidence": "PDF p28 Figure 38 (page render and the figure image): the AI text said efficiency increases with input voltage; at light load the order is reversed (12 V lowest) and the 3 V curve falls off at high current. The printed text under the graph ('Vout = 5 V', 'PFM', 'T = 25 °C') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p28-fig39-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 28,
+    "old": "![Figure 39: Efficiency vs Output Current (PWM) graph. Similar to Figure 38, but for PWM mode. Efficiency is lower at low currents and rises to about 90% at higher currents. Vout = 5 V, T = 25 °C.](114a0f7c7ac69ab82f03d68650cf8e88_img.jpg)\n\nD002\n\nFigure 39: Efficiency vs Output Current (PWM) graph. Similar to Figure 38, but for PWM mode. Efficiency is lower at low currents and rises to about 90% at higher currents. Vout = 5 V, T = 25 °C.\n\nFigure 39. Efficiency vs Output Current\n",
+    "new": "![Figure 39: Efficiency vs Output Current, PWM, Vout = 5 V, T = 25 °C. Efficiency (0 to 100%) versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). Efficiency is very low at light load and rises steeply with output current; the 3 V, 4.2 V and 5 V curves rise first and the 12 V curve last. At the highest currents the 3 V curve drops steeply. Read values from the image/PDF.](114a0f7c7ac69ab82f03d68650cf8e88_img.jpg)\n\nD002\n\nFigure 39: Efficiency vs Output Current, PWM, Vout = 5 V, T = 25 °C. Efficiency (0 to 100%) versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). Efficiency is very low at light load and rises steeply with output current; the 3 V, 4.2 V and 5 V curves rise first and the 12 V curve last. At the highest currents the 3 V curve drops steeply. Read values from the image/PDF.\n\nVout = 5 V\n\nPWM\n\nT = 25 °C\n\n**Figure 39. Efficiency vs Output Current**\n",
+    "evidence": "PDF p28 Figure 39 (page render and the figure image): the AI text only said efficiency 'rises to about 90%'; the curve order and the 3 V drop at high current were missing. The printed text under the graph ('Vout = 5 V', 'PWM', 'T = 25 °C') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p28-fig40-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 28,
+    "old": "![Figure 40: Output Voltage vs Output Current (PFM) graph. The y-axis is Output Voltage (V) (4.85 to 5.25) and the x-axis is Output Current (A) on a log scale. Curves for 3V-12V inputs show a slight voltage drop as current increases, with higher input voltages maintaining a higher output voltage. Vout = 5 V, T = 25 °C.](9c8070d46f1d2480a875239e792f1ef6_img.jpg)\n\nD007\n\nFigure 40: Output Voltage vs Output Current (PFM) graph. The y-axis is Output Voltage (V) (4.85 to 5.25) and the x-axis is Output Current (A) on a log scale. Curves for 3V-12V inputs show a slight voltage drop as current increases, with higher input voltages maintaining a higher output voltage. Vout = 5 V, T = 25 °C.\n\nFigure 40. Output Voltage vs Output Current\n",
+    "new": "![Figure 40: Output Voltage vs Output Current, PFM, Vout = 5 V, T = 25 °C. Output Voltage (V) from 4.85 to 5.25 versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). At light load the output voltage sits slightly above the 5 V gridline (PFM) and is nearly flat; at higher currents it steps down to 5 V. At the highest current the 3 V curve collapses. Read values from the image/PDF.](9c8070d46f1d2480a875239e792f1ef6_img.jpg)\n\nD007\n\nFigure 40: Output Voltage vs Output Current, PFM, Vout = 5 V, T = 25 °C. Output Voltage (V) from 4.85 to 5.25 versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). At light load the output voltage sits slightly above the 5 V gridline (PFM) and is nearly flat; at higher currents it steps down to 5 V. At the highest current the 3 V curve collapses. Read values from the image/PDF.\n\nVout = 5 V\n\nPFM\n\nT = 25 °C\n\n**Figure 40. Output Voltage vs Output Current**\n",
+    "evidence": "PDF p28 Figure 40 (page render and the figure image): the AI text said higher input voltages keep a higher output voltage; the curves overlap and step down to 5 V, and only the 3 V curve collapses. The printed text under the graph ('Vout = 5 V', 'PFM', 'T = 25 °C') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p28-fig41-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 28,
+    "old": "![Figure 41: Output Voltage vs Output Current (PWM) graph. Similar to Figure 40, but for PWM mode. The output voltage is more stable across the current range compared to PFM mode. Vout = 5 V, T = 25 °C.](d2adade462af578f17e01b2a65b53c12_img.jpg)\n\nD008\n\nFigure 41: Output Voltage vs Output Current (PWM) graph. Similar to Figure 40, but for PWM mode. The output voltage is more stable across the current range compared to PFM mode. Vout = 5 V, T = 25 °C.\n\nFigure 41. Output Voltage vs Output Current\n",
+    "new": "![Figure 41: Output Voltage vs Output Current, PWM, Vout = 5 V, T = 25 °C. Output Voltage (V) from 4.85 to 5.2 versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). The output voltage is flat just below the 5 V gridline over the whole range; at the highest current the 3 V curve collapses. Read values from the image/PDF.](d2adade462af578f17e01b2a65b53c12_img.jpg)\n\nD008\n\nFigure 41: Output Voltage vs Output Current, PWM, Vout = 5 V, T = 25 °C. Output Voltage (V) from 4.85 to 5.2 versus Output Current (A) on a logarithmic axis from 100µ to 2, one curve per input voltage 3 V (black), 4.2 V (red), 5 V (gray), 7 V (blue), 9 V (green) and 12 V (brown). The output voltage is flat just below the 5 V gridline over the whole range; at the highest current the 3 V curve collapses. Read values from the image/PDF.\n\nVout = 5 V\n\nPWM\n\nT = 25 °C\n\n**Figure 41. Output Voltage vs Output Current**\n",
+    "evidence": "PDF p28 Figure 41 (page render and the figure image): the y axis of this graph runs from 4.85 to 5.2 (not the 5.25 of Figure 40) and the 3 V collapse was missing. The printed text under the graph ('Vout = 5 V', 'PWM', 'T = 25 °C') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p28-fig42-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 28,
+    "old": "![Figure 42: Typical Start-up Current graph. The y-axis is Output Current (A) (0 to 1) and the x-axis is Input Voltage (V) (3 to 16). Curves for -40°C, 25°C, 85°C, and 125°C show a step-like increase in current as input voltage increases. Vout = 5 V, resistive load.](5e0a69e2087708125cb35da57eb8c352_img.jpg)\n\nD013\n\nFigure 42: Typical Start-up Current graph. The y-axis is Output Current (A) (0 to 1) and the x-axis is Input Voltage (V) (3 to 16). Curves for -40°C, 25°C, 85°C, and 125°C show a step-like increase in current as input voltage increases. Vout = 5 V, resistive load.\n\nFigure 42. Typical Start-up Current\n",
+    "new": "![Figure 42: Typical Start-up Current, Vout = 5 V, resistive load. Output Current (A) from 0 to 1 versus Input Voltage (V) from 3 to 16, one curve per junction temperature -40°C (black), 25°C (red), 85°C (gray) and 125°C (blue). The start-up current rises in steps at low input voltage and is flat above; the 25°C and 85°C curves end on the same highest plateau, the 125°C curve is lower and the -40°C curve is lowest. Read values from the image/PDF.](5e0a69e2087708125cb35da57eb8c352_img.jpg)\n\nD013\n\nFigure 42: Typical Start-up Current, Vout = 5 V, resistive load. Output Current (A) from 0 to 1 versus Input Voltage (V) from 3 to 16, one curve per junction temperature -40°C (black), 25°C (red), 85°C (gray) and 125°C (blue). The start-up current rises in steps at low input voltage and is flat above; the 25°C and 85°C curves end on the same highest plateau, the 125°C curve is lower and the -40°C curve is lowest. Read values from the image/PDF.\n\nVout = 5 V\n\nresistive load\n\n**Figure 42. Typical Start-up Current**\n",
+    "evidence": "PDF p28 Figure 42 (page render and the figure image): the curve order (25/85°C highest, -40°C lowest) was missing. The printed text under the graph ('Vout = 5 V', 'resistive load') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p28-fig43-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 28,
+    "old": "![Figure 43: Maximum Load Current vs Input Voltage graph. The y-axis is Max Output Current (A) (0 to 4.5) and the x-axis is Input Voltage (V) (2 to 16). Curves for -40°C, 25°C, 85°C, and 125°C show a peak in current around 5-6V input. Vout = 5 V, after start-up with PG = high.](2c637344ff0da5ad653151532d4041a9_img.jpg)\n\nD016\n\nFigure 43: Maximum Load Current vs Input Voltage graph. The y-axis is Max Output Current (A) (0 to 4.5) and the x-axis is Input Voltage (V) (2 to 16). Curves for -40°C, 25°C, 85°C, and 125°C show a peak in current around 5-6V input. Vout = 5 V, after start-up with PG = high.\n\nFigure 43. Maximum Load Current vs Input Voltage\n",
+    "new": "![Figure 43: Maximum Load Current vs Input Voltage, Vout = 5 V, after start-up with PG = high. Max Output Current (A) from 0 to 4.5 versus Input Voltage (V) from 2 to 16, one curve per junction temperature -40°C (black), 25°C (red), 85°C (gray) and 125°C (blue). The maximum load current rises steeply at low input voltage to a peak and then stays roughly flat or decreases slowly; the -40°C curve is highest over most of the range (the 25°C curve is close and ends higher at the top of the range), the 85°C curve is lower and the 125°C curve is lowest. Read values from the image/PDF.](2c637344ff0da5ad653151532d4041a9_img.jpg)\n\nD016\n\nFigure 43: Maximum Load Current vs Input Voltage, Vout = 5 V, after start-up with PG = high. Max Output Current (A) from 0 to 4.5 versus Input Voltage (V) from 2 to 16, one curve per junction temperature -40°C (black), 25°C (red), 85°C (gray) and 125°C (blue). The maximum load current rises steeply at low input voltage to a peak and then stays roughly flat or decreases slowly; the -40°C curve is highest over most of the range (the 25°C curve is close and ends higher at the top of the range), the 85°C curve is lower and the 125°C curve is lowest. Read values from the image/PDF.\n\nVout = 5 V\n\nafter start-up with PG = high\n\n**Figure 43. Maximum Load Current vs Input Voltage**\n",
+    "evidence": "PDF p28 Figure 43 (page render and the figure image): the AI text gave a peak 'around 5-6V' read from the curves and no curve order. The printed text under the graph ('Vout = 5 V', 'after start-up with PG = high') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p29-fig44-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 29,
+    "old": "![Oscilloscope screenshot showing load transient response for Vout = 5V and Vin = 4.2V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100mA to 800mA. The VOUT shows a small dip and recovery. Measurement data: Peak-Peak 196.0mV, Mean 4.948V, High 1.020A, Low 100.0mA. Settings: 200mV/Div, 500mA/Div, 200µs, 500MS/s, 1M points.](23816aaa8e6defc50fc888da62fd59cc_img.jpg)\n\nOscilloscope screenshot showing load transient response for Vout = 5V and Vin = 4.2V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100mA to 800mA. The VOUT shows a small dip and recovery. Measurement data: Peak-Peak 196.0mV, Mean 4.948V, High 1.020A, Low 100.0mA. Settings: 200mV/Div, 500mA/Div, 200µs, 500MS/s, 1M points.\n\n**Figure 44. Load Transient Response**\n",
+    "new": "![Figure 44: Load Transient Response, oscilloscope capture, Vout = 5 V, PFM, Vin = 4.2V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (500mA/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.](23816aaa8e6defc50fc888da62fd59cc_img.jpg)\n\nFigure 44: Load Transient Response, oscilloscope capture, Vout = 5 V, PFM, Vin = 4.2V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (500mA/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.\n\nVout = 5 V\n\nPFM\n\nVin = 4.2V\n\n**Figure 44. Load Transient Response**\n",
+    "evidence": "PDF p29 Figure 44 (page render and 300-dpi crops of the screenshot readouts): the AI text said the load steps from 100mA to 800mA, but its own High readout is 1.020 A; the overshoot at the load release was missing. Description rewritten from the capture without readout values; printed conditions under the capture added as page text; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p29-fig45-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 29,
+    "old": "![Oscilloscope screenshot showing load transient response for Vout = 5V and Vin = 12V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100mA to 800mA. The VOUT shows a small dip and recovery. Measurement data: Peak-Peak 291.9mV, Mean 4.938V, High 1.800A, Low 200.0mA. Settings: 200mV/Div, 1.00A/Div, 200µs, 500MS/s, 1M points.](1033ab90cd19fd4c5901966aeec07a86_img.jpg)\n\nOscilloscope screenshot showing load transient response for Vout = 5V and Vin = 12V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100mA to 800mA. The VOUT shows a small dip and recovery. Measurement data: Peak-Peak 291.9mV, Mean 4.938V, High 1.800A, Low 200.0mA. Settings: 200mV/Div, 1.00A/Div, 200µs, 500MS/s, 1M points.\n\n**Figure 45. Load Transient Response**\n",
+    "new": "![Figure 45: Load Transient Response, oscilloscope capture, Vout = 5 V, PFM, Vin = 12V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (1.00 A/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.](1033ab90cd19fd4c5901966aeec07a86_img.jpg)\n\nFigure 45: Load Transient Response, oscilloscope capture, Vout = 5 V, PFM, Vin = 12V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (1.00 A/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.\n\nVout = 5 V\n\nPFM\n\nVin = 12V\n\n**Figure 45. Load Transient Response**\n",
+    "evidence": "PDF p29 Figure 45 (page render and 300-dpi crops of the screenshot readouts): the AI text said the load steps from 100mA to 800mA; the screen readouts are High 1.800 A and Low 200.0mA (Table 9: 200 mA to 1.8 A). Description rewritten from the capture without readout values; printed conditions under the capture added as page text; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p29-fig46-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 29,
+    "old": "![Oscilloscope screenshot showing line transient response for Vout = 5V and Io = 1A. The top trace is VOUT and the bottom trace is VIN. The VIN steps up from 4.280V to 7.080V. The VOUT shows a small dip and recovery. Measurement data: Peak-Peak 174.8mV, Mean 4.978V, High 7.080V, Low 4.280V. Settings: 2.00V, 100mV/Div, 1.00ms, 100MS/s, 1M points.](b78854f39d5fe3c45a918555e158ee58_img.jpg)\n\nOscilloscope screenshot showing line transient response for Vout = 5V and Io = 1A. The top trace is VOUT and the bottom trace is VIN. The VIN steps up from 4.280V to 7.080V. The VOUT shows a small dip and recovery. Measurement data: Peak-Peak 174.8mV, Mean 4.978V, High 7.080V, Low 4.280V. Settings: 2.00V, 100mV/Div, 1.00ms, 100MS/s, 1M points.\n\n**Figure 46. Line Transient Response**\n",
+    "new": "![Figure 46: Line Transient Response, oscilloscope capture, Vout = 5 V, PFM, Io = 1A. Channel 2 VOUT (100mV/div) is on top and channel 1 VIN (2.00 V/div) at the bottom, 1.00ms/div, with a 'Mode=PFM' annotation. VIN steps up and back down; VOUT stays flat apart from a short spike at each VIN edge. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of VIN) are part of the image; read their values from the image/PDF.](b78854f39d5fe3c45a918555e158ee58_img.jpg)\n\nFigure 46: Line Transient Response, oscilloscope capture, Vout = 5 V, PFM, Io = 1A. Channel 2 VOUT (100mV/div) is on top and channel 1 VIN (2.00 V/div) at the bottom, 1.00ms/div, with a 'Mode=PFM' annotation. VIN steps up and back down; VOUT stays flat apart from a short spike at each VIN edge. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of VIN) are part of the image; read their values from the image/PDF.\n\nVout = 5 V\n\nPFM\n\nIo = 1A\n\n**Figure 46. Line Transient Response**\n",
+    "evidence": "PDF p29 Figure 46 (page render and 300-dpi crops of the screenshot readouts): the AI text described 'a small dip and recovery' of VOUT and gave the VOUT Mean readout as 4.978V, which the raster screenshot does not show (it reads 4.93x V). Description rewritten from the capture without readout values; printed conditions under the capture added as page text; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p29-fig47-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 29,
+    "old": "![Oscilloscope screenshot showing output voltage ripple for Vin = 4.2V, Vout = 5V, and Io = 0.3A. The top trace is VOUT and the bottom trace is Inductor current. The VOUT shows a triangular ripple. Measurement data: Peak-Peak 54.01mV, Mean 4.956V, Mean 385.5mA. Settings: 50.0mV/Div, 500mA/Div, 10.0µs, 5.00GS/s, 1M points.](f3c5e85b70f94b9c3c521f594d69539f_img.jpg)\n\nOscilloscope screenshot showing output voltage ripple for Vin = 4.2V, Vout = 5V, and Io = 0.3A. The top trace is VOUT and the bottom trace is Inductor current. The VOUT shows a triangular ripple. Measurement data: Peak-Peak 54.01mV, Mean 4.956V, Mean 385.5mA. Settings: 50.0mV/Div, 500mA/Div, 10.0µs, 5.00GS/s, 1M points.\n\n**Figure 47. Output Voltage Ripple**\n",
+    "new": "![Figure 47: Output Voltage Ripple, oscilloscope capture, Vin = 4.2V; Vout = 5 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](f3c5e85b70f94b9c3c521f594d69539f_img.jpg)\n\nFigure 47: Output Voltage Ripple, oscilloscope capture, Vin = 4.2V; Vout = 5 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 4.2V; Vout = 5 V\n\nPFM\n\nIo = 0.3A\n\n**Figure 47. Output Voltage Ripple**\n",
+    "evidence": "PDF p29 Figure 47 (page render and 300-dpi crops of the screenshot readouts): the AI text described a 'triangular ripple' without the PFM bursts of the inductor current. Description rewritten from the capture without readout values; printed conditions under the capture added as page text; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p29-fig48-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 29,
+    "old": "![Oscilloscope screenshot showing output voltage ripple for Vin = 4.2V, Vout = 5V, and Io = 1A. The top trace is VOUT and the bottom trace is Inductor current. The VOUT shows a triangular ripple. Measurement data: Peak-Peak 32.01mV, Mean 4.930V, Mean 1.296A. Settings: 50.0mV/Div, 200mA/Div, 1.00µs, 5.00GS/s, 1M points.](1b6859dc98bea4b394ac5ac200ee2881_img.jpg)\n\nOscilloscope screenshot showing output voltage ripple for Vin = 4.2V, Vout = 5V, and Io = 1A. The top trace is VOUT and the bottom trace is Inductor current. The VOUT shows a triangular ripple. Measurement data: Peak-Peak 32.01mV, Mean 4.930V, Mean 1.296A. Settings: 50.0mV/Div, 200mA/Div, 1.00µs, 5.00GS/s, 1M points.\n\n**Figure 48. Output Voltage Ripple**\n",
+    "new": "![Figure 48: Output Voltage Ripple, oscilloscope capture, Vin = 4.2V; Vout = 5 V, PWM, Io = 1A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (200mA/div) at the bottom, 1.00µs/div. The inductor current is a continuous triangular waveform at the switching frequency; VOUT shows a small ripple at the same frequency. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](1b6859dc98bea4b394ac5ac200ee2881_img.jpg)\n\nFigure 48: Output Voltage Ripple, oscilloscope capture, Vin = 4.2V; Vout = 5 V, PWM, Io = 1A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (200mA/div) at the bottom, 1.00µs/div. The inductor current is a continuous triangular waveform at the switching frequency; VOUT shows a small ripple at the same frequency. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 4.2V; Vout = 5 V\n\nPWM\n\nIo = 1A\n\n**Figure 48. Output Voltage Ripple**\n",
+    "evidence": "PDF p29 Figure 48 (page render and 300-dpi crops of the screenshot readouts): the AI text described a 'triangular ripple' of VOUT; VOUT has a small ripple and the inductor current is the triangular waveform. Description rewritten from the capture without readout values; printed conditions under the capture added as page text; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p29-fig49-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 29,
+    "old": "![Oscilloscope screenshot showing output voltage ripple for Vin = 7.2V, Vout = 5V, and Io = 0.3A. The top trace is VOUT and the bottom trace is Inductor current. The VOUT shows a triangular ripple. Measurement data: Peak-Peak 68.00mV, Mean 6.944V, Mean 299.9mA. Settings: 50.0mV/Div, 500mA/Div, 10.0µs, 5.00GS/s, 1M points.](bc9b32ae69d991e56f9a5f1e1d383d3a_img.jpg)\n\nOscilloscope screenshot showing output voltage ripple for Vin = 7.2V, Vout = 5V, and Io = 0.3A. The top trace is VOUT and the bottom trace is Inductor current. The VOUT shows a triangular ripple. Measurement data: Peak-Peak 68.00mV, Mean 6.944V, Mean 299.9mA. Settings: 50.0mV/Div, 500mA/Div, 10.0µs, 5.00GS/s, 1M points.\n\n**Figure 49. Output Voltage Ripple**\n",
+    "new": "![Figure 49: Output Voltage Ripple, oscilloscope capture, Vin = 7.2V; Vout = 5 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF. As printed, this capture appears to be the same screenshot as Figure 31 (Vin = 12V; Vout = 7 V): the readouts, including a VOUT Mean near 7 V, and the time stamp are identical.](bc9b32ae69d991e56f9a5f1e1d383d3a_img.jpg)\n\nFigure 49: Output Voltage Ripple, oscilloscope capture, Vin = 7.2V; Vout = 5 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF. As printed, this capture appears to be the same screenshot as Figure 31 (Vin = 12V; Vout = 7 V): the readouts, including a VOUT Mean near 7 V, and the time stamp are identical.\n\nVin = 7.2V; Vout = 5 V\n\nPFM\n\nIo = 0.3A\n\n**Figure 49. Output Voltage Ripple**\n",
+    "evidence": "PDF p29 Figure 49 (page render and 300-dpi crops of the screenshot readouts): the AI text copied the readouts (Peak-Peak 68.00mV, Mean 6.944V, 299.9mA) without noting that a 6.944 V mean contradicts Vout = 5 V; the screenshot, readouts and time stamp (9 Mar 2016 09:31:06) are identical to Figure 31 on p24, a manufacturer erratum kept as printed. Description rewritten from the capture without readout values; printed conditions under the capture added as page text; caption bold as printed. The embedded raster image of Figure 49 (p29) has the same MD5 as that of Figure 31 (p24).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p30-fig50-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 30,
+    "old": "![Oscilloscope screenshot showing Start-up Timing for the TPS63070. The plot shows three signals: Enable (blue), VOUT (green), and PC (purple). The Enable signal transitions from low to high. The VOUT signal rises from 4.960 V to 5.000 V. The PC signal transitions from low to high. The conditions are Vin = 4.5V, Vout = 5 V, PFM, and Io = 0.5A. The oscilloscope settings show a 200µs scale bar, 500MS/s, and 1M points. The date and time are 21 Mar 2016 09:58:22.](99938fa8d7d80af041634eba601e418b_img.jpg)\n\nVin = 4.5V; Vout = 5 V\n\nPFM\n\nIo = 0.5A\n\nFigure 50. Start-up Timing\n\nOscilloscope screenshot showing Start-up Timing for the TPS63070. The plot shows three signals: Enable (blue), VOUT (green), and PC (purple). The Enable signal transitions from low to high. The VOUT signal rises from 4.960 V to 5.000 V. The PC signal transitions from low to high. The conditions are Vin = 4.5V, Vout = 5 V, PFM, and Io = 0.5A. The oscilloscope settings show a 200µs scale bar, 500MS/s, and 1M points. The date and time are 21 Mar 2016 09:58:22.\n",
+    "new": "![Figure 50: Start-up Timing, oscilloscope capture, Vin = 4.5V; Vout = 5 V, PFM, Io = 0.5A. Channel 1 Enable (5.00 V/div) on top, channel 2 VOUT (2.00 V/div) in the middle and channel 3 PG (2.00 V/div) at the bottom, 200µs/div. Enable steps high at the trigger point; after a short delay VOUT ramps up smoothly and levels off at its final value, and PG steps from low to high when VOUT has reached its final level. The on-screen readouts (High and Low of VOUT) are part of the image; read their values from the image/PDF. As printed, this capture appears to be the same screenshot as Figure 35 (Vin = 4.5V; Vout = 7 V): the traces, readouts and time stamp are identical.](99938fa8d7d80af041634eba601e418b_img.jpg)\n\nFigure 50: Start-up Timing, oscilloscope capture, Vin = 4.5V; Vout = 5 V, PFM, Io = 0.5A. Channel 1 Enable (5.00 V/div) on top, channel 2 VOUT (2.00 V/div) in the middle and channel 3 PG (2.00 V/div) at the bottom, 200µs/div. Enable steps high at the trigger point; after a short delay VOUT ramps up smoothly and levels off at its final value, and PG steps from low to high when VOUT has reached its final level. The on-screen readouts (High and Low of VOUT) are part of the image; read their values from the image/PDF. As printed, this capture appears to be the same screenshot as Figure 35 (Vin = 4.5V; Vout = 7 V): the traces, readouts and time stamp are identical.\n\nVin = 4.5V; Vout = 5 V\n\nPFM\n\nIo = 0.5A\n\n**Figure 50. Start-up Timing**\n",
+    "evidence": "PDF p30 Figure 50: the AI text called the PG channel 'PC' and read the 'High 4.960 V' / time-stamp readouts as 'VOUT rises from 4.960 V to 5.000 V'; the description paragraph came after the caption. The embedded raster image of Figure 50 has the same MD5 as Figure 35 on p25 (same time stamp 21 Mar 2016 09:58:22), a manufacturer erratum kept as printed. Description rewritten from the capture; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
