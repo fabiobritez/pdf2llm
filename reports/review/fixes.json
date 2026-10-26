@@ -20729,5 +20729,489 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig26-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "![Figure 26: TUE_IIN vs READ_IIN Input Voltage in µV. A line graph showing Total Unadjusted Error (TUE_IIN) in µV on the y-axis (0 to 700) versus input voltage V_IN_SNS in mV on the x-axis (0 to 100). Three curves are shown: HIGH RANGE (red), MEDIUM RANGE (blue), and LOW RANGE (green). All curves show a linear increase in error with voltage, with the high range having the steepest slope.](",
+    "new": "![Figure 26: TUE_IIN vs READ_IIN Input Voltage in µV. A line graph with TUE_IIN (µV) on the y-axis (0 to 700) and V_IIN_SNS (mV) on the x-axis (0 to 100), both linear. Three rising straight lines of similar slope are labeled HIGH RANGE (red, drawn over the whole 0 to 100mV axis), MEDIUM RANGE (blue, ending near 50mV) and LOW RANGE (green, ending near 20mV); at a given V_IIN_SNS the high range line is the highest. Read values from the PDF image.](",
+    "evidence": "PDF p86 Figure 26 (render): the x-axis label is V_IIN_SNS (mV), not V_IN_SNS; the three lines rise with similar slopes and differ in extent (low range ends near 20mV, medium near 50mV, high spans the whole axis), so 'the high range having the steepest slope' is not what is drawn. Description corrected; no values added.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig26-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "\nFigure 26: TUE\\_IIN vs READ\\_IIN Input Voltage in µV. A line graph showing Total Unadjusted Error (TUE\\_IIN) in µV on the y-axis (0 to 700) versus input voltage V\\_IN\\_SNS in mV on the x-axis (0 to 100). Three curves are shown: HIGH RANGE (red), MEDIUM RANGE (blue), and LOW RANGE (green). All curves show a linear increase in error with voltage, with the high range having the steepest slope.\n",
+    "new": "\nFigure 26: TUE\\_IIN vs READ\\_IIN Input Voltage in µV. A line graph with TUE\\_IIN (µV) on the y-axis (0 to 700) and V\\_IIN\\_SNS (mV) on the x-axis (0 to 100), both linear. Three rising straight lines of similar slope are labeled HIGH RANGE (red, drawn over the whole 0 to 100mV axis), MEDIUM RANGE (blue, ending near 50mV) and LOW RANGE (green, ending near 20mV); at a given V\\_IIN\\_SNS the high range line is the highest. Read values from the PDF image.\n",
+    "evidence": "Same as ltc2975-p86-fig26-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig27-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "![Figure 27: TUE_IIN vs READ_IIN Input Voltage in Percentage. A line graph showing TUE_IIN (RELATIVE %) on a logarithmic y-axis (0.5 to 10) versus input voltage V_IN_SNS in mV on a logarithmic x-axis (1 to 100). Three curves are shown: HIGH RANGE (red), MEDIUM RANGE (blue), and LOW RANGE (green). All curves show a decreasing relative error as input voltage increases, with the high range consistently having the highest relative error.](",
+    "new": "![Figure 27: TUE_IIN vs READ_IIN Input Voltage in Percentage. A line graph showing TUE_IIN (RELATIVE %) on a logarithmic y-axis (0.5 to 10) versus V_IIN_SNS (mV) on a logarithmic x-axis (1 to 100). Three curves are shown: HIGH RANGE (red), MEDIUM RANGE (blue), and LOW RANGE (green). All curves show a decreasing relative error as input voltage increases, with the high range consistently having the highest relative error; the low range curve ends near 20mV, the medium range curve near 50mV and the high range curve at 100mV.](",
+    "evidence": "PDF p86 Figure 27 (render): the x-axis label is V_IIN_SNS (mV), not V_IN_SNS; the curves end at different input voltages (low range near 20mV, medium near 50mV, high at 100mV). Description corrected; no values added.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig27-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "\nFigure 27: TUE\\_IIN vs READ\\_IIN Input Voltage in Percentage. A line graph showing TUE\\_IIN (RELATIVE %) on a logarithmic y-axis (0.5 to 10) versus input voltage V\\_IN\\_SNS in mV on a logarithmic x-axis (1 to 100). Three curves are shown: HIGH RANGE (red), MEDIUM RANGE (blue), and LOW RANGE (green). All curves show a decreasing relative error as input voltage increases, with the high range consistently having the highest relative error.\n",
+    "new": "\nFigure 27: TUE\\_IIN vs READ\\_IIN Input Voltage in Percentage. A line graph showing TUE\\_IIN (RELATIVE %) on a logarithmic y-axis (0.5 to 10) versus V\\_IIN\\_SNS (mV) on a logarithmic x-axis (1 to 100). Three curves are shown: HIGH RANGE (red), MEDIUM RANGE (blue), and LOW RANGE (green). All curves show a decreasing relative error as input voltage increases, with the high range consistently having the highest relative error; the low range curve ends near 20mV, the medium range curve near 50mV and the high range curve at 100mV.\n",
+    "evidence": "Same as ltc2975-p86-fig27-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig28-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "![Figure 28: Optional V_IN_SNS Filtering circuit diagram. The diagram shows a circuit with a 4.5V < V_IN_SNS < 15V supply. It includes resistors R1 (100Ω), R2 (100Ω), R3 (10Ω), and a sense resistor RSENSE. Capacitors C1 (1µF), C2 (1µF), C3 (10µF), and CIN (0.01µF) are used for filtering. The LTC2975* IC is shown with pins V_IN_SNS, V_IN_SNS_CAP, I_IN_SNSP, I_IN_SNSM, and GND. Diodes D1, D2, D3, and D4 are part of the internal structure of the IC. A 350Ω resistor is connected between V_IN_SNS_CAP and CIN.](",
+    "new": "![Figure 28: Optional V_IN_SNS Filtering circuit diagram (description written from the PDF drawing). The supply node labeled '4.5V < V_IN_SNS < 15V' feeds R3 (10Ω) to the V_IN_SNS pin of the LTC2975*; C3 (10µF) connects the V_IN_SNS side of R3 to ground. The supply node also connects to the top of the sense resistor R_SENSE, whose bottom feeds a box labeled 'LOAD' that returns to ground. R1 (100Ω) runs from the top of R_SENSE to the I_IN_SNSP pin and R2 (100Ω) from the bottom of R_SENSE to the I_IN_SNSM pin. C2 (1µF) connects the V_IN_SNS line to the I_IN_SNSP line, and C1 (1µF) connects the V_IN_SNS line to the I_IN_SNSM line. Inside the LTC2975 box, diodes D1 and D2 (antiparallel) are drawn between V_IN_SNS and I_IN_SNSP, diodes D3 and D4 (antiparallel) between V_IN_SNS and I_IN_SNSM, and a 350Ω resistor between V_IN_SNS and the V_IN_SNS_CAP pin; an external capacitor C_IN (0.01µF) connects V_IN_SNS_CAP to ground. GND connects to ground. Drawing number 2975 F28.](",
+    "evidence": "PDF p86 Figure 28 (render, 330 dpi crop): the AI text listed the parts without their connections and placed the 350Ω resistor between V_IN_SNS_CAP and C_IN; in the drawing the 350Ω is inside the LTC2975 between V_IN_SNS and the V_IN_SNS_CAP pin, and C_IN goes from V_IN_SNS_CAP to ground. Connections of R1, R2, R3, R_SENSE, C1, C2, C3 and D1-D4 rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p86-fig28-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "\nFigure 28: Optional V\\_IN\\_SNS Filtering circuit diagram. The diagram shows a circuit with a 4.5V < V\\_IN\\_SNS < 15V supply. It includes resistors R1 (100Ω), R2 (100Ω), R3 (10Ω), and a sense resistor RSENSE. Capacitors C1 (1µF), C2 (1µF), C3 (10µF), and CIN (0.01µF) are used for filtering. The LTC2975\\* IC is shown with pins V\\_IN\\_SNS, V\\_IN\\_SNS\\_CAP, I\\_IN\\_SNSP, I\\_IN\\_SNSM, and GND. Diodes D1, D2, D3, and D4 are part of the internal structure of the IC. A 350Ω resistor is connected between V\\_IN\\_SNS\\_CAP and CIN.\n",
+    "new": "\nFigure 28: Optional V\\_IN\\_SNS Filtering circuit diagram (description written from the PDF drawing). The supply node labeled '4.5V < V\\_IN\\_SNS < 15V' feeds R3 (10Ω) to the V\\_IN\\_SNS pin of the LTC2975\\*; C3 (10µF) connects the V\\_IN\\_SNS side of R3 to ground. The supply node also connects to the top of the sense resistor R\\_SENSE, whose bottom feeds a box labeled 'LOAD' that returns to ground. R1 (100Ω) runs from the top of R\\_SENSE to the I\\_IN\\_SNSP pin and R2 (100Ω) from the bottom of R\\_SENSE to the I\\_IN\\_SNSM pin. C2 (1µF) connects the V\\_IN\\_SNS line to the I\\_IN\\_SNSP line, and C1 (1µF) connects the V\\_IN\\_SNS line to the I\\_IN\\_SNSM line. Inside the LTC2975 box, diodes D1 and D2 (antiparallel) are drawn between V\\_IN\\_SNS and I\\_IN\\_SNSP, diodes D3 and D4 (antiparallel) between V\\_IN\\_SNS and I\\_IN\\_SNSM, and a 350Ω resistor between V\\_IN\\_SNS and the V\\_IN\\_SNS\\_CAP pin; an external capacitor C\\_IN (0.01µF) connects V\\_IN\\_SNS\\_CAP to ground. GND connects to ground. Drawing number 2975 F28.\n",
+    "evidence": "Same as ltc2975-p86-fig28-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p86-fig26-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "\nFigure 26. TUE\\_IIN vs READ\\_IIN Input Voltage in  $\\mu\\text{V}$\n",
+    "new": "\n**Figure 26. TUE\\_IIN vs READ\\_IIN Input Voltage in  $\\mu\\text{V}$**\n",
+    "evidence": "PDF p86 (PyMuPDF spans + render): the Figure 26 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig27-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "\nFigure 27. TUE\\_IIN vs READ\\_IIN Input Voltage in Percentage\n",
+    "new": "\n**Figure 27. TUE\\_IIN vs READ\\_IIN Input Voltage in Percentage**\n",
+    "evidence": "PDF p86 (PyMuPDF spans + render): the Figure 27 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-fig28-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "\nFigure 28. Optional  $V_{IN\\_SNS}$  Filtering\n",
+    "new": "\n**Figure 28. Optional  $V_{IN\\_SNS}$  Filtering**\n",
+    "evidence": "PDF p86 (PyMuPDF spans + render): the Figure 28 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p87-accumlate-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 87,
+    "old": "Energy\\_value can accumulate up to",
+    "new": "Energy\\_value can accumlate up to",
+    "evidence": "PDF p87 Measuring Input Energy (PyMuPDF words + render): printed 'Energy_value can accumlate up to (2^48-1) mJ' (typo); the md had corrected it to 'accumulate'. Kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p87-sequence-servo-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 87,
+    "old": "\n## SEQUENCE, SERVO, MARGIN AND RESTART OPERATIONS\n",
+    "new": "\n### SEQUENCE, SERVO, MARGIN AND RESTART OPERATIONS\n",
+    "evidence": "PDF p87 (PyMuPDF spans + render): 'SEQUENCE, SERVO, MARGIN AND RESTART OPERATIONS' is a LinearHelvCond-Bold 11.7pt caps subsection (###) under the running title APPLICATIONS INFORMATION; the md had ##.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p88-on-sequencing-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 88,
+    "old": "\n### On Sequencing\n",
+    "new": "\n#### On Sequencing\n",
+    "evidence": "PDF p88 (PyMuPDF spans + render): 'On Sequencing' is a LinearHelvCond-Bold 11.7pt title-case subhead, the same style as 'On State Operation', 'Servo Modes' and 'DAC Modes' (####); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p88-fig29-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 88,
+    "old": "![Figure 29: Typical ON Sequence Using Control Pin. This timing diagram shows the relationship between VCONTROL, VOUT_EN, VOUT_OV_FAULT_LIMIT, VOUT_UV_FAULT_LIMIT, and VOUT. VCONTROL transitions from low to high, followed by a delay TON_DELAY before VOUT_EN transitions high. VOUT then rises from a low level, passing through VDC(NOM), towards VOUT_COMMAND. The rise time is TON_RISE. TON_MAX_FAULT_LIMIT is the total time from the start of the TON_DELAY until the device checks for an undervoltage fault. VOUT_OV_FAULT_LIMIT and VOUT_UV_FAULT_LIMIT are horizontal dashed lines indicating overvoltage and undervoltage fault thresholds respectively. A small label '2975 F29' is present near the VOUT rise curve.](",
+    "new": "![Figure 29: Typical ON Sequence Using Control Pin (description written from the PDF drawing). Timing diagram with three traces: V_CONTROL steps from low to high; after the interval TON_DELAY, V_OUT_EN steps from low to high; V_OUT stays low until V_OUT_EN rises, then ramps up to the level V_DC(NOM) at the end of the interval TON_RISE (measured from the V_OUT_EN edge), and afterwards moves more slowly to the higher level V_OUT_COMMAND and stays there. A dashed line labeled VOUT_OV_FAULT_LIMIT runs above the V_OUT trace over the whole diagram; the area below it is shaded up to the end of the interval TON_MAX_FAULT_LIMIT, which is also measured from the V_OUT_EN rising edge. A dashed line labeled VOUT_UV_FAULT_LIMIT, below V_OUT_COMMAND, starts at the end of TON_MAX_FAULT_LIMIT. Drawing number 2975 F29.](",
+    "evidence": "PDF p88 Figure 29 (render, 330 dpi crop): TON_MAX_FAULT_LIMIT is drawn from the V_OUT_EN rising edge (end of TON_DELAY), not from the start of TON_DELAY; TON_RISE also starts at the V_OUT_EN edge and ends where V_OUT reaches V_DC(NOM), after which V_OUT moves on to V_OUT_COMMAND; the UV limit line only starts at the end of TON_MAX_FAULT_LIMIT. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p88-fig29-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 88,
+    "old": "\nFigure 29: Typical ON Sequence Using Control Pin. This timing diagram shows the relationship between VCONTROL, VOUT\\_EN, VOUT\\_OV\\_FAULT\\_LIMIT, VOUT\\_UV\\_FAULT\\_LIMIT, and VOUT. VCONTROL transitions from low to high, followed by a delay TON\\_DELAY before VOUT\\_EN transitions high. VOUT then rises from a low level, passing through VDC(NOM), towards VOUT\\_COMMAND. The rise time is TON\\_RISE. TON\\_MAX\\_FAULT\\_LIMIT is the total time from the start of the TON\\_DELAY until the device checks for an undervoltage fault. VOUT\\_OV\\_FAULT\\_LIMIT and VOUT\\_UV\\_FAULT\\_LIMIT are horizontal dashed lines indicating overvoltage and undervoltage fault thresholds respectively. A small label '2975 F29' is present near the VOUT rise curve.\n",
+    "new": "\nFigure 29: Typical ON Sequence Using Control Pin (description written from the PDF drawing). Timing diagram with three traces: V\\_CONTROL steps from low to high; after the interval TON\\_DELAY, V\\_OUT\\_EN steps from low to high; V\\_OUT stays low until V\\_OUT\\_EN rises, then ramps up to the level V\\_DC(NOM) at the end of the interval TON\\_RISE (measured from the V\\_OUT\\_EN edge), and afterwards moves more slowly to the higher level V\\_OUT\\_COMMAND and stays there. A dashed line labeled VOUT\\_OV\\_FAULT\\_LIMIT runs above the V\\_OUT trace over the whole diagram; the area below it is shaded up to the end of the interval TON\\_MAX\\_FAULT\\_LIMIT, which is also measured from the V\\_OUT\\_EN rising edge. A dashed line labeled VOUT\\_UV\\_FAULT\\_LIMIT, below V\\_OUT\\_COMMAND, starts at the end of TON\\_MAX\\_FAULT\\_LIMIT. Drawing number 2975 F29.\n",
+    "evidence": "Same as ltc2975-p88-fig29-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p88-fig29-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 88,
+    "old": "\nFigure 29. Typical ON Sequence Using Control Pin\n",
+    "new": "\n**Figure 29. Typical ON Sequence Using Control Pin**\n",
+    "evidence": "PDF p88 (PyMuPDF spans + render): the Figure 29 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p88-vdcn-nom-column-split",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 88,
+    "old": "to go to its nominal value,\n\n$V_{DCn(NOM)}$ . Refer",
+    "new": "to go to its nominal value,  $V_{DCn(NOM)}$ . Refer",
+    "evidence": "PDF p88 (render): the On State Operation sentence '...to go to its nominal value, V_DCn(NOM). Refer to the MFR_CONFIG_LTC2975 command...' continues from the bottom of the left column to the top of the right column; the md broke it into two paragraphs. Rejoined.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p89-margining-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "\n### Margining\n",
+    "new": "\n#### Margining\n",
+    "evidence": "PDF p89 (PyMuPDF spans + render): 'Margining' is a LinearHelvCond-Bold 11.7pt title-case subhead, the same style as 'Off Sequencing' and 'VOUT Off Threshold Voltage' (####); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p89-automatic-restart-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "\n### Automatic Restart via MFR\\_RESTART\\_DELAY Command and CONTROL Pin\n",
+    "new": "\n#### Automatic Restart via MFR\\_RESTART\\_DELAY Command and CONTROL Pin\n",
+    "evidence": "PDF p89 (PyMuPDF spans + render): 'Automatic Restart via MFR_RESTART_DELAY Command and CONTROL Pin' is a LinearHelvCond-Bold 11.7pt title-case subhead (####), same style as 'Off Sequencing'; the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p89-vout-en-subscript-off-sequencing",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "until each channel's VOUT\\_EN pin is pulled low",
+    "new": "until each channel's  $V_{OUT\\_EN}$  pin is pulled low",
+    "evidence": "PDF p89 Off Sequencing (PyMuPDF spans + render): 'V' followed by subscript 'OUT_EN' (V_OUT_EN, the pin symbol), as in the md elsewhere ($V_{OUT\\_EN}$ on p88); the md had plain 'VOUT_EN'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p89-vout-en-subscript-restart-1",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "The automatic restart disables all VOUT\\_EN pins",
+    "new": "The automatic restart disables all  $V_{OUT\\_EN}$  pins",
+    "evidence": "PDF p89 Automatic Restart (PyMuPDF spans + render): printed V with subscript OUT_EN (pin symbol); the md had plain 'VOUT_EN'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p89-vout-en-subscript-restart-2",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "(see Figure 30). VOUT\\_EN pins are mapped",
+    "new": "(see Figure 30).  $V_{OUT\\_EN}$  pins are mapped",
+    "evidence": "PDF p89 Automatic Restart (PyMuPDF spans + render): printed V with subscript OUT_EN (pin symbol); the md had plain 'VOUT_EN'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p89-fig30-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "![Timing diagram for Figure 30: Off Sequence with Automatic Restart. The diagram shows two signals: VCONTROL and VOUT_ENO. VCONTROL starts high, then transitions to low. A 'CONTROL PIN BOUNCE' period is indicated where the signal oscillates between high and low before settling low. VOUT_ENO starts high. When VCONTROL transitions to low, VOUT_ENO transitions to low after a delay labeled TOFF_DELAY0. While VCONTROL is low, VOUT_ENO remains low for a duration labeled MFR_RESTART_DELAY. After this delay, VOUT_ENO transitions back to high. The time from the start of the MFR_RESTART_DELAY until VOUT_ENO transitions high is labeled TON_DELAY0. The diagram is labeled '2975 F30'.](",
+    "new": "![Timing diagram for Figure 30: Off Sequence with Automatic Restart (description written from the PDF drawing). Two traces: V_CONTROL and V_OUT_EN0. V_CONTROL starts high, goes low and toggles several times (the span is labeled 'CONTROL PIN BOUNCE'), then returns high and stays high. V_OUT_EN0 starts high and goes low at the end of the interval TOFF_DELAY0, measured from the first falling edge of V_CONTROL. The interval MFR_RESTART_DELAY starts at the last falling edge of V_CONTROL in the bounce and is followed by the interval TON_DELAY0, at the end of which V_OUT_EN0 returns high. Break marks on both traces indicate omitted time. The diagram is labeled '2975 F30'.](",
+    "evidence": "PDF p89 Figure 30 (render, 330 dpi crop): the signal is V_OUT_EN0 (zero), not 'VOUT_ENO'; V_CONTROL settles high after the bounce, not low; MFR_RESTART_DELAY starts at the last falling edge of the bounce and TON_DELAY0 follows it (TON_DELAY0 is not measured from the start of MFR_RESTART_DELAY). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p89-fig30-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "\nTiming diagram for Figure 30: Off Sequence with Automatic Restart. The diagram shows two signals: VCONTROL and VOUT\\_ENO. VCONTROL starts high, then transitions to low. A 'CONTROL PIN BOUNCE' period is indicated where the signal oscillates between high and low before settling low. VOUT\\_ENO starts high. When VCONTROL transitions to low, VOUT\\_ENO transitions to low after a delay labeled TOFF\\_DELAY0. While VCONTROL is low, VOUT\\_ENO remains low for a duration labeled MFR\\_RESTART\\_DELAY. After this delay, VOUT\\_ENO transitions back to high. The time from the start of the MFR\\_RESTART\\_DELAY until VOUT\\_ENO transitions high is labeled TON\\_DELAY0. The diagram is labeled '2975 F30'.\n",
+    "new": "\nTiming diagram for Figure 30: Off Sequence with Automatic Restart (description written from the PDF drawing). Two traces: V\\_CONTROL and V\\_OUT\\_EN0. V\\_CONTROL starts high, goes low and toggles several times (the span is labeled 'CONTROL PIN BOUNCE'), then returns high and stays high. V\\_OUT\\_EN0 starts high and goes low at the end of the interval TOFF\\_DELAY0, measured from the first falling edge of V\\_CONTROL. The interval MFR\\_RESTART\\_DELAY starts at the last falling edge of V\\_CONTROL in the bounce and is followed by the interval TON\\_DELAY0, at the end of which V\\_OUT\\_EN0 returns high. Break marks on both traces indicate omitted time. The diagram is labeled '2975 F30'.\n",
+    "evidence": "Same as ltc2975-p89-fig30-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p89-fig30-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 89,
+    "old": "\nFigure 30. Off Sequence with Automatic Restart\n",
+    "new": "\n**Figure 30. Off Sequence with Automatic Restart**\n",
+    "evidence": "PDF p89 (PyMuPDF spans + render): the Figure 30 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-iin-range-backticks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "The `Mfr_ein_config_iin_range` bits select one of three input current sense amplifier ranges: high, medium and low. The  $R_{SENSE}$  value should be chosen to satisfy the input range. The maximum allowable input ranges are as follows:  $\\pm 100\\text{mV}$  range for high range,  $\\pm 50\\text{mV}$  for medium range and  $\\pm 20\\text{mV}$  for low range. For best accuracy, use the lowest range setting encompassing the maximum input signal.",
+    "new": "The Mfr\\_ein\\_config\\_iin\\_range bits select one of three input current sense amplifier ranges: high, medium and low. The  $R_{SENSE}$  value should be chosen to satisfy the input range. The maximum allowable input ranges are as follows:  $\\pm 100\\text{mV}$  range for high range,  $\\pm 50\\text{mV}$  for medium range and  $\\pm 20\\text{mV}$  for low range. For best accuracy, use the lowest range setting encompassing the maximum input signal.",
+    "evidence": "PDF p86 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p86-tue-iin-backticks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 86,
+    "old": "To help choose the  $R_{SENSE}$  value and `Mfr_ein_config_iin_range` setting for your application, use the Electrical Characteristics table for `TUE_IIN`, along with Figures 26 and 27. Figures 26 and 27 serve as extrapolated guides while the Electrical Characteristics table shows tested `TUE_IIN` conditions. After selecting  $R_{SENSE}$ , write its value in  $\\text{m}\\Omega$  to the `MFR_IIN_CAL_GAIN` register, and `READ_IIN` will return the sensed current in amps. Figures 26 and 27 show absolute value of the expected worst case `READ_IIN` Total Unadjusted Error, `TUE_IIN`, in  $\\mu\\text{V}$  and in relative % of current sense input voltage reading,  $V_{IIN\\_SNS}$ , as a function of  $V_{IIN\\_SNS}$  ( $V_{IIN\\_SNSP} - V_{IIN\\_SNSM}$ ) for high range, medium range and low range settings.",
+    "new": "To help choose the  $R_{SENSE}$  value and Mfr\\_ein\\_config\\_iin\\_range setting for your application, use the Electrical Characteristics table for TUE\\_IIN, along with Figures 26 and 27. Figures 26 and 27 serve as extrapolated guides while the Electrical Characteristics table shows tested TUE\\_IIN conditions. After selecting  $R_{SENSE}$ , write its value in  $\\text{m}\\Omega$  to the MFR\\_IIN\\_CAL\\_GAIN register, and READ\\_IIN will return the sensed current in amps. Figures 26 and 27 show absolute value of the expected worst case READ\\_IIN Total Unadjusted Error, TUE\\_IIN, in  $\\mu\\text{V}$  and in relative % of current sense input voltage reading,  $V_{IIN\\_SNS}$ , as a function of  $V_{IIN\\_SNS}$  ( $V_{IIN\\_SNSP} - V_{IIN\\_SNSM}$ ) for high range, medium range and low range settings.",
+    "evidence": "PDF p86 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-fault-management-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "\n## FAULT MANAGEMENT\n",
+    "new": "\n### FAULT MANAGEMENT\n",
+    "evidence": "PDF p90 (PyMuPDF spans + render): 'FAULT MANAGEMENT' is a LinearHelvCond-Bold 11.7pt caps subsection (###) under the running title APPLICATIONS INFORMATION; the md had ##.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-output-overvoltage-undervoltage-overcurrent-and-undercurrent-faults-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "\n### Output Overvoltage, Undervoltage, Overcurrent and Undercurrent Faults\n",
+    "new": "\n#### Output Overvoltage, Undervoltage, Overcurrent and Undercurrent Faults\n",
+    "evidence": "PDF p90 (PyMuPDF spans + render): 'Output Overvoltage, Undervoltage, Overcurrent and Undercurrent Faults' is a LinearHelvCond-Bold 11.7pt title-case subhead under the caps subsection FAULT MANAGEMENT (####); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-output-overvoltage-undervoltage-and-overcurrent-warnings-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "\n### Output Overvoltage, Undervoltage, and Overcurrent Warnings\n",
+    "new": "\n#### Output Overvoltage, Undervoltage, and Overcurrent Warnings\n",
+    "evidence": "PDF p90 (PyMuPDF spans + render): 'Output Overvoltage, Undervoltage, and Overcurrent Warnings' is a LinearHelvCond-Bold 11.7pt title-case subhead under the caps subsection FAULT MANAGEMENT (####); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-configuring-the-auxfaultb-output-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "\n### Configuring the AUXFAULTB Output\n",
+    "new": "\n#### Configuring the AUXFAULTB Output\n",
+    "evidence": "PDF p90 (PyMuPDF spans + render): 'Configuring the AUXFAULTB Output' is a LinearHelvCond-Bold 11.7pt title-case subhead under the caps subsection FAULT MANAGEMENT (####); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-multi-channel-fault-management-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "\n### Multi-Channel Fault Management\n",
+    "new": "\n#### Multi-Channel Fault Management\n",
+    "evidence": "PDF p90 (PyMuPDF spans + render): 'Multi-Channel Fault Management' is a LinearHelvCond-Bold 11.7pt title-case subhead under the caps subsection FAULT MANAGEMENT (####); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-ov-uv-faults-backticks-vin-sns",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "The high-speed voltage supervisor OV and UV fault thresholds are configured using the `VOUT_OV_FAULT_LIMIT` and `VOUT_UV_FAULT_LIMIT` commands, respectively. The `VOUT_OV_FAULT_RESPONSE` and `VOUT_UV_FAULT_RESPONSE` commands determine the responses to OV/UV faults. In addition, the high-speed current supervisor OC and UC fault thresholds are configured using the `IOUT_OC_FAULT_LIMIT` and `IOUT_UC_FAULT_LIMIT` commands, respectively. The `IOUT_OC_FAULT_RESPONSE` and `IOUT_UC_FAULT_RESPONSE` commands determine the responses to OC/UC faults. Fault responses can range from disabling the DC/DC converter immediately, waiting to see if the fault condition persists for some interval before disabling the DC/DC converter, or allowing the DC/DC converter to continue operating in spite of the fault. If a DC/DC converter is disabled, the LTC2975 can be configured to retry one to six times, retry continuously without limitation, or latch-off. The retry interval is specified using the `MFR_RETRY_DELAY` command. Latched faults are reset by toggling the `CONTROL` pin, using the `OPERATION` command, or removing and reapplying the bias voltage to the `VIN_SNS` pin. All fault and warning conditions result in the `ALERTB` pin being asserted low and the corresponding bits being set in the status registers. The `CLEAR_FAULTS` command resets the contents of the status registers and de-asserts the `ALERTB` output.",
+    "new": "The high-speed voltage supervisor OV and UV fault thresholds are configured using the VOUT\\_OV\\_FAULT\\_LIMIT and VOUT\\_UV\\_FAULT\\_LIMIT commands, respectively. The VOUT\\_OV\\_FAULT\\_RESPONSE and VOUT\\_UV\\_FAULT\\_RESPONSE commands determine the responses to OV/UV faults. In addition, the high-speed current supervisor OC and UC fault thresholds are configured using the IOUT\\_OC\\_FAULT\\_LIMIT and IOUT\\_UC\\_FAULT\\_LIMIT commands, respectively. The IOUT\\_OC\\_FAULT\\_RESPONSE and IOUT\\_UC\\_FAULT\\_RESPONSE commands determine the responses to OC/UC faults. Fault responses can range from disabling the DC/DC converter immediately, waiting to see if the fault condition persists for some interval before disabling the DC/DC converter, or allowing the DC/DC converter to continue operating in spite of the fault. If a DC/DC converter is disabled, the LTC2975 can be configured to retry one to six times, retry continuously without limitation, or latch-off. The retry interval is specified using the MFR\\_RETRY\\_DELAY command. Latched faults are reset by toggling the CONTROL pin, using the OPERATION command, or removing and reapplying the bias voltage to the  $V_{IN\\_SNS}$  pin. All fault and warning conditions result in the ALERTB pin being asserted low and the corresponding bits being set in the status registers. The CLEAR\\_FAULTS command resets the contents of the status registers and de-asserts the ALERTB output.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md; 'the VIN_SNS pin' is printed V with subscript IN_SNS (pin symbol).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-warnings-backticks-iout-uc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "OV, UV, and OC warning thresholds are processed by the LTC2975's ADC. These thresholds are set by the `VOUT_OV_WARN_LIMIT`, `VOUT_UV_WARN_LIMIT`, and `IOUT_OC_WARN_LIMIT` commands, respectively. Note that there is no `IOUT_UC` warning threshold. If a warning occurs, the corresponding bits are set in the status registers and the `ALERTB` output is asserted low. Note that a warning will never cause a `VOUT_EN` output pin to disable a DC/DC converter.",
+    "new": "OV, UV, and OC warning thresholds are processed by the LTC2975's ADC. These thresholds are set by the VOUT\\_OV\\_WARN\\_LIMIT, VOUT\\_UV\\_WARN\\_LIMIT, and IOUT\\_OC\\_WARN\\_LIMIT commands, respectively. Note that there is no  $I_{OUT}$  UC warning threshold. If a warning occurs, the corresponding bits are set in the status registers and the ALERTB output is asserted low. Note that a warning will never cause a  $V_{OUT\\_EN}$  output pin to disable a DC/DC converter.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): printed 'there is no I_OUT UC warning threshold' (I with subscript OUT, a space, then UC), not 'IOUT_UC'; 'a V_OUT_EN output pin' has the subscript OUT_EN. Also the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p90-auxfaultb-backticks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "The AUXFAULTB output may be used to indicate an output OV, OC, or UC fault. Use the `MFR_CONFIG2_LTC2975` and `MFR_CONFIG3_LTC2975` registers to configure the AUXFAULTB pin to assert low in response to `VOUT_OV`, `IOUT_OC` or `IOUT_UC` fault conditions. The AUXFAULTB output will stop pulling low when the LTC2975 is commanded to re-enter the ON state following a faulted-off condition.",
+    "new": "The AUXFAULTB output may be used to indicate an output OV, OC, or UC fault. Use the MFR\\_CONFIG2\\_LTC2975 and MFR\\_CONFIG3\\_LTC2975 registers to configure the AUXFAULTB pin to assert low in response to VOUT\\_OV, IOUT\\_OC or IOUT\\_UC fault conditions. The AUXFAULTB output will stop pulling low when the LTC2975 is commanded to re-enter the ON state following a faulted-off condition.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-pullup-backticks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "A charge-pumped 5µA pull-up to 12V is also available on the AUXFAULTB output. Refer to the `MFR_CONFIG_ALL_LTC2975` register description in the PMBUS COMMAND DESCRIPTION section for more information.",
+    "new": "A charge-pumped 5µA pull-up to 12V is also available on the AUXFAULTB output. Refer to the MFR\\_CONFIG\\_ALL\\_LTC2975 register description in the PMBUS COMMAND DESCRIPTION section for more information.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-crowbar-backticks-vin-vpwr",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "Figure 31 shows an application circuit where the AUXFAULTB output is used to trigger an SCR crowbar on the intermediate bus in order to protect the DC/DC converter's load from a catastrophic fault such as a stuck top gate. The stuck top gate causes an OV fault, which in turn causes the LTC2975 to pull AUXFAULTB low, thus deasserting the ON input to the LTC4210 hot-swap controller, which opens the switch Q1 that supplies the DC/DC converter input. In addition, when AUXFAULTB goes low it forces the S4010DS3 SCR device into the on-state via the 2N2907 PNP, thus quickly dropping the voltage on the `VIN` input to the DC/DC converter, preventing the stuck top gate from damaging components supplied by this converter. Note that the `VPWR` input to the LTC2975 bypasses switch Q1, keeping the LTC2975 fully powered throughout the above sequence.",
+    "new": "Figure 31 shows an application circuit where the AUXFAULTB output is used to trigger an SCR crowbar on the intermediate bus in order to protect the DC/DC converter's load from a catastrophic fault such as a stuck top gate. The stuck top gate causes an OV fault, which in turn causes the LTC2975 to pull AUXFAULTB low, thus deasserting the ON input to the LTC4210 hot-swap controller, which opens the switch Q1 that supplies the DC/DC converter input. In addition, when AUXFAULTB goes low it forces the S4010DS3 SCR device into the on-state via the 2N2907 PNP, thus quickly dropping the voltage on the  $V_{IN}$  input to the DC/DC converter, preventing the stuck top gate from damaging components supplied by this converter. Note that the  $V_{PWR}$  input to the LTC2975 bypasses switch Q1, keeping the LTC2975 fully powered throughout the above sequence.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): 'the V_IN input' and 'the V_PWR input' are printed with subscripts (IN, PWR); the md had them as backtick code spans `VIN` / `VPWR`. Written with subscripts like the rest of the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-multichannel-backticks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "Multi-channel fault management is handled using the bidirectional `FAULTB` pins. Figure 32 illustrates the connections between channels and the `FAULTB` pins.",
+    "new": "Multi-channel fault management is handled using the bidirectional FAULTB pins. Figure 32 illustrates the connections between channels and the FAULTB pins.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p90-faultbn-propagate-backticks",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 90,
+    "old": "- The `MFR_FAULTBn_PROPAGATE` command acts like a programmable switch that allows faulted\\_off conditions from a particular channel (`PAGE`) to propagate to either `FAULTB` output. The `MFR_FAULTBn_RESPONSE` command controls similar switches on the inputs to each channel that allow any channel to shut down in response to any combination of the `FAULTB` pins.",
+    "new": "- The MFR\\_FAULTBn\\_PROPAGATE command acts like a programmable switch that allows faulted\\_off conditions from a particular channel (PAGE) to propagate to either FAULTB output. The MFR\\_FAULTBn\\_RESPONSE command controls similar switches on the inputs to each channel that allow any channel to shut down in response to any combination of the FAULTB pins.",
+    "evidence": "PDF p90 (PyMuPDF spans + render): the md wrapped command/bit names in backtick code spans, which the PDF does not have (plain LinearHelvCond text); removed, with underscores escaped as elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
