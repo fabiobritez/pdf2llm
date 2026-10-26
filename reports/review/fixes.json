@@ -17850,5 +17850,109 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p25-summary-table-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 25,
+    "old": "{24}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\nSummary Table\n",
+    "new": "{24}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\n**Summary Table**\n",
+    "evidence": "PDF p25 (PyMuPDF spans + render): 'Summary Table' is a LinearHelvCond-Bold 9.7pt table caption (bold); the md had plain text.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p26-summary-table-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 26,
+    "old": "{25}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\nSummary Table\n",
+    "new": "{25}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\n**Summary Table**\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Summary Table' is a LinearHelvCond-Bold 9.7pt table caption (bold); the md had plain text.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p27-summary-table-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 27,
+    "old": "{26}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\nSummary Table\n",
+    "new": "{26}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\n**Summary Table**\n",
+    "evidence": "PDF p27 (PyMuPDF spans + render): 'Summary Table' is a LinearHelvCond-Bold 9.7pt table caption (bold); the md had plain text.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p28-summary-table-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 28,
+    "old": "{27}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\nSummary Table\n",
+    "new": "{27}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\n**Summary Table**\n",
+    "evidence": "PDF p28 (PyMuPDF spans + render): 'Summary Table' is a LinearHelvCond-Bold 9.7pt table caption (bold); the md had plain text.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p29-summary-table-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 29,
+    "old": "{28}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\nSummary Table\n",
+    "new": "{28}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\n**Summary Table**\n",
+    "evidence": "PDF p29 (PyMuPDF spans + render): 'Summary Table' is a LinearHelvCond-Bold 9.7pt table caption (bold); the md had plain text.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p30-summary-table-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 30,
+    "old": "{29}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\nSummary Table\n",
+    "new": "{29}------------------------------------------------\n\n## PMBUS COMMAND SUMMARY\n\n**Summary Table**\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): 'Summary Table' is a LinearHelvCond-Bold 9.7pt table caption (bold); the md had plain text.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p26-ton-delay-vout-en-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 26,
+    "old": "OPERATION command = ON to VOUT_ENn pin = ON.",
+    "new": "OPERATION command = ON to $V_{OUT\\_ENn}$ pin = ON.",
+    "evidence": "PDF p26 TON_DELAY row (PyMuPDF spans: 'V' then 'OUT_EN' and 'n' at the smaller subscript size, render): printed V_OUT_ENn with a subscript, as the md already writes it in the TON_RISE and TOFF_DELAY rows.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p30-data-formats-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 30,
+    "old": "\n### Data Formats\n",
+    "new": "\n**Data Formats**\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): 'Data Formats' is a LinearHelvCond-Bold 9.7pt table caption, the same style as 'Summary Table', not a heading.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
