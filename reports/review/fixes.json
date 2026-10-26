@@ -25289,5 +25289,226 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63070-p9-block-diagram-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 9,
+    "old": "![Functional Block Diagram of the TPS63070. The diagram shows the internal components and their connections. On the left, input pins VIN, VAUX, PG, PS/SYNC, EN, VSEL, and GND are shown. The internal blocks include a Bias Regulator (powered by VIN and VAUX), a Current Sensor (connected to VIN, VOUT, and the Gate Control), a Gate Control block (powered by VIN, VAUX, and VOUT), a Modulator (powered by VAUX), an Oscillator (powered by VAUX), a Device Control block (powered by PG and PS/SYNC), and a Temperature Protection block (powered by VSEL). The output section includes two inductors, L1 and L2, connected to the output pins VOUT and FB. The Gate Control drives four N-channel MOSFETs: two high-side switches (connected to VIN and L1/L2) and two low-side switches (connected to PGND). The feedback section includes two operational amplifiers: the first compares the output voltage (FB) to a reference voltage (VREF) and drives the Modulator; the second compares the output voltage (FB2) to the reference voltage (VREF) and drives the Gate Control. The output pins are VOUT, FB, FB2, and PGND.](a234352dfaccdc24745c88eef7724cc6_img.jpg)\n\nFunctional Block Diagram of the TPS63070. The diagram shows the internal components and their connections. On the left, input pins VIN, VAUX, PG, PS/SYNC, EN, VSEL, and GND are shown. The internal blocks include a Bias Regulator (powered by VIN and VAUX), a Current Sensor (connected to VIN, VOUT, and the Gate Control), a Gate Control block (powered by VIN, VAUX, and VOUT), a Modulator (powered by VAUX), an Oscillator (powered by VAUX), a Device Control block (powered by PG and PS/SYNC), and a Temperature Protection block (powered by VSEL). The output section includes two inductors, L1 and L2, connected to the output pins VOUT and FB. The Gate Control drives four N-channel MOSFETs: two high-side switches (connected to VIN and L1/L2) and two low-side switches (connected to PGND). The feedback section includes two operational amplifiers: the first compares the output voltage (FB) to a reference voltage (VREF) and drives the Modulator; the second compares the output voltage (FB2) to the reference voltage (VREF) and drives the Gate Control. The output pins are VOUT, FB, FB2, and PGND.\n\n",
+    "new": "![Functional block diagram of the TPS63070.](a234352dfaccdc24745c88eef7724cc6_img.jpg)\n\nFunctional block diagram of the TPS63070 (adjustable version). Pins VIN, VAUX, PG, PS/SYNC, EN, VSEL and GND are on the left, L1 and L2 at the top, VOUT, FB, FB2 and PGND on the right. Power stage: VIN connects through the input high-side MOSFET to the L1 node, and a low-side MOSFET connects L1 to PGND; a second low-side MOSFET connects the L2 node to PGND, and the output high-side MOSFET connects L2 to VOUT (all four are N-channel MOSFETs drawn with their body diodes). The Current Sensor measures the current of the input high-side MOSFET. The Gate Control block, supplied from VIN, VAUX and VOUT, drives the four MOSFET gates and is driven by the Modulator. The Bias Regulator is supplied from VIN and VOUT and its output is the VAUX pin. Regulation loop: the FB pin goes to the inverting input of the voltage error amplifier, whose non-inverting input is the reference VREF (a voltage source to ground); its output goes to the non-inverting input of the current amplifier, whose inverting input is the Current Sensor output. The current amplifier output drives the Modulator, which is clocked by the Oscillator. The Device Control block, supplied from VAUX and connected to GND, connects to the PG, PS/SYNC, EN and VSEL pins, to the Modulator, the Oscillator and the Temperature Protection block, to an enable input of both amplifiers, and to the FB2 pin. The PGND pin is connected to the internal PGND.\n\nCopyright © 2016, Texas Instruments Incorporated\n\n",
+    "evidence": "PDF p9 Figure 5 (rendered at 220 dpi): the AI text put the inductors L1/L2 inside the device, said the Bias Regulator is powered by VIN and VAUX (it is VIN and VOUT, output VAUX), that PG/PS/SYNC 'power' Device Control and VSEL the Temperature Protection, and that FB2 is compared to VREF and drives the Gate Control (FB2 is only a Device Control output pin; the second amplifier compares the Current Sensor signal with the voltage-amplifier output and drives the Modulator). The 'Copyright © 2016, Texas Instruments Incorporated' line printed in the drawing was missing. Description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p10-block-diagram-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 10,
+    "old": "![Functional Block Diagram of the TPS630701 buck-boost converter. The diagram shows the internal components and their connections to pins. Key blocks include: Bias Regulator (VIN, VOUT, VAUX), Current Sensor (VOUT, PGND), Gate Control (VIN, VAUX, VOUT, PGND), Modulator (VAUX, PGND), Oscillator (PGND), Device Control (PG, PS/SYNC, EN, VSEL, GND), and Temperature Protection (PGND). The power stage consists of two MOSFETs (L1, L2) and two diodes. The feedback loop includes a reference voltage (VREF), two comparators, and feedback pins (FB, FB2). The output is connected to VOUT and PGND.](b8661c6c54f72ecc7ff6cb05e47b2891_img.jpg)\n\nFunctional Block Diagram of the TPS630701 buck-boost converter. The diagram shows the internal components and their connections to pins. Key blocks include: Bias Regulator (VIN, VOUT, VAUX), Current Sensor (VOUT, PGND), Gate Control (VIN, VAUX, VOUT, PGND), Modulator (VAUX, PGND), Oscillator (PGND), Device Control (PG, PS/SYNC, EN, VSEL, GND), and Temperature Protection (PGND). The power stage consists of two MOSFETs (L1, L2) and two diodes. The feedback loop includes a reference voltage (VREF), two comparators, and feedback pins (FB, FB2). The output is connected to VOUT and PGND.\n\nCopyright © 2016, Texas Instruments Incorporated\n\n",
+    "new": "![Functional block diagram of the TPS630701.](b8661c6c54f72ecc7ff6cb05e47b2891_img.jpg)\n\nFunctional block diagram of the TPS630701 (fixed output voltage version). Pins VIN, VAUX, PG, PS/SYNC, EN, VSEL and GND are on the left, L1 and L2 at the top, VOUT, FB, FB2 and PGND on the right. Power stage: VIN connects through the input high-side MOSFET to the L1 node, and a low-side MOSFET connects L1 to PGND; a second low-side MOSFET connects the L2 node to PGND, and the output high-side MOSFET connects L2 to VOUT (all four are N-channel MOSFETs drawn with their body diodes). The Current Sensor measures the current of the input high-side MOSFET. The Gate Control block, supplied from VIN, VAUX and VOUT, drives the four MOSFET gates and is driven by the Modulator. The Bias Regulator is supplied from VIN and VOUT and its output is the VAUX pin. Regulation loop: the FB pin goes to an internal resistor divider to ground, and the divider tap goes to the inverting input of the voltage error amplifier, whose non-inverting input is the reference VREF (a voltage source to ground); its output goes to the non-inverting input of the current amplifier, whose inverting input is the Current Sensor output. The current amplifier output drives the Modulator, which is clocked by the Oscillator. The Device Control block, supplied from VAUX and connected to GND, connects to the PG, PS/SYNC, EN and VSEL pins, to the Modulator, the Oscillator and the Temperature Protection block, to an enable input of both amplifiers, and to the FB2 pin. The PGND pin is connected to the internal PGND.\n\nCopyright © 2016, Texas Instruments Incorporated\n\n",
+    "evidence": "PDF p10 Figure 6: the AI text spoke of 'two MOSFETs (L1, L2) and two diodes' (the power stage has four MOSFETs with body diodes and L1/L2 are pins), attached PGND to the Current Sensor, Modulator, Oscillator and Temperature Protection and called the amplifiers comparators; it missed the internal FB divider of the fixed-voltage version. Description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p10-fig6-caption-bold",
+    "file": "output/tps63070/tps63070.md",
+    "page": 10,
+    "old": "\n\nFigure 6. Functional Block Diagram\n",
+    "new": "\n\n**Figure 6. Functional Block Diagram**\n",
+    "evidence": "PDF p10: the Figure 6 caption is bold like Figure 5.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p10-gmv-vout-full-size",
+    "file": "output/tps63070/tps63070.md",
+    "page": 10,
+    "old": "transconductance amplifier  $g_{mv}$  can be assumed to be constant. The output of  $g_{mv}$  defines",
+    "new": "transconductance amplifier gmv can be assumed to be constant. The output of gmv defines",
+    "evidence": "PDF p10 (spans): 'gmv' is printed as plain 10-pt text twice, no subscript.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p10-vout-full-size",
+    "file": "output/tps63070/tps63070.md",
+    "page": 10,
+    "old": "For an input voltage above 9 V, and  $V_{out}$  below 2.2 V,",
+    "new": "For an input voltage above 9 V, and Vout below 2.2 V,",
+    "evidence": "PDF p10 (spans): 'Vout' is printed full-size in running text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p11-fig7-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 11,
+    "old": "![Figure 7: Average Current Mode Control block diagram. The diagram shows the internal control loop of the TPS63070. It includes a Ramp Generator feeding into Buck Ramp and Boost Ramp comparators. These comparators drive PWM blocks, which in turn control Buck Drive and Boost Drive MOSFETs. The Buck Drive controls the low-side switch, and the Boost Drive controls the high-side switch. The output voltage (Vout) is fed back through a feedback network (gmv) to a reference voltage (Vref 0.8V). The feedback network also includes a sense resistor (Rs) and a current sense amplifier (gmc). The diagram also shows the input voltage (Vin) and the output voltage (Vout) connected to the internal circuitry.](7e670a2b556b53ea9002dfff3a420e08_img.jpg)\n\nFigure 7: Average Current Mode Control block diagram. The diagram shows the internal control loop of the TPS63070. It includes a Ramp Generator feeding into Buck Ramp and Boost Ramp comparators. These comparators drive PWM blocks, which in turn control Buck Drive and Boost Drive MOSFETs. The Buck Drive controls the low-side switch, and the Boost Drive controls the high-side switch. The output voltage (Vout) is fed back through a feedback network (gmv) to a reference voltage (Vref 0.8V). The feedback network also includes a sense resistor (Rs) and a current sense amplifier (gmc). The diagram also shows the input voltage (Vin) and the output voltage (Vout) connected to the internal circuitry.\n\n",
+    "new": "![Figure 7: Average Current Mode Control block diagram with buck and boost power stages, gmv voltage amplifier, gmc current amplifier and Buck/Boost Ramp PWM comparators.](7e670a2b556b53ea9002dfff3a420e08_img.jpg)\n\nFigure 7: Average Current Mode Control block diagram, written from the drawing. Power stage: Vin connects through the buck high-side MOSFET to the L1 node, and the buck low-side MOSFET connects L1 to ground; both are driven by Buck Drive. At the L2 node the boost low-side MOSFET connects to ground and the boost high-side MOSFET connects to Vout; both are driven by Boost Drive. Control: the transconductance amplifier gmv compares FB (inverting input) with Vref 0.8V (non-inverting input); its output, with a series R-C to ground, is the non-inverting input of the current amplifier gmc. The gmc inverting input is the sensed inductor current, drawn as a node at L1 with the sense resistor Rs to ground. The gmc output, with a series R-C to ground, feeds two PWM comparators: one compares it with the Buck Ramp and drives Buck Drive, the other compares it with the Boost Ramp and drives Boost Drive. Both ramps come from the Ramp Generator.\n\n",
+    "evidence": "PDF p11 Figure 7 (rendered at 330 dpi): the AI text said Buck Drive controls the low-side switch and Boost Drive the high-side switch (each drives both MOSFETs of its half-bridge), that the PWM blocks are fed by 'Buck Ramp and Boost Ramp comparators' and that Vout is fed back through gmv (the gmv input is the FB pin). Description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p12-resistor-range-plain",
+    "file": "output/tps63070/tps63070.md",
+    "page": 12,
+    "old": "in the range of 1k $\\Omega$  to 1M $\\Omega$ .",
+    "new": "in the range of 1kΩ to 1MΩ.",
+    "evidence": "PDF p12 PS/SYNC: '1kΩ to 1MΩ.' is plain running text, written as such in the identical p11 Precise Enable sentence; the md used LaTeX with stray spaces before the period.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p13-fig8-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 13,
+    "old": "![Figure 8. Typical Application using VSEL schematic diagram showing TPS63070 connections with VIN, VOUT, L1, L2 inductor 1.5 µH, input capacitors 2x10 µF, 10 µF, output capacitor 3x22 µF, FB resistor network R1, R2, R3 connected to FB and FB2, VSEL input, PS/SYNC, EN, VAUX with 100 nF capacitor, and internal MOSFET between FB2 and GND controlled by VSEL.](ddc7460821484f1ae2835c67955c554c_img.jpg)\n\nFigure 8. Typical Application using VSEL schematic diagram showing TPS63070 connections with VIN, VOUT, L1, L2 inductor 1.5 µH, input capacitors 2x10 µF, 10 µF, output capacitor 3x22 µF, FB resistor network R1, R2, R3 connected to FB and FB2, VSEL input, PS/SYNC, EN, VAUX with 100 nF capacitor, and internal MOSFET between FB2 and GND controlled by VSEL.\n\n",
+    "new": "![Figure 8. Typical Application using VSEL: TPS63070 schematic with R1/R2 feedback divider and R3 from FB to FB2 switched by VSEL.](ddc7460821484f1ae2835c67955c554c_img.jpg)\n\nSchematic written from the drawing: VIN = 2.0 V to 16 V drives the VIN pin, decoupled by 2x10 µF (0805) and 10 µF (0603) to ground. A 10 kΩ resistor from VIN feeds PS/SYNC and EN, which are tied together. The 1.5 µH inductor connects L1 and L2. VOUT = Vo1 / Vo2 is decoupled by 10 µF (0603) and 3x22 µF to ground. R1 connects VOUT to FB and R2 connects FB to ground; R3 connects FB to FB2. A logic step drives VSEL, which switches an internal MOSFET from FB2 to GND. VAUX has 100 nF to ground. PG is not connected; PGND and GND are connected to ground.\n\nCopyright © 2016, Texas Instruments Incorporated\n\n",
+    "evidence": "PDF p13 Figure 8: the AI text missed the 10 kΩ resistor from VIN to the tied PS/SYNC and EN pins, the 10 µF 0603 output capacitor and the unconnected PG pin, and listed '10 µF' as an extra input capacitor without its 0603 size; the 'Copyright © 2016, Texas Instruments Incorporated' line printed in the drawing was missing. Description rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p14-fig9-alt-pwm-level",
+    "file": "output/tps63070/tps63070.md",
+    "page": 14,
+    "old": "'Absolute Voltage drop with positioning' level and then rises back to the 'Comparator low' threshold, labeled as 'PWM mode'.](",
+    "new": "'Absolute Voltage drop with positioning' level and then rises back and settles around the Vo level with a small ripple, labeled 'PWM mode'; the +1%*Vo level is the dashed line midway between 'Comparator high' and 'Comparator low'.](",
+    "evidence": "PDF p14 Figure 9: after the load step the waveform recovers to the Vo dashed line (PWM mode ripple around Vo), below the 'Comparator low' line; '+1%*Vo' marks the middle of the PFM band.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p14-fig9-desc-pwm-level",
+    "file": "output/tps63070/tps63070.md",
+    "page": 14,
+    "old": "After this point, the voltage drops sharply to the 'Absolute Voltage drop with positioning' level and then rises back to the 'Comparator low' threshold, labeled as 'PWM mode'.\n\nFigure 9. Dynamic Voltage Positioning\n",
+    "new": "After this point, the voltage drops sharply to the 'Absolute Voltage drop with positioning' level and then rises back and settles around the Vo level with a small ripple, labeled 'PWM mode'; the +1%\\*Vo level is the dashed line midway between 'Comparator high' and 'Comparator low'.\n\n**Figure 9. Dynamic Voltage Positioning**\n",
+    "evidence": "PDF p14 Figure 9: after the load step the waveform recovers to the Vo dashed line (PWM mode ripple around Vo), below the 'Comparator low' line; '+1%*Vo' marks the middle of the PFM band. Caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p16-fig10-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 16,
+    "old": "![Circuit diagram of the TPS63070 in a buck-boost configuration. The input voltage VIN is 2.0 V to 16 V, connected to the VIN pin. A 10 µF capacitor (C1) is connected between VIN and ground, with a 2x10 µF capacitor (CIN) in parallel. A 10 kΩ resistor (R5) is connected between VIN and the EN pin. The PS/SYNC pin is connected to the ground. The VAUX pin is connected to a 100 nF capacitor (CVAUX). The output voltage VOUT is 2.5 V to 9 V, connected to the VOUT pin. A 10 µF capacitor (C4) is connected between VOUT and ground. A 100 kΩ resistor (R4) is connected between VOUT and the FB pin. The FB pin is connected to the FB2 pin. The FB2 pin is connected to the ground. The PG pin is connected to the ground. The PGND pin is connected to the ground. The GND pin is connected to the ground. The L1 pin is connected to the input inductor L. The L2 pin is connected to the output inductor L. The L1 and L2 pins are connected to a 1.5 µH inductor (L).](f57a881fcbcaf494a7dedc4f61224991_img.jpg)\n\nCircuit diagram of the TPS63070 in a buck-boost configuration. The input voltage VIN is 2.0 V to 16 V, connected to the VIN pin. A 10 µF capacitor (C1) is connected between VIN and ground, with a 2x10 µF capacitor (CIN) in parallel. A 10 kΩ resistor (R5) is connected between VIN and the EN pin. The PS/SYNC pin is connected to the ground. The VAUX pin is connected to a 100 nF capacitor (CVAUX). The output voltage VOUT is 2.5 V to 9 V, connected to the VOUT pin. A 10 µF capacitor (C4) is connected between VOUT and ground. A 100 kΩ resistor (R4) is connected between VOUT and the FB pin. The FB pin is connected to the FB2 pin. The FB2 pin is connected to the ground. The PG pin is connected to the ground. The PGND pin is connected to the ground. The GND pin is connected to the ground. The L1 pin is connected to the input inductor L. The L2 pin is connected to the output inductor L. The L1 and L2 pins are connected to a 1.5 µH inductor (L).\n\nFigure 10. Typical Application For Adjustable Version\n",
+    "new": "![Figure 10: Typical application circuit of the adjustable TPS63070 with VIN = 2.0 V to 16 V and VOUT = 2.5 V to 9 V.](f57a881fcbcaf494a7dedc4f61224991_img.jpg)\n\nSchematic written from the drawing (same circuit as the Simplified Schematic on page 1): the input VIN = 2.0 V to 16 V drives the VIN pin, decoupled by CIN (2x10 µF, 0805) and C1 (10 µF, 0603) to ground. R5 (10 kΩ) connects VIN to EN, and EN is tied to PS/SYNC. VSEL and FB2 are connected to ground. VAUX has CVAUX (100 nF) to ground. The inductor L (1.5 µH) connects L1 and L2. VOUT is decoupled by C4 (10 µF, 0603) and COUT (3x22 µF, 0805) to ground and is the output VOUT = 2.5 V to 9 V. The divider R1/R2 from VOUT to ground sets FB. R4 (100 kΩ) pulls PG up to VOUT. PGND and GND are connected to ground.\n\nCopyright © 2016, Texas Instruments Incorporated\n\n**Figure 10. Typical Application For Adjustable Version**\n",
+    "evidence": "PDF p16 Figure 10: the AI text said PS/SYNC, FB2-FB and PG are grounded and R4 (100 kΩ) runs from VOUT to FB; in the drawing PS/SYNC is tied to EN (fed through R5 from VIN), VSEL and FB2 go to ground, FB is the R1/R2 divider tap and R4 pulls PG up to VOUT. R1/R2 and COUT were missing. Description rewritten from the drawing; missing copyright line added; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p16-table2-caption-bold",
+    "file": "output/tps63070/tps63070.md",
+    "page": 16,
+    "old": "\n\nTable 2. Bill of Materials\n",
+    "new": "\n\n**Table 2. Bill of Materials**\n",
+    "evidence": "PDF p16: the Table 2 caption is bold, as Table 1 already is in the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p17-table3-note1-en-dash",
+    "file": "output/tps63070/tps63070.md",
+    "page": 17,
+    "old": "The effective inductance can vary by +20% and -30%.",
+    "new": "The effective inductance can vary by +20% and –30%.",
+    "evidence": "PDF p17 Table 3 note (1): '–30%' is printed with an en dash (U+2013, pdftotext); the running text above uses '-30%' with a hyphen.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p17-vref-no-space",
+    "file": "output/tps63070/tps63070.md",
+    "page": 17,
+    "old": "(V<sub>REF</sub>) is regulated to 800mV",
+    "new": "(V<sub>REF</sub>)is regulated to 800mV",
+    "evidence": "PDF p17: '(VREF)is regulated' is printed without a space after the parenthesis.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p18-table5-units-plain",
+    "file": "output/tps63070/tps63070.md",
+    "page": 18,
+    "old": "| 1.2 $\\mu$ H    | Coilcraft, XFL4015-122ME          | 4 x 4 x 1.5      | 4.5 A / 18.8 m $\\Omega$ |\n| 1.5 $\\mu$ H    | Coilcraft, XFL4020-152ME          | 4 x 4 x 2.1      | 4.6 A / 14.4 m $\\Omega$ |\n| 1.0 $\\mu$ H    | Coilcraft, XFL4020-102ME          | 4 x 4 x 2.1      | 5.4 A / 10.8 m $\\Omega$ |\n| 1 $\\mu$ H      | Murata, 1277AS-H-1R0M             | 3.2 x 2.5 x 1.2  | 3.7 A / 45 m $\\Omega$   |",
+    "new": "| 1.2 µH         | Coilcraft, XFL4015-122ME          | 4 x 4 x 1.5      | 4.5 A / 18.8 mΩ         |\n| 1.5 µH         | Coilcraft, XFL4020-152ME          | 4 x 4 x 2.1      | 4.6 A / 14.4 mΩ         |\n| 1.0 µH         | Coilcraft, XFL4020-102ME          | 4 x 4 x 2.1      | 5.4 A / 10.8 mΩ         |\n| 1 µH           | Murata, 1277AS-H-1R0M             | 3.2 x 2.5 x 1.2  | 3.7 A / 45 mΩ           |",
+    "evidence": "PDF p18 Table 5: the units are plain text 'µH' and 'mΩ' (pdftotext '1.2 µH', '18.8 mΩ'); the md wrote LaTeX '$\\mu$ H' / 'm $\\Omega$' with a space inside the unit.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p18-where-d-no-space",
+    "file": "output/tps63070/tps63070.md",
+    "page": 18,
+    "old": "Where,\n\nD = Duty Cycle in Boost mode",
+    "new": "Where,\n\nD =Duty Cycle in Boost mode",
+    "evidence": "PDF p18: 'D =Duty Cycle in Boost mode' is printed without a space after '=' (both legends).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p18-with-d-no-space",
+    "file": "output/tps63070/tps63070.md",
+    "page": 18,
+    "old": "With,\n\nD = Duty Cycle in Boost mode",
+    "new": "With,\n\nD =Duty Cycle in Boost mode",
+    "evidence": "PDF p18: 'D =Duty Cycle in Boost mode' is printed without a space after '=' (Equation 9 legend).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
