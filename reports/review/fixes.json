@@ -11809,5 +11809,699 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5593r-p9-fig6-inl-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": "![Figure 6: ADC INL vs ADC CODE at VDD = 5.5 V. The graph shows a noisy signal with a positive slope, indicating a non-linearity in the ADC's transfer function. The y-axis is INL (LSB) ranging from -0.2 to 1.0. The x-axis is ADC CODE ranging from 0 to 4000.](",
+    "new": "![Figure 6: ADC INL vs ADC CODE at VDD = 5.5 V. The graph shows a noisy, sawtooth-like trace that rises from code 0 to a broad maximum in the upper-middle code range and falls again toward full scale (an arch, not a monotonic slope). The y-axis is INL (LSB) ranging from -0.2 to 1.0. The x-axis is ADC CODE ranging from 0 to 4000.](",
+    "evidence": "PDF p9 Figure 6 (render): the INL trace rises to a maximum near the upper-middle codes and falls back near full scale; the AI text said 'positive slope'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p9-fig6-inl-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": ")\n\nFigure 6: ADC INL vs ADC CODE at VDD = 5.5 V. The graph shows a noisy signal with a positive slope, indicating a non-linearity in the ADC's transfer function. The y-axis is INL (LSB) ranging from -0.2 to 1.0. The x-axis is ADC CODE ranging from 0 to 4000.\n",
+    "new": ")\n\nFigure 6: ADC INL vs ADC CODE at VDD = 5.5 V. The graph shows a noisy, sawtooth-like trace that rises from code 0 to a broad maximum in the upper-middle code range and falls again toward full scale (an arch, not a monotonic slope). The y-axis is INL (LSB) ranging from -0.2 to 1.0. The x-axis is ADC CODE ranging from 0 to 4000.\n",
+    "evidence": "Same as ad5593r-p9-fig6-inl-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p9-fig8-inl-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": "![Figure 8: ADC INL vs ADC CODE at VDD = 2.7 V. The graph shows a noisy signal with a positive slope, indicating a non-linearity in the ADC's transfer function. The y-axis is INL (LSB) ranging from -0.5 to 0.5. The x-axis is ADC CODE ranging from 0 to 4000.](",
+    "new": "![Figure 8: ADC INL vs ADC CODE at VDD = 2.7 V. The graph shows a noisy trace with a repeating sawtooth pattern around zero that drifts slightly downward toward full scale (no positive slope). The y-axis is INL (LSB) ranging from -0.5 to 0.5. The x-axis is ADC CODE ranging from 0 to 4000.](",
+    "evidence": "PDF p9 Figure 8 (render): the INL trace is a repeating sawtooth around 0 that drifts slightly down at high codes; the AI text said 'positive slope'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p9-fig8-inl-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": ")\n\nFigure 8: ADC INL vs ADC CODE at VDD = 2.7 V. The graph shows a noisy signal with a positive slope, indicating a non-linearity in the ADC's transfer function. The y-axis is INL (LSB) ranging from -0.5 to 0.5. The x-axis is ADC CODE ranging from 0 to 4000.\n",
+    "new": ")\n\nFigure 8: ADC INL vs ADC CODE at VDD = 2.7 V. The graph shows a noisy trace with a repeating sawtooth pattern around zero that drifts slightly downward toward full scale (no positive slope). The y-axis is INL (LSB) ranging from -0.5 to 0.5. The x-axis is ADC CODE ranging from 0 to 4000.\n",
+    "evidence": "Same as ad5593r-p9-fig8-inl-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p9-tpc-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 9,
+    "old": "### TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 6",
+    "new": "## TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 6",
+    "evidence": "PDF p9-p13 (PyMuPDF spans + render): 'TYPICAL PERFORMANCE CHARACTERISTICS' is a blue section title (H2) repeated at the top of each page; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig12-rolloff-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "![Figure 12: ADC Bandwidth vs Frequency. The graph shows ADC bandwidth in dB on the y-axis (from -6 to 1) versus frequency in Hz on a logarithmic x-axis (from 1k to 100M). The bandwidth is flat at 0 dB until approximately 1 MHz, then drops sharply to -6 dB at 10 MHz. A note in the top right corner specifies VDD = 3V/5V.](",
+    "new": "![Figure 12: ADC Bandwidth vs Frequency. The graph shows ADC bandwidth in dB on the y-axis (from -6 to 1) versus frequency in Hz on a logarithmic x-axis (from 1k to 100M). The bandwidth is flat at 0 dB up to the low-megahertz range, then rolls off steeply; the curve reaches -6 dB between 10M and 100M on the frequency axis. A note in the top right corner specifies VDD = 3V/5V.](",
+    "evidence": "PDF p10 Figure 12 (render): the curve leaves 0 dB above 1M and reaches -6 dB between 10M and 100M; at 10M it is only a few dB down (Table 2: 8.2 MHz at 3 dB). The AI text put -6 dB at 10 MHz.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig12-rolloff-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": ")\n\nFigure 12: ADC Bandwidth vs Frequency. The graph shows ADC bandwidth in dB on the y-axis (from -6 to 1) versus frequency in Hz on a logarithmic x-axis (from 1k to 100M). The bandwidth is flat at 0 dB until approximately 1 MHz, then drops sharply to -6 dB at 10 MHz. A note in the top right corner specifies VDD = 3V/5V.\n",
+    "new": ")\n\nFigure 12: ADC Bandwidth vs Frequency. The graph shows ADC bandwidth in dB on the y-axis (from -6 to 1) versus frequency in Hz on a logarithmic x-axis (from 1k to 100M). The bandwidth is flat at 0 dB up to the low-megahertz range, then rolls off steeply; the curve reaches -6 dB between 10M and 100M on the frequency axis. A note in the top right corner specifies VDD = 3V/5V.\n",
+    "evidence": "Same as ad5593r-p10-fig12-rolloff-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig15-glitch-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "![Figure 15: DAC Adjacent Code Glitch. The graph shows glitch in nV-sec on the y-axis (from -4 to 4) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy signal centered around 0 nV-sec, with a significant spike in noise and amplitude occurring at the 3072 code transition.](",
+    "new": "![Figure 15: DAC Adjacent Code Glitch. The graph shows glitch in nV-sec on the y-axis (from -4 to 4) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy band centered slightly above 0 nV-sec from code 0 to about code 3072; above code 3072 the band shifts down to around 0 nV-sec and shows a few larger negative spikes.](",
+    "evidence": "PDF p10 Figure 15 (render): the glitch band sits above 0 nV-sec up to about code 3072 and drops toward 0 above it; the AI text centered it on 0 with a single spike at 3072.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig15-glitch-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": ")\n\nFigure 15: DAC Adjacent Code Glitch. The graph shows glitch in nV-sec on the y-axis (from -4 to 4) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy signal centered around 0 nV-sec, with a significant spike in noise and amplitude occurring at the 3072 code transition.\n",
+    "new": ")\n\nFigure 15: DAC Adjacent Code Glitch. The graph shows glitch in nV-sec on the y-axis (from -4 to 4) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy band centered slightly above 0 nV-sec from code 0 to about code 3072; above code 3072 the band shifts down to around 0 nV-sec and shows a few larger negative spikes.\n",
+    "evidence": "Same as ad5593r-p10-fig15-glitch-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig13-inl-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "![Figure 13: DAC INL. The graph shows INL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy signal that starts around 0.2 LSB, peaks near 0.4 LSB, and then trends downward to approximately -0.4 LSB at the 4095 code.](",
+    "new": "![Figure 13: DAC INL. The graph shows INL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy sawtooth trace that rises quickly from code 0 to its maximum in the first quarter of the code range, decreases through 0 near code 2048, stays negative over the upper half, and turns back up toward 0 at code 4095.](",
+    "evidence": "PDF p10 Figure 13 (render): the INL trace ends near 0 at code 4095 after a negative plateau, not at its minimum; estimated levels removed (read values from the image).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig13-inl-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": ")\n\nFigure 13: DAC INL. The graph shows INL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy signal that starts around 0.2 LSB, peaks near 0.4 LSB, and then trends downward to approximately -0.4 LSB at the 4095 code.\n",
+    "new": ")\n\nFigure 13: DAC INL. The graph shows INL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy sawtooth trace that rises quickly from code 0 to its maximum in the first quarter of the code range, decreases through 0 near code 2048, stays negative over the upper half, and turns back up toward 0 at code 4095.\n",
+    "evidence": "Same as ad5593r-p10-fig13-inl-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig16-glitch-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "![Figure 16: DAC Digital to Analog Glitch (Rising). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a steady state at 2.500 V, a sharp downward glitch at 0 μs, and a return to 2.500 V by approximately 5 μs.](",
+    "new": "![Figure 16: DAC Digital to Analog Glitch (Rising). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a flat level just below 2.500 V before 0 μs, an oscillating glitch with sharp downward spikes during the first few microseconds after 0 μs, and then a flat level slightly higher than the initial one, still just below 2.500 V.](",
+    "evidence": "PDF p10 Figure 16 (render): the output settles slightly higher after the glitch (rising step), and both levels are below 2.500 V; the AI text had it return to the same 2.500 V.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig16-glitch-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": ")\n\nFigure 16: DAC Digital to Analog Glitch (Rising). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a steady state at 2.500 V, a sharp downward glitch at 0 μs, and a return to 2.500 V by approximately 5 μs.\n",
+    "new": ")\n\nFigure 16: DAC Digital to Analog Glitch (Rising). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a flat level just below 2.500 V before 0 μs, an oscillating glitch with sharp downward spikes during the first few microseconds after 0 μs, and then a flat level slightly higher than the initial one, still just below 2.500 V.\n",
+    "evidence": "Same as ad5593r-p10-fig16-glitch-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig14-dnl-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "![Figure 14: DAC DNL. The graph shows DNL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy signal centered around 0 LSB, with a slight step-like increase in noise amplitude around the 2048 code mark.](",
+    "new": "![Figure 14: DAC DNL. The graph shows DNL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy trace centered around 0 LSB with regularly spaced negative spikes along the whole code range; the noise band becomes wider above code 1024.](",
+    "evidence": "PDF p10 Figure 14 (render): the DNL band widens at code 1024 (not 2048), and the regular negative spikes were not mentioned.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig14-dnl-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": ")\n\nFigure 14: DAC DNL. The graph shows DNL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy signal centered around 0 LSB, with a slight step-like increase in noise amplitude around the 2048 code mark.\n",
+    "new": ")\n\nFigure 14: DAC DNL. The graph shows DNL in LSB on the y-axis (from -1.0 to 1.0) versus DAC code on the x-axis (from 0 to 4095). The plot shows a noisy trace centered around 0 LSB with regularly spaced negative spikes along the whole code range; the noise band becomes wider above code 1024.\n",
+    "evidence": "Same as ad5593r-p10-fig14-dnl-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig17-glitch-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "![Figure 17: DAC Digital to Analog Glitch (Falling). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a steady state at 2.500 V, a sharp upward glitch at 0 μs, and a return to 2.500 V by approximately 5 μs.](",
+    "new": "![Figure 17: DAC Digital to Analog Glitch (Falling). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a flat level just below 2.500 V before 0 μs, an oscillating glitch with upward and downward spikes during the first few microseconds after 0 μs, and then a flat level slightly lower than the initial one.](",
+    "evidence": "PDF p10 Figure 17 (render): the output settles slightly lower after the glitch (falling step) and the glitch swings both ways; the AI text had a single upward glitch returning to 2.500 V.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-fig17-glitch-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": ")\n\nFigure 17: DAC Digital to Analog Glitch (Falling). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a steady state at 2.500 V, a sharp upward glitch at 0 μs, and a return to 2.500 V by approximately 5 μs.\n",
+    "new": ")\n\nFigure 17: DAC Digital to Analog Glitch (Falling). The graph shows Vout in Volts on the y-axis (from 2.490 to 2.510) versus time in microseconds on the x-axis (from -10 to 20). The plot shows a flat level just below 2.500 V before 0 μs, an oscillating glitch with upward and downward spikes during the first few microseconds after 0 μs, and then a flat level slightly lower than the initial one.\n",
+    "evidence": "Same as ad5593r-p10-fig17-glitch-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p10-tpc-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 10,
+    "old": "### TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 12",
+    "new": "## TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 12",
+    "evidence": "PDF p10 (PyMuPDF spans + render): repeated blue section title 'TYPICAL PERFORMANCE CHARACTERISTICS' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p11-fig20-two-curves-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 11,
+    "old": "![Figure 20: DAC Settling Time, Output Range = 0 V to VREF. A line graph showing Vout (V) on the y-axis (0.50 to 2.00) versus TIME (μs) on the x-axis (0 to 5). The output voltage starts at approximately 1.85 V, drops sharply to about 0.6 V by t = 0.5 μs, and then rises to a steady state of about 1.85 V by t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.](",
+    "new": "![Figure 20: DAC Settling Time, Output Range = 0 V to VREF. A line graph showing Vout (V) on the y-axis (0.50 to 2.00) versus TIME (μs) on the x-axis (0 to 5). Two curves are overlaid: a falling step that leaves the upper level shortly after t = 0 and settles at the lower level, and a rising step that leaves the lower level and settles at the upper level; the two curves cross near t = 1 μs and both are flat again by about t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.](",
+    "evidence": "PDF p11 Figure 20 (render): the plot overlays a rising and a falling settling curve crossing near 1 μs; the AI text described a single curve that dropped and then rose back.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p11-fig20-two-curves-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 11,
+    "old": ")\n\nFigure 20: DAC Settling Time, Output Range = 0 V to VREF. A line graph showing Vout (V) on the y-axis (0.50 to 2.00) versus TIME (μs) on the x-axis (0 to 5). The output voltage starts at approximately 1.85 V, drops sharply to about 0.6 V by t = 0.5 μs, and then rises to a steady state of about 1.85 V by t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.\n",
+    "new": ")\n\nFigure 20: DAC Settling Time, Output Range = 0 V to VREF. A line graph showing Vout (V) on the y-axis (0.50 to 2.00) versus TIME (μs) on the x-axis (0 to 5). Two curves are overlaid: a falling step that leaves the upper level shortly after t = 0 and settles at the lower level, and a rising step that leaves the lower level and settles at the upper level; the two curves cross near t = 1 μs and both are flat again by about t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.\n",
+    "evidence": "Same as ad5593r-p11-fig20-two-curves-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p11-fig21-two-curves-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 11,
+    "old": "![Figure 21: DAC Settling Time, Output Range = 0 V to 2 x VREF. A line graph showing Vout (V) on the y-axis (1.0 to 4.0) versus TIME (μs) on the x-axis (0 to 5). The output voltage starts at approximately 3.8 V, drops sharply to about 1.2 V by t = 0.5 μs, and then rises to a steady state of about 3.8 V by t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.](",
+    "new": "![Figure 21: DAC Settling Time, Output Range = 0 V to 2 x VREF. A line graph showing Vout (V) on the y-axis (1.0 to 4.0) versus TIME (μs) on the x-axis (0 to 5). Two curves are overlaid: a falling step that leaves the upper level shortly after t = 0 and settles at the lower level, and a rising step that leaves the lower level and settles at the upper level; the two curves cross between t = 1 μs and t = 2 μs and both are flat again by about t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.](",
+    "evidence": "PDF p11 Figure 21 (render): the plot overlays a rising and a falling settling curve crossing between 1 μs and 2 μs; the AI text described a single curve that dropped and then rose back.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p11-fig21-two-curves-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 11,
+    "old": ")\n\nFigure 21: DAC Settling Time, Output Range = 0 V to 2 x VREF. A line graph showing Vout (V) on the y-axis (1.0 to 4.0) versus TIME (μs) on the x-axis (0 to 5). The output voltage starts at approximately 3.8 V, drops sharply to about 1.2 V by t = 0.5 μs, and then rises to a steady state of about 3.8 V by t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.\n",
+    "new": ")\n\nFigure 21: DAC Settling Time, Output Range = 0 V to 2 x VREF. A line graph showing Vout (V) on the y-axis (1.0 to 4.0) versus TIME (μs) on the x-axis (0 to 5). Two curves are overlaid: a falling step that leaves the upper level shortly after t = 0 and settles at the lower level, and a rising step that leaves the lower level and settles at the upper level; the two curves cross between t = 1 μs and t = 2 μs and both are flat again by about t = 3 μs. Text in the graph: RL = 2kΩ, CL = 200pF.\n",
+    "evidence": "Same as ad5593r-p11-fig21-two-curves-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p11-tpc-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 11,
+    "old": "### TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 18",
+    "new": "## TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 18",
+    "evidence": "PDF p11 (PyMuPDF spans + render): repeated blue section title 'TYPICAL PERFORMANCE CHARACTERISTICS' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig24-amplitude-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "![Figure 24: DAC 1/f Noise with Internal Reference. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -200 to 200 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero with a peak-to-peak amplitude of approximately 100 µV.](",
+    "new": "![Figure 24: DAC 1/f Noise with Internal Reference. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -200 to 200 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero with its largest excursions below -50 µV and above +50 µV (read values from the image).](",
+    "evidence": "PDF p12 Figure 24 (render): the trace reaches below -50 and above +50 (peak near +80), so the AI estimate '100 µV peak-to-peak' was too low; replaced by what the axis shows.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig24-amplitude-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": ")\n\nFigure 24: DAC 1/f Noise with Internal Reference. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -200 to 200 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero with a peak-to-peak amplitude of approximately 100 µV.\n",
+    "new": ")\n\nFigure 24: DAC 1/f Noise with Internal Reference. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -200 to 200 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero with its largest excursions below -50 µV and above +50 µV (read values from the image).\n",
+    "evidence": "Same as ad5593r-p12-fig24-amplitude-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig28-amplitude-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "![Figure 28: Internal Reference 1/f Noise. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -20 to 20 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero with a peak-to-peak amplitude of approximately 10 µV.](",
+    "new": "![Figure 28: Internal Reference 1/f Noise. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -20 to 20 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero and reaches about -10 µV and +10 µV at its extremes (read values from the image).](",
+    "evidence": "PDF p12 Figure 28 (render): the trace swings between about -10 and +10 on the axis, i.e. about 20 µV peak-to-peak, not 'approximately 10 µV'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig28-amplitude-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": ")\n\nFigure 28: Internal Reference 1/f Noise. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -20 to 20 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero with a peak-to-peak amplitude of approximately 10 µV.\n",
+    "new": ")\n\nFigure 28: Internal Reference 1/f Noise. A line graph showing output voltage noise (VOUT in µV p-p) over time (Seconds). The y-axis ranges from -20 to 20 µV p-p, and the x-axis ranges from 0 to 10 seconds. The noise signal fluctuates around zero and reaches about -10 µV and +10 µV at its extremes (read values from the image).\n",
+    "evidence": "Same as ad5593r-p12-fig28-amplitude-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig27-curves-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "![Figure 27: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different output ranges: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. The curves show that the output voltage remains constant until a certain load current is reached, after which it drops sharply.](",
+    "new": "![Figure 27: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different DAC codes: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. Each curve is flat over most of the load-current range; at the negative end of the axis (around -20 mA to -25 mA) the curves jump up to a common upper level near the top of the plot, and near +25 mA they drop to a common level around 0 V and below. The ZERO SCALE curve slopes slightly down to 0 V.](",
+    "evidence": "PDF p12 Figure 27 (render): the five curves are DAC codes (FULL-SCALE to ZERO SCALE), not output ranges (the output range is in the caption), and they leave their level at both ends of the load-current axis (up at the negative end, down near +25 mA), not only by 'dropping sharply'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig27-curves-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": ")\n\nFigure 27: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different output ranges: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. The curves show that the output voltage remains constant until a certain load current is reached, after which it drops sharply.\n",
+    "new": ")\n\nFigure 27: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different DAC codes: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. Each curve is flat over most of the load-current range; at the negative end of the axis (around -20 mA to -25 mA) the curves jump up to a common upper level near the top of the plot, and near +25 mA they drop to a common level around 0 V and below. The ZERO SCALE curve slopes slightly down to 0 V.\n",
+    "evidence": "Same as ad5593r-p12-fig27-curves-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig26-curves-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "![Figure 26: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different output ranges: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. The curves show that the output voltage remains constant until a certain load current is reached, after which it drops sharply.](",
+    "new": "![Figure 26: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different DAC codes: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. Each curve is flat over most of the load-current range; at the negative end of the axis (around -20 mA to -25 mA) the curves jump up to a common upper level near the top of the plot, and near +25 mA they drop to a common level around 0 V and below. The ZERO SCALE curve slopes slightly down to 0 V.](",
+    "evidence": "PDF p12 Figure 26 (render): the five curves are DAC codes (FULL-SCALE to ZERO SCALE), not output ranges (the output range is in the caption), and they leave their level at both ends of the load-current axis (up at the negative end, down near +25 mA), not only by 'dropping sharply'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig26-curves-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": ")\n\nFigure 26: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different output ranges: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. The curves show that the output voltage remains constant until a certain load current is reached, after which it drops sharply.\n",
+    "new": ")\n\nFigure 26: DAC Output Sink and Source Capability. A graph showing output voltage (V) versus load current (mA) for different DAC codes: FULL-SCALE, 3/4 SCALE, 1/2 SCALE, 1/4 SCALE, and ZERO SCALE. The y-axis ranges from -1 to 6 V, and the x-axis ranges from -30 to 30 mA. Each curve is flat over most of the load-current range; at the negative end of the axis (around -20 mA to -25 mA) the curves jump up to a common upper level near the top of the plot, and near +25 mA they drop to a common level around 0 V and below. The ZERO SCALE curve slopes slightly down to 0 V.\n",
+    "evidence": "Same as ad5593r-p12-fig26-curves-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig25-axes-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "![Figure 25: DAC Output Noise Spectral Density. A log-log plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz). The y-axis ranges from 0 to 2500 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. Five curves are shown for FULL-SCALE, 3/4 SCALE, MID-SCALE, 1/4 SCALE, and ZERO SCALE. All curves show a decreasing trend with frequency, with FULL-SCALE having the highest noise and ZERO SCALE having the lowest.](",
+    "new": "![Figure 25: DAC Output Noise Spectral Density. A plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz) on a logarithmic frequency axis and a linear NSD axis. The y-axis ranges from 0 to 2500 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. Five curves are shown for FULL-SCALE, 3/4 SCALE, MID-SCALE, 1/4 SCALE, and ZERO SCALE. All curves decrease steeply up to about 100 Hz, flatten out in the middle of the range and fall again toward the end of the curves (below 1M); FULL-SCALE has the highest noise and ZERO SCALE the lowest, with a few spikes on the ZERO SCALE curve.](",
+    "evidence": "PDF p12 Figure 25 (render): the NSD axis is linear (0 to 2500), only the frequency axis is logarithmic; the curves flatten between about 100 Hz and 10k and end before 1M.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig25-axes-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": ")\n\nFigure 25: DAC Output Noise Spectral Density. A log-log plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz). The y-axis ranges from 0 to 2500 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. Five curves are shown for FULL-SCALE, 3/4 SCALE, MID-SCALE, 1/4 SCALE, and ZERO SCALE. All curves show a decreasing trend with frequency, with FULL-SCALE having the highest noise and ZERO SCALE having the lowest.\n",
+    "new": ")\n\nFigure 25: DAC Output Noise Spectral Density. A plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz) on a logarithmic frequency axis and a linear NSD axis. The y-axis ranges from 0 to 2500 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. Five curves are shown for FULL-SCALE, 3/4 SCALE, MID-SCALE, 1/4 SCALE, and ZERO SCALE. All curves decrease steeply up to about 100 Hz, flatten out in the middle of the range and fall again toward the end of the curves (below 1M); FULL-SCALE has the highest noise and ZERO SCALE the lowest, with a few spikes on the ZERO SCALE curve.\n",
+    "evidence": "Same as ad5593r-p12-fig25-axes-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig29-axes-shape-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "![Figure 29: Reference Noise Spectral Density. A log-log plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz). The y-axis ranges from 0 to 1200 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. A single curve is shown, which starts at approximately 1100 nV/√Hz at 10 Hz and decreases to about 100 nV/√Hz at 1 MHz.](",
+    "new": "![Figure 29: Reference Noise Spectral Density. A plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz) on a logarithmic frequency axis and a linear NSD axis. The y-axis ranges from 0 to 1200 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. A single curve is shown: it starts near the top of the axis at 10 Hz, falls steeply up to a few hundred hertz, stays nearly flat from about 1k to 10k and decreases again above that; the curve ends before 1M.](",
+    "evidence": "PDF p12 Figure 29 (render): the NSD axis is linear, the curve has a flat plateau between about 1k and 10k and ends near 200k-300k, not at 1 MHz; estimated values removed.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-fig29-axes-shape-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": ")\n\nFigure 29: Reference Noise Spectral Density. A log-log plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz). The y-axis ranges from 0 to 1200 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. A single curve is shown, which starts at approximately 1100 nV/√Hz at 10 Hz and decreases to about 100 nV/√Hz at 1 MHz.\n",
+    "new": ")\n\nFigure 29: Reference Noise Spectral Density. A plot of noise spectral density (NSD in nV/√Hz) versus frequency (Hz) on a logarithmic frequency axis and a linear NSD axis. The y-axis ranges from 0 to 1200 nV/√Hz, and the x-axis ranges from 10 Hz to 1 MHz. A single curve is shown: it starts near the top of the axis at 10 Hz, falls steeply up to a few hundred hertz, stays nearly flat from about 1k to 10k and decreases again above that; the curve ends before 1M.\n",
+    "evidence": "Same as ad5593r-p12-fig29-axes-shape-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p12-tpc-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 12,
+    "old": "### TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 24",
+    "new": "## TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Figure 24",
+    "evidence": "PDF p12 (PyMuPDF spans + render): repeated blue section title 'TYPICAL PERFORMANCE CHARACTERISTICS' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p13-tpc-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 13,
+    "old": "### TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Line graph showing VREF",
+    "new": "## TYPICAL PERFORMANCE CHARACTERISTICS\n\n![Line graph showing VREF",
+    "evidence": "PDF p13 (PyMuPDF spans + render): repeated blue section title 'TYPICAL PERFORMANCE CHARACTERISTICS' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-terminology-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "### TERMINOLOGY\n\n### ADC Integral",
+    "new": "## TERMINOLOGY\n\n### ADC Integral",
+    "evidence": "PDF p14 (PyMuPDF spans + render): 'TERMINOLOGY' is a blue section title (H2); the md had H3, the same level as its entries.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-offset-error-0-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Offset Error\n\nOffset error is the deviation of the first",
+    "new": "### Offset Error\n\nOffset error is the deviation of the first",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-gain-error-1-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Gain Error\n\nGain error is the deviation of the last",
+    "new": "### Gain Error\n\nGain error is the deviation of the last",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-channel-to-channel-isolation-2-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Channel-to-Channel Isolation\n\nChannel-to-channel",
+    "new": "### Channel-to-Channel Isolation\n\nChannel-to-channel",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-track-and-hold-acquisition-3-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Track-and-Hold Acquisition Time\n\nThe track-and-hold",
+    "new": "### Track-and-Hold Acquisition Time\n\nThe track-and-hold",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-signal-to-noise-distortion-4-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Signal-to-Noise Distortion Ratio SINAD\n\nSINAD is",
+    "new": "### Signal-to-Noise Distortion Ratio SINAD\n\nSINAD is",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-peak-harmonic-5-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Peak Harmonic or Spurious Noise\n\nPeak harmonic",
+    "new": "### Peak Harmonic or Spurious Noise\n\nPeak harmonic",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-zero-code-6-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Zero Code Error\n\nZero code error",
+    "new": "### Zero Code Error\n\nZero code error",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-gain-error-7-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Gain Error\n\nGain error is a measure",
+    "new": "### Gain Error\n\nGain error is a measure",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-term-offset-error-8-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "#### Offset Error\n\nOffset error is a measure",
+    "new": "### Offset Error\n\nOffset error is a measure",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-ellipsis-offset",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "(00 ... 000) to (00 ... 001)",
+    "new": "(00 … 000) to (00 … 001)",
+    "evidence": "PDF p14 (pdftotext): the code transitions are printed with the ellipsis character U+2026 ('00 … 000').",
+    "sources": [
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p14-ellipsis-gain",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 14,
+    "old": "(111 ... 110) to (111 ... 111)",
+    "new": "(111 … 110) to (111 … 111)",
+    "evidence": "PDF p14 (pdftotext): printed with the ellipsis character U+2026 ('111 … 110').",
+    "sources": [
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p15-terminology-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 15,
+    "old": "### TERMINOLOGY\n\n#### Offset Error Drift",
+    "new": "## TERMINOLOGY\n\n### Offset Error Drift",
+    "evidence": "PDF p15 (PyMuPDF spans + render): repeated blue section title 'TERMINOLOGY' (H2); 'Offset Error Drift' is an entry title like the other TERMINOLOGY entries (H3).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p15-term-output-voltage-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 15,
+    "old": "\n#### Output Voltage Settling Time\n",
+    "new": "\n### Output Voltage Settling Time\n",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p15-term-reference-feedthrough-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 15,
+    "old": "\n#### Reference Feedthrough\n",
+    "new": "\n### Reference Feedthrough\n",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p15-term-noise-spectral-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 15,
+    "old": "\n#### Noise Spectral Density (NSD)\n",
+    "new": "\n### Noise Spectral Density (NSD)\n",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p15-term-digital-crosstalk-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 15,
+    "old": "\n#### Digital Crosstalk\n",
+    "new": "\n### Digital Crosstalk\n",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p15-term-analog-crosstalk-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 15,
+    "old": "\n#### Analog Crosstalk\n",
+    "new": "\n### Analog Crosstalk\n",
+    "evidence": "PDF p14-p16 (PyMuPDF spans + render): every TERMINOLOGY entry title is the same 11 pt bold black title-case style directly under the blue 'TERMINOLOGY' section title; the md mixed H3 and H4. Normalized to H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p16-terminology-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 16,
+    "old": "### TERMINOLOGY\n\n$V_{REF(NOM)}$",
+    "new": "## TERMINOLOGY\n\n$V_{REF(NOM)}$",
+    "evidence": "PDF p16 (PyMuPDF spans + render): repeated blue section title 'TERMINOLOGY' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
