@@ -18370,5 +18370,135 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p56-delta-t-period",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 56,
+    "old": "$$\\Delta t = 4 \\cdot t_{CONV\\_SENSE} \\text{ (One complete",
+    "new": "$$\\Delta t = 4 \\cdot t_{CONV\\_SENSE}\\text{. (One complete",
+    "evidence": "PDF p56 (render + PyMuPDF text '∆t = 4 • tCONV_SENSE. (One complete external temperature loop period)'): a period follows t_CONV_SENSE; the md dropped it.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p56-mfr-t-self-heat-data-content-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 56,
+    "old": "\n#### MFR\\_T\\_SELF\\_HEAT Data Content\n",
+    "new": "\n**MFR\\_T\\_SELF\\_HEAT Data Content**\n",
+    "evidence": "PDF p56 (PyMuPDF spans + render): 'MFR_T_SELF_HEAT Data Content' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p56-mfr-iout-cal-gain-theta-data-content-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 56,
+    "old": "\n#### MFR\\_IOUT\\_CAL\\_GAIN\\_THETA Data Content\n",
+    "new": "\n**MFR\\_IOUT\\_CAL\\_GAIN\\_THETA Data Content**\n",
+    "evidence": "PDF p56 (PyMuPDF spans + render): 'MFR_IOUT_CAL_GAIN_THETA Data Content' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p57-mfr-iout-cal-gain-tau-inv-data-content-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 57,
+    "old": "\n#### MFR\\_IOUT\\_CAL\\_GAIN\\_TAU\\_INV Data Content\n",
+    "new": "\n**MFR\\_IOUT\\_CAL\\_GAIN\\_TAU\\_INV Data Content**\n",
+    "evidence": "PDF p57 (PyMuPDF spans + render): 'MFR_IOUT_CAL_GAIN_TAU_INV Data Content' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p57-ton-toff-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 57,
+    "old": "\n#### **TON\\_DELAY, TON\\_RISE, TON\\_MAX\\_FAULT\\_LIMIT and TOFF\\_DELAY**\n",
+    "new": "\n#### TON\\_DELAY, TON\\_RISE, TON\\_MAX\\_FAULT\\_LIMIT and TOFF\\_DELAY\n",
+    "evidence": "PDF p57 (PyMuPDF spans + render): 'TON_DELAY, TON_RISE, TON_MAX_FAULT_LIMIT and TOFF_DELAY' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p58-clock-sharing-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 58,
+    "old": "\n### Clock Sharing\n",
+    "new": "\n#### Clock Sharing\n",
+    "evidence": "PDF p58 (PyMuPDF spans + render): 'Clock Sharing' is a LinearHelvCond-Bold 11.7pt title-case subheading = H4 without emphasis markup.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p58-wdi-resetb-line-join",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 58,
+    "old": "Configuration that maps WDI/ RESETB status",
+    "new": "Configuration that maps WDI/RESETB status",
+    "evidence": "PDF p58 command table (render + PyMuPDF words 'WDI/' at the end of one line, 'RESETB' starting the next): the pin name WDI/RESETB is only broken by the line wrap; the space was introduced when the lines were joined.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p58-mfr-pwrgd-en-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 58,
+    "old": "status to the PWRGD pin.\n\n##### MFR\\_PWRGD\\_EN Data Contents\n",
+    "new": "status to the PWRGD pin.\n\n**MFR\\_PWRGD\\_EN Data Contents**\n",
+    "evidence": "PDF p58 (PyMuPDF spans + render): 'MFR_PWRGD_EN Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p58-running-footer-rev-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 58,
+    "old": "\nRev. D\n\n{58}------------------------------------------------\n",
+    "new": "\n{58}------------------------------------------------\n",
+    "evidence": "PDF p58: 'Rev. D' is the running footer printed at the bottom of every page, not content; it had leaked into the md at the end of p58.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p59-mfr-pwrgd-en-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 59,
+    "old": "{58}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n##### MFR\\_PWRGD\\_EN Data Contents\n",
+    "new": "{58}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n**MFR\\_PWRGD\\_EN Data Contents**\n",
+    "evidence": "PDF p59 (PyMuPDF spans + render): the repeated 'MFR_PWRGD_EN Data Contents' caption at the top of p59 is a 9.7pt bold table caption, written as a bold paragraph (not a heading).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
