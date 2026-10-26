@@ -10506,5 +10506,204 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "max31730-p1-therm-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 1,
+    "old": "open-drain **<span style=\"text-decoration: overline;\">THERM</span>** output",
+    "new": "open-drain <span style=\"text-decoration: overline;\">THERM</span> output",
+    "evidence": "PDF p1 General Description (render, PyMuPDF spans): 'THERM' is set in the regular body font, only overlined; the md had it bold.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-spans"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p1-typ-app-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 1,
+    "old": "![Two typical application circuits for the MAX31730. The left circuit shows the MAX31730 in a 10-pin μMAX package connected to three external diode-connected transistors (IC1, IC2, and a third unnamed transistor) and a master controller via SCL and SDA lines. The right circuit shows the MAX31730 in a 12-pin TDFN package connected to three external diode-connected transistors (IC1, IC2, and a third unnamed transistor) and a master controller via SCL and SDA lines. Both circuits include power supply connections (+3.3V) and ground connections.](",
+    "new": "![Two typical application circuits for the MAX31730 (description written from the PDF drawing). Left: MAX31730 (10 µMAX) with V_DD at +3.3V. Three PNP transistors share the single DXN pin: the IC1 transistor (inside IC1) has its emitter on DXP1 and its base on DXN; the IC2 transistor (inside IC2) has its emitter on DXP2 and its base on DXN; a discrete transistor has its emitter on DXP3 and its base and collector tied to DXN. The IC1 and IC2 collectors go to ground. A capacitor is drawn between DXP1 and DXN, between DXN and DXP2, and between DXN and DXP3. Right: MAX31730 (12 TDFN) with V_DD at +3.3V and a separate pair per channel: the IC1 transistor on DXP1/DXN1, the IC2 transistor on DXP2/DXN2 (emitter on DXP_, base on DXN_, collector to ground), and a discrete transistor on DXP3/DXN3 with its base and collector tied to DXN3; a capacitor is drawn across each DXP_/DXN_ pair. In both circuits SCL and SDA go TO MASTER, ADD connects through a resistor to ground, THERM (active low) has a pullup resistor to +3.3V, and GND is grounded.](",
+    "evidence": "PDF p1 Typical Application Circuits (render, 250 dpi crop): the AI text said only that three transistors connect to the part and called the third one 'unnamed'; it omitted that the 10 µMAX shares one DXN pin for all three channels, the DXP/DXN filter capacitors, the ADD resistor to ground, the THERM pullup to +3.3V and that the third transistor has its collector tied to its base. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p1-typ-app-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 1,
+    "old": "\n\nTwo typical application circuits for the MAX31730. The left circuit shows the MAX31730 in a 10-pin μMAX package connected to three external diode-connected transistors (IC1, IC2, and a third unnamed transistor) and a master controller via SCL and SDA lines. The right circuit shows the MAX31730 in a 12-pin TDFN package connected to three external diode-connected transistors (IC1, IC2, and a third unnamed transistor) and a master controller via SCL and SDA lines. Both circuits include power supply connections (+3.3V) and ground connections.\n",
+    "new": "\n\nTwo typical application circuits for the MAX31730 (description written from the PDF drawing). Left: MAX31730 (10 µMAX) with V_DD at +3.3V. Three PNP transistors share the single DXN pin: the IC1 transistor (inside IC1) has its emitter on DXP1 and its base on DXN; the IC2 transistor (inside IC2) has its emitter on DXP2 and its base on DXN; a discrete transistor has its emitter on DXP3 and its base and collector tied to DXN. The IC1 and IC2 collectors go to ground. A capacitor is drawn between DXP1 and DXN, between DXN and DXP2, and between DXN and DXP3. Right: MAX31730 (12 TDFN) with V_DD at +3.3V and a separate pair per channel: the IC1 transistor on DXP1/DXN1, the IC2 transistor on DXP2/DXN2 (emitter on DXP_, base on DXN_, collector to ground), and a discrete transistor on DXP3/DXN3 with its base and collector tied to DXN3; a capacitor is drawn across each DXP_/DXN_ pair. In both circuits SCL and SDA go TO MASTER, ADD connects through a resistor to ground, THERM (active low) has a pullup resistor to +3.3V, and GND is grounded.\n",
+    "evidence": "PDF p1 Typical Application Circuits (render, 250 dpi crop): the AI text said only that three transistors connect to the part and called the third one 'unnamed'; it omitted that the 10 µMAX shares one DXN pin for all three channels, the DXP/DXN filter capacitors, the ADD resistor to ground, the THERM pullup to +3.3V and that the third transistor has its collector tied to its base. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p3-i2c-ac-heading-level",
+    "file": "output/max31730/max31730.md",
+    "page": 3,
+    "old": "\n### I<sup>2</sup>C AC Electrical Characteristics\n",
+    "new": "\n## I<sup>2</sup>C AC Electrical Characteristics\n",
+    "evidence": "PDF p3 (render): 'I2C AC Electrical Characteristics' is a section title in the same style and size as 'Electrical Characteristics (continued)' above it (H2 in the md); the md had it as H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p4-i2c-ac-heading-level",
+    "file": "output/max31730/max31730.md",
+    "page": 4,
+    "old": "### **I<sup>2</sup>C AC Electrical Characteristics (continued)**",
+    "new": "## I<sup>2</sup>C AC Electrical Characteristics (continued)",
+    "evidence": "PDF p4 (render): same section-title style as the other datasheet section headings (H2 in the md, not bold); the md had a bold H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p4-note7-curly-apostrophe",
+    "file": "output/max31730/max31730.md",
+    "page": 4,
+    "old": "$SCL$ 's falling edge",
+    "new": "$SCL$’s falling edge",
+    "evidence": "PDF p4 Note 7 (PyMuPDF text): 'SCL’s' with U+2019 and no space; the md had a space and a straight apostrophe.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p5-toc03-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 5,
+    "old": "![Graph of Standby Current vs Temperature. The y-axis is Standby Current (μA) from 0 to 6. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V, showing a slight increase in current with temperature.](",
+    "new": "![Graph of Standby Current vs Temperature. The y-axis is Standby Current (μA) from 0 to 6. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V; the current rises gradually with temperature and then more steeply at the high-temperature end of the plot.](",
+    "evidence": "PDF p5 toc03 (render): the three standby-current curves rise gradually and then bend up sharply at the right end of the plot; the AI text described only 'a slight increase'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p5-toc03-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 5,
+    "old": "\n\nGraph of Standby Current vs Temperature. The y-axis is Standby Current (μA) from 0 to 6. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V, showing a slight increase in current with temperature.\n",
+    "new": "\n\nGraph of Standby Current vs Temperature. The y-axis is Standby Current (μA) from 0 to 6. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V; the current rises gradually with temperature and then more steeply at the high-temperature end of the plot.\n",
+    "evidence": "PDF p5 toc03 (render): the three standby-current curves rise gradually and then bend up sharply at the right end of the plot; the AI text described only 'a slight increase'.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p5-toc04-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 5,
+    "old": "![Graph of Internal Temperature Error vs. Temperature. The y-axis is Temperature Error (°C) from -0.25 to 0.15. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V, showing error values between -0.20 and 0.10 °C.](",
+    "new": "![Graph of Internal Temperature Error vs. Temperature. The y-axis is Temperature Error (°C) from -0.25 to 0.15. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V. The curves start above zero at -40°C, fall below zero as the temperature rises and stay negative, with ripples, up to the end of the data; the plot notes DATA TAKEN IN BATH LIMITED TO +90°C. Read values from the image/PDF.](",
+    "evidence": "PDF p5 toc04 (render): the curves start above zero at -40°C (one near the top of the axis), drop below zero and end at the +90°C bath limit; the AI text gave an estimated 'between -0.20 and 0.10 °C' range, which the curves exceed at both ends. Range removed; shape described instead.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p5-toc04-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 5,
+    "old": "\n\nGraph of Internal Temperature Error vs. Temperature. The y-axis is Temperature Error (°C) from -0.25 to 0.15. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V, showing error values between -0.20 and 0.10 °C.\n",
+    "new": "\n\nGraph of Internal Temperature Error vs. Temperature. The y-axis is Temperature Error (°C) from -0.25 to 0.15. The x-axis is Temperature (°C) from -40 to 110. Three curves are shown for VDD = 3.6V, 3.3V, and 3.0V. The curves start above zero at -40°C, fall below zero as the temperature rises and stay negative, with ripples, up to the end of the data; the plot notes DATA TAKEN IN BATH LIMITED TO +90°C. Read values from the image/PDF.\n",
+    "evidence": "PDF p5 toc04 (render): the curves start above zero at -40°C (one near the top of the axis), drop below zero and end at the +90°C bath limit; the AI text gave an estimated 'between -0.20 and 0.10 °C' range, which the curves exceed at both ends. Range removed; shape described instead.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p6-pinout-10pin-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 6,
+    "old": "![Pin configurations for MAX31730 in μMAX and TDFN 3mm x 3mm packages. The μMAX diagram shows a 12-pin package with pins 1-12 labeled: 1: VDD, 2: DXP1, 3: DXN, 4: DXP2, 5: DXP3, 6: GND, 7: THERM, 8: ADD, 9: SDA, 10: SCL. The TDFN diagram shows a 12-pin package with pins 1-12 labeled:",
+    "new": "![Pin configurations for MAX31730 in μMAX and TDFN 3mm x 3mm packages (TOP VIEW). The μMAX diagram shows a 10-pin package (body labeled MAX31730) with pins 1-10 labeled: 1: VDD, 2: DXP1, 3: DXN, 4: DXP2, 5: DXP3, 6: GND, 7: THERM, 8: ADD, 9: SDA, 10: SCL. The TDFN diagram (body labeled 'MA31730' as printed, exposed pad drawn dashed) shows a 12-pin package with pins 1-12 labeled:",
+    "evidence": "PDF p6 Pin Configurations (render, pdftotext): the μMAX drawing has 10 pins (1-5 left, 6-10 right), not 12; the TDFN body is printed 'MA31730' (manufacturer typo, kept as printed) and both views are TOP VIEW.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p6-pinout-10pin-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 6,
+    "old": "\n\nPin configurations for MAX31730 in μMAX and TDFN 3mm x 3mm packages. The μMAX diagram shows a 12-pin package with pins 1-12 labeled: 1: VDD, 2: DXP1, 3: DXN, 4: DXP2, 5: DXP3, 6: GND, 7: <span style=\"text-decoration: overline;\">THERM</span>, 8: ADD, 9: SDA, 10: SCL. The TDFN diagram shows a 12-pin package with pins 1-12 labeled:",
+    "new": "\n\nPin configurations for MAX31730 in μMAX and TDFN 3mm x 3mm packages (TOP VIEW). The μMAX diagram shows a 10-pin package (body labeled MAX31730) with pins 1-10 labeled: 1: VDD, 2: DXP1, 3: DXN, 4: DXP2, 5: DXP3, 6: GND, 7: <span style=\"text-decoration: overline;\">THERM</span>, 8: ADD, 9: SDA, 10: SCL. The TDFN diagram (body labeled 'MA31730' as printed, exposed pad drawn dashed) shows a 12-pin package with pins 1-12 labeled:",
+    "evidence": "PDF p6 Pin Configurations (render, pdftotext): the μMAX drawing has 10 pins (1-5 left, 6-10 right), not 12; the TDFN body is printed 'MA31730' (manufacturer typo, kept as printed) and both views are TOP VIEW.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p6-pin-description-heading-level",
+    "file": "output/max31730/max31730.md",
+    "page": 6,
+    "old": "\n### Pin Description\n",
+    "new": "\n## Pin Description\n",
+    "evidence": "PDF p6 (render): 'Pin Description' has the same section-title style as 'Pin Configurations' (H2); the md had H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p7-pin-description-continued-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 7,
+    "old": "## **Pin Description (continued)**",
+    "new": "## Pin Description (continued)",
+    "evidence": "PDF p7 (render): section title in the same style as the other H2 titles; the md wrapped it in bold markers.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p8-block-diagram-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 8,
+    "old": "![Block diagram of the MAX31730 3-Channel Remote Temperature Sensor. The diagram shows the internal architecture of the device. On the left, three remote temperature-sensing channels are shown, each with a diode and a capacitor. The inputs are labeled DXP1, DXP2, DXP3 and DXP1, DXP2, DXP3. The outputs are labeled DXP1, DXP2, DXP3 and DXP1, DXP2, DXP3. The device is powered by VDD and has a GND pin. The internal components include a CURRENT SOURCE, a MUX (Multiplexer), an ADC (Analog-to-Digital Converter), a REF (Reference) block, a LOCAL TEMPERATURE sensor, an ALARM block, and a REGISTER BANK. The REGISTER BANK contains several registers: CONFIGURATION BYTES, REMOTE TEMPERATURES, LOCAL TEMPERATURES, SMBus ALERT THRESHOLD, THERMAL THRESHOLDS, and ALERT RESPONSE ADDRESS. The device has three external pins: SCL, SDA, and ADD, which are connected to the SMBus/I2C INTERFACE. The ALARM output is labeled THERM.](",
+    "new": "![Block diagram of the MAX31730 3-Channel Remote Temperature Sensor (description written from the PDF drawing). On the left, outside the device, three diode-connected PNP transistors (base and collector tied together) connect to the pin pairs DXP1/DXN1, DXP2/DXN2 and DXP3/DXN3 (emitter on DXP_, base/collector on DXN_), with a capacitor across each DXP_/DXN_ pair. Inside the MAX31730, the six DXP_/DXN_ lines enter an unlabeled input selector block whose + and - outputs feed the MUX; the LOCAL TEMPERATURE block also connects to this selector. A CURRENT SOURCE supplied from VDD feeds the MUX. The MUX drives the ADC, which also takes the REF block. The ADC output goes to the REGISTER BANK, which contains CONFIGURATION BYTES, REMOTE TEMPERATURES, LOCAL TEMPERATURES, SMBus ALERT THRESHOLD, THERMAL THRESHOLDS and ALERT RESPONSE ADDRESS. The REGISTER BANK drives the ALARM block, whose output is the THERM pin. The SMBus/I2C INTERFACE connects to the REGISTER BANK and to the SCL, SDA and ADD pins. GND is grounded.](",
+    "evidence": "PDF p8 Block Diagram (render): the AI text repeated 'DXP1, DXP2, DXP3' as both inputs and outputs, never named DXN1-DXN3, and called the remote sensors diodes; the drawing shows diode-connected PNP transistors on DXP_/DXN_ pairs with a capacitor across each pair, an input selector block feeding the MUX (+/-), CURRENT SOURCE from VDD into the MUX, REF into the ADC, ADC into the REGISTER BANK, REGISTER BANK into ALARM driving THERM, and the SMBus/I2C INTERFACE between the REGISTER BANK and SCL/SDA/ADD. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "max31730-p8-block-diagram-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 8,
+    "old": "\n\nBlock diagram of the MAX31730 3-Channel Remote Temperature Sensor. The diagram shows the internal architecture of the device. On the left, three remote temperature-sensing channels are shown, each with a diode and a capacitor. The inputs are labeled DXP1, DXP2, DXP3 and DXP1, DXP2, DXP3. The outputs are labeled DXP1, DXP2, DXP3 and DXP1, DXP2, DXP3. The device is powered by VDD and has a GND pin. The internal components include a CURRENT SOURCE, a MUX (Multiplexer), an ADC (Analog-to-Digital Converter), a REF (Reference) block, a LOCAL TEMPERATURE sensor, an ALARM block, and a REGISTER BANK. The REGISTER BANK contains several registers: CONFIGURATION BYTES, REMOTE TEMPERATURES, LOCAL TEMPERATURES, SMBus ALERT THRESHOLD, THERMAL THRESHOLDS, and ALERT RESPONSE ADDRESS. The device has three external pins: SCL, SDA, and ADD, which are connected to the SMBus/I2C INTERFACE. The ALARM output is labeled <span style=\"text-decoration: overline;\">THERM</span>.\n",
+    "new": "\n\nBlock diagram of the MAX31730 3-Channel Remote Temperature Sensor (description written from the PDF drawing). On the left, outside the device, three diode-connected PNP transistors (base and collector tied together) connect to the pin pairs DXP1/DXN1, DXP2/DXN2 and DXP3/DXN3 (emitter on DXP_, base/collector on DXN_), with a capacitor across each DXP_/DXN_ pair. Inside the MAX31730, the six DXP_/DXN_ lines enter an unlabeled input selector block whose + and - outputs feed the MUX; the LOCAL TEMPERATURE block also connects to this selector. A CURRENT SOURCE supplied from VDD feeds the MUX. The MUX drives the ADC, which also takes the REF block. The ADC output goes to the REGISTER BANK, which contains CONFIGURATION BYTES, REMOTE TEMPERATURES, LOCAL TEMPERATURES, SMBus ALERT THRESHOLD, THERMAL THRESHOLDS and ALERT RESPONSE ADDRESS. The REGISTER BANK drives the ALARM block, whose output is the <span style=\"text-decoration: overline;\">THERM</span> pin. The SMBus/I2C INTERFACE connects to the REGISTER BANK and to the SCL, SDA and ADD pins. GND is grounded.\n",
+    "evidence": "PDF p8 Block Diagram (render): the AI text repeated 'DXP1, DXP2, DXP3' as both inputs and outputs, never named DXN1-DXN3, and called the remote sensors diodes; the drawing shows diode-connected PNP transistors on DXP_/DXN_ pairs with a capacitor across each pair, an input selector block feeding the MUX (+/-), CURRENT SOURCE from VDD into the MUX, REF into the ADC, ADC into the REGISTER BANK, REGISTER BANK into ALARM driving THERM, and the SMBus/I2C INTERFACE between the REGISTER BANK and SCL/SDA/ADD. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
   }
 ]
