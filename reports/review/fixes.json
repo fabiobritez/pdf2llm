@@ -6398,5 +6398,330 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p16-adj-clamp-sentence-join",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 16,
+    "old": "above its 9V clamp\n\nvoltage if the output is pulled high,",
+    "new": "above its 9V clamp voltage if the output is pulled high,",
+    "evidence": "PDF p16: 'In situations where the ADJ pin connects to a resistor divider that would pull the ADJ pin above its 9V clamp voltage if the output is pulled high, ...' is one sentence that continues from the left to the right column (render + pdftotext); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p16-f06-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 16,
+    "old": "\n\nFigure 6. Reverse-Output Current\n",
+    "new": "\n\n1965 F06\n\nFigure 6. Reverse-Output Current\n",
+    "evidence": "PDF p16 prints drawing number '1965 F06' under the Figure 6 plot (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-ta03-drawing-number",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "\nCircuit diagram showing the paralleling of an LT1965-3.3 and an LT1965 regulator. The LT1965-3.3 is configured as a 3.3V regulator with a 2.2A output. The LT1965 is configured as an adjustable regulator. Their outputs are connected in parallel through sense resistors R6 (6.65k 1%) and R7 (4.02k 1%). A 1/2 LT1366 operational amplifier is used for current sharing, comparing the voltage drops across R6 and R7. Control signals include SHDN (Shutdown) and SENSE. Input capacitors C1 (100µF) and C2 (22µF) are shown, along with a 0.01µF capacitor C3 at the op-amp output. Resistor values R1 (0.01Ω), R2 (0.01Ω), R3 (2.2k), R4 (2.2k), and R5 (10k) are also specified.\n\n## PACKAGE DESCRIPTION",
+    "new": "\nCircuit diagram showing the paralleling of an LT1965-3.3 and an LT1965 regulator. The LT1965-3.3 is configured as a 3.3V regulator with a 2.2A output. The LT1965 is configured as an adjustable regulator. Their outputs are connected in parallel through sense resistors R6 (6.65k 1%) and R7 (4.02k 1%). A 1/2 LT1366 operational amplifier is used for current sharing, comparing the voltage drops across R6 and R7. Control signals include SHDN (Shutdown) and SENSE. Input capacitors C1 (100µF) and C2 (22µF) are shown, along with a 0.01µF capacitor C3 at the op-amp output. Resistor values R1 (0.01Ω), R2 (0.01Ω), R3 (2.2k), R4 (2.2k), and R5 (10k) are also specified.\n\n1965 TA03\n\n## PACKAGE DESCRIPTION",
+    "evidence": "PDF p17 prints drawing number '1965 TA03' at the paralleling schematic (pdftotext); missing from the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-dd8-drawing-id",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "\nRECOMMENDED SOLDER PAD PITCH AND DIMENSIONS APPLY SOLDER MASK TO AREAS THAT ARE NOT SOLDERED\n",
+    "new": "\nRECOMMENDED SOLDER PAD PITCH AND DIMENSIONS APPLY SOLDER MASK TO AREAS THAT ARE NOT SOLDERED\n\nBOTTOM VIEW—EXPOSED PAD\n\n(DD8) DFN 0509 REV C\n",
+    "evidence": "PDF p17 prints the view label 'BOTTOM VIEW—EXPOSED PAD' and the drawing id '(DD8) DFN 0509 REV C' (pdftotext); missing from the md body.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-dd8-note1-m0-as-printed",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "JEDEC PACKAGE OUTLINE MO-229 VARIATION OF (WEED-1)",
+    "new": "JEDEC PACKAGE OUTLINE M0-229 VARIATION OF (WEED-1)",
+    "evidence": "PDF p17 Note 1 prints 'M0-229' with a digit zero (pdftotext/PyMuPDF 'M0-229'); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-ta03-paralleling-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "![Circuit diagram showing the paralleling of an LT1965-3.3 and an LT1965 regulator. The LT1965-3.3 is configured as a 3.3V regulator with a 2.2A output. The LT1965 is configured as an adjustable regulator. Their outputs are connected in parallel through sense resistors R6 (6.65k 1%) and R7 (4.02k 1%). A 1/2 LT1366 operational amplifier is used for current sharing, comparing the voltage drops across R6 and R7. Control signals include SHDN (Shutdown) and SENSE. Input capacitors C1 (100µF) and C2 (22µF) are shown, along with a 0.01µF capacitor C3 at the op-amp output. Resistor values R1 (0.01Ω), R2 (0.01Ω), R3 (2.2k), R4 (2.2k), and R5 (10k) are also specified.](",
+    "new": "![Circuit diagram showing the paralleling of an LT1965-3.3 and an LT1965 regulator for a 3.3V, 2.2A output from V_IN > 3.7V. V_IN (with input capacitor C1, 100µF) feeds the IN pin of the LT1965-3.3 through R1 (0.01Ω) and the IN pin of the LT1965 through R2 (0.01Ω). Both OUT pins are tied together at the 3.3V output, which has output capacitor C2 (22µF); the SENSE pin of the LT1965-3.3 connects to the output. The LT1965 ADJ pin sits at the junction of the divider R6 (6.65k 1%, to the output) and R7 (4.02k 1%, to ground). A 1/2 LT1366 op amp (pins 1, 2, 3, 4, 8; supply pin 8 from V_IN) compares the voltages at the regulator ends of R1 and R2 through R4 (2.2k, to the + input, pin 3) and R3 (2.2k, to the - input, pin 2), so it senses the difference between the two input currents. Its output (pin 1) drives the LT1965 ADJ node through R5 (10k), and C3 (0.01µF) is connected from the op amp output back to its - input. A common SHDN line drives the SHDN pins of both regulators. Both GND pins go to ground.](",
+    "evidence": "PDF p17 'Paralleling of Regulators for Higher Output Current' render: R1/R2 (0.01Ω) are in the two IN paths, not the outputs; R6/R7 are the LT1965 ADJ divider, not output sense resistors; the LT1366 compares the R1/R2 drops via R4 (+, pin 3) and R3 (-, pin 2); C2 is the output capacitor (not an input capacitor); C3 is between op amp output and - input; R5 couples the op amp output to ADJ.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-ta03-paralleling-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "\nCircuit diagram showing the paralleling of an LT1965-3.3 and an LT1965 regulator. The LT1965-3.3 is configured as a 3.3V regulator with a 2.2A output. The LT1965 is configured as an adjustable regulator. Their outputs are connected in parallel through sense resistors R6 (6.65k 1%) and R7 (4.02k 1%). A 1/2 LT1366 operational amplifier is used for current sharing, comparing the voltage drops across R6 and R7. Control signals include SHDN (Shutdown) and SENSE. Input capacitors C1 (100µF) and C2 (22µF) are shown, along with a 0.01µF capacitor C3 at the op-amp output. Resistor values R1 (0.01Ω), R2 (0.01Ω), R3 (2.2k), R4 (2.2k), and R5 (10k) are also specified.\n",
+    "new": "\nCircuit diagram showing the paralleling of an LT1965-3.3 and an LT1965 regulator for a 3.3V, 2.2A output from V_IN > 3.7V. V_IN (with input capacitor C1, 100µF) feeds the IN pin of the LT1965-3.3 through R1 (0.01Ω) and the IN pin of the LT1965 through R2 (0.01Ω). Both OUT pins are tied together at the 3.3V output, which has output capacitor C2 (22µF); the SENSE pin of the LT1965-3.3 connects to the output. The LT1965 ADJ pin sits at the junction of the divider R6 (6.65k 1%, to the output) and R7 (4.02k 1%, to ground). A 1/2 LT1366 op amp (pins 1, 2, 3, 4, 8; supply pin 8 from V_IN) compares the voltages at the regulator ends of R1 and R2 through R4 (2.2k, to the + input, pin 3) and R3 (2.2k, to the - input, pin 2), so it senses the difference between the two input currents. Its output (pin 1) drives the LT1965 ADJ node through R5 (10k), and C3 (0.01µF) is connected from the op amp output back to its - input. A common SHDN line drives the SHDN pins of both regulators. Both GND pins go to ground.\n",
+    "evidence": "PDF p17 'Paralleling of Regulators for Higher Output Current' render: R1/R2 (0.01Ω) are in the two IN paths, not the outputs; R6/R7 are the LT1965 ADJ divider, not output sense resistors; the LT1366 compares the R1/R2 drops via R4 (+, pin 3) and R3 (-, pin 2); C2 is the output capacitor (not an input capacitor); C3 is between op amp output and - input; R5 couples the op amp output to ADJ.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-dd8-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "![Mechanical drawings of the 8-lead Plastic DFN package. The top view shows a 3.5 ± 0.05 mm by 2.10 ± 0.05 mm package with a 1.65 ± 0.05 mm (2 sides) pitch and 0.25 ± 0.05 mm lead width. The side view shows a 3.00 ± 0.10 mm (4 sides) height and 0.75 ± 0.05 mm lead length. The bottom view shows the exposed pad with a 2.38 ± 0.10 mm pitch and 0.50 BSC lead spacing. Dimensions are in millimeters.](",
+    "new": "![Mechanical drawings of the 8-lead Plastic DFN package. Left: recommended solder pad layout (package outline dashed) with 3.5 ±0.05 overall pad-to-pad length, 2.10 ±0.05 between the inner ends of the two pad rows, exposed-pad land 1.65 ±0.05 (2 SIDES) by 2.38 ±0.05, pad length 0.70 ±0.05, pad width 0.25 ±0.05 and pad pitch 0.50 BSC; labels 'PACKAGE OUTLINE'. Middle: top view 3.00 ±0.10 (4 SIDES) with 'PIN 1 TOP MARK (NOTE 6)' in the shaded corner, and side view with 0.75 ±0.05 height, 0.200 REF and 0.00 – 0.05 standoff. Right: 'BOTTOM VIEW—EXPOSED PAD' with exposed pad 1.65 ±0.10 (2 SIDES) by 2.38 ±0.10, lead length 0.40 ±0.10, lead width 0.25 ±0.05, pitch 0.50 BSC, R = 0.125 TYP, pins 1, 4, 5 and 8 marked. Dimensions are in millimeters.](",
+    "evidence": "PDF p17 DD8 drawing (render + PDF words): the left view is the recommended solder pad layout, not a 'top view' of a 3.5 × 2.10 package; 3.00 ±0.10 (4 SIDES) is the body size, not a height; 0.75 ±0.05 is the package height, not a lead length; 2.38 is the exposed-pad length, not a pitch. Labels PIN 1 TOP MARK (NOTE 6), 0.70, 0.40, 0.200 REF, 0.00 – 0.05, R = 0.125 TYP were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p17-dd8-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 17,
+    "old": "\nMechanical drawings of the 8-lead Plastic DFN package. The top view shows a 3.5 ± 0.05 mm by 2.10 ± 0.05 mm package with a 1.65 ± 0.05 mm (2 sides) pitch and 0.25 ± 0.05 mm lead width. The side view shows a 3.00 ± 0.10 mm (4 sides) height and 0.75 ± 0.05 mm lead length. The bottom view shows the exposed pad with a 2.38 ± 0.10 mm pitch and 0.50 BSC lead spacing. Dimensions are in millimeters.\n",
+    "new": "\nMechanical drawings of the 8-lead Plastic DFN package. Left: recommended solder pad layout (package outline dashed) with 3.5 ±0.05 overall pad-to-pad length, 2.10 ±0.05 between the inner ends of the two pad rows, exposed-pad land 1.65 ±0.05 (2 SIDES) by 2.38 ±0.05, pad length 0.70 ±0.05, pad width 0.25 ±0.05 and pad pitch 0.50 BSC; labels 'PACKAGE OUTLINE'. Middle: top view 3.00 ±0.10 (4 SIDES) with 'PIN 1 TOP MARK (NOTE 6)' in the shaded corner, and side view with 0.75 ±0.05 height, 0.200 REF and 0.00 – 0.05 standoff. Right: 'BOTTOM VIEW—EXPOSED PAD' with exposed pad 1.65 ±0.10 (2 SIDES) by 2.38 ±0.10, lead length 0.40 ±0.10, lead width 0.25 ±0.05, pitch 0.50 BSC, R = 0.125 TYP, pins 1, 4, 5 and 8 marked. Dimensions are in millimeters.\n",
+    "evidence": "PDF p17 DD8 drawing (render + PDF words): the left view is the recommended solder pad layout, not a 'top view' of a 3.5 × 2.10 package; 3.00 ±0.10 (4 SIDES) is the body size, not a height; 0.75 ±0.05 is the package height, not a lead length; 2.38 is the exposed-pad length, not a pitch. Labels PIN 1 TOP MARK (NOTE 6), 0.70, 0.40, 0.200 REF, 0.00 – 0.05, R = 0.125 TYP were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p18-ms8e-dimension-lists",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 18,
+    "old": "**RECOMMENDED SOLDER PAD LAYOUT**\n\nTop view dimensions:  \n - Package body width:  $1.88 \\pm 0.102$  ( $.074 \\pm .004$ )  \n - Package body length:  $5.10$  ( $.201$ ) MIN  \n - Lead pitch:  $0.42 \\pm 0.038$  ( $.0165 \\pm .0015$ ) TYP  \n - Lead width:  $0.65$  ( $.0256$ ) BSC  \n - Lead length:  $0.889 \\pm 0.127$  ( $.035 \\pm .005$ )  \n - Lead angle:  $0^\\circ - 6^\\circ$  TYP  \n - Lead separation:  $0.53 \\pm 0.152$  ( $.021 \\pm .006$ )\n\n**BOTTOM VIEW OF EXPOSED PAD OPTION**\n\nBottom view dimensions:  \n - Exposed pad width:  $1.88$  ( $.074$ )  \n - Exposed pad length:  $1.68$  ( $.066$ )  \n - Lead pitch:  $3.00 \\pm 0.102$  ( $.118 \\pm .004$ ) (NOTE 3)  \n - Lead width:  $0.52$  ( $.0205$ ) REF  \n - Lead separation:  $0.86$  ( $.034$ ) REF  \n - Lead angle:  $0^\\circ - 6^\\circ$  TYP  \n - Lead separation:  $0.53 \\pm 0.152$  ( $.021 \\pm .006$ )\n\n**DETAIL \"A\"**\n\nLead profile dimensions:  \n - Lead width:  $0.254$  ( $.010$ )  \n - Lead angle:  $0^\\circ - 6^\\circ$  TYP  \n - Lead separation:  $0.53 \\pm 0.152$  ( $.021 \\pm .006$ )\n\n**DETAIL \"B\"**\n\nCorner tail dimensions:  \n - Corner tail length:  $0.29$  REF  \n - Corner tail width:  $0.05$  REF  \n - Corner tail angle:  $0^\\circ - 6^\\circ$  TYP\n\n**SEATING PLANE**\n\nLead profile dimensions:  \n - Lead width:  $1.10$  ( $.043$ ) MAX  \n - Lead angle:  $0^\\circ - 6^\\circ$  TYP  \n - Lead separation:  $0.86$  ( $.034$ ) REF  \n - Lead separation:  $0.53 \\pm 0.152$  ( $.021 \\pm .006$ )\n\n**MSOP (MS8E) 0213 REV K**",
+    "new": "**RECOMMENDED SOLDER PAD LAYOUT**\n\nLabels in the drawing (meaning in brackets, from the drawing geometry):  \n - 1.88 ±0.102 (.074 ±.004) [exposed-pad land width]  \n - 1.68 ±0.102 (.066 ±.004) [exposed-pad land length]  \n - 0.889 ±0.127 (.035 ±.005) [pad length]  \n - 0.42 ±0.038 (.0165 ±.0015) TYP [pad width]  \n - 0.65 (.0256) BSC [pad pitch]  \n - 3.20 – 3.45 (.126 – .136) [between the inner ends of the two pad rows]  \n - 5.10 (.201) MIN [between the outer ends of the two pad rows]\n\n**BOTTOM VIEW OF EXPOSED PAD OPTION**\n\n - 1.88 (.074) and 1.68 (.066) [exposed pad]  \n - Pins 1 and 8 marked; DETAIL \"B\" circled at a pad corner\n\n**DETAIL \"B\"**\n\n - 0.29 REF, 0.05 REF  \n - CORNER TAIL IS PART OF THE LEADFRAME FEATURE. FOR REFERENCE ONLY **NO MEASUREMENT PURPOSE**\n\n**Top view**\n\n - 3.00 ±0.102 (.118 ±.004) (NOTE 3) [body length along the lead rows]  \n - 3.00 ±0.102 (.118 ±.004) (NOTE 4) [body width]  \n - 4.90 ±0.152 (.193 ±.006) [overall width across the lead tips]  \n - 0.52 (.0205) REF  \n - Pins 8 7 6 5 (top) and 1 2 3 4 (bottom)\n\n**DETAIL \"A\"**\n\n - 0.254 (.010) [above the GAUGE PLANE]  \n - 0° – 6° TYP  \n - 0.53 ±0.152 (.021 ±.006) [foot length]\n\n**Side views**\n\n - 0.18 (.007) [lead thickness]; DETAIL \"A\" circled at the lead  \n - 1.10 (.043) MAX [package height above the SEATING PLANE]  \n - 0.86 (.034) REF  \n - 0.22 – 0.38 (.009 – .015) TYP [lead width]  \n - 0.65 (.0256) BSC [lead pitch]  \n - 0.1016 ±0.0508 (.004 ±.002) [standoff]\n\n**MSOP (MS8E) 0213 REV K**",
+    "evidence": "PDF p18 MS8E drawing (render + PDF words): the md dimension lists were AI guesses with wrong meanings and invented repeats (0.65 BSC called 'lead width', 0.42 'lead pitch', 3.00 (NOTE 3) 'lead pitch', 0.53 ±0.152 listed in four views, 0°–6° in DETAIL B and SEATING PLANE) and dropped printed labels (1.68 ±0.102, 3.20 – 3.45, 4.90 ±0.152, 3.00 ±0.102 (NOTE 4), 0.18, 0.22 – 0.38, 0.1016 ±0.0508, GAUGE PLANE, the DETAIL B note). Replaced by the printed labels grouped by view, meanings in brackets.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "lt1965fb-p18-ms8e-notes-inch-marks",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 18,
+    "old": "3. DIMENSION DOES NOT INCLUDE MOLD FLASH, PROTRUSIONS OR GATE BURRS.  \nMOLD FLASH, PROTRUSIONS OR GATE BURRS SHALL NOT EXCEED  $0.152\\text{mm}$  ( $.006$ ) PER SIDE\n4. DIMENSION DOES NOT INCLUDE INTERLEAD FLASH OR PROTRUSIONS.  \nINTERLEAD FLASH OR PROTRUSIONS SHALL NOT EXCEED  $0.152\\text{mm}$  ( $.006$ ) PER SIDE\n5. LEAD COPLANARITY (BOTTOM OF LEADS AFTER FORMING) SHALL BE  $0.102\\text{mm}$  ( $.004$ ) MAX\n6. EXPOSED PAD DIMENSION DOES INCLUDE MOLD FLASH. MOLD FLASH ON E-PAD  \nSHALL NOT EXCEED  $0.254\\text{mm}$  ( $.010$ ) PER SIDE.",
+    "new": "3. DIMENSION DOES NOT INCLUDE MOLD FLASH, PROTRUSIONS OR GATE BURRS.  \nMOLD FLASH, PROTRUSIONS OR GATE BURRS SHALL NOT EXCEED 0.152mm (.006\") PER SIDE\n4. DIMENSION DOES NOT INCLUDE INTERLEAD FLASH OR PROTRUSIONS.  \nINTERLEAD FLASH OR PROTRUSIONS SHALL NOT EXCEED 0.152mm (.006\") PER SIDE\n5. LEAD COPLANARITY (BOTTOM OF LEADS AFTER FORMING) SHALL BE 0.102mm (.004\") MAX\n6. EXPOSED PAD DIMENSION DOES INCLUDE MOLD FLASH. MOLD FLASH ON E-PAD  \nSHALL NOT EXCEED 0.254mm (.010\") PER SIDE.",
+    "evidence": "PDF p18 MS8E notes 3-6 print the inch values with an inch mark: (.006\"), (.006\"), (.004\"), (.010\") (pdftotext); the md dropped the inch marks inside LaTeX. Rewritten as plain text as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p18-ms8e-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 18,
+    "old": "![Technical drawing of the MS8E Package (8-Lead Plastic MSOP, Exposed Die Pad). The drawing includes a top view showing the recommended solder pad layout with dimensions for the package body and leads. It also includes a bottom view of the exposed pad option, showing the exposed pad area and lead frame features. Two detail views, 'A' and 'B', show the lead profile and corner tail. The drawing includes dimensions in millimeters and inches, with tolerances and reference values. A note section at the bottom left provides additional information for the dimensions.](",
+    "new": "![Technical drawing of the MS8E Package (8-Lead Plastic MSOP, Exposed Die Pad). The drawing includes the recommended solder pad layout and a top view of the package body and leads. It also includes a bottom view of the exposed pad option, showing the exposed pad area and lead frame features. Two detail views, 'A' and 'B', show the lead profile and corner tail. The drawing includes dimensions in millimeters and inches, with tolerances and reference values. A note section at the bottom left provides additional information for the dimensions.](",
+    "evidence": "PDF p18: the recommended solder pad layout and the package top view are separate views in the drawing (render); the AI text merged them into one 'top view'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p18-ms8e-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 18,
+    "old": "\nTechnical drawing of the MS8E Package (8-Lead Plastic MSOP, Exposed Die Pad). The drawing includes a top view showing the recommended solder pad layout with dimensions for the package body and leads. It also includes a bottom view of the exposed pad option, showing the exposed pad area and lead frame features. Two detail views, 'A' and 'B', show the lead profile and corner tail. The drawing includes dimensions in millimeters and inches, with tolerances and reference values. A note section at the bottom left provides additional information for the dimensions.\n",
+    "new": "\nTechnical drawing of the MS8E Package (8-Lead Plastic MSOP, Exposed Die Pad). The drawing includes the recommended solder pad layout and a top view of the package body and leads. It also includes a bottom view of the exposed pad option, showing the exposed pad area and lead frame features. Two detail views, 'A' and 'B', show the lead profile and corner tail. The drawing includes dimensions in millimeters and inches, with tolerances and reference values. A note section at the bottom left provides additional information for the dimensions.\n",
+    "evidence": "PDF p18: the recommended solder pad layout and the package top view are separate views in the drawing (render); the AI text merged them into one 'top view'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-bottom-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "![Bottom view of the 5-lead plastic DD Pak package showing dimensions in inches and millimeters. The package width is .300 (7.620). The distance between the centers of the leads is .256 (6.502). The lead pitch is .060 (1.524). The lead width is .060 (1.524). The lead length is .183 (4.648). The lead thickness is .075 (1.905). A hatched area indicates the solder-plated copper heat sink.](",
+    "new": "![Bottom view of the 5-lead plastic DD Pak package, labeled 'BOTTOM VIEW OF DD PAK, HATCHED AREA IS SOLDER PLATED COPPER HEAT SINK'. The hatched heat-sink area fills most of the body; five leads come out of the bottom edge. Printed dimension labels: .256 (6.502) and .060 (1.524) across the top of the heat sink, .060 (1.524) and .183 (4.648) and .075 (1.905) vertically at the sides, and .300 (7.620) across the outer leads. Dimensions in inches (millimeters); meanings are not stated in the PDF beyond the drawing itself.](",
+    "evidence": "PDF p19 bottom view (render + words): the AI text assigned invented meanings (e.g. '.075 lead thickness', '.060 lead pitch'); replaced by the printed labels.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-bottom-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "\nBottom view of the 5-lead plastic DD Pak package showing dimensions in inches and millimeters. The package width is .300 (7.620). The distance between the centers of the leads is .256 (6.502). The lead pitch is .060 (1.524). The lead width is .060 (1.524). The lead length is .183 (4.648). The lead thickness is .075 (1.905). A hatched area indicates the solder-plated copper heat sink.\n",
+    "new": "\nBottom view of the 5-lead plastic DD Pak package, labeled 'BOTTOM VIEW OF DD PAK, HATCHED AREA IS SOLDER PLATED COPPER HEAT SINK'. The hatched heat-sink area fills most of the body; five leads come out of the bottom edge. Printed dimension labels: .256 (6.502) and .060 (1.524) across the top of the heat sink, .060 (1.524) and .183 (4.648) and .075 (1.905) vertically at the sides, and .300 (7.620) across the outer leads. Dimensions in inches (millimeters); meanings are not stated in the PDF beyond the drawing itself.\n",
+    "evidence": "PDF p19 bottom view (render + words): the AI text assigned invented meanings (e.g. '.075 lead thickness', '.060 lead pitch'); replaced by the printed labels.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-top-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "![Top view of the 5-lead plastic DD Pak package showing dimensions in inches and millimeters. The package width is .390 - .415 (9.906 - 10.541). The package length is .060 (1.524) TYP. The lead pitch is .330 - .370 (8.382 - 9.398). The lead width is .143 +.012 -.020 (3.632 +.0305 -.508). The lead thickness is .028 - .038 (0.711 - 0.965) TYP. The lead angle is 15° TYP. The lead spacing is .067 (1.702) BSC.](",
+    "new": "![Top view of the 5-lead plastic DD Pak package with five leads. Printed dimension labels: body width .390 – .415 (9.906 – 10.541) with 15° TYP at the top corners; .060 (1.524) TYP at the top; body length .330 – .370 (8.382 – 9.398); .143 +.012/–.020 (3.632 +0.305/–0.508) for the exposed lead length below the body; lead width .028 – .038 (0.711 – 0.965) TYP; lead pitch .067 (1.702) BSC. Dimensions in inches (millimeters); meanings are not stated in the PDF beyond the drawing itself.](",
+    "evidence": "PDF p19 top view (render + words): the AI text called .330 – .370 a lead pitch and .143 a lead width, and misprinted the mm tolerances '+.0305 -.508' (PDF: +0.305 –0.508). Lead pitch is .067 BSC, lead width .028 – .038.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-top-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "\nTop view of the 5-lead plastic DD Pak package showing dimensions in inches and millimeters. The package width is .390 - .415 (9.906 - 10.541). The package length is .060 (1.524) TYP. The lead pitch is .330 - .370 (8.382 - 9.398). The lead width is .143 +.012 -.020 (3.632 +.0305 -.508). The lead thickness is .028 - .038 (0.711 - 0.965) TYP. The lead angle is 15° TYP. The lead spacing is .067 (1.702) BSC.\n",
+    "new": "\nTop view of the 5-lead plastic DD Pak package with five leads. Printed dimension labels: body width .390 – .415 (9.906 – 10.541) with 15° TYP at the top corners; .060 (1.524) TYP at the top; body length .330 – .370 (8.382 – 9.398); .143 +.012/–.020 (3.632 +0.305/–0.508) for the exposed lead length below the body; lead width .028 – .038 (0.711 – 0.965) TYP; lead pitch .067 (1.702) BSC. Dimensions in inches (millimeters); meanings are not stated in the PDF beyond the drawing itself.\n",
+    "evidence": "PDF p19 top view (render + words): the AI text called .330 – .370 a lead pitch and .143 a lead width, and misprinted the mm tolerances '+.0305 -.508' (PDF: +0.305 –0.508). Lead pitch is .067 BSC, lead width .028 – .038.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-side-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "![Side view of the 5-lead plastic DD Pak package showing dimensions in inches and millimeters. The package width is .165 - .180 (4.191 - 4.572). The package length is .059 (1.499) TYP. The lead pitch is .045 - .055 (1.143 - 1.397). The lead width is .004 +.008 -.004 (0.102 +.0203 -.102). The lead thickness is .095 - .115 (2.413 - 2.921). The lead angle is 0° - 7° TYP. The lead spacing is .013 - .023 (0.330 - 0.584). The lead thickness is .050 ±.012 (1.270 ±.0305). Detail A shows the lead profile.](",
+    "new": "![Side view of the 5-lead plastic DD Pak package. Printed dimension labels: overall height .165 – .180 (4.191 – 4.572); tab thickness .045 – .055 (1.143 – 1.397); .059 (1.499) TYP; .004 +.008/–.004 (0.102 +0.203/–0.102); .095 – .115 (2.413 – 2.921); .050 ±.012 (1.270 ±0.305); lead thickness .013 – .023 (0.330 – 0.584). A circle marks DETAIL A at the lead bend. Dimensions in inches (millimeters); meanings are not stated in the PDF beyond the drawing itself.](",
+    "evidence": "PDF p19 side view (render + words): mm tolerances were misprinted ('0.102 +.0203', '±.0305'; PDF: +0.203/–0.102 and ±0.305) and the meanings were invented (e.g. '.045 – .055 lead pitch').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-side-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "\nSide view of the 5-lead plastic DD Pak package showing dimensions in inches and millimeters. The package width is .165 - .180 (4.191 - 4.572). The package length is .059 (1.499) TYP. The lead pitch is .045 - .055 (1.143 - 1.397). The lead width is .004 +.008 -.004 (0.102 +.0203 -.102). The lead thickness is .095 - .115 (2.413 - 2.921). The lead angle is 0° - 7° TYP. The lead spacing is .013 - .023 (0.330 - 0.584). The lead thickness is .050 ±.012 (1.270 ±.0305). Detail A shows the lead profile.\n",
+    "new": "\nSide view of the 5-lead plastic DD Pak package. Printed dimension labels: overall height .165 – .180 (4.191 – 4.572); tab thickness .045 – .055 (1.143 – 1.397); .059 (1.499) TYP; .004 +.008/–.004 (0.102 +0.203/–0.102); .095 – .115 (2.413 – 2.921); .050 ±.012 (1.270 ±0.305); lead thickness .013 – .023 (0.330 – 0.584). A circle marks DETAIL A at the lead bend. Dimensions in inches (millimeters); meanings are not stated in the PDF beyond the drawing itself.\n",
+    "evidence": "PDF p19 side view (render + words): mm tolerances were misprinted ('0.102 +.0203', '±.0305'; PDF: +0.203/–0.102 and ±0.305) and the meanings were invented (e.g. '.045 – .055 lead pitch').",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-detail-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "![Detail A showing the lead profile with dimensions in inches and millimeters. The lead width is .013 - .023 (0.330 - 0.584). The lead thickness is .050 ±.012 (1.270 ±.0305). The lead angle is 0° - 7° TYP.](",
+    "new": "![DETAIL A: enlarged lead end against the seating plane, with the lead angle given as 0° – 7° TYP on each side.](",
+    "evidence": "PDF p19 DETAIL A shows only the 0° – 7° TYP angles; .013 – .023 and .050 ±.012 belong to the side view, and the md misprinted ±0.305 as ±.0305.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-detail-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "\nDetail A showing the lead profile with dimensions in inches and millimeters. The lead width is .013 - .023 (0.330 - 0.584). The lead thickness is .050 ±.012 (1.270 ±.0305). The lead angle is 0° - 7° TYP.\n",
+    "new": "\nDETAIL A: enlarged lead end against the seating plane, with the lead angle given as 0° – 7° TYP on each side.\n",
+    "evidence": "PDF p19 DETAIL A shows only the 0° – 7° TYP angles; .013 – .023 and .050 ±.012 belong to the side view, and the md misprinted ±0.305 as ±.0305.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-recommended-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "![Recommended solder pad layout for the 5-lead plastic DD Pak package. The package width is .420. The package length is .350. The package thickness is .585. The lead pitch is .067. The lead width is .042. The lead thickness is .090.](",
+    "new": "![Recommended solder pad layout for the 5-lead plastic DD Pak package: one large rectangular tab pad above a row of five lead pads. Printed dimensions (inches): tab pad width .420 and height .350; .585 from the top of the tab pad to the bottom of the lead pads; lead pad height .090, lead pad width .042 and pitch .067.](",
+    "evidence": "PDF p19 recommended pad layout (render): .420/.350 are the tab pad, .585 the overall height, .090/.042/.067 the lead pads; the AI text called them package width/length/thickness and lead pitch.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-recommended-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "\nRecommended solder pad layout for the 5-lead plastic DD Pak package. The package width is .420. The package length is .350. The package thickness is .585. The lead pitch is .067. The lead width is .042. The lead thickness is .090.\n",
+    "new": "\nRecommended solder pad layout for the 5-lead plastic DD Pak package: one large rectangular tab pad above a row of five lead pads. Printed dimensions (inches): tab pad width .420 and height .350; .585 from the top of the tab pad to the bottom of the lead pads; lead pad height .090, lead pad width .042 and pitch .067.\n",
+    "evidence": "PDF p19 recommended pad layout (render): .420/.350 are the tab pad, .585 the overall height, .090/.042/.067 the lead pads; the AI text called them package width/length/thickness and lead pitch.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-recommended-thick-desc-alt",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "![Recommended solder pad layout for thicker solder paste applications. The package width is .420. The package length is .325. The package thickness is .585. The lead pitch is .067. The lead width is .042. The lead thickness is .090. The lead angle is 0° - 7° TYP. The lead spacing is .013 - .023 (0.330 - 0.584). The lead thickness is .050 ±.012 (1.270 ±.0305).](",
+    "new": "![Recommended solder pad layout for thicker solder paste applications: a notched tab pad above a row of five lead pads. Printed dimensions (inches): .420 overall tab pad width at the top, .276 between the notches, notch depth .080, .205 below the notches, tab pad height .325, lower tab width .320, .585 from the top of the tab pad to the bottom of the lead pads; lead pad height .090, lead pad width .042 and pitch .067.](",
+    "evidence": "PDF p19 thick-paste pad layout (render + words): labels .276, .080, .205, .320 were missing and 0° – 7°, .013 – .023, .050 ±.012 (from DETAIL A / side view) do not belong to this drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "lt1965fb-p19-dd5-recommended-thick-desc-desc",
+    "file": "output/lt1965fb/lt1965fb.md",
+    "page": 19,
+    "old": "\nRecommended solder pad layout for thicker solder paste applications. The package width is .420. The package length is .325. The package thickness is .585. The lead pitch is .067. The lead width is .042. The lead thickness is .090. The lead angle is 0° - 7° TYP. The lead spacing is .013 - .023 (0.330 - 0.584). The lead thickness is .050 ±.012 (1.270 ±.0305).\n",
+    "new": "\nRecommended solder pad layout for thicker solder paste applications: a notched tab pad above a row of five lead pads. Printed dimensions (inches): .420 overall tab pad width at the top, .276 between the notches, notch depth .080, .205 below the notches, tab pad height .325, lower tab width .320, .585 from the top of the tab pad to the bottom of the lead pads; lead pad height .090, lead pad width .042 and pitch .067.\n",
+    "evidence": "PDF p19 thick-paste pad layout (render + words): labels .276, .080, .205, .320 were missing and 0° – 7°, .013 – .023, .050 ±.012 (from DETAIL A / side view) do not belong to this drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
