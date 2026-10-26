@@ -17053,5 +17053,278 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-read-iout-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***READ\\_IOUT***\n",
+    "new": "\n#### READ\\_IOUT\n",
+    "evidence": "PDF p72: 'READ_IOUT' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-mfr-iin-peak-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***MFR\\_IIN\\_PEAK***\n",
+    "new": "\n#### MFR\\_IIN\\_PEAK\n",
+    "evidence": "PDF p72: 'MFR_IIN_PEAK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-mfr-iin-min-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***MFR\\_IIN\\_MIN***\n",
+    "new": "\n#### MFR\\_IIN\\_MIN\n",
+    "evidence": "PDF p72: 'MFR_IIN_MIN' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-mfr-pin-peak-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***MFR\\_PIN\\_PEAK***\n",
+    "new": "\n#### MFR\\_PIN\\_PEAK\n",
+    "evidence": "PDF p72: 'MFR_PIN_PEAK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-mfr-pin-min-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***MFR\\_PIN\\_MIN***\n",
+    "new": "\n#### MFR\\_PIN\\_MIN\n",
+    "evidence": "PDF p72: 'MFR_PIN_MIN' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-read-temperature-1-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***READ\\_TEMPERATURE\\_1***\n",
+    "new": "\n#### READ\\_TEMPERATURE\\_1\n",
+    "evidence": "PDF p72: 'READ_TEMPERATURE_1' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-read-temperature-2-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "\n#### ***READ\\_TEMPERATURE\\_2***\n",
+    "new": "\n#### READ\\_TEMPERATURE\\_2\n",
+    "evidence": "PDF p72: 'READ_TEMPERATURE_2' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p72-n-ts-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 72,
+    "old": "an ideality factor greater than N<sub>TS</sub> max.",
+    "new": "an ideality factor greater than N\\_TS max.",
+    "evidence": "PDF p72 READ_TEMPERATURE_1 (PyMuPDF span y=556, one 11.7pt span; render): printed literally 'N_TS max' with an underscore and no subscript, unlike the T_SENSE subscripts on the lines above; md had N<sub>TS</sub>.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p73-mfr-read-iout-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 73,
+    "old": "\n#### MFR\\_READ\\_IOUT Data Contents\n",
+    "new": "\n**MFR\\_READ\\_IOUT Data Contents**\n",
+    "evidence": "PDF p73: 'MFR_READ_IOUT Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-iout-sense-voltage-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_IOUT\\_SENSE\\_VOLTAGE***\n",
+    "new": "\n#### MFR\\_IOUT\\_SENSE\\_VOLTAGE\n",
+    "evidence": "PDF p74: 'MFR_IOUT_SENSE_VOLTAGE' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-iout-sense-voltage-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n##### **MFR\\_IOUT\\_SENSE\\_VOLTAGE Data Contents**\n",
+    "new": "\n**MFR\\_IOUT\\_SENSE\\_VOLTAGE Data Contents**\n",
+    "evidence": "PDF p74: 'MFR_IOUT_SENSE_VOLTAGE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-vin-peak-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_VIN\\_PEAK***\n",
+    "new": "\n#### MFR\\_VIN\\_PEAK\n",
+    "evidence": "PDF p74: 'MFR_VIN_PEAK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-vout-peak-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_VOUT\\_PEAK***\n",
+    "new": "\n#### MFR\\_VOUT\\_PEAK\n",
+    "evidence": "PDF p74: 'MFR_VOUT_PEAK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-iout-peak-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_IOUT\\_PEAK***\n",
+    "new": "\n#### MFR\\_IOUT\\_PEAK\n",
+    "evidence": "PDF p74: 'MFR_IOUT_PEAK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-temperature-1-peak-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_TEMPERATURE\\_1\\_PEAK***\n",
+    "new": "\n#### MFR\\_TEMPERATURE\\_1\\_PEAK\n",
+    "evidence": "PDF p74: 'MFR_TEMPERATURE_1_PEAK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-vin-min-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_VIN\\_MIN***\n",
+    "new": "\n#### MFR\\_VIN\\_MIN\n",
+    "evidence": "PDF p74: 'MFR_VIN_MIN' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p74-mfr-vout-min-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 74,
+    "old": "\n#### ***MFR\\_VOUT\\_MIN***\n",
+    "new": "\n#### MFR\\_VOUT\\_MIN\n",
+    "evidence": "PDF p74: 'MFR_VOUT_MIN' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p75-fault-logging-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 75,
+    "old": "\n## FAULT LOGGING\n",
+    "new": "\n### FAULT LOGGING\n",
+    "evidence": "PDF p75 (PyMuPDF span y=253): 'FAULT LOGGING' is a bold caps subsection (LinearHelvCond-Bold 11.7pt) under the running title PMBUS COMMAND DESCRIPTION, like SHARED EXTERNAL FAULTS / TELEMETRY (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p75-fault-log-operation-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 75,
+    "old": "\n### Fault Log Operation\n",
+    "new": "\n#### Fault Log Operation\n",
+    "evidence": "PDF p75 (PyMuPDF span y=420): 'Fault Log Operation' is a bold title-case subhead (LinearHelvCond-Bold 11.7pt) under FAULT LOGGING (H3); title-case subheads are H4 per the ltc2975 convention; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p75-fig22-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 75,
+    "old": "The diagram illustrates the fault logging process. It shows two main storage areas: RAM and EEPROM, each represented by a stack of 255 bytes. \n 1. **Normal Operation:** An arrow points down to the top of the RAM stack, labeled 'ADC READINGS CONTINUOUSLY FILL BUFFER'. \n 2. **Fault Occurrence:** An arrow points from the RAM stack to the EEPROM stack, labeled 'TIME OF FAULT TRANSFER TO EEPROM AND LOCK'. \n 3. **Power Down:** The EEPROM stack is shown with a lock symbol (a padlock) on its side, indicating it is locked. \n 4. **Reading Back:** An arrow points from the EEPROM stack back to the RAM stack, labeled 'AFTER FAULT READ FROM EEPROM AND LOCK BUFFER'. \n The diagram is labeled '2975 F22' at the bottom right.",
+    "new": "The diagram (description written from the PDF drawing) shows two stacks of byte cells with dots between their upper and lower parts: the left one labeled 'RAM 255 BYTES', the right one 'EEPROM 255 BYTES'. A vertical arrow enters the top of the RAM stack, next to the label 'ADC READINGS CONTINUOUSLY FILL BUFFER'. An arrow from the RAM stack to the EEPROM stack is labeled 'TIME OF FAULT TRANSFER TO EEPROM AND LOCK'. An arrow from the EEPROM stack back to the RAM stack, at the bottom, is labeled 'AFTER FAULT READ FROM EEPROM AND LOCK BUFFER'. Drawing number '2975 F22'.",
+    "evidence": "PDF p75 Figure 22 (render at 250 dpi + pdftotext): the drawing has no padlock/lock symbol and no 'Power Down' step; the AI description invented them and numbered steps not in the figure. Rewritten from the drawing's printed labels only.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p75-fig22-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 75,
+    "old": "\n\nFigure 22. Fault Logging\n",
+    "new": "\n\n**Figure 22. Fault Logging**\n",
+    "evidence": "PDF p75 (PyMuPDF span y=675): 'Figure 22. Fault Logging' is a bold figure caption (LinearHelvCond-Bold 9.7pt); written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
