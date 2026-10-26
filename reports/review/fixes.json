@@ -16254,5 +16254,121 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p43-device-configuration-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 43,
+    "old": "\n### Device Configuration Register\n",
+    "new": "\n#### Device Configuration Register\n",
+    "evidence": "PDF p43 (PyMuPDF spans + render): 'Device Configuration Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p43-fig79-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 43,
+    "old": "![Diagram of the Device Configuration Register (0x02) showing bit fields. Bits 7-3 are [7:2] RESERVED (all 0s). Bits 2-0 are [1:0] OPERATING_MODES (R) (all 0s).](",
+    "new": "![Diagram of the Device Configuration Register (0x02) showing bit fields. Bits 7-2 are [7:2] RESERVED (all 0s). Bits 1-0 are [1:0] OPERATING_MODES (R) (all 0s).](",
+    "evidence": "PDF p43 Figure 79 (render): the [7:2] RESERVED bracket covers bits 7 to 2 and the [1:0] OPERATING_MODES (R) bracket covers bits 1 and 0 (also Table 20); the AI text said 'Bits 7-3' and 'Bits 2-0'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p43-fig79-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 43,
+    "old": "Diagram of the Device Configuration Register (0x02) showing bit fields. Bits 7-3 are [7:2] RESERVED (all 0s). Bits 2-0 are [1:0] OPERATING\\_MODES (R) (all 0s).",
+    "new": "Diagram of the Device Configuration Register (0x02) showing bit fields. Bits 7-2 are [7:2] RESERVED (all 0s). Bits 1-0 are [1:0] OPERATING\\_MODES (R) (all 0s).",
+    "evidence": "Same as ad5711r-ad5710r-p43-fig79-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p45-spi-revision-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 45,
+    "old": "\n### SPI Revision Register\n",
+    "new": "\n#### SPI Revision Register\n",
+    "evidence": "PDF p45 (PyMuPDF spans + render): 'SPI Revision Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p46-stream-mode-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 46,
+    "old": "\n### Stream Mode Register\n",
+    "new": "\n#### Stream Mode Register\n",
+    "evidence": "PDF p46 (PyMuPDF spans + render): 'Stream Mode Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p46-transfer-configuration-register-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 46,
+    "old": "\n### Transfer Configuration Register\n",
+    "new": "\n#### Transfer Configuration Register\n",
+    "evidence": "PDF p46 (PyMuPDF spans + render): 'Transfer Configuration Register' is a black Arial-Bold 11pt title-case subsection under REGISTER DETAILS (H4), like every other register title; the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p46-fig87-duplicate-description",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 46,
+    "old": "Register layout for VENDOR\\_H. Bits 7-0 are shown as 00000100. A bracket labeled [7:0] VID[15:8] (R) points to bits 7-0.\n\nRegister layout for VENDOR\\_H. Bits 7-0 are shown as 00000100. A bracket labeled [7:0] VID[15:8] (R) points to bits 7-0.\n\nFigure 87. Address",
+    "new": "Register layout for VENDOR\\_H. Bits 7-0 are shown as 00000100. A bracket labeled [7:0] VID[15:8] (R) points to bits 7-0.\n\nFigure 87. Address",
+    "evidence": "PDF p46 Figure 87 (VENDOR_H) (render): the md repeated the AI description paragraph twice after the image (three copies counting the alt text); every other figure in the md has one paragraph. Duplicate removed; the text itself matches the bit diagram.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p46-fig88-duplicate-description",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 46,
+    "old": "Register layout for STREAM\\_MODE. Bits 7-0 are shown as 00000000. A bracket labeled [7:0] LOOP\\_COUNT (R/W) points to bits 7-0.\n\nRegister layout for STREAM\\_MODE. Bits 7-0 are shown as 00000000. A bracket labeled [7:0] LOOP\\_COUNT (R/W) points to bits 7-0.\n\nFigure 88. Address",
+    "new": "Register layout for STREAM\\_MODE. Bits 7-0 are shown as 00000000. A bracket labeled [7:0] LOOP\\_COUNT (R/W) points to bits 7-0.\n\nFigure 88. Address",
+    "evidence": "PDF p46 Figure 88 (STREAM_MODE) (render): the md repeated the AI description paragraph twice after the image (three copies counting the alt text); every other figure in the md has one paragraph. Duplicate removed; the text itself matches the bit diagram.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p46-fig89-duplicate-description",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 46,
+    "old": "Register layout for TRANSFER\\_CONFIG. Bits 7-0 are shown as 00000000. Brackets indicate [7:3] RESERVED, [2] KEEP\\_STREAM\\_LENGTH\\_VAL (R/W), and [1:0] RESERVED.\n\nRegister layout for TRANSFER\\_CONFIG. Bits 7-0 are shown as 00000000. Brackets indicate [7:3] RESERVED, [2] KEEP\\_STREAM\\_LENGTH\\_VAL (R/W), and [1:0] RESERVED.\n\nFigure 89. Address",
+    "new": "Register layout for TRANSFER\\_CONFIG. Bits 7-0 are shown as 00000000. Brackets indicate [7:3] RESERVED, [2] KEEP\\_STREAM\\_LENGTH\\_VAL (R/W), and [1:0] RESERVED.\n\nFigure 89. Address",
+    "evidence": "PDF p46 Figure 89 (TRANSFER_CONFIG) (render): the md repeated the AI description paragraph twice after the image (three copies counting the alt text); every other figure in the md has one paragraph. Duplicate removed; the text itself matches the bit diagram.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
