@@ -11486,5 +11486,130 @@
       "pdftotext"
     ],
     "severity": "medium"
+  },
+  {
+    "id": "max31730-p45-unused-channels-no-code-spans",
+    "file": "output/max31730/max31730.md",
+    "page": 45,
+    "old": "disconnect the `DXP_` and `DXN_` inputs for that channel, or connect the `DXP_` to the corresponding `DXN_`. The status register indicates a diode “fault” for this channel and the channel is ignored during the temperature-measurement sequence. It is also good practice to mask any unused channels immediately upon power-up by setting the appropriate bits in the `<span style=\"text-decoration: overline;\">THERM</span> Mask register`. This prevents unused channels from causing `<span style=\"text-decoration: overline;\">THERM</span>` to assert.",
+    "new": "disconnect the DXP\\_ and DXN\\_ inputs for that channel, or connect the DXP\\_ to the corresponding DXN\\_. The status register indicates a diode “fault” for this channel and the channel is ignored during the temperature-measurement sequence. It is also good practice to mask any unused channels immediately upon power-up by setting the appropriate bits in the <span style=\"text-decoration: overline;\">THERM</span> Mask register. This prevents unused channels from causing <span style=\"text-decoration: overline;\">THERM</span> to assert.",
+    "evidence": "PDF p45 Unused Diode Channels (render): DXP_, DXN_, 'THERM Mask register' and THERM are plain body text; the md wrapped them in backtick code spans, so the overline <span> markup inside them is shown as literal HTML instead of an overlined THERM.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-pcb-layout-heading-level",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "\n## PCB Layout\n",
+    "new": "\n### PCB Layout\n",
+    "evidence": "PDF p46 (render): 'PCB Layout' is a bold black subsection title like 'Slave Address' and 'Twisted-Pair and Shielded Cables' (H3), inside Applications Information; the md had H2.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-pcb-list-numbering",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "- 1) Place the device as close as possible to the thermal diode. In noisy environments, such as a computer motherboard, this distance is typically 10cm to 20cm. This length can be increased if the worst noise sources are avoided. Noise sources include displays, clock generators, memory buses, and PCI buses.\n- 2) Do not route the DXP\\_ and DXN\\_ traces across fast digital signals, which can easily introduce +30°C error, even with good filtering.\n\n- 3) Route the DXP\\_ and DXN\\_ traces in parallel and in close proximity to each other. Each parallel pair of traces should go to a thermal diode. Route these traces away from any higher voltage traces, such as +12V<sub>DC</sub>. Leakage currents from PCB contamination must be dealt with carefully since a 20MΩ leakage path from DXP\\_ to ground causes approximately +1°C error. If high-voltage traces are unavoidable, connect guard traces to GND on either side of the DXP\\_ - DXN\\_ traces ([Figure 5](#)).\n\n- 4) Route through as few vias and crossunders as possible to minimize copper/solder thermocouple effects.\n\n",
+    "new": "1) Place the device as close as possible to the thermal diode. In noisy environments, such as a computer motherboard, this distance is typically 10cm to 20cm. This length can be increased if the worst noise sources are avoided. Noise sources include displays, clock generators, memory buses, and PCI buses.\n2) Do not route the DXP\\_ and DXN\\_ traces across fast digital signals, which can easily introduce +30°C error, even with good filtering.\n\n3) Route the DXP\\_ and DXN\\_ traces in parallel and in close proximity to each other. Each parallel pair of traces should go to a thermal diode. Route these traces away from any higher voltage traces, such as +12V<sub>DC</sub>. Leakage currents from PCB contamination must be dealt with carefully since a 20MΩ leakage path from DXP\\_ to ground causes approximately +1°C error. If high-voltage traces are unavoidable, connect guard traces to GND on either side of the DXP\\_ - DXN\\_ traces ([Figure 5](#)).\n\n4) Route through as few vias and crossunders as possible to minimize copper/solder thermocouple effects.\n\n",
+    "evidence": "PDF p46 (render): the guidelines are a numbered list '1)'-'4)' without bullets; the md prefixed each number with a '- ' bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-curly-apostrophe",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "the cable's parasitic",
+    "new": "the cable’s parasitic",
+    "evidence": "PDF p46 (PyMuPDF text): 'cable’s' with U+2019.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-tolerence-as-printed",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "Resistor value tolerance must be",
+    "new": "Resistor value tolerence must be",
+    "evidence": "PDF p46 Table 17 note (pdftotext, render): printed 'tolerence' (manufacturer typo); kept as printed.",
+    "sources": [
+      "pdftotext",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-fig5-alt",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "![Figure 5: Recommended DXP_ - DXN_ PCB Traces. The diagram shows a cross-section of PCB traces. From top to bottom, the layers are: GND (hatched), a 5-10 mils gap, DXP_ (hatched), a MINIMUM gap, DXN_ (hatched), a 5-10 mils gap, and another GND (hatched) layer. Brackets on the right indicate the 5-10 mils spacing between the outer guard traces and the DXP_ and DXN_ traces.](",
+    "new": "![Figure 5: Recommended DXP_ - DXN_ PCB Traces (description written from the PDF drawing). Four parallel hatched traces are drawn, from top to bottom: GND, DXP_, DXN_, GND. Brackets on the left mark the width of the DXP_ and DXN_ traces as 5–10 mils each. Brackets on the right mark the spacing: 5–10 mils between the upper GND and DXP_, MINIMUM between DXP_ and DXN_, and 5–10 mils between DXN_ and the lower GND.](",
+    "evidence": "PDF p46 Figure 5 (render): the drawing shows four parallel traces seen from above, not layers; the left brackets give the DXP_/DXN_ trace widths (5–10 mils) and the right brackets the spacings (5–10 mils, MINIMUM, 5–10 mils). The AI text called them layers and omitted the trace-width dimension.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-fig5-desc",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "\n\nFigure 5: Recommended DXP\\_ - DXN\\_ PCB Traces. The diagram shows a cross-section of PCB traces. From top to bottom, the layers are: GND (hatched), a 5-10 mils gap, DXP\\_ (hatched), a MINIMUM gap, DXN\\_ (hatched), a 5-10 mils gap, and another GND (hatched) layer. Brackets on the right indicate the 5-10 mils spacing between the outer guard traces and the DXP\\_ and DXN\\_ traces.\n",
+    "new": "\n\nFigure 5: Recommended DXP\\_ - DXN\\_ PCB Traces (description written from the PDF drawing). Four parallel hatched traces are drawn, from top to bottom: GND, DXP\\_, DXN\\_, GND. Brackets on the left mark the width of the DXP\\_ and DXN\\_ traces as 5–10 mils each. Brackets on the right mark the spacing: 5–10 mils between the upper GND and DXP\\_, MINIMUM between DXP\\_ and DXN\\_, and 5–10 mils between DXN\\_ and the lower GND.\n",
+    "evidence": "PDF p46 Figure 5 (render): the drawing shows four parallel traces seen from above, not layers; the left brackets give the DXP_/DXN_ trace widths (5–10 mils) and the right brackets the spacings (5–10 mils, MINIMUM, 5–10 mils). The AI text called them layers and omitted the trace-width dimension.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p46-fig5-caption-not-bold",
+    "file": "output/max31730/max31730.md",
+    "page": 46,
+    "old": "**Figure 5. Recommended DXP\\_ - DXN\\_ PCB Traces**",
+    "new": "Figure 5. Recommended DXP\\_ - DXN\\_ PCB Traces",
+    "evidence": "PDF p46 (render): the Figure 5 caption is italic body text like the Figure 1-4 captions (plain in the md); the md had it bold.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p47-chip-information-heading-level",
+    "file": "output/max31730/max31730.md",
+    "page": 47,
+    "old": "\n### Chip Information\n",
+    "new": "\n## Chip Information\n",
+    "evidence": "PDF p47 (render): 'Chip Information' is a teal section title like 'Ordering Information' and 'Package Information' (H2); the md had H3.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "max31730-p48-curly-apostrophe",
+    "file": "output/max31730/max31730.md",
+    "page": 48,
+    "old": "Maxim Integrated's website",
+    "new": "Maxim Integrated’s website",
+    "evidence": "PDF p48 (PyMuPDF text): 'Integrated’s' with U+2019.",
+    "sources": [
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
