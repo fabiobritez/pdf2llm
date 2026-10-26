@@ -7763,5 +7763,213 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p16-voltage-rating-curly-apostrophe",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 16,
+    "old": "possibly exceeding the LTC3309A's voltage rating",
+    "new": "possibly exceeding the LTC3309A’s voltage rating",
+    "evidence": "PDF p16 prints 'LTC3309A’s' with a curly apostrophe (pdftotext U+2019); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p16-output-cap-column-split",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 16,
+    "old": "low impedance at the switching frequency is important. The\n\nsecond function is to store energy in order to satisfy transient loads and stabilize the LTC3309A's control loop.",
+    "new": "low impedance at the switching frequency is important. The second function is to store energy in order to satisfy transient loads and stabilize the LTC3309A’s control loop.",
+    "evidence": "PDF p16: the sentence 'The second function is to store energy...' continues across the column break (pdftotext + render); the md split it into two paragraphs. The PDF prints 'LTC3309A’s' with a curly apostrophe (U+2019).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p17-agnd-curly-apostrophe",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 17,
+    "old": "The LTC3309A's AGND pin",
+    "new": "The LTC3309A’s AGND pin",
+    "evidence": "PDF p17 prints 'LTC3309A’s' with a curly apostrophe (pdftotext U+2019); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p17-fig2-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 17,
+    "old": "![Figure 2: EN Divider circuit diagram. A block diagram of the LTC3309A shows the BUCK SWITCHING REGULATOR. Pin 3 is labeled VIN and is connected to a resistor divider consisting of R1 and R2. The junction between R1 and R2 is connected to the EN pin. R2 is connected to ground, which is labeled 3309A F02.](",
+    "new": "![Figure 2: EN Divider circuit diagram. A block labeled BUCK SWITCHING REGULATOR has VIN and EN pins. The VIN pin is connected to a resistor divider consisting of R1 and R2. The junction between R1 and R2 is connected to the EN pin. R2 is connected to ground.](",
+    "evidence": "PDF p17 Figure 2 (render): the block is labeled only 'BUCK SWITCHING REGULATOR' with pins VIN and EN (no pin number 3 is drawn), and '3309A F02' is the drawing number, not a ground label.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p17-fig2-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 17,
+    "old": "\nFigure 2: EN Divider circuit diagram. A block diagram of the LTC3309A shows the BUCK SWITCHING REGULATOR. Pin 3 is labeled VIN and is connected to a resistor divider consisting of R1 and R2. The junction between R1 and R2 is connected to the EN pin. R2 is connected to ground, which is labeled 3309A F02.\n",
+    "new": "\nFigure 2: EN Divider circuit diagram. A block labeled BUCK SWITCHING REGULATOR has VIN and EN pins. The VIN pin is connected to a resistor divider consisting of R1 and R2. The junction between R1 and R2 is connected to the EN pin. R2 is connected to ground.\n",
+    "evidence": "PDF p17 Figure 2 (render): the block is labeled only 'BUCK SWITCHING REGULATOR' with pins VIN and EN (no pin number 3 is drawn), and '3309A F02' is the drawing number, not a ground label.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p17-f02-drawing-number-and-caption",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 17,
+    "old": "\n\nFigure 2. EN Divider\n",
+    "new": "\n\n3309A F02\n\n**Figure 2. EN Divider**\n",
+    "evidence": "PDF p17 prints the drawing number '3309A F02' in Figure 2 and the bold caption 'Figure 2. EN Divider' (pdftotext + render); the md dropped the number and the caption bold used for Figure 1.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p18-ground-plane-column-split",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 18,
+    "old": "place a local, unbroken\n\nground plane under",
+    "new": "place a local, unbroken ground plane under",
+    "evidence": "PDF p18: 'In addition, place a local, unbroken ground plane under the application circuit...' continues across the column break (pdftotext + render); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p18-f03a-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 18,
+    "old": "![PCB layout diagram (a) for the LTC3309A showing a small solution size. The diagram illustrates the placement of components including input capacitors (CIN1, CIN2, CIN3, CIN4), output capacitors (COUT1, COUT2), an inductor (L), and various resistors (RT, RA, RB, CBYP). It highlights the ground plane on layer 2 and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND.](",
+    "new": "![PCB layout diagram (a) for the LTC3309A showing a small solution size. The diagram illustrates the placement of components including input capacitors (CIN1, CIN2, CIN3, CIN4), output capacitors (COUT1, COUT2), an inductor (L), resistors (RT, RA, RB) and capacitors CFF and CBYP. It highlights the ground plane on layer 2 and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND.](",
+    "evidence": "PDF p18 Figure 3(a) (render + PDF words): CBYP is a capacitor (drawn with a capacitor symbol), not a resistor, and the CFF capacitor was not listed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p18-f03a-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 18,
+    "old": "\nPCB layout diagram (a) for the LTC3309A showing a small solution size. The diagram illustrates the placement of components including input capacitors (CIN1, CIN2, CIN3, CIN4), output capacitors (COUT1, COUT2), an inductor (L), and various resistors (RT, RA, RB, CBYP). It highlights the ground plane on layer 2 and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND.\n",
+    "new": "\nPCB layout diagram (a) for the LTC3309A showing a small solution size. The diagram illustrates the placement of components including input capacitors (CIN1, CIN2, CIN3, CIN4), output capacitors (COUT1, COUT2), an inductor (L), resistors (RT, RA, RB) and capacitors CFF and CBYP. It highlights the ground plane on layer 2 and the use of five 5mil vias within the EPAD area. Pin labels include VIN, PGND, VOUT, and AGND.\n",
+    "evidence": "PDF p18 Figure 3(a) (render + PDF words): CBYP is a capacitor (drawn with a capacitor symbol), not a resistor, and the CFF capacitor was not listed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p18-f03a-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 18,
+    "old": "\n\n(a) Small Solution Size.",
+    "new": "\n\n3309A F03a\n\n(a) Small Solution Size.",
+    "evidence": "PDF p18 prints the drawing number '3309A F03a' under layout (a) (pdftotext + render); the md dropped it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p18-f03b-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 18,
+    "old": "\n\n(b) With Capacitors",
+    "new": "\n\n3309A F03b\n\n(b) With Capacitors",
+    "evidence": "PDF p18 prints the drawing number '3309A F03b' under layout (b) (pdftotext + render); the md dropped it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p18-fig3-caption-bold",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 18,
+    "old": "\n\nFigure 3. Recommended PCB Layout for the LTC3309A\n",
+    "new": "\n\n**Figure 3. Recommended PCB Layout for the LTC3309A**\n",
+    "evidence": "PDF p18 prints the caption 'Figure 3. Recommended PCB Layout for the LTC3309A' in bold (render), like Figure 1, which the md already bolds.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p19-theta-via-column-split",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 19,
+    "old": "$\\theta_{VIA}$  is relatively\n\nhigh. Assuming",
+    "new": "$\\theta_{VIA}$  is relatively high. Assuming",
+    "evidence": "PDF p19: 'θVIA is relatively high. Assuming...' continues across the column break (pdftotext + render); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p19-fig4-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 19,
+    "old": "![Figure 4: Multi-Layer PCB with Thermal Vias Acts as a Heat Sink. The diagram shows a cross-section of an LQFN package mounted on a multi-layer PCB. The package substrate contains a silicon die with power loss P_D and junction temperature T_J. Thermal paths are shown with impedances: theta_JCTOP from the die to the top PCB layer, theta_VIA through thermal vias between PCB layers, and theta_JCBOTTOM from the bottom PCB layer to the package substrate. Convective paths to ambient T_A are shown with impedances theta_CA and theta_BA. The PCB itself has thermal impedances theta_CB and theta_CV between its layers.](",
+    "new": "![Figure 4: Multi-Layer PCB with Thermal Vias Acts as a Heat Sink. The diagram shows a cross-section of an LQFN package mounted on a multi-layer PCB. The die in the package, with power loss P_D drawn as a current source, is at junction temperature T_J. Thermal paths are shown with impedances: theta_JCTOP from the junction up to the package top (T_CTOP), then theta_CA to ambient T_A; theta_JCBOTTOM from the junction down through the package substrate to the top PCB layer; theta_VIA through the thermal via between the top and lower PCB layers. Within each of the two PCB layers, theta_CB impedances spread heat sideways to both sides, where theta_BA impedances connect each layer to ambient T_A.](",
+    "evidence": "PDF p19 Figure 4 (render, 250 dpi crop): theta_JCTOP runs from the junction to the package top (T_CTOP) and theta_CA to ambient, not 'from the die to the top PCB layer'; theta_JCBOTTOM goes from the junction through the package substrate to the PCB, not 'from the bottom PCB layer to the package substrate'; there is no theta_CV (the lateral PCB impedances are all theta_CB).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p19-fig4-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 19,
+    "old": "\nFigure 4: Multi-Layer PCB with Thermal Vias Acts as a Heat Sink. The diagram shows a cross-section of an LQFN package mounted on a multi-layer PCB. The package substrate contains a silicon die with power loss P\\_D and junction temperature T\\_J. Thermal paths are shown with impedances: theta\\_JCTOP from the die to the top PCB layer, theta\\_VIA through thermal vias between PCB layers, and theta\\_JCBOTTOM from the bottom PCB layer to the package substrate. Convective paths to ambient T\\_A are shown with impedances theta\\_CA and theta\\_BA. The PCB itself has thermal impedances theta\\_CB and theta\\_CV between its layers.\n",
+    "new": "\nFigure 4: Multi-Layer PCB with Thermal Vias Acts as a Heat Sink. The diagram shows a cross-section of an LQFN package mounted on a multi-layer PCB. The die in the package, with power loss P\\_D drawn as a current source, is at junction temperature T\\_J. Thermal paths are shown with impedances: theta\\_JCTOP from the junction up to the package top (T\\_CTOP), then theta\\_CA to ambient T\\_A; theta\\_JCBOTTOM from the junction down through the package substrate to the top PCB layer; theta\\_VIA through the thermal via between the top and lower PCB layers. Within each of the two PCB layers, theta\\_CB impedances spread heat sideways to both sides, where theta\\_BA impedances connect each layer to ambient T\\_A.\n",
+    "evidence": "PDF p19 Figure 4 (render, 250 dpi crop): theta_JCTOP runs from the junction to the package top (T_CTOP) and theta_CA to ambient, not 'from the die to the top PCB layer'; theta_JCBOTTOM goes from the junction through the package substrate to the PCB, not 'from the bottom PCB layer to the package substrate'; there is no theta_CV (the lateral PCB impedances are all theta_CB).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p19-f04-drawing-number-and-caption",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 19,
+    "old": "\n\nFigure 4. Multi-Layer PCB with Thermal Vias Acts as a Heat Sink\n",
+    "new": "\n\n3309A F04\n\n**Figure 4. Multi-Layer PCB with Thermal Vias Acts as a Heat Sink**\n",
+    "evidence": "PDF p19 prints the drawing number '3309A F04' in Figure 4 and the caption in bold (pdftotext + render); the md dropped the number and the bold used for Figure 1.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
