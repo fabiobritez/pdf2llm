@@ -214,6 +214,6 @@ After the fixes: `validate.py --all` reports lt1965fb OK, with word/number cover
 
 Not changed / open:
 - p1 trademark line `LT, LT, LTC, LTM, ...`: the first item is the Linear logo glyph in the PDF, which Datalab rendered as 'LT'. Left as is.
-- Repo-wide conventions were kept: hyphen for the en dash (–40°C), Greek μ next to µ, SHDN overbars dropped in headings and tables, and running headers/footers omitted (the p21 'Information furnished by Linear Technology…' disclaimer and the p22 address/copyright footer included; other LTC sheets omit them too).
+- Repo-wide conventions were kept: hyphen for the en dash (–40°C), Greek μ next to µ, SHDN overbars dropped in headings and tables, and running headers/footers omitted, including the p21 'Information furnished by Linear Technology…' disclaimer and the p22 address/copyright footer (other LTC sheets omit them too).
 - Structure-only oddities: `## LT1965 Series` running-header headings, `## Thermal Considerations` at H2 while sibling subsections are H3, `###### **NOTE:**` on p17.
 - Figure descriptions are still AI text. They now agree with the drawings on connections, labels and dimension meanings, but approximate curve levels (for example Fig 6 "approximately 5.5mA at 9V", G29 "minimum around 75°C") are estimates. Read values from the image/PDF.
