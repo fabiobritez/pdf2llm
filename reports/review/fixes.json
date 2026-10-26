@@ -7971,5 +7971,252 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p20-ta02-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 20,
+    "old": "\nThis circuit diagram shows the LTC3309A configured for Pulse Skip Mode. The input voltage range is V<sub>IN</sub> = 3.0V TO 5.5V. The output is V<sub>OUT</sub> = 1.8V, 6A. The circuit includes an input capacitor (10µF), a 1µF 0201 capacitor, a 1.3MΩ resistor, a 200kΩ resistor, and a 71.5kΩ resistor. The LTC3309A is connected to a 470nH inductor, a 15pF capacitor, a 261kΩ resistor, a 100kΩ resistor, and a 68µF x2 capacitor. The output is connected to a 10µF capacitor. The LTC3309A is labeled with pins: EN, V<sub>IN</sub>, V<sub>IN</sub>, SW, SW, VFB, AGND, PGND, PGOOD, and MODE/SYNC. The oscillation frequency is f<sub>OSC</sub> = 1MHz. The diagram is labeled 3309A TA02.\n",
+    "new": "\nThis circuit diagram shows the LTC3309A configured for Pulse Skip Mode, with MODE/SYNC connected to ground. The input voltage range is V<sub>IN</sub> = 3.0V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. EN is driven from the input rail by a 1.3M/200k resistor divider. RT is connected to ground through a 71.5k resistor. The SW pins drive a 470nH inductor to the output V<sub>OUT</sub> = 1.8V, 6A, which has 68µF x2 output capacitors. VFB connects to a 261k/100k divider from V<sub>OUT</sub> to AGND, with a 15pF capacitor across the 261k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. PGOOD is an output pulled up to V<sub>IN</sub> through a 1M resistor. The LTC3309A is labeled with pins: EN, V<sub>IN</sub>, V<sub>IN</sub>, SW, SW, VFB, MODE/SYNC, AGND, RT, PGND, and PGOOD. The oscillation frequency is f<sub>OSC</sub> = 1MHz.\n\n3309A TA02\n",
+    "evidence": "PDF p20 TA02 schematic (render + PDF words): the AI description put the right-hand 10µF on the output (it is on the V_IN rail), listed one input 10µF/1µF pair (there are two), omitted the 10nF V_IN-AGND capacitor, the 1M PGOOD pull-up and the grounded MODE/SYNC, and gave '3309A TA02' only as a label inside the text; the drawing number is now a separate line as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p20-ta03-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 20,
+    "old": "\nThis circuit diagram shows the LTC3309A configured for Forced Continuous Mode. The input voltage range is V<sub>IN</sub> = 2.5V TO 5.5V. The output is V<sub>OUT</sub> = 1.2V, 6A. The circuit includes an input capacitor (10µF), a 1µF 0201 capacitor, a 10µF capacitor, a 150nH inductor, a 10pF capacitor, a 140kΩ resistor, a 100kΩ resistor, and a 22µF x2 capacitor. The output is connected to a 10µF capacitor. The LTC3309A is labeled with pins: EN, V<sub>IN</sub>, V<sub>IN</sub>, SW, SW, VFB, AGND, PGND, PGOOD, and MODE/SYNC. The oscillation frequency is f<sub>OSC</sub> = 3MHz. The diagram is labeled 3309A TA03.\n",
+    "new": "\nThis circuit diagram shows the LTC3309A configured for Forced Continuous Mode, with MODE/SYNC labeled FLOAT. The input voltage range is V<sub>IN</sub> = 2.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; EN is tied to the input rail. RT is connected to ground through a 22.6k resistor. The SW pins drive a 150nH inductor to the output V<sub>OUT</sub> = 1.2V, 6A, which has 22µF x2 output capacitors. VFB connects to a 140k/100k divider from V<sub>OUT</sub> to AGND, with a 10pF capacitor across the 140k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. PGOOD is an output pulled up to V<sub>IN</sub> through a 1M resistor. The LTC3309A is labeled with pins: EN, V<sub>IN</sub>, V<sub>IN</sub>, SW, SW, VFB, MODE/SYNC, AGND, RT, PGND, and PGOOD. The oscillation frequency is f<sub>OSC</sub> = 3MHz.\n\n3309A TA03\n",
+    "evidence": "PDF p20 TA03 schematic (render + PDF words): the AI description put the right-hand 10µF on the output (it is on the V_IN rail), omitted the 22.6k RT resistor, the 10nF V_IN-AGND capacitor, the 1M PGOOD pull-up, EN tied to V_IN and MODE/SYNC = FLOAT; drawing number '3309A TA03' added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p21-ta04-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 21,
+    "old": "![Circuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 3.0V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is driven by a 1MHz square wave (f<sub>SYNC</sub> = 1MHz) through a 10nF capacitor. The RT pin is connected to V<sub>IN</sub>. The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 402kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V<sub>OUT</sub> through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 680nH inductor, and a 10µF capacitor. The output voltage is V<sub>OUT</sub> = 2.5V, 6A. The output capacitor is a 47µF capacitor x2. The diagram is labeled 3309A TA04.](",
+    "new": "![Circuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 3.0V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN pin is driven from the input rail by a 1.3M/200k resistor divider (1.3M from the rail to EN, 200k from EN to ground). The MODE/SYNC pin is driven directly by a square wave, f<sub>SYNC</sub> = 1MHz. The RT pin is connected to V<sub>IN</sub>. The SW pins drive a 680nH inductor to the output V<sub>OUT</sub> = 2.5V, 6A, which has 47µF x2 output capacitors. The VFB pin is connected to a 402k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 402k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.](",
+    "evidence": "PDF p21 TA04 schematic (render + PDF words): MODE/SYNC is driven directly by the f_SYNC = 1MHz square wave (the 10nF is between V_IN and AGND, not a coupling capacitor); EN comes from a 1.3M/200k divider (not 'through a 200kΩ resistor'); the two 10µF capacitors are input capacitors, not an 'output filter'; '3309A TA04' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p21-ta04-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 21,
+    "old": "\nCircuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 3.0V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is driven by a 1MHz square wave (f<sub>SYNC</sub> = 1MHz) through a 10nF capacitor. The RT pin is connected to V<sub>IN</sub>. The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 402kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V<sub>OUT</sub> through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 680nH inductor, and a 10µF capacitor. The output voltage is V<sub>OUT</sub> = 2.5V, 6A. The output capacitor is a 47µF capacitor x2. The diagram is labeled 3309A TA04.\n",
+    "new": "\nCircuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 3.0V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN pin is driven from the input rail by a 1.3M/200k resistor divider (1.3M from the rail to EN, 200k from EN to ground). The MODE/SYNC pin is driven directly by a square wave, f<sub>SYNC</sub> = 1MHz. The RT pin is connected to V<sub>IN</sub>. The SW pins drive a 680nH inductor to the output V<sub>OUT</sub> = 2.5V, 6A, which has 47µF x2 output capacitors. The VFB pin is connected to a 402k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 402k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.\n",
+    "evidence": "PDF p21 TA04 schematic (render + PDF words): MODE/SYNC is driven directly by the f_SYNC = 1MHz square wave (the 10nF is between V_IN and AGND, not a coupling capacitor); EN comes from a 1.3M/200k divider (not 'through a 200kΩ resistor'); the two 10µF capacitors are input capacitors, not an 'output filter'; '3309A TA04' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p21-ta05-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 21,
+    "old": "![Circuit diagram for burst mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 4.5V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is connected to the input rail. The RT pin is connected to V<sub>IN</sub>. The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 562kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V<sub>OUT</sub> through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 330nH inductor, and a 10µF capacitor. The output voltage is V<sub>OUT</sub> = 3.3V, 6A. The output capacitor is a 22µF capacitor x2. The diagram is labeled 3309A TA05.](",
+    "new": "![Circuit diagram for burst mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 4.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN, MODE/SYNC and RT pins are tied to the input rail (f<sub>OSC</sub> = 2MHz). The SW pins drive a 330nH inductor to the output V<sub>OUT</sub> = 3.3V, 6A, which has 22µF x2 output capacitors. The FB pin is connected to a 562k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 562k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.](",
+    "evidence": "PDF p21 TA05 schematic (render + PDF words): there is no 1.3M or 200k resistor (EN, MODE/SYNC and RT are tied to the input rail), the two 10µF capacitors are on the input rail, the feedback pin is labeled FB (not VFB), the 10nF V_IN-AGND capacitor and f_OSC = 2MHz were missing; '3309A TA05' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p21-ta05-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 21,
+    "old": "\nCircuit diagram for burst mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 4.5V TO 5.5V. The input filter consists of a 10µF capacitor, a 1µF 0201 capacitor, and a 1.3MΩ resistor. The EN pin is connected to the input rail through a 200kΩ resistor. The MODE/SYNC pin is connected to the input rail. The RT pin is connected to V<sub>IN</sub>. The VFB pin is connected to a feedback network consisting of a 6.8pF capacitor, a 562kΩ resistor, and a 100kΩ resistor. The AGND pin is connected to ground. The PGND pin is connected to ground. The PGOOD pin is connected to V<sub>OUT</sub> through a 511kΩ resistor. The SW pin is connected to the SW pin of the LTC3309A. The output filter consists of a 10µF capacitor, a 330nH inductor, and a 10µF capacitor. The output voltage is V<sub>OUT</sub> = 3.3V, 6A. The output capacitor is a 22µF capacitor x2. The diagram is labeled 3309A TA05.\n",
+    "new": "\nCircuit diagram for burst mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 4.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN, MODE/SYNC and RT pins are tied to the input rail (f<sub>OSC</sub> = 2MHz). The SW pins drive a 330nH inductor to the output V<sub>OUT</sub> = 3.3V, 6A, which has 22µF x2 output capacitors. The FB pin is connected to a 562k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 562k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.\n",
+    "evidence": "PDF p21 TA05 schematic (render + PDF words): there is no 1.3M or 200k resistor (EN, MODE/SYNC and RT are tied to the input rail), the two 10µF capacitors are on the input rail, the feedback pin is labeled FB (not VFB), the 10nF V_IN-AGND capacitor and f_OSC = 2MHz were missing; '3309A TA05' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p21-ta04-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 21,
+    "old": "\nCircuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 3.0V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN pin is driven from the input rail by a 1.3M/200k resistor divider (1.3M from the rail to EN, 200k from EN to ground). The MODE/SYNC pin is driven directly by a square wave, f<sub>SYNC</sub> = 1MHz. The RT pin is connected to V<sub>IN</sub>. The SW pins drive a 680nH inductor to the output V<sub>OUT</sub> = 2.5V, 6A, which has 47µF x2 output capacitors. The VFB pin is connected to a 402k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 402k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.\n\n**High Efficiency, 2MHz, 6A, 5V to 3.3V, Burst Mode Operation**",
+    "new": "\nCircuit diagram for forced continuous mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 3.0V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN pin is driven from the input rail by a 1.3M/200k resistor divider (1.3M from the rail to EN, 200k from EN to ground). The MODE/SYNC pin is driven directly by a square wave, f<sub>SYNC</sub> = 1MHz. The RT pin is connected to V<sub>IN</sub>. The SW pins drive a 680nH inductor to the output V<sub>OUT</sub> = 2.5V, 6A, which has 47µF x2 output capacitors. The VFB pin is connected to a 402k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 402k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.\n\n3309A TA04\n\n**High Efficiency, 2MHz, 6A, 5V to 3.3V, Burst Mode Operation**",
+    "evidence": "PDF p21 prints the drawing number '3309A TA04' under the schematic (pdftotext + render); the md had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p21-ta05-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 21,
+    "old": "\nCircuit diagram for burst mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 4.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN, MODE/SYNC and RT pins are tied to the input rail (f<sub>OSC</sub> = 2MHz). The SW pins drive a 330nH inductor to the output V<sub>OUT</sub> = 3.3V, 6A, which has 22µF x2 output capacitors. The FB pin is connected to a 562k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 562k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.\n\n{21}---",
+    "new": "\nCircuit diagram for burst mode operation of the LTC3309A. The input voltage is V<sub>IN</sub> = 4.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN, MODE/SYNC and RT pins are tied to the input rail (f<sub>OSC</sub> = 2MHz). The SW pins drive a 330nH inductor to the output V<sub>OUT</sub> = 3.3V, 6A, which has 22µF x2 output capacitors. The FB pin is connected to a 562k/100k divider from V<sub>OUT</sub> to AGND, with a 6.8pF capacitor across the 562k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor.\n\n3309A TA05\n\n{21}---",
+    "evidence": "PDF p21 prints the drawing number '3309A TA05' under the schematic (pdftotext + render); the md had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p22-ta06-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 22,
+    "old": "\nThis circuit diagram shows the LTC3309A configured for a 2.5V, 6A output. The input voltage range is  $V_{IN} = 3V \\text{ TO } 5.5V$ . The input capacitors are two  $10\\mu F$  capacitors in parallel, with a  $1\\mu F$  0201 capacitor in series. The output filter consists of a  $330nH$  inductor and two  $22\\mu F$  capacitors in parallel. The feedback network consists of a  $100k$  resistor from the output to ground and a  $402k$  resistor from the output to the FB pin, with a  $6.8pF$  capacitor in parallel. The SW pin is connected to the SW pin of the LTC3309A. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the V<sub>OUT</sub> pin through a  $511k$  resistor. The f<sub>OSC</sub> is set to 2MHz. The output voltage is  $V_{OUT} = 2.5V$  and the output current is  $I_{OUT} = 6A$ . The part number 3309A TA06 is indicated.\n",
+    "new": "\nThis circuit diagram shows the LTC3309A configured for a 2.5V, 6A output in Burst Mode Operation. The input voltage range is V<sub>IN</sub> = 3V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 330nH inductor to the output, which has 22µF x2 output capacitors. The feedback network consists of a 402k resistor from the output to the FB pin and a 100k resistor from FB to AGND, with a 6.8pF capacitor across the 402k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor. The f<sub>OSC</sub> is 2MHz. The output voltage is V<sub>OUT</sub> = 2.5V and the output current is 6A.\n\n3309A TA06\n",
+    "evidence": "PDF p22 TA06 schematic (render + PDF words): the AI description said the 1µF 0201 capacitor is 'in series' with the input capacitors (each side has a 10µF and a 1µF 0201 to ground), put the 100k resistor 'from the output to ground' (it is from FB to AGND), said MODE/SYNC is connected to RT (EN, MODE/SYNC and RT are all tied to the input rail), omitted the 10nF V_IN-AGND capacitor and had a self-referential 'SW pin is connected to the SW pin'; drawing number '3309A TA06' added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p22-ta07-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 22,
+    "old": "\nThis circuit diagram shows the LTC3309A configured for a 1.8V, 6A output. The input voltage range is  $V_{IN} = 2.5V \\text{ TO } 5.5V$ . The input capacitors are two  $10\\mu F$  capacitors in parallel, with a  $1\\mu F$  0201 capacitor in series. The output filter consists of a  $220nH$  inductor and two  $33\\mu F$  capacitors in parallel. The feedback network consists of a  $100k$  resistor from the output to ground and a  $261k$  resistor from the output to the FB pin, with a  $15pF$  capacitor in parallel. The SW pin is connected to the SW pin of the LTC3309A. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the V<sub>OUT</sub> pin through a  $511k$  resistor. The f<sub>OSC</sub> is set to 2MHz. The output voltage is  $V_{OUT} = 1.8V$  and the output current is  $I_{OUT} = 6A$ . The part number 3309A TA07 is indicated.\n",
+    "new": "\nThis circuit diagram shows the LTC3309A configured for a 1.8V, 6A output in Burst Mode Operation. The input voltage range is V<sub>IN</sub> = 2.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC. The EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 220nH inductor to the output, which has 33µF x2 output capacitors. The feedback network consists of a 261k resistor from the output to the FB pin and a 100k resistor from FB to AGND, with a 15pF capacitor across the 261k resistor; a 10nF capacitor connects V<sub>IN</sub> to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to V<sub>OUT</sub> through a 511k resistor. The f<sub>OSC</sub> is 2MHz. The output voltage is V<sub>OUT</sub> = 1.8V and the output current is 6A.\n\n3309A TA07\n",
+    "evidence": "PDF p22 TA07 schematic (render + PDF words): the AI description said the 1µF 0201 capacitor is 'in series' with the input capacitors (each side has a 10µF and a 1µF 0201 to ground), put the 100k resistor 'from the output to ground' (it is from FB to AGND), said MODE/SYNC is connected to RT (EN, MODE/SYNC and RT are all tied to the input rail), omitted the 10nF V_IN-AGND capacitor and had a self-referential 'SW pin is connected to the SW pin'; drawing number '3309A TA07' added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p23-ta08-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 23,
+    "old": "\nThis circuit diagram shows the LTC3309A configured for a 1.0V output. The input voltage  $V_{IN}$  is 2.5V to 5.5V. The output voltage  $V_{OUT}$  is 1.0V at 6A. The circuit includes an input capacitor bank with two 10µF capacitors and one 1µF 0201 capacitor. The LTC3309A is connected to a 180nH inductor. The feedback network consists of two 200k resistors in series, with a 10pF capacitor connected from the node between them to the FB pin. A 10nF capacitor is connected from the FB pin to AGND. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the  $V_{OUT}$  pin through a 511k resistor. The f<sub>OSC</sub> is 2MHz. The diagram is labeled 3309A TA08.\n",
+    "new": "\nThis circuit diagram shows the LTC3309A configured for a 1.0V output. The input voltage  $V_{IN}$  is 2.5V to 5.5V. The output voltage  $V_{OUT}$  is 1.0V at 6A. The input rail is decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; the EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 180nH inductor to the output, which has 33µF x2 output capacitors. The feedback network consists of a 200k resistor from the output to the FB pin and a 200k resistor from FB to AGND, with a 10pF capacitor across the 200k resistor. A 10nF capacitor is connected from  $V_{IN}$  to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to  $V_{OUT}$  through a 511k resistor. The f<sub>OSC</sub> is 2MHz.\n\n3309A TA08\n",
+    "evidence": "PDF p23 TA08 schematic (render + PDF words): the 10pF capacitor is across the upper divider resistor (not from the divider node to FB), the 10nF capacitor connects V_IN to AGND (not FB to AGND), EN/MODE/SYNC/RT are tied to the input rail (not MODE/SYNC to RT), the 33µF x2 output capacitors were missing; drawing number '3309A TA08' added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p23-ta09-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 23,
+    "old": "\nThis circuit diagram shows the LTC3309A configured for a 0.75V output. The input voltage  $V_{IN}$  is 2.5V to 5.5V. The output voltage  $V_{OUT}$  is 0.75V at 6A. The circuit includes an input capacitor bank with two 10µF capacitors and one 1µF 0201 capacitor. The LTC3309A is connected to a 150nH inductor. The feedback network consists of two 200k resistors in series, with a 10pF capacitor connected from the node between them to the FB pin. A 10nF capacitor is connected from the FB pin to AGND. The MODE/SYNC pin is connected to the RT pin. The PGND pin is connected to ground. The PGOOD pin is connected to the  $V_{OUT}$  pin through a 511k resistor. The f<sub>OSC</sub> is 2MHz. The diagram is labeled 3309A TA09.\n",
+    "new": "\nThis circuit diagram shows the LTC3309A configured for a 0.75V output. The input voltage  $V_{IN}$  is 2.5V to 5.5V. The output voltage  $V_{OUT}$  is 0.75V at 6A. The input rail is decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; the EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 150nH inductor to the output, which has 47µF x2 output capacitors. The feedback network consists of a 100k resistor from the output to the FB pin and a 200k resistor from FB to AGND, with a 10pF capacitor across the 100k resistor. A 10nF capacitor is connected from  $V_{IN}$  to AGND. The PGND pin is connected to ground. The PGOOD pin is an output pulled up to  $V_{OUT}$  through a 511k resistor. The f<sub>OSC</sub> is 2MHz.\n\n3309A TA09\n",
+    "evidence": "PDF p23 TA09 schematic (render + PDF words): the 10pF capacitor is across the upper divider resistor (not from the divider node to FB), the 10nF capacitor connects V_IN to AGND (not FB to AGND), EN/MODE/SYNC/RT are tied to the input rail (not MODE/SYNC to RT), the 47µF x2 output capacitors were missing (the AI text gave two 200k resistors; the PDF prints 100k over 200k); drawing number '3309A TA09' added as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p24-top-view-details-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 24,
+    "old": "![PACKAGE TOP VIEW showing the package footprint with a shaded area for 'PIN 1 CORNER'. Dimensions D, E, and X are shown. Datums X, Y, and Z are indicated. Below this is DETAIL B, showing the package profile with height H1 and H2, and DETAIL C, showing a side view of the package with height A1 and lead thickness 12b. DETAIL A shows a lead end with length L and width 0.25.](",
+    "new": "![PACKAGE TOP VIEW showing the package footprint with a shaded area for 'PIN 1 CORNER'. Dimensions D and E are shown, with datums X, Y and Z and the 2× aaa Z tolerance frames. Below this is DETAIL B, showing the package profile (MOLD CAP, SUBSTRATE) with heights H1 and H2, and DETAIL C, showing a side view with A1 and the 12× ddd Z tolerance. DETAIL A shows the lead ends with length L, pitch e and e/2, and the 12b eee/fff position tolerances.](",
+    "evidence": "PDF p24 package drawing (rotated render): X is a datum, not a dimension; '12b' (with eee/fff) belongs to DETAIL A, while DETAIL C shows A1 and 12× ddd; the 0.250 label is on the bottom-view exposed pad, not a DETAIL A width.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p24-top-view-details-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 24,
+    "old": "\nPACKAGE TOP VIEW showing the package footprint with a shaded area for 'PIN 1 CORNER'. Dimensions D, E, and X are shown. Datums X, Y, and Z are indicated. Below this is DETAIL B, showing the package profile with height H1 and H2, and DETAIL C, showing a side view of the package with height A1 and lead thickness 12b. DETAIL A shows a lead end with length L and width 0.25.\n",
+    "new": "\nPACKAGE TOP VIEW showing the package footprint with a shaded area for 'PIN 1 CORNER'. Dimensions D and E are shown, with datums X, Y and Z and the 2× aaa Z tolerance frames. Below this is DETAIL B, showing the package profile (MOLD CAP, SUBSTRATE) with heights H1 and H2, and DETAIL C, showing a side view with A1 and the 12× ddd Z tolerance. DETAIL A shows the lead ends with length L, pitch e and e/2, and the 12b eee/fff position tolerances.\n",
+    "evidence": "PDF p24 package drawing (rotated render): X is a datum, not a dimension; '12b' (with eee/fff) belongs to DETAIL A, while DETAIL C shows A1 and 12× ddd; the 0.250 label is on the bottom-view exposed pad, not a DETAIL A width.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p24-pcb-layout-dimensions-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 24,
+    "old": "![SUGGESTED PCB LAYOUT TOP VIEW showing the recommended placement of the LQFN package on a PCB. It includes dimensions for pitch (2.50 ± 0.05), lead width (0.25 ± 0.05), and lead spacing (0.70 ± 0.05).](",
+    "new": "![SUGGESTED PCB LAYOUT TOP VIEW showing the recommended land pattern for the LQFN package, with the PACKAGE OUTLINE dashed. It includes the overall pattern size (2.50 ±0.05 in both directions), pad width (0.25 ±0.05), pad length (0.70 ±0.05), a 0.70 × 0.70 center pad, and pad center coordinates 0.0000, ±0.2500 and ±0.7500.](",
+    "evidence": "PDF p24 suggested PCB layout (rotated render + PDF words): 2.50 ±0.05 is the overall land-pattern size, not the pitch (pads are on 0.2500/0.7500 coordinates, i.e. 0.50 pitch), and 0.70 ±0.05 is the pad length; the 0.70 × 0.70 center pad was not mentioned.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p24-pcb-layout-dimensions-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 24,
+    "old": "\nSUGGESTED PCB LAYOUT TOP VIEW showing the recommended placement of the LQFN package on a PCB. It includes dimensions for pitch (2.50 ± 0.05), lead width (0.25 ± 0.05), and lead spacing (0.70 ± 0.05).\n",
+    "new": "\nSUGGESTED PCB LAYOUT TOP VIEW showing the recommended land pattern for the LQFN package, with the PACKAGE OUTLINE dashed. It includes the overall pattern size (2.50 ±0.05 in both directions), pad width (0.25 ±0.05), pad length (0.70 ±0.05), a 0.70 × 0.70 center pad, and pad center coordinates 0.0000, ±0.2500 and ±0.7500.\n",
+    "evidence": "PDF p24 suggested PCB layout (rotated render + PDF words): 2.50 ±0.05 is the overall land-pattern size, not the pitch (pads are on 0.2500/0.7500 coordinates, i.e. 0.50 pitch), and 0.70 ±0.05 is the pad length; the 0.70 × 0.70 center pad was not mentioned.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p26-ta08-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 26,
+    "old": "![Typical application circuit diagram for the LTC3309A. The diagram shows the LTC3309A in a 2mm x 2mm LQFN package. The input voltage is V<sub>IN</sub> = 2.5V TO 5.5V. The input capacitors are 10µF and 1µF 0201. The output voltage is V<sub>OUT</sub> = 0.5V, 6A. The output capacitors are 10µF and 1µF 0201. The output inductor is 110nH. The output filter is a 68µF x2 capacitor. The output is connected to a 1MΩ (OPT) resistor. The output is also connected to a 511kΩ resistor. The output is labeled V<sub>OUT</sub> = 0.5V, 6A. The output is also labeled f<sub>OSC</sub> = 2MHz. The output is also labeled 3309A TA08.](",
+    "new": "![Typical application circuit diagram for the LTC3309A. The input voltage is V<sub>IN</sub> = 2.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; the EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 110nH inductor to the output V<sub>OUT</sub> = 0.5V, 6A, which has 68µF x2 output capacitors and an optional 1M (OPT) resistor to ground. FB is connected directly to the output (no divider). A 10nF capacitor connects V<sub>IN</sub> to AGND. PGOOD is an output pulled up to V<sub>OUT</sub> through a 511k resistor. f<sub>OSC</sub> = 2MHz.](",
+    "evidence": "PDF p26 typical application (render + PDF words): the right-hand 10µF and 1µF 0201 capacitors are on the V_IN rail, not output capacitors; FB is tied directly to V_OUT; the 1M (OPT) resistor goes from V_OUT to ground; no LQFN package is drawn; the 10nF V_IN-AGND capacitor and EN/MODE/SYNC/RT tied to V_IN were missing. '3309A TA08' is the drawing number (printed as TA08 on both p23 and p26).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p26-ta08-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 26,
+    "old": "\nTypical application circuit diagram for the LTC3309A. The diagram shows the LTC3309A in a 2mm x 2mm LQFN package. The input voltage is V<sub>IN</sub> = 2.5V TO 5.5V. The input capacitors are 10µF and 1µF 0201. The output voltage is V<sub>OUT</sub> = 0.5V, 6A. The output capacitors are 10µF and 1µF 0201. The output inductor is 110nH. The output filter is a 68µF x2 capacitor. The output is connected to a 1MΩ (OPT) resistor. The output is also connected to a 511kΩ resistor. The output is labeled V<sub>OUT</sub> = 0.5V, 6A. The output is also labeled f<sub>OSC</sub> = 2MHz. The output is also labeled 3309A TA08.\n",
+    "new": "\nTypical application circuit diagram for the LTC3309A. The input voltage is V<sub>IN</sub> = 2.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; the EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 110nH inductor to the output V<sub>OUT</sub> = 0.5V, 6A, which has 68µF x2 output capacitors and an optional 1M (OPT) resistor to ground. FB is connected directly to the output (no divider). A 10nF capacitor connects V<sub>IN</sub> to AGND. PGOOD is an output pulled up to V<sub>OUT</sub> through a 511k resistor. f<sub>OSC</sub> = 2MHz.\n",
+    "evidence": "PDF p26 typical application (render + PDF words): the right-hand 10µF and 1µF 0201 capacitors are on the V_IN rail, not output capacitors; FB is tied directly to V_OUT; the 1M (OPT) resistor goes from V_OUT to ground; no LQFN package is drawn; the 10nF V_IN-AGND capacitor and EN/MODE/SYNC/RT tied to V_IN were missing. '3309A TA08' is the drawing number (printed as TA08 on both p23 and p26).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p26-ta08-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 26,
+    "old": "\nTypical application circuit diagram for the LTC3309A. The input voltage is V<sub>IN</sub> = 2.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; the EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 110nH inductor to the output V<sub>OUT</sub> = 0.5V, 6A, which has 68µF x2 output capacitors and an optional 1M (OPT) resistor to ground. FB is connected directly to the output (no divider). A 10nF capacitor connects V<sub>IN</sub> to AGND. PGOOD is an output pulled up to V<sub>OUT</sub> through a 511k resistor. f<sub>OSC</sub> = 2MHz.\n\n## RELATED PARTS",
+    "new": "\nTypical application circuit diagram for the LTC3309A. The input voltage is V<sub>IN</sub> = 2.5V TO 5.5V, decoupled by a 10µF and a 1µF 0201 capacitor on each side of the IC; the EN, MODE/SYNC and RT pins are tied to the input rail. The SW pins drive a 110nH inductor to the output V<sub>OUT</sub> = 0.5V, 6A, which has 68µF x2 output capacitors and an optional 1M (OPT) resistor to ground. FB is connected directly to the output (no divider). A 10nF capacitor connects V<sub>IN</sub> to AGND. PGOOD is an output pulled up to V<sub>OUT</sub> through a 511k resistor. f<sub>OSC</sub> = 2MHz.\n\n3309A TA08\n\n## RELATED PARTS",
+    "evidence": "PDF p26 prints the drawing number '3309A TA08' under the schematic (pdftotext + render; the same number as the p23 1.0V circuit, kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
