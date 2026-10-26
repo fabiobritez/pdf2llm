@@ -23100,5 +23100,249 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p28-rsv-land-pattern-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 28,
+    "old": "![LAND PATTERN EXAMPLE diagram showing a 4x4 grid of pads for a UQFN package. The pads are numbered 1 through 16. Dimensions are provided: pad pitch is 0.2 mm (16X (0.2)), pad pitch is 0.4 mm (12X (0.4)), and pad pitch is 0.6 mm (15X (0.6)). The total width is 1.6 mm and the total height is 2.4 mm. Symmetry lines are indicated with 'SYMM' and centerline symbols. A note points to the pads with 'SEE SOLDER MASK DETAIL'. A corner radius of (R0.05) TYP is also indicated.](",
+    "new": "![LAND PATTERN EXAMPLE for the RSV0016A UQFN (description written from the PDF drawing, values in mm as printed): 16 rounded-rectangle pads around the perimeter, no center pad; pads 16-13 along the top, 1-4 on the left, 9-12 on the right and 5-8 along the bottom (pin 1 at the top left). Pad width 16X (0.2), pad length 15X (0.6), pin 1 pad length (0.7), pad pitch 12X (0.4), pad-row center spans (1.6) horizontally and (2.4) vertically, corner radius (R0.05) TYP; SYMM centerlines; a leader to pad 13 reads 'SEE SOLDER MASK DETAIL'.](",
+    "evidence": "PDF p28 RSV0016A land pattern: 16 perimeter pads (4 per side), not a 4x4 grid; (0.2) is the pad width, (0.6) the pad length of 15 pads, (0.7) the pin 1 pad length, (0.4) the pitch; (1.6) and (2.4) are spans between pad-row centerlines.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p28-rsv-land-pattern-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 28,
+    "old": "\nLAND PATTERN EXAMPLE diagram showing a 4x4 grid of pads for a UQFN package. The pads are numbered 1 through 16. Dimensions are provided: pad pitch is 0.2 mm (16X (0.2)), pad pitch is 0.4 mm (12X (0.4)), and pad pitch is 0.6 mm (15X (0.6)). The total width is 1.6 mm and the total height is 2.4 mm. Symmetry lines are indicated with 'SYMM' and centerline symbols. A note points to the pads with 'SEE SOLDER MASK DETAIL'. A corner radius of (R0.05) TYP is also indicated.\n",
+    "new": "\nLAND PATTERN EXAMPLE for the RSV0016A UQFN (description written from the PDF drawing, values in mm as printed): 16 rounded-rectangle pads around the perimeter, no center pad; pads 16-13 along the top, 1-4 on the left, 9-12 on the right and 5-8 along the bottom (pin 1 at the top left). Pad width 16X (0.2), pad length 15X (0.6), pin 1 pad length (0.7), pad pitch 12X (0.4), pad-row center spans (1.6) horizontally and (2.4) vertically, corner radius (R0.05) TYP; SYMM centerlines; a leader to pad 13 reads 'SEE SOLDER MASK DETAIL'.\n",
+    "evidence": "PDF p28 RSV0016A land pattern: 16 perimeter pads (4 per side), not a 4x4 grid; (0.2) is the pad width, (0.6) the pad length of 15 pads, (0.7) the pin 1 pad length, (0.4) the pitch; (1.6) and (2.4) are spans between pad-row centerlines. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p28-rsv-solder-mask-details-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 28,
+    "old": "![SOLDER MASK DETAILS diagram showing two approaches for defining the solder mask. The left side, 'NON SOLDER MASK DEFINED (PREFERRED)', shows a green pad with a blue metal edge and a green solder mask opening, with a 0.05 mm max all around. The right side, 'SOLDER MASK DEFINED', shows a green pad with a blue metal under solder mask and a blue solder mask opening, with a 0.05 mm min all around.](",
+    "new": "![SOLDER MASK DETAILS diagram showing two approaches for defining the solder mask (description written from the PDF drawing). Left, 'NON SOLDER MASK DEFINED (PREFERRED)': the SOLDER MASK OPENING (green outline) is larger than the pad, 0.05 MAX ALL AROUND beyond the METAL EDGE (blue outline) of the EXPOSED METAL. Right, 'SOLDER MASK DEFINED': the pad metal (blue dashed, METAL UNDER SOLDER MASK) extends beyond the SOLDER MASK OPENING (green outline) by 0.05 MIN ALL AROUND, and only the EXPOSED METAL inside the opening is uncovered.](",
+    "evidence": "PDF p28 SOLDER MASK DETAILS: in the NSMD case the green solder mask opening surrounds the blue metal edge with 0.05 MAX clearance; in the SMD case the blue dashed metal extends under the mask 0.05 MIN beyond the green opening. The old text described 'green pads' with blue/green openings that do not match the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p28-rsv-solder-mask-details-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 28,
+    "old": "\nSOLDER MASK DETAILS diagram showing two approaches for defining the solder mask. The left side, 'NON SOLDER MASK DEFINED (PREFERRED)', shows a green pad with a blue metal edge and a green solder mask opening, with a 0.05 mm max all around. The right side, 'SOLDER MASK DEFINED', shows a green pad with a blue metal under solder mask and a blue solder mask opening, with a 0.05 mm min all around.\n",
+    "new": "\nSOLDER MASK DETAILS diagram showing two approaches for defining the solder mask (description written from the PDF drawing). Left, 'NON SOLDER MASK DEFINED (PREFERRED)': the SOLDER MASK OPENING (green outline) is larger than the pad, 0.05 MAX ALL AROUND beyond the METAL EDGE (blue outline) of the EXPOSED METAL. Right, 'SOLDER MASK DEFINED': the pad metal (blue dashed, METAL UNDER SOLDER MASK) extends beyond the SOLDER MASK OPENING (green outline) by 0.05 MIN ALL AROUND, and only the EXPOSED METAL inside the opening is uncovered.\n",
+    "evidence": "PDF p28 SOLDER MASK DETAILS: in the NSMD case the green solder mask opening surrounds the blue metal edge with 0.05 MAX clearance; in the SMD case the blue dashed metal extends under the mask 0.05 MIN beyond the green opening. The old text described 'green pads' with blue/green openings that do not match the drawing. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p29-rsv-stencil-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 29,
+    "old": "![Solder paste stencil design for a UQFN package. The diagram shows a 4x4 grid of rectangular apertures. The top-left aperture is labeled 16, and the top-right is labeled 13. The bottom-left is labeled 5, and the bottom-right is labeled 8. The left column has apertures labeled 1, 12, 4, and 9. The right column has apertures labeled 13, 12, 9, and 8. Dimensions are provided: the width of the top-left aperture is (0.7), the height of the top-left aperture is 16X (0.2), the height of the middle-left aperture is 12X (0.4), and the height of the bottom-left aperture is 15X (0.6). A note (R0.05) TYP points to the bottom-left corner of the bottom-left aperture. Symmetry markers (SYMM with a centerline symbol) are shown for the left and right columns. The total width of the grid is (1.6) and the total height is (2.4).](",
+    "new": "![Solder paste stencil design for the RSV0016A UQFN (description written from the PDF drawing, values in mm as printed): 16 rounded-rectangle apertures matching the land pattern, pads 16-13 along the top, 1-4 on the left, 9-12 on the right and 5-8 along the bottom. Aperture width 16X (0.2), length 15X (0.6), pin 1 aperture length (0.7), pitch 12X (0.4), center spans (1.6) and (2.4), corner radius (R0.05) TYP; SYMM centerlines.](",
+    "evidence": "PDF p29 RSV0016A stencil: 16 perimeter apertures with the land-pattern numbering (left side 1-4, right side 9-12), not a 4x4 grid with 'left column 1, 12, 4, 9'; (0.2) is the aperture width, (0.6) the length, (0.7) the pin 1 aperture length, (0.4) the pitch.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p29-rsv-stencil-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 29,
+    "old": "\nSolder paste stencil design for a UQFN package. The diagram shows a 4x4 grid of rectangular apertures. The top-left aperture is labeled 16, and the top-right is labeled 13. The bottom-left is labeled 5, and the bottom-right is labeled 8. The left column has apertures labeled 1, 12, 4, and 9. The right column has apertures labeled 13, 12, 9, and 8. Dimensions are provided: the width of the top-left aperture is (0.7), the height of the top-left aperture is 16X (0.2), the height of the middle-left aperture is 12X (0.4), and the height of the bottom-left aperture is 15X (0.6). A note (R0.05) TYP points to the bottom-left corner of the bottom-left aperture. Symmetry markers (SYMM with a centerline symbol) are shown for the left and right columns. The total width of the grid is (1.6) and the total height is (2.4).\n",
+    "new": "\nSolder paste stencil design for the RSV0016A UQFN (description written from the PDF drawing, values in mm as printed): 16 rounded-rectangle apertures matching the land pattern, pads 16-13 along the top, 1-4 on the left, 9-12 on the right and 5-8 along the bottom. Aperture width 16X (0.2), length 15X (0.6), pin 1 aperture length (0.7), pitch 12X (0.4), center spans (1.6) and (2.4), corner radius (R0.05) TYP; SYMM centerlines.\n",
+    "evidence": "PDF p29 RSV0016A stencil: 16 perimeter apertures with the land-pattern numbering (left side 1-4, right side 9-12), not a 4x4 grid with 'left column 1, 12, 4, 9'; (0.2) is the aperture width, (0.6) the length, (0.7) the pin 1 aperture length, (0.4) the pitch. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p28-rsv-board-layout-title-block",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 28,
+    "old": "4220314/C 02/2020\n\n##### **NOTES:**\n\n1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing per ASME Y14.5M.\n2. This drawing is subject to change without notice.\n\n{27}------------------------------------------------\n\n",
+    "new": "4220314/C 02/2020\n\n##### **NOTES:**\n\n1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing per ASME Y14.5M.\n2. This drawing is subject to change without notice.\n\n{27}------------------------------------------------\n\n#### EXAMPLE BOARD LAYOUT\n\nRSV0016A\n\nUQFN - 0.55 mm max height\n\nULTRA THIN QUAD FLATPACK - NO LEAD\n\n",
+    "evidence": "PDF p28 title block 'EXAMPLE BOARD LAYOUT / RSV0016A / UQFN - 0.55 mm max height / ULTRA THIN QUAD FLATPACK - NO LEAD' was missing (the p29 stencil page has it).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p29-rsv-note4-numbered",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 29,
+    "old": "- 4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate design recommendations.\n\n{29}",
+    "new": "4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate design recommendations.\n\n{29}",
+    "evidence": "PDF p29: note '4.' is a numbered note like note 3 on p28, not a bullet.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p30-pw-outline-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 30,
+    "old": "The drawing shows a 16-pin surface-mount component with the following features:\n\n- Top View:**\n  - Overall length: 6.6 TYP / 6.2\n  - Overall width: 5.1 / 4.9 (NOTE 3)\n  - Pin 1 Index Area: Indicated by a dashed circle.\n  - Pin pitch: 14X 0.65\n  - Pin width: 2X 4.55\n  - Pad diameter: 16X 0.30 / 0.17\n  - Pad offset: 9\n  - Section lines A-A and B-B are shown.\n- Side View:**\n  - Section line C-C is shown.\n  - Component height: 1.2 MAX\n  - Lead angle: 4X (0° - 12°)\n- Detail A:**\n  - Lead thickness: (0.15) TYP\n  - Lead width: 0.25\n  - Lead thickness at gage plane: 0.15 / 0.05\n  - Lead angle: 0° - 8°\n  - Lead length from gage plane: 0.75 / 0.50\n- Geometric Tolerancing:**\n  - Positional tolerance:  $\\phi 0.1 \\text{ (M)}$  C A B\n  - Profile tolerance: 0.1 C\n- Notes:** NOTE 3 and NOTE 4 are referenced for pin dimensions.\n",
+    "new": "The drawing shows the PW0016A 16-pin TSSOP (SCALE 2.500; description written from the PDF drawing, values in mm as printed, max over min):\n\n- Top view: pins 1-8 on the left (pin 1 at the top), 9-16 on the right (pin 16 at the top); PIN 1 INDEX AREA at the top-left corner of the body.\n  - Lead tip to lead tip: 6.6/6.2 TYP.\n  - Body length: 5.1/4.9 (NOTE 3), datum A; body width: 4.5/4.3 (NOTE 4), datum B.\n  - Lead pitch: 14X 0.65; span from the first to the last lead of a row: 2X 4.55 (basic).\n  - Lead width: 16X 0.30/0.17, position tolerance  $\\phi 0.1 \\text{ (M)}$  C A B.\n- Side view: SEATING PLANE (datum C), surface profile 0.1 C, body height 1.2 MAX, body draft 4X (0° -12°), lead thickness (0.15) TYP, SEE DETAIL A.\n- Detail A (TYPICAL): GAGE PLANE 0.25 (basic), standoff 0.15/0.05, foot length 0.75/0.50, foot angle 0° -8°.\n",
+    "evidence": "PDF p30 PW0016A outline: 6.6/6.2 TYP is the lead-tip span, 5.1/4.9 (NOTE 3) the body length and 4.5/4.3 (NOTE 4) the body width (missing); 2X 4.55 is the first-to-last lead span, 16X 0.30/0.17 the lead width, 0.25 the gage plane and 0.15/0.05 the standoff; A, B and C are datums, not section lines; 'Pad offset: 9' was a pin number. SCALE 2.500 was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p30-pw-outline-subtitle-not-heading",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 30,
+    "old": "**TSSOP - 1.2 mm max height**\n\n## SMALL OUTLINE PACKAGE\n",
+    "new": "**TSSOP - 1.2 mm max height**\n\nSMALL OUTLINE PACKAGE\n",
+    "evidence": "PDF p30: 'SMALL OUTLINE PACKAGE' is the small title-block subtitle (as on p31-p32 where it is plain text), not a section heading.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p31-pw-land-pattern-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 31,
+    "old": "![LAND PATTERN EXAMPLE diagram showing a 16-pin TSSOP package layout. The package is 5.8 mm wide. Pin 1 is at the top left, and pin 16 is at the top right. Pin 8 is at the bottom left, and pin 9 is at the bottom right. The diagram shows exposed metal pads with dimensions: 16X (1.5) for the total width, 16X (0.45) for the pad pitch, and 14X (0.65) for the pitch between the center lines of the two rows of pins. Symmetry (SYMM) is indicated by dashed lines and centerline symbols. A note (R0.05) TYP is shown for the pad radius.](",
+    "new": "![LAND PATTERN EXAMPLE diagram showing a 16-pin TSSOP package layout (description written from the PDF drawing, values in mm as printed). Pin 1 is at the top left, and pin 16 is at the top right. Pin 8 is at the bottom left, and pin 9 is at the bottom right. The diagram shows exposed metal pads with dimensions: 16X (1.5) pad length, 16X (0.45) pad width, 14X (0.65) pad pitch, and (5.8) between the centerlines of the two pad rows. Symmetry (SYMM) is indicated by dashed lines and centerline symbols. A note (R0.05) TYP is shown for the pad corner radius.](",
+    "evidence": "PDF p31 PW0016A land pattern: (5.8) is the distance between the pad-row centerlines, not the package width; 16X (1.5) is the pad length, 16X (0.45) the pad width and 14X (0.65) the pad pitch.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p31-pw-land-pattern-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 31,
+    "old": "\nLAND PATTERN EXAMPLE diagram showing a 16-pin TSSOP package layout. The package is 5.8 mm wide. Pin 1 is at the top left, and pin 16 is at the top right. Pin 8 is at the bottom left, and pin 9 is at the bottom right. The diagram shows exposed metal pads with dimensions: 16X (1.5) for the total width, 16X (0.45) for the pad pitch, and 14X (0.65) for the pitch between the center lines of the two rows of pins. Symmetry (SYMM) is indicated by dashed lines and centerline symbols. A note (R0.05) TYP is shown for the pad radius.\n",
+    "new": "\nLAND PATTERN EXAMPLE diagram showing a 16-pin TSSOP package layout (description written from the PDF drawing, values in mm as printed). Pin 1 is at the top left, and pin 16 is at the top right. Pin 8 is at the bottom left, and pin 9 is at the bottom right. The diagram shows exposed metal pads with dimensions: 16X (1.5) pad length, 16X (0.45) pad width, 14X (0.65) pad pitch, and (5.8) between the centerlines of the two pad rows. Symmetry (SYMM) is indicated by dashed lines and centerline symbols. A note (R0.05) TYP is shown for the pad corner radius.\n",
+    "evidence": "PDF p31 PW0016A land pattern: (5.8) is the distance between the pad-row centerlines, not the package width; 16X (1.5) is the pad length, 16X (0.45) the pad width and 14X (0.65) the pad pitch. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p31-pw-nsmd-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 31,
+    "old": "![Solder mask detail diagram for 'NON-SOLDER MASK DEFINED (PREFERRED)'. It shows a rectangular pad with a green border representing the exposed metal. A blue line indicates the 'SOLDER MASK OPENING' around the pad. The distance between the pad edge and the solder mask opening is labeled '0.05 MAX ALL AROUND'.](",
+    "new": "![Solder mask detail diagram for 'NON-SOLDER MASK DEFINED (PREFERRED)'. It shows a rectangular pad: the blue outline is the METAL (EXPOSED METAL inside), and the green outline around it is the 'SOLDER MASK OPENING'. The distance between the metal edge and the solder mask opening is labeled '0.05 MAX ALL AROUND'.](",
+    "evidence": "PDF p31 NON-SOLDER MASK DEFINED detail: the blue outline is labeled METAL and the green outline SOLDER MASK OPENING; the old text had the colors reversed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p31-pw-nsmd-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 31,
+    "old": "\nSolder mask detail diagram for 'NON-SOLDER MASK DEFINED (PREFERRED)'. It shows a rectangular pad with a green border representing the exposed metal. A blue line indicates the 'SOLDER MASK OPENING' around the pad. The distance between the pad edge and the solder mask opening is labeled '0.05 MAX ALL AROUND'.\n",
+    "new": "\nSolder mask detail diagram for 'NON-SOLDER MASK DEFINED (PREFERRED)'. It shows a rectangular pad: the blue outline is the METAL (EXPOSED METAL inside), and the green outline around it is the 'SOLDER MASK OPENING'. The distance between the metal edge and the solder mask opening is labeled '0.05 MAX ALL AROUND'.\n",
+    "evidence": "PDF p31 NON-SOLDER MASK DEFINED detail: the blue outline is labeled METAL and the green outline SOLDER MASK OPENING; the old text had the colors reversed. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p31-pw-smd-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 31,
+    "old": "![Solder mask detail diagram for 'SOLDER MASK DEFINED'. It shows a rectangular pad with a green border representing the exposed metal. A blue dashed line indicates the 'SOLDER MASK OPENING' around the pad. The distance between the pad edge and the solder mask opening is labeled '0.05 MIN ALL AROUND'. The area inside the dashed line but outside the pad is labeled 'METAL UNDER SOLDER MASK'.](",
+    "new": "![Solder mask detail diagram for 'SOLDER MASK DEFINED'. The green outline is the 'SOLDER MASK OPENING' (EXPOSED METAL inside it); the blue dashed outline around it is the pad metal, labeled 'METAL UNDER SOLDER MASK'. The metal extends beyond the solder mask opening by '0.05 MIN ALL AROUND'.](",
+    "evidence": "PDF p31 SOLDER MASK DEFINED detail: the green outline is the SOLDER MASK OPENING and the blue dashed outline the METAL UNDER SOLDER MASK; the old text called the blue dashed line the solder mask opening.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p31-pw-smd-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 31,
+    "old": "\nSolder mask detail diagram for 'SOLDER MASK DEFINED'. It shows a rectangular pad with a green border representing the exposed metal. A blue dashed line indicates the 'SOLDER MASK OPENING' around the pad. The distance between the pad edge and the solder mask opening is labeled '0.05 MIN ALL AROUND'. The area inside the dashed line but outside the pad is labeled 'METAL UNDER SOLDER MASK'.\n",
+    "new": "\nSolder mask detail diagram for 'SOLDER MASK DEFINED'. The green outline is the 'SOLDER MASK OPENING' (EXPOSED METAL inside it); the blue dashed outline around it is the pad metal, labeled 'METAL UNDER SOLDER MASK'. The metal extends beyond the solder mask opening by '0.05 MIN ALL AROUND'.\n",
+    "evidence": "PDF p31 SOLDER MASK DEFINED detail: the green outline is the SOLDER MASK OPENING and the blue dashed outline the METAL UNDER SOLDER MASK; the old text called the blue dashed line the solder mask opening. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p32-pw-stencil-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 32,
+    "old": "The diagram shows two columns of rectangular apertures. The left column is labeled with pin numbers 1, 8, and 9. The right column is labeled with pin numbers 16, 9, and 8. Dimensions include 16X (1.5) for the width of the apertures, 16X (0.45) for the pitch between the first two apertures in each column, 14X (0.65) for the pitch between the middle two apertures, and (5.8) for the distance between the center lines of the two columns. Symmetry symbols (SYMM) are shown with dashed lines. A note indicates (R0.05) TYP for the corner radius of the apertures.](",
+    "new": "The diagram shows two columns of eight rectangular apertures (description written from the PDF drawing). The left column runs from pin 1 (top) to pin 8 (bottom), the right column from pin 16 (top) to pin 9 (bottom). Dimensions include 16X (1.5) for the aperture length, 16X (0.45) for the aperture width, 14X (0.65) for the aperture pitch, and (5.8) for the distance between the center lines of the two columns. Symmetry symbols (SYMM) are shown with dashed lines. A note indicates (R0.05) TYP for the corner radius of the apertures.](",
+    "evidence": "PDF p32 PW0016A stencil: left column pins 1-8, right column 16-9; (1.5) is the aperture length, (0.45) the aperture width and (0.65) the pitch. The old text had pin 9 in the left column and 8 in the right, and called (0.45) a pitch.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p32-pw-stencil-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 32,
+    "old": "The diagram shows two columns of rectangular apertures. The left column is labeled with pin numbers 1, 8, and 9. The right column is labeled with pin numbers 16, 9, and 8. Dimensions include 16X (1.5) for the width of the apertures, 16X (0.45) for the pitch between the first two apertures in each column, 14X (0.65) for the pitch between the middle two apertures, and (5.8) for the distance between the center lines of the two columns. Symmetry symbols (SYMM) are shown with dashed lines. A note indicates (R0.05) TYP for the corner radius of the apertures.\n",
+    "new": "The diagram shows two columns of eight rectangular apertures (description written from the PDF drawing). The left column runs from pin 1 (top) to pin 8 (bottom), the right column from pin 16 (top) to pin 9 (bottom). Dimensions include 16X (1.5) for the aperture length, 16X (0.45) for the aperture width, 14X (0.65) for the aperture pitch, and (5.8) for the distance between the center lines of the two columns. Symmetry symbols (SYMM) are shown with dashed lines. A note indicates (R0.05) TYP for the corner radius of the apertures.\n",
+    "evidence": "PDF p32 PW0016A stencil: left column pins 1-8, right column 16-9; (1.5) is the aperture length, (0.45) the aperture width and (0.65) the pitch. The old text had pin 9 in the left column and 8 in the right, and called (0.45) a pitch. Same as -alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p32-pw-notes-8-9-numbered",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 32,
+    "old": "- 8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate design recommendations.\n- 9. Board assembly site may have different recommendations for stencil design.\n\n{32}",
+    "new": "8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate design recommendations.\n9. Board assembly site may have different recommendations for stencil design.\n\n{32}",
+    "evidence": "PDF p32: notes 8 and 9 are numbered notes like 6 and 7 on p31, not bullets.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
