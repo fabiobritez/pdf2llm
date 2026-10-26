@@ -20306,5 +20306,428 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p81-full-loop-cont-left-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 81,
+    "old": "{80}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n#### CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)\n",
+    "new": "{80}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n**CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)**\n",
+    "evidence": "PDF p81 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)' (left column, bytes 109-140) is the 8.8pt bold title band at the top of the table, not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p81-full-loop-cont-right-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 81,
+    "old": "| 8C              | 10                       | Read_iout0[7:0]            |                   |\n\n#### CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)\n",
+    "new": "| 8C              | 10                       | Read_iout0[7:0]            |                   |\n\n**CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)**\n",
+    "evidence": "PDF p81 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)' (right column, bytes 141-150) is the 8.8pt bold title band at the top of the table, not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p81-full-loop-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 81,
+    "old": "| 96              | 0                        | Read_temperature_2[7:0]    |                   |\n\n#### CYCLICAL MUX LOOP DATA FULL LOOP\n",
+    "new": "| 96              | 0                        | Read_temperature_2[7:0]    |                   |\n\n**CYCLICAL MUX LOOP DATA FULL LOOP**\n",
+    "evidence": "PDF p81 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA FULL LOOP' (right column, bytes 151-166, MUX LOOP 2) is the 8.8pt bold title band at the top of the table, not a section heading; written as a bold line instead of ####.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p82-full-loop-cont-left-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 82,
+    "old": "{81}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\nCYCLICAL MUX LOOP DATA FULL LOOP (CONT.)\n",
+    "new": "{81}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n\n**CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)**\n",
+    "evidence": "PDF p82 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)' (left column, bytes 167-199) is the 8.8pt bold title band at the top of the table; the md had it as a plain line. Written as a bold line like the other Data Block table titles.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p82-full-loop-cont-right-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 82,
+    "old": "| C7              | 9                        | Status_iout0[7:0]          |                   |\n\nCYCLICAL MUX LOOP DATA FULL LOOP (CONT.)\n",
+    "new": "| C7              | 9                        | Status_iout0[7:0]          |                   |\n\n**CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)**\n",
+    "evidence": "PDF p82 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA FULL LOOP (CONT.)' (right column, bytes 200-208) is the 8.8pt bold title band at the top of the table; the md had it as a plain line. Written as a bold line like the other Data Block table titles.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p82-partial-loop-table-title",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 82,
+    "old": "| D0              | 0                        | Read_temperature_2[7:0]    |                   |\n\nCYCLICAL MUX LOOP DATA PARTIAL LOOP\n",
+    "new": "| D0              | 0                        | Read_temperature_2[7:0]    |                   |\n\n**CYCLICAL MUX LOOP DATA PARTIAL LOOP**\n",
+    "evidence": "PDF p82 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA PARTIAL LOOP' (right column, bytes 209-225, MUX LOOP 3) is the 8.8pt bold title band at the top of the table; the md had it as a plain line. Written as a bold line like the other Data Block table titles.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p83-partial-loop-cont-table-title-left",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 83,
+    "old": "| CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.) |                 |                          |                            |                           |\n|---------------------------------------------|-----------------|--------------------------|----------------------------|---------------------------|\n| BYTE NUMBER DECIMAL                         | BYTE NUMBER HEX | LOOP BYTE NUMBER DECIMAL | MUX LOOP 3                 | 58 BYTES PER LOOP         |\n",
+    "new": "**CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)**\n\n| BYTE NUMBER DECIMAL | BYTE NUMBER HEX | LOOP BYTE NUMBER DECIMAL | MUX LOOP 3 | 58 BYTES PER LOOP |\n|---------------------|-----------------|--------------------------|------------|-------------------|\n",
+    "evidence": "PDF p83 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)' (left column, bytes 226-239) is the bold title band above the table; the md put it in the table's header row and pushed the real column headers (BYTE NUMBER DECIMAL ... 58 BYTES PER LOOP) into the first body row. Title written as a bold line, column headers restored as the header row.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p83-partial-loop-cont-table-title-right",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 83,
+    "old": "| CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.) |                 |                          |            |                                                                            |\n|---------------------------------------------|-----------------|--------------------------|------------|----------------------------------------------------------------------------|\n| BYTE NUMBER DECIMAL                         | BYTE NUMBER HEX | LOOP BYTE NUMBER DECIMAL | MUX LOOP 3 | 58 BYTES PER LOOP                                                          |\n",
+    "new": "**CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)**\n\n| BYTE NUMBER DECIMAL | BYTE NUMBER HEX | LOOP BYTE NUMBER DECIMAL | MUX LOOP 3 | 58 BYTES PER LOOP |\n|---------------------|-----------------|--------------------------|------------|-------------------|\n",
+    "evidence": "PDF p83 (PyMuPDF spans + render): 'CYCLICAL MUX LOOP DATA PARTIAL LOOP (CONT.)' (right column, bytes 240-254) is the bold title band above the table; the md put it in the table's header row and pushed the real column headers (BYTE NUMBER DECIMAL ... 58 BYTES PER LOOP) into the first body row. Title written as a bold line, column headers restored as the header row.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p83-identification-information-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 83,
+    "old": "\n## IDENTIFICATION/INFORMATION\n",
+    "new": "\n### IDENTIFICATION/INFORMATION\n",
+    "evidence": "PDF p83 (PyMuPDF spans + render): 'IDENTIFICATION/INFORMATION' is a LinearHelvCond-Bold 11.7pt caps subsection under the running title PMBUS COMMAND DESCRIPTION (###), not a running section title; the md had ##.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p83-capability-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 83,
+    "old": "\n### CAPABILITY\n",
+    "new": "\n#### CAPABILITY\n",
+    "evidence": "PDF p83 (PyMuPDF spans + render): 'CAPABILITY' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p83-capability-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 83,
+    "old": "\n#### CAPABILITY Data Contents\n",
+    "new": "\n**CAPABILITY Data Contents**\n",
+    "evidence": "PDF p83 (PyMuPDF spans + render): 'CAPABILITY Data Contents' is a 9.7pt bold table caption, not a section heading; written as a bold caption like the other ltc2975 Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-pmbus-revision-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n### PMBUS\\_REVISION\n",
+    "new": "\n#### PMBUS\\_REVISION\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): 'PMBUS_REVISION' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-pmbus-revision-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n#### PMBUS\\_REVISION Data Contents\n",
+    "new": "\n**PMBUS\\_REVISION Data Contents**\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): 'PMBUS_REVISION Data Contents' is a 9.7pt bold table caption, not a section heading; written as a bold caption like the other ltc2975 Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-mfr-special-id-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n### MFR\\_SPECIAL\\_ID\n",
+    "new": "\n#### MFR\\_SPECIAL\\_ID\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): 'MFR_SPECIAL_ID' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-mfr-special-lot-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n### MFR\\_SPECIAL\\_LOT\n",
+    "new": "\n#### MFR\\_SPECIAL\\_LOT\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): 'MFR_SPECIAL_LOT' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-mfr-info-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n### MFR\\_INFO\n",
+    "new": "\n#### MFR\\_INFO\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): 'MFR_INFO' is a bold-oblique command title (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### level; the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-mfr-info-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n#### MFR\\_INFO Data Contents\n",
+    "new": "\n**MFR\\_INFO Data Contents**\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): 'MFR_INFO Data Contents' is a 9.7pt bold table caption, not a section heading; written as a bold caption like the other ltc2975 Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-user-data-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "\n### USER\\_DATA\\_00, USER\\_DATA\\_01, USER\\_DATA\\_02, USER\\_DATA\\_03, USER\\_DATA\\_04, MFR\\_LTC\\_RESERVED\\_1 and MFR\\_LTC\\_RESERVED\\_2\n",
+    "new": "\n#### USER\\_DATA\\_00, USER\\_DATA\\_01, USER\\_DATA\\_02, USER\\_DATA\\_03, USER\\_DATA\\_04, MFR\\_LTC\\_RESERVED\\_1 and MFR\\_LTC\\_RESERVED\\_2\n",
+    "evidence": "PDF p84 (PyMuPDF spans + render): the two-line title 'USER_DATA_00, ... and MFR_LTC_RESERVED_2' is bold-oblique (HelveticaLTStd-BoldCondO 11.7pt), the ltc2975 #### command level under the bold caps 'USER SCRATCHPAD' (###); the md had ###.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p84-4paged-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 84,
+    "old": "(1 unpaged word plus 4 paged words)",
+    "new": "(1 unpaged word plus 4paged words)",
+    "evidence": "PDF p84 (PyMuPDF words + render): printed '4paged words' with no space (one word '4paged' in the text layer, no gap in the render); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-overview-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\n## OVERVIEW\n",
+    "new": "\n### OVERVIEW\n",
+    "evidence": "PDF p85 (PyMuPDF spans + render): 'OVERVIEW' is a LinearHelvCond-Bold 11.7pt caps subsection under the running title APPLICATIONS INFORMATION (###); the md had ##.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-powering-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\n## POWERING THE LTC2975\n",
+    "new": "\n### POWERING THE LTC2975\n",
+    "evidence": "PDF p85 (PyMuPDF spans + render): 'POWERING THE LTC2975' is a LinearHelvCond-Bold 11.7pt caps subsection (###); the md had ##.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-fig23-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "![Figure 23: Powering LTC2975 Directly from an Intermediate Bus. This circuit diagram shows the LTC2975 IC powered from an intermediate bus. The V_PWR pin (pin 1) is connected to a bus labeled '4.5V < V_PWR < 15V'. Two 0.1µF capacitors are connected from the V_PWR pin to ground. The V_IN_SNS pin (pin 2) is also connected to this bus. The VDD33 pins (pins 11 and 12) are connected to the V_PWR pin. The VDD25 pins (pins 13 and 14) are connected to ground. The GND pin (pin 15) is connected to ground. A note states '*SOME DETAILS OMITTED FOR CLARITY'.](",
+    "new": "![Figure 23: Powering LTC2975 Directly from an Intermediate Bus (description written from the PDF drawing). The bus labeled '4.5V < V_PWR < 15V' connects to the V_PWR pin and to the V_IN_SNS pin of the LTC2975* box; a 0.1µF capacitor connects V_PWR to ground. The two V_DD33 pins are tied together and decoupled to ground by a 0.1µF capacitor; the two V_DD25 pins are tied together and decoupled to ground by a 0.1µF capacitor. GND connects to ground. A note states '*SOME DETAILS OMITTED FOR CLARITY'. Drawing number 2975 F23.](",
+    "evidence": "PDF p85 Figure 23 (render, 300 dpi crop): the drawing has no pin numbers (the AI text invented pins 1, 2, 11-15), V_DD33 is not connected to V_PWR (the two V_DD33 pins have their own 0.1µF capacitor to ground) and V_DD25 is not grounded (the two V_DD25 pins have a 0.1µF capacitor to ground); there are three 0.1µF capacitors. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p85-fig23-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\nFigure 23: Powering LTC2975 Directly from an Intermediate Bus. This circuit diagram shows the LTC2975 IC powered from an intermediate bus. The V\\_PWR pin (pin 1) is connected to a bus labeled '4.5V < V\\_PWR < 15V'. Two 0.1µF capacitors are connected from the V\\_PWR pin to ground. The V\\_IN\\_SNS pin (pin 2) is also connected to this bus. The VDD33 pins (pins 11 and 12) are connected to the V\\_PWR pin. The VDD25 pins (pins 13 and 14) are connected to ground. The GND pin (pin 15) is connected to ground. A note states '\\*SOME DETAILS OMITTED FOR CLARITY'.\n",
+    "new": "\nFigure 23: Powering LTC2975 Directly from an Intermediate Bus (description written from the PDF drawing). The bus labeled '4.5V < V\\_PWR < 15V' connects to the V\\_PWR pin and to the V\\_IN\\_SNS pin of the LTC2975\\* box; a 0.1µF capacitor connects V\\_PWR to ground. The two V\\_DD33 pins are tied together and decoupled to ground by a 0.1µF capacitor; the two V\\_DD25 pins are tied together and decoupled to ground by a 0.1µF capacitor. GND connects to ground. A note states '\\*SOME DETAILS OMITTED FOR CLARITY'. Drawing number 2975 F23.\n",
+    "evidence": "Same as ltc2975-p85-fig23-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p85-fig24-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "![Figure 24: Powering LTC2975 from External 3.3V Supply. This circuit diagram shows the LTC2975 IC powered from an external 3.3V supply. The V_PWR pin (pin 1) is connected to an 'EXTERNAL 3.3V' supply. Two 0.1µF capacitors are connected from the V_PWR pin to ground. The VDD33 pins (pins 11 and 12) are also connected to the 'EXTERNAL 3.3V' supply. The VDD25 pins (pins 13 and 14) are connected to ground. The GND pin (pin 15) is connected to ground. A note states '*SOME DETAILS OMITTED FOR CLARITY'.](",
+    "new": "![Figure 24: Powering LTC2975 from External 3.3V Supply (description written from the PDF drawing). The 'EXTERNAL 3.3V' supply connects to the V_PWR pin and to the two V_DD33 pins (tied together) of the LTC2975* box, with a 0.1µF capacitor to ground at the V_DD33 node. The two V_DD25 pins are tied together and decoupled to ground by a 0.1µF capacitor. GND connects to ground. A note states '*SOME DETAILS OMITTED FOR CLARITY'. Drawing number 2975 F24.](",
+    "evidence": "PDF p85 Figure 24 (render, 300 dpi crop): the drawing has no pin numbers (the AI text invented pins 1, 11-15); the 0.1µF capacitors are at the V_DD33 node and at the V_DD25 node (not two capacitors on V_PWR), and V_DD25 is not grounded. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p85-fig24-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\nFigure 24: Powering LTC2975 from External 3.3V Supply. This circuit diagram shows the LTC2975 IC powered from an external 3.3V supply. The V\\_PWR pin (pin 1) is connected to an 'EXTERNAL 3.3V' supply. Two 0.1µF capacitors are connected from the V\\_PWR pin to ground. The VDD33 pins (pins 11 and 12) are also connected to the 'EXTERNAL 3.3V' supply. The VDD25 pins (pins 13 and 14) are connected to ground. The GND pin (pin 15) is connected to ground. A note states '\\*SOME DETAILS OMITTED FOR CLARITY'.\n",
+    "new": "\nFigure 24: Powering LTC2975 from External 3.3V Supply (description written from the PDF drawing). The 'EXTERNAL 3.3V' supply connects to the V\\_PWR pin and to the two V\\_DD33 pins (tied together) of the LTC2975\\* box, with a 0.1µF capacitor to ground at the V\\_DD33 node. The two V\\_DD25 pins are tied together and decoupled to ground by a 0.1µF capacitor. GND connects to ground. A note states '\\*SOME DETAILS OMITTED FOR CLARITY'. Drawing number 2975 F24.\n",
+    "evidence": "Same as ltc2975-p85-fig24-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p85-fig25-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "![Figure 25: Measuring Input Current. This circuit diagram shows the LTC2975 IC measuring input current. The V_IN_SNS pin (pin 2) is connected to a node between a 350Ω resistor and a load. The V_IN_SNSCAP pin (pin 3) is connected to ground through a 0.1µF capacitor. The VDD33 pins (pins 11 and 12) are connected to a bus labeled '4.5V < V_IN_SNS < 15V'. The VDD25 pins (pins 13 and 14) are connected to ground. The GND pin (pin 15) is connected to ground. The I_IN_SNSP pin (pin 16) is connected to the load. The I_IN_SNSM pin (pin 17) is connected to the load. The load is represented by a resistor R_SENSE in series with a box labeled 'LOAD'. A note states '*SOME DETAILS OMITTED FOR CLARITY'.](",
+    "new": "![Figure 25: Measuring Input Current (description written from the PDF drawing). A supply line labeled '4.5V < V_IN_SNS < 15V' connects to the V_IN_SNS pin of the LTC2975* box and to the I_IN_SNSP pin. The sense resistor R_SENSE is connected between I_IN_SNSP and I_IN_SNSM; the I_IN_SNSM node feeds a box labeled 'LOAD' that returns to ground. Inside the LTC2975 a 350Ω resistor is drawn between V_IN_SNS and V_IN_SNS_CAP; an external capacitor C_IN 0.1µF connects V_IN_SNS_CAP to ground. GND connects to ground. A note states '*SOME DETAILS OMITTED FOR CLARITY'. Drawing number 2975 F25.](",
+    "evidence": "PDF p85 Figure 25 (render, 300 dpi crop): the 350Ω resistor is drawn inside the LTC2975 between V_IN_SNS and V_IN_SNS_CAP (not between V_IN_SNS and a load); the 0.1µF capacitor C_IN goes from V_IN_SNS_CAP to ground; the '4.5V < V_IN_SNS < 15V' line feeds V_IN_SNS and I_IN_SNSP, not VDD33; R_SENSE sits between I_IN_SNSP and I_IN_SNSM with the LOAD on I_IN_SNSM; no VDD33/VDD25 pins or pin numbers are drawn. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p85-fig25-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\nFigure 25: Measuring Input Current. This circuit diagram shows the LTC2975 IC measuring input current. The V\\_IN\\_SNS pin (pin 2) is connected to a node between a 350Ω resistor and a load. The V\\_IN\\_SNSCAP pin (pin 3) is connected to ground through a 0.1µF capacitor. The VDD33 pins (pins 11 and 12) are connected to a bus labeled '4.5V < V\\_IN\\_SNS < 15V'. The VDD25 pins (pins 13 and 14) are connected to ground. The GND pin (pin 15) is connected to ground. The I\\_IN\\_SNSP pin (pin 16) is connected to the load. The I\\_IN\\_SNSM pin (pin 17) is connected to the load. The load is represented by a resistor R\\_SENSE in series with a box labeled 'LOAD'. A note states '\\*SOME DETAILS OMITTED FOR CLARITY'.\n",
+    "new": "\nFigure 25: Measuring Input Current (description written from the PDF drawing). A supply line labeled '4.5V < V\\_IN\\_SNS < 15V' connects to the V\\_IN\\_SNS pin of the LTC2975\\* box and to the I\\_IN\\_SNSP pin. The sense resistor R\\_SENSE is connected between I\\_IN\\_SNSP and I\\_IN\\_SNSM; the I\\_IN\\_SNSM node feeds a box labeled 'LOAD' that returns to ground. Inside the LTC2975 a 350Ω resistor is drawn between V\\_IN\\_SNS and V\\_IN\\_SNS\\_CAP; an external capacitor C\\_IN 0.1µF connects V\\_IN\\_SNS\\_CAP to ground. GND connects to ground. A note states '\\*SOME DETAILS OMITTED FOR CLARITY'. Drawing number 2975 F25.\n",
+    "evidence": "Same as ltc2975-p85-fig25-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p85-fig23-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\nFigure 23. Powering LTC2975 Directly from an Intermediate Bus\n",
+    "new": "\n**Figure 23. Powering LTC2975 Directly from an Intermediate Bus**\n",
+    "evidence": "PDF p85 (PyMuPDF spans + render): the Figure 23 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-fig24-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\nFigure 24. Powering LTC2975 from External 3.3V Supply\n",
+    "new": "\n**Figure 24. Powering LTC2975 from External 3.3V Supply**\n",
+    "evidence": "PDF p85 (PyMuPDF spans + render): the Figure 24 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-fig25-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "\nFigure 25. Measuring Input Current\n",
+    "new": "\n**Figure 25. Measuring Input Current**\n",
+    "evidence": "PDF p85 (PyMuPDF spans + render): the Figure 25 caption is LinearHelvCond-Bold 9.7pt; written as a bold caption like the other ltc2975 figure captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-smbus-pmbus-space-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "I<sup>2</sup>C/ SMBus/PMBus controller",
+    "new": "I<sup>2</sup>C/ SMBus/ PMBus controller",
+    "evidence": "PDF p85 Setting Command Register Values (pdftotext + render): printed 'I2C/ SMBus/ PMBus controller' with a space after each slash; the md dropped the second space. Kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-vdd33-column-split-1",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "See Figure 24. Tie  $V_{PWR}$  to the\n",
+    "new": "See Figure 24. Tie  $V_{PWR}$  to the  $V_{DD33}$  pins. All functionality is available when using this alternate power method. The higher voltages needed for the  $V_{OUT\\_EN}$  pins and bias for the  $V_{SENSE}$  pins are charge pumped from  $V_{DD33}$ .\n",
+    "evidence": "PDF p85 (render + PyMuPDF): the sentence 'Tie V_PWR to the V_DD33 pins.' runs from the bottom of the left-column text (above Figures 23/24) to the top of the right column; the md put the continuation 'V_DD33 pins. All functionality ... charge pumped from V_DD33.' after the two figures as a separate paragraph. Rejoined (part 1: continuation appended; part 2 removes the stray copy).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p85-vdd33-column-split-2",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 85,
+    "old": "Figure 24. Powering LTC2975 from External 3.3V Supply**\n\n$V_{DD33}$  pins. All functionality is available when using this alternate power method. The higher voltages needed for the  $V_{OUT\\_EN}$  pins and bias for the  $V_{SENSE}$  pins are charge pumped from  $V_{DD33}$ .\n",
+    "new": "Figure 24. Powering LTC2975 from External 3.3V Supply**\n",
+    "evidence": "Same as ltc2975-p85-vdd33-column-split-1 (the continuation paragraph after Figure 24 is removed; its text now follows 'Tie V_PWR to the').",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
