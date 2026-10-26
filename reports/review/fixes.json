@@ -24665,5 +24665,213 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps22990-p19-ec-link-text",
+    "file": "output/tps22990/tps22990.md",
+    "page": 19,
+    "old": "[Electrical Characteristics— \\$V\\_{BIAS} = 5\\text{ V}\\$](#)  table",
+    "new": "[Electrical Characteristics—V<sub>BIAS</sub> = 5 V](#) table",
+    "evidence": "PDF p19: link text 'Electrical Characteristics—VBIAS = 5 V' (subscript BIAS); the md had escaped LaTeX source inside the link.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p19-imax-full-size-eq3-number",
+    "file": "output/tps22990/tps22990.md",
+    "page": 19,
+    "old": "such that the I<sub>MAX</sub> specification of the device is not violated (3)",
+    "new": "such that the IMAX specification of the device is not violated\n\n(3)",
+    "evidence": "PDF p19: 'the IMAX specification' is printed full-size; '(3)' is the right-aligned equation number, not part of the bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p19-eq4-number",
+    "file": "output/tps22990/tps22990.md",
+    "page": 19,
+    "old": "is the junction-to-air thermal impedance (4)",
+    "new": "is the junction-to-air thermal impedance\n\n(4)",
+    "evidence": "PDF p19: '(4)' is the right-aligned equation number, not part of the bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p20-eq5-number-not-bullet",
+    "file": "output/tps22990/tps22990.md",
+    "page": 20,
+    "old": "- $R_{PU}$  is the pull up resistance\n- (5)\n",
+    "new": "- $R_{PU}$  is the pull up resistance\n\n(5)\n",
+    "evidence": "PDF p20: '(5)' is the right-aligned equation number, not a fifth 'where' bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p20-heading-level",
+    "file": "output/tps22990/tps22990.md",
+    "page": 20,
+    "old": "{19}------------------------------------------------\n\n## Application Information (continued)",
+    "new": "{19}------------------------------------------------\n\n### Application Information (continued)",
+    "evidence": "PDF p20: running '(continued)' title of section 10.1 Application Information (H3), same style as the other '(continued)' titles.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p21-fig36-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 21,
+    "old": "![Schematic diagram of Figure 36: Power Sequencing. Two TPS22990 power sequencers are shown. The top sequencer is controlled by 'Power Supply 1' and an 'MCU' via a 'GPIO' pin. It has a current sense pin 'CT' connected to a capacitor 'CT' to ground. Its 'VBIAS' pin is connected to 'Power Supply 1'. Its 'VIN' pin is also connected to 'Power Supply 1' and has an input capacitor 'CIN' to ground. It has three 'VOUT' pins connected to 'Load 1' and a pull-up resistor 'RPU' to 'PG'. Its 'PG' pin is connected to the 'ON' pin of the bottom sequencer. Its 'GND' pin is connected to ground. The bottom sequencer is controlled by 'Power Supply 2' and has a current sense pin 'CT' connected to a capacitor 'CT' to ground. Its 'VBIAS' pin is connected to 'Power Supply 2'. Its 'VIN' pin is connected to 'Power Supply 2' and has an input capacitor 'CIN' to ground. It has three 'VOUT' pins connected to 'Load 2' and a pull-up resistor 'RPU' to 'PG'. Its 'PG' pin is connected to the 'ON' pin of the top sequencer. Its 'GND' pin is connected to ground.]",
+    "new": "![Schematic diagram of Figure 36: Power Sequencing. Two TPS22990 load switches are shown. The top device has its VIN fed from 'Power Supply 1' (with an input capacitor C_IN to ground), a capacitor C_T from CT to ground, NC unconnected, and its ON pin driven by a GPIO of an 'MCU'. Its three VOUT pins are tied together and supply 'Load 1'; a pull-up resistor R_PU runs from VOUT to its PG pin, and its PG pin is wired to the ON pin of the bottom device. The bottom device has its VIN fed from 'Power Supply 2' (with C_IN to ground), C_T from CT to ground, and its three VOUT pins supply 'Load 2', with R_PU from VOUT to its PG pin (PG not connected further). The VBIAS pins of both devices are connected to a common 'Power Supply'. Both GND pins are grounded.]",
+    "evidence": "PDF p21 Figure 36: both VBIAS pins share one separate 'Power Supply' (not Power Supply 1/2); the MCU GPIO drives only the top ON pin; the top PG drives the bottom ON pin and the bottom PG is not wired back to the top ON pin; CT is not a current-sense pin.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p21-fig36-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 21,
+    "old": "\n\nSchematic diagram of Figure 36: Power Sequencing. Two TPS22990 power sequencers are shown. The top sequencer is controlled by 'Power Supply 1' and an 'MCU' via a 'GPIO' pin. It has a current sense pin 'CT' connected to a capacitor 'CT' to ground. Its 'VBIAS' pin is connected to 'Power Supply 1'. Its 'VIN' pin is also connected to 'Power Supply 1' and has an input capacitor 'CIN' to ground. It has three 'VOUT' pins connected to 'Load 1' and a pull-up resistor 'RPU' to 'PG'. Its 'PG' pin is connected to the 'ON' pin of the bottom sequencer. Its 'GND' pin is connected to ground. The bottom sequencer is controlled by 'Power Supply 2' and has a current sense pin 'CT' connected to a capacitor 'CT' to ground. Its 'VBIAS' pin is connected to 'Power Supply 2'. Its 'VIN' pin is connected to 'Power Supply 2' and has an input capacitor 'CIN' to ground. It has three 'VOUT' pins connected to 'Load 2' and a pull-up resistor 'RPU' to 'PG'. Its 'PG' pin is connected to the 'ON' pin of the top sequencer. Its 'GND' pin is connected to ground.\n",
+    "new": "\n\nSchematic diagram of Figure 36: Power Sequencing. Two TPS22990 load switches are shown. The top device has its VIN fed from 'Power Supply 1' (with an input capacitor C_IN to ground), a capacitor C_T from CT to ground, NC unconnected, and its ON pin driven by a GPIO of an 'MCU'. Its three VOUT pins are tied together and supply 'Load 1'; a pull-up resistor R_PU runs from VOUT to its PG pin, and its PG pin is wired to the ON pin of the bottom device. The bottom device has its VIN fed from 'Power Supply 2' (with C_IN to ground), C_T from CT to ground, and its three VOUT pins supply 'Load 2', with R_PU from VOUT to its PG pin (PG not connected further). The VBIAS pins of both devices are connected to a common 'Power Supply'. Both GND pins are grounded.\n",
+    "evidence": "PDF p21 Figure 36: description paragraph rewritten from the drawing, as the alt text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p21-heading-markup",
+    "file": "output/tps22990/tps22990.md",
+    "page": 21,
+    "old": "### **Application Information (continued)**\n\n![Schematic diagram of Figure 36",
+    "new": "### Application Information (continued)\n\n![Schematic diagram of Figure 36",
+    "evidence": "PDF p21: running '(continued)' title, H3 without ** markup like the other section titles.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p21-heading-10-1-6-markup",
+    "file": "output/tps22990/tps22990.md",
+    "page": 21,
+    "old": "#### **10.1.6 Standby Power Reduction**",
+    "new": "#### 10.1.6 Standby Power Reduction",
+    "evidence": "PDF p21: '10.1.6 Standby Power Reduction' has the same style as 10.1.1-10.1.5, written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p22-fig37-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 22,
+    "old": "![Circuit diagram for Figure 37: Standby Power Reduction. The TPS22990 is configured as a power switch. Its VBIAS pin is connected to a Power Supply and an MCU. The ON pin is connected to the MCU. The CT pin has a capacitor CT to ground. The VIN pin is connected to a Power Supply and an 'Always ON Module'. The VOUT pins are connected to a 'Standby Module'. The PG pin is connected to ground. The GND pin is also connected to ground. An input capacitor CIN is shown between the Power Supply and ground.]",
+    "new": "![Circuit diagram for Figure 37: Standby Power Reduction. A Power Supply feeds both the VIN pin of the TPS22990 (with an input capacitor CIN to ground) and an 'Always ON Module'. A separate Power Supply is connected to VBIAS. An MCU GPIO drives the ON pin. The CT pin has a capacitor CT to ground; NC is unconnected. The three VOUT pins are tied together and supply a 'Standby Module'. The PG pin is tied to GND, which is grounded.]",
+    "evidence": "PDF p22 Figure 37: VBIAS has its own Power Supply (not connected to the MCU); the MCU drives ON through a GPIO; the VIN supply also feeds the Always ON Module; PG is tied to GND.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p22-fig37-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 22,
+    "old": "\n\nCircuit diagram for Figure 37: Standby Power Reduction. The TPS22990 is configured as a power switch. Its VBIAS pin is connected to a Power Supply and an MCU. The ON pin is connected to the MCU. The CT pin has a capacitor CT to ground. The VIN pin is connected to a Power Supply and an 'Always ON Module'. The VOUT pins are connected to a 'Standby Module'. The PG pin is connected to ground. The GND pin is also connected to ground. An input capacitor CIN is shown between the Power Supply and ground.\n",
+    "new": "\n\nCircuit diagram for Figure 37: Standby Power Reduction. A Power Supply feeds both the VIN pin of the TPS22990 (with an input capacitor CIN to ground) and an 'Always ON Module'. A separate Power Supply is connected to VBIAS. An MCU GPIO drives the ON pin. The CT pin has a capacitor CT to ground; NC is unconnected. The three VOUT pins are tied together and supply a 'Standby Module'. The PG pin is tied to GND, which is grounded.\n",
+    "evidence": "PDF p22 Figure 37: description paragraph rewritten from the drawing, as the alt text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p22-fig38-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 22,
+    "old": "![Circuit diagram for Figure 38: Powering a Downstream Module. The TPS22990 is used as a power switch. Its VBIAS pin is connected to a Power Supply. The ON pin is connected to a switch with ON and OFF positions. The CT pin has a capacitor CT to ground. The VIN pin is connected to a Power Supply and the input of a downstream module. The VOUT pins are connected to the output of the downstream module, which includes a capacitor CL and a resistor RL in parallel. A power supply is also connected to the VBIAS pin. The PG pin is connected to a pull-up resistor RPU and the output of a switch. The GND pin is connected to ground.]",
+    "new": "![Circuit diagram for Figure 38: Powering a Downstream Module. A Power Supply drives VIN, with an input capacitor CIN to ground; a separate Power Supply is connected to VBIAS. The ON pin is driven by an ON/OFF step. The CT pin has a capacitor CT to ground; NC is unconnected. The three VOUT pins are tied together and drive a load capacitor CL and a load resistor RL in parallel to GND. A pull-up resistor RPU runs from VOUT to the PG pin, which is the PG output (arrow). The GND pin is connected to ground.]",
+    "evidence": "PDF p22 Figure 38: VIN is not connected to the downstream module input; the load CL || RL is on VOUT; R_PU goes from VOUT to PG (PG is an output, not 'the output of a switch'); ON is driven by an ON/OFF step.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p22-fig38-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 22,
+    "old": "\n\nCircuit diagram for Figure 38: Powering a Downstream Module. The TPS22990 is used as a power switch. Its VBIAS pin is connected to a Power Supply. The ON pin is connected to a switch with ON and OFF positions. The CT pin has a capacitor CT to ground. The VIN pin is connected to a Power Supply and the input of a downstream module. The VOUT pins are connected to the output of the downstream module, which includes a capacitor CL and a resistor RL in parallel. A power supply is also connected to the VBIAS pin. The PG pin is connected to a pull-up resistor RPU and the output of a switch. The GND pin is connected to ground.\n",
+    "new": "\n\nCircuit diagram for Figure 38: Powering a Downstream Module. A Power Supply drives VIN, with an input capacitor CIN to ground; a separate Power Supply is connected to VBIAS. The ON pin is driven by an ON/OFF step. The CT pin has a capacitor CT to ground; NC is unconnected. The three VOUT pins are tied together and drive a load capacitor CL and a load resistor RL in parallel to GND. A pull-up resistor RPU runs from VOUT to the PG pin, which is the PG output (arrow). The GND pin is connected to ground.\n",
+    "evidence": "PDF p22 Figure 38: description paragraph rewritten from the drawing, as the alt text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p22-heading-markup",
+    "file": "output/tps22990/tps22990.md",
+    "page": 22,
+    "old": "### **Application Information (continued)**\n\n![Circuit diagram for Figure 37",
+    "new": "### Application Information (continued)\n\n![Circuit diagram for Figure 37",
+    "evidence": "PDF p22: running '(continued)' title, H3 without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p22-heading-10-2-markup",
+    "file": "output/tps22990/tps22990.md",
+    "page": 22,
+    "old": "### **10.2 Typical Application**",
+    "new": "### 10.2 Typical Application",
+    "evidence": "PDF p22: '10.2 Typical Application' has the same style as '10.1 Application Information', written without ** markup.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p23-eq8-number-not-bullet",
+    "file": "output/tps22990/tps22990.md",
+    "page": 23,
+    "old": "- $t_R$  is the rise time\n- (8)\n",
+    "new": "- $t_R$  is the rise time\n\n(8)\n",
+    "evidence": "PDF p23: '(8)' is the right-aligned equation number, not a sixth 'where' bullet.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
