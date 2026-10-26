@@ -18964,5 +18964,159 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p41-mfr-config2-ltc2975-data-contents-cont-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 41,
+    "old": "\n#### MFR\\_CONFIG2\\_LTC2975 Data Contents\n",
+    "new": "\n**MFR\\_CONFIG2\\_LTC2975 Data Contents**\n",
+    "evidence": "PDF p41 (PyMuPDF spans + render): 'MFR_CONFIG2_LTC2975 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p41-mfr-config3-ltc2975-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 41,
+    "old": "\n#### MFR\\_CONFIG3\\_LTC2975 Data Contents\n",
+    "new": "\n**MFR\\_CONFIG3\\_LTC2975 Data Contents**\n",
+    "evidence": "PDF p41 (PyMuPDF spans + render): 'MFR_CONFIG3_LTC2975 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p41-uc-chan1-equals-space-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 41,
+    "old": "Response to channel 1 IOUT_UC_FAULT.<br>1 = Pull AUXFAULTB low via fast pull-down.<br>0 = Do not pull AUXFAULTB low.",
+    "new": "Response to channel 1 IOUT_UC_FAULT.<br>1 = Pull AUXFAULTB low via fast pull-down.<br>0 =Do not pull AUXFAULTB low.",
+    "evidence": "PDF p41 MFR_CONFIG3_LTC2975 b[5] (render + PyMuPDF words '=Do'): printed '0 =Do not pull AUXFAULTB low.' without a space after '='; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p42-fig17-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 42,
+    "old": "![Figure 17: LTC2975 Configured to Control, Supervise and Monitor Power Supplies Equipped with Tracking Pin. The diagram shows the LTC2975 IC connected to four DC/DC converter blocks. The LTC2975 has pins CONTROL0, FAULTB0, PWRGD, and four sets of sense and enable pins (VSENSEP0/VOUT_EN0, VSENSEM0/VDAC0, etc.). Each DC/DC block has RUN, VFB, DC/DC, TRACK, VOUTP, and VOUTM pins. The TRACK pins of all four blocks are connected together and to the VOUT_EN0 line of the LTC2975. The VOUTM pins are connected to the sense pins of the LTC2975. The VOUTP pins are connected to the outputs of the DC/DC blocks, which are also connected to loads. Resistor pairs (R1_1/R2_1, R1_2/R2_2, R1_3/R2_3) are used to scale the feedback voltages. A reference voltage pin (2975 F17) is also shown.](",
+    "new": "![Figure 17: LTC2975 Configured to Control, Supervise and Monitor Power Supplies Equipped with Tracking Pin (description written from the PDF drawing). The LTC2975 has CONTROL0 and FAULTB0 inputs from external lines of the same names and a PWRGD pin; for each channel n = 0 to 3 it has V_SENSEPn, V_SENSEMn, V_OUT_ENn and V_DACn. Four DC/DC converters each have RUN, V_FB and TRACK inputs and V_OUTP/V_OUTM outputs driving a LOAD, sensed at V_SENSEPn/V_SENSEMn. V_OUT_ENn drives RUN, and V_DACn connects through a resistor to V_FB. Channel 0 is the master: its TRACK pin has a capacitor to ground, and its V_OUTP/V_SENSEP0 node is routed back along a common line to the TRACK pins of channels 1 to 3, each through a divider R1_1/R2_1, R1_2/R2_2 and R1_3/R2_3 (R2 to ground). Drawing number 2975 F17.](",
+    "evidence": "PDF p42 Figure 17 (render, 220 dpi crop): the AI text said the TRACK pins 'of all four blocks are connected together and to the VOUT_EN0 line', listed pin pairs as 'VSENSEP0/VOUT_EN0, VSENSEM0/VDAC0' and called 2975 F17 'a reference voltage pin'. In the drawing VOUT_ENn drives RUN, VDACn drives V_FB through a resistor, channel 0's TRACK has a capacitor to ground and the channel 0 output (V_SENSEP0 node) feeds the TRACK pins of channels 1-3 through the R1_n/R2_n dividers. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p42-fig17-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 42,
+    "old": "\n\nFigure 17: LTC2975 Configured to Control, Supervise and Monitor Power Supplies Equipped with Tracking Pin. The diagram shows the LTC2975 IC connected to four DC/DC converter blocks. The LTC2975 has pins CONTROL0, FAULTB0, PWRGD, and four sets of sense and enable pins (VSENSEP0/VOUT\\_EN0, VSENSEM0/VDAC0, etc.). Each DC/DC block has RUN, VFB, DC/DC, TRACK, VOUTP, and VOUTM pins. The TRACK pins of all four blocks are connected together and to the VOUT\\_EN0 line of the LTC2975. The VOUTM pins are connected to the sense pins of the LTC2975. The VOUTP pins are connected to the outputs of the DC/DC blocks, which are also connected to loads. Resistor pairs (R1\\_1/R2\\_1, R1\\_2/R2\\_2, R1\\_3/R2\\_3) are used to scale the feedback voltages. A reference voltage pin (2975 F17) is also shown.\n",
+    "new": "\n\nFigure 17: LTC2975 Configured to Control, Supervise and Monitor Power Supplies Equipped with Tracking Pin (description written from the PDF drawing). The LTC2975 has CONTROL0 and FAULTB0 inputs from external lines of the same names and a PWRGD pin; for each channel n = 0 to 3 it has V\\_SENSEPn, V\\_SENSEMn, V\\_OUT\\_ENn and V\\_DACn. Four DC/DC converters each have RUN, V\\_FB and TRACK inputs and V\\_OUTP/V\\_OUTM outputs driving a LOAD, sensed at V\\_SENSEPn/V\\_SENSEMn. V\\_OUT\\_ENn drives RUN, and V\\_DACn connects through a resistor to V\\_FB. Channel 0 is the master: its TRACK pin has a capacitor to ground, and its V\\_OUTP/V\\_SENSEP0 node is routed back along a common line to the TRACK pins of channels 1 to 3, each through a divider R1\\_1/R2\\_1, R1\\_2/R2\\_2 and R1\\_3/R2\\_3 (R2 to ground). Drawing number 2975 F17.\n",
+    "evidence": "Same as ltc2975-p42-fig17-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p42-fig17-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 42,
+    "old": "\nFigure 17. LTC2975 Configured to Control, Supervise and Monitor Power Supplies Equipped with Tracking Pin\n",
+    "new": "\n**Figure 17. LTC2975 Configured to Control, Supervise and Monitor Power Supplies Equipped with Tracking Pin**\n",
+    "evidence": "PDF p42 (PyMuPDF spans + render): Figure 17 caption is LinearHelvCond-Bold 9.7pt; bold caption per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p42-tracking-supplies-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 42,
+    "old": "\n### Tracking Supplies On and Off\n",
+    "new": "\n#### Tracking Supplies On and Off\n",
+    "evidence": "PDF p42 (PyMuPDF spans + render): 'Tracking Supplies On and Off' is a LinearHelvCond-Bold 11.7pt title-case subhead (H4 per the ltc2975 convention), md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p44-pmbus-command-description-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 44,
+    "old": "{43}------------------------------------------------\n\n## PMBus COMMAND DESCRIPTION\n",
+    "new": "{43}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n",
+    "evidence": "PDF p44 (PyMuPDF spans + render): running section title 'PMBUS COMMAND DESCRIPTION' (LinearBauhaus 18pt) printed plain, as on the other pages; md had '## PMBus COMMAND DESCRIPTION'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p44-tracking-implementation-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 44,
+    "old": "\n### Tracking Implementation\n",
+    "new": "\n#### Tracking Implementation\n",
+    "evidence": "PDF p44 (PyMuPDF spans + render): 'Tracking Implementation' is a LinearHelvCond-Bold 11.7pt title-case subhead (H4 per the ltc2975 convention), md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p44-ton-rise-comma-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 44,
+    "old": "programing of Ton\\_delay, Ton\\_rise, Toff\\_delay and",
+    "new": "programing of Ton\\_delay, Ton\\_rise,Toff\\_delay and",
+    "evidence": "PDF p44 Tracking Implementation (PyMuPDF word 'Ton_rise,Toff_delay' + pdftotext + render): printed without a space after the comma; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p44-mfr-config-all-ltc2975-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 44,
+    "old": "\n#### ***MFR\\_CONFIG\\_ALL\\_LTC2975***\n",
+    "new": "\n#### MFR\\_CONFIG\\_ALL\\_LTC2975\n",
+    "evidence": "PDF p44 (PyMuPDF spans + render): heading 'MFR_CONFIG_ALL_LTC2975' is printed as a bold-oblique command name (HelveticaLTStd-BoldCondO 11.7pt); md wrapped it in *** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p45-mfr-config-all-ltc2975-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 45,
+    "old": "\n#### MFR\\_CONFIG\\_ALL\\_LTC2975 Data Contents\n",
+    "new": "\n**MFR\\_CONFIG\\_ALL\\_LTC2975 Data Contents**\n",
+    "evidence": "PDF p45 (PyMuPDF spans + render): 'MFR_CONFIG_ALL_LTC2975 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
