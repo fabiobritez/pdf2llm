@@ -22800,5 +22800,155 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p12-fig5-1-curve-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 12,
+    "old": "The graph shows three linear curves for -40°C (blue), 25°C (black), and 85°C (red). VOL increases with IOL from 0V at 0mA to approximately 2.4V at 100mA.](",
+    "new": "Axes: IOL Current (mA) 0 to 100, VOL Voltage (V) 0 to 3.6. Three curves for -40°C (blue), 25 °C (black) and 85 °C (red) start at 0 V at 0 mA and rise with IOL, curving slightly upward; VOL is highest at 85 °C and lowest at -40°C, and the 85 °C curve leaves the top of the plot (3.6 V) before 100 mA. Read values from the image/PDF.](",
+    "evidence": "PDF p12 Figure 5-1: the curves are not linear and not one value; only the -40°C curve ends near 2.4 V at 100 mA, the 25 °C curve ends near 3.0 V and the 85 °C curve passes 3.6 V before 100 mA. Description reduced to axes and curve shapes/order (no estimated values).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p12-fig5-1-curve-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 12,
+    "old": "The graph shows three linear curves for -40°C (blue), 25°C (black), and 85°C (red). VOL increases with IOL from 0V at 0mA to approximately 2.4V at 100mA.\n",
+    "new": "Axes: IOL Current (mA) 0 to 100, VOL Voltage (V) 0 to 3.6. Three curves for -40°C (blue), 25 °C (black) and 85 °C (red) start at 0 V at 0 mA and rise with IOL, curving slightly upward; VOL is highest at 85 °C and lowest at -40°C, and the 85 °C curve leaves the top of the plot (3.6 V) before 100 mA. Read values from the image/PDF.\n",
+    "evidence": "PDF p12 Figure 5-1: the curves are not linear and not one value; only the -40°C curve ends near 2.4 V at 100 mA, the 25 °C curve ends near 3.0 V and the 85 °C curve passes 3.6 V before 100 mA. Description reduced to axes and curve shapes/order (no estimated values). Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p12-fig5-2-curve-description-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 12,
+    "old": "The graph shows three linear curves for -40°C (blue), 25°C (black), and 85°C (red). VOH increases with IOH from approximately 0.4V at -100mA to 3.6V at 0mA.](",
+    "new": "Axes: IOH Current (mA) -100 to 0, VOH Voltage (V) 0 to 3.6. Three curves for -40°C (blue), 25 °C (black) and 85 °C (red) meet at 3.6 V at 0 mA and fall as IOH becomes more negative; VOH is lowest at 85 °C and highest at -40°C, and the 85 °C curve reaches 0 V before -100 mA. Read values from the image/PDF.](",
+    "evidence": "PDF p12 Figure 5-2: the three curves differ strongly at -100 mA (the 85 °C curve reaches 0 V near -95 mA, -40°C stays highest); 'from approximately 0.4V at -100mA' described only one curve. Description reduced to axes and curve shapes/order (no estimated values).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p12-fig5-2-curve-description-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 12,
+    "old": "The graph shows three linear curves for -40°C (blue), 25°C (black), and 85°C (red). VOH increases with IOH from approximately 0.4V at -100mA to 3.6V at 0mA.\n",
+    "new": "Axes: IOH Current (mA) -100 to 0, VOH Voltage (V) 0 to 3.6. Three curves for -40°C (blue), 25 °C (black) and 85 °C (red) meet at 3.6 V at 0 mA and fall as IOH becomes more negative; VOH is lowest at 85 °C and highest at -40°C, and the 85 °C curve reaches 0 V before -100 mA. Read values from the image/PDF.\n",
+    "evidence": "PDF p12 Figure 5-2: the three curves differ strongly at -100 mA (the 85 °C curve reaches 0 V near -95 mA, -40°C stays highest); 'from approximately 0.4V at -100mA' described only one curve. Description reduced to axes and curve shapes/order (no estimated values). Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p13-fig6-1-load-circuit-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 13,
+    "old": "![Figure 6-1. Load Circuit diagram showing the output pin under test connected to a measurement point, a load capacitor CL(1), a load resistor RL, and a switch S1 to either 2 x VCCO or GND.](",
+    "new": "![Figure 6-1. Load Circuit diagram (description written from the PDF drawing): the Output Pin Under Test node is the Measurement Point; from it a capacitor CL(1) and a resistor RL go to ground, and a second resistor RL goes in series to the common terminal of switch S1, whose three positions are 2 x VCCO, Open and GND.](",
+    "evidence": "PDF p13 Figure 6-1: S1 has three positions (2 x VCCO, Open, GND), and there are two RL resistors: one from the output node to ground and one in series to S1. The old text gave S1 two positions and one RL.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p13-fig6-1-load-circuit-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 13,
+    "old": "\nFigure 6-1. Load Circuit diagram showing the output pin under test connected to a measurement point, a load capacitor CL(1), a load resistor RL, and a switch S1 to either 2 x VCCO or GND.\n",
+    "new": "\nFigure 6-1. Load Circuit diagram (description written from the PDF drawing): the Output Pin Under Test node is the Measurement Point; from it a capacitor CL(1) and a resistor RL go to ground, and a second resistor RL goes in series to the common terminal of switch S1, whose three positions are 2 x VCCO, Open and GND.\n",
+    "evidence": "PDF p13 Figure 6-1: S1 has three positions (2 x VCCO, Open, GND), and there are two RL resistors: one from the output node to ground and one in series to S1. The old text gave S1 two positions and one RL. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p13-fig6-2-6-3-waveforms-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 13,
+    "old": "![Figure 6-2. Propagation Delay and Figure 6-3. Input Transition Rise and Fall Rate. Includes timing diagrams for input and output transitions and a list of conditions.](",
+    "new": "![Figure 6-2. Propagation Delay and Figure 6-3. Input Transition Rise and Fall Rate (description written from the PDF drawing). Figure 6-2: an Input A, B pulse between 0 V and VCCI(1), measured at VCCI / 2 on both edges, and the Output B, A pulse between VOL(3) and VOH(3), measured at VCCO / 2 (2) on both edges; tPLH is from the input rising edge to the output rising edge and tPHL from the input falling edge to the output falling edge. Figure 6-3: an Input A, B pulse between 0 V and VCCI(1) drawn with several rising and falling edge slopes, labeled 100 kHz and 500 ps/V – 1 s/V; the Output B, A pulse between VOL(2) and VOH(2) is labeled Ensure Monotonic Rising and Falling Edge. Each figure has its own numbered notes (below).](",
+    "evidence": "PDF p13 Figures 6-2/6-3 (one image in the md): the old text said only 'timing diagrams'. Rewritten with the printed labels. The Figure 6-3 slope label renders as '500 ps/V – 1 s/V' (en dash in the image; the PDF text layer maps the glyph to '±').",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p13-fig6-2-6-3-waveforms-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 13,
+    "old": "\nFigure 6-2. Propagation Delay and Figure 6-3. Input Transition Rise and Fall Rate. Includes timing diagrams for input and output transitions and a list of conditions.\n",
+    "new": "\nFigure 6-2. Propagation Delay and Figure 6-3. Input Transition Rise and Fall Rate (description written from the PDF drawing). Figure 6-2: an Input A, B pulse between 0 V and VCCI(1), measured at VCCI / 2 on both edges, and the Output B, A pulse between VOL(3) and VOH(3), measured at VCCO / 2 (2) on both edges; tPLH is from the input rising edge to the output rising edge and tPHL from the input falling edge to the output falling edge. Figure 6-3: an Input A, B pulse between 0 V and VCCI(1) drawn with several rising and falling edge slopes, labeled 100 kHz and 500 ps/V – 1 s/V; the Output B, A pulse between VOL(2) and VOH(2) is labeled Ensure Monotonic Rising and Falling Edge. Each figure has its own numbered notes (below).\n",
+    "evidence": "PDF p13 Figures 6-2/6-3 (one image in the md): the old text said only 'timing diagrams'. Rewritten with the printed labels. The Figure 6-3 slope label renders as '500 ps/V – 1 s/V' (en dash in the image; the PDF text layer maps the glyph to '±'). Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "sn74avc4t774-p14-fig6-4-enable-disable-description",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 14,
+    "old": "The diagram illustrates the timing characteristics of the SN74AVC4T774 during enable and disable transitions. It shows three signals:  $\\overline{\\text{OE}}$  (Enable),  $\\text{Output}^{(1)}$ , and  $\\text{Output}^{(2)}$ .\n\n- $\\overline{\\text{OE}}$  transitions from a low level to a high level (enable) and back to a low level (disable). The transition times are measured from  $V_{\\text{CCA}}/2$  to  $V_{\\text{CCA}}$  and from  $V_{\\text{CCA}}$  to  $\\text{GND}$ .\n- $\\text{Output}^{(1)}$  transitions from a high level to a low level (disable) and back to a high level (enable). The transition times are measured from  $V_{\\text{OL}} + V_{\\text{TP}}$  to  $V_{\\text{CCO}}/2$  and from  $V_{\\text{CCO}}/2$  to  $V_{\\text{OL}}$ .\n- $\\text{Output}^{(2)}$  transitions from a low level to a high level (enable) and back to a low level (disable). The transition times are measured from  $V_{\\text{OH}} - V_{\\text{TP}}$  to  $V_{\\text{CCO}}/2$  and from  $V_{\\text{CCO}}/2$  to  $V_{\\text{OH}}$ .\n\nKey voltage levels and time parameters shown in the diagram include:\n\n- $V_{\\text{CCA}}$  and  $\\text{GND}$  for the  $\\overline{\\text{OE}}$  signal.\n- $V_{\\text{CCO}}^{(3)}$  and  $V_{\\text{CCO}}/2$  for the  $\\text{Output}^{(1)}$  signal.\n- $V_{\\text{OL}}^{(4)}$  and  $V_{\\text{OH}}^{(4)}$  for the  $\\text{Output}^{(2)}$  signal.\n- Time parameters:  $t_{\\text{PLZ}}^{(5)}$ ,  $t_{\\text{PHZ}}^{(5)}$ ,  $t_{\\text{PZL}}^{(6)}$ , and  $t_{\\text{PZH}}^{(6)}$ .",
+    "new": "The diagram illustrates the timing characteristics of the SN74AVC4T774 during enable and disable transitions (description written from the PDF drawing). It shows three signals:  $\\overline{\\text{OE}}$ ,  $\\text{Output}^{(1)}$ , and  $\\text{Output}^{(2)}$ .\n\n- $\\overline{\\text{OE}}$  switches between  $\\text{GND}$  and  $V_{\\text{CCA}}$ : it first rises from  $\\text{GND}$  to  $V_{\\text{CCA}}$  (outputs disabled) and later falls back to  $\\text{GND}$  (outputs enabled). Both edges are referenced at  $V_{\\text{CCA}}/2$ .\n- $\\text{Output}^{(1)}$  starts at  $V_{\\text{OL}}^{(4)}$ ; after  $\\overline{\\text{OE}}$  rises it rises toward  $V_{\\text{CCO}}^{(3)}$ , and  $t_{\\text{PLZ}}^{(5)}$  is measured from  $V_{\\text{CCA}}/2$  on  $\\overline{\\text{OE}}$  to  $V_{\\text{OL}} + V_{\\text{TP}}$ . After  $\\overline{\\text{OE}}$  falls it falls back to  $V_{\\text{OL}}$ , and  $t_{\\text{PZL}}^{(6)}$  is measured to  $V_{\\text{CCO}}/2$ .\n- $\\text{Output}^{(2)}$  starts at  $V_{\\text{OH}}^{(4)}$ ; after  $\\overline{\\text{OE}}$  rises it falls toward  $\\text{GND}$ , and  $t_{\\text{PHZ}}^{(5)}$  is measured to  $V_{\\text{OH}} - V_{\\text{TP}}$ . After  $\\overline{\\text{OE}}$  falls it rises back to  $V_{\\text{OH}}$ , and  $t_{\\text{PZH}}^{(6)}$  is measured to  $V_{\\text{CCO}}/2$ .\n\nLabels printed in the drawing:  $V_{\\text{CCA}}$ ,  $V_{\\text{CCA}}/2$  (twice) and  $\\text{GND}$  for  $\\overline{\\text{OE}}$ ;  $V_{\\text{CCO}}^{(3)}$ ,  $V_{\\text{OL}} + V_{\\text{TP}}$ ,  $V_{\\text{CCO}}/2$  and  $V_{\\text{OL}}^{(4)}$  for  $\\text{Output}^{(1)}$ ;  $V_{\\text{OH}}^{(4)}$ ,  $V_{\\text{OH}} - V_{\\text{TP}}$ ,  $V_{\\text{CCO}}/2$  and  $\\text{GND}$  for  $\\text{Output}^{(2)}$ .",
+    "evidence": "PDF p14 Figure 6-4: OE rises first (disable: tPLZ/tPHZ) and falls later (enable: tPZL/tPZH); Output(1) goes from VOL up toward VCCO on disable and back down to VOL on enable; Output(2) goes from VOH down toward GND and back. tPLZ ends at VOL + VTP, tPHZ at VOH - VTP, tPZL/tPZH at VCCO / 2. The old text had OE 'low to high (enable)', Output(1) starting high, Output(2) starting low, VOL/VOH swapped to the wrong outputs and wrong measurement points.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p15-fig7-1-logic-diagram-alt",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 15,
+    "old": "![Logic Diagram (Positive Logic) for a single bit of the SN74AVC4T774. It shows inputs DIR1 and A1. DIR1 is connected to one input of a 2-input AND gate and one input of a 2-input OR gate. A1 is connected to one input of a 2-input OR gate and one input of a 2-input AND gate. The outputs of these four gates are connected to the inputs of a 2-input AND gate. The output of this final AND gate is connected to the output B1. The output B1 is also connected to the output of a 2-input OR gate, which is also connected to the output of a 2-input AND gate. The output of this final AND gate is connected to the output of a 2-input OR gate, which is also connected to the output of a 2-input AND gate. The output of this final AND gate is connected to the output B1.](",
+    "new": "![Logic Diagram (Positive Logic) for a single bit of the SN74AVC4T774 (description written from the PDF drawing). Inputs DIR1 and OE (active low), I/O pins A1 and B1. A-to-B path: A1 drives an inverter followed by a 3-state inverting buffer whose output goes to B1; that buffer is enabled by an AND gate with inputs DIR1 and inverted OE (enabled when DIR1 is high and OE is low). B-to-A path: B1 drives an inverter followed by a 3-state inverting buffer whose output goes back to A1; that buffer is enabled by a second AND gate with both inputs inverted, DIR1 and OE (enabled when DIR1 is low and OE is low).](",
+    "evidence": "PDF p15 Figure 7-1: two AND gates (one with DIR1 and inverted OE, one with inverted DIR1 and inverted OE) enable two 3-state buffers; A1 -> inverter -> 3-state inverter -> B1 and B1 -> inverter -> 3-state inverter -> A1. The old text described invented OR gates and a meaningless chain of AND/OR outputs.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p15-fig7-1-logic-diagram-desc",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 15,
+    "old": "\nLogic Diagram (Positive Logic) for a single bit of the SN74AVC4T774. It shows inputs DIR1 and A1. DIR1 is connected to one input of a 2-input AND gate and one input of a 2-input OR gate. A1 is connected to one input of a 2-input OR gate and one input of a 2-input AND gate. The outputs of these four gates are connected to the inputs of a 2-input AND gate. The output of this final AND gate is connected to the output B1. The output B1 is also connected to the output of a 2-input OR gate, which is also connected to the output of a 2-input AND gate. The output of this final AND gate is connected to the output of a 2-input OR gate, which is also connected to the output of a 2-input AND gate. The output of this final AND gate is connected to the output B1.\n",
+    "new": "\nLogic Diagram (Positive Logic) for a single bit of the SN74AVC4T774 (description written from the PDF drawing). Inputs DIR1 and OE (active low), I/O pins A1 and B1. A-to-B path: A1 drives an inverter followed by a 3-state inverting buffer whose output goes to B1; that buffer is enabled by an AND gate with inputs DIR1 and inverted OE (enabled when DIR1 is high and OE is low). B-to-A path: B1 drives an inverter followed by a 3-state inverting buffer whose output goes back to A1; that buffer is enabled by a second AND gate with both inputs inverted, DIR1 and OE (enabled when DIR1 is low and OE is low).\n",
+    "evidence": "PDF p15 Figure 7-1: two AND gates (one with DIR1 and inverted OE, one with inverted DIR1 and inverted OE) enable two 3-state buffers; A1 -> inverter -> 3-state inverter -> B1 and B1 -> inverter -> 3-state inverter -> A1. The old text described invented OR gates and a meaningless chain of AND/OR outputs. Same as -alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "sn74avc4t774-p15-table7-1-caption-bold",
+    "file": "output/sn74avc4t774/sn74avc4t774.md",
+    "page": 15,
+    "old": "\nTable 7-1. Function Table (Each Bit)\n",
+    "new": "\n**Table 7-1. Function Table (Each Bit)**\n",
+    "evidence": "PDF p15: the Table 7-1 caption is bold like the other table captions (Table 4-1, 6-1, 6-2), which the md writes as bold paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
