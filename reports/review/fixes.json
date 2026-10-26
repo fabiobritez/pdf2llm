@@ -17954,5 +17954,148 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p46-store-restore-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 46,
+    "old": "\n### ***STORE\\_USER\\_ALL and RESTORE\\_USER\\_ALL***\n",
+    "new": "\n#### STORE\\_USER\\_ALL and RESTORE\\_USER\\_ALL\n",
+    "evidence": "PDF p46 (PyMuPDF spans + render): 'STORE_USER_ALL and RESTORE_USER_ALL' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '###' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p46-bulk-programming-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 46,
+    "old": "\n#### **Bulk Programming the User EEPROM Space**\n",
+    "new": "\n#### Bulk Programming the User EEPROM Space\n",
+    "evidence": "PDF p46 (PyMuPDF spans + render): 'Bulk Programming the User EEPROM Space' is a LinearHelvCond-Bold 11.7pt title-case subheading = H4 without emphasis markup.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p47-mfr-ee-unlock-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 47,
+    "old": "\n### ***MFR\\_EE\\_UNLOCK***\n",
+    "new": "\n#### MFR\\_EE\\_UNLOCK\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): 'MFR_EE_UNLOCK' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '###' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p47-mfr-ee-unlock-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 47,
+    "old": "\n#### **MFR\\_EE\\_UNLOCK Data Contents**\n",
+    "new": "\n**MFR\\_EE\\_UNLOCK Data Contents**\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): 'MFR_EE_UNLOCK Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p47-mfr-ee-erase-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 47,
+    "old": "\n### ***MFR\\_EE\\_ERASE***\n",
+    "new": "\n#### MFR\\_EE\\_ERASE\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): 'MFR_EE_ERASE' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '###' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p47-mfr-ee-erase-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 47,
+    "old": "\n#### **MFR\\_EE\\_ERASE Data contents**\n",
+    "new": "\n**MFR\\_EE\\_ERASE Data contents**\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): 'MFR_EE_ERASE Data contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p47-mfr-ee-data-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 47,
+    "old": "\n#### ***MFR\\_EE\\_DATA***\n",
+    "new": "\n#### MFR\\_EE\\_DATA\n",
+    "evidence": "PDF p47 (PyMuPDF spans + render): 'MFR_EE_DATA' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4 without emphasis markup; the md had '####' with emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p48-mfr-ee-data-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 48,
+    "old": "\n#### MFR\\_EE\\_DATA Data Contents\n",
+    "new": "\n**MFR\\_EE\\_DATA Data Contents**\n",
+    "evidence": "PDF p48 (PyMuPDF spans + render): 'MFR_EE_DATA Data Contents' is a 9.7pt bold table caption, written as a bold paragraph (not a heading) as for the other Data Contents captions.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p48-vin-limits-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 48,
+    "old": "\n**VIN\\_ON, VIN\\_OFF, VIN\\_OV\\_FAULT\\_LIMIT, VIN\\_OV\\_WARN\\_LIMIT, VIN\\_UV\\_WARN\\_LIMIT and VIN\\_UV\\_FAULT\\_LIMIT**\n",
+    "new": "\n#### VIN\\_ON, VIN\\_OFF, VIN\\_OV\\_FAULT\\_LIMIT, VIN\\_OV\\_WARN\\_LIMIT, VIN\\_UV\\_WARN\\_LIMIT and VIN\\_UV\\_FAULT\\_LIMIT\n",
+    "evidence": "PDF p48 (PyMuPDF spans + render): 'VIN_ON, VIN_OFF, ... and VIN_UV_FAULT_LIMIT' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) = H4; the md had a bold paragraph.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p49-iin-cal-gain-space-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 49,
+    "old": "| Temperature coefficient applied to IIN_CAL_GAIN.                          |",
+    "new": "| Temperature coefficient applied to IIN_CAL_ GAIN.                         |",
+    "evidence": "PDF p49 (render + PyMuPDF words 'IIN_CAL_' 'GAIN.' on the same line, x gap): the command-table description prints 'IIN_CAL_ GAIN.' with a space on one line; kept as printed (manufacturer typo).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p49-energy-measurement-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 49,
+    "old": "\n### Energy Measurement and Reporting\n",
+    "new": "\n#### Energy Measurement and Reporting\n",
+    "evidence": "PDF p49 (PyMuPDF spans + render): 'Energy Measurement and Reporting' is a LinearHelvCond-Bold 11.7pt title-case subheading = H4 without emphasis markup.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
