@@ -22097,5 +22097,356 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p101-ltpowerplay-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 101,
+    "old": "\n## LTpowerPlay: AN INTERACTIVE GUI FOR POWER MANAGERS\n",
+    "new": "\n### LTpowerPlay: AN INTERACTIVE GUI FOR POWER MANAGERS\n",
+    "evidence": "PDF p101 (PyMuPDF spans): 'LTpowerPlay: AN INTERACTIVE GUI FOR POWER MANAGERS' is a LinearHelvCond-Bold 11.7pt caps subsection (H3), not the running section title.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p101-column-split",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 101,
+    "old": "diagnostic and debug features. It\n\nbecomes a valuable",
+    "new": "diagnostic and debug features. It becomes a valuable",
+    "evidence": "PDF p101: the sentence 'It / becomes a valuable diagnostic tool' continues from the left to the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p101-fig45-screenshot-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 101,
+    "old": "The screenshot displays the LTpowerPlay software interface with the following components:\n\n- Left Panel:** A tree view showing the system configuration for U0 (7h30) - LTC2975, with sub-entries for U0.0, U0.1, U0.2, and U0.3.\n- Center-Left Panel:** The 'Config' window for U0.0 (Paged+Global) showing various configuration registers:\n  - General Configuration Registers:** MFR\\_CONFIG\\_LTC2974 (0x0080) Expand for Detail...\n  - On/Off Control and Margining:** ON\\_OFF\\_CONFIG (0x1E) controlled\\_on\\_use... OPERATION\n  - Output Voltage:** VOUT\\_OV\\_FAULT\\_LIMIT +15.0 % above/below VOUT, VOUT\\_OV\\_WARN\\_LIMIT +10.0 % above/below VOUT, VOUT\\_MARGIN\\_HIGH +5.0 % above/below VOUT, VOUT\\_COMMAND 1,5000 V, VOUT\\_MARGIN\\_LOW -5.0 % above/below VOUT, VOUT\\_UV\\_WARN\\_LIMIT -10.0 % above/below VOUT, VOUT\\_UV\\_FAULT\\_LIMIT -15.0 % above/below VOUT, POWER\\_GOOD\\_ON -7.0 % above/below VOUT, POWER\\_GOOD\\_OFF -9.0 % above/below VOUT\n  - Fault Responses - Output Voltage:** TON\\_MAX\\_FAULT\\_RESP... (0x88) Immediate Off,Retry..., VOUT\\_UV\\_FAULT\\_RESP... (0x7F) Deglitched Off,7,Retr..., VOUT\\_OV\\_FAULT\\_RESP... (0x7F) Deglitched Off,7,Retr...\n  - Output Voltage - Miscellaneous:** VOUT\\_MAX 4,0000 V, MFR\\_DAC\\_LTC 440, VOUT\\_MODE (0x13) Linear, Isb\\_size = 2%, MFR\\_VOUT\\_DISCHARGE\\_T... 2.00\n  - Output Current Calibration:** IOUT\\_CAL\\_GAIN 102,500 mOhms, MFR\\_IOUT\\_CAL\\_GAIN\\_TC 3900 ppm/°C, MFR\\_IOUT\\_CAL\\_GAIN\\_TAU... 0.00, MFR\\_IOUT\\_CAL\\_GAIN\\_THETA 0.000 °C/W\n  - Output Current:** IOUT\\_OC\\_FAULT\\_LIMIT 0,9004 A, IOUT\\_OC\\_WARN\\_LIMIT 0,5996 A, IOUT\\_OC\\_WARN\\_LIMIT -0,9004 A\n  - Fault Responses - Output Current:** IOUT\\_OC\\_FAULT\\_RESP... (0x7F) Deglitched Off,7,Retr...\n- Center-Right Panel:** The 'Telemetry' window for U0.0 (Paged+Global) showing real-time data:\n  - Output Voltage (%):** READ\\_VOUT 1,5001 V, MFR\\_VOUT\\_MIN\\_LTC 1,4246 V, MFR\\_VOUT\\_PEAK\\_LTC\\_P... +5.13 % above/below..., READ\\_VOUT\\_PERCENT +0.01 % above/below..., MFR\\_VOUT\\_MIN\\_LTC\\_P... -5.03 % above/below...\n  - DAC:** MFR\\_DAC\\_LIVE\\_LTC 0x01B7, MFR\\_DAC\\_LIVE\\_PERCENT... -14,266 %\n  - Input Power:** MFR\\_PIN\\_PEAK 0,265 W, READ\\_PIN 0,251 W, MFR\\_PIN\\_MIN 0,156 W\n  - Input Energy:** MFR\\_EIN 510,005 kJ, MFR\\_EIN\\_TIME 20 days,15h : 02m : 55..., MFR\\_EIN\\_WATTS 0,249W\n  - Input Current:** MFR\\_JIN\\_PEAK 0,0524 A, READ\\_JIN 0,0497 A, MFR\\_JIN\\_MIN 0,0308 A\n  - Output Current:** MFR\\_IOUT\\_PEAK\\_LTC 0,0037 A, MFR\\_READ\\_IOUT\\_LTC2974 0,0025 A, READ\\_IOUT 0,0033 A, MFR\\_IOUT\\_MIN\\_LTC 0,0030 A, MFR\\_T\\_SELF\\_HEAT 0,000 °C, MFR\\_IOUT\\_SENSE\\_VOLTA... 0,351 mV absolute\n  - Temperature:** MFR\\_TEMPERATURE\\_1\\_P... 32,250 °C, READ\\_TEMPERATURE\\_1\\_P... 31,844 °C, MFR\\_TEMPERATURE\\_MIN... 29,000 °C, READ\\_TEMPERATURE\\_2... 30,844 °C\n- Right Panel:** The 'Dashboard' window showing a gauge for 'READ\\_VOUT' and a table of 'READ\\_VOUT (All Pages in System)'.\n  - Dashboard Gauge:** Shows a needle pointing to approximately 1.5 V.\n  - READ\\_VOUT (All Pages in System) Table:**\n\n| Page           | READ_VOUT |\n|----------------|-----------|\n| U0.0 - LTC2975 | 1,5000 V  |\n| U0.1           | 1,8004 V  |\n| U0.2           | 2,5006 V  |\n| U0.3           | 3,3004 V  |\n- Bottom Center:** The 'Idealized On/Off Waveforms' window showing a graph of voltage and current over time during power transitions.\n- Bottom Right:** The 'Telemetry Plot' window showing a graph of 'READ\\_VOUT' over time for multiple pages (U0.0, U0.1, U0.2, U0.3).\n",
+    "new": "The screenshot (description written from the PDF image; register values shown in the screenshot are example data) displays the LTpowerPlay window (menus File, View, Configuration, Utilities, Help and a toolbar) with these panes: a system tree (System, (Ungrouped), U0 (7h30) -LTC2975 with pages U0:0 to U0:3) and Simple Mode / Advanced Mode buttons; a 'Config: U0:0 (Paged+Global)' pane with tabs (Setup, All Global, All Paged, Addressing/WP, General Config, On/Off/Margin, Voltage, Current, Temperature, Energy, Timing, Watchdog/PGOOD, Fault Responses, Fault Sharing, Scratchpad, Identification) and register groups General Configuration Registers, On/Off Control and Margining (ON_OFF_CONFIG, OPERATION choices 0x00 to 0xA8), Output Voltage (VOUT_OV_FAULT_LIMIT to POWER_GOOD_OFF in % above/below VOUT, VOUT_COMMAND 1,5000 V), Fault Responses — Output Voltage, Output Voltage — Miscellaneous, Output Current Calibration, Output Current (IOUT_OC_FAULT_LIMIT, IOUT_OC_WARN_LIMIT, IOUT_UC_FAULT_LIMIT) and Fault Responses — Output Current; a 'Telemetry: U0:0 (Paged+Global)' pane with READ_VOUT, MFR_VOUT_MIN_LTC and the groups Telemetry — Output Voltage (%), DAC, Input Power (MFR_PIN_PEAK, READ_PIN, MFR_PIN_MIN), Input Energy (MFR_EIN, MFR_EIN_TIME, MFR_EIN_WATTS), Input Current (MFR_IIN_PEAK, READ_IIN, MFR_IIN_MIN), Output Current and Temperature; an 'Idealized On/Off Waveforms' pane with four ramp-up/ramp-down traces above an ON signal; a Dashboard pane with an Input Energy Meter gauge (Watts, Kjoules) and rail labels; a '[4 rails] READ_VOUT' table 'READ_VOUT (All Pages in System)' listing U0:0 - LTC2975 1,5000 V, U0:1 1,8004 V, U0:2 2,5006 V, U0:3 3,3004 V; and a 'Telemetry Plot' of READ_VOUT for U0:0 to U0:3 versus time, each trace stepping up and down (margining).\n",
+    "evidence": "PDF p101 Figure 45 (image crops at 400 dpi): the AI transcription misread the screenshot: 'MFR_JIN_PEAK/READ_JIN/MFR_JIN_MIN' are MFR_IIN_PEAK/READ_IIN/MFR_IIN_MIN; the third Output Current limit is IOUT_UC_FAULT_LIMIT -0,9004 A, not a second IOUT_OC_WARN_LIMIT; TON_MAX_FAULT_RESP is 0xB8, not 0x88; READ_VOUT/MFR_VOUT_MIN_LTC are not in the 'Output Voltage (%)' group; the Dashboard gauge is an Input Energy Meter (Watts/Kjoules), not a READ_VOUT needle at 1.5 V; pages are U0:0-U0:3. It also had broken '**' bold markers. Replaced by a description written from the image (the READ_VOUT table values are text shown in the screenshot).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p101-fig45-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 101,
+    "old": "\nFigure 45. LTpowerPlay Snapshot\n",
+    "new": "\n**Figure 45. LTpowerPlay Snapshot**\n",
+    "evidence": "PDF p101: the caption 'Figure 45. LTpowerPlay Snapshot' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-pcb-assembly-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\n## PCB ASSEMBLY AND LAYOUT SUGGESTIONS\n",
+    "new": "\n### PCB ASSEMBLY AND LAYOUT SUGGESTIONS\n",
+    "evidence": "PDF p102 (PyMuPDF spans): 'PCB ASSEMBLY AND LAYOUT SUGGESTIONS' is a LinearHelvCond-Bold 11.7pt caps subsection (H3), not the running section title.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-bypass-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\n### Bypass Capacitor Placement\n",
+    "new": "\n#### Bypass Capacitor Placement\n",
+    "evidence": "PDF p102 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'PCB ASSEMBLY AND LAYOUT SUGGESTIONS'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-stencil-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\n### Exposed Pad Stencil Design\n",
+    "new": "\n#### Exposed Pad Stencil Design\n",
+    "evidence": "PDF p102 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'PCB ASSEMBLY AND LAYOUT SUGGESTIONS'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-pcb-board-layout-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\n### PCB Board Layout\n",
+    "new": "\n#### PCB Board Layout\n",
+    "evidence": "PDF p102 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'PCB ASSEMBLY AND LAYOUT SUGGESTIONS'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-unused-adc-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\n### Unused ADC Sense Inputs\n",
+    "new": "\n#### Unused ADC Sense Inputs\n",
+    "evidence": "PDF p102 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'PCB ASSEMBLY AND LAYOUT SUGGESTIONS'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-fig46-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\nFigure 46. Suggested Screen Pattern for Die Attach Pad\n",
+    "new": "\n**Figure 46. Suggested Screen Pattern for Die Attach Pad**\n",
+    "evidence": "PDF p102: the caption 'Figure 46. Suggested Screen Pattern for Die Attach Pad' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-fig47-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "![Figure 47: Connecting Unused Inputs to GND. The diagram shows a circuit with two parallel branches. Each branch contains a 100k resistor connected to ground. The top branch is connected to the VSENSEP pin of the LTC2975, and the bottom branch is connected to the VSENSEM pin. The LTC2975 is shown as a rectangular block with these pins labeled.](",
+    "new": "![Figure 47. Connecting Unused Inputs to GND (description written from the PDF drawing). Two input lines lead to the V_SENSEP and V_SENSEM pins of the LTC2975. On each line, a 100k resistor to ground sits at the input end, before a series filter resistor; after the series resistors, a filter capacitor network (two capacitors with a grounded middle node) is connected across the two lines at the pins. Drawing number 2975 F47.](",
+    "evidence": "PDF p102 Figure 47 (render): the drawing shows the RC filter (series resistors and capacitors to ground) between the 100k resistors and the V_SENSEP/V_SENSEM pins, which is the point of the figure ('Place the 100k resistors before any filter components'); the AI text described only two 100k branches. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-fig47-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\nFigure 47: Connecting Unused Inputs to GND. The diagram shows a circuit with two parallel branches. Each branch contains a 100k resistor connected to ground. The top branch is connected to the VSENSEP pin of the LTC2975, and the bottom branch is connected to the VSENSEM pin. The LTC2975 is shown as a rectangular block with these pins labeled.\n",
+    "new": "\nFigure 47. Connecting Unused Inputs to GND (description written from the PDF drawing). Two input lines lead to the V_SENSEP and V_SENSEM pins of the LTC2975. On each line, a 100k resistor to ground sits at the input end, before a series filter resistor; after the series resistors, a filter capacitor network (two capacitors with a grounded middle node) is connected across the two lines at the pins. Drawing number 2975 F47.\n",
+    "evidence": "Same as ltc2975-p102-fig47-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p102-fig47-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 102,
+    "old": "\nFigure 47. Connecting Unused Inputs to GND\n",
+    "new": "\n**Figure 47. Connecting Unused Inputs to GND**\n",
+    "evidence": "PDF p102: the caption 'Figure 47. Connecting Unused Inputs to GND' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-design-checklist-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n## DESIGN CHECKLIST\n",
+    "new": "\n### DESIGN CHECKLIST\n",
+    "evidence": "PDF p103 (PyMuPDF spans): 'DESIGN CHECKLIST' is a LinearHelvCond-Bold 11.7pt caps subsection (H3), not the running section title.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-i2c-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### I<sup>2</sup>C\n",
+    "new": "\n#### I<sup>2</sup>C\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-output-enables-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### Output Enables\n",
+    "new": "\n#### Output Enables\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-vin-sense-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### V<sub>IN</sub> Sense\n",
+    "new": "\n#### V<sub>IN</sub> Sense\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-input-current-sense-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### Input Current Sense\n",
+    "new": "\n#### Input Current Sense\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-external-temperature-sense-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### External Temperature Sense\n",
+    "new": "\n#### External Temperature Sense\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-logic-signals-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### Logic Signals\n",
+    "new": "\n#### Logic Signals\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-unused-inputs-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### Unused Inputs\n",
+    "new": "\n#### Unused Inputs\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-dac-outputs-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "\n### DAC Outputs\n",
+    "new": "\n#### DAC Outputs\n",
+    "evidence": "PDF p103 (PyMuPDF spans): bold title-case 11.7pt subhead (H4) under the H3 'DESIGN CHECKLIST'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-aseln-italic-not-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "(ASEL<sub>n</sub>) are tri-level",
+    "new": "(ASEL*n*) are tri-level",
+    "evidence": "PDF p103 (PyMuPDF spans + render): the 'n' of ASELn, FAULTBn and CONTROLn is an italic full-size letter on the baseline, not a subscript (written CONTROL*n* elsewhere in the md).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-logic-pins-italic-not-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "FAULTB<sub>n</sub>, CONTROL<sub>n</sub>, SHARE\\_CLK, WDI, ASEL<sub>n</sub>, PWRGD",
+    "new": "FAULTB*n*, CONTROL*n*, SHARE\\_CLK, WDI, ASEL*n*, PWRGD",
+    "evidence": "Same as ltc2975-p103-aseln-italic-not-subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p103-controln-italic-not-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 103,
+    "old": "Do not leave CONTROL<sub>n</sub> pins floating",
+    "new": "Do not leave CONTROL*n* pins floating",
+    "evidence": "Same as ltc2975-p103-aseln-italic-not-subscript.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p104-running-header-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 104,
+    "old": "{103}------------------------------------------------\n\n## LTC2975\n\n## PACKAGE DESCRIPTION\n",
+    "new": "{103}------------------------------------------------\n\n## PACKAGE DESCRIPTION\n",
+    "evidence": "PDF p104: 'LTC2975' at the top left (AvantGarde 18.9pt above the rule) is the running page header printed on every page, not a heading; it leaked into the md on this page only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p104-package-drawing-description",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 104,
+    "old": "The drawing contains three views of the 64-lead QFN package:\n\n- Top View:** Square package measuring 9.00 ±0.10 (4 SIDES) with circular PIN 1 TOP MARK (SEE NOTE 5).\n- Side View:** Package thickness 0.75 ±0.05, terminal thickness 0.200 REF, standoff 0.00 – 0.05, edge radius R = 0.10 TYP, side pad reference 7.50 REF (4-SIDES).\n- Bottom View (Exposed Pad):** Central exposed pad 7.15 ±0.10 × 7.15 ±0.10 with PIN 1 CHAMFER C = 0.35, corner radius R = 0.115 TYP, pin pitch 0.50 BSC, lead width 0.25 ±0.05, lead length 0.40 ±0.10. Labeled with pins 1, 2, 63, 64 and drawing code (UP64) QFN 0406 REV C.\n",
+    "new": "The drawing (description written from the PDF drawing; dimensions in mm) contains three views of the 64-lead QFN package. Top view: square body 9 .00 ±0.10 (4 SIDES) with a PIN 1 TOP MARK circle (SEE NOTE 5) in the shaded top-left quadrant. Side view: height 0.75 ±0.05, terminal thickness 0.200 REF, standoff 0.00 – 0.05. Bottom view (BOTTOM VIEW—EXPOSED PAD): exposed pad 7.15 ±0.10 × 7.15 ±0.10 with PIN 1 CHAMFER C = 0.35 in the shaded top-right quadrant; R = 0.10 TYP (pad corner) and R = 0.115 TYP (lead end); lead row span 7.50 REF (4-SIDES); lead length 0.40 ±0.10; lead width 0.25 ±0.05; pitch 0.50 BSC; pins 1 and 2 at the top of the right side, 63 and 64 at the right of the top side; drawing code (UP64) QFN 0406 REV C.\n",
+    "evidence": "PDF p104 (render at 200 dpi): R = 0.10 TYP and 7.50 REF (4-SIDES) belong to the bottom view, not the side view; R = 0.115 TYP points to a lead end, not a corner of the exposed pad; pins 1/2 and 63/64 positions added; the list items had broken '**' markers. Rewritten from the drawing with the printed dimensions only.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
