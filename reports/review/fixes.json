@@ -4729,5 +4729,466 @@
       "pdf-words"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig20-rolloff-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "The noise is relatively flat at approximately 80 nV/√Hz from 10 Hz to about 10 kHz, then it drops sharply to a minimum of about 25 nV/√Hz around 30 kHz before rising again. A label 'A3 devices' is at the bottom center. A small code 'D030' is in the bottom right corner.]",
+    "new": "The noise is relatively flat just below 80 nV/√Hz from 10 Hz to about 20 kHz, then it drops sharply to a minimum of about 25 nV/√Hz near 80 kHz before rising again. A label 'A3 devices' is at the bottom center. A small code 'D030' is in the bottom right corner.]",
+    "evidence": "AI figure description misplaced the roll-off: PDF p10 Figure 20 render shows the flat region extending to about 20 kHz and the minimum (~25 nV/√Hz) just below 100k, not around 30 kHz.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig20-rolloff-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "The noise is relatively flat at approximately 80 nV/√Hz from 10 Hz to about 10 kHz, then it drops sharply to a minimum of about 25 nV/√Hz around 30 kHz before rising again. A label 'A3 devices' is at the bottom center. A small code 'D030' is in the bottom right corner.\n",
+    "new": "The noise is relatively flat just below 80 nV/√Hz from 10 Hz to about 20 kHz, then it drops sharply to a minimum of about 25 nV/√Hz near 80 kHz before rising again. A label 'A3 devices' is at the bottom center. A small code 'D030' is in the bottom right corner.\n",
+    "evidence": "AI figure description misplaced the roll-off: PDF p10 Figure 20 render shows the flat region extending to about 20 kHz and the minimum (~25 nV/√Hz) just below 100k, not around 30 kHz. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig19-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "\n\n**Figure 19. Quiescent Current vs Common Mode Voltage",
+    "new": "\n\nV<sub>S</sub> = 5.0 V\n\n**Figure 19. Quiescent Current vs Common Mode Voltage",
+    "evidence": "PDF p10 prints 'VS = 5.0 V' under the Figure 19 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig20-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "\n\n**Figure 20. Input-Referred Voltage Noise vs Frequency",
+    "new": "\n\nA3 devices\n\n**Figure 20. Input-Referred Voltage Noise vs Frequency",
+    "evidence": "PDF p10 prints 'A3 devices' under the Figure 20 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig21-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "\n\n**Figure 21. 0.1-Hz to 10-Hz Voltage Noise (Referred-To-Input)",
+    "new": "\n\nA3 devices\n\n**Figure 21. 0.1-Hz to 10-Hz Voltage Noise (Referred-To-Input)",
+    "evidence": "PDF p10 prints 'A3 devices' under the Figure 21 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig22-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "\n\n**Figure 22. Step Response (10-mV<sub>PP</sub> Input Step)",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, A3 devices\n\n**Figure 22. Step Response (10-mV<sub>PP</sub> Input Step)",
+    "evidence": "PDF p10 prints 'VS = 5.0 V, A3 devices' under the Figure 22 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig23-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "\n\n**Figure 23. Common-Mode Voltage Transient Response",
+    "new": "\n\nA3 devices\n\n**Figure 23. Common-Mode Voltage Transient Response",
+    "evidence": "PDF p10 prints 'A3 devices' under the Figure 23 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p10-fig24-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 10,
+    "old": "\n\n**Figure 24. Inverting Differential Input Overload",
+    "new": "\n\nA3 devices\n\n**Figure 24. Inverting Differential Input Overload",
+    "evidence": "PDF p10 prints 'A3 devices' under the Figure 24 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig25-step-value-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "The non-inverting input (black line) is stepped from 0V to 12V and back. The output (red line) shows a temporary saturation during the high state. V_S = 5.0 V, A3 devices. D035]",
+    "new": "The non-inverting input (black line) is stepped up from 0 V and back. The output (red line) shows a temporary saturation during the high state. V_S = 5.0 V, A3 devices. D035]",
+    "evidence": "AI figure description invented a 12 V step level: PDF p11 Figure 25 has only a 2 V/div scale and a 0 V marker, no printed step amplitude.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig25-step-value-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "The non-inverting input (black line) is stepped from 0V to 12V and back. The output (red line) shows a temporary saturation during the high state. V\\_S = 5.0 V, A3 devices. D035\n",
+    "new": "The non-inverting input (black line) is stepped up from 0 V and back. The output (red line) shows a temporary saturation during the high state. V\\_S = 5.0 V, A3 devices. D035\n",
+    "evidence": "AI figure description invented a 12 V step level: PDF p11 Figure 25 has only a 2 V/div scale and a 0 V marker, no printed step amplitude. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig29-ibn-decreases-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "Both currents increase linearly with differential input voltage. V_S = 5.0 V, V_REF = 2.5 V, A1 devices. D039]",
+    "new": "IBP increases and IBN decreases linearly with differential input voltage; they cross at 0 nA near 0 mV. V_S = 5.0 V, V_REF = 2.5 V, A1 devices. D039]",
+    "evidence": "AI figure description contradicted PDF p11 Figure 29: the IBN (red) curve falls from about +50 nA at -110 mV to about -50 nA at +110 mV while IBP rises (render).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig29-ibn-decreases-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "Both currents increase linearly with differential input voltage. V\\_S = 5.0 V, V\\_REF = 2.5 V, A1 devices. D039\n",
+    "new": "IBP increases and IBN decreases linearly with differential input voltage; they cross at 0 nA near 0 mV. V\\_S = 5.0 V, V\\_REF = 2.5 V, A1 devices. D039\n",
+    "evidence": "AI figure description contradicted PDF p11 Figure 29: the IBN (red) curve falls from about +50 nA at -110 mV to about -50 nA at +110 mV while IBP rises (render). (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig25-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "\n\n**Figure 25. Noninverting Differential Input Overload",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, A3 devices\n\n**Figure 25. Noninverting Differential Input Overload",
+    "evidence": "PDF p11 prints 'VS = 5.0 V, A3 devices' under the Figure 25 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig26-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "\n\n**Figure 26. Start-Up Response",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, A3 devices\n\n**Figure 26. Start-Up Response",
+    "evidence": "PDF p11 prints 'VS = 5.0 V, A3 devices' under the Figure 26 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig27-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "\n\n**Figure 27. Brownout Recovery",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, A3 devices\n\n**Figure 27. Brownout Recovery",
+    "evidence": "PDF p11 prints 'VS = 5.0 V, A3 devices' under the Figure 27 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig28-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "\n\n**Figure 28. Enable and Disable Response",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, A3 devices\n\n**Figure 28. Enable and Disable Response",
+    "evidence": "PDF p11 prints 'VS = 5.0 V, A3 devices' under the Figure 28 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig29-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "\n\n**Figure 29. IB+ and IB- vs Differential Input Voltage",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, V<sub>REF</sub> = 2.5 V, A1 devices\n\n**Figure 29. IB+ and IB- vs Differential Input Voltage",
+    "evidence": "PDF p11 prints 'VS = 5.0 V, VREF = 2.5 V, A1 devices' under the Figure 29 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p11-fig30-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 11,
+    "old": "\n\n**Figure 30. IB+ and IB- vs Differential Input Voltage",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, V<sub>REF</sub> = 2.5 V, A2, A3, A4, A5 devices\n\n**Figure 30. IB+ and IB- vs Differential Input Voltage",
+    "evidence": "PDF p11 prints 'VS = 5.0 V, VREF = 2.5 V, A2, A3, A4, A5 devices' under the Figure 30 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig31-temperature-order-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "25°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The 125°C curve shows the highest leakage, while the -40°C curve shows the lowest. Test conditions: V_S = 5.0 V, V_ENABLE = 0 V, V_REF = 2.5 V.]",
+    "new": "25°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The three curves overlap between about 1.5 V and 3.5 V; outside that range the 125°C curve has the largest magnitude. Test conditions: V_S = 5.0 V, V_ENABLE = 0 V, V_REF = 2.5 V.]",
+    "evidence": "AI figure description: PDF p12 Figure 31 render shows the curves overlapping in the middle and the 125°C curve largest in magnitude at both ends (most negative below 1.5 V), so 'the -40°C curve shows the lowest' is not supported.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig31-temperature-order-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "25°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The 125°C curve shows the highest leakage, while the -40°C curve shows the lowest. Test conditions: V\\_S = 5.0 V, V\\_ENABLE = 0 V, V\\_REF = 2.5 V.\n",
+    "new": "25°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The three curves overlap between about 1.5 V and 3.5 V; outside that range the 125°C curve has the largest magnitude. Test conditions: V\\_S = 5.0 V, V\\_ENABLE = 0 V, V\\_REF = 2.5 V.\n",
+    "evidence": "AI figure description: PDF p12 Figure 31 render shows the curves overlapping in the middle and the 125°C curve largest in magnitude at both ends (most negative below 1.5 V), so 'the -40°C curve shows the lowest' is not supported. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig32-temperature-order-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "-40°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The 125°C curve shows the highest leakage, while the -40°C curve shows the lowest. Test conditions: V_S = 5.0 V, V_ENABLE = 0 V, V_REF = 2.5 V.]",
+    "new": "-40°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The three temperature curves nearly overlap. Test conditions: V_S = 5.0 V, V_ENABLE = 0 V, V_REF = 2.5 V.]",
+    "evidence": "AI figure description: PDF p12 Figure 32 render shows the 25°C, -40°C and 125°C curves almost on top of each other; no clear ordering.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig32-temperature-order-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "-40°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The 125°C curve shows the highest leakage, while the -40°C curve shows the lowest. Test conditions: V\\_S = 5.0 V, V\\_ENABLE = 0 V, V\\_REF = 2.5 V.\n",
+    "new": "-40°C (red), and 125°C (grey). The leakage current increases linearly with output voltage, crossing zero at approximately 2.5V. The three temperature curves nearly overlap. Test conditions: V\\_S = 5.0 V, V\\_ENABLE = 0 V, V\\_REF = 2.5 V.\n",
+    "evidence": "AI figure description: PDF p12 Figure 32 render shows the 25°C, -40°C and 125°C curves almost on top of each other; no clear ordering. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig33-variant-order-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "All variants show a sharp increase in output impedance starting around 10 kHz, peaking between 1 MHz and 10 MHz, and then slightly decreasing. A5 has the highest peak impedance, while A1 has the lowest. Test conditions: V_S = 5.0 V, V_CM = 0 V.]",
+    "new": "All variants show a sharp increase in output impedance starting at a few kHz, peaking between 1 MHz and 10 MHz, and then slightly decreasing. Below the peak A5 has the highest impedance and A1 the lowest; near the peak the curves converge. Test conditions: V_S = 5.0 V, V_CM = 0 V.]",
+    "evidence": "AI figure description: PDF p12 Figure 33 render shows the rise beginning around 2-5 kHz and A5 (green) highest only below ~1 MHz; at the peak A5 is not the highest.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig33-variant-order-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "All variants show a sharp increase in output impedance starting around 10 kHz, peaking between 1 MHz and 10 MHz, and then slightly decreasing. A5 has the highest peak impedance, while A1 has the lowest. Test conditions: V\\_S = 5.0 V, V\\_CM = 0 V.\n",
+    "new": "All variants show a sharp increase in output impedance starting at a few kHz, peaking between 1 MHz and 10 MHz, and then slightly decreasing. Below the peak A5 has the highest impedance and A1 the lowest; near the peak the curves converge. Test conditions: V\\_S = 5.0 V, V\\_CM = 0 V.\n",
+    "evidence": "AI figure description: PDF p12 Figure 33 render shows the rise beginning around 2-5 kHz and A5 (green) highest only below ~1 MHz; at the peak A5 is not the highest. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig31-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "\n\n**Figure 31. Output Leakage vs Output Voltage (A1, A2, and A3 Devices)",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, V<sub>ENABLE</sub> = 0 V, V<sub>REF</sub> = 2.5 V\n\n**Figure 31. Output Leakage vs Output Voltage (A1, A2, and A3 Devices)",
+    "evidence": "PDF p12 prints 'VS = 5.0 V, VENABLE = 0 V, VREF = 2.5 V' under the Figure 31 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig32-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "\n\n**Figure 32. Output Leakage vs Output Voltage (A4 and A5 Devices)",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, V<sub>ENABLE</sub> = 0 V, V<sub>REF</sub> = 2.5 V\n\n**Figure 32. Output Leakage vs Output Voltage (A4 and A5 Devices)",
+    "evidence": "PDF p12 prints 'VS = 5.0 V, VENABLE = 0 V, VREF = 2.5 V' under the Figure 32 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p12-fig33-sublabel",
+    "file": "output/ina190/ina190.md",
+    "page": 12,
+    "old": "\n\n**Figure 33. Output Impedance vs Frequency",
+    "new": "\n\nV<sub>S</sub> = 5.0 V, V<sub>CM</sub> = 0 V\n\n**Figure 33. Output Impedance vs Frequency",
+    "evidence": "PDF p12 prints 'VS = 5.0 V, VCM = 0 V' under the Figure 33 plot, above its caption (pdftotext + image); md body had it only inside the AI description.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p13-block-diagram-topology-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 13,
+    "old": "The diagram shows a differential amplifier configuration. Two input terminals, IN+ and IN-, are connected to the non-inverting inputs (+) of two operational amplifiers. The outputs of these amplifiers are connected to a second-stage differential amplifier. The second-stage amplifier's output is connected to the OUT pin. A reference input (REF) is connected to the second-stage amplifier's output. The power supply pins are VS (positive supply) and GND (ground). An ENABLE pin is also shown, connected to the first-stage amplifiers. The diagram includes various internal components like capacitors, resistors, and operational amplifiers, illustrating the internal structure of the INA190.]",
+    "new": "The diagram shows two amplifier stages. IN+ and IN- are each coupled through a series capacitor to the two inputs of a single first-stage differential amplifier, which has capacitive feedback from its two outputs. The first-stage outputs drive a second-stage difference amplifier through resistors; the second-stage output is the OUT pin, with a feedback resistor from OUT to its inverting input. The REF pin connects through a resistor to the non-inverting input of the second stage. The ENABLE(1) and VS pins are at the top edge and GND at the bottom edge of the INA190 outline, without drawn internal connections.]",
+    "evidence": "AI figure description contradicted the PDF p13 Functional Block Diagram (render): there is one capacitively coupled first-stage amplifier (not two op amps with IN+/IN- on their + inputs), REF goes through a resistor to the second-stage + input (not to its output), and ENABLE has no drawn connection to the first stage.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p13-block-diagram-topology-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 13,
+    "old": "The diagram shows a differential amplifier configuration. Two input terminals, IN+ and IN-, are connected to the non-inverting inputs (+) of two operational amplifiers. The outputs of these amplifiers are connected to a second-stage differential amplifier. The second-stage amplifier's output is connected to the OUT pin. A reference input (REF) is connected to the second-stage amplifier's output. The power supply pins are VS (positive supply) and GND (ground). An ENABLE pin is also shown, connected to the first-stage amplifiers. The diagram includes various internal components like capacitors, resistors, and operational amplifiers, illustrating the internal structure of the INA190.\n",
+    "new": "The diagram shows two amplifier stages. IN+ and IN- are each coupled through a series capacitor to the two inputs of a single first-stage differential amplifier, which has capacitive feedback from its two outputs. The first-stage outputs drive a second-stage difference amplifier through resistors; the second-stage output is the OUT pin, with a feedback resistor from OUT to its inverting input. The REF pin connects through a resistor to the non-inverting input of the second stage. The ENABLE(1) and VS pins are at the top edge and GND at the bottom edge of the INA190 outline, without drawn internal connections.\n",
+    "evidence": "AI figure description contradicted the PDF p13 Functional Block Diagram (render): there is one capacitively coupled first-stage amplifier (not two op amps with IN+/IN- on their + inputs), REF goes through a resistor to the second-stage + input (not to its output), and ENABLE has no drawn connection to the first stage. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p14-eq1-number-not-bullet",
+    "file": "output/ina190/ina190.md",
+    "page": 14,
+    "old": "- $V_{REF}$  is the voltage applied to the REF pin.\n- (1)\n",
+    "new": "- $V_{REF}$  is the voltage applied to the REF pin.\n\n(1)\n",
+    "evidence": "PDF p14: '(1)' is the equation number printed at the right margin of Equation 1, not a fifth item of the 'where' list (render). Written as a separate line like equation numbers (2)-(4) elsewhere in the md.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p16-fig35-input-polarity-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 16,
+    "old": "The INA190 is configured with its IN- pin connected to the node between the bus and R sense, and its IN+ pin connected to the node between R sense and the load. The REF pin is connected to ground. The power supply pins are connected to a supply voltage V_S (1.7 V to 5.5 V) and ground. A bypass capacitor C BYPASS (0.1 µF) is connected between the supply and ground. The output V out is shown at the OUT pin. The internal block diagram of the INA190 shows a capacitive coupled amplifier between the inputs, followed by a differential amplifier stage with feedback resistors, and a reference voltage input stage.]",
+    "new": "The INA190 is configured with its IN+ pin connected to the node between the bus and R sense, and its IN- pin connected to the node between R sense and the load. The REF pin is connected to ground, and the ENABLE pin is tied to V\\_S. The power supply pins are connected to a supply voltage V_S (1.7 V to 5.5 V) and ground. A bypass capacitor C BYPASS (0.1 µF) is connected between the supply and ground. The output V out is shown at the OUT pin. The internal block diagram of the INA190 shows a capacitive coupled amplifier between the inputs, followed by a differential amplifier stage with feedback resistors, and a reference voltage input stage.]",
+    "evidence": "AI figure description swapped the inputs: in PDF p16 Figure 35 (render) the wire from the bus-side node of RSENSE goes to IN+ and the load-side node goes to IN-, consistent with the text ('current flows from the bus supply to the load, the input voltage from IN+ to IN- increases'). ENABLE is drawn tied to the VS node.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p16-fig35-input-polarity-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 16,
+    "old": "The INA190 is configured with its IN- pin connected to the node between the bus and R sense, and its IN+ pin connected to the node between R sense and the load. The REF pin is connected to ground. The power supply pins are connected to a supply voltage V\\_S (1.7 V to 5.5 V) and ground. A bypass capacitor C BYPASS (0.1 µF) is connected between the supply and ground. The output V out is shown at the OUT pin. The internal block diagram of the INA190 shows a capacitive coupled amplifier between the inputs, followed by a differential amplifier stage with feedback resistors, and a reference voltage input stage.\n",
+    "new": "The INA190 is configured with its IN+ pin connected to the node between the bus and R sense, and its IN- pin connected to the node between R sense and the load. The REF pin is connected to ground, and the ENABLE pin is tied to V\\_S. The power supply pins are connected to a supply voltage V\\_S (1.7 V to 5.5 V) and ground. A bypass capacitor C BYPASS (0.1 µF) is connected between the supply and ground. The output V out is shown at the OUT pin. The internal block diagram of the INA190 shows a capacitive coupled amplifier between the inputs, followed by a differential amplifier stage with feedback resistors, and a reference voltage input stage.\n",
+    "evidence": "AI figure description swapped the inputs: in PDF p16 Figure 35 (render) the wire from the bus-side node of RSENSE goes to IN+ and the load-side node goes to IN-, consistent with the text ('current flows from the bus supply to the load, the input voltage from IN+ to IN- increases'). ENABLE is drawn tied to the VS node. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p17-fig36-desc-connections",
+    "file": "output/ina190/ina190.md",
+    "page": 17,
+    "old": "The device's GND pin is connected to a -3.3 V supply. The VS pin is connected to a +1.8 V supply, which is also connected to the REF pin. A bypass capacitor  $C_{BYPASS}$  of 0.1  $\\mu F$  is connected between VS and GND. The inputs IN+ and IN- are connected to a load and a sense resistor  $R_{SENSE}$  respectively. The internal architecture shows a 'Capacitively Coupled Amplifier' block followed by a differential amplifier stage. The output of the differential amplifier is connected to the OUT pin, which is then fed into an ADC. The ADC's reference is tied to ground. The REF pin is also connected to ground through a resistor.",
+    "new": "The device's GND pin is connected to a -3.3 V supply. The VS and ENABLE pins are connected to a +1.8 V supply, which also powers the ADC. A bypass capacitor  $C_{BYPASS}$  of 0.1  $\\mu F$  is connected between the +1.8 V node and ground. A grounded load and a sense resistor  $R_{SENSE}$  are in series with a -3.3 V terminal; IN+ connects to the node between the load and  $R_{SENSE}$ , and IN- to the node between  $R_{SENSE}$  and -3.3 V. The internal architecture shows a 'Capacitively Coupled Amplifier' block followed by a differential amplifier stage. The output of the differential amplifier is connected to the OUT pin, which is then fed into an ADC whose ground is tied to ground. The REF pin is connected directly to ground.",
+    "evidence": "AI figure description contradicted PDF p17 Figure 36 (render): +1.8 V goes to VS, ENABLE and the ADC (not to REF); REF is wired straight to a ground symbol (the resistor is internal); C_BYPASS goes to ground, not to the -3.3 V device GND; IN+ is on the load side and IN- on the -3.3 V side of R_SENSE. Text above the figure also says 'By grounding the REF pin'.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p18-fig37-connections-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 18,
+    "old": "A sense resistor (R sense) is placed in the ground line between a load and a 40 V bus. The current (I sense) flows through this resistor. The INA190's IN- pin is connected to the node between the bus and the load, while the IN+ pin is connected to the ground line after the sense resistor. The amplifier's output (V out) is connected to a reference voltage (V ref) through a switch. The reference voltage is set by a voltage divider. The INA190 is powered by a supply voltage (V s) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C bypass) of 0.1 uF. The device is also connected to ground (GND).]",
+    "new": "A sense resistor (R sense) is placed between the bus voltage (up to 40 V) and a grounded load. The current (I sense) flows through this resistor in either direction. The INA190's IN+ pin is connected to the bus side of the sense resistor, while the IN- pin is connected to the load side. The output is V out at the OUT pin. The REF pin is connected through a switch either to a reference voltage or to the output of a buffer amplifier driven by a resistor divider from that reference voltage. ENABLE is tied to V s. The INA190 is powered by a supply voltage (V s) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C bypass) of 0.1 uF. The device is also connected to ground (GND).]",
+    "evidence": "AI figure description contradicted PDF p18 Figure 37 (render): RSENSE sits between 'Bus Voltage up to 40 V' and the Load (whose other end is grounded); IN+ goes to the bus-side node and IN- to the load-side node; the switch selects the REF pin source (Reference Voltage or a buffered divider), not the output.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p18-fig37-connections-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 18,
+    "old": "A sense resistor (R sense) is placed in the ground line between a load and a 40 V bus. The current (I sense) flows through this resistor. The INA190's IN- pin is connected to the node between the bus and the load, while the IN+ pin is connected to the ground line after the sense resistor. The amplifier's output (V out) is connected to a reference voltage (V ref) through a switch. The reference voltage is set by a voltage divider. The INA190 is powered by a supply voltage (V s) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C bypass) of 0.1 uF. The device is also connected to ground (GND).\n",
+    "new": "A sense resistor (R sense) is placed between the bus voltage (up to 40 V) and a grounded load. The current (I sense) flows through this resistor in either direction. The INA190's IN+ pin is connected to the bus side of the sense resistor, while the IN- pin is connected to the load side. The output is V out at the OUT pin. The REF pin is connected through a switch either to a reference voltage or to the output of a buffer amplifier driven by a resistor divider from that reference voltage. ENABLE is tied to V s. The INA190 is powered by a supply voltage (V s) ranging from 1.7 V to 5.5 V, with a bypass capacitor (C bypass) of 0.1 uF. The device is also connected to ground (GND).\n",
+    "evidence": "AI figure description contradicted PDF p18 Figure 37 (render): RSENSE sits between 'Bus Voltage up to 40 V' and the Load (whose other end is grounded); IN+ goes to the bus-side node and IN- to the load-side node; the switch selects the REF pin source (Reference Voltage or a buffered divider), not the output. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p19-fig38-inputs-ref-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 19,
+    "old": "Both devices have their IN+, IN-, and REF pins connected to ground. The OUT pins of both devices are connected to the input of a single ADC. The ADC is connected to a Microcontroller via GPIO1 and GPIO2 pins. The Microcontroller's GPIO1 is connected to the ENABLE pin of the top INA190, and its GPIO2 is connected to the ENABLE pin of the bottom INA190. Each INA190 has its VS pin connected to a 1.7 V to 5.5 V supply and its GND pin connected to ground. Each device also has a separate input section with a sense resistor (RSENSE) and a load, connected to a bus voltage (Bus Voltage1 and Bus Voltage2, both up to +40 V). A 0.1 µF capacitor is connected between the VS and GND pins of each device.]",
+    "new": "Both devices have their REF pins connected to ground. The OUT pins of both devices are connected to the input of a single ADC, which feeds a Microcontroller. The Microcontroller's GPIO1 is connected to the ENABLE pin of the top INA190, and its GPIO2 is connected to the ENABLE pin of the bottom INA190. Each INA190 has its VS pin connected to a 1.7 V to 5.5 V supply and its GND pin connected to ground. Each device also has a separate input section with a sense resistor (RSENSE) and a load, connected to a bus voltage (Bus Voltage1 and Bus Voltage2, both up to +40 V). A 0.1 µF capacitor is connected between the VS and GND pins of each device.]",
+    "evidence": "AI figure description contradicted PDF p19 Figure 38 (render): only REF (and GND) are grounded; IN+/IN- go to the two ends of each RSENSE (as the same description later says); the ADC connects to the microcontroller directly, while GPIO1/GPIO2 drive the ENABLE pins.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p19-fig38-inputs-ref-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 19,
+    "old": "Both devices have their IN+, IN-, and REF pins connected to ground. The OUT pins of both devices are connected to the input of a single ADC. The ADC is connected to a Microcontroller via GPIO1 and GPIO2 pins. The Microcontroller's GPIO1 is connected to the ENABLE pin of the top INA190, and its GPIO2 is connected to the ENABLE pin of the bottom INA190. Each INA190 has its VS pin connected to a 1.7 V to 5.5 V supply and its GND pin connected to ground. Each device also has a separate input section with a sense resistor (RSENSE) and a load, connected to a bus voltage (Bus Voltage1 and Bus Voltage2, both up to +40 V). A 0.1 µF capacitor is connected between the VS and GND pins of each device.\n",
+    "new": "Both devices have their REF pins connected to ground. The OUT pins of both devices are connected to the input of a single ADC, which feeds a Microcontroller. The Microcontroller's GPIO1 is connected to the ENABLE pin of the top INA190, and its GPIO2 is connected to the ENABLE pin of the bottom INA190. Each INA190 has its VS pin connected to a 1.7 V to 5.5 V supply and its GND pin connected to ground. Each device also has a separate input section with a sense resistor (RSENSE) and a load, connected to a bus voltage (Bus Voltage1 and Bus Voltage2, both up to +40 V). A 0.1 µF capacitor is connected between the VS and GND pins of each device.\n",
+    "evidence": "AI figure description contradicted PDF p19 Figure 38 (render): only REF (and GND) are grounded; IN+/IN- go to the two ends of each RSENSE (as the same description later says); the ADC connects to the microcontroller directly, while GPIO1/GPIO2 drive the ENABLE pins. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
   }
 ]
