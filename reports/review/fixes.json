@@ -16547,5 +16547,95 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p57-affectinput-as-printed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 57,
+    "old": "MULTI_DAC_CH does not affect INPUT_CH4.<br>",
+    "new": "MULTI_DAC_CH does not affectINPUT_CH4.<br>",
+    "evidence": "PDF p57 Table 47 MI_SEL_CH_4 (PyMuPDF words + render): printed 'does not affectINPUT_CH4.' as one word with no space (manufacturer typo; the other rows have 'affect INPUT_CHn'). Kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p58-fig108-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 58,
+    "old": "Register diagram for INPUT_VAL. It shows",
+    "new": "Register diagram for INPUT_CHn. It shows",
+    "evidence": "PDF p58 Figure 108 (render + caption 'Name: INPUT_CHn'): the register is INPUT_CHn; INPUT_VAL is its [15:0] field. The AI text named the register after the field.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p58-fig108-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 58,
+    "old": "Register diagram for INPUT\\_VAL. It shows",
+    "new": "Register diagram for INPUT\\_CHn. It shows",
+    "evidence": "Same as ad5711r-ad5710r-p58-fig108-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p60-running-header-removed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 60,
+    "old": "\n\n## Data Sheet\n\n# AD5711R/AD5710R\n\n---\n\n## OUTLINE DIMENSIONS\n",
+    "new": "\n\n## OUTLINE DIMENSIONS\n",
+    "evidence": "PDF p60 (render + PyMuPDF spans): 'Data Sheet' and 'AD5711R/AD5710R' are the gray running header (18pt, top margin) printed on every page, followed by the header rule; the md omits it on every other page but had it here as H2/H1 headings plus a '---' rule.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p60-outline-drawing-description",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 60,
+    "old": "Image: Outline Dimensions: 25-Ball Wafer Level Chip Scale Package [WLCSP] (CB-25-11)\n",
+    "new": "Image: Outline Dimensions: 25-Ball Wafer Level Chip Scale Package [WLCSP] (CB-25-11) (vector drawing, description written from the PDF drawing; dimensions in mm, stacks printed top to bottom). TOP VIEW (BALL SIDE DOWN): body width 2.163 / 2.143 / 2.123, body length 2.213 / 2.193 / 2.173, BALL A1 IDENTIFIER at the top left corner. BOTTOM VIEW (BALL SIDE UP): 5 × 5 ball array, columns 5, 4, 3, 2, 1 from left to right and rows A to E from top to bottom; ball pitch 0.40 BSC; array 1.60 REF SQ; 0.297 REF from the body edge to the row A ball centers; 0.272 REF from the body edge to the column 5 ball centers. SIDE VIEW: overall height above the SEATING PLANE 0.530 / 0.500 / 0.470; body thickness 0.320 / 0.300 / 0.280; ball diameter Ø 0.290 / 0.270 / 0.250; ball height 0.220 / 0.200 / 0.180; COPLANARITY 0.04. Drawing numbers PKG-008029 and 03-02-2023-A.\n",
+    "evidence": "PDF p60 Figure 110 (render + PyMuPDF words): the outline drawing is vector art with no extracted image, and the md had only a title placeholder. Its printed labels and dimension stacks (2.163/2.143/2.123, 2.213/2.193/2.173, 0.40 BSC, 1.60 REF SQ, 0.297 REF, 0.272 REF, 0.530/0.500/0.470, 0.320/0.300/0.280, Ø 0.290/0.270/0.250, 0.220/0.200/0.180, COPLANARITY 0.04, PKG-008029, 03-02-2023-A) were added, with the views they belong to, as written on the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p60-ordering-guide-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 60,
+    "old": "\n## ORDERING GUIDE\n",
+    "new": "\n### ORDERING GUIDE\n",
+    "evidence": "PDF p60 (PyMuPDF spans + render): 'ORDERING GUIDE' is a black Arial-Bold 11pt caps subsection under the blue 'OUTLINE DIMENSIONS' section title (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p60-footer-removed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 60,
+    "old": "availability.\n\n[analog.com](https://www.analog.com)Rev. C | 60 of 60",
+    "new": "availability.\n",
+    "evidence": "PDF p60: 'analog.com' and 'Rev. C | 60 of 60' are the running footer printed on every page; the md omits it on every other page but had it here, run together as '[analog.com](https://www.analog.com)Rev. C | 60 of 60'. The Legal Terms and Conditions text above it is page content and was kept.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
