@@ -26628,5 +26628,304 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63802-p17-fig10-1-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 17,
+    "old": "![Circuit diagram of the TPS63802 in a typical application. The input voltage is VIN = 1.3V - 5.5V. The output voltage is VOUT = 3.3V. The circuit includes an input capacitor C1 (10 µF), an inductor L1 (0.47 µH), a diode, an output capacitor C2 (22 µF), and a feedback network consisting of resistors R1 (511kΩ) and R2 (91kΩ). The TPS63802 is connected to VIN, EN, MODE, GND, VOUT, PG, FB, and AGND pins. The PG pin is connected to a 100kΩ resistor R3.](43837b056625d3d6ce615e4c02f163bb_img.jpg)\n\nCircuit diagram of the TPS63802 in a typical application. The input voltage is VIN = 1.3V - 5.5V. The output voltage is VOUT = 3.3V. The circuit includes an input capacitor C1 (10 µF), an inductor L1 (0.47 µH), a diode, an output capacitor C2 (22 µF), and a feedback network consisting of resistors R1 (511kΩ) and R2 (91kΩ). The TPS63802 is connected to VIN, EN, MODE, GND, VOUT, PG, FB, and AGND pins. The PG pin is connected to a 100kΩ resistor R3.\n",
+    "new": "![Figure 10-1 schematic (description written from the drawing): the input V<sub>IN</sub> 1.3V – 5.5V drives the VIN pin, decoupled by C1 (10 µF) to ground; EN is tied to VIN. MODE is tied to GND, which is grounded. The inductor L1 (0.47 µH) connects pins L1 and L2. VOUT is the output V<sub>OUT</sub> = 3.3V, decoupled by C2 (22 µF) to ground. The divider R1 (511kΩ) from VOUT to FB and R2 (91kΩ) from FB to AGND sets the output voltage; AGND is grounded. R3 (100kΩ) pulls PG up to V<sub>IN</sub>; its wire crosses the VOUT line with a hop (no connection, not a diode).](43837b056625d3d6ce615e4c02f163bb_img.jpg)\n\nFigure 10-1 schematic (description written from the drawing): the input V<sub>IN</sub> 1.3V – 5.5V drives the VIN pin, decoupled by C1 (10 µF) to ground; EN is tied to VIN. MODE is tied to GND, which is grounded. The inductor L1 (0.47 µH) connects pins L1 and L2. VOUT is the output V<sub>OUT</sub> = 3.3V, decoupled by C2 (22 µF) to ground. The divider R1 (511kΩ) from VOUT to FB and R2 (91kΩ) from FB to AGND sets the output voltage; AGND is grounded. R3 (100kΩ) pulls PG up to V<sub>IN</sub>; its wire crosses the VOUT line with a hop (no connection, not a diode).\n",
+    "evidence": "PDF p17 Figure 10-1: there is no diode; the arc on the VOUT line is a wire crossover of the R3 pull-up, which goes from PG to V_IN (the AI text left R3's other end unstated). EN is tied to VIN and MODE to GND (not described before). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p18-eq2-iout-vin-full-size",
+    "file": "output/tps63802/tps63802.md",
+    "page": 18,
+    "old": "I_{PEAK} = \\frac{I_{out}}{\\eta \\times (1 - D)} + \\frac{V_{in} \\times D}",
+    "new": "I_{PEAK} = \\frac{\\text{Iout}}{\\eta \\times (1 - D)} + \\frac{\\text{Vin} \\times D}",
+    "evidence": "PDF p18 Equation 2 prints 'Iout' and 'Vin' full-size (no subscripts), unlike I_PEAK.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p18-note-markup",
+    "file": "output/tps63802/tps63802.md",
+    "page": 18,
+    "old": "###### --- Note\n\nThe calculation must be done for the minimum input voltage in boost mode.\n\n---\n",
+    "new": "##### Note\n\nThe calculation must be done for the minimum input voltage in boost mode.\n",
+    "evidence": "PDF p18: a 'Note' box (bold title between two rules) containing one sentence; the md had a malformed '###### --- Note' heading and a stray '---' rule. Written like the p17 '##### Note'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p20-tables-units-plain",
+    "file": "output/tps63802/tps63802.md",
+    "page": 20,
+    "old": "| $V_O$ [V] | R1 [k $\\Omega$ ] | R2 [k $\\Omega$ ] |\n|-----------|------------------|------------------|\n| 2.5       | 365              | 91               |\n| 3.3       | 511              | 91               |\n| 3.6       | 562              | 91               |\n| 5         | 806              | 91               |\n\n#### 10.2.3 Application Curves\n\n**Table 10-6. Components for Application Characteristic Curves <sup>(1)</sup>**\n\n| REFERENCE | DESCRIPTION                                                | PART NUMBER       | MANUFACTURER      | COMMENT                 |\n|-----------|------------------------------------------------------------|-------------------|-------------------|-------------------------|\n|           | TPS63802 2 A Buck-Boost Converter (2 mm x 3 mm QFN)        | TPS63802DLA       | Texas Instruments |                         |\n| L1        | 0.47 $\\mu$ H, 4 mm x 4 mm x 1.5 mm, 5.4 A, 7.6 m $\\Omega$  | XFL4015-471ME     | Coilcraft         |                         |\n| C1        | 10 $\\mu$ F, 0603, Ceramic Capacitor, $\\pm 20\\%$ , 6.3 V    | GRM188R60J106ME84 | Murata            |                         |\n| C2        | 1x 22 $\\mu$ F, 0603, Ceramic Capacitor, $\\pm 20\\%$ , 6.3 V | GRM188R60J226MEA0 | Murata            | $V_O \\leq 3.6\\text{ V}$ |\n| C2        | 2x 22 $\\mu$ F, 0603, Ceramic Capacitor, $\\pm 20\\%$ , 6.3 V | GRM188R60J226MEA0 | Murata            | $V_O > 3.6\\text{ V}$    |\n| R1        | 511 k $\\Omega$ , 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          | $V_O = 3.3\\text{ V}$    |\n| R1        | 562 k $\\Omega$ , 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          | $V_O = 3.6\\text{ V}$    |\n| R1        | 806 k $\\Omega$ , 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          | $V_O = 5\\text{ V}$      |\n| R2        | 91 k $\\Omega$ , 0603 Resistor, 1%, 100 mW                  | Standard          | Standard          |                         |\n| R3        | 100 k $\\Omega$ , 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          |                         |\n",
+    "new": "| $V_O$ [V] | R1 [kΩ] | R2 [kΩ] |\n|-----------|------------------|------------------|\n| 2.5       | 365              | 91               |\n| 3.3       | 511              | 91               |\n| 3.6       | 562              | 91               |\n| 5         | 806              | 91               |\n\n#### 10.2.3 Application Curves\n\n**Table 10-6. Components for Application Characteristic Curves <sup>(1)</sup>**\n\n| REFERENCE | DESCRIPTION                                                | PART NUMBER       | MANUFACTURER      | COMMENT                 |\n|-----------|------------------------------------------------------------|-------------------|-------------------|-------------------------|\n|           | TPS63802 2 A Buck-Boost Converter (2 mm x 3 mm QFN)        | TPS63802DLA       | Texas Instruments |                         |\n| L1        | 0.47 µH, 4 mm x 4 mm x 1.5 mm, 5.4 A, 7.6 mΩ | XFL4015-471ME     | Coilcraft         |                         |\n| C1        | 10 µF, 0603, Ceramic Capacitor, ±20%, 6.3 V    | GRM188R60J106ME84 | Murata            |                         |\n| C2        | 1x 22 µF, 0603, Ceramic Capacitor, ±20%, 6.3 V | GRM188R60J226MEA0 | Murata            | $V_O \\leq 3.6\\text{ V}$ |\n| C2        | 2x 22 µF, 0603, Ceramic Capacitor, ±20%, 6.3 V | GRM188R60J226MEA0 | Murata            | $V_O > 3.6\\text{ V}$    |\n| R1        | 511 kΩ, 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          | $V_O = 3.3\\text{ V}$    |\n| R1        | 562 kΩ, 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          | $V_O = 3.6\\text{ V}$    |\n| R1        | 806 kΩ, 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          | $V_O = 5\\text{ V}$      |\n| R2        | 91 kΩ, 0603 Resistor, 1%, 100 mW                  | Standard          | Standard          |                         |\n| R3        | 100 kΩ, 0603 Resistor, 1%, 100 mW                 | Standard          | Standard          |                         |\n",
+    "evidence": "PDF p20 Tables 10-5 and 10-6: units and tolerances ('R1 [kΩ]', '0.47 µH', '7.6 mΩ', '10 µF', '±20%', '511 kΩ') are plain text; the LaTeX wrappers rendered them with extra spaces ('k Ω ]', 'μ H'). Values unchanged.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p21-versus-period-as-printed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 21,
+    "old": "| Efficiency versus Input Voltage (PFM/PWM)                 |",
+    "new": "| Efficiency versus. Input Voltage (PFM/PWM)                |",
+    "evidence": "PDF p21 Table 10-7 prints 'Efficiency versus. Input Voltage (PFM/PWM)' (with a period; kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p22-fig10-2-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 22,
+    "old": "![Figure 10-2: Typical Output Current Capability versus Input Voltage. This line graph shows Maximum Output Current (A) on the y-axis (0.0 to 4.5) versus Input Voltage (V) on the x-axis (1.3 to 5.3). Three curves are shown for different output voltages: V_O = 3.3 V (black), V_O = 3.6 V (red), and V_O = 5 V (grey). All curves show an increase in current capability with input voltage, peaking around 4.3V input. The 3.3V output curve reaches the highest current of approximately 4.0A.](7f687094e6abe34a9cf491942b296d9a_img.jpg)\n\nFigure 10-2: Typical Output Current Capability versus Input Voltage. This line graph shows Maximum Output Current (A) on the y-axis (0.0 to 4.5) versus Input Voltage (V) on the x-axis (1.3 to 5.3). Three curves are shown for different output voltages: V\\_O = 3.3 V (black), V\\_O = 3.6 V (red), and V\\_O = 5 V (grey). All curves show an increase in current capability with input voltage, peaking around 4.3V input. The 3.3V output curve reaches the highest current of approximately 4.0A.\n\n**Figure 10-2. Typical Output Current Capability versus Input Voltage**\n",
+    "new": "![Figure 10-2: Typical Output Current Capability versus Input Voltage, MODE = High. Maximum Output Current (A) versus Input Voltage (1.3 V to 5.3 V), one curve per output voltage: V<sub>O</sub> = 3.3 V (black), 3.6 V (red) and 5 V (gray). The current capability rises with input voltage in a sawtooth pattern, dropping sharply at a few input voltages and rising again. The 3.3 V and 3.6 V curves reach their maxima below 4.3 V input and then fall to a nearly flat, lower level; the 3.6 V curve has the highest peak. The 5 V curve is lowest at low input voltage, drops once and keeps rising to the end of the axis, where it is highest. Read values from the image/PDF.](7f687094e6abe34a9cf491942b296d9a_img.jpg)\n\nFigure 10-2: Typical Output Current Capability versus Input Voltage, MODE = High. Maximum Output Current (A) versus Input Voltage (1.3 V to 5.3 V), one curve per output voltage: V<sub>O</sub> = 3.3 V (black), 3.6 V (red) and 5 V (gray). The current capability rises with input voltage in a sawtooth pattern, dropping sharply at a few input voltages and rising again. The 3.3 V and 3.6 V curves reach their maxima below 4.3 V input and then fall to a nearly flat, lower level; the 3.6 V curve has the highest peak. The 5 V curve is lowest at low input voltage, drops once and keeps rising to the end of the axis, where it is highest. Read values from the image/PDF.\n\nMODE = High\n\n**Figure 10-2. Typical Output Current Capability versus Input Voltage**\n",
+    "evidence": "PDF p22 Figure 10-2: the highest peak belongs to the 3.6 V (red) curve, not 3.3 V, and the 5 V curve keeps rising to the end of the axis instead of 'peaking around 4.3V'; '~4.0A' was read from the curve. The printed condition 'MODE = High' was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p22-fig10-3-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 22,
+    "old": "![Figure 10-3: Typical Inductor Switching Frequency versus Input Voltage. This line graph shows Switching Frequency (MHz) on the y-axis (0.5 to 3.0) versus Input Voltage (V) on the x-axis (2.5 to 4.3). Three curves are shown for different output voltages: V_O = 1.8 V (black), V_O = 3.3 V (red), and V_O = 5.2 V (grey). The switching frequency generally decreases as input voltage increases. The 5.2V output curve starts at the highest frequency (~2.8MHz) and the 1.8V output curve starts at the lowest (~1.6MHz).](0add961f6fd54a7ae5391d00c7e58f3c_img.jpg)\n\nFigure 10-3: Typical Inductor Switching Frequency versus Input Voltage. This line graph shows Switching Frequency (MHz) on the y-axis (0.5 to 3.0) versus Input Voltage (V) on the x-axis (2.5 to 4.3). Three curves are shown for different output voltages: V\\_O = 1.8 V (black), V\\_O = 3.3 V (red), and V\\_O = 5.2 V (grey). The switching frequency generally decreases as input voltage increases. The 5.2V output curve starts at the highest frequency (~2.8MHz) and the 1.8V output curve starts at the lowest (~1.6MHz).\n\n**Figure 10-3. Typical Inductor Switching Frequency versus Input Voltage**\n",
+    "new": "![Figure 10-3: Typical Inductor Switching Frequency versus Input Voltage, I<sub>O</sub> = 0 A, MODE = High, V<sub>I</sub> rising. Switching Frequency (MHz) versus Input Voltage (2.5 V to 4.3 V), one curve per output voltage: V<sub>O</sub> = 1.8 V (black), 3.3 V (red) and 5.2 V (gray). The 5.2 V curve is highest and decreases linearly over the whole range. The 1.8 V curve rises slowly with input voltage. The 3.3 V curve decreases slightly, drops in a step to a lower, nearly flat level, dips sharply to a minimum and then rises again toward the end of the range. Read values from the image/PDF.](0add961f6fd54a7ae5391d00c7e58f3c_img.jpg)\n\nFigure 10-3: Typical Inductor Switching Frequency versus Input Voltage, I<sub>O</sub> = 0 A, MODE = High, V<sub>I</sub> rising. Switching Frequency (MHz) versus Input Voltage (2.5 V to 4.3 V), one curve per output voltage: V<sub>O</sub> = 1.8 V (black), 3.3 V (red) and 5.2 V (gray). The 5.2 V curve is highest and decreases linearly over the whole range. The 1.8 V curve rises slowly with input voltage. The 3.3 V curve decreases slightly, drops in a step to a lower, nearly flat level, dips sharply to a minimum and then rises again toward the end of the range. Read values from the image/PDF.\n\nI<sub>O</sub> = 0 A\n\nMODE = High\n\nV<sub>I</sub> rising\n\n**Figure 10-3. Typical Inductor Switching Frequency versus Input Voltage**\n",
+    "evidence": "PDF p22 Figure 10-3: the 1.8 V curve rises with input voltage and the 3.3 V curve has a step and a sharp dip (the AI text said the frequency 'generally decreases'); '~2.8MHz'/'~1.6MHz' were read from the curves. The printed conditions 'I O = 0 A', 'MODE = High', 'VI rising' were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p22-fig10-4-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 22,
+    "old": "![Figure 10-4: Typical Inductor Burst Frequency versus Output Current. This log-log plot shows PFM Burst Frequency (Hz) on the y-axis (1k to 1M) versus Output Current (A) on the x-axis (1m to 100m). Three curves are shown for different input voltages: V_I = 2.5 V (black), V_I = 3.6 V (red), and V_I = 4.8 V (grey). Burst frequency increases with output current. The 4.8V input curve reaches the highest burst frequency of approximately 200kHz at 100mA output.](5adf12d50dfea82178ca002a2c48641b_img.jpg)\n\nFigure 10-4: Typical Inductor Burst Frequency versus Output Current. This log-log plot shows PFM Burst Frequency (Hz) on the y-axis (1k to 1M) versus Output Current (A) on the x-axis (1m to 100m). Three curves are shown for different input voltages: V\\_I = 2.5 V (black), V\\_I = 3.6 V (red), and V\\_I = 4.8 V (grey). Burst frequency increases with output current. The 4.8V input curve reaches the highest burst frequency of approximately 200kHz at 100mA output.\n\n**Figure 10-4. Typical Inductor Burst Frequency versus Output Current**\n",
+    "new": "![Figure 10-4: Typical Inductor Burst Frequency versus Output Current, V<sub>O</sub> = 3.6 V, MODE = Low. PFM Burst Frequency (Hz, logarithmic, 1k to 1M) versus Output Current (A, logarithmic, 1m to 100m and beyond), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.8 V (gray). The burst frequency rises proportionally with output current (straight lines on the log-log axes); the 3.6 V curve is lowest and the 2.5 V and 4.8 V curves nearly overlap. Above about 100m the curves flatten and become irregular: the 2.5 V curve dips sharply and then rises off the top of the graph and the 4.8 V curve jumps up, as the device leaves burst operation. Read values from the image/PDF.](5adf12d50dfea82178ca002a2c48641b_img.jpg)\n\nFigure 10-4: Typical Inductor Burst Frequency versus Output Current, V<sub>O</sub> = 3.6 V, MODE = Low. PFM Burst Frequency (Hz, logarithmic, 1k to 1M) versus Output Current (A, logarithmic, 1m to 100m and beyond), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.8 V (gray). The burst frequency rises proportionally with output current (straight lines on the log-log axes); the 3.6 V curve is lowest and the 2.5 V and 4.8 V curves nearly overlap. Above about 100m the curves flatten and become irregular: the 2.5 V curve dips sharply and then rises off the top of the graph and the 4.8 V curve jumps up, as the device leaves burst operation. Read values from the image/PDF.\n\nV<sub>O</sub> = 3.6 V\n\nMODE = Low\n\n**Figure 10-4. Typical Inductor Burst Frequency versus Output Current**\n",
+    "evidence": "PDF p22 Figure 10-4: '200kHz at 100mA' was read from the curve and the high-current behaviour (sharp dip and rise of the 2.5 V curve, jump of the 4.8 V curve) was not described. The printed conditions 'VO = 3.6 V', 'MODE = Low' were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p22-fig10-5-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 22,
+    "old": "![Figure 10-5: Efficiency versus Output Current (PFM/PWM). This log-log plot shows Efficiency (%) on the y-axis (60 to 100) versus Output Current (A) on the x-axis (100µ to 2). Three curves are shown for different input voltages: V_I = 2.5 V (black), V_I = 3.6 V (red), and V_I = 4.2 V (grey). Efficiency is high, mostly above 90%, and remains relatively constant across the output current range for each input voltage.](fbfbbc91a80a21fc8d0ff7ba9e5865e3_img.jpg)\n\nFigure 10-5: Efficiency versus Output Current (PFM/PWM). This log-log plot shows Efficiency (%) on the y-axis (60 to 100) versus Output Current (A) on the x-axis (100µ to 2). Three curves are shown for different input voltages: V\\_I = 2.5 V (black), V\\_I = 3.6 V (red), and V\\_I = 4.2 V (grey). Efficiency is high, mostly above 90%, and remains relatively constant across the output current range for each input voltage.\n\n**Figure 10-5. Efficiency versus Output Current (PFM/PWM)**\n",
+    "new": "![Figure 10-5: Efficiency versus Output Current (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Efficiency (60 to 100%) versus Output Current (A, logarithmic, 100µ to 2), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). Efficiency rises from the lightest load and flattens out from about 1m upward; the 4.2 V curve is highest over most of the range, the 2.5 V and 3.6 V curves nearly overlap. At the highest currents all curves fall, the 2.5 V curve most. Read values from the image/PDF.](fbfbbc91a80a21fc8d0ff7ba9e5865e3_img.jpg)\n\nFigure 10-5: Efficiency versus Output Current (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Efficiency (60 to 100%) versus Output Current (A, logarithmic, 100µ to 2), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). Efficiency rises from the lightest load and flattens out from about 1m upward; the 4.2 V curve is highest over most of the range, the 2.5 V and 3.6 V curves nearly overlap. At the highest currents all curves fall, the 2.5 V curve most. Read values from the image/PDF.\n\nV<sub>O</sub> = 3.3 V\n\nMODE = Low\n\n**Figure 10-5. Efficiency versus Output Current (PFM/PWM)**\n",
+    "evidence": "PDF p22 Figure 10-5: the AI text called the linear-efficiency plot 'log-log' and gave a value ('mostly above 90%') read from the curves instead of the curve order (4.2 V highest, 2.5 V falling most at high current). The printed conditions 'VO = 3.3 V', 'MODE = Low' were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p22-fig10-6-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 22,
+    "old": "![Figure 10-6: Efficiency versus Output Current (PWM Only). This log-log plot shows Efficiency (%) on the y-axis (0 to 100) versus Output Current (A) on the x-axis (1m to 2). Three curves are shown for different input voltages: V_I = 2.5 V (black), V_I = 3.6 V (red), and V_I = 4.2 V (grey). Efficiency increases with output current, reaching a peak of about 95% for the 3.6V input curve at 100mA.](17cd95aa220e50963bf6eb9818e33163_img.jpg)\n\nFigure 10-6: Efficiency versus Output Current (PWM Only). This log-log plot shows Efficiency (%) on the y-axis (0 to 100) versus Output Current (A) on the x-axis (1m to 2). Three curves are shown for different input voltages: V\\_I = 2.5 V (black), V\\_I = 3.6 V (red), and V\\_I = 4.2 V (grey). Efficiency increases with output current, reaching a peak of about 95% for the 3.6V input curve at 100mA.\n\n**Figure 10-6. Efficiency versus Output Current (PWM Only)**\n",
+    "new": "![Figure 10-6: Efficiency versus Output Current (PWM Only), V<sub>O</sub> = 3.3 V, MODE = High. Efficiency (0 to 100%) versus Output Current (A, logarithmic, 1m to 2), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). Efficiency is low at light load, rises steeply in an S-shape and flattens out above about 100m. The 3.6 V curve is highest and the 4.2 V curve lowest over the rising part; at the highest currents the curves fall slightly, the 2.5 V curve most. Read values from the image/PDF.](17cd95aa220e50963bf6eb9818e33163_img.jpg)\n\nFigure 10-6: Efficiency versus Output Current (PWM Only), V<sub>O</sub> = 3.3 V, MODE = High. Efficiency (0 to 100%) versus Output Current (A, logarithmic, 1m to 2), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). Efficiency is low at light load, rises steeply in an S-shape and flattens out above about 100m. The 3.6 V curve is highest and the 4.2 V curve lowest over the rising part; at the highest currents the curves fall slightly, the 2.5 V curve most. Read values from the image/PDF.\n\nV<sub>O</sub> = 3.3 V\n\nMODE = High\n\n**Figure 10-6. Efficiency versus Output Current (PWM Only)**\n",
+    "evidence": "PDF p22 Figure 10-6: linear efficiency axis (not 'log-log'); 'peak of about 95% ... at 100mA' was read from the curve. The printed conditions 'VO = 3.3 V', 'MODE = High' were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p22-fig10-7-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 22,
+    "old": "![Figure 10-7: Efficiency versus Output Current (PFM/PWM). This log-log plot shows Efficiency (%) on the y-axis (60 to 100) versus Output Current (A) on the x-axis (100µ to 2). Three curves are shown for different input voltages: V_I = 1.8 V (black), V_I = 3.3 V (red), and V_I = 5.0 V (grey). Efficiency is high, mostly above 85%, and remains relatively constant across the output current range for each input voltage.](e5a88700fea39ece3263b40902162d61_img.jpg)\n\nFigure 10-7: Efficiency versus Output Current (PFM/PWM). This log-log plot shows Efficiency (%) on the y-axis (60 to 100) versus Output Current (A) on the x-axis (100µ to 2). Three curves are shown for different input voltages: V\\_I = 1.8 V (black), V\\_I = 3.3 V (red), and V\\_I = 5.0 V (grey). Efficiency is high, mostly above 85%, and remains relatively constant across the output current range for each input voltage.\n\n**Figure 10-7. Efficiency versus Output Current (PFM/PWM)**\n",
+    "new": "![Figure 10-7: Efficiency versus Output Current (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Efficiency (60 to 100%) versus Output Current (A, logarithmic, 100µ to 2), one curve per input voltage: V<sub>I</sub> = 1.8 V (black), 3.3 V (red) and 5.0 V (gray). Efficiency rises from the lightest load and flattens out from about 1m upward. The 3.3 V curve is highest over most of the range; the 1.8 V and 5.0 V curves are lower and close together. Above about 100m the 1.8 V curve falls steeply, while the 5.0 V curve rises to the top of the group. Read values from the image/PDF.](e5a88700fea39ece3263b40902162d61_img.jpg)\n\nFigure 10-7: Efficiency versus Output Current (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Efficiency (60 to 100%) versus Output Current (A, logarithmic, 100µ to 2), one curve per input voltage: V<sub>I</sub> = 1.8 V (black), 3.3 V (red) and 5.0 V (gray). Efficiency rises from the lightest load and flattens out from about 1m upward. The 3.3 V curve is highest over most of the range; the 1.8 V and 5.0 V curves are lower and close together. Above about 100m the 1.8 V curve falls steeply, while the 5.0 V curve rises to the top of the group. Read values from the image/PDF.\n\nV<sub>O</sub> = 3.3 V\n\nMODE = Low\n\n**Figure 10-7. Efficiency versus Output Current (PFM/PWM)**\n",
+    "evidence": "PDF p22 Figure 10-7: the AI text said efficiency 'remains relatively constant' for each input voltage; the 1.8 V curve collapses at high current, and the 3.3 V curve is highest. The printed conditions 'VO = 3.3 V', 'MODE = Low' were missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p23-fig10-8-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 23,
+    "old": "![Figure 10-8: Efficiency versus Input Voltage (PWM Only). This line graph plots Efficiency (%) on the y-axis (0 to 100) against Output Current (A) on a logarithmic x-axis (1m to 2). Three curves are shown for different input voltages: VI = 1.8 V (black), VI = 3.3 V (red), and VI = 5.0 V (grey). The 3.3 V curve shows the highest efficiency, peaking at approximately 95% around 100 mA. The 1.8 V curve peaks at about 90% at 100 mA, while the 5.0 V curve peaks at about 85% at 100 mA. All curves show a sharp decline in efficiency as current increases beyond 100 mA, with the 1.8 V curve dropping to about 65% at 2 A.](9b5411fa2d169b66f6185fbf67b49766_img.jpg)\n\nEfficiency (%)\n\nOutput Current (A)\n\nLegend:  $V_I = 1.8\\text{ V}$ ,  $V_I = 3.3\\text{ V}$ ,  $V_I = 5.0\\text{ V}$\n\n$V_O = 3.3\\text{ V}$  MODE = High\n\nD022\n\nFigure 10-8: Efficiency versus Input Voltage (PWM Only). This line graph plots Efficiency (%) on the y-axis (0 to 100) against Output Current (A) on a logarithmic x-axis (1m to 2). Three curves are shown for different input voltages: VI = 1.8 V (black), VI = 3.3 V (red), and VI = 5.0 V (grey). The 3.3 V curve shows the highest efficiency, peaking at approximately 95% around 100 mA. The 1.8 V curve peaks at about 90% at 100 mA, while the 5.0 V curve peaks at about 85% at 100 mA. All curves show a sharp decline in efficiency as current increases beyond 100 mA, with the 1.8 V curve dropping to about 65% at 2 A.\n\n**Figure 10-8. Efficiency versus Input Voltage (PWM Only)**\n",
+    "new": "![Figure 10-8: Efficiency versus Input Voltage (PWM Only), V<sub>O</sub> = 3.3 V, MODE = High. Although the caption says 'versus Input Voltage', the graph plots Efficiency (0 to 100%) versus Output Current (A, logarithmic, 1m to 2), one curve per input voltage: V<sub>I</sub> = 1.8 V (black), 3.3 V (red) and 5.0 V (gray). Efficiency is low at light load, rises in an S-shape and flattens out at high current. The 1.8 V curve is slightly highest at light load with the 3.3 V curve just below it, and the 5.0 V curve is lowest and rises later. At the highest currents the 1.8 V curve peaks first and falls steeply, the 3.3 V curve falls slightly and the 5.0 V curve is highest. Read values from the image/PDF.](9b5411fa2d169b66f6185fbf67b49766_img.jpg)\n\nFigure 10-8: Efficiency versus Input Voltage (PWM Only), V<sub>O</sub> = 3.3 V, MODE = High. Although the caption says 'versus Input Voltage', the graph plots Efficiency (0 to 100%) versus Output Current (A, logarithmic, 1m to 2), one curve per input voltage: V<sub>I</sub> = 1.8 V (black), 3.3 V (red) and 5.0 V (gray). Efficiency is low at light load, rises in an S-shape and flattens out at high current. The 1.8 V curve is slightly highest at light load with the 3.3 V curve just below it, and the 5.0 V curve is lowest and rises later. At the highest currents the 1.8 V curve peaks first and falls steeply, the 3.3 V curve falls slightly and the 5.0 V curve is highest. Read values from the image/PDF.\n\nEfficiency (%)\n\nOutput Current (A)\n\nLegend:  $V_I = 1.8\\text{ V}$ ,  $V_I = 3.3\\text{ V}$ ,  $V_I = 5.0\\text{ V}$\n\n$V_O = 3.3\\text{ V}$  MODE = High\n\nD022\n\n**Figure 10-8. Efficiency versus Input Voltage (PWM Only)**\n",
+    "evidence": "PDF p23 Figure 10-8: the AI text gave peak values read from the curves ('95% around 100 mA', '90%', '85%', '65% at 2 A') and said all curves decline sharply beyond 100 mA; only the 1.8 V curve collapses, the 5.0 V curve ends highest. The caption/x-axis mismatch (caption 'Input Voltage', axis 'Output Current') is printed that way and kept. The description paragraph now directly follows the image (order only, so tools/llm_compact.py drops the duplicate).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p23-fig10-9-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 23,
+    "old": "![Figure 10-9: Efficiency versus Input Voltage (PFM/PWM). This line graph plots Efficiency (%) on the y-axis (50 to 100) against Input Voltage (V) on the x-axis (2.5 to 4.1). Five curves are shown for different output currents: IO = 100 µA (black), IO = 10 mA (red), IO = 100 mA (grey), IO = 1 A (blue), and IO = 1.5 A (green). Efficiency is generally high, between 80% and 95%, and remains relatively stable across the input voltage range for most load conditions, except for the 100 µA load which shows a slight dip around 3.7 V.](50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)\n\nEfficiency (%)\n\nInput Voltage (V)\n\nLegend:  $I_O = 100\\text{ }\\mu\\text{A}$ ,  $I_O = 10\\text{ mA}$ ,  $I_O = 100\\text{ mA}$ ,  $I_O = 1\\text{ A}$ ,  $I_O = 1.5\\text{ A}$\n\n$V_O = 3.3\\text{ V}$  MODE = Low\n\nD023\n\nFigure 10-9: Efficiency versus Input Voltage (PFM/PWM). This line graph plots Efficiency (%) on the y-axis (50 to 100) against Input Voltage (V) on the x-axis (2.5 to 4.1). Five curves are shown for different output currents: IO = 100 µA (black), IO = 10 mA (red), IO = 100 mA (grey), IO = 1 A (blue), and IO = 1.5 A (green). Efficiency is generally high, between 80% and 95%, and remains relatively stable across the input voltage range for most load conditions, except for the 100 µA load which shows a slight dip around 3.7 V.\n\n**Figure 10-9. Efficiency versus Input Voltage (PFM/PWM)**\n",
+    "new": "![Figure 10-9: Efficiency versus Input Voltage (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Efficiency (50 to 100%) versus Input Voltage (2.5 V to beyond 4.1 V), one curve per output current: I<sub>O</sub> = 100 µA (black), 10 mA (red), 100 mA (gray), 1 A (blue) and 1.5 A (green). The 100 µA curve is nearly flat and lies well below the others. The other four curves lie close together near the top: the 10 mA and 100 mA curves nearly overlap, the 1.5 A curve starts lowest and has a dip at low input voltage, the 1 A curve is highest over most of the range with a dip just before the step. All curves show a small step near 3.8 V input. Read values from the image/PDF.](50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)\n\nFigure 10-9: Efficiency versus Input Voltage (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Efficiency (50 to 100%) versus Input Voltage (2.5 V to beyond 4.1 V), one curve per output current: I<sub>O</sub> = 100 µA (black), 10 mA (red), 100 mA (gray), 1 A (blue) and 1.5 A (green). The 100 µA curve is nearly flat and lies well below the others. The other four curves lie close together near the top: the 10 mA and 100 mA curves nearly overlap, the 1.5 A curve starts lowest and has a dip at low input voltage, the 1 A curve is highest over most of the range with a dip just before the step. All curves show a small step near 3.8 V input. Read values from the image/PDF.\n\nEfficiency (%)\n\nInput Voltage (V)\n\nLegend:  $I_O = 100\\text{ }\\mu\\text{A}$ ,  $I_O = 10\\text{ mA}$ ,  $I_O = 100\\text{ mA}$ ,  $I_O = 1\\text{ A}$ ,  $I_O = 1.5\\text{ A}$\n\n$V_O = 3.3\\text{ V}$  MODE = Low\n\nD023\n\n**Figure 10-9. Efficiency versus Input Voltage (PFM/PWM)**\n",
+    "evidence": "PDF p23 Figure 10-9: the AI text said efficiency is 'between 80% and 95%' for all loads with only 'a slight dip' at 100 µA; the 100 µA curve lies well below the other four, and the 1 A/1.5 A curves have their own dips. Rewritten with curve order only. The description paragraph now directly follows the image (order only, so tools/llm_compact.py drops the duplicate).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p23-fig10-10-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 23,
+    "old": "![Figure 10-10: Efficiency versus Input Voltage (PWM Only). This line graph plots Efficiency (%) on the y-axis (60 to 100) against Input Voltage (V) on the x-axis (1.8 to 5.3). Three curves are shown for different output voltages: VO = 1.8 V (black), VO = 3.3 V (red), and VO = 5.2 V (grey). Efficiency is high, starting around 80% at 1.8 V input and peaking near 95% between 3.3 V and 4.3 V input. The 3.3 V output curve maintains the highest efficiency, while the 1.8 V curve shows a more pronounced decline in efficiency as input voltage increases beyond 4.3 V.](65a9654ccb3d0d452378b0f4c0c392f7_img.jpg)\n\nEfficiency (%)\n\nInput Voltage (V)\n\nLegend:  $V_O = 1.8\\text{ V}$ ,  $V_O = 3.3\\text{ V}$ ,  $V_O = 5.2\\text{ V}$\n\n$I_O = 1\\text{ A}$  MODE = Low\n\nD024\n\nFigure 10-10: Efficiency versus Input Voltage (PWM Only). This line graph plots Efficiency (%) on the y-axis (60 to 100) against Input Voltage (V) on the x-axis (1.8 to 5.3). Three curves are shown for different output voltages: VO = 1.8 V (black), VO = 3.3 V (red), and VO = 5.2 V (grey). Efficiency is high, starting around 80% at 1.8 V input and peaking near 95% between 3.3 V and 4.3 V input. The 3.3 V output curve maintains the highest efficiency, while the 1.8 V curve shows a more pronounced decline in efficiency as input voltage increases beyond 4.3 V.\n\n**Figure 10-10. Efficiency versus Input Voltage (PWM Only)**\n",
+    "new": "![Figure 10-10: Efficiency versus Input Voltage (PWM Only), I<sub>O</sub> = 1 A, MODE = Low (as printed). Efficiency (60 to 100%) versus Input Voltage (1.8 V to beyond 5.3 V), one curve per output voltage: V<sub>O</sub> = 1.8 V (black), 3.3 V (red) and 5.2 V (gray). All curves rise steeply at the lowest input voltages. The 1.8 V curve jumps to a flat level and then declines steadily with input voltage, ending lowest. The 3.3 V curve has small steps and is highest over the middle of the range. The 5.2 V curve starts lowest, rises, has a step and ends slightly above the 3.3 V curve at the highest input voltage. Read values from the image/PDF.](65a9654ccb3d0d452378b0f4c0c392f7_img.jpg)\n\nFigure 10-10: Efficiency versus Input Voltage (PWM Only), I<sub>O</sub> = 1 A, MODE = Low (as printed). Efficiency (60 to 100%) versus Input Voltage (1.8 V to beyond 5.3 V), one curve per output voltage: V<sub>O</sub> = 1.8 V (black), 3.3 V (red) and 5.2 V (gray). All curves rise steeply at the lowest input voltages. The 1.8 V curve jumps to a flat level and then declines steadily with input voltage, ending lowest. The 3.3 V curve has small steps and is highest over the middle of the range. The 5.2 V curve starts lowest, rises, has a step and ends slightly above the 3.3 V curve at the highest input voltage. Read values from the image/PDF.\n\nEfficiency (%)\n\nInput Voltage (V)\n\nLegend:  $V_O = 1.8\\text{ V}$ ,  $V_O = 3.3\\text{ V}$ ,  $V_O = 5.2\\text{ V}$\n\n$I_O = 1\\text{ A}$  MODE = Low\n\nD024\n\n**Figure 10-10. Efficiency versus Input Voltage (PWM Only)**\n",
+    "evidence": "PDF p23 Figure 10-10: values 'around 80%', 'near 95%' were read from the curves; the 5.2 V curve ends above the 3.3 V curve. Rewritten with curve order only. Caption 'PWM Only' with printed condition 'MODE = Low' kept as printed. The description paragraph now directly follows the image (order only, so tools/llm_compact.py drops the duplicate).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p23-fig10-11-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 23,
+    "old": "![Figure 10-11: Load Regulation (PWM Only). This line graph plots Output Voltage Regulation (%) on the y-axis (-0.3 to 0.2) against Output Current (A) on the x-axis (0 to 2.0). Three curves are shown for different input voltages: VI = 2.5 V (black), VI = 3.6 V (red), and VI = 4.2 V (grey). Regulation is very close to 0% across the entire output current range for all input voltages, indicating excellent load regulation.](ebb257e664fc85a1eb4d6534842794bb_img.jpg)\n\nOutput Voltage Regulation (%)\n\nOutput Current (A)\n\nLegend:  $V_I = 2.5\\text{ V}$ ,  $V_I = 3.6\\text{ V}$ ,  $V_I = 4.2\\text{ V}$\n\n$V_O = 3.3\\text{ V}$  MODE = High\n\nD026\n\nFigure 10-11: Load Regulation (PWM Only). This line graph plots Output Voltage Regulation (%) on the y-axis (-0.3 to 0.2) against Output Current (A) on the x-axis (0 to 2.0). Three curves are shown for different input voltages: VI = 2.5 V (black), VI = 3.6 V (red), and VI = 4.2 V (grey). Regulation is very close to 0% across the entire output current range for all input voltages, indicating excellent load regulation.\n\n**Figure 10-11. Load Regulation (PWM Only)**\n",
+    "new": "![Figure 10-11: Load Regulation (PWM Only), V<sub>O</sub> = 3.3 V, MODE = High. Output Voltage Regulation (−0.3 to 0.2%) versus Output Current (0 A to 2.0 A), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). All three curves lie slightly below zero and are nearly flat; with increasing current the 3.6 V curve rises a little, the 4.2 V curve less and the 2.5 V curve stays flat. Read values from the image/PDF.](ebb257e664fc85a1eb4d6534842794bb_img.jpg)\n\nFigure 10-11: Load Regulation (PWM Only), V<sub>O</sub> = 3.3 V, MODE = High. Output Voltage Regulation (−0.3 to 0.2%) versus Output Current (0 A to 2.0 A), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). All three curves lie slightly below zero and are nearly flat; with increasing current the 3.6 V curve rises a little, the 4.2 V curve less and the 2.5 V curve stays flat. Read values from the image/PDF.\n\nOutput Voltage Regulation (%)\n\nOutput Current (A)\n\nLegend:  $V_I = 2.5\\text{ V}$ ,  $V_I = 3.6\\text{ V}$ ,  $V_I = 4.2\\text{ V}$\n\n$V_O = 3.3\\text{ V}$  MODE = High\n\nD026\n\n**Figure 10-11. Load Regulation (PWM Only)**\n",
+    "evidence": "PDF p23 Figure 10-11: the curves lie slightly below 0% (the AI text said 'very close to 0%') and diverge a little at high current. Rewritten with curve order only. The description paragraph now directly follows the image (order only, so tools/llm_compact.py drops the duplicate).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p23-fig10-12-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 23,
+    "old": "![Figure 10-12: Load Regulation (PFM/PWM). This line graph plots Output Voltage Regulation (%) on the y-axis (-1.5 to 1.5) against Output Current (A) on the x-axis (0 to 2.0). Three curves are shown for different input voltages: VI = 2.5 V (black), VI = 3.6 V (red), and VI = 4.2 V (grey). Regulation is near 0% for currents above 0.5 A. For currents below 0.5 A, regulation degrades significantly, with the 2.5 V input showing the largest regulation error (up to 1.5%) and the 4.2 V input showing the smallest error at low currents.](4a0acd64a680ef89f832de06989e2544_img.jpg)\n\nOutput Voltage Regulation (%)\n\nOutput Current (A)\n\nLegend:  $V_I = 2.5\\text{ V}$ ,  $V_I = 3.6\\text{ V}$ ,  $V_I = 4.2\\text{ V}$\n\n$V_O = 3.3\\text{ V}$  MODE = Low\n\nD027\n\nFigure 10-12: Load Regulation (PFM/PWM). This line graph plots Output Voltage Regulation (%) on the y-axis (-1.5 to 1.5) against Output Current (A) on the x-axis (0 to 2.0). Three curves are shown for different input voltages: VI = 2.5 V (black), VI = 3.6 V (red), and VI = 4.2 V (grey). Regulation is near 0% for currents above 0.5 A. For currents below 0.5 A, regulation degrades significantly, with the 2.5 V input showing the largest regulation error (up to 1.5%) and the 4.2 V input showing the smallest error at low currents.\n\n**Figure 10-12. Load Regulation (PFM/PWM)**\n",
+    "new": "![Figure 10-12: Load Regulation (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Output Voltage Regulation (−1.5 to 1.5%) versus Output Current (0 A to 2.0 A), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). At light load (PFM) the regulation is positive and falls in a jagged way with increasing current; the 3.6 V curve starts highest and reaches zero last, the 2.5 V curve is next and the 4.2 V curve is lowest. Above the PFM range all curves are flat and close to zero. Read values from the image/PDF.](4a0acd64a680ef89f832de06989e2544_img.jpg)\n\nFigure 10-12: Load Regulation (PFM/PWM), V<sub>O</sub> = 3.3 V, MODE = Low. Output Voltage Regulation (−1.5 to 1.5%) versus Output Current (0 A to 2.0 A), one curve per input voltage: V<sub>I</sub> = 2.5 V (black), 3.6 V (red) and 4.2 V (gray). At light load (PFM) the regulation is positive and falls in a jagged way with increasing current; the 3.6 V curve starts highest and reaches zero last, the 2.5 V curve is next and the 4.2 V curve is lowest. Above the PFM range all curves are flat and close to zero. Read values from the image/PDF.\n\nOutput Voltage Regulation (%)\n\nOutput Current (A)\n\nLegend:  $V_I = 2.5\\text{ V}$ ,  $V_I = 3.6\\text{ V}$ ,  $V_I = 4.2\\text{ V}$\n\n$V_O = 3.3\\text{ V}$  MODE = Low\n\nD027\n\n**Figure 10-12. Load Regulation (PFM/PWM)**\n",
+    "evidence": "PDF p23 Figure 10-12: the largest light-load offset belongs to the 3.6 V (red) curve, not 2.5 V as the AI text said ('up to 1.5%' was read from the axis). Rewritten with curve order only. The description paragraph now directly follows the image (order only, so tools/llm_compact.py drops the duplicate).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p23-fig10-13-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 23,
+    "old": "![Figure 10-13: Line Regulation (PWM Only). This line graph plots Output Voltage Regulation (%) on the y-axis (-0.3 to 0.3) against Input Voltage (V) on the x-axis (2.5 to 4.3). Three curves are shown for different output voltages: VO = 1.8 V (black), VO = 3.3 V (red), and VO = 5.2 V (grey). Regulation is very stable and close to 0% across the entire input voltage range for all output voltages, indicating excellent line regulation.](7978d5099076a93ea7969446444502f8_img.jpg)\n\nOutput Voltage Regulation (%)\n\nInput Voltage (V)\n\nLegend:  $V_O = 1.8\\text{ V}$ ,  $V_O = 3.3\\text{ V}$ ,  $V_O = 5.2\\text{ V}$\n\n$I_O = 1\\text{ A}$  MODE = Low\n\nD028\n\nFigure 10-13: Line Regulation (PWM Only). This line graph plots Output Voltage Regulation (%) on the y-axis (-0.3 to 0.3) against Input Voltage (V) on the x-axis (2.5 to 4.3). Three curves are shown for different output voltages: VO = 1.8 V (black), VO = 3.3 V (red), and VO = 5.2 V (grey). Regulation is very stable and close to 0% across the entire input voltage range for all output voltages, indicating excellent line regulation.\n\n**Figure 10-13. Line Regulation (PWM Only)**\n",
+    "new": "![Figure 10-13: Line Regulation (PWM Only), I<sub>O</sub> = 1 A, MODE = Low (as printed). Output Voltage Regulation (−0.3 to 0.3%) versus Input Voltage (2.5 V to 4.3 V), one curve per output voltage: V<sub>O</sub> = 1.8 V (black), 3.3 V (red) and 5.2 V (gray). All curves are nearly flat over the input voltage range; the 1.8 V curve has a positive offset, the 5.2 V curve is close to zero and the 3.3 V curve has a negative offset. Read values from the image/PDF.](7978d5099076a93ea7969446444502f8_img.jpg)\n\nFigure 10-13: Line Regulation (PWM Only), I<sub>O</sub> = 1 A, MODE = Low (as printed). Output Voltage Regulation (−0.3 to 0.3%) versus Input Voltage (2.5 V to 4.3 V), one curve per output voltage: V<sub>O</sub> = 1.8 V (black), 3.3 V (red) and 5.2 V (gray). All curves are nearly flat over the input voltage range; the 1.8 V curve has a positive offset, the 5.2 V curve is close to zero and the 3.3 V curve has a negative offset. Read values from the image/PDF.\n\nOutput Voltage Regulation (%)\n\nInput Voltage (V)\n\nLegend:  $V_O = 1.8\\text{ V}$ ,  $V_O = 3.3\\text{ V}$ ,  $V_O = 5.2\\text{ V}$\n\n$I_O = 1\\text{ A}$  MODE = Low\n\nD028\n\n**Figure 10-13. Line Regulation (PWM Only)**\n",
+    "evidence": "PDF p23 Figure 10-13: the three curves have different offsets (1.8 V positive, 5.2 V near zero, 3.3 V negative); the AI text said all are 'close to 0%'. Caption 'PWM Only' with printed 'MODE = Low' kept as printed. The description paragraph now directly follows the image (order only, so tools/llm_compact.py drops the duplicate).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p24-fig10-14-description-after-image",
+    "file": "output/tps63802/tps63802.md",
+    "page": 24,
+    "old": "![Figure 10-14: Line Regulation (PFM/PWM) graph showing Output Voltage Regulation (%) vs Input Voltage (V) for V_O = 1.8 V, 3.3 V, and 5.2 V at I_O = 1 A, MODE = High.](45329c7d9aa2bd1290af5b2027f08d7e_img.jpg)\n\nOutput Voltage Regulation (%)\n\nInput Voltage (V)\n\n—  $V_O = 1.8\\text{ V}$   \n —  $V_O = 3.3\\text{ V}$   \n —  $V_O = 5.2\\text{ V}$\n\n$I_O = 1\\text{ A}$       MODE = High\n\nFigure 10-14: Line Regulation (PFM/PWM) graph showing Output Voltage Regulation (%) vs Input Voltage (V) for V\\_O = 1.8 V, 3.3 V, and 5.2 V at I\\_O = 1 A, MODE = High.\n",
+    "new": "![Figure 10-14: Line Regulation (PFM/PWM) graph showing Output Voltage Regulation (%) vs Input Voltage (V) for V_O = 1.8 V, 3.3 V, and 5.2 V at I_O = 1 A, MODE = High.](45329c7d9aa2bd1290af5b2027f08d7e_img.jpg)\n\nFigure 10-14: Line Regulation (PFM/PWM) graph showing Output Voltage Regulation (%) vs Input Voltage (V) for V\\_O = 1.8 V, 3.3 V, and 5.2 V at I\\_O = 1 A, MODE = High.\n\nOutput Voltage Regulation (%)\n\nInput Voltage (V)\n\n—  $V_O = 1.8\\text{ V}$   \n —  $V_O = 3.3\\text{ V}$   \n —  $V_O = 5.2\\text{ V}$\n\n$I_O = 1\\text{ A}$       MODE = High\n",
+    "evidence": "Order only: the Figure 10-14 description paragraph (identical to the alt text) now directly follows the image, before the axis labels, legend and printed conditions, so tools/llm_compact.py drops the duplicate. Checked against the PDF p24 graph (I O = 1 A, MODE = High, VO = 1.8/3.3/5.2 V); no content change.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p24-fig10-15-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 24,
+    "old": "![Figure 10-15: Switching Waveforms, PFM Boost Operation. Oscilloscope traces for V_O, L1, L2, and I_L at V_I = 2.3 V, V_O = 3.3 V, MODE = Low, I_O = 40 mA.](b6bd6d8ee5821226bc79251ca5937e07_img.jpg)\n\n$V_I = 2.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 40\\text{ mA}$\n\nFigure 10-15: Switching Waveforms, PFM Boost Operation. Oscilloscope traces for V\\_O, L1, L2, and I\\_L at V\\_I = 2.3 V, V\\_O = 3.3 V, MODE = Low, I\\_O = 40 mA.\n\n**Figure 10-15. Switching Waveforms, PFM Boost Operation**\n",
+    "new": "![Figure 10-15: Switching Waveforms, PFM Boost Operation, V<sub>I</sub> = 2.3 V, V<sub>O</sub> = 3.3 V, MODE = Low, I<sub>O</sub> = 40 mA. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 50 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Two PFM bursts are visible. During each burst L1 stays high while L2 switches three times and IL forms three triangular current pulses; between the bursts L1 and L2 are low (L2 rings briefly after the burst) and IL is zero. Vo steps up during each burst and decays slowly until the next burst. Read values from the image/PDF.](b6bd6d8ee5821226bc79251ca5937e07_img.jpg)\n\nFigure 10-15: Switching Waveforms, PFM Boost Operation, V<sub>I</sub> = 2.3 V, V<sub>O</sub> = 3.3 V, MODE = Low, I<sub>O</sub> = 40 mA. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 50 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Two PFM bursts are visible. During each burst L1 stays high while L2 switches three times and IL forms three triangular current pulses; between the bursts L1 and L2 are low (L2 rings briefly after the burst) and IL is zero. Vo steps up during each burst and decays slowly until the next burst. Read values from the image/PDF.\n\n$V_I = 2.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 40\\text{ mA}$\n\n**Figure 10-15. Switching Waveforms, PFM Boost Operation**\n",
+    "evidence": "PDF p24 Figure 10-15 (embedded scope screenshot viewed at native 1178x721 resolution): the AI alt text only listed the traces; rewritten from the capture with channels, per-division scales and waveform shapes (three current pulses per burst, L1 high); description moved directly after the image, before the printed condition line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p24-fig10-16-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 24,
+    "old": "![Figure 10-16: Switching Waveforms, PFM Buck-Boost Operation. Oscilloscope traces for V_O, L1, L2, and I_L at V_I = 3.3 V, V_O = 3.3 V, MODE = Low, I_O = 40 mA.](f1c3ae01c82d4410b559fad6174a2f1a_img.jpg)\n\n$V_I = 3.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 40\\text{ mA}$\n\nFigure 10-16: Switching Waveforms, PFM Buck-Boost Operation. Oscilloscope traces for V\\_O, L1, L2, and I\\_L at V\\_I = 3.3 V, V\\_O = 3.3 V, MODE = Low, I\\_O = 40 mA.\n\n**Figure 10-16. Switching Waveforms, PFM Buck-Boost Operation**\n",
+    "new": "![Figure 10-16: Switching Waveforms, PFM Buck-Boost Operation, V<sub>I</sub> = 3.3 V, V<sub>O</sub> = 3.3 V, MODE = Low, I<sub>O</sub> = 40 mA. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 50 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Two PFM bursts are visible. In each burst L1 and L2 are high in two pulses each and IL forms two current pulses with a rising edge, a nearly flat top and a falling edge; between the bursts L1, L2 and IL are at zero (L2 rings briefly after the burst). Vo steps up during each burst and decays slowly until the next burst. Read values from the image/PDF.](f1c3ae01c82d4410b559fad6174a2f1a_img.jpg)\n\nFigure 10-16: Switching Waveforms, PFM Buck-Boost Operation, V<sub>I</sub> = 3.3 V, V<sub>O</sub> = 3.3 V, MODE = Low, I<sub>O</sub> = 40 mA. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 50 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Two PFM bursts are visible. In each burst L1 and L2 are high in two pulses each and IL forms two current pulses with a rising edge, a nearly flat top and a falling edge; between the bursts L1, L2 and IL are at zero (L2 rings briefly after the burst). Vo steps up during each burst and decays slowly until the next burst. Read values from the image/PDF.\n\n$V_I = 3.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 40\\text{ mA}$\n\n**Figure 10-16. Switching Waveforms, PFM Buck-Boost Operation**\n",
+    "evidence": "PDF p24 Figure 10-16 (embedded scope screenshot viewed at native 1178x721 resolution): the AI alt text only listed the traces; rewritten from the capture with channels, per-division scales and waveform shapes (two pulses per burst on L1, L2 and IL); description moved directly after the image, before the printed condition line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p24-fig10-17-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 24,
+    "old": "![Figure 10-17: Switching Waveforms, PFM Buck Operation. Oscilloscope traces for V_O, L1, L2, and I_L at V_I = 4.2 V, V_O = 3.3 V, MODE = Low, I_O = 40 mA.](367ee68d9b8e16d27f4271a3c5c8ed18_img.jpg)\n\n$V_I = 4.2\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 40\\text{ mA}$\n\nFigure 10-17: Switching Waveforms, PFM Buck Operation. Oscilloscope traces for V\\_O, L1, L2, and I\\_L at V\\_I = 4.2 V, V\\_O = 3.3 V, MODE = Low, I\\_O = 40 mA.\n\n**Figure 10-17. Switching Waveforms, PFM Buck Operation**\n",
+    "new": "![Figure 10-17: Switching Waveforms, PFM Buck Operation, V<sub>I</sub> = 4.2 V, V<sub>O</sub> = 3.3 V, MODE = Low, I<sub>O</sub> = 40 mA. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 50 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Two PFM bursts are visible. In each burst L2 stays high while L1 switches twice (one short low pulse) and IL forms two sawtooth current ramps; between the bursts L1, L2 and IL are at zero (L2 rings briefly after the burst). Vo rises during each burst and decays slowly until the next burst. Read values from the image/PDF.](367ee68d9b8e16d27f4271a3c5c8ed18_img.jpg)\n\nFigure 10-17: Switching Waveforms, PFM Buck Operation, V<sub>I</sub> = 4.2 V, V<sub>O</sub> = 3.3 V, MODE = Low, I<sub>O</sub> = 40 mA. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 50 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Two PFM bursts are visible. In each burst L2 stays high while L1 switches twice (one short low pulse) and IL forms two sawtooth current ramps; between the bursts L1, L2 and IL are at zero (L2 rings briefly after the burst). Vo rises during each burst and decays slowly until the next burst. Read values from the image/PDF.\n\n$V_I = 4.2\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 40\\text{ mA}$\n\n**Figure 10-17. Switching Waveforms, PFM Buck Operation**\n",
+    "evidence": "PDF p24 Figure 10-17 (embedded scope screenshot viewed at native 1178x721 resolution): the AI alt text only listed the traces; rewritten from the capture with channels, per-division scales and waveform shapes (L2 high, L1 switching, two ramps per burst); description moved directly after the image, before the printed condition line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p24-fig10-18-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 24,
+    "old": "![Figure 10-18: Switching Waveforms, PWM Boost Operation. Oscilloscope traces for V_O, L1, L2, and I_L at V_I = 2.3 V, V_O = 3.3 V, MODE = Low, I_O = 2 A.](8db6897b1527256adb62e789ab3e5197_img.jpg)\n\n$V_I = 2.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 2\\text{ A}$\n\nFigure 10-18: Switching Waveforms, PWM Boost Operation. Oscilloscope traces for V\\_O, L1, L2, and I\\_L at V\\_I = 2.3 V, V\\_O = 3.3 V, MODE = Low, I\\_O = 2 A.\n\n**Figure 10-18. Switching Waveforms, PWM Boost Operation**\n",
+    "new": "![Figure 10-18: Switching Waveforms, PWM Boost Operation, V<sub>I</sub> = 2.3 V, V<sub>O</sub> = 3.3 V, MODE = Low (as printed), I<sub>O</sub> = 2 A. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 20 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Continuous switching: L1 stays at a constant level, L2 switches continuously as a square wave and IL is a continuous triangle wave; Vo shows a small ripple with spikes at the switching edges. Read values from the image/PDF.](8db6897b1527256adb62e789ab3e5197_img.jpg)\n\nFigure 10-18: Switching Waveforms, PWM Boost Operation, V<sub>I</sub> = 2.3 V, V<sub>O</sub> = 3.3 V, MODE = Low (as printed), I<sub>O</sub> = 2 A. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 20 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Continuous switching: L1 stays at a constant level, L2 switches continuously as a square wave and IL is a continuous triangle wave; Vo shows a small ripple with spikes at the switching edges. Read values from the image/PDF.\n\n$V_I = 2.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 2\\text{ A}$\n\n**Figure 10-18. Switching Waveforms, PWM Boost Operation**\n",
+    "evidence": "PDF p24 Figure 10-18 (embedded scope screenshot viewed at native 1178x721 resolution): the AI alt text only listed the traces; rewritten from the capture with channels, per-division scales and waveform shapes (Ch1 at 20 mV/div, L1 not switching); description moved directly after the image, before the printed condition line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p24-fig10-19-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 24,
+    "old": "![Figure 10-19: Switching Waveforms, PWM Buck-Boost Operation. Oscilloscope traces for V_O, L1, L2, and I_L at V_I = 3.3 V, V_O = 3.3 V, MODE = Low, I_O = 2 A.](6350c3c1007ce4254a7d803c527ee254_img.jpg)\n\n$V_I = 3.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 2\\text{ A}$\n\nFigure 10-19: Switching Waveforms, PWM Buck-Boost Operation. Oscilloscope traces for V\\_O, L1, L2, and I\\_L at V\\_I = 3.3 V, V\\_O = 3.3 V, MODE = Low, I\\_O = 2 A.\n\n**Figure 10-19. Switching Waveforms, PWM Buck-Boost Operation**\n",
+    "new": "![Figure 10-19: Switching Waveforms, PWM Buck-Boost Operation, V<sub>I</sub> = 3.3 V, V<sub>O</sub> = 3.3 V, MODE = Low (as printed), I<sub>O</sub> = 2 A. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 20 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Continuous switching: both L1 and L2 are mostly high with short low pulses every cycle, and IL is a periodic waveform with a steep rise, a rounded peak, a falling edge and a short flat bottom; Vo shows a small ripple with spikes at the switching edges. Read values from the image/PDF.](6350c3c1007ce4254a7d803c527ee254_img.jpg)\n\nFigure 10-19: Switching Waveforms, PWM Buck-Boost Operation, V<sub>I</sub> = 3.3 V, V<sub>O</sub> = 3.3 V, MODE = Low (as printed), I<sub>O</sub> = 2 A. Oscilloscope capture, 2 µs/div, channels: Vo (Ch1, 20 mV/div), IL (Ch2, 500 mA/div), L1 (Ch3, 3 V/div), L2 (Ch4, 3 V/div). Continuous switching: both L1 and L2 are mostly high with short low pulses every cycle, and IL is a periodic waveform with a steep rise, a rounded peak, a falling edge and a short flat bottom; Vo shows a small ripple with spikes at the switching edges. Read values from the image/PDF.\n\n$V_I = 3.3\\text{ V}, V_O = 3.3\\text{ V}$       MODE = Low       $I_O = 2\\text{ A}$\n\n**Figure 10-19. Switching Waveforms, PWM Buck-Boost Operation**\n",
+    "evidence": "PDF p24 Figure 10-19 (embedded scope screenshot viewed at native 1178x721 resolution): the AI alt text only listed the traces; rewritten from the capture with channels, per-division scales and waveform shapes (Ch1 at 20 mV/div, both L1 and L2 switching); description moved directly after the image, before the printed condition line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
