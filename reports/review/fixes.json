@@ -20099,5 +20099,30 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p16-rev-d-footer-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 16,
+    "old": "\n| SCL                  | 30             | J6             | In             | PMBus Serial Clock Input Pin (400kHz Maximum)                                                                                                                                                                                                                                                                                                                 |\n\nRev. D\n",
+    "new": "\n| SCL                  | 30             | J6             | In             | PMBus Serial Clock Input Pin (400kHz Maximum)                                                                                                                                                                                                                                                                                                                 |\n",
+    "evidence": "PDF p16: 'Rev. D' is the running footer printed on every page; it leaked into the md after the pin table.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p17-gnd-pin52-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 17,
+    "old": "| Chip Ground. Must Be Soldered to PCB.  ",
+    "new": "| Chip Ground. Must be Soldered to PCB.  ",
+    "evidence": "PDF p17 (pdftotext + render): the pin 52 GND description is printed 'Must be Soldered to PCB.' (lowercase 'be', with a period), unlike the other GND rows.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
