@@ -26446,5 +26446,187 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps63802-p9-leaked-running-header",
+    "file": "output/tps63802/tps63802.md",
+    "page": 9,
+    "old": "**TEXAS INSTRUMENTS**  \n**TPS63802**  \n[www.ti.com](https://www.ti.com) SLVSEU9D – NOVEMBER 2018 – REVISED JANUARY 2021\n\n## 9 Detailed Description\n",
+    "new": "## 9 Detailed Description\n",
+    "evidence": "PDF p9: 'TEXAS INSTRUMENTS / TPS63802 / www.ti.com SLVSEU9D ...' is the running page header (omitted on every other page of the md).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p9-block-diagram-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 9,
+    "old": "Image: TPS63802 Functional Block Diagram showing internal circuitry and external connections\n\n*Functional Block Diagram Description:* A detailed internal block diagram of the TPS63802 IC showing pins VIN, EN, MODE, GND, L1, L2, VOUT, PG, FB, and AGND. Internal blocks include: an H-bridge power stage consisting of four MOSFET switches connected between VIN, L1, L2, VOUT, and power GND, with external inductor L connected between L1 and L2, and capacitors C<sub>IN</sub> on VIN and C<sub>OUT</sub> on VOUT. The high-side and low-side switches are driven by Gate Driver blocks controlled by 'Device Control'. A Current Sensor monitors the input/bridge path. An internal logic block 'Device Control' manages Power Safe Mode, Protection, Current Limit, Buck/Boost Control, Off-time calculation, and Soft-Start, taking inputs from VIN, VOUT, L1, L2, and providing Gate Driver and Power Good signals. An error amplifier compares the feedback signal at FB with an internal reference (Ref 500 mV) alongside internal RC compensation. A V<sub>MAX</sub> Switch connects VIN and VOUT. EN pin connects to a Schmitt trigger comparator with Ref 1.1 V.\n\nCopyright © 2021 Texas Instruments Incorporated **Submit Document Feedback** 9  \nProduct Folder Links: *[TPS63802](#)*\n",
+    "new": "*[Diagram not extracted as an image in this conversion; see PDF p9. Description written from the drawing.]*\n\nFunctional block diagram of the TPS63802 (description written from the drawing). Pins VIN, EN, MODE and GND are on the left, L1 and L2 at the top, VOUT, PG, FB and AGND on the right. External parts: C<sub>IN</sub> from VIN to ground, the inductor L between L1 and L2, C<sub>OUT</sub> from VOUT to ground. Power stage: VIN passes through a Current Sensor (drawn as a current-sense loop on the VIN line) to a high-side MOSFET (drawn with its body diode) that connects VIN to the L1 node; a low-side MOSFET connects L1 to the power ground node. On the output side a low-side MOSFET connects the L2 node to the same ground node and a high-side MOSFET (with body diode) connects L2 to VOUT. One Gate Driver drives both input-side MOSFETs and a second Gate Driver drives both output-side MOSFETs; each Gate Driver is controlled by 'Device Control'. A V<sub>MAX</sub> Switch, connected to V<sub>IN</sub> and V<sub>OUT</sub>, feeds the 'Device Control' block (Power Safe Mode, Protection, Current Limit, Buck/Boost Control, Off-time calculation, Soft-Start), which also has inputs V<sub>IN</sub>, MODE, V<sub>OUT</sub> and L1, L2 and outputs Gate Driver and Power Good. EN drives the + input of a comparator with hysteresis whose – input is Ref 1.1 V; its output goes to Device Control. FB drives the + input of an error amplifier (transconductance symbol) whose – input is Ref 500 mV. Its output node is compensated to AGND by a capacitor in parallel with a series resistor-capacitor and drives the – input of a comparator; the + input of that comparator is the Current Sensor signal, and its output goes to Device Control. PG is an open-drain output: an N-channel MOSFET, gate driven by Device Control, pulls PG to ground. GND goes to the power ground; AGND is the ground of the compensation network.\n",
+    "evidence": "PDF p9 vector block diagram (rendered 150-300 dpi): the AI text said the error amplifier output uses 'internal RC compensation' only and missed the current comparator: FB and Ref 500 mV feed a transconductance amplifier whose compensated output (C || R-C to AGND) goes to the – input of a comparator whose + input is the Current Sensor signal, output to Device Control; the PG open-drain FET and the per-side gate drivers were not described; the V_MAX Switch output feeds Device Control. The leaked running footer ('Copyright © 2021 ... Submit Document Feedback 9 / Product Folder Links') was removed. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p10-fig9-1-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 10,
+    "old": "![Figure 9-1: Control Loop Architecture Scheme. This schematic diagram illustrates the control loop of the TPS63802. It shows the voltage loop where the feedback (FB) is compared against a 500mV reference by an error amplifier. The output of this amplifier, V_EA, is filtered by a type-2 compensation network (resistor and two capacitors) to produce the reference current I_REF. The current loop compares I_REF with the peak current I_PK from the boost high-side MOSFET. The resulting error signal is processed by a skip-comparator (I_SKIP) to control a Gate Driver, which in turn drives the MOSFET. The MOSFET is connected to the input voltage VIN and the inductor L1.](54fabc351eda5228d2fa28cd9ba07971_img.jpg)\n\nFigure 9-1: Control Loop Architecture Scheme. This schematic diagram illustrates the control loop of the TPS63802. It shows the voltage loop where the feedback (FB) is compared against a 500mV reference by an error amplifier. The output of this amplifier, V\\_EA, is filtered by a type-2 compensation network (resistor and two capacitors) to produce the reference current I\\_REF. The current loop compares I\\_REF with the peak current I\\_PK from the boost high-side MOSFET. The resulting error signal is processed by a skip-comparator (I\\_SKIP) to control a Gate Driver, which in turn drives the MOSFET. The MOSFET is connected to the input voltage VIN and the inductor L1.\n",
+    "new": "![Figure 9-1: Control Loop Architecture Scheme (description written from the drawing). FB drives the + input of the error amplifier (transconductance symbol) whose – input is Ref 500mV. Its output node V<sub>EA</sub> is compensated to ground by a series resistor-capacitor in parallel with a capacitor (type-2 compensation) and controls a variable current source that produces I<sub>REF</sub>. I<sub>REF</sub> passes through a switch to the + input of the current comparator, whose – input is I<sub>PK</sub>, sensed by a current-sense loop on the line from the VIN pin to the MOSFET (drawn with its body diode) that connects VIN to L1; the comparator output goes to the Gate Driver. The skip comparator (with hysteresis) compares I<sub>REF</sub> (+ input) with I<sub>SKIP</sub> (– input) and its output opens or closes the switch in the I<sub>REF</sub> path.](54fabc351eda5228d2fa28cd9ba07971_img.jpg)\n\nFigure 9-1: Control Loop Architecture Scheme (description written from the drawing). FB drives the + input of the error amplifier (transconductance symbol) whose – input is Ref 500mV. Its output node V<sub>EA</sub> is compensated to ground by a series resistor-capacitor in parallel with a capacitor (type-2 compensation) and controls a variable current source that produces I<sub>REF</sub>. I<sub>REF</sub> passes through a switch to the + input of the current comparator, whose – input is I<sub>PK</sub>, sensed by a current-sense loop on the line from the VIN pin to the MOSFET (drawn with its body diode) that connects VIN to L1; the comparator output goes to the Gate Driver. The skip comparator (with hysteresis) compares I<sub>REF</sub> (+ input) with I<sub>SKIP</sub> (– input) and its output opens or closes the switch in the I<sub>REF</sub> path.\n",
+    "evidence": "PDF p10 Figure 9-1 (rendered 220 dpi): V_EA controls a current source that produces I_REF (the AI text said the compensation network 'produces' I_REF); the skip comparator compares I_REF with I_SKIP and operates a switch in the I_REF path to the current comparator; the current comparator (I_REF on +, I_PK on –) drives the Gate Driver (the AI text had the skip comparator controlling the Gate Driver). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63802-p11-fig9-3-caption-bold",
+    "file": "output/tps63802/tps63802.md",
+    "page": 11,
+    "old": "\nFigure 9-3. Rising and Falling Undervoltage Lockout Behavior\n",
+    "new": "\n**Figure 9-3. Rising and Falling Undervoltage Lockout Behavior**\n",
+    "evidence": "PDF p11: the Figure 9-3 caption is bold like the other captions (written **...** elsewhere in the md).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p11-settle-vo-lowercase",
+    "file": "output/tps63802/tps63802.md",
+    "page": 11,
+    "old": "the longer it takes to settle  $V_O$ .",
+    "new": "the longer it takes to settle  $V_o$ .",
+    "evidence": "PDF p11 spans: 'settle V' + subscript 'o' (lowercase), unlike 'V_O' two lines above.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p12-fig9-4-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 12,
+    "old": "![Figure 9-4. Device Start-up Scheme. This timing diagram illustrates the start-up sequence of the TPS63802. It shows the relationship between VIN, EN, Current Limit, Inductor Current, VOUT, and Power Good signals. VIN rises first. When EN goes high, the device enters a delay time (T_delay) before starting to ramp the output voltage (VOUT). During the ramp time (T_ramp), the output voltage rises towards its nominal level. The Power Good signal goes high when VOUT reaches 95% of its nominal voltage (0.95 x VOUT). The Inductor Current shows a纹波 during the ramp-up phase. The total start-up time (T_Start-up) is the sum of the delay time and the ramp time.](42ff8b598a0818ca8b6ef30850ad5f4e_img.jpg)\n\nFigure 9-4. Device Start-up Scheme. This timing diagram illustrates the start-up sequence of the TPS63802. It shows the relationship between VIN, EN, Current Limit, Inductor Current, VOUT, and Power Good signals. VIN rises first. When EN goes high, the device enters a delay time (T\\_delay) before starting to ramp the output voltage (VOUT). During the ramp time (T\\_ramp), the output voltage rises towards its nominal level. The Power Good signal goes high when VOUT reaches 95% of its nominal voltage (0.95 x VOUT). The Inductor Current shows a纹波 during the ramp-up phase. The total start-up time (T\\_Start-up) is the sum of the delay time and the ramp time.\n",
+    "new": "![Figure 9-4. Device Start-up Scheme (description written from the drawing). Timing diagram with the traces VIN, EN, Current Limit, Inductor Current, VOUT and Power Good. VIN rises first, then EN goes high. T<sub>delay</sub> runs from the EN edge to the start of switching. The Current Limit trace starts to ramp up shortly before the end of T<sub>delay</sub> and continues to rise linearly to its final level. During T<sub>ramp</sub> the Inductor Current is a rising sawtooth and VOUT rises from zero; when VOUT reaches 0.95 x V<sub>OUT</sub> (red marker) Power Good goes high, the inductor current returns to zero and VOUT settles at its final level. T<sub>Start-up</sub> spans T<sub>delay</sub> plus T<sub>ramp</sub>.](42ff8b598a0818ca8b6ef30850ad5f4e_img.jpg)\n\nFigure 9-4. Device Start-up Scheme (description written from the drawing). Timing diagram with the traces VIN, EN, Current Limit, Inductor Current, VOUT and Power Good. VIN rises first, then EN goes high. T<sub>delay</sub> runs from the EN edge to the start of switching. The Current Limit trace starts to ramp up shortly before the end of T<sub>delay</sub> and continues to rise linearly to its final level. During T<sub>ramp</sub> the Inductor Current is a rising sawtooth and VOUT rises from zero; when VOUT reaches 0.95 x V<sub>OUT</sub> (red marker) Power Good goes high, the inductor current returns to zero and VOUT settles at its final level. T<sub>Start-up</sub> spans T<sub>delay</sub> plus T<sub>ramp</sub>.\n",
+    "evidence": "PDF p12 Figure 9-4: the AI text contained a stray Chinese word ('shows a纹波') and said the output starts to ramp after T_delay while omitting the current-limit ramp and the inductor current dropping to zero at power good. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p12-revers-as-printed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 12,
+    "old": "not able to sink the reverse current",
+    "new": "not able to sink the revers current",
+    "evidence": "PDF p12 prints 'the revers current' (manufacturer typo, kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p12-loose-as-printed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 12,
+    "old": "the device can lose  $V_O$  information",
+    "new": "the device can loose  $V_O$  information",
+    "evidence": "PDF p12 prints 'the device can loose VO information' (manufacturer typo, kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p13-space-before-period-as-printed",
+    "file": "output/tps63802/tps63802.md",
+    "page": 13,
+    "old": "negative current capability of the TPS63802. The error",
+    "new": "negative current capability of the TPS63802 . The error",
+    "evidence": "PDF p13 prints 'capability of the TPS63802 . The error amplifier' with a space before the period (kept as printed).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p14-fig9-6-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 14,
+    "old": "![Figure 9-6: Peak-Current Operation, Reverse Current. A graph showing inductor current (I_IND) and average current (I_AVG) over time. The inductor current (red line) is a sawtooth wave that peaks at I_PEAK and reaches a minimum at I_AVG. The average current (I_AVG) is a horizontal dashed line. The peak-to-peak current (I_PK-PK) is the difference between I_PEAK and I_AVG. The input voltage (V_EAmp) is a horizontal dashed line above the peak current.](0332672e127cd13bb6d2fc8d1e27bfa2_img.jpg)\n\nFigure 9-6: Peak-Current Operation, Reverse Current. A graph showing inductor current (I\\_IND) and average current (I\\_AVG) over time. The inductor current (red line) is a sawtooth wave that peaks at I\\_PEAK and reaches a minimum at I\\_AVG. The average current (I\\_AVG) is a horizontal dashed line. The peak-to-peak current (I\\_PK-PK) is the difference between I\\_PEAK and I\\_AVG. The input voltage (V\\_EAmp) is a horizontal dashed line above the peak current.\n",
+    "new": "![Figure 9-6: Peak-Current Operation, Reverse Current (description written from the drawing). Current versus time with the 0 line at the top: the whole inductor current I<sub>IND</sub> (red triangle wave) lies below zero. Its peaks (I<sub>PEAK</sub>, red dots) touch the green dashed V<sub>EAmp</sub> line, the red dashed I<sub>AVG</sub> line lies between peaks and valleys, and I<sub>PK-PK</sub> is marked from a peak to the following valley.](0332672e127cd13bb6d2fc8d1e27bfa2_img.jpg)\n\nFigure 9-6: Peak-Current Operation, Reverse Current (description written from the drawing). Current versus time with the 0 line at the top: the whole inductor current I<sub>IND</sub> (red triangle wave) lies below zero. Its peaks (I<sub>PEAK</sub>, red dots) touch the green dashed V<sub>EAmp</sub> line, the red dashed I<sub>AVG</sub> line lies between peaks and valleys, and I<sub>PK-PK</sub> is marked from a peak to the following valley.\n",
+    "evidence": "PDF p14 Figure 9-6: the inductor current is entirely negative (below the 0 time axis), its valleys are below I_AVG (the AI text said it 'reaches a minimum at I_AVG' and that I_PK-PK is I_PEAK minus I_AVG) and V_EAmp is the error amplifier level touched by the peaks, not an 'input voltage above the peak current'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p14-fig9-7-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 14,
+    "old": "![Figure 9-7: Peak-Current Boost Operation. A graph showing inductor current (I_IND) and average current (I_AVG) over time. The inductor current (red line) is a sawtooth wave that peaks at I_PEAK and reaches a minimum at I_AVG. The average current (I_AVG) is a horizontal dashed line. The peak-to-peak current (I_PK-PK) is the difference between I_PEAK and I_AVG. The input voltage (V_EAmp) is a horizontal dashed line above the peak current. The time intervals T_ON and T_OFF are indicated.](89dcb02be40d2949bb93de93bbf213d5_img.jpg)\n\nFigure 9-7: Peak-Current Boost Operation. A graph showing inductor current (I\\_IND) and average current (I\\_AVG) over time. The inductor current (red line) is a sawtooth wave that peaks at I\\_PEAK and reaches a minimum at I\\_AVG. The average current (I\\_AVG) is a horizontal dashed line. The peak-to-peak current (I\\_PK-PK) is the difference between I\\_PEAK and I\\_AVG. The input voltage (V\\_EAmp) is a horizontal dashed line above the peak current. The time intervals T\\_ON and T\\_OFF are indicated.\n",
+    "new": "![Figure 9-7: Peak-Current Boost Operation (description written from the drawing). The inductor current I<sub>IND</sub> (red triangle wave) rises during T<sub>ON</sub> until its peak (I<sub>PEAK</sub>, red dots) reaches the green dashed V<sub>EAmp</sub> line, then falls during T<sub>OFF</sub>; T<sub>ON</sub> is drawn shorter than T<sub>OFF</sub>. No I<sub>AVG</sub> or I<sub>PK-PK</sub> marking is drawn.](89dcb02be40d2949bb93de93bbf213d5_img.jpg)\n\nFigure 9-7: Peak-Current Boost Operation (description written from the drawing). The inductor current I<sub>IND</sub> (red triangle wave) rises during T<sub>ON</sub> until its peak (I<sub>PEAK</sub>, red dots) reaches the green dashed V<sub>EAmp</sub> line, then falls during T<sub>OFF</sub>; T<sub>ON</sub> is drawn shorter than T<sub>OFF</sub>. No I<sub>AVG</sub> or I<sub>PK-PK</sub> marking is drawn.\n",
+    "evidence": "PDF p14 Figure 9-7 has only V_EAmp, I_PEAK, T_ON, T_OFF and I_IND labels (pdftotext); the AI text copied the Figure 9-6 description with I_AVG and I_PK-PK, which are not drawn. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p15-fig9-8-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 15,
+    "old": "![Figure 9-8: Peak-Current Buck-Boost Operation. This timing diagram shows the inductor current (IIND, red line) and the peak current limit (IPEAK, green dashed line). The inductor current ramps up during the on-time (TON), reaches the peak current limit, and then ramps down during the off-time (TOFF). The time between the start of the on-time and the start of the off-time is the conduction time (TCOM). The diagram shows two consecutive switching cycles.](177e8bc1c595b7fe3461d9919f87e044_img.jpg)\n\nFigure 9-8: Peak-Current Buck-Boost Operation. This timing diagram shows the inductor current (IIND, red line) and the peak current limit (IPEAK, green dashed line). The inductor current ramps up during the on-time (TON), reaches the peak current limit, and then ramps down during the off-time (TOFF). The time between the start of the on-time and the start of the off-time is the conduction time (TCOM). The diagram shows two consecutive switching cycles.\n",
+    "new": "![Figure 9-8: Peak-Current Buck-Boost Operation (description written from the drawing). The inductor current I<sub>IND</sub> (red) rises during T<sub>ON</sub> until its peak (I<sub>PEAK</sub>, red dots) reaches the green dashed V<sub>EAmp</sub> line, stays flat at that level during T<sub>COM</sub>, falls during T<sub>OFF</sub>, and stays flat at the lower level during a second T<sub>COM</sub> before the next T<sub>ON</sub>; each cycle is T<sub>ON</sub>, T<sub>COM</sub>, T<sub>OFF</sub>, T<sub>COM</sub>.](177e8bc1c595b7fe3461d9919f87e044_img.jpg)\n\nFigure 9-8: Peak-Current Buck-Boost Operation (description written from the drawing). The inductor current I<sub>IND</sub> (red) rises during T<sub>ON</sub> until its peak (I<sub>PEAK</sub>, red dots) reaches the green dashed V<sub>EAmp</sub> line, stays flat at that level during T<sub>COM</sub>, falls during T<sub>OFF</sub>, and stays flat at the lower level during a second T<sub>COM</sub> before the next T<sub>ON</sub>; each cycle is T<sub>ON</sub>, T<sub>COM</sub>, T<sub>OFF</sub>, T<sub>COM</sub>.\n",
+    "evidence": "PDF p15 Figure 9-8: the green dashed line is V_EAmp (I_PEAK labels the red peak dots), and T_COM is the flat interval after T_ON at the peak and after T_OFF at the valley (the AI text called T_COM 'the time between the start of the on-time and the start of the off-time' and omitted the flat portions). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p15-fig9-9-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 15,
+    "old": "![Figure 9-9: Peak-Current Buck Operation. This timing diagram shows the inductor current (IIND, red line) and the peak current limit (IPEAK, green dashed line). The inductor current ramps up during the on-time (TON), reaches the peak current limit, and then ramps down during the off-time (TOFF). The diagram shows two consecutive switching cycles.](239211fa511b4ffa685b54b5132ec927_img.jpg)\n\nFigure 9-9: Peak-Current Buck Operation. This timing diagram shows the inductor current (IIND, red line) and the peak current limit (IPEAK, green dashed line). The inductor current ramps up during the on-time (TON), reaches the peak current limit, and then ramps down during the off-time (TOFF). The diagram shows two consecutive switching cycles.\n",
+    "new": "![Figure 9-9: Peak-Current Buck Operation (description written from the drawing). The inductor current I<sub>IND</sub> (red triangle wave) rises during T<sub>ON</sub> until its peak (I<sub>PEAK</sub>, red dots) reaches the green dashed V<sub>EAmp</sub> line, then falls during T<sub>OFF</sub>; T<sub>ON</sub> is drawn longer than T<sub>OFF</sub>.](239211fa511b4ffa685b54b5132ec927_img.jpg)\n\nFigure 9-9: Peak-Current Buck Operation (description written from the drawing). The inductor current I<sub>IND</sub> (red triangle wave) rises during T<sub>ON</sub> until its peak (I<sub>PEAK</sub>, red dots) reaches the green dashed V<sub>EAmp</sub> line, then falls during T<sub>OFF</sub>; T<sub>ON</sub> is drawn longer than T<sub>OFF</sub>.\n",
+    "evidence": "PDF p15 Figure 9-9: the green dashed line is labeled V_EAmp, not 'peak current limit (IPEAK)'; I_PEAK labels the red peak dots. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63802-p16-fig9-10-description",
+    "file": "output/tps63802/tps63802.md",
+    "page": 16,
+    "old": "![Figure 9-10: Power Safe Mode Operation Curves. This multi-plot graph shows the relationship between time (t) and several parameters: I_COIL, V_O, V_EA / I_REF, and SKIP Yes/No. The I_COIL plot shows a纹波 current that increases during the 'Switching' phase and decreases during the 'Pause' phase. The V_O plot shows the output voltage increasing during 'Switching' and decreasing during 'Pause'. The V_EA / I_REF plot shows a peak during 'Switching' followed by a decay. The SKIP Yes/No plot shows a high state during 'Switching' and a low state during 'Pause'. A blue dashed line indicates the I_SKIP level, and a vertical double-headed arrow labeled 'Hysteresis' shows the difference between the peak and the decay curve.](cbc4516eb885829fe8c9dabc0946dcbe_img.jpg)\n\nFigure 9-10: Power Safe Mode Operation Curves. This multi-plot graph shows the relationship between time (t) and several parameters: I\\_COIL, V\\_O, V\\_EA / I\\_REF, and SKIP Yes/No. The I\\_COIL plot shows a纹波 current that increases during the 'Switching' phase and decreases during the 'Pause' phase. The V\\_O plot shows the output voltage increasing during 'Switching' and decreasing during 'Pause'. The V\\_EA / I\\_REF plot shows a peak during 'Switching' followed by a decay. The SKIP Yes/No plot shows a high state during 'Switching' and a low state during 'Pause'. A blue dashed line indicates the I\\_SKIP level, and a vertical double-headed arrow labeled 'Hysteresis' shows the difference between the peak and the decay curve.\n",
+    "new": "![Figure 9-10: Power Safe Mode Operation Curves (description written from the drawing). Four traces versus time t: I<sub>COIL</sub>, V<sub>O</sub>, V<sub>EA</sub> / I<sub>REF</sub> and SKIP Yes/No. V<sub>O</sub> falls slowly until V<sub>EA</sub> / I<sub>REF</sub> rises to the blue I<sub>SKIP</sub> level; then SKIP goes high ('Switching') and I<sub>COIL</sub> shows a few triangular current pulses with decreasing peaks while V<sub>O</sub> rises in steps. V<sub>EA</sub> / I<sub>REF</sub> then decreases; when it has fallen by the 'Hysteresis' (blue double arrow) below I<sub>SKIP</sub>, SKIP goes low ('Pause'), I<sub>COIL</sub> returns to zero and V<sub>O</sub> decays slowly again. Dashed vertical lines mark the start and end of switching.](cbc4516eb885829fe8c9dabc0946dcbe_img.jpg)\n\nFigure 9-10: Power Safe Mode Operation Curves (description written from the drawing). Four traces versus time t: I<sub>COIL</sub>, V<sub>O</sub>, V<sub>EA</sub> / I<sub>REF</sub> and SKIP Yes/No. V<sub>O</sub> falls slowly until V<sub>EA</sub> / I<sub>REF</sub> rises to the blue I<sub>SKIP</sub> level; then SKIP goes high ('Switching') and I<sub>COIL</sub> shows a few triangular current pulses with decreasing peaks while V<sub>O</sub> rises in steps. V<sub>EA</sub> / I<sub>REF</sub> then decreases; when it has fallen by the 'Hysteresis' (blue double arrow) below I<sub>SKIP</sub>, SKIP goes low ('Pause'), I<sub>COIL</sub> returns to zero and V<sub>O</sub> decays slowly again. Dashed vertical lines mark the start and end of switching.\n",
+    "evidence": "PDF p16 Figure 9-10: the AI text contained a stray Chinese word ('shows a纹波 current') and did not tie the traces together: switching starts when V_EA/I_REF reaches I_SKIP and pauses when it has fallen by the hysteresis below it; V_O falls during the pause and rises in steps during switching. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
