@@ -60,9 +60,9 @@ Before figure deduplication (diagnostic only): source numeric tokens 1963, compa
 
 Spec tables: 4; rows: 76; nonempty cells checked: 308; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 1586, compact 1586; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 1773, compact 1773; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 1653, compact 1586; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 1846, compact 1773; equal: False; source subset: False.
 
 ## ltc3315a
 
