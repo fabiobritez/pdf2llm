@@ -11611,5 +11611,203 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5593r-p1-title-missing",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 1,
+    "old": "{0}------------------------------------------------\n\n# 8-Channel",
+    "new": "{0}------------------------------------------------\n\n# AD5593R\n\n# 8-Channel",
+    "evidence": "PDF p1 header prints the part number 'AD5593R' above the subtitle (pdftotext + render); the md started at the subtitle.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p1-fig1-block-diagram-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 1,
+    "old": "![Functional block diagram of the AD5593R. The diagram shows the internal architecture of the 8-channel, 12-bit ADC/DAC. Key components include: I2C Interface Logic (with SCL, SDA, A0, and RESET pins); Power-On Reset; Input Register; DAC Register; DAC 0 through DAC 7; GPIO0 through GPIO7; 12-Bit Successive Approximation ADC; Temperature Indicator; and a 2.5V Reference. The diagram illustrates the signal flow from I2C control to DAC outputs and ADC inputs, including the use of a multiplexer (MUX) and switch (SW) for configuration. Power pins VLOGIC, VDD, VREF, and GND are also shown.](",
+    "new": "![Functional block diagram of the AD5593R (description written from the PDF drawing). Pins: V_LOGIC, V_DD and V_REF at the top, GND at the bottom, SCL, SDA, A0 and RESET (drawn with an overbar) on the left, I/O0 to I/O7 on the right. Inside: a POWER-ON RESET block; the I2C INTERFACE LOGIC, which drives eight INPUT REGISTER → DAC REGISTER → DAC paths (DAC 0 to DAC 7, the V_REF line runs to the DACs); each DAC output goes through a buffer amplifier to a switch at its I/O pin, where the GPIO0 to GPIO7 lines also connect; a 2.5V REFERENCE connected to V_REF through a switch; a SEQUENCER that controls a MUX connected to the I/O pins; the MUX output goes, directly or through an amplifier selected by a switch, to a T/H and the 12-BIT SUCCESSIVE APPROXIMATION ADC, which connects back to the I2C interface logic; and a TEMPERATURE INDICATOR block.](",
+    "evidence": "PDF p1 Figure 1 (render): no 'SW' label exists; the AI text omitted the SEQUENCER, T/H, the buffer amplifiers, the I/O0-I/O7 pins and the RESET overbar. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p1-fig1-block-diagram-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 1,
+    "old": ")\n\nFunctional block diagram of the AD5593R. The diagram shows the internal architecture of the 8-channel, 12-bit ADC/DAC. Key components include: I2C Interface Logic (with SCL, SDA, A0, and RESET pins); Power-On Reset; Input Register; DAC Register; DAC 0 through DAC 7; GPIO0 through GPIO7; 12-Bit Successive Approximation ADC; Temperature Indicator; and a 2.5V Reference. The diagram illustrates the signal flow from I2C control to DAC outputs and ADC inputs, including the use of a multiplexer (MUX) and switch (SW) for configuration. Power pins VLOGIC, VDD, VREF, and GND are also shown.\n",
+    "new": ")\n\nFunctional block diagram of the AD5593R (description written from the PDF drawing). Pins: V_LOGIC, V_DD and V_REF at the top, GND at the bottom, SCL, SDA, A0 and RESET (drawn with an overbar) on the left, I/O0 to I/O7 on the right. Inside: a POWER-ON RESET block; the I2C INTERFACE LOGIC, which drives eight INPUT REGISTER → DAC REGISTER → DAC paths (DAC 0 to DAC 7, the V_REF line runs to the DACs); each DAC output goes through a buffer amplifier to a switch at its I/O pin, where the GPIO0 to GPIO7 lines also connect; a 2.5V REFERENCE connected to V_REF through a switch; a SEQUENCER that controls a MUX connected to the I/O pins; the MUX output goes, directly or through an amplifier selected by a switch, to a T/H and the 12-BIT SUCCESSIVE APPROXIMATION ADC, which connects back to the I2C interface logic; and a TEMPERATURE INDICATOR block.\n",
+    "evidence": "Same as ad5593r-p1-fig1-block-diagram-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p2-revision-history-stray-separator",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 2,
+    "old": "| Changes to Figure 42..... | 25 |\n|---------------------------|----|\n",
+    "new": "| Changes to Figure 42..... | 25 |\n",
+    "evidence": "PDF p2 (render): the Rev. F to Rev. G list has a single entry 'Changes to Figure 42 ... 25'; the md had a second separator row after it, which renders as a spurious '---' row.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p2-revision-heading-level-h",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 2,
+    "old": "## **8/2023—Rev. G to Rev. H**",
+    "new": "### **8/2023—Rev. G to Rev. H**",
+    "evidence": "PDF p2 (render): '8/2023—Rev. G to Rev. H' is a small bold black subheading under the blue 'REVISION HISTORY' section title; the md had both at H2.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p2-revision-heading-level-g",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 2,
+    "old": "## **1/2023—Rev. F to Rev. G**",
+    "new": "### **1/2023—Rev. F to Rev. G**",
+    "evidence": "PDF p2 (render): '1/2023—Rev. F to Rev. G' is a bold black subheading under 'REVISION HISTORY', like the Rev. H entry.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p6-timing-diagram-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 6,
+    "old": "\n### Timing Diagram\n",
+    "new": "\n#### Timing Diagram\n",
+    "evidence": "PDF p6 (PyMuPDF spans + render): 'Timing Diagram' is a bold black title-case subheading under the bold black caps 'TIMING CHARACTERISTICS' (H3), the same style as 'Resistor String' or 'LDAC Mode Operation' (H4); the md had it at H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p7-absmax-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 7,
+    "old": "\n### **ABSOLUTE MAXIMUM RATINGS**\n",
+    "new": "\n## **ABSOLUTE MAXIMUM RATINGS**\n",
+    "evidence": "PDF p7 (PyMuPDF spans + render): 'ABSOLUTE MAXIMUM RATINGS' is a blue section title like 'SPECIFICATIONS' (H2); its subsections 'THERMAL RESISTANCE', 'ELECTROSTATIC DISCHARGE (ESD) RATINGS' and 'ESD CAUTION' are black bold caps (H3). The md had it at H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p7-esd-ratings-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 7,
+    "old": "\n### **ESD Ratings for AD5593R**\n",
+    "new": "\n#### **ESD Ratings for AD5593R**\n",
+    "evidence": "PDF p7 (render): 'ESD Ratings for AD5593R' is a bold black title-case subheading under 'ELECTROSTATIC DISCHARGE (ESD) RATINGS' (H3), the same style as 'Timing Diagram' (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p8-fig3-tssop-pinout-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": "![Figure 3. 16-Lead TSSOP Pin Configuration. A top view diagram of a 16-lead TSSOP package. Pin 1 is RESET, 2 is A0, 3 is VDD, 4 is I/O0, 5 is I/O1, 6 is I/O2, 7 is I/O3, 8 is VREF, 9 is VLOGIC, 10 is I/O4, 11 is I/O5, 12 is I/O6, 13 is I/O7, 14 is GND, 15 is SDA, and 16 is SCL. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. Pin 003 is indicated at the bottom right.](",
+    "new": "![Figure 3. 16-Lead TSSOP Pin Configuration. A top view diagram of a 16-lead TSSOP package. Pin 1 is RESET (drawn with an overbar), 2 is A0, 3 is VDD, 4 is I/O0, 5 is I/O1, 6 is I/O2, 7 is I/O3, 8 is VREF, 9 is VLOGIC, 10 is I/O4, 11 is I/O5, 12 is I/O6, 13 is I/O7, 14 is GND, 15 is SDA, and 16 is SCL. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. The drawing number 003 is printed at the bottom right.](",
+    "evidence": "PDF p8 Figure 3 (render): '003' at the bottom right is the drawing number, not a pin; RESET is printed with an overbar (active low, see Table 7).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p8-fig3-tssop-pinout-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": ")\n\nFigure 3. 16-Lead TSSOP Pin Configuration. A top view diagram of a 16-lead TSSOP package. Pin 1 is RESET, 2 is A0, 3 is VDD, 4 is I/O0, 5 is I/O1, 6 is I/O2, 7 is I/O3, 8 is VREF, 9 is VLOGIC, 10 is I/O4, 11 is I/O5, 12 is I/O6, 13 is I/O7, 14 is GND, 15 is SDA, and 16 is SCL. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. Pin 003 is indicated at the bottom right.\n",
+    "new": ")\n\nFigure 3. 16-Lead TSSOP Pin Configuration. A top view diagram of a 16-lead TSSOP package. Pin 1 is RESET (drawn with an overbar), 2 is A0, 3 is VDD, 4 is I/O0, 5 is I/O1, 6 is I/O2, 7 is I/O3, 8 is VREF, 9 is VLOGIC, 10 is I/O4, 11 is I/O5, 12 is I/O6, 13 is I/O7, 14 is GND, 15 is SDA, and 16 is SCL. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. The drawing number 003 is printed at the bottom right.\n",
+    "evidence": "Same as ad5593r-p8-fig3-tssop-pinout-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p8-fig5-wlcsp-ball-map-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": "![Figure 5. 16-Ball WLCSP Pin Configuration. A top view diagram of a 16-ball WLCSP package. Pin 1 is SDA, 2 is SCL, 3 is RESET, 4 is A0, 5 is GND, 6 is I/O7, 7 is I/O0, 8 is VDD, 9 is I/O6, 10 is I/O3, 11 is I/O2, 12 is I/O1, 13 is I/O4, 14 is VLOGIC, 15 is VREF, and 16 is I/O5. A 'BALL A1 INDICATOR' is shown at the top left. The text 'TOP VIEW (BALL SIDE DOWN) Not to Scale' is at the bottom. Pin 201 is indicated at the bottom right.](",
+    "new": "![Figure 5. 16-Ball WLCSP Pin Configuration. A top view diagram of a 16-ball WLCSP package with a 4 × 4 ball array, rows A to D and columns 1 to 4. Row A: A1 is SDA, A2 is SCL, A3 is RESET (drawn with an overbar), A4 is A0. Row B: B1 is GND, B2 is I/O7, B3 is I/O0, B4 is VDD. Row C: C1 is I/O6, C2 is I/O3, C3 is I/O2, C4 is I/O1. Row D: D1 is I/O4, D2 is VLOGIC, D3 is VREF, D4 is I/O5. A 'BALL A1 INDICATOR' points to the top left corner. The text 'TOP VIEW (BALL SIDE DOWN) Not to Scale' is at the bottom. The drawing number 201 is printed at the bottom right.](",
+    "evidence": "PDF p8 Figure 5 (render) and Table 7: the WLCSP has balls A1-D4 in a 4 × 4 array (A1 SDA, A2 SCL, A3 RESET, A4 A0, B1 GND, B2 I/O7, B3 I/O0, B4 VDD, C1 I/O6, C2 I/O3, C3 I/O2, C4 I/O1, D1 I/O4, D2 VLOGIC, D3 VREF, D4 I/O5); the description numbered them 'Pin 1' to 'Pin 16' and called the drawing number 201 a pin.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p8-fig5-wlcsp-ball-map-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": ")\n\nFigure 5. 16-Ball WLCSP Pin Configuration. A top view diagram of a 16-ball WLCSP package. Pin 1 is SDA, 2 is SCL, 3 is RESET, 4 is A0, 5 is GND, 6 is I/O7, 7 is I/O0, 8 is VDD, 9 is I/O6, 10 is I/O3, 11 is I/O2, 12 is I/O1, 13 is I/O4, 14 is VLOGIC, 15 is VREF, and 16 is I/O5. A 'BALL A1 INDICATOR' is shown at the top left. The text 'TOP VIEW (BALL SIDE DOWN) Not to Scale' is at the bottom. Pin 201 is indicated at the bottom right.\n",
+    "new": ")\n\nFigure 5. 16-Ball WLCSP Pin Configuration. A top view diagram of a 16-ball WLCSP package with a 4 × 4 ball array, rows A to D and columns 1 to 4. Row A: A1 is SDA, A2 is SCL, A3 is RESET (drawn with an overbar), A4 is A0. Row B: B1 is GND, B2 is I/O7, B3 is I/O0, B4 is VDD. Row C: C1 is I/O6, C2 is I/O3, C3 is I/O2, C4 is I/O1. Row D: D1 is I/O4, D2 is VLOGIC, D3 is VREF, D4 is I/O5. A 'BALL A1 INDICATOR' points to the top left corner. The text 'TOP VIEW (BALL SIDE DOWN) Not to Scale' is at the bottom. The drawing number 201 is printed at the bottom right.\n",
+    "evidence": "Same as ad5593r-p8-fig5-wlcsp-ball-map-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5593r-p8-fig4-lfcsp-pinout-alt",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": "![Figure 4. 16-Lead LFCSP Pin Configuration. A top view diagram of a 16-lead LFCSP package. Pin 1 is VDD, 2 is I/O0, 3 is I/O1, 4 is I/O2, 5 is I/O3, 6 is VREF, 7 is VLOGIC, 8 is I/O4, 9 is I/O5, 10 is I/O6, 11 is I/O7, 12 is GND, 13 is SDA, 14 is SCL, 15 is RESET, and 16 is A0. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. Pin 004 is indicated at the bottom right.](",
+    "new": "![Figure 4. 16-Lead LFCSP Pin Configuration. A top view diagram of a 16-lead LFCSP package. Pin 1 is VDD, 2 is I/O0, 3 is I/O1, 4 is I/O2, 5 is I/O3, 6 is VREF, 7 is VLOGIC, 8 is I/O4, 9 is I/O5, 10 is I/O6, 11 is I/O7, 12 is GND, 13 is SDA, 14 is SCL, 15 is RESET (drawn with an overbar), and 16 is A0. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. The drawing number 004 is printed at the bottom right.](",
+    "evidence": "PDF p8 Figure 4 (render): '004' at the bottom right is the drawing number, not a pin; RESET is printed with an overbar.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p8-fig4-lfcsp-pinout-desc",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": ")\n\nFigure 4. 16-Lead LFCSP Pin Configuration. A top view diagram of a 16-lead LFCSP package. Pin 1 is VDD, 2 is I/O0, 3 is I/O1, 4 is I/O2, 5 is I/O3, 6 is VREF, 7 is VLOGIC, 8 is I/O4, 9 is I/O5, 10 is I/O6, 11 is I/O7, 12 is GND, 13 is SDA, 14 is SCL, 15 is RESET, and 16 is A0. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. Pin 004 is indicated at the bottom right.\n",
+    "new": ")\n\nFigure 4. 16-Lead LFCSP Pin Configuration. A top view diagram of a 16-lead LFCSP package. Pin 1 is VDD, 2 is I/O0, 3 is I/O1, 4 is I/O2, 5 is I/O3, 6 is VREF, 7 is VLOGIC, 8 is I/O4, 9 is I/O5, 10 is I/O6, 11 is I/O7, 12 is GND, 13 is SDA, 14 is SCL, 15 is RESET (drawn with an overbar), and 16 is A0. The text 'AD5593R TOP VIEW (Not to Scale)' is in the center. The drawing number 004 is printed at the bottom right.\n",
+    "evidence": "Same as ad5593r-p8-fig4-lfcsp-pinout-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5593r-p8-pin-config-heading-level",
+    "file": "output/ad5593r/ad5593r.md",
+    "page": 8,
+    "old": "\n### PIN CONFIGURATION AND FUNCTION DESCRIPTIONS\n",
+    "new": "\n## PIN CONFIGURATION AND FUNCTION DESCRIPTIONS\n",
+    "evidence": "PDF p8 (PyMuPDF spans + render): 'PIN CONFIGURATION AND FUNCTION DESCRIPTIONS' is a blue section title like 'SPECIFICATIONS' (H2); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
