@@ -26,11 +26,11 @@ Before figure deduplication (diagnostic only): source numeric tokens 5752, compa
 
 Spec tables: 8; rows: 91; nonempty cells checked: 350; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 2677, compact 2678; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2766, compact 2767; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 3048, compact 2678; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 3157, compact 2767; equal: False; source subset: False.
 
 ## lt1965fb
 

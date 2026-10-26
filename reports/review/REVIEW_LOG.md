@@ -159,3 +159,34 @@ codex (`gpt-6.1-sol`, `xhigh`, confirmed in each output header) reviewed all 138
 
 All other pages in the 32-page set: 0 codex findings.
 ltc2975 p63: fresh codex and grok-4.7 reviews of the current md (`~/work/pdf2llm-run13`) found 0 discrepancies, matching the run10 reviews. A PyMuPDF word diff of md vs PDF also found no differences apart from the running header/footer and bullet glyphs. Checked against the image: table row/column assignment, `Mfr_retry_count [2:0]`, "0: No retries:" and the truncated `Mfr_track_en_chann`, all kept as printed.
+
+### ina190 full page-by-page review (2026-10-26)
+
+Scope: all 47 PDF pages of `ina190.pdf`. For each page: rendered image (110-150 dpi), `pdftotext -layout`, PyMuPDF spans (sub/superscripts) and word rows, all compared with the `{N-1}` section of `output/ina190/ina190.md`. Tables on p31, p32, p34, p35, p36 and p37 (orderable parts, tape-and-reel, box dimensions) were compared row by row against PDF word rows, and all 110 rows match. The EC, Abs Max, ESD, Recommended and Thermal tables (p4-p6) match the PDF values and columns cell by cell.
+109 new fixes, all `ina190-p*` ids in `fixes.json` (105 low, 4 medium). `replay_fixes.py` reproduces the md exactly.
+
+| Page(s) | Finding | Fix ids (prefix) | Severity |
+|---|---|---|---|
+| 6 | EC (continued): CONDITIONS header was over the parameter-name column; the real conditions column had no header | `ina190-p6-ec-conditions-header-column` | medium |
+| 7-12 | Figure sub-labels printed under each plot (`A1 devices`, `VS = 5.0 V, A3 devices`, `VENABLE = 0 V`, ...) were missing from the body. Figures 5 and 6 (both "Gain Error Production Distribution") could not be told apart | `ina190-p7-fig5-fig6-device-labels`, `ina190-p*-fig*-sublabel` | medium / low |
+| 38, 41 | DCK0006A / RSW0010A outline descriptions: min/max pairs given as "X (Y reference)", RSW described as 8 pins and square, package called "SOT-116", wrong dimension meanings | `ina190-p38-dck-*`, `ina190-p41-rsw-*` | medium / low |
+| 1, 13, 16-20, 22, 24, 27-29 | AI circuit descriptions contradicted the drawings: IN+/IN- swapped (Fig 35), REF tied to the output or a supply (Fig 1, 36, 37, 39), C_BYPASS "connected to ENABLE" (Fig 42, 43), wrong block diagram topology (Fig 13 page), feedback vs series filter resistors (Fig 40, 46-48), GPIO/ADC wiring (Fig 38) | `ina190-p*-fig*`, `ina190-p13-block-diagram-topology`, `ina190-p1-typical-application-*` | low |
+| 7-12 | Curve descriptions with wrong statements: Fig 6 is a histogram, not a line graph; Fig 7 centre; Fig 14/15 level; Fig 20 roll-off frequency; Fig 25 invented 12 V step; Fig 29 IBN decreases; Fig 31-33 ordering | `ina190-p7-figs1-6-*`, `ina190-p8-fig7-*`, `ina190-p9-*`, `ina190-p10-fig20-*`, `ina190-p11-*`, `ina190-p12-*` | low |
+| 39, 40, 42, 43, 45, 46 | Land-pattern/stencil descriptions: pad length/width/pitch confused, pin positions wrong, "4x4 grid", solder-mask labels swapped | `ina190-p39-*` ... `ina190-p46-*` | low |
+| 1, 3, 20 | As printed: SC70 body size `2.00 mm x 1.25 mm` (letter x); `VS` without subscript in three Pin Functions cells; `connections.If` (no space) | `ina190-p1-device-info-sc70-x-as-printed`, `ina190-p3-*`, `ina190-p20-kelvin-connections-if-as-printed` | low |
+| 2 | Revision history: page numbers 1, 1, 22, 22, 24 were missing | `ina190-p2-revhist-page-numbers` | low |
+| 14 | Equation (1) number was written as a fifth list item | `ina190-p14-eq1-number-not-bullet` | low |
+| 28 | Fig 47 label list: R_F three times (PDF: twice) and the stray IN+ label was missing | `ina190-p28-fig47-labels-rf-count` | low |
+| 38, 41, 44, 45 | Drawing title block / `SCALE n` lines missing | `ina190-p38-dck-outline-header`, `ina190-p41-rsw-scale`, `ina190-p44-ddf-scale`, `ina190-p45-ddf-board-layout-header` | low |
+
+No error found on p4, p5, p15, p21, p23, p25, p26, p30-p37 or p47. The earlier p4/p5 fixes still hold.
+After the fixes: `validate.py --all` reports ina190 OK (word/number coverage 94.6/93.4% → 94.8/94.0%; p38 and p45 now 100%). `check_llm_fidelity.py`: ina190 has 0 spec-table failures and the source numeric subset is True; the only extra token is the pre-existing `271` from the slua271 link. `relocate_images.py --check ina190`: OK. `check_struct_tables.py`: unchanged (ok 4, loose 5). `unittest` test_validate / test_llm_compact / test_struct_tables: OK.
+`ina190.llm.md` was regenerated with `tools/llm_compact.py ina190`. Every summary claim was checked against the md. One citation was corrected: the bidirectional REF bullet now cites [p16, p18] (bidirectional mode is on p18) in `reports/llm/summaries/ina190.md`.
+
+Not changed / open:
+- Dash and micro-sign typography: the PDF prints `IN–`, `–3`, `IB–` with an en dash and uses `µ`; Datalab wrote hyphens and sometimes `μ`. This is repo-wide normalization, so it was left as is.
+- Running headers and footers are omitted, following the convention for all datasheets: `SBOS863D – ...`, the p1 "An IMPORTANT NOTICE at the end..." footer, `Addendum-Page n`, and the repeated "IMPORTANT NOTICE" header on p47.
+- p33 `Disclaimer:The` (no space in the PDF) is kept as `**Disclaimer:** The`, because removing the space would break the bold markup.
+- Structure-only oddities were left: `###### Page` / `### Page` headings in the revision history, the p23 equation (5) number inline after the last bullet, `# DDF0008A` as H1 on p44, and the p28 figure-label dump (other figures have none).
+- p29 Fig 48: it is ambiguous whether the REF trace or only the GND trace reaches the ground via in the drawing. The description was not changed there.
+- Figure descriptions remain AI text. They now agree with the drawings on connections and dimension meanings, but approximate curve levels (for example "about 25 nV/√Hz") are still estimates. Read values from the image/PDF.

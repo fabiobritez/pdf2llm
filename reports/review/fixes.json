@@ -5408,5 +5408,332 @@
       "pdf-image"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ina190-p38-dck-outline-header",
+    "file": "output/ina190/ina190.md",
+    "page": 38,
+    "old": "\n\n![Technical drawing of the SOT-116 package",
+    "new": "\n\n### PACKAGE OUTLINE\n\nDCK0006A\n\nSOT - 1.1 max height\n\nSMALL OUTLINE TRANSISTOR\n\nSCALE 5.600\n\n![Technical drawing of the SOT-116 package",
+    "evidence": "PDF p38 prints the drawing title block 'PACKAGE OUTLINE', 'DCK0006A', 'SOT - 1.1 max height', 'SMALL OUTLINE TRANSISTOR' and 'SCALE 5.600' (pdftotext + render); the md had lost it (the board-layout and stencil pages keep the same block).",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p38-dck-outline-desc-dimensions",
+    "file": "output/ina190/ina190.md",
+    "page": 38,
+    "old": "The figure shows three views of the SOT-116 package:\n\n- Top View:** Shows the package body with pins 1, 2, 3, 4, 6, and 5. Dimensions include a total width of 2.4 mm (1.8 mm reference), a body width of 1.4 mm (1.1 mm reference), and a total length of 2.15 mm (1.85 mm reference). A 'PIN 1 INDEX AREA' is indicated. Datums A and B are defined. A feature control frame specifies a flatness of 0.1 mm relative to datum C for the top surface. Another feature control frame specifies a position of 0.1 mm relative to datums C, A, and B for the pin 1 index area.\n- Side View:** Shows the package profile with a maximum height of 1.1 mm (0.8 mm reference). The pins are angled at 4X 0° -12°. A feature control frame specifies a flatness of 0.1 mm relative to datum C for the top surface. A typical pin thickness of 0.1 mm (0.0 mm reference) is shown.\n- Cross-Sectional View:** Shows the package body and pins. The body thickness is 0.15 mm. The pins are angled at 4X 4° -15°. The gage plane is defined at the top of the pins, and the seating plane is at the base. Dimensions include a typical pin length of 0.22 mm (0.08 mm reference), a typical body length of 0.46 mm (0.26 mm reference), and a typical pin angle of 8° (0° reference).",
+    "new": "The figure shows three views of the DCK0006A package (min/max pairs are printed as two stacked values):\n\n- Top View: Pins 1, 2, 3 on the left and 4, 5, 6 on the right, with a 'PIN 1 INDEX AREA'. Overall width across the leads 1.8 to 2.4, body width 1.1 to 1.4 (datum B), body length 1.85 to 2.15 (datum A). Lead pitch 4X 0.65, pin 1 to pin 3 spacing 1.3, lead width 6X 0.15 to 0.30 with a position tolerance of 0.1 (MMC) relative to C, A and B ('NOTE 5').\n- Side View: Height 0.8 to 1.1, with a 0.1 tolerance relative to the seating plane datum C; 4X 0° to 12° body draft; standoff 0.0 to 0.1 TYP.\n- Lead detail: 4X 4° to 15°, gage plane 0.15, lead angle 0° to 8° TYP, lead thickness 0.08 to 0.22 TYP, foot length 0.26 to 0.46 TYP, and the seating plane.",
+    "evidence": "AI figure description misread PDF p38 DCK0006A Package Outline: stacked min/max dimension pairs were given as 'X mm (Y mm reference)', 0.15 (gage plane) was called body thickness, 0.08-0.22 lead thickness was called pin length, the 0.1 MMC position frame was attached to the pin 1 index area, the 4X 0.65 pitch and 1.3 span were missing, and the package was called 'SOT-116' (the PDF prints DCK0006A, SOT - 1.1 max height). Rewritten from the PDF words and the render.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p38-dck-sot116-name-alt3d",
+    "file": "output/ina190/ina190.md",
+    "page": 38,
+    "old": "3D perspective view of the DCK0006A SOT-116 package.]",
+    "new": "3D perspective view of the DCK0006A SOT package.]",
+    "evidence": "AI figure description named the package 'SOT-116'; PDF p38 prints DCK0006A, 'SOT - 1.1 max height', SMALL OUTLINE TRANSISTOR. The drawing has a lead detail, not a cross-section.",
+    "sources": [
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p38-dck-sot116-name-desc3d",
+    "file": "output/ina190/ina190.md",
+    "page": 38,
+    "old": "\n3D perspective view of the DCK0006A SOT-116 package.\n",
+    "new": "\n3D perspective view of the DCK0006A SOT package.\n",
+    "evidence": "AI figure description named the package 'SOT-116'; PDF p38 prints DCK0006A, 'SOT - 1.1 max height', SMALL OUTLINE TRANSISTOR. The drawing has a lead detail, not a cross-section.",
+    "sources": [
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p38-dck-sot116-name-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 38,
+    "old": "Technical drawing of the SOT-116 package showing top, side, and cross-sectional views with dimensions and datums.]",
+    "new": "Technical drawing of the DCK0006A SOT package showing top, side, and lead-detail views with dimensions and datums.]",
+    "evidence": "AI figure description named the package 'SOT-116'; PDF p38 prints DCK0006A, 'SOT - 1.1 max height', SMALL OUTLINE TRANSISTOR. The drawing has a lead detail, not a cross-section.",
+    "sources": [
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p38-dck-sot116-name-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 38,
+    "old": "\nTechnical drawing of the SOT-116 package showing top, side, and cross-sectional views with dimensions and datums.\n",
+    "new": "\nTechnical drawing of the DCK0006A SOT package showing top, side, and lead-detail views with dimensions and datums.\n",
+    "evidence": "AI figure description named the package 'SOT-116'; PDF p38 prints DCK0006A, 'SOT - 1.1 max height', SMALL OUTLINE TRANSISTOR. The drawing has a lead detail, not a cross-section.",
+    "sources": [
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p39-dck-land-pattern-dims-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 39,
+    "old": "Dimensions are provided: the pitch between pads 1 and 2 is 6X (0.4), the pitch between pads 2 and 3 is 4X (0.65), and the pitch between the columns is 6X (0.9). A dimension of (2.2) is shown between the right edges of the two columns. A corner radius of (R0.05) TYP is indicated for pad 3. A 'SYMM' centerline symbol is shown on the right side, indicating symmetry.\n",
+    "new": "Dimensions are provided: each pad is 6X (0.9) long and 6X (0.4) wide, the pad pitch within a column is 4X (0.65), and the two pad columns are (2.2) apart, center to center. A corner radius of (R0.05) TYP is indicated for pad 3. A 'SYMM' centerline symbol is shown on the right side, indicating symmetry.\n",
+    "evidence": "AI figure description misread PDF p39 DCK0006A land pattern (render): 6X (0.9) is the pad length and 6X (0.4) the pad width, 4X (0.65) is the pad pitch, and (2.2) is measured between the pad-column centerlines, not between right edges. (repeated description paragraph)",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p39-dck-smd-labels",
+    "file": "output/ina190/ina190.md",
+    "page": 39,
+    "old": "The right method, labeled 'SOLDER MASK DEFINED', shows a dashed blue rectangular area labeled 'SOLDER MASK OPENING' surrounding a green rectangular area labeled 'METAL UNDER SOLDER MASK'. The distance between the dashed blue and green areas is '0.07 MIN ARROUND'. The area inside the green rectangle is labeled 'EXPOSED METAL'.",
+    "new": "The right method, labeled 'SOLDER MASK DEFINED', shows a dashed blue rectangular area labeled 'METAL UNDER SOLDER MASK' surrounding a green rectangular area labeled 'SOLDER MASK OPENING'. The distance between the dashed blue and green areas is '0.07 MIN ARROUND'. The area inside the green rectangle is labeled 'EXPOSED METAL'.",
+    "evidence": "AI figure description swapped the labels of the solder-mask-defined detail: on PDF p39 (render) 'METAL UNDER SOLDER MASK' points to the dashed blue outline and 'SOLDER MASK OPENING' to the green rectangle.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p40-dck-stencil-dims-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 40,
+    "old": "Dimensions include 6X (0.9) for the width of the first column, 6X (0.4) for the height of the first row, and 4X (0.65) for the height of the second row. A (R0.05) TYP. fillet is shown at the bottom left corner of the first aperture. A centerline is marked 'SYM' with a centerline symbol. A package centerline is marked 'PKG' with a centerline symbol. The distance between the centerlines of the two columns is (2.2).]",
+    "new": "Dimensions include 6X (0.9) for the aperture length, 6X (0.4) for the aperture width, and 4X(0.65) for the aperture pitch. A (R0.05) TYP corner radius is pointed out on aperture 3. A centerline is marked 'SYMM' with a centerline symbol. A package centerline is marked 'PKG' with a centerline symbol. The distance between the centerlines of the two columns is (2.2).]",
+    "evidence": "AI figure description misread PDF p40 DCK0006A stencil (render + words): 6X (0.9)/6X (0.4) are aperture length/width and 4X(0.65) is the pitch (not row heights); the (R0.05) TYP leader points at aperture 3; the centerline label is printed 'SYMM'.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p40-dck-stencil-dims-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 40,
+    "old": "Dimensions include 6X (0.9) for the width of the first column, 6X (0.4) for the height of the first row, and 4X (0.65) for the height of the second row. A (R0.05) TYP. fillet is shown at the bottom left corner of the first aperture. A centerline is marked 'SYM' with a centerline symbol. A package centerline is marked 'PKG' with a centerline symbol. The distance between the centerlines of the two columns is (2.2).\n",
+    "new": "Dimensions include 6X (0.9) for the aperture length, 6X (0.4) for the aperture width, and 4X(0.65) for the aperture pitch. A (R0.05) TYP corner radius is pointed out on aperture 3. A centerline is marked 'SYMM' with a centerline symbol. A package centerline is marked 'PKG' with a centerline symbol. The distance between the centerlines of the two columns is (2.2).\n",
+    "evidence": "AI figure description misread PDF p40 DCK0006A stencil (render + words): 6X (0.9)/6X (0.4) are aperture length/width and 4X(0.65) is the pitch (not row heights); the (R0.05) TYP leader points at aperture 3; the centerline label is printed 'SYMM'. (repeated description paragraph)",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p41-rsw-outline-desc-dimensions",
+    "file": "output/ina190/ina190.md",
+    "page": 41,
+    "old": "The figure shows the package outline with the following details:\n\n- Top View:** Shows a square package with a 'PIN 1 INDEX AREA' in the top-left corner. Dimensions are 1.45 / 1.35 mm for the width and 1.85 / 1.75 mm for the length. Labels A and B indicate the corners.\n- Side View:** Shows the package profile with a maximum height of 0.55 mm. It includes a 'SEATING PLANE' and a flatness tolerance of 0.05. A note reference 'NOTE 3' is present. Dimensions of 0.45 and 0.05 are also shown.\n- Bottom View:** Shows the 8 pins numbered 1 through 8. Dimensions include 2X 0.8 mm for the pitch between pins 3 and 5, 9X 0.45 / 0.35 mm for the pitch between pins 2 and 6, and 6X 0.4 mm for the pitch between pins 1 and 7. A 'SYMM' (symmetry) symbol is used. A 'PIN 1 ID' (pin identification) symbol is also present. A position tolerance of 0.07 (M) and a flatness tolerance of 0.05 (M) are indicated. A dimension of 10X 0.25 / 0.15 mm is shown for the pin length.\n- Side View (Right):** Shows the package profile with a dimension of (0.13) TYP.",
+    "new": "The figure shows the package outline with the following details (min/max pairs are printed as two stacked values):\n\n- Top View: A rectangular package with a 'PIN 1 INDEX AREA' in the top-left corner. Width 1.35 to 1.45 (datum B), length 1.75 to 1.85 (datum A).\n- Side View: Height 0.45 to 0.55 ('NOTE 3'), standoff 0.00 to 0.05, a 'SEATING PLANE' (datum C) with a 0.05 C tolerance.\n- Bottom View: 10 pads numbered 1 through 10 (3, 4, 5 on one short side, 10, 9, 8 on the other, 1, 2 and 6, 7 on the long sides), with 'SYMM' centerlines. Dimensions: 2X 0.8 between pads 3 and 5, 9X 0.35 to 0.45 pad length, 6X 0.4 pad pitch, 10X 0.15 to 0.25 pad width with position tolerances 0.07 (M) C A B and 0.05 (M), and 0.45 to 0.55 for the pin 1 pad marked 'PIN 1 ID'.\n- Side View (Right): (0.13) TYP.",
+    "evidence": "AI figure description misread PDF p41 RSW0010A Package Outline: it said 8 pins numbered 1-8 (the drawing has 10 pads, RSW0010A), a square package (1.35-1.45 by 1.75-1.85), and mislabeled the 9X 0.35-0.45 and 6X 0.4 dimensions as pitches between particular pins; the 0.07/0.05 frames are position tolerances (not flatness), and 0.45/0.05 were stray halves of the 0.45-0.55 height and 0.00-0.05 standoff pairs. Rewritten from PDF words and the render.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ina190-p41-rsw-scale",
+    "file": "output/ina190/ina190.md",
+    "page": 41,
+    "old": "PLASTIC QUAD FLATPACK - NO LEAD\n\n![Technical drawing of the UQFN package showing top, side, and bottom views",
+    "new": "PLASTIC QUAD FLATPACK - NO LEAD\n\nSCALE 7.000\n\n![Technical drawing of the UQFN package showing top, side, and bottom views",
+    "evidence": "PDF p41 prints 'SCALE 7.000' in the drawing (pdftotext); missing in md.",
+    "sources": [
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p41-rsw-isometric-pins-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 41,
+    "old": "Isometric view of the UQFN package showing its 8 pins and square footprint.]",
+    "new": "Isometric view of the UQFN package showing its 10 pads and rectangular footprint.]",
+    "evidence": "AI figure description: RSW0010A is a 10-pad UQFN with a 1.35-1.45 by 1.75-1.85 (rectangular) body (PDF p41).",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p41-rsw-isometric-pins-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 41,
+    "old": "\nIsometric view of the UQFN package showing its 8 pins and square footprint.\n",
+    "new": "\nIsometric view of the UQFN package showing its 10 pads and rectangular footprint.\n",
+    "evidence": "AI figure description: RSW0010A is a 10-pad UQFN with a 1.35-1.45 by 1.75-1.85 (rectangular) body (PDF p41).",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p42-rsw-land-pattern-dims-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 42,
+    "old": "The package is centered on a board with dimensions (1.2) by (1.6). Pin 1 is at the top left, and pin 10 is at the top right. Symmetry lines are indicated with 'SYMM' and centerline symbols. Dimensions include 10X (0.2) for the top edge, 6X (0.4) for the left edge, and 9X (0.6) for the bottom edge. A note 'SEE SOLDER MASK DETAIL' points to the top right pin area. A small radius '(R0.05) TYP' is shown at the bottom left corner of the package.]",
+    "new": "Pads 10, 9, 8 are at the top, 3, 4, 5 at the bottom, 1 and 2 on the left and 7 and 6 on the right; the pad-center spans are (1.2) horizontally and (1.6) vertically. Symmetry lines are indicated with 'SYMM' and centerline symbols. Dimensions include 10X (0.2) pad width, 6X (0.4) pad pitch, 9X (0.6) pad length and (0.7) for the pin 1 pad length. A note 'SEE SOLDER MASK DETAIL' points to pad 8. A '(R0.05) TYP' corner radius is pointed out on pad 2.]",
+    "evidence": "AI figure description misread PDF p42 RSW0010A land pattern (render + words): pin 10 is top-left (8 top-right) and pin 1 is on the left side; (1.2)/(1.6) are pad-center spans, not board dimensions; 10X (0.2), 6X (0.4), 9X (0.6) are pad width, pitch and length; (0.7) was omitted; the R0.05 leader points at pad 2.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p42-rsw-land-pattern-dims-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 42,
+    "old": "The package is centered on a board with dimensions (1.2) by (1.6). Pin 1 is at the top left, and pin 10 is at the top right. Symmetry lines are indicated with 'SYMM' and centerline symbols. Dimensions include 10X (0.2) for the top edge, 6X (0.4) for the left edge, and 9X (0.6) for the bottom edge. A note 'SEE SOLDER MASK DETAIL' points to the top right pin area. A small radius '(R0.05) TYP' is shown at the bottom left corner of the package.\n",
+    "new": "Pads 10, 9, 8 are at the top, 3, 4, 5 at the bottom, 1 and 2 on the left and 7 and 6 on the right; the pad-center spans are (1.2) horizontally and (1.6) vertically. Symmetry lines are indicated with 'SYMM' and centerline symbols. Dimensions include 10X (0.2) pad width, 6X (0.4) pad pitch, 9X (0.6) pad length and (0.7) for the pin 1 pad length. A note 'SEE SOLDER MASK DETAIL' points to pad 8. A '(R0.05) TYP' corner radius is pointed out on pad 2.\n",
+    "evidence": "AI figure description misread PDF p42 RSW0010A land pattern (render + words): pin 10 is top-left (8 top-right) and pin 1 is on the left side; (1.2)/(1.6) are pad-center spans, not board dimensions; 10X (0.2), 6X (0.4), 9X (0.6) are pad width, pitch and length; (0.7) was omitted; the R0.05 leader points at pad 2. (repeated description paragraph)",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p42-rsw-solder-mask-colors-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 42,
+    "old": "shows a green outline for the metal edge and a blue outline for the solder mask opening, with a 0.05 MAX ALL AROUND dimension. The right option, 'SOLDER MASK DEFINED', shows a green outline for the exposed metal and a blue dashed outline for the solder mask opening, with a 0.05 MIN ALL AROUND dimension. Labels include 'METAL EDGE', 'SOLDER MASK OPENING', 'EXPOSED METAL', and 'METAL UNDER SOLDER MASK'.]",
+    "new": "shows a blue outline for the metal edge and a green outline for the solder mask opening, with a 0.05 MAX ALL AROUND dimension. The right option, 'SOLDER MASK DEFINED', shows a green outline for the solder mask opening (exposed metal inside) and a blue dashed outline for the metal under solder mask, with a 0.05 MIN ALL AROUND dimension. Labels include 'METAL EDGE', 'SOLDER MASK OPENING', 'EXPOSED METAL', and 'METAL UNDER SOLDER MASK'.]",
+    "evidence": "AI figure description swapped labels in PDF p42 SOLDER MASK DETAILS (render): 'METAL EDGE' points to the inner blue outline and 'SOLDER MASK OPENING' to the green one; in the SMD detail 'METAL UNDER SOLDER MASK' points to the dashed blue outline and 'SOLDER MASK OPENING' to the green one.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p42-rsw-solder-mask-colors-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 42,
+    "old": "shows a green outline for the metal edge and a blue outline for the solder mask opening, with a 0.05 MAX ALL AROUND dimension. The right option, 'SOLDER MASK DEFINED', shows a green outline for the exposed metal and a blue dashed outline for the solder mask opening, with a 0.05 MIN ALL AROUND dimension. Labels include 'METAL EDGE', 'SOLDER MASK OPENING', 'EXPOSED METAL', and 'METAL UNDER SOLDER MASK'.\n",
+    "new": "shows a blue outline for the metal edge and a green outline for the solder mask opening, with a 0.05 MAX ALL AROUND dimension. The right option, 'SOLDER MASK DEFINED', shows a green outline for the solder mask opening (exposed metal inside) and a blue dashed outline for the metal under solder mask, with a 0.05 MIN ALL AROUND dimension. Labels include 'METAL EDGE', 'SOLDER MASK OPENING', 'EXPOSED METAL', and 'METAL UNDER SOLDER MASK'.\n",
+    "evidence": "AI figure description swapped labels in PDF p42 SOLDER MASK DETAILS (render): 'METAL EDGE' points to the inner blue outline and 'SOLDER MASK OPENING' to the green one; in the SMD detail 'METAL UNDER SOLDER MASK' points to the dashed blue outline and 'SOLDER MASK OPENING' to the green one. (repeated description paragraph)",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p43-rsw-stencil-layout-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 43,
+    "old": "The diagram shows a 3x3 grid of rectangular apertures. The central aperture is labeled 'SYMM' with a centerline symbol. Apertures are numbered 1 through 10. Dimensions are provided in millimeters: 10X (0.2) for the top edge, 6X (0.4) for the middle edge, 9X (0.6) for the bottom edge, (0.7) for the top width, (1.2) for the bottom width, and (1.6) for the total height. A corner radius of (R0.05) TYP is indicated. Symmetry centerlines are shown horizontally and vertically.]",
+    "new": "The diagram shows ten rectangular apertures numbered 1 through 10 in the same arrangement as the land pattern (10, 9, 8 at the top, 3, 4, 5 at the bottom, 1, 2 on the left, 7, 6 on the right), with 'SYMM' centerlines. Dimensions are provided in millimeters: 10X (0.2) aperture width, 6X (0.4) pitch, 9X (0.6) aperture length, (0.7) for the pin 1 aperture length, and (1.2) and (1.6) for the aperture-center spans. A corner radius of (R0.05) TYP is indicated. Symmetry centerlines are shown horizontally and vertically.]",
+    "evidence": "AI figure description: PDF p43 RSW0010A stencil (words + same geometry as the p42 land pattern) has ten apertures around the edges, no central aperture/3x3 grid; the X-dimensions are aperture width, pitch and length, not edges.",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p43-rsw-stencil-layout-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 43,
+    "old": "The diagram shows a 3x3 grid of rectangular apertures. The central aperture is labeled 'SYMM' with a centerline symbol. Apertures are numbered 1 through 10. Dimensions are provided in millimeters: 10X (0.2) for the top edge, 6X (0.4) for the middle edge, 9X (0.6) for the bottom edge, (0.7) for the top width, (1.2) for the bottom width, and (1.6) for the total height. A corner radius of (R0.05) TYP is indicated. Symmetry centerlines are shown horizontally and vertically.\n",
+    "new": "The diagram shows ten rectangular apertures numbered 1 through 10 in the same arrangement as the land pattern (10, 9, 8 at the top, 3, 4, 5 at the bottom, 1, 2 on the left, 7, 6 on the right), with 'SYMM' centerlines. Dimensions are provided in millimeters: 10X (0.2) aperture width, 6X (0.4) pitch, 9X (0.6) aperture length, (0.7) for the pin 1 aperture length, and (1.2) and (1.6) for the aperture-center spans. A corner radius of (R0.05) TYP is indicated. Symmetry centerlines are shown horizontally and vertically.\n",
+    "evidence": "AI figure description: PDF p43 RSW0010A stencil (words + same geometry as the p42 land pattern) has ten apertures around the edges, no central aperture/3x3 grid; the X-dimensions are aperture width, pitch and length, not edges. (repeated description paragraph)",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p44-ddf-scale",
+    "file": "output/ina190/ina190.md",
+    "page": 44,
+    "old": "PLASTIC SMALL OUTLINE\n\n![Technical drawing of an 8-pin SOT-23-THIN package outline",
+    "new": "PLASTIC SMALL OUTLINE\n\nSCALE 4.000\n\n![Technical drawing of an 8-pin SOT-23-THIN package outline",
+    "evidence": "PDF p44 prints 'SCALE 4.000' in the DDF0008A package outline (pdftotext); missing in md.",
+    "sources": [
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p45-ddf-board-layout-header",
+    "file": "output/ina190/ina190.md",
+    "page": 45,
+    "old": "{44}------------------------------------------------\n\n![LAND PATTERN EXAMPLE diagram showing a 4x4 grid",
+    "new": "{44}------------------------------------------------\n\n### EXAMPLE BOARD LAYOUT\n\nDDF0008A\n\nSOT-23-THIN - 1.1 mm max height\n\nPLASTIC SMALL OUTLINE\n\n![LAND PATTERN EXAMPLE diagram showing a 4x4 grid",
+    "evidence": "PDF p45 prints the title block 'EXAMPLE BOARD LAYOUT', 'DDF0008A', 'SOT-23-THIN - 1.1 mm max height', 'PLASTIC SMALL OUTLINE' (pdftotext + render); md had lost it (the other layout/stencil pages keep it).",
+    "sources": [
+      "pdf-words",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p45-ddf-land-pattern-alt",
+    "file": "output/ina190/ina190.md",
+    "page": 45,
+    "old": "LAND PATTERN EXAMPLE diagram showing a 4x4 grid of pads with dimensions and pin numbers.]",
+    "new": "LAND PATTERN EXAMPLE diagram showing two columns of four pads with dimensions and pin numbers.]",
+    "evidence": "AI figure description: PDF p45 DDF0008A land pattern has 8 pads in two columns of four (render), not a 4x4 grid.",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p45-ddf-land-pattern-alt-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 45,
+    "old": "\nLAND PATTERN EXAMPLE diagram showing a 4x4 grid of pads with dimensions and pin numbers.\n",
+    "new": "\nLAND PATTERN EXAMPLE diagram showing two columns of four pads with dimensions and pin numbers.\n",
+    "evidence": "Same correction as ina190-p45-ddf-land-pattern-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p45-ddf-land-pattern-desc",
+    "file": "output/ina190/ina190.md",
+    "page": 45,
+    "old": "It consists of four rectangular pads arranged in a 2x2 grid. The pads are labeled with pin numbers: 1 (top-left), 8 (top-right), 4 (bottom-left), and 5 (bottom-right). Dimensions are provided for pad pitch and pad size. The pitch between the centers of adjacent pads is 8X (1.05) horizontally and 8X (0.45) vertically. The pad size is 6X (0.65) by 6X (0.65). A corner radius of (R0.05) TYP is indicated. Symmetry lines are shown with 'SYMM' and centerline symbols. The total width of the pad array is (2.6).",
+    "new": "It consists of eight rectangular pads in two columns of four: pins 1 to 4 on the left (1 at the top) and 8 to 5 on the right (8 at the top). Dimensions: pad length 8X (1.05), pad width 8X (0.45), pad pitch 6X (0.65), and (2.6) between the pad-column centerlines. A corner radius of (R0.05) TYP is pointed out on pad 4. Symmetry lines are shown with 'SYMM' and centerline symbols.",
+    "evidence": "AI figure description misread PDF p45 (render + words): 8 pads, not four in a 2x2 grid; 8X (1.05)/8X (0.45) are pad length/width and 6X (0.65) is the pitch; (2.6) is between the column centerlines.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ina190-p46-ddf-stencil-dims",
+    "file": "output/ina190/ina190.md",
+    "page": 46,
+    "old": "the width of each solder paste area is 8X (1.05); the vertical spacing between the centers of adjacent solder paste areas in a column is 8X (0.45); the vertical distance from the center of the first solder paste area to the center of the last area in a column is 6X (0.65);",
+    "new": "the length of each solder paste area is 8X (1.05); the width (height) of each area is 8X (0.45); the pitch between adjacent areas in a column is 6X (0.65);",
+    "evidence": "AI figure description misread PDF p46 DDF0008A stencil (same geometry as the p45 land pattern): 8X (0.45) is the aperture width and 6X (0.65) the pitch between adjacent apertures, not center spacing / first-to-last distance.",
+    "sources": [
+      "pdf-image",
+      "pdf-words"
+    ],
+    "severity": "low"
   }
 ]
