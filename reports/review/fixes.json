@@ -7282,5 +7282,486 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g28-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Start-Up Waveforms, Forced Continuous Mode. Waveforms for EN, VOUT, IL, and PGOOD. EN is high. VOUT ramps up from 0V to 1.2V. IL shows a纹波 current. PGOOD is low until VOUT is stable, then goes high. Timebase: 200µs/DIV.](",
+    "new": "![Start-Up Waveforms, Forced Continuous Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (1A/DIV), and PGOOD (5V/DIV). EN steps high at the start of the trace. After a delay VOUT ramps up linearly from 0V to 1.2V while IL shows switching current. PGOOD is low until the ramp ends, then goes high, and IL then switches with a larger swing. Timebase: 200µs/DIV.](",
+    "evidence": "PDF p8 3309A G28 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g28-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nStart-Up Waveforms, Forced Continuous Mode. Waveforms for EN, VOUT, IL, and PGOOD. EN is high. VOUT ramps up from 0V to 1.2V. IL shows a纹波 current. PGOOD is low until VOUT is stable, then goes high. Timebase: 200µs/DIV.\n",
+    "new": "\nStart-Up Waveforms, Forced Continuous Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (1A/DIV), and PGOOD (5V/DIV). EN steps high at the start of the trace. After a delay VOUT ramps up linearly from 0V to 1.2V while IL shows switching current. PGOOD is low until the ramp ends, then goes high, and IL then switches with a larger swing. Timebase: 200µs/DIV.\n",
+    "evidence": "PDF p8 3309A G28 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g29-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Start-Up Waveforms, Pulse Skip Mode. Similar to Forced Continuous Mode, but IL shows a more irregular, bursty纹波 current pattern during start-up. Timebase: 200µs/DIV.](",
+    "new": "![Start-Up Waveforms, Pulse Skip Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Forced Continuous Mode: EN steps high, VOUT ramps up linearly after a delay and PGOOD goes high at the end of the ramp; IL shows switching current pulses during start-up. Timebase: 200µs/DIV.](",
+    "evidence": "PDF p8 3309A G29 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g29-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nStart-Up Waveforms, Pulse Skip Mode. Similar to Forced Continuous Mode, but IL shows a more irregular, bursty纹波 current pattern during start-up. Timebase: 200µs/DIV.\n",
+    "new": "\nStart-Up Waveforms, Pulse Skip Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Forced Continuous Mode: EN steps high, VOUT ramps up linearly after a delay and PGOOD goes high at the end of the ramp; IL shows switching current pulses during start-up. Timebase: 200µs/DIV.\n",
+    "evidence": "PDF p8 3309A G29 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g30-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Start-Up Waveforms, Burst Mode Operation. Similar to Pulse Skip Mode, but the纹波 current bursts are more distinct and spaced out. Timebase: 200µs/DIV.](",
+    "new": "![Start-Up Waveforms, Burst Mode Operation. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Pulse Skip Mode; after the ramp ends and PGOOD goes high, IL changes to larger current bursts. Timebase: 200µs/DIV.](",
+    "evidence": "PDF p8 3309A G30 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g30-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nStart-Up Waveforms, Burst Mode Operation. Similar to Pulse Skip Mode, but the纹波 current bursts are more distinct and spaced out. Timebase: 200µs/DIV.\n",
+    "new": "\nStart-Up Waveforms, Burst Mode Operation. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Pulse Skip Mode; after the ramp ends and PGOOD goes high, IL changes to larger current bursts. Timebase: 200µs/DIV.\n",
+    "evidence": "PDF p8 3309A G30 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g31-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Switching Waveforms, Forced Continuous Mode. SW is a square wave. IL is a triangular纹波 current. VOUT shows纹波 voltage. Timebase: 200ns/DIV.](",
+    "new": "![Switching Waveforms, Forced Continuous Mode. SW (2V/DIV) is a square wave. IL (1A/DIV) is a triangular ripple current. VOUT (10mV/DIV) shows ripple voltage. Timebase: 200ns/DIV.](",
+    "evidence": "PDF p8 3309A G31 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g31-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nSwitching Waveforms, Forced Continuous Mode. SW is a square wave. IL is a triangular纹波 current. VOUT shows纹波 voltage. Timebase: 200ns/DIV.\n",
+    "new": "\nSwitching Waveforms, Forced Continuous Mode. SW (2V/DIV) is a square wave. IL (1A/DIV) is a triangular ripple current. VOUT (10mV/DIV) shows ripple voltage. Timebase: 200ns/DIV.\n",
+    "evidence": "PDF p8 3309A G31 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g32-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Switching Waveforms, Pulse Skip Mode. SW shows pulses with gaps. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 4µs/DIV.](",
+    "new": "![Switching Waveforms, Pulse Skip Mode. SW (2V/DIV) shows packets of switching pulses separated by gaps. IL (200mA/DIV) shows matching packets of current pulses. VOUT (10mV/DIV) shows ripple voltage that rises during each packet. Timebase: 4µs/DIV.](",
+    "evidence": "PDF p8 3309A G32 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g32-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nSwitching Waveforms, Pulse Skip Mode. SW shows pulses with gaps. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 4µs/DIV.\n",
+    "new": "\nSwitching Waveforms, Pulse Skip Mode. SW (2V/DIV) shows packets of switching pulses separated by gaps. IL (200mA/DIV) shows matching packets of current pulses. VOUT (10mV/DIV) shows ripple voltage that rises during each packet. Timebase: 4µs/DIV.\n",
+    "evidence": "PDF p8 3309A G32 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g33-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Switching Waveforms, Burst Mode Operation. SW shows bursts of pulses. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 800ns/DIV.](",
+    "new": "![Switching Waveforms, Burst Mode Operation. SW (2V/DIV) shows single switching pulses, each followed by decaying ringing. IL (500mA/DIV) shows a single triangular current pulse per burst and stays near zero between them. VOUT (10mV/DIV) steps up at each pulse and then decays. Timebase: 800ns/DIV.](",
+    "evidence": "PDF p8 3309A G33 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; the burst switching waveform shows single pulses with ringing, not bursts of pulses; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g33-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nSwitching Waveforms, Burst Mode Operation. SW shows bursts of pulses. IL shows bursts of triangular纹波 current. VOUT shows纹波 voltage. Timebase: 800ns/DIV.\n",
+    "new": "\nSwitching Waveforms, Burst Mode Operation. SW (2V/DIV) shows single switching pulses, each followed by decaying ringing. IL (500mA/DIV) shows a single triangular current pulse per burst and stays near zero between them. VOUT (10mV/DIV) steps up at each pulse and then decays. Timebase: 800ns/DIV.\n",
+    "evidence": "PDF p8 3309A G33 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; the burst switching waveform shows single pulses with ringing, not bursts of pulses; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g34-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Load Transient Response, Forced Continuous Mode. ILOAD steps up from 0.1A to 4.5A. IL shows纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV.](",
+    "new": "![Load Transient Response, Forced Continuous Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load with switching ripple. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.](",
+    "evidence": "PDF p8 3309A G34 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g34-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nLoad Transient Response, Forced Continuous Mode. ILOAD steps up from 0.1A to 4.5A. IL shows纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV.\n",
+    "new": "\nLoad Transient Response, Forced Continuous Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load with switching ripple. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.\n",
+    "evidence": "PDF p8 3309A G34 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g35-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Load Transient Response, Pulse Skip Mode. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV.](",
+    "new": "![Load Transient Response, Pulse Skip Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it is low with occasional switching. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.](",
+    "evidence": "PDF p8 3309A G35 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g35-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nLoad Transient Response, Pulse Skip Mode. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波 voltage纹波. Timebase: 10µs/DIV.\n",
+    "new": "\nLoad Transient Response, Pulse Skip Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it is low with occasional switching. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.\n",
+    "evidence": "PDF p8 3309A G35 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g36-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "![Load Transient Response, Burst Mode Operation. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波电压纹波. Timebase: 10µs/DIV.](",
+    "new": "![Load Transient Response, Burst Mode Operation. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it shows separate current bursts. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers with a small burst ripple. Timebase: 10µs/DIV.](",
+    "evidence": "PDF p8 3309A G36 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g36-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nLoad Transient Response, Burst Mode Operation. ILOAD steps up from 0.1A to 4.5A. IL shows bursts of纹波 current纹波. VOUT shows纹波电压纹波. Timebase: 10µs/DIV.\n",
+    "new": "\nLoad Transient Response, Burst Mode Operation. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it shows separate current bursts. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers with a small burst ripple. Timebase: 10µs/DIV.\n",
+    "evidence": "PDF p8 3309A G36 scope plot (render + PDF words): the AI description contained Chinese words ('纹波' = ripple, '电压' = voltage) and lacked the printed channel scales; rewritten from the image with the printed scale labels. Read levels from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g28-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nStart-Up Waveforms, Forced Continuous Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (1A/DIV), and PGOOD (5V/DIV). EN steps high at the start of the trace. After a delay VOUT ramps up linearly from 0V to 1.2V while IL shows switching current. PGOOD is low until the ramp ends, then goes high, and IL then switches with a larger swing. Timebase: 200µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nStart-Up Waveforms, Forced Continuous Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (1A/DIV), and PGOOD (5V/DIV). EN steps high at the start of the trace. After a delay VOUT ramps up linearly from 0V to 1.2V while IL shows switching current. PGOOD is low until the ramp ends, then goes high, and IL then switches with a larger swing. Timebase: 200µs/DIV.\n\n3309A G28\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g29-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nStart-Up Waveforms, Pulse Skip Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Forced Continuous Mode: EN steps high, VOUT ramps up linearly after a delay and PGOOD goes high at the end of the ramp; IL shows switching current pulses during start-up. Timebase: 200µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nStart-Up Waveforms, Pulse Skip Mode. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Forced Continuous Mode: EN steps high, VOUT ramps up linearly after a delay and PGOOD goes high at the end of the ramp; IL shows switching current pulses during start-up. Timebase: 200µs/DIV.\n\n3309A G29\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g30-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nStart-Up Waveforms, Burst Mode Operation. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Pulse Skip Mode; after the ramp ends and PGOOD goes high, IL changes to larger current bursts. Timebase: 200µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nStart-Up Waveforms, Burst Mode Operation. Waveforms for EN (2V/DIV), VOUT (500mV/DIV), IL (500mA/DIV), and PGOOD (5V/DIV). Similar to Pulse Skip Mode; after the ramp ends and PGOOD goes high, IL changes to larger current bursts. Timebase: 200µs/DIV.\n\n3309A G30\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g31-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nSwitching Waveforms, Forced Continuous Mode. SW (2V/DIV) is a square wave. IL (1A/DIV) is a triangular ripple current. VOUT (10mV/DIV) shows ripple voltage. Timebase: 200ns/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nSwitching Waveforms, Forced Continuous Mode. SW (2V/DIV) is a square wave. IL (1A/DIV) is a triangular ripple current. VOUT (10mV/DIV) shows ripple voltage. Timebase: 200ns/DIV.\n\n3309A G31\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g32-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nSwitching Waveforms, Pulse Skip Mode. SW (2V/DIV) shows packets of switching pulses separated by gaps. IL (200mA/DIV) shows matching packets of current pulses. VOUT (10mV/DIV) shows ripple voltage that rises during each packet. Timebase: 4µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nSwitching Waveforms, Pulse Skip Mode. SW (2V/DIV) shows packets of switching pulses separated by gaps. IL (200mA/DIV) shows matching packets of current pulses. VOUT (10mV/DIV) shows ripple voltage that rises during each packet. Timebase: 4µs/DIV.\n\n3309A G32\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g33-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nSwitching Waveforms, Burst Mode Operation. SW (2V/DIV) shows single switching pulses, each followed by decaying ringing. IL (500mA/DIV) shows a single triangular current pulse per burst and stays near zero between them. VOUT (10mV/DIV) steps up at each pulse and then decays. Timebase: 800ns/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nSwitching Waveforms, Burst Mode Operation. SW (2V/DIV) shows single switching pulses, each followed by decaying ringing. IL (500mA/DIV) shows a single triangular current pulse per burst and stays near zero between them. VOUT (10mV/DIV) steps up at each pulse and then decays. Timebase: 800ns/DIV.\n\n3309A G33\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g34-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nLoad Transient Response, Forced Continuous Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load with switching ripple. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nLoad Transient Response, Forced Continuous Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load with switching ripple. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.\n\n3309A G34\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g35-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nLoad Transient Response, Pulse Skip Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it is low with occasional switching. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nLoad Transient Response, Pulse Skip Mode. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it is low with occasional switching. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers. Timebase: 10µs/DIV.\n\n3309A G35\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p8-g36-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 8,
+    "old": "\nLoad Transient Response, Burst Mode Operation. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it shows separate current bursts. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers with a small burst ripple. Timebase: 10µs/DIV.\n\n3.3V<sub>IN</sub>",
+    "new": "\nLoad Transient Response, Burst Mode Operation. ILOAD (2.5A/DIV) steps up from 0.1A to 4.5A and back down. IL (2A/DIV) follows the load; at the light load it shows separate current bursts. VOUT (50mV/DIV) dips at the load step up and overshoots at the load step down, then recovers with a small burst ripple. Timebase: 10µs/DIV.\n\n3309A G36\n\n3.3V<sub>IN</sub>",
+    "evidence": "PDF p8 prints a drawing number in each scope plot (3309A G28 ... 3309A G36; pdftotext + render); the md dropped them on this page.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p10-block-diagram-description",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 10,
+    "old": "- EN (Pin 2):** Connected to a voltage divider (R1, R2) from  $V_{IN}$ . The signal passes through a 0.4V reference and an internal reference block (providing 0.55V, 0.5V, and 0.49V references).\n- MODE/SYNC (Pin 9):** Receives a square wave input and feeds into the MODE DETECT block and the OSCILLATOR.\n- RT (Pin 10):** Connected to a resistor  $R_T$  and feeds into the OSCILLATOR.\n- AGND (Pin 1):** Ground connection for the analog section.\n- MODE DETECT:** Generates control signals for BURST, FORCED CONTINUOUS, and PULSE SKIP modes.\n- OSCILLATOR:** Generates a clock signal for the SLOPE COMP and the S Q R flip-flop.\n- SLOPE COMP:** Compares the oscillator signal with a slope to control the S Q R flip-flop.\n- S Q R Flip-Flop:** Controls the SWITCH LOGIC AND ANTI-SHOOT THROUGH block.\n- SWITCH LOGIC AND ANTI-SHOOT THROUGH:** Controls the power switches (MOSFETs) connected to the SW pin.\n- BURST DETECT:** Monitors the output for burst mode conditions.\n- PGND ( Pins 4, 7, and 13):** Ground connection for the power section.\n- SW ( Pins 5, 6):** Output to the power switch node, connected to an inductor  $L$  and output capacitor  $C_{OUT}$ .\n- FB (Pin 12):** Feedback pin connected to a resistor divider ( $R_A$ ,  $R_B$ ) from  $V_{OUT}$  to the error amplifier.\n- PGOOD (Pin 11):** Output of a fault detection circuit (NAND gate) to a P-channel MOSFET.\n- FAULT:** Output of a fault detection circuit (NAND gate) to a P-channel MOSFET.\n- SS (Pin 14):** Source sense pin connected to a current sense resistor  $R_C$  and a capacitor  $C_{SS}$ .\n- IC (Pin 15):** Input current sense pin connected to a current sense resistor  $R_C$  and a capacitor  $C_{SS}$ .\n- IC (Pin 15):** Input current sense pin connected to a current sense resistor  $R_C$  and a capacitor  $C_{SS}$ .",
+    "new": "- **EN (Pin 2):** Connected to the R1/R2 (OPT) resistor divider from  $V_{IN}$ . EN drives the + input of a comparator with hysteresis whose – input is at 0.4V; the comparator output enables the INTERNAL REFERENCE block (0.55V, 0.5V and 0.49V outputs).\n- **MODE/SYNC (Pin 9):** Shown driven by a square wave; feeds the MODE DETECT block (BURST, FORCED CONTINUOUS, PULSE SKIP outputs) and the OSCILLATOR.\n- **RT (Pin 10):** Connected to a resistor  $R_T$  to ground and to the OSCILLATOR.\n- **AGND (Pin 1):** Connected to ground.\n- **OSCILLATOR:** Drives the S input of the S-R latch and the SLOPE COMP block.\n- **Current loop:** SLOPE COMP and the sensed top-switch current are summed (+); the sum and  $V_C$  feed a comparator that drives the R input of the latch. The latch Q output drives the SWITCH LOGIC AND ANTI-SHOOT THROUGH block, which drives the top (P-channel) and bottom (N-channel) power MOSFETs through two drivers. The bottom-switch current is also sensed and fed back to the switch logic.\n- **BURST DETECT:** Monitors  $V_C$  and drives the switch logic.\n- **Error amplifier:**  $G_M$  amplifier with its – input on FB and two + inputs, 0.5V and SS; its output is  $V_C$ , compensated by  $C_{PAR}$  and  $R_C$  in series with  $C_C$ .\n- **SS:** Soft-start node charged by current source  $I_{SS}$  into  $C_{SS}$  and discharged by an N-channel MOSFET driven by FAULT.\n- **PGOOD (Pin 11):** Open-drain N-channel MOSFET driven by an OR gate (FAULT) of two comparators with hysteresis that compare FB with 0.49V and 0.55V.\n- **V<sub>IN</sub> (Pins 3, 8):** Top-switch supply, bypassed by  $C_{IN}$ .\n- **SW (Pins 5, 6):** Switch node, connected to the inductor  $L$  and the output capacitor  $C_{OUT}$  at  $V_{OUT}$ .\n- **PGND (Pins 4, 7, and 13 (Exposed Pad)):** Bottom-switch return, connected to ground.\n- **FB (Pin 12):** Connected to the  $R_A$ / $R_B$  divider from  $V_{OUT}$ , with  $C_{FF}$  across  $R_A$ .",
+    "evidence": "PDF p10 Block Diagram (render, 220 dpi crop + PDF words): the AI bullet list invented pins 'SS (Pin 14)' and 'IC (Pin 15)' (the part has 13 pins; IC was listed twice), called the PGOOD logic a NAND gate driving a P-channel MOSFET (PDF: OR gate driving an N-channel open-drain MOSFET), described FAULT as a pin, and omitted the G_M error amplifier, V_C compensation (C_PAR, R_C, C_C), I_SS/C_SS soft start, C_FF and the VIN pins; the bold markers were broken ('- EN (Pin 2):**'). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p11-regulators-curly-apostrophe",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 11,
+    "old": "most of the regulator's circuitry",
+    "new": "most of the regulator’s circuitry",
+    "evidence": "PDF p11 prints 'regulator’s' with a curly apostrophe (pdftotext U+2019); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p12-oscillator-curly-apostrophe",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 12,
+    "old": "The LTC3309A's internal oscillator",
+    "new": "The LTC3309A’s internal oscillator",
+    "evidence": "PDF p12 prints 'LTC3309A’s' with a curly apostrophe (pdftotext U+2019); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p12-pgood-curly-apostrophe",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 12,
+    "old": "When the LTC3309A's output voltage",
+    "new": "When the LTC3309A’s output voltage",
+    "evidence": "PDF p12 prints 'LTC3309A’s' with a curly apostrophe (pdftotext U+2019); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p13-fig1-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 13,
+    "old": "![Circuit diagram of the feedback resistor network for the LTC3309A. It shows a block diagram of the 'BUCK SWITCHING REGULATOR' with VOUT and FB pins. A resistor divider consisting of RA and RB is connected between VOUT and FB. An optional phase lead capacitor CFF is connected in parallel with RA. The output capacitor COUT is also shown.](",
+    "new": "![Circuit diagram of the feedback resistor network for the LTC3309A. It shows a block diagram of the 'BUCK SWITCHING REGULATOR' with VOUT and FB pins. A resistor divider is formed by RA from VOUT to FB and RB from FB to ground. An optional phase lead capacitor CFF (drawn dashed, labeled '(OPTIONAL)') is connected in parallel with RA. The output capacitor COUT is connected from VOUT to ground.](",
+    "evidence": "PDF p13 Figure 1 (render): RB goes from FB to ground; the AI text said the RA/RB divider is 'connected between VOUT and FB'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p13-fig1-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 13,
+    "old": "\nCircuit diagram of the feedback resistor network for the LTC3309A. It shows a block diagram of the 'BUCK SWITCHING REGULATOR' with VOUT and FB pins. A resistor divider consisting of RA and RB is connected between VOUT and FB. An optional phase lead capacitor CFF is connected in parallel with RA. The output capacitor COUT is also shown.\n",
+    "new": "\nCircuit diagram of the feedback resistor network for the LTC3309A. It shows a block diagram of the 'BUCK SWITCHING REGULATOR' with VOUT and FB pins. A resistor divider is formed by RA from VOUT to FB and RB from FB to ground. An optional phase lead capacitor CFF (drawn dashed, labeled '(OPTIONAL)') is connected in parallel with RA. The output capacitor COUT is connected from VOUT to ground.\n",
+    "evidence": "PDF p13 Figure 1 (render): RB goes from FB to ground; the AI text said the RA/RB divider is 'connected between VOUT and FB'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p13-f01-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 13,
+    "old": "\n\n**Figure 1. Feedback Resistor Network**",
+    "new": "\n\n3309A F01\n\n**Figure 1. Feedback Resistor Network**",
+    "evidence": "PDF p13 prints the drawing number '3309A F01' in Figure 1 (pdftotext + render); the md dropped it.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p14-rt-pin-name-first-method",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 14,
+    "old": "The first method, connecting the  $R_T$  pin to",
+    "new": "The first method, connecting the RT pin to",
+    "evidence": "PDF p14 prints 'connecting the RT pin to VIN' with RT as the pin name (no subscript; PyMuPDF spans + render); the md subscripted it like the resistor R_T.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p14-rt-pin-name-second-method",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 14,
+    "old": "tied from the  $R_T$  pin to ground",
+    "new": "tied from the RT pin to ground",
+    "evidence": "PDF p14 prints 'tied from the RT pin to ground' with RT as the pin name (no subscript; PyMuPDF spans + render), while the resistor is '(R_T)'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p14-eq3-fsw-lowercase-as-printed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 14,
+    "old": "$$R_T = \\frac{73.4}{f_{SW}} - 1.9 \\quad (3)$$",
+    "new": "$$R_T = \\frac{73.4}{f_{sw}} - 1.9 \\quad (3)$$",
+    "evidence": "PDF p14 Equation (3) prints the denominator as f with lowercase subscript 'sw' (pdftotext 'fsw' + render), unlike f_SW in the text; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
