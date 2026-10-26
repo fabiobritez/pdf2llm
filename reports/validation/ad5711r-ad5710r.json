@@ -1244,19 +1244,17 @@
         "5711"
       ],
       "figure_alt_number_coverage": 0.8,
-      "figure_alt_word_coverage": 0.4375,
+      "figure_alt_word_coverage": 0.53125,
       "figure_missing_numbers": [
         "0.1",
         "2.5"
       ],
       "figure_missing_words": [
         "address",
-        "and",
         "bit",
         "bypass",
         "capacitor",
         "channel",
-        "description",
         "device",
         "input",
         "logic",
@@ -1266,8 +1264,7 @@
         "provides",
         "reference",
         "this",
-        "type",
-        "with"
+        "type"
       ],
       "figure_number_tokens": 10,
       "figure_reasons": [],
@@ -1411,24 +1408,16 @@
       "word_coverage": 1.0
     },
     {
-      "alt_only_number_count": 1,
-      "alt_only_numbers": [
-        "-0.08%"
-      ],
+      "alt_only_number_count": 0,
+      "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 22,
+      "extra_number_count": 18,
       "extra_numbers": [
-        "-0.08",
-        "-0.2",
         "-0.3",
-        "-0.4",
         "-1",
-        "-12.8",
         "-32",
         "-45",
         "-5",
-        "-6.4",
-        "0",
         "0.3",
         "1",
         "1.5",
@@ -1436,8 +1425,10 @@
         "125",
         "145",
         "2.5",
+        "2.7",
+        "23",
+        "3.3",
         "32",
-        "41",
         "5",
         "5.5"
       ],
@@ -1519,7 +1510,7 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 25,
+      "extra_number_count": 23,
       "extra_numbers": [
         "-1",
         "-100",
@@ -1528,20 +1519,18 @@
         "-40",
         "0",
         "1",
-        "1.5",
         "1.7",
         "1.71",
         "100",
         "125",
         "2.5",
+        "2.7",
         "3",
         "3.3",
         "300",
         "4",
-        "4.5",
         "5",
         "5.5",
-        "55",
         "6",
         "60",
         "65",
@@ -1595,10 +1584,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 1,
-      "missing_words": [
-        "idd"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 15,
       "pdf_number_tokens": 7,
@@ -1621,7 +1608,7 @@
           "words": 0
         }
       },
-      "word_coverage": 0.95
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
@@ -1641,27 +1628,27 @@
         "0",
         "0.2",
         "0.5",
-        "0.65",
-        "1.85",
         "10",
         "100",
-        "13",
         "15",
         "150",
+        "2.2",
         "2.5",
         "20",
         "200",
+        "22",
         "3",
         "3.3",
         "35",
         "4",
-        "40",
+        "4.7",
         "47",
         "5",
         "50",
         "5710",
         "5711",
         "6",
+        "6.8",
         "7"
       ],
       "figure_alt_number_coverage": 1.0,
@@ -1742,35 +1729,36 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 27,
+      "extra_number_count": 28,
       "extra_numbers": [
         "-0.5",
         "-1",
         "-100",
-        "-11",
-        "-120",
         "-15",
-        "-18",
         "-200",
         "-30",
+        "-33",
         "-34",
-        "-40",
         "-400",
         "-5",
         "-8",
+        "0.3",
+        "0.4",
         "0.5",
+        "0.7",
         "1",
+        "1.5",
         "10",
         "100",
         "15",
         "2",
         "200",
         "3",
-        "40",
         "400",
         "6",
         "7",
-        "8"
+        "8",
+        "9"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -1854,32 +1842,32 @@
       "extra_numbers": [
         "-0.5",
         "-1",
-        "-100",
         "-15",
-        "-160",
         "-200",
         "-30",
         "-400",
-        "-6",
-        "-8",
+        "0.3",
+        "0.4",
         "0.5",
         "0.6",
+        "0.8",
         "1.5",
         "11",
         "15",
-        "160",
         "2",
-        "2.2",
+        "2.5",
         "200",
         "3",
         "3.5",
+        "3.9",
         "30",
+        "4.5",
         "400",
         "5.5",
         "6",
         "6.5",
         "7",
-        "80"
+        "9"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -1959,7 +1947,7 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 21,
+      "extra_number_count": 23,
       "extra_numbers": [
         "-1",
         "-10",
@@ -1972,7 +1960,9 @@
         "100",
         "1000",
         "125",
+        "2",
         "20",
+        "3",
         "3.3",
         "30",
         "4",
@@ -2061,16 +2051,14 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 27,
+      "extra_number_count": 25,
       "extra_numbers": [
         "-10",
         "-100",
         "-120",
         "-2",
-        "-20",
         "-5",
         "-6",
-        "-80",
         "0",
         "0.5",
         "1",
@@ -2604,8 +2592,19 @@
       "word_coverage": 1.0
     },
     {
-      "alt_only_number_count": 0,
-      "alt_only_numbers": [],
+      "alt_only_number_count": 10,
+      "alt_only_numbers": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "4696",
+        "4698",
+        "5710",
+        "5711",
+        "7"
+      ],
       "classification": "text",
       "extra_number_count": 0,
       "extra_numbers": [],
@@ -2614,7 +2613,9 @@
       "figure_missing_numbers": [],
       "figure_missing_words": [],
       "figure_number_tokens": 0,
-      "figure_reasons": [],
+      "figure_reasons": [
+        "image-dominated Markdown"
+      ],
       "figure_regions": [
         [
           135.9015655517578,
@@ -2670,10 +2671,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 1,
-      "missing_words": [
-        "check"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 28,
       "pdf_number_tokens": 10,
@@ -2696,17 +2695,15 @@
           "words": 0
         }
       },
-      "word_coverage": 0.9941176470588236
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 3,
+      "extra_number_count": 1,
       "extra_numbers": [
-        "0",
-        "41",
-        "42"
+        "0"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 1.0,
@@ -2762,8 +2759,10 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 0,
-      "extra_numbers": [],
+      "extra_number_count": 1,
+      "extra_numbers": [
+        "9"
+      ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 0.16666666666666666,
       "figure_missing_numbers": [],
@@ -2830,9 +2829,11 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 1,
+      "extra_number_count": 3,
       "extra_numbers": [
-        "1"
+        "1",
+        "7",
+        "8"
       ],
       "figure_alt_number_coverage": 1.0,
       "figure_alt_word_coverage": 0.3333333333333333,
@@ -2891,8 +2892,11 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 1,
+      "extra_number_count": 4,
       "extra_numbers": [
+        "13",
+        "14",
+        "6",
         "8"
       ],
       "figure_alt_number_coverage": 1.0,
@@ -2998,8 +3002,9 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 5,
+      "extra_number_count": 6,
       "extra_numbers": [
+        "2",
         "3",
         "5",
         "6",
@@ -3017,8 +3022,10 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 0,
-      "missing_words": [],
+      "missing_word_count": 1,
+      "missing_words": [
+        "ldac"
+      ],
       "number_coverage": 1.0,
       "page": 34,
       "pdf_number_tokens": 7,
@@ -3041,7 +3048,7 @@
           "words": 0
         }
       },
-      "word_coverage": 1.0
+      "word_coverage": 0.9940828402366864
     },
     {
       "alt_only_number_count": 0,
@@ -3052,14 +3059,13 @@
         "3"
       ],
       "figure_alt_number_coverage": 0.5,
-      "figure_alt_word_coverage": 0.2857142857142857,
+      "figure_alt_word_coverage": 0.42857142857142855,
       "figure_missing_numbers": [
         "12",
         "14"
       ],
       "figure_missing_words": [
         "bits",
-        "device",
         "identity",
         "instruction",
         "phase"
@@ -3127,10 +3133,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 1,
-      "missing_words": [
-        "partialaccesserr"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 36,
       "pdf_number_tokens": 12,
@@ -3153,7 +3157,7 @@
           "words": 0
         }
       },
-      "word_coverage": 0.9955357142857143
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
@@ -3215,7 +3219,7 @@
       "missing_numbers": [],
       "missing_word_count": 1,
       "missing_words": [
-        "sofware"
+        "ldac"
       ],
       "number_coverage": 1.0,
       "page": 37,
@@ -5139,12 +5143,11 @@
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
       "classification": "text",
-      "extra_number_count": 13,
+      "extra_number_count": 12,
       "extra_numbers": [
         "102",
         "15906392337",
         "16",
-        "3",
         "52",
         "53327",
         "60029",
@@ -5297,10 +5300,8 @@
       "flags": [],
       "missing_number_count": 0,
       "missing_numbers": [],
-      "missing_word_count": 1,
-      "missing_words": [
-        "affectinputch"
-      ],
+      "missing_word_count": 0,
+      "missing_words": [],
       "number_coverage": 1.0,
       "page": 57,
       "pdf_number_tokens": 11,
@@ -5323,7 +5324,7 @@
           "words": 0
         }
       },
-      "word_coverage": 0.98
+      "word_coverage": 1.0
     },
     {
       "alt_only_number_count": 0,
@@ -5504,10 +5505,32 @@
     {
       "alt_only_number_count": 0,
       "alt_only_numbers": [],
-      "classification": "text loss",
-      "extra_number_count": 1,
+      "classification": "text",
+      "extra_number_count": 23,
       "extra_numbers": [
-        "60"
+        "-8029",
+        "0.04",
+        "0.18",
+        "0.2",
+        "0.22",
+        "0.25",
+        "0.27",
+        "0.272",
+        "0.28",
+        "0.29",
+        "0.297",
+        "0.3",
+        "0.32",
+        "0.4",
+        "0.47",
+        "0.53",
+        "1.6",
+        "2.123",
+        "2.163",
+        "2.173",
+        "2.213",
+        "4",
+        "5"
       ],
       "figure_alt_number_coverage": 0.0,
       "figure_alt_word_coverage": 0.0,
@@ -5589,15 +5612,11 @@
       ],
       "figure_word_tokens": 13,
       "flags": [],
-      "missing_number_count": 3,
-      "missing_numbers": [
-        "2",
-        "2023",
-        "3"
-      ],
+      "missing_number_count": 0,
+      "missing_numbers": [],
       "missing_word_count": 0,
       "missing_words": [],
-      "number_coverage": 0.8235294117647058,
+      "number_coverage": 1.0,
       "page": 60,
       "pdf_number_tokens": 17,
       "pdf_word_tokens": 46,
@@ -5626,19 +5645,19 @@
   "summary": {
     "geometry_rows": {
       "mismatched": 0,
-      "order_matched": 30,
+      "order_matched": 31,
       "out_of_scope": 247,
-      "unverifiable": 17,
-      "unverifiable_no_match": 14,
-      "unverifiable_prose_ambiguous": 2,
+      "unverifiable": 15,
+      "unverifiable_no_match": 13,
+      "unverifiable_prose_ambiguous": 1,
       "unverifiable_value_ambiguous": 1,
       "value_matched": 47,
-      "verified_ok": 153
+      "verified_ok": 155
     },
     "high_confidence_table_rows": 0,
-    "low_coverage_text_pages": 1,
-    "mean_number_coverage": 0.9970588235294117,
-    "mean_word_coverage": 0.9975837085221941,
+    "low_coverage_text_pages": 0,
+    "mean_number_coverage": 1.0,
+    "mean_word_coverage": 0.9988241998370633,
     "pages": 60,
     "status": "REVIEW",
     "table_issue_counts": {
@@ -5655,7 +5674,7 @@
     {
       "confidence": "review",
       "detail": "MIN > TYP",
-      "line": 197,
+      "line": 199,
       "page": 5,
       "row": "Headroom | 70 | 50 |  | mV | Source current = 20mA",
       "type": "ordering"
@@ -5663,7 +5682,7 @@
     {
       "confidence": "review",
       "detail": "MIN > TYP",
-      "line": 198,
+      "line": 200,
       "page": 5,
       "row": "Footroom | 250 | 120 |  | mV | Sink current = 10mA",
       "type": "ordering"

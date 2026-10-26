@@ -8,7 +8,7 @@ Geometry rows count numeric data rows: verified OK / mismatched / unverifiable. 
 | Datasheet | Pages | Mean words | Mean numbers | Low text pages | Missing unit | Wrong column | Column shift | Ordering | Ragged | Geometry column | Geometry missing | Geometry rows OK / mismatch / unverifiable / out of scope | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [ad5593r](ad5593r.md) | 47 | 100.0% | 99.8% | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 132 / 0 / 5 / 242 | OK |
-| [ad5711r-ad5710r](ad5711r-ad5710r.md) | 60 | 99.8% | 99.7% | 1 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 153 / 0 / 17 / 247 | REVIEW |
+| [ad5711r-ad5710r](ad5711r-ad5710r.md) | 60 | 99.9% | 100.0% | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 155 / 0 / 15 / 247 | REVIEW |
 | [ina190](ina190.md) | 47 | 94.8% | 94.0% | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 57 / 0 / 1 / 150 | OK |
 | [lt1965fb](lt1965fb.md) | 22 | 99.9% | 100.0% | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 63 / 0 / 0 / 66 | OK |
 | [ltc2975](ltc2975.md) | 108 | 99.0% | 99.5% | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 155 / 0 / 5 / 1185 | REVIEW |

@@ -18,9 +18,9 @@ Before figure deduplication (diagnostic only): source numeric tokens 4713, compa
 
 Spec tables: 10; rows: 212; nonempty cells checked: 731; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 4488, compact 4488; equal: True; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 4800, compact 4800; equal: True; source subset: True.
 
-Before figure deduplication (diagnostic only): source numeric tokens 5752, compact 4488; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 6325, compact 4800; equal: False; source subset: False.
 
 ## ina190
 
