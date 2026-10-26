@@ -28844,5 +28844,720 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p14-fig7-1-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 14,
+    "old": "![Figure 7-1. Measurement Setup for TPS6287Bxx. This schematic diagram shows the connection of a TPS6287Bxx buck converter for parameter measurement. The input voltage VIN (2.7 V to 6 V) is connected to the VIN pin and a voltage divider for VIO. An input capacitor CIN (2 x 22 uF) is connected between VIN and ground. The enable pin (EN) is connected to a resistor REN (22 k ohms) to ground. The I2C pins (SDA, SCL) are shown. The output voltage is set by two resistors RVSET1 and RVSET2 connected to the VSET1 and VSET2 pins. The output stage consists of an inductor L, an output capacitor COUT (4 x 22 uF), and a load. The converter's output is also connected to a measurement circuit consisting of a resistor RZ (2.1 k ohms), a capacitor CC (1.8 nF), and a capacitor CC2 (10 pF) in parallel, followed by a comparator (COMP) and a power good (PG) pin. The PG pin is connected to a 100 k ohm resistor RPG to ground. The converter's ground pins (AGND, GND) are connected to a common ground point. The output voltage VIO is measured across the load.](a33da0f14e456f92539ce3e9b7d81f9a_img.jpg)\n\nFigure 7-1. Measurement Setup for TPS6287Bxx. This schematic diagram shows the connection of a TPS6287Bxx buck converter for parameter measurement. The input voltage VIN (2.7 V to 6 V) is connected to the VIN pin and a voltage divider for VIO. An input capacitor CIN (2 x 22 uF) is connected between VIN and ground. The enable pin (EN) is connected to a resistor REN (22 k ohms) to ground. The I2C pins (SDA, SCL) are shown. The output voltage is set by two resistors RVSET1 and RVSET2 connected to the VSET1 and VSET2 pins. The output stage consists of an inductor L, an output capacitor COUT (4 x 22 uF), and a load. The converter's output is also connected to a measurement circuit consisting of a resistor RZ (2.1 k ohms), a capacitor CC (1.8 nF), and a capacitor CC2 (10 pF) in parallel, followed by a comparator (COMP) and a power good (PG) pin. The PG pin is connected to a 100 k ohm resistor RPG to ground. The converter's ground pins (AGND, GND) are connected to a common ground point. The output voltage VIO is measured across the load.",
+    "new": "![Figure 7-1. Measurement Setup for TPS6287Bxx (description written from the drawing; it is the same schematic as the Simplified Schematic on page 1, component values are in Table 7-1): the input V_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C_IN to ground; R_EN connects EN to V_IN. SDA and SCL form the I2C bus, each pulled up to V_IO by a resistor. VSET1 and VSET2 each go to ground through R_VSET1 and R_VSET2. The two SW pins drive the inductor L; C_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R_Z in series with C_C, with C_C2 in parallel. PG is pulled up to V_IO by R_PG and is the PG output. SYNC_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed in the drawing.](a33da0f14e456f92539ce3e9b7d81f9a_img.jpg)\n\nFigure 7-1. Measurement Setup for TPS6287Bxx (description written from the drawing; it is the same schematic as the Simplified Schematic on page 1, component values are in Table 7-1): the input V\\_IN = 2.7 V to 6 V connects to both VIN pins and to MODE/SYNC, with C\\_IN to ground; R\\_EN connects EN to V\\_IN. SDA and SCL form the I2C bus, each pulled up to V\\_IO by a resistor. VSET1 and VSET2 each go to ground through R\\_VSET1 and R\\_VSET2. The two SW pins drive the inductor L; C\\_OUT to ground and the Load are at the inductor output, and VOSNS and GOSNS sense the output and its ground at the load. COMP goes to ground through R\\_Z in series with C\\_C, with C\\_C2 in parallel. PG is pulled up to V\\_IO by R\\_PG and is the PG output. SYNC\\_OUT is not connected (X). AGND and the two GND pins are tied together to ground. No component values are printed in the drawing.",
+    "evidence": "PDF p14 Figure 7-1: the AI text described a voltage divider for VIO, R_EN to ground, a 'measurement circuit' with a comparator on COMP, R_PG to ground and 'VIO measured across the load'. The drawing is the page-1 application schematic (R_EN from V_IN to EN, R_PG pull-up to V_IO, RC network from COMP to ground). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p14-captions-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 14,
+    "old": "Figure 7-1. Measurement Setup for TPS6287Bxx\n\nTable 7-1. List of Components",
+    "new": "**Figure 7-1. Measurement Setup for TPS6287Bxx**\n\n**Table 7-1. List of Components**",
+    "evidence": "PDF p14: the Figure 7-1 and Table 7-1 captions are bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p15-functional-block-diagram-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 15,
+    "old": "![Functional Block Diagram of the TPS6287Bxx devices showing internal components and pin connections.](3f1987804d7d78bc3b3bc560e974280a_img.jpg)\n\nThe diagram illustrates the internal architecture of the TPS6287Bxx devices. Key components include:\n\n- VIN:** Input voltage pins connected to a common rail.\n- Bias Regulator:** Provides bias voltage to the internal circuitry.\n- EN (Enable):** Input pin with a 3 M $\\Omega$  pull-up resistor to VIN. It controls the **Device Control** block.\n- PG (Power Good):** Input pin with a 3 M $\\Omega$  pull-up resistor to VIN. It is connected to the **Device Control** block.\n- MODE/SYNC:** Input pin with a 3 M $\\Omega$  pull-up resistor to VIN. It is connected to the **Device Control** block.\n- VSET2, VSET1:** Input pins connected to the **Device Control** block.\n- SCL, SDA:** I<sup>2</sup>C interface pins connected to the **Device Control** block.\n- Thermal Shutdown:** Internal block connected to the **Device Control** block.\n- Oscillator:** Internal block providing a clock signal to the **Gate Drive and Control** block.\n- Gate Drive and Control:** Central block controlling the power switches. It includes current sense amplifiers  $I_{HS}$  and  $I_{LS}$ .\n- Ramp and Slope Compensation:** Internal block providing compensation to the control loop.\n- VOSNS, GOSNS:** Remote sense pins connected to a differential amplifier with gain  $g_m$  and a reference voltage  $V_{REF}$ .\n- COMP:** Compensation pin connected to the control loop.\n- AGND:** Analog ground pin.\n- SYNC\\_OUT:** Synchronization output pin.\n- SW:** Power switch pins connected to the output inductor.\n- GND:** Ground pins for the power switches and the output inductor.\n\nFunctional Block Diagram of the TPS6287Bxx devices showing internal components and pin connections.",
+    "new": "![Functional Block Diagram of the TPS6287Bxx (description written from the drawing). The four VIN pins are tied together and feed the Bias Regulator and the high-side power MOSFET, whose drain-source path goes to the four tied SW pins; the low-side power MOSFET connects SW to the four tied GND pins (grounded). Both MOSFETs are driven by the Gate Drive and Control block. Current sense: I_HS senses the high-side current on the VIN line and I_LS senses the low-side current on the GND line; both outputs go to Gate Drive and Control. Left side: EN, PG and MODE/SYNC each have a 3 MΩ resistor to ground; EN and PG also have a MOSFET to ground controlled by the Device Control block. EN, PG, MODE/SYNC, VSET2, VSET1, SCL and SDA connect to Device Control, which is powered from the Bias Regulator and connects to Gate Drive and Control, the Oscillator and Thermal Shutdown; the Oscillator output goes to Gate Drive and Control. Control loop: VOSNS drives the inverting input of the gm transconductance amplifier; GOSNS, through the reference V_REF, drives its non-inverting input. The gm output is the COMP pin and goes through a resistor to the inverting input of a comparator whose non-inverting input comes from the Ramp and Slope Compensation block (which also senses VOSNS); the comparator output and the node after the resistor go to Gate Drive and Control. AGND and SYNC_OUT connect to Device Control.](3f1987804d7d78bc3b3bc560e974280a_img.jpg)\n\nFunctional Block Diagram of the TPS6287Bxx (description written from the drawing). The four VIN pins are tied together and feed the Bias Regulator and the high-side power MOSFET, whose drain-source path goes to the four tied SW pins; the low-side power MOSFET connects SW to the four tied GND pins (grounded). Both MOSFETs are driven by the Gate Drive and Control block. Current sense: I\\_HS senses the high-side current on the VIN line and I\\_LS senses the low-side current on the GND line; both outputs go to Gate Drive and Control. Left side: EN, PG and MODE/SYNC each have a 3 MΩ resistor to ground; EN and PG also have a MOSFET to ground controlled by the Device Control block. EN, PG, MODE/SYNC, VSET2, VSET1, SCL and SDA connect to Device Control, which is powered from the Bias Regulator and connects to Gate Drive and Control, the Oscillator and Thermal Shutdown; the Oscillator output goes to Gate Drive and Control. Control loop: VOSNS drives the inverting input of the gm transconductance amplifier; GOSNS, through the reference V\\_REF, drives its non-inverting input. The gm output is the COMP pin and goes through a resistor to the inverting input of a comparator whose non-inverting input comes from the Ramp and Slope Compensation block (which also senses VOSNS); the comparator output and the node after the resistor go to Gate Drive and Control. AGND and SYNC\\_OUT connect to Device Control.",
+    "evidence": "PDF p15 Functional Block Diagram: the AI text gave EN, PG and MODE/SYNC '3 MΩ pull-up resistor to VIN' (the drawing has 3 MΩ resistors to ground, plus MOSFETs to ground on EN and PG), called PG an input only, called gm a differential amplifier and left out the PWM comparator, the power MOSFETs and the current-sense placement; the list items had broken '**' markup. Rewritten from the drawing in the usual alt text + paragraph form.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p16-fig8-1-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 16,
+    "old": "![Figure 8-1: Fixed-Frequency DCS-Control Topology (Simplified). This block diagram illustrates the control architecture. It features a feedback loop where the output voltage (VOUT) is compared against a reference voltage (VREF) using an error amplifier. The error signal is processed by 'Control Logic' which includes a frequency source (fsw) and a switch (SW) to generate a clock for a flip-flop (R, Q). The flip-flop output (Q) drives a 'Gate Driver' for the power switch (MOSFET). The output of the switch is connected to an inductor (L) and a load resistor (RLoad). The inductor current is sensed via a sense resistor (RSNS) and fed back to the error amplifier. A 'Slope Compensation' block is shown, which adds a ramp signal to the feedback signal to ensure stable operation. The diagram also shows the input voltage (VIN) and the output capacitor (COUT).](a83ba9e3e2c1e21dd69953a7b09e45b4_img.jpg)\n\nFigure 8-1: Fixed-Frequency DCS-Control Topology (Simplified). This block diagram illustrates the control architecture. It features a feedback loop where the output voltage (VOUT) is compared against a reference voltage (VREF) using an error amplifier. The error signal is processed by 'Control Logic' which includes a frequency source (fsw) and a switch (SW) to generate a clock for a flip-flop (R, Q). The flip-flop output (Q) drives a 'Gate Driver' for the power switch (MOSFET). The output of the switch is connected to an inductor (L) and a load resistor (RLoad). The inductor current is sensed via a sense resistor (RSNS) and fed back to the error amplifier. A 'Slope Compensation' block is shown, which adds a ramp signal to the feedback signal to ensure stable operation. The diagram also shows the input voltage (VIN) and the output capacitor (COUT).",
+    "new": "![Figure 8-1: Fixed-Frequency DCS-Control Topology (Simplified) (description written from the drawing). A Control Logic block contains an RS flip-flop: S is set by the f_sw clock source (to ground), R comes from a comparator with hysteresis, and Q drives the ON input of the Gate Driver; Control Logic also drives its EN input. The Gate Driver drives the high-side MOSFET (from V_IN) and the low-side MOSFET (to ground); the current in both paths is sensed back into Control Logic. The switch node feeds the inductor L, C_OUT to ground and R_LOAD. An auxiliary RC network τ_aux (dashed box: series resistor from the switch node, capacitor to AGND) emulates the inductor current; its node drives the comparator + input and connects through the Slope Compensation block to the VOSNS line. The gm transconductance amplifier compares VOSNS (- input, sensed at the top of R_LOAD) with GOSNS plus a reference source (+ input, sensed at the bottom of R_LOAD); its output COMP drives the comparator - input and has R_Z in series with C_C to AGND and C_C2 to AGND.](a83ba9e3e2c1e21dd69953a7b09e45b4_img.jpg)\n\nFigure 8-1: Fixed-Frequency DCS-Control Topology (Simplified) (description written from the drawing). A Control Logic block contains an RS flip-flop: S is set by the f\\_sw clock source (to ground), R comes from a comparator with hysteresis, and Q drives the ON input of the Gate Driver; Control Logic also drives its EN input. The Gate Driver drives the high-side MOSFET (from V\\_IN) and the low-side MOSFET (to ground); the current in both paths is sensed back into Control Logic. The switch node feeds the inductor L, C\\_OUT to ground and R\\_LOAD. An auxiliary RC network τ\\_aux (dashed box: series resistor from the switch node, capacitor to AGND) emulates the inductor current; its node drives the comparator + input and connects through the Slope Compensation block to the VOSNS line. The gm transconductance amplifier compares VOSNS (- input, sensed at the top of R\\_LOAD) with GOSNS plus a reference source (+ input, sensed at the bottom of R\\_LOAD); its output COMP drives the comparator - input and has R\\_Z in series with C\\_C to AGND and C\\_C2 to AGND.",
+    "evidence": "PDF p16 Figure 8-1: the AI text described a sense resistor R_SNS feeding the error amplifier, a switch inside Control Logic and the flip-flop driven by a clock through it; the drawing has no sense resistor, the emulated current comes from the τ_aux RC network on the switch node, the gm amplifier senses VOSNS/GOSNS at R_LOAD and its COMP output (R_Z, C_C, C_C2 to AGND) drives the comparator that resets the RS flip-flop. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p16-captions-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 16,
+    "old": "\n\nFigure 8-1. Fixed-Frequency DCS-Control Topology (Simplified)\n",
+    "new": "\n\n**Figure 8-1. Fixed-Frequency DCS-Control Topology (Simplified)**\n",
+    "evidence": "PDF p16: Figure 8-1 caption is bold like the other figure captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p16-fig8-2-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 16,
+    "old": "\n\nFigure 8-2. Continuous Conduction Mode (CCM) Current Waveform\n",
+    "new": "\n\n**Figure 8-2. Continuous Conduction Mode (CCM) Current Waveform**\n",
+    "evidence": "PDF p16: Figure 8-2 caption is bold like the other figure captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p17-fig8-4-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 17,
+    "old": "![Figure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform shows triangular pulses. The minimum on-time is indicated for the first pulse. Subsequent pulses are shown as dashed lines, labeled 'Skipped Pulses'. The time between the start of consecutive pulses is labeled as 1/fsw.](62ad98a4bc47922b5cf47de04571dae8_img.jpg)\n\nFigure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform. A graph showing Inductor Current on the y-axis and Time on the x-axis. The waveform shows triangular pulses. The minimum on-time is indicated for the first pulse. Subsequent pulses are shown as dashed lines, labeled 'Skipped Pulses'. The time between the start of consecutive pulses is labeled as 1/fsw.",
+    "new": "![Figure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform (description written from the drawing). Inductor Current (y-axis, 0 marked) versus Time. Four clock periods, each labeled 1/fSW, are marked at the top. Triangular current pulses occur in the first and third periods (solid); the pulses of the second and fourth periods are dashed and labeled 'Skipped Pulses'. The width of the first pulse rise is marked 'Minimum on-time'. The current is zero between pulses.](62ad98a4bc47922b5cf47de04571dae8_img.jpg)\n\nFigure 8-4: Discontinuous Conduction Mode (PFM-DCM) Current Waveform (description written from the drawing). Inductor Current (y-axis, 0 marked) versus Time. Four clock periods, each labeled 1/fSW, are marked at the top. Triangular current pulses occur in the first and third periods (solid); the pulses of the second and fourth periods are dashed and labeled 'Skipped Pulses'. The width of the first pulse rise is marked 'Minimum on-time'. The current is zero between pulses.",
+    "evidence": "PDF p17 Figure 8-4: the AI text said all pulses after the first are dashed; the drawing alternates solid pulses (periods 1 and 3) and dashed skipped pulses (periods 2 and 4). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p17-stray-period",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 17,
+    "old": "are synchronized to the internal clock.\n\n![Figure 8-4",
+    "new": "are synchronized to the internal clock.\n\n.\n\n![Figure 8-4",
+    "evidence": "PDF p17: a lone '.' is printed on its own line between the PFM-DCM paragraph and Figure 8-4; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p17-fig8-5-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 17,
+    "old": "![Figure 8-5: Output Current PFM-DCM Entry Threshold for fsw = 1.5MHz and L= 105nH. A line graph showing Output Current (A) on the y-axis (0 to 0.8) versus Output Voltage (V) on the x-axis (0.4 to 1.7). Three curves are shown for different input voltages: Vin = 2.7 V (black line), Vin = 3.3 V (red line), and Vin = 5 V (blue line). All curves show a decreasing trend as output voltage increases.](a3ee9a6f9fa9251ee0cac2d16e67e620_img.jpg)\n\n*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*\n\nFigure 8-5: Output Current PFM-DCM Entry Threshold for fsw = 1.5MHz and L= 105nH. A line graph showing Output Current (A) on the y-axis (0 to 0.8) versus Output Voltage (V) on the x-axis (0.4 to 1.7). Three curves are shown for different input voltages: Vin = 2.7 V (black line), Vin = 3.3 V (red line), and Vin = 5 V (blue line). All curves show a decreasing trend as output voltage increases.",
+    "new": "![Figure 8-5: Output Current PFM-DCM Entry Threshold for fSW = 1.5MHz and L= 105nH (description written from the graph; read values from the image/PDF). Line graph of Output Current (A) on the y-axis (0 to 0.8) versus Output Voltage (V) on the x-axis (0.4 to 1.7). Three curves: Vin = 2.7 V (black), Vin = 3.3 V (red) and Vin = 5 V (dark blue). All curves fall with increasing output voltage, steeply at low output voltage and flattening toward the right; Vin = 5 V is highest and Vin = 2.7 V lowest, and the Vin = 2.7 V curve ends at an output voltage of 1.2 V.](a3ee9a6f9fa9251ee0cac2d16e67e620_img.jpg)\n\n*[AI figure description: curve-data table removed (values were estimated from the plot, not printed in the PDF). Read values from the image/PDF.]*\n\nFigure 8-5: Output Current PFM-DCM Entry Threshold for fSW = 1.5MHz and L= 105nH (description written from the graph; read values from the image/PDF). Line graph of Output Current (A) on the y-axis (0 to 0.8) versus Output Voltage (V) on the x-axis (0.4 to 1.7). Three curves: Vin = 2.7 V (black), Vin = 3.3 V (red) and Vin = 5 V (dark blue). All curves fall with increasing output voltage, steeply at low output voltage and flattening toward the right; Vin = 5 V is highest and Vin = 2.7 V lowest, and the Vin = 2.7 V curve ends at an output voltage of 1.2 V.",
+    "evidence": "PDF p17 Figure 8-5: the description did not say that the curve order is Vin = 5 V on top and that the Vin = 2.7 V curve stops at 1.2 V output voltage; the printed caption uses fSW. Rewritten from the graph (shapes and order only).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p17-fig8-5-caption",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 17,
+    "old": "**Figure 8-5. Output Current PFM-DCM Entry Threshold for  $f_{sw} = 1.5MHz$  and  $L = 105nH$**",
+    "new": "**Figure 8-5. Output Current PFM-DCM Entry Threshold for f<sub>SW</sub> = 1.5MHz and L= 105nH**",
+    "evidence": "PDF p17 Figure 8-5 caption printed 'fSW = 1.5MHz and L= 105nH' (uppercase subscript SW, no space before '=' after L).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p17-fpwm-period",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 17,
+    "old": "- In forced-PWM mode, the device uses PWM-CCM at all times.",
+    "new": "- In forced-PWM mode. the device uses PWM-CCM at all times.",
+    "evidence": "PDF p17 printed 'In forced-PWM mode. the device uses PWM-CCM at all times.' with a period; kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p18-fig8-6-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 18,
+    "old": "![Figure 8-6. Enable Functional Block Diagram. The diagram shows the internal logic of the Enable pin. The EN pin is connected to the non-inverting input (+) of a comparator. The inverting input (-) of the comparator is connected to a reference voltage VIT(EN). The output of the comparator is labeled 'ENABLE'. Below the comparator, there is an N-channel MOSFET with its gate connected to the 'ENABLE' output and its source connected to ground. The drain of the MOSFET is connected to the input of a logic AND gate. The other input to the AND gate is connected to the 'CONTROL3:SINGLE' pin. The output of the AND gate is labeled 'SYSTEM_READY'.](e928f4874ed492d3ad4c6fa2d29aedbc_img.jpg)\n\nFigure 8-6. Enable Functional Block Diagram. The diagram shows the internal logic of the Enable pin. The EN pin is connected to the non-inverting input (+) of a comparator. The inverting input (-) of the comparator is connected to a reference voltage VIT(EN). The output of the comparator is labeled 'ENABLE'. Below the comparator, there is an N-channel MOSFET with its gate connected to the 'ENABLE' output and its source connected to ground. The drain of the MOSFET is connected to the input of a logic AND gate. The other input to the AND gate is connected to the 'CONTROL3:SINGLE' pin. The output of the AND gate is labeled 'SYSTEM\\_READY'.",
+    "new": "![Figure 8-6. Enable Functional Block Diagram (description written from the drawing). The EN pin drives the + input of a comparator with hysteresis whose - input is the threshold V_IT(EN); the comparator output is ENABLE. An open-drain N-channel MOSFET connects the EN pin to ground. Its gate is driven by an AND gate whose inputs are the overbarred SYSTEM_READY signal and CONTROL3:SINGLE through an inverting bubble, so the transistor pulls EN low when SYSTEM_READY-bar is high and SINGLE = 0.](e928f4874ed492d3ad4c6fa2d29aedbc_img.jpg)\n\nFigure 8-6. Enable Functional Block Diagram (description written from the drawing). The EN pin drives the + input of a comparator with hysteresis whose - input is the threshold V\\_IT(EN); the comparator output is ENABLE. An open-drain N-channel MOSFET connects the EN pin to ground. Its gate is driven by an AND gate whose inputs are the overbarred SYSTEM\\_READY signal and CONTROL3:SINGLE through an inverting bubble, so the transistor pulls EN low when SYSTEM\\_READY-bar is high and SINGLE = 0.",
+    "evidence": "PDF p18 Figure 8-6: the AI text had the MOSFET gate driven by ENABLE and its drain feeding an AND gate that outputs SYSTEM_READY. In the drawing the AND gate (inputs SYSTEM_READY with overbar and CONTROL3:SINGLE with an inverting bubble) drives the gate of the open-drain MOSFET from EN to ground, and the comparator output is ENABLE. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p18-system-ready-overbar",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 18,
+    "old": "When the internal SYSTEM\\_READY signal is low",
+    "new": "When the internal $\\overline{\\text{SYSTEM\\_READY}}$ signal is low",
+    "evidence": "PDF p18: 'SYSTEM_READY' in this sentence is printed with an overbar (vector line above the word); the overbar is lost in the md.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p18-heading-8-3-3-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 18,
+    "old": "#### **8.3.3 Transient Non-Synchronous Mode (optional)**",
+    "new": "#### 8.3.3 Transient Non-Synchronous Mode (optional)",
+    "evidence": "PDF p18: section heading in the same italic style as 8.3.1/8.3.2; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p18-heading-8-3-4-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 18,
+    "old": "#### **8.3.4 Precise Enable**",
+    "new": "#### 8.3.4 Precise Enable",
+    "evidence": "PDF p18: section heading in the same italic style as 8.3.1/8.3.2; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p19-system-ready-overbar",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 19,
+    "old": "internal ENABLE or SYSTEM\\_READY signals.)",
+    "new": "internal ENABLE or $\\overline{\\text{SYSTEM\\_READY}}$ signals.)",
+    "evidence": "PDF p19: 'SYSTEM_READY' in this sentence is printed with an overbar (vector line above the word).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p19-fig8-7-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 19,
+    "old": "![Timing diagram for Figure 8-7 showing the start-up sequence when the EN pin is pulled up to V_IN. The diagram shows four signals: V_IN, EN, V_OUT, and PG. V_IN rises above the UVLO threshold (VIT+(UVLO)). When it does, the EN pin is pulled low internally. After device initialization is complete, V_OUT begins to ramp up. The PG signal is undefined during the initialization period and then goes high after a delay (td(PG)). Timing parameters include t_d(EN)1 (delay from V_IN crossing UVLO to EN going low), t_d(RAMP) (output ramp time), and t_d(PG) (delay from V_OUT ramp start to PG going high).](99acc13de9c992bf42e0fcdddf0b09d3_img.jpg)\n\nTiming diagram for Figure 8-7 showing the start-up sequence when the EN pin is pulled up to V\\_IN. The diagram shows four signals: V\\_IN, EN, V\\_OUT, and PG. V\\_IN rises above the UVLO threshold (VIT+(UVLO)). When it does, the EN pin is pulled low internally. After device initialization is complete, V\\_OUT begins to ramp up. The PG signal is undefined during the initialization period and then goes high after a delay (td(PG)). Timing parameters include t\\_d(EN)1 (delay from V\\_IN crossing UVLO to EN going low), t\\_d(RAMP) (output ramp time), and t\\_d(PG) (delay from V\\_OUT ramp start to PG going high).",
+    "new": "![Timing diagram for Figure 8-7, start-up when the EN pin is pulled up to V_IN (description written from the drawing). Four traces: V_IN, EN, V_OUT and PG. V_IN ramps up and crosses V_IT+(UVLO); EN follows V_IN up, is then pulled low ('EN pin pulled low internally') until 'Device initialization complete', and then returns high. V_OUT stays low and then ramps linearly to its final value. PG is 'Undefined' (shaded) until V_IN crosses V_IT+(UVLO), then low, and goes high after the V_OUT ramp. t_d(EN)1 is marked from the V_IT+(UVLO) crossing to the start of the V_OUT ramp, t_d(RAMP) is the V_OUT ramp, and t_d(PG) is the delay from the end of the ramp to PG going high.](99acc13de9c992bf42e0fcdddf0b09d3_img.jpg)\n\nTiming diagram for Figure 8-7, start-up when the EN pin is pulled up to V\\_IN (description written from the drawing). Four traces: V\\_IN, EN, V\\_OUT and PG. V\\_IN ramps up and crosses V\\_IT+(UVLO); EN follows V\\_IN up, is then pulled low ('EN pin pulled low internally') until 'Device initialization complete', and then returns high. V\\_OUT stays low and then ramps linearly to its final value. PG is 'Undefined' (shaded) until V\\_IN crosses V\\_IT+(UVLO), then low, and goes high after the V\\_OUT ramp. t\\_d(EN)1 is marked from the V\\_IT+(UVLO) crossing to the start of the V\\_OUT ramp, t\\_d(RAMP) is the V\\_OUT ramp, and t\\_d(PG) is the delay from the end of the ramp to PG going high.",
+    "evidence": "PDF p19 Figure 8-7: the AI text defined t_d(EN)1 as 'delay from V_IN crossing UVLO to EN going low' and t_d(PG) as 'from V_OUT ramp start to PG going high'; the drawing marks t_d(EN)1 from the V_IT+(UVLO) crossing to the start of the V_OUT ramp and t_d(PG) from the end of the ramp to PG high, and PG is undefined only until the UVLO crossing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p20-fig8-8-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 20,
+    "old": "![Figure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin. This timing diagram shows the relationship between VIN, EN, VOUT, and PG pins. VIN rises above VIT+(UVLO), then EN rises above VIT+(EN). VOUT then ramps up from a prebias level to a final level. The ramp time is divided into tD(EN)2 and tD(RAMP). The PG pin goes from an undefined state to a high state after the ramp is complete, with a delay tD(PG).](96a7eac66ef72bb016c280278506ac63_img.jpg)\n\nFigure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin. This timing diagram shows the relationship between VIN, EN, VOUT, and PG pins. VIN rises above VIT+(UVLO), then EN rises above VIT+(EN). VOUT then ramps up from a prebias level to a final level. The ramp time is divided into tD(EN)2 and tD(RAMP). The PG pin goes from an undefined state to a high state after the ramp is complete, with a delay tD(PG).",
+    "new": "![Figure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin (description written from the drawing). Four traces: V_IN, EN, V_OUT and PG. V_IN ramps up and crosses V_IT+(UVLO). Later ('Device initialization complete' is marked before it) the external EN signal ramps up and crosses V_IT+(EN). V_OUT stays low and then ramps linearly from zero to its final value. PG is 'Undefined' (shaded) until the V_IT+(UVLO) crossing, then low, and goes high after the V_OUT ramp. t_d(EN)2 is marked from the V_IT+(EN) crossing to the start of the V_OUT ramp, t_d(RAMP) is the V_OUT ramp, and t_d(PG) is the delay from the end of the ramp to PG going high.](96a7eac66ef72bb016c280278506ac63_img.jpg)\n\nFigure 8-8: Start-Up Timing When an External Signal is Connected to the EN Pin (description written from the drawing). Four traces: V\\_IN, EN, V\\_OUT and PG. V\\_IN ramps up and crosses V\\_IT+(UVLO). Later ('Device initialization complete' is marked before it) the external EN signal ramps up and crosses V\\_IT+(EN). V\\_OUT stays low and then ramps linearly from zero to its final value. PG is 'Undefined' (shaded) until the V\\_IT+(UVLO) crossing, then low, and goes high after the V\\_OUT ramp. t\\_d(EN)2 is marked from the V\\_IT+(EN) crossing to the start of the V\\_OUT ramp, t\\_d(RAMP) is the V\\_OUT ramp, and t\\_d(PG) is the delay from the end of the ramp to PG going high.",
+    "evidence": "PDF p20 Figure 8-8: the AI text said V_OUT ramps 'from a prebias level' and that the ramp time is 'divided into tD(EN)2 and tD(RAMP)'; in the drawing V_OUT starts from zero, t_d(EN)2 is the delay from the V_IT+(EN) crossing to the ramp start and t_d(RAMP) the ramp itself. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p20-fig8-9-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 20,
+    "old": "![Figure 8-9: Start-Up into a Prebiased Output. This graph shows VOUT ramping from a prebias voltage level to a final voltage level. The ramp duration is labeled tD(RAMP).](58f42a91047786934d8a7e258d581ca2_img.jpg)\n\nFigure 8-9: Start-Up into a Prebiased Output. This graph shows VOUT ramping from a prebias voltage level to a final voltage level. The ramp duration is labeled tD(RAMP).",
+    "new": "![Figure 8-9: Start-Up into a Prebiased Output (description written from the drawing). V_OUT stays at the 'Prebias voltage' level (solid line) while the internal ramp (dashed) rises from below it; once the internal ramp passes the prebias voltage, V_OUT follows the ramp up to the 'Final voltage'. t_d(RAMP) is marked over the whole internal ramp, from its dashed start to the final voltage.](58f42a91047786934d8a7e258d581ca2_img.jpg)\n\nFigure 8-9: Start-Up into a Prebiased Output (description written from the drawing). V\\_OUT stays at the 'Prebias voltage' level (solid line) while the internal ramp (dashed) rises from below it; once the internal ramp passes the prebias voltage, V\\_OUT follows the ramp up to the 'Final voltage'. t\\_d(RAMP) is marked over the whole internal ramp, from its dashed start to the final voltage.",
+    "evidence": "PDF p20 Figure 8-9: the AI text said V_OUT ramps from the prebias level over tD(RAMP); the drawing shows the internal ramp (dashed) starting below the prebias voltage, only its upper part visible on V_OUT, and t_d(RAMP) spanning the whole internal ramp. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p20-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 20,
+    "old": "#### **8.3.6 Switching Frequency Selection, Only Applies to TPS6287BxxJE2**",
+    "new": "#### 8.3.6 Switching Frequency Selection, Only Applies to TPS6287BxxJE2",
+    "evidence": "PDF p20: section heading in the same italic style as the other 8.3.x headings; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p20-table8-2-vin-subscript",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 20,
+    "old": "| Short to VIN          | 2.5 MHz             |\n| 47 kΩ to VIN          | 3 MHz               |",
+    "new": "| Short to V<sub>IN</sub> | 2.5 MHz             |\n| 47 kΩ to V<sub>IN</sub> | 3 MHz               |",
+    "evidence": "PDF p20 Table 8-2 prints 'Short to VIN' and '47 kΩ to VIN' with IN subscripted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p21-fig8-10-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 21,
+    "old": "![Figure 8-10. FSET R2D Converter Functional Block Diagram. The diagram shows a circuit with an input voltage VIN connected to a switch S1. S1 is in series with a 6.5 kΩ resistor. The other end of this resistor is connected to the FSET pin and a node. From this node, a 1.6 kΩ resistor is connected to a switch S2, which is then connected to ground. The FSET pin is also connected to the non-inverting input (+) of a comparator. The comparator's output is the signal from the R2D converter. The comparator's inverting input (-) is connected to the node between the 6.5 kΩ and 1.6 kΩ resistors. The comparator's input levels are specified as VIL = < 0.4 V and VIH = > 0.8 V.](a3472689858b068ef469213682965325_img.jpg)\n\nFigure 8-10. FSET R2D Converter Functional Block Diagram. The diagram shows a circuit with an input voltage VIN connected to a switch S1. S1 is in series with a 6.5 kΩ resistor. The other end of this resistor is connected to the FSET pin and a node. From this node, a 1.6 kΩ resistor is connected to a switch S2, which is then connected to ground. The FSET pin is also connected to the non-inverting input (+) of a comparator. The comparator's output is the signal from the R2D converter. The comparator's inverting input (-) is connected to the node between the 6.5 kΩ and 1.6 kΩ resistors. The comparator's input levels are specified as VIL = < 0.4 V and VIH = > 0.8 V.",
+    "new": "![Figure 8-10. FSET R2D Converter Functional Block Diagram (description written from the drawing). The FSET pin connects to a node that goes to V_IN through a 6.5 kΩ resistor in series with switch S1, and to ground through a 1.6 kΩ resistor in series with switch S2. The same node drives the input of a single-input buffer whose output leaves the block; the buffer thresholds are labeled V_IL = < 0.4 V and V_IH = > 0.8 V.](a3472689858b068ef469213682965325_img.jpg)\n\nFigure 8-10. FSET R2D Converter Functional Block Diagram (description written from the drawing). The FSET pin connects to a node that goes to V\\_IN through a 6.5 kΩ resistor in series with switch S1, and to ground through a 1.6 kΩ resistor in series with switch S2. The same node drives the input of a single-input buffer whose output leaves the block; the buffer thresholds are labeled V\\_IL = < 0.4 V and V\\_IH = > 0.8 V.",
+    "evidence": "PDF p21 Figure 8-10: the AI text described a comparator with its inverting input on the resistor node; the drawing has a single-input buffer (the text calls it 'the input buffer') driven from the FSET node, with S1 + 6.5 kΩ to V_IN and 1.6 kΩ + S2 to ground. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p21-figure6-5-link",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 21,
+    "old": "*Figure 6-5* shows the practical",
+    "new": "[Figure 6-5](#) shows the practical",
+    "evidence": "PDF p21: 'Figure 6-5' is a blue cross-reference link in upright type (span not italic), written as a link like the other cross-references.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p21-table8-3-link",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 21,
+    "old": "(see *Table 8-3*)",
+    "new": "(see [Table 8-3](#))",
+    "evidence": "PDF p21: 'Table 8-3' is a blue cross-reference link in upright type (span not italic).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p22-heading-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 22,
+    "old": "##### **8.3.7.2 Output Voltage Setpoint**",
+    "new": "##### 8.3.7.2 Output Voltage Setpoint",
+    "evidence": "PDF p22: subsection heading in the same bold style as 8.3.7.1; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p23-table8-8-i2c-plain",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 23,
+    "old": "| VSEL Pin <sup>1</sup>            | VSET[7:0] | I <sup>2</sup> C Device Address |",
+    "new": "| VSEL Pin <sup>1</sup>            | VSET[7:0] | I2C Device Address |",
+    "evidence": "PDF p23 Table 8-8 header prints 'I2C Device Address' with a full-size 2 (span 'I2C Device Address'@8.0), unlike Tables 8-5 to 8-7.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p26-heading-8-3-11-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 26,
+    "old": "#### **8.3.11 Output Discharge**",
+    "new": "#### 8.3.11 Output Discharge",
+    "evidence": "PDF p26: section heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p26-heading-8-3-12-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 26,
+    "old": "#### **8.3.12 Undervoltage Lockout (UVLO)**",
+    "new": "#### 8.3.12 Undervoltage Lockout (UVLO)",
+    "evidence": "PDF p26: section heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p26-heading-8-3-13-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 26,
+    "old": "#### **8.3.13 Overvoltage Lockout (OVLO)**",
+    "new": "#### 8.3.13 Overvoltage Lockout (OVLO)",
+    "evidence": "PDF p26: section heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p26-heading-8-3-14-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 26,
+    "old": "#### **8.3.14 Overcurrent Protection**",
+    "new": "#### 8.3.14 Overcurrent Protection",
+    "evidence": "PDF p26: section heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p26-heading-8-3-14-1-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 26,
+    "old": "##### **8.3.14.1 Cycle-by-Cycle Current Limiting**",
+    "new": "##### 8.3.14.1 Cycle-by-Cycle Current Limiting",
+    "evidence": "PDF p26: section heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p27-no-longer-exits",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 27,
+    "old": "when the overload condition no longer exists.",
+    "new": "when the overload condition no longer exits.",
+    "evidence": "PDF p27 Current-Limit Mode prints 'no longer exits' (manufacturer typo); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p28-fig8-13-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 28,
+    "old": "![Timing diagram for Figure 8-13. PG Timing. It shows the relationship between the Power Good (PG) signal and the output voltage (VOUT) relative to Overvoltage Protection (OVP) and Undervoltage Protection (UVP) thresholds. The PG signal is low when VOUT is below V_T-(OVP) or above V_T+(OVP), and high when VOUT is between V_T-(OVP) and V_T+(OVP). The diagram illustrates the delay t_d(PG) from the point where VOUT crosses the threshold to the point where the PG signal changes state. It also shows the PG signal going low during a soft start period and during thermal shutdown or disable.](abc0eb594f9d2c0daa0e60df05f2a666_img.jpg)\n\nTiming diagram for Figure 8-13. PG Timing. It shows the relationship between the Power Good (PG) signal and the output voltage (VOUT) relative to Overvoltage Protection (OVP) and Undervoltage Protection (UVP) thresholds. The PG signal is low when VOUT is below V\\_T-(OVP) or above V\\_T+(OVP), and high when VOUT is between V\\_T-(OVP) and V\\_T+(OVP). The diagram illustrates the delay t\\_d(PG) from the point where VOUT crosses the threshold to the point where the PG signal changes state. It also shows the PG signal going low during a soft start period and during thermal shutdown or disable.",
+    "new": "![Timing diagram for Figure 8-13. PG Timing (description written from the drawing). Upper trace V_OUT with the dashed thresholds V_T+(OVP) and V_T-(OVP) (labeled OVP) above the nominal level and V_T+(UVP) and V_T-(UVP) (labeled UVP) below it; lower trace PG. A short undershoot below V_T-(UVP) that recovers above V_T+(UVP) within t_d(PG) does not change PG. A longer drop below V_T-(UVP) pulls PG low t_d(PG) after the crossing; PG returns high t_d(PG) after V_OUT rises back above V_T+(UVP). A short overshoot above V_T+(OVP) that falls back below V_T-(OVP) within t_d(PG) does not change PG. A longer overshoot above V_T+(OVP) pulls PG low t_d(PG) after the crossing; PG returns high t_d(PG) after V_OUT falls back below V_T-(OVP). Each delay is marked t_d(PG).](abc0eb594f9d2c0daa0e60df05f2a666_img.jpg)\n\nTiming diagram for Figure 8-13. PG Timing (description written from the drawing). Upper trace V\\_OUT with the dashed thresholds V\\_T+(OVP) and V\\_T-(OVP) (labeled OVP) above the nominal level and V\\_T+(UVP) and V\\_T-(UVP) (labeled UVP) below it; lower trace PG. A short undershoot below V\\_T-(UVP) that recovers above V\\_T+(UVP) within t\\_d(PG) does not change PG. A longer drop below V\\_T-(UVP) pulls PG low t\\_d(PG) after the crossing; PG returns high t\\_d(PG) after V\\_OUT rises back above V\\_T+(UVP). A short overshoot above V\\_T+(OVP) that falls back below V\\_T-(OVP) within t\\_d(PG) does not change PG. A longer overshoot above V\\_T+(OVP) pulls PG low t\\_d(PG) after the crossing; PG returns high t\\_d(PG) after V\\_OUT falls back below V\\_T-(OVP). Each delay is marked t\\_d(PG).",
+    "evidence": "PDF p28 Figure 8-13: the AI text described PG low below V_T-(OVP) and high between the OVP thresholds and invented soft-start and thermal-shutdown phases; the drawing shows the UVP and OVP windows with hysteresis, the t_d(PG) deglitch delays and short excursions that do not toggle PG. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p28-fig8-13-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 28,
+    "old": "\n\nFigure 8-13. PG Timing\n",
+    "new": "\n\n**Figure 8-13. PG Timing**\n",
+    "evidence": "PDF p28: Figure 8-13 caption is bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p28-table8-10-rows",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 28,
+    "old": "Table 8-10. Power-Good Function Table\n\n| V <sub>IN</sub>                                                   | EN | V <sub>OUT</sub>                                                                   | SOFT START | PGBLNKDVS AND DVS_active | T <sub>J</sub>                   | PG        |\n|-------------------------------------------------------------------|----|------------------------------------------------------------------------------------|------------|--------------------------|----------------------------------|-----------|\n| V <sub>IN</sub> < 2V                                              | X  | X                                                                                  | X          | X                        | X                                | Undefined |\n| V <sub>IT-(UVLO)</sub> ≥ V <sub>IN</sub> ≥ 2V                     | X  | X                                                                                  | X          | X                        | X                                | Low       |\n| V <sub>IT-(UVLO)</sub> < V <sub>IN</sub> < V <sub>IT+(OVLO)</sub> | L  | X                                                                                  | X          | X                        | X                                | Low       |\n|                                                                   | H  | X                                                                                  | Active     | X                        | X                                | Low       |\n|                                                                   |    | V <sub>OUT</sub> > V <sub>T+(OVP)</sub> or V <sub>OUT</sub> < V <sub>T-(UVP)</sub> | Inactive   | 0                        | X                                | low       |\n|                                                                   |    | V <sub>T-(OVP)</sub> > V <sub>OUT</sub> > V <sub>T+(UVP)</sub>                     |            | 1                        | T <sub>J</sub> < T <sub>SD</sub> | Hi-Z      |\n|                                                                   |    | X                                                                                  | X          | X                        | T <sub>J</sub> < T <sub>SD</sub> | Hi-Z      |\n| V <sub>IN</sub> > V <sub>IT+(OVLO)</sub>                          | X  | X                                                                                  | X          | X                        | T <sub>J</sub> > T <sub>SD</sub> | Low       |\n|                                                                   |    | X                                                                                  | X          | X                        | X                                | Low       |",
+    "new": "**Table 8-10. Power-Good Function Table**\n\n| V <sub>IN</sub> | EN | V <sub>OUT</sub> | SOFT START | PGBLNKDVS AND DVS_active | T <sub>J</sub> | PG |\n|---|---|---|---|---|---|---|\n| V <sub>IN</sub> < 2V | X | X | X | X | X | Undefined |\n| V <sub>IT-(UVLO)</sub> ≥ V <sub>IN</sub> ≥ 2V | X | X | X | X | X | Low |\n| V <sub>IT-(UVLO)</sub> < V <sub>IN</sub> < V <sub>IT+(OVLO)</sub> | L | X | X | X | X | Low |\n|  | H | X | Active | X | X | Low |\n|  |  | V <sub>OUT</sub> > V <sub>T+(OVP)</sub> or V <sub>OUT</sub> < V <sub>T-(UVP)</sub> | Inactive | 0 | X | low |\n|  |  |  |  | 1 | T <sub>J</sub> < T <sub>SD</sub> | Hi-Z |\n|  |  | V <sub>T-(OVP)</sub> > V <sub>OUT</sub> > V <sub>T+(UVP)</sub> |  | X | T <sub>J</sub> < T <sub>SD</sub> | Hi-Z |\n|  |  | X | X | X | T <sub>J</sub> > T <sub>SD</sub> | Low |\n| V <sub>IN</sub> > V <sub>IT+(OVLO)</sub> | X | X | X | X | X | Low |",
+    "evidence": "PDF p28 Table 8-10 (cell positions checked on the render): the 'V_OUT > V_T+(OVP) or V_OUT < V_T-(UVP)' cell spans the PGBLNKDVS = 0 (PG low) and = 1 (T_J < T_SD, Hi-Z) rows; the 'V_T-(OVP) > V_OUT > V_T+(UVP)' row has PGBLNKDVS X, T_J < T_SD, Hi-Z; the T_J > T_SD / Low row still belongs to EN = H inside the V_IT-(UVLO) < V_IN < V_IT+(OVLO) block; V_IN > V_IT+(OVLO) is the last row with all X and PG Low. The md had shifted the V_OUT window condition up one row and attached the T_J > T_SD row to V_IN > V_IT+(OVLO). Table caption made bold like the others.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p29-fig8-14-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 29,
+    "old": "![Figure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device). The diagram shows the internal logic for power-good detection. It includes a Hiccup Control block receiving CONTROL1:HICCUPEN and outputting to converter control logic and a STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM, and HICCUP. A Current Comparator receives Isw and feeds into the Hiccup Control and a 4 Consecutive Pulses Detection block, which also feeds into the STATUS Register. A Window Comparator receives Vout and feeds into a 40-µs Deglitch block, which then feeds into a Blanking block. The Blanking block also receives DVS Active and CONTROL3:PGBLNKDVS signals. The Blanking block output and the STATUS Register HICCUP output are combined with Thermal Shutdown conditions (VIN > VIT(OVLO), VIN < VIT(UVLO), VEN < VIT(EN)) in an OR gate to control the PG pin via a PMOS transistor.](28d75f39a24203712ee907b32cf0bbe5_img.jpg)\n\nFigure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device). The diagram shows the internal logic for power-good detection. It includes a Hiccup Control block receiving CONTROL1:HICCUPEN and outputting to converter control logic and a STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM, and HICCUP. A Current Comparator receives Isw and feeds into the Hiccup Control and a 4 Consecutive Pulses Detection block, which also feeds into the STATUS Register. A Window Comparator receives Vout and feeds into a 40-µs Deglitch block, which then feeds into a Blanking block. The Blanking block also receives DVS Active and CONTROL3:PGBLNKDVS signals. The Blanking block output and the STATUS Register HICCUP output are combined with Thermal Shutdown conditions (VIN > VIT(OVLO), VIN < VIT(UVLO), VEN < VIT(EN)) in an OR gate to control the PG pin via a PMOS transistor.",
+    "new": "![Figure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device) (description written from the drawing). I_SW feeds a Current Comparator whose output goes to the Hiccup Control block (enabled by CONTROL1:HICCUPEN; output 'To converter control logic' and to the STATUS Register) and to a '4 Consecutive Pulses Detection' block that feeds the STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM and HICCUP. V_OUT feeds a Window Comparator (thresholds 95% V_OUT and 105% V_OUT) followed by a 40-µs Deglitch block (also fed by Soft-Start Complete) and a Blanking block controlled by DVS Active and CONTROL3:PGBLNKDVS. The Blanking output goes to the STATUS Register and to an OR gate whose other inputs are HICCUP, V_IN > V_IT(OVLO), Thermal Shutdown, V_IN < V_IT(UVLO) and V_EN < V_IT(EN). The OR gate drives an N-channel open-drain MOSFET from the PG pin to ground.](28d75f39a24203712ee907b32cf0bbe5_img.jpg)\n\nFigure 8-14. Power-Good Functional Block Diagram (Standalone / Primary Device) (description written from the drawing). I\\_SW feeds a Current Comparator whose output goes to the Hiccup Control block (enabled by CONTROL1:HICCUPEN; output 'To converter control logic' and to the STATUS Register) and to a '4 Consecutive Pulses Detection' block that feeds the STATUS Register. The STATUS Register outputs PBOV, PBUV, ILIM and HICCUP. V\\_OUT feeds a Window Comparator (thresholds 95% V\\_OUT and 105% V\\_OUT) followed by a 40-µs Deglitch block (also fed by Soft-Start Complete) and a Blanking block controlled by DVS Active and CONTROL3:PGBLNKDVS. The Blanking output goes to the STATUS Register and to an OR gate whose other inputs are HICCUP, V\\_IN > V\\_IT(OVLO), Thermal Shutdown, V\\_IN < V\\_IT(UVLO) and V\\_EN < V\\_IT(EN). The OR gate drives an N-channel open-drain MOSFET from the PG pin to ground.",
+    "evidence": "PDF p29 Figure 8-14: the AI text said the OR gate drives the PG pin 'via a PMOS transistor' and grouped the V_IN/V_EN conditions under Thermal Shutdown; the drawing has an N-channel MOSFET from PG to ground, Thermal Shutdown is one of six separate OR inputs, the window thresholds are 95%/105% V_OUT, Soft-Start Complete enters the deglitch block and the Blanking output also feeds the STATUS Register. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p30-fig8-15-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 30,
+    "old": "![Figure 8-15. Power-Good Functional Block Diagram (Secondary Device). The diagram shows a functional block diagram for a secondary device. It includes two flip-flops, FF1 and FF2. FF1 is connected to a Latch, which is connected to the DCM / CCM input. FF1 also has an Input Buffer with VIL = < 0.4 V and VIH = > 0.8 V. The output of the Input Buffer is connected to the PG pin. FF2 is connected to a Latch, which is connected to the Internal start-up sequence completed input. The output of the Latch is connected to the gate of a PMOS transistor Q1, which is connected to the PG pin and ground.](fa01531ea2c45beeb4036005da3037a4_img.jpg)\n\nFigure 8-15. Power-Good Functional Block Diagram (Secondary Device). The diagram shows a functional block diagram for a secondary device. It includes two flip-flops, FF1 and FF2. FF1 is connected to a Latch, which is connected to the DCM / CCM input. FF1 also has an Input Buffer with VIL = < 0.4 V and VIH = > 0.8 V. The output of the Input Buffer is connected to the PG pin. FF2 is connected to a Latch, which is connected to the Internal start-up sequence completed input. The output of the Latch is connected to the gate of a PMOS transistor Q1, which is connected to the PG pin and ground.",
+    "new": "![Figure 8-15. Power-Good Functional Block Diagram (Secondary Device) (description written from the drawing). The PG pin drives an Input Buffer (V_IL = < 0.4 V, V_IH = > 0.8 V) whose output sets the Latch FF1; FF1 outputs the DCM / CCM signal. The 'Internal start-up sequence completed' signal goes to the Latch FF2, which drives the gate of the N-channel MOSFET Q1 from the PG pin to ground.](fa01531ea2c45beeb4036005da3037a4_img.jpg)\n\nFigure 8-15. Power-Good Functional Block Diagram (Secondary Device) (description written from the drawing). The PG pin drives an Input Buffer (V\\_IL = < 0.4 V, V\\_IH = > 0.8 V) whose output sets the Latch FF1; FF1 outputs the DCM / CCM signal. The 'Internal start-up sequence completed' signal goes to the Latch FF2, which drives the gate of the N-channel MOSFET Q1 from the PG pin to ground.",
+    "evidence": "PDF p30 Figure 8-15: the AI text had FF1 'with an Input Buffer whose output is connected to the PG pin' and a PMOS Q1; the drawing shows PG -> Input Buffer -> FF1 -> DCM / CCM and FF2 driving an N-channel Q1 from PG to ground. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p30-fig8-15-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 30,
+    "old": "\n\nFigure 8-15. Power-Good Functional Block Diagram (Secondary Device)\n",
+    "new": "\n\n**Figure 8-15. Power-Good Functional Block Diagram (Secondary Device)**\n",
+    "evidence": "PDF p30: Figure 8-15 caption is bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p32-fig8-16-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 32,
+    "old": "![Schematic diagram of two TPS6287Bxx devices in a stacked configuration. The primary device (top) is connected to VIN (2.7V to 6V), VIO, I2C, and a load. It has a feedback loop with VSET1/VSET2 pins connected to resistors RVSET1 and RVSET2. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC_OUT pin is connected to the MODE/SYNC pin of the secondary device. The secondary device (bottom) is connected to the primary device's SW pin, VIO, and a 47 kΩ resistor. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC_OUT pin is connected to the primary device's SYNC_OUT pin. Both devices have AGND, GND, and PG pins connected to ground.](14252bcd35912bd656e98b16b2ee51c0_img.jpg)\n\nSchematic diagram of two TPS6287Bxx devices in a stacked configuration. The primary device (top) is connected to VIN (2.7V to 6V), VIO, I2C, and a load. It has a feedback loop with VSET1/VSET2 pins connected to resistors RVSET1 and RVSET2. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC\\_OUT pin is connected to the MODE/SYNC pin of the secondary device. The secondary device (bottom) is connected to the primary device's SW pin, VIO, and a 47 kΩ resistor. Its SW pin is connected to a 100 nH inductor and a 100 pF capacitor. Its VOSNS and GOSNS pins are connected to a 100 pF capacitor. Its SYNC\\_OUT pin is connected to the primary device's SYNC\\_OUT pin. Both devices have AGND, GND, and PG pins connected to ground.",
+    "new": "![Schematic of two TPS6287Bxx devices in a stacked configuration (Figure 8-16; description written from the drawing). Primary device (top): V_IN = 2.7 V to 6 V to both VIN pins and MODE/SYNC, C_IN to ground; R_EN from V_IN to EN; SDA and SCL form the I2C bus with pull-up resistors to V_IO; R_VSET1 and R_VSET2 from VSET1 and VSET2 to ground; SW drives a 100 nH inductor with C_OUT to ground at its output; VOSNS and GOSNS sense the output and its ground at the Load, where C_LOAD is connected; COMP has R_Z in series with C_C to AGND and C_C2 in parallel; PG is pulled up to V_IO by R_PG and is the PG output; AGND and both GND pins are grounded. SYNC_OUT of the primary drives MODE/SYNC of the secondary device. Secondary device (bottom): both VIN pins from the same V_IN with its own C_IN; EN tied to the common EN line; SDA, SCL, VSET1 and VSET2 tied to ground; VOSNS and GOSNS tied together to ground; SW drives its own 100 nH inductor and C_OUT, and its output joins the primary output; COMP and PG connect to the primary COMP and PG nets; SYNC_OUT has a 47 kΩ resistor to ground; AGND and both GND pins are grounded.](14252bcd35912bd656e98b16b2ee51c0_img.jpg)\n\nSchematic of two TPS6287Bxx devices in a stacked configuration (Figure 8-16; description written from the drawing). Primary device (top): V\\_IN = 2.7 V to 6 V to both VIN pins and MODE/SYNC, C\\_IN to ground; R\\_EN from V\\_IN to EN; SDA and SCL form the I2C bus with pull-up resistors to V\\_IO; R\\_VSET1 and R\\_VSET2 from VSET1 and VSET2 to ground; SW drives a 100 nH inductor with C\\_OUT to ground at its output; VOSNS and GOSNS sense the output and its ground at the Load, where C\\_LOAD is connected; COMP has R\\_Z in series with C\\_C to AGND and C\\_C2 in parallel; PG is pulled up to V\\_IO by R\\_PG and is the PG output; AGND and both GND pins are grounded. SYNC\\_OUT of the primary drives MODE/SYNC of the secondary device. Secondary device (bottom): both VIN pins from the same V\\_IN with its own C\\_IN; EN tied to the common EN line; SDA, SCL, VSET1 and VSET2 tied to ground; VOSNS and GOSNS tied together to ground; SW drives its own 100 nH inductor and C\\_OUT, and its output joins the primary output; COMP and PG connect to the primary COMP and PG nets; SYNC\\_OUT has a 47 kΩ resistor to ground; AGND and both GND pins are grounded.",
+    "evidence": "PDF p32 Figure 8-16: the AI text invented '100 pF' capacitors on SW and VOSNS/GOSNS, said the secondary is connected to the primary's SW pin and that SYNC_OUT goes to the primary SYNC_OUT, and grounded PG. In the drawing the secondary's SDA, SCL, VSET1, VSET2, VOSNS and GOSNS are grounded, its SYNC_OUT has the 47 kΩ resistor to ground, the primary SYNC_OUT drives the secondary MODE/SYNC, the EN, COMP and PG nets and the outputs are shared, and PG is pulled up to V_IO. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps6287b20-p35-users-acute-accent",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 35,
+    "old": "Specification and User's Manual",
+    "new": "Specification and User´s Manual",
+    "evidence": "PDF p35 prints 'User´s Manual' with an acute accent (U+00B4); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p36-fig8-17-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 36,
+    "old": "\n\nFigure 8-17. START and STOP Conditions\n",
+    "new": "\n\n**Figure 8-17. START and STOP Conditions**\n",
+    "evidence": "PDF p36: Figure 8-17 caption is bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p36-fig8-18-caption-bold",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 36,
+    "old": "\n\nFigure 8-18. Bit Transfer on the Serial Interface\n",
+    "new": "\n\n**Figure 8-18. Bit Transfer on the Serial Interface**\n",
+    "evidence": "PDF p36: Figure 8-18 caption is bold like the other captions.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p36-deviceswait",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 36,
+    "old": "and the devices wait for a start condition",
+    "new": "and the deviceswait for a start condition",
+    "evidence": "PDF p36 prints 'the deviceswait for a start condition' without a space (manufacturer typo); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p37-fig8-19-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 37,
+    "old": "![Figure 8-19: Acknowledge on the I²C Bus. This timing diagram shows three signals: Data Output by Transmitter, Data Output by Receiver, and SCL from Controller. The SCL signal shows a START condition (S) and clock pulses for bytes 1, 2, 8, and 9. The Transmitter's data output shows a high-impedance state during the START condition and then transmits data. The Receiver's data output shows a 'Not Acknowledge' state followed by an 'Acknowledge' state during the 9th clock pulse. A 'Clock Pulse for Acknowledgement' is specifically labeled for the 9th pulse.](65a73373b57df71e5c2ce1ce0eb7b65d_img.jpg)\n\nFigure 8-19: Acknowledge on the I²C Bus. This timing diagram shows three signals: Data Output by Transmitter, Data Output by Receiver, and SCL from Controller. The SCL signal shows a START condition (S) and clock pulses for bytes 1, 2, 8, and 9. The Transmitter's data output shows a high-impedance state during the START condition and then transmits data. The Receiver's data output shows a 'Not Acknowledge' state followed by an 'Acknowledge' state during the 9th clock pulse. A 'Clock Pulse for Acknowledgement' is specifically labeled for the 9th pulse.",
+    "new": "![Figure 8-19: Acknowledge on the I²C Bus (description written from the drawing). Three traces: Data Output by Transmitter, Data Output by Receiver and SCL from Controller. At the START Condition (S, dashed box) the transmitter data line falls while SCL is high; the transmitter then drives data bits while SCL clocks pulses 1, 2 ... 8. During clock pulse 9, labeled 'Clock Pulse for Acknowledgement', the receiver output either stays high ('Not Acknowledge') or is pulled low ('Acknowledge'), drawn as two alternatives.](65a73373b57df71e5c2ce1ce0eb7b65d_img.jpg)\n\nFigure 8-19: Acknowledge on the I²C Bus (description written from the drawing). Three traces: Data Output by Transmitter, Data Output by Receiver and SCL from Controller. At the START Condition (S, dashed box) the transmitter data line falls while SCL is high; the transmitter then drives data bits while SCL clocks pulses 1, 2 ... 8. During clock pulse 9, labeled 'Clock Pulse for Acknowledgement', the receiver output either stays high ('Not Acknowledge') or is pulled low ('Acknowledge'), drawn as two alternatives.",
+    "evidence": "PDF p37 Figure 8-19: the AI text called the SCL pulses 'bytes 1, 2, 8, and 9', described a high-impedance transmitter state at START and a 'Not Acknowledge state followed by an Acknowledge state'; the drawing numbers bit clock pulses 1, 2 ... 8, 9 and shows Not Acknowledge and Acknowledge as alternative receiver levels during pulse 9. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p37-fig8-20-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 37,
+    "old": "![Figure 8-20: Bus Protocol. This detailed timing diagram illustrates the I²C bus protocol. It shows SDA and SCL signals. Key events include: 1) Recognize START or REPEATED START condition (S or Sr) on SCL. 2) SDA shows MSB, followed by bytes 1, 2, 7, 8, 9. 3) Generate ACKNOWLEDGE signal from Target on SDA during the 9th clock pulse (byte complete, interrupt within target). 4) SCL is held low while interrupts are serviced. 5) SDA shows acknowledgement signal from receiver. 6) Recognize STOP or REPEATED START condition (P, Sr or P) on SCL. The diagram also shows SCL being held low duringacknowledgement and while interrupts are serviced.](a0fdaf0b566e05f53f0085cf41e2dbad_img.jpg)\n\nFigure 8-20: Bus Protocol. This detailed timing diagram illustrates the I²C bus protocol. It shows SDA and SCL signals. Key events include: 1) Recognize START or REPEATED START condition (S or Sr) on SCL. 2) SDA shows MSB, followed by bytes 1, 2, 7, 8, 9. 3) Generate ACKNOWLEDGE signal from Target on SDA during the 9th clock pulse (byte complete, interrupt within target). 4) SCL is held low while interrupts are serviced. 5) SDA shows acknowledgement signal from receiver. 6) Recognize STOP or REPEATED START condition (P, Sr or P) on SCL. The diagram also shows SCL being held low duringacknowledgement and while interrupts are serviced.",
+    "new": "![Figure 8-20: Bus Protocol (description written from the drawing). SDA and SCL traces. 'Recognize START or REPEATED START condition' marks the S or Sr condition at the left (SDA falls while SCL is high). The first byte is clocked by SCL pulses 1, 2 ... 7, 8 starting with the MSB, and pulse 9 is the ACK, where 'Generate ACKNOWLEDGE signal' marks the acknowledgement signal from Target on SDA; after it SCL is held low ('byte complete, interrupt within target'; 'clock line held low while interrupts are serviced'). The next byte is clocked by pulses 1, 2, 3 to 8, and pulse 9 (ACK) carries the acknowledgement signal from receiver. 'Recognize STOP or REPEATED START condition' marks the Sr or P condition at the right (SDA rises to P or falls to Sr while SCL is high).](a0fdaf0b566e05f53f0085cf41e2dbad_img.jpg)\n\nFigure 8-20: Bus Protocol (description written from the drawing). SDA and SCL traces. 'Recognize START or REPEATED START condition' marks the S or Sr condition at the left (SDA falls while SCL is high). The first byte is clocked by SCL pulses 1, 2 ... 7, 8 starting with the MSB, and pulse 9 is the ACK, where 'Generate ACKNOWLEDGE signal' marks the acknowledgement signal from Target on SDA; after it SCL is held low ('byte complete, interrupt within target'; 'clock line held low while interrupts are serviced'). The next byte is clocked by pulses 1, 2, 3 to 8, and pulse 9 (ACK) carries the acknowledgement signal from receiver. 'Recognize STOP or REPEATED START condition' marks the Sr or P condition at the right (SDA rises to P or falls to Sr while SCL is high).",
+    "evidence": "PDF p37 Figure 8-20: the AI text said 'SDA shows MSB, followed by bytes 1, 2, 7, 8, 9' and put the START/STOP recognition 'on SCL'; the drawing numbers SCL bit pulses 1, 2 ... 7, 8, 9 (ACK) and 1, 2, 3 to 8, 9 (ACK), with the conditions recognized on SDA while SCL is high and SCL held low after the first ACK. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p37-heading-8-5-3-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 37,
+    "old": "#### **8.5.3 HS-Mode Protocol**",
+    "new": "#### 8.5.3 HS-Mode Protocol",
+    "evidence": "PDF p37: section heading in the same italic style as 8.5.2; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p37-heading-8-5-4-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 37,
+    "old": "#### **8.5.4 I<sup>2</sup>C Update Sequence**",
+    "new": "#### 8.5.4 I<sup>2</sup>C Update Sequence",
+    "evidence": "PDF p37: section heading in the same italic style as 8.5.2; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p37-fig8-21-rw-overbar",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 37,
+    "old": "| S | Device Address | R/W | A | Register Address | A | Data | A/A̅ | P |",
+    "new": "| S | Device Address | $R/\\overline{W}$ | A | Register Address | A | Data | A/A̅ | P |",
+    "evidence": "PDF p37 Figure 8-21: the R/W field is printed R/W with an overbar on W, as in the text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-fig8-22-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "![Figure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. The diagram shows a sequence of I2C bytes: S (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Sr (1), Device Address (7), R/W (1), A (1), Data (8), A (1), and P (1). Arrows indicate the direction of data transfer: from Controller to Target for S, Device Address, R/W, A, Register Address, A, Sr, Device Address, R/W, A, Data, A, and P; and from Target to Controller for the second A. Labels '0' Write and '1' Read are placed above the R/W and A bytes respectively. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.](02bb4edc0dbdf4f0749ffd3e0ea2805c_img.jpg)\n\nS | Device Address | R/W | A | Register Address | A | Sr | Device Address | R/W | A | Data | A | P  \n \"0\" Write | \"1\" Read\n\n[ ] From Controller to Target  \n [ ] From Target to Controller\n\nA = Acknowledge (SDA low)  \n A̅ = Not acknowledge (SDA high)  \n S = START condition  \n Sr = REPEATED START condition  \n P = STOP condition\n\nFigure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes. The diagram shows a sequence of I2C bytes: S (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Sr (1), Device Address (7), R/W (1), A (1), Data (8), A (1), and P (1). Arrows indicate the direction of data transfer: from Controller to Target for S, Device Address, R/W, A, Register Address, A, Sr, Device Address, R/W, A, Data, A, and P; and from Target to Controller for the second A. Labels '0' Write and '1' Read are placed above the R/W and A bytes respectively. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.",
+    "new": "![Figure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes (description written from the drawing). Field sequence with bit counts: S (1), Device Address (7), R/W-bar (1, '\"0\" Write'), A (1), Register Address (8), A (1), Sr (1), Device Address (7), R/W-bar (1, '\"1\" Read'), A (1), Data (8), A-bar (1), P (1). Shaded fields are From Controller to Target (S, both Device Address fields, both R/W-bar, Register Address, Sr, the final A-bar and P); white fields are From Target to Controller (the three A fields and Data). Legend: A = Acknowledge (SDA low), A-bar = Not acknowledge (SDA high), S = START condition, Sr = REPEATED START condition, P = STOP condition.](02bb4edc0dbdf4f0749ffd3e0ea2805c_img.jpg)\n\nS | Device Address | R/W | A | Register Address | A | Sr | Device Address | R/W | A | Data | A | P  \n \"0\" Write | \"1\" Read\n\n[ ] From Controller to Target  \n [ ] From Target to Controller\n\nA = Acknowledge (SDA low)  \n A̅ = Not acknowledge (SDA high)  \n S = START condition  \n Sr = REPEATED START condition  \n P = STOP condition\n\nFigure 8-22: 'Read' Data Transfer Format in Standard-, Fast, Fast-Plus Modes (description written from the drawing). Field sequence with bit counts: S (1), Device Address (7), R/W-bar (1, '\"0\" Write'), A (1), Register Address (8), A (1), Sr (1), Device Address (7), R/W-bar (1, '\"1\" Read'), A (1), Data (8), A-bar (1), P (1). Shaded fields are From Controller to Target (S, both Device Address fields, both R/W-bar, Register Address, Sr, the final A-bar and P); white fields are From Target to Controller (the three A fields and Data). Legend: A = Acknowledge (SDA low), A-bar = Not acknowledge (SDA high), S = START condition, Sr = REPEATED START condition, P = STOP condition.",
+    "evidence": "PDF p38 Figure 8-22: the AI text ended the sequence with 'Data (8), A (1)' and said that everything except 'the second A' goes from controller to target; the drawing ends with A-bar (not acknowledge) before P, and the A fields and Data are white (from target to controller). Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-fig8-22-field-line",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "S | Device Address | R/W | A | Register Address | A | Sr | Device Address | R/W | A | Data | A | P  \n",
+    "new": "S | Device Address | $R/\\overline{W}$ | A | Register Address | A | Sr | Device Address | $R/\\overline{W}$ | A | Data | A̅ | P  \n",
+    "evidence": "PDF p38 Figure 8-22: the field before P is A with an overbar (not acknowledge) and the R/W fields have an overbar on W.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-fig8-23-description",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "![Figure 8-23: Data Transfer Format in HS-Mode. The diagram shows a sequence of I2C bytes: S (1), HS-Code (8), A̅ (1), Sr (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Data (8), A/A̅ (1), and P (1). The sequence is divided into F/S Mode and HS Mode. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.](04cfca33e3fc26513abe649d7474f733_img.jpg)\n\nS | HS-Code | A̅ | Sr | Device Address | R/W | A | Register Address | A | Data | A/A̅ | P\n\n[ ] From Controller to Target  \n [ ] From Target to Controller\n\nA = Acknowledge (SDA low)  \n A̅ = Not acknowledge (SDA high)  \n S = START condition  \n Sr = REPEATED START condition  \n P = STOP condition\n\nFigure 8-23: Data Transfer Format in HS-Mode. The diagram shows a sequence of I2C bytes: S (1), HS-Code (8), A̅ (1), Sr (1), Device Address (7), R/W (1), A (1), Register Address (8), A (1), Data (8), A/A̅ (1), and P (1). The sequence is divided into F/S Mode and HS Mode. A legend defines the symbols for data transfer direction and the meaning of the I2C conditions.",
+    "new": "![Figure 8-23: Data Transfer Format in HS-Mode (description written from the drawing). Field sequence with bit counts: S (1), HS-Code (8), A̅ (1) in F/S Mode; then in HS Mode Sr (1), Device Address (7), R/W-bar (1), A (1), Register Address (8), A (1), Data (8), A/A̅ (1), followed by P (1) returning to F/S Mode. A bracket from Register Address to A/A̅ is labeled '(n x Bytes + Acknowledge)', and an arrow 'HS Mode continues' points to an alternative Sr, Device Address sequence after the data. Shaded fields are From Controller to Target, white fields From Target to Controller; the legend defines A, A̅, S, Sr and P.](04cfca33e3fc26513abe649d7474f733_img.jpg)\n\nS | HS-Code | A̅ | Sr | Device Address | R/W | A | Register Address | A | Data | A/A̅ | P\n\n[ ] From Controller to Target  \n [ ] From Target to Controller\n\nA = Acknowledge (SDA low)  \n A̅ = Not acknowledge (SDA high)  \n S = START condition  \n Sr = REPEATED START condition  \n P = STOP condition\n\nFigure 8-23: Data Transfer Format in HS-Mode (description written from the drawing). Field sequence with bit counts: S (1), HS-Code (8), A̅ (1) in F/S Mode; then in HS Mode Sr (1), Device Address (7), R/W-bar (1), A (1), Register Address (8), A (1), Data (8), A/A̅ (1), followed by P (1) returning to F/S Mode. A bracket from Register Address to A/A̅ is labeled '(n x Bytes + Acknowledge)', and an arrow 'HS Mode continues' points to an alternative Sr, Device Address sequence after the data. Shaded fields are From Controller to Target, white fields From Target to Controller; the legend defines A, A̅, S, Sr and P.",
+    "evidence": "PDF p38 Figure 8-23: the description omitted the '(n x Bytes + Acknowledge)' bracket and the 'HS Mode continues' Sr / Device Address alternative, and gave R/W without its overbar. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-fig8-23-field-line",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "S | HS-Code | A̅ | Sr | Device Address | R/W | A |",
+    "new": "S | HS-Code | A̅ | Sr | Device Address | $R/\\overline{W}$ | A |",
+    "evidence": "PDF p38 Figure 8-23: the R/W field has an overbar on W.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-heading-8-5-5-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "#### **8.5.5 I<sup>2</sup>C Register Reset**",
+    "new": "#### 8.5.5 I<sup>2</sup>C Register Reset",
+    "evidence": "PDF p38: heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-heading-8-5-6-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "#### **8.5.6 Dynamic Voltage Scaling (DVS)**",
+    "new": "#### 8.5.6 Dynamic Voltage Scaling (DVS)",
+    "evidence": "PDF p38: heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps6287b20-p38-heading-switching-ranges-no-emphasis",
+    "file": "output/tps6287b20/tps6287b20.md",
+    "page": 38,
+    "old": "##### **Switching between different output voltage ranges**",
+    "new": "##### Switching between different output voltage ranges",
+    "evidence": "PDF p38: heading in the same style as the other headings of its level; `**` removed inside the heading.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
