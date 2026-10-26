@@ -16754,5 +16754,200 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p61-iout-resonse-caption-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 61,
+    "old": "\n#### IOUT\\_OC\\_FAULT\\_RESPONSE and IOUT\\_UC\\_FAULT\\_RESPONSE Data Contents\n",
+    "new": "\n**IOUT\\_OC\\_FAULT\\_RESONSE and IOUT\\_UC\\_FAULT\\_RESPONSE Data Contents**\n",
+    "evidence": "PDF p61 (pdftotext + PyMuPDF span, y=542): the table caption is printed 'IOUT_OC_FAULT_RESONSE and IOUT_UC_FAULT_RESPONSE Data Contents' (manufacturer typo 'RESONSE', also on the p62 continuation caption, which the md already has); md had 'RESPONSE'. Also a table caption (LinearHelvCond-Bold 9.7pt), written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p61-vout-ov-uv-fault-response-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 61,
+    "old": "\n#### VOUT\\_OV\\_FAULT\\_RESPONSE and VOUT\\_UV\\_FAULT\\_RESPONSE Data Contents\n",
+    "new": "\n**VOUT\\_OV\\_FAULT\\_RESPONSE and VOUT\\_UV\\_FAULT\\_RESPONSE Data Contents**\n",
+    "evidence": "PDF p61: 'VOUT_OV_FAULT_RESPONSE and VOUT_UV_FAULT_RESPONSE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p61-ts-vs-not-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 61,
+    "old": "at a sampling period of $t_{S\\_VS}$ (12.2 $\\mu$ s typical).",
+    "new": "at a sampling period of tS_VS (12.2 $\\mu$ s typical).",
+    "evidence": "PDF p61 b[2:0] row (PyMuPDF spans, y=355): 'tS_VS' is printed inline at the body size (8.8pt, no subscript), unlike the b[7:6] row where S_VS is a 7.0pt subscript; md had the subscript form in both.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p62-iout-oc-uc-fault-response-cont-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 62,
+    "old": "\n#### IOUT\\_OC\\_FAULT\\_RESONSE and IOUT\\_UC\\_FAULT\\_RESPONSE Data Contents\n",
+    "new": "\n**IOUT\\_OC\\_FAULT\\_RESONSE and IOUT\\_UC\\_FAULT\\_RESPONSE Data Contents**\n",
+    "evidence": "PDF p62: 'IOUT_OC_FAULT_RESONSE and IOUT_UC_FAULT_RESPONSE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p62-iout-table-empty-columns",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 62,
+    "old": "| BIT(S) | SYMBOL                                                        | OPERATION                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |\n|--------|---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|-------------------|------|-------|------|-----|------|-----|------|------|------|------|------|------|------|-------|\n| b[5:3] | Iout_oc_fault_response_retry,<br>Iout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |        |                   |      |       |      |     |      |     |      |      |      |      |      |      |      |       |",
+    "new": "| BIT(S) | SYMBOL                                                        | OPERATION                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|--------|---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| b[5:3] | Iout_oc_fault_response_retry,<br>Iout_uc_fault_response_retry | Response retry behavior:<br><br>000b: A zero value for the retry setting means that the unit does not attempt to restart. The output remains disabled until the fault is cleared.<br><br>001-111b: The PMBus device attempts to restart the number of times specified by the global Mfr_retry_count[2:0] until it is commanded off (by the control pin or operation command or both), bias power is removed, or another fault condition causes the unit to shut down.<br><br>Changing the value might not take effect until the next off-then-on sequence on that channel.                                                                                                                   |",
+    "evidence": "PDF p62 (render + pdftotext): the IOUT_OC/UC_FAULT_RESPONSE Data Contents continuation table has three columns (BIT(S), SYMBOL, OPERATION). The md header, separator and b[5:3] row carried 15 extra empty columns (leftover of the embedded deglitch table in the b[2:0] row), making the table ragged. Empty columns removed; no text changed.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p62-ot-ut-vin-fault-response-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 62,
+    "old": "\n#### OT\\_FAULT\\_RESPONSE, UT\\_FAULT\\_RESPONSE, VIN\\_OV\\_FAULT\\_RESPONSE, VIN\\_UV\\_FAULT\\_RESPONSE Data Contents\n",
+    "new": "\n**OT\\_FAULT\\_RESPONSE, UT\\_FAULT\\_RESPONSE, VIN\\_OV\\_FAULT\\_RESPONSE, VIN\\_UV\\_FAULT\\_RESPONSE Data Contents**\n",
+    "evidence": "PDF p62: 'OT_FAULT_RESPONSE, UT_FAULT_RESPONSE, VIN_OV_FAULT_RESPONSE, VIN_UV_FAULT_RESPONSE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p63-ton-max-fault-response-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 63,
+    "old": "\n##### TON\\_MAX\\_FAULT\\_RESPONSE Data Contents\n",
+    "new": "\n**TON\\_MAX\\_FAULT\\_RESPONSE Data Contents**\n",
+    "evidence": "PDF p63: 'TON_MAX_FAULT_RESPONSE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p63-mfr-retry-count-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 63,
+    "old": "\n##### MFR\\_RETRY\\_COUNT Data Contents\n",
+    "new": "\n**MFR\\_RETRY\\_COUNT Data Contents**\n",
+    "evidence": "PDF p63: 'MFR_RETRY_COUNT Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p64-mfr-faultb-propagate-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 64,
+    "old": "\n#### ***MFR\\_FAULTB0\\_PROPAGATE and MFR\\_FAULTB1\\_PROPAGATE***\n",
+    "new": "\n#### MFR\\_FAULTB0\\_PROPAGATE and MFR\\_FAULTB1\\_PROPAGATE\n",
+    "evidence": "PDF p64: 'MFR_FAULTB0_PROPAGATE and MFR_FAULTB1_PROPAGATE' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p64-mfr-fault0-propagate-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 64,
+    "old": "\n##### **MFR\\_FAULT0\\_PROPAGATE Data Contents**\n",
+    "new": "\n**MFR\\_FAULT0\\_PROPAGATE Data Contents**\n",
+    "evidence": "PDF p64: 'MFR_FAULT0_PROPAGATE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p64-mfr-fault1-propagate-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 64,
+    "old": "\n#### **MFR\\_FAULT1\\_PROPAGATE Data Contents**\n",
+    "new": "\n**MFR\\_FAULT1\\_PROPAGATE Data Contents**\n",
+    "evidence": "PDF p64: 'MFR_FAULT1_PROPAGATE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p64-mfr-faultb-response-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 64,
+    "old": "\n#### ***MFR\\_FAULTB0\\_RESPONSE and MFR\\_FAULTB1\\_RESPONSE***\n",
+    "new": "\n#### MFR\\_FAULTB0\\_RESPONSE and MFR\\_FAULTB1\\_RESPONSE\n",
+    "evidence": "PDF p64: 'MFR_FAULTB0_RESPONSE and MFR_FAULTB1_RESPONSE' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt); the md wrapped the heading text in '***' emphasis inside the heading, removed per the ltc2975 heading convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p65-mfr-faultb-response-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 65,
+    "old": "\n#### MFR\\_FAULTB0\\_RESPONSE and MFR\\_FAULTB1\\_RESPONSE Data Contents\n",
+    "new": "\n**MFR\\_FAULTB0\\_RESPONSE and MFR\\_FAULTB1\\_RESPONSE Data Contents**\n",
+    "evidence": "PDF p65: 'MFR_FAULTB0_RESPONSE and MFR_FAULTB1_RESPONSE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt, same style as figure captions), not a heading; written as a bold paragraph per the ltc2975 caption convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p65-clear-faults-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 65,
+    "old": "\n### CLEAR\\_FAULTS\n",
+    "new": "\n#### CLEAR\\_FAULTS\n",
+    "evidence": "PDF p65 (PyMuPDF span y=595): 'CLEAR_FAULTS' is a bold-oblique command heading (HelveticaLTStd-BoldCondO 11.7pt) under the bold caps 'FAULT WARNING AND STATUS' subsection (H3); the md had H3, command headings are H4 per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p65-clear-faults-note-paragraph",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 65,
+    "old": "host notified by the usual means. Note: this command responds to the global page command. (PAGE=0xFF)",
+    "new": "host notified by the usual means.\n\nNote: this command responds to the global page command. (PAGE=0xFF)",
+    "evidence": "PDF p65 (PyMuPDF lines y=697 and y=717, 20pt paragraph spacing vs 14pt line spacing; render): 'Note: this command responds to the global page command. (PAGE=0xFF)' is a separate paragraph; the md had merged it into the previous one.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
