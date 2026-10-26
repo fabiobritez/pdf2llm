@@ -8946,5 +8946,317 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3313-p17-rise-time-1us",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 17,
+    "old": "having a rise time of 1 $\\mu$ s.",
+    "new": "having a rise time of 1µs.",
+    "evidence": "PDF p17 prints '1µs' as one word (pdftotext + render); the md had '1 $\\mu$ s' with spaces.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p17-ov-125us",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 17,
+    "old": "for more than 125 $\\mu$ s, the PGOOD pin",
+    "new": "for more than 125µs, the PGOOD pin",
+    "evidence": "PDF p17 prints '125µs' as one word (pdftotext + render); the md had '125 $\\mu$ s' with spaces.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p18-comparator-curly-apostrophe",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 18,
+    "old": "Due to the comparator's hysteresis",
+    "new": "Due to the comparator’s hysteresis",
+    "evidence": "PDF p18 prints a curly apostrophe (U+2019) in 'comparator’s' (pdftotext + PyMuPDF).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p18-sstt-10ua",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 18,
+    "old": "An internal 10 $\\mu$ A pulls up the SSTT pin.",
+    "new": "An internal 10µA pulls up the SSTT pin.",
+    "evidence": "PDF p18 prints '10µA' as one word (pdftotext + render); the md had '10 $\\mu$ A' with spaces.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p18-eq10-ss-subscripts",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 18,
+    "old": "$$t_{ss} = C_{ss} \\cdot",
+    "new": "$$t_{SS} = C_{SS} \\cdot",
+    "evidence": "PDF p18 Equation (10) prints t_SS and C_SS with uppercase subscripts (PyMuPDF spans + render), like C_SS in the Block Diagram.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p18-tracking-column-split",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 18,
+    "old": "thus regulating the FB pin\n\nvoltage to that of the SSTT pin.",
+    "new": "thus regulating the FB pin voltage to that of the SSTT pin.",
+    "evidence": "PDF p18: the sentence continues from the bottom of the left column ('the FB pin') to the top of the right column ('voltage to that of the SSTT pin'); no paragraph break (render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p19-fig3-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 19,
+    "old": "![Figure 3: Soft-Start and Temperature Monitor Operation. A graph showing the relationship between FB voltage (V) and SSTT voltage (V). The y-axis (FB) ranges from 0 to 1.5 V with a break between 0.6 and 0.7 V. The x-axis (SSTT) ranges from 0 to 1.7 V. A red line represents the 'SOFT-START AND TRACKING' region, starting at (0,0) and ending at (0.5, 0.5). A dashed line represents the 'TEMP MONITOR ~4mV/°C' region, starting at (0.5, 0.5) and ending at (1.7, 1.5). The area between these lines is labeled 'SSTT PIN VOLTAGE OPERATING RANGE'. A point on the temp monitor line at 0.6 V FB is labeled 'DIE TEMP (°C)'.](",
+    "new": "![Figure 3: Soft-Start and Temperature Monitor Operation. A graph with SSTT (V) on the x-axis, from 0 to 0.6 and, after an axis break, from 1.2 to 1.7. The y-axis is split by a break: the lower part is FB (V) from 0 to 0.6, the upper part is DIE TEMP (°C) from 25 to 150. A single solid red line rises from the origin; the lower part, labeled 'SOFT-START AND TRACKING', has FB equal to SSTT up to 0.5V (dashed guide lines at 0.5V), and the upper part, labeled 'TEMP MONITOR ~4mV/°C', runs from 25°C at SSTT = 1.2V to 150°C at SSTT = 1.7V (dashed guide lines). The region above the line is labeled 'SSTT PIN VOLTAGE OPERATING RANGE'.](",
+    "evidence": "PDF p19 Figure 3 (render): the y-axis is FB (V) 0-0.6 below the break and DIE TEMP (°C) 25-150 above it (not FB up to 1.5V); the x-axis has a break between 0.6 and 1.2V; there is one solid line (no dashed temperature line), and the dashed lines are guides at 0.5V, 25°C/1.2V and 150°C/1.7V. 'DIE TEMP (°C)' is the upper axis label, not a point label.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p19-fig3-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 19,
+    "old": "\nFigure 3: Soft-Start and Temperature Monitor Operation. A graph showing the relationship between FB voltage (V) and SSTT voltage (V). The y-axis (FB) ranges from 0 to 1.5 V with a break between 0.6 and 0.7 V. The x-axis (SSTT) ranges from 0 to 1.7 V. A red line represents the 'SOFT-START AND TRACKING' region, starting at (0,0) and ending at (0.5, 0.5). A dashed line represents the 'TEMP MONITOR ~4mV/°C' region, starting at (0.5, 0.5) and ending at (1.7, 1.5). The area between these lines is labeled 'SSTT PIN VOLTAGE OPERATING RANGE'. A point on the temp monitor line at 0.6 V FB is labeled 'DIE TEMP (°C)'.\n",
+    "new": "\nFigure 3: Soft-Start and Temperature Monitor Operation. A graph with SSTT (V) on the x-axis, from 0 to 0.6 and, after an axis break, from 1.2 to 1.7. The y-axis is split by a break: the lower part is FB (V) from 0 to 0.6, the upper part is DIE TEMP (°C) from 25 to 150. A single solid red line rises from the origin; the lower part, labeled 'SOFT-START AND TRACKING', has FB equal to SSTT up to 0.5V (dashed guide lines at 0.5V), and the upper part, labeled 'TEMP MONITOR ~4mV/°C', runs from 25°C at SSTT = 1.2V to 150°C at SSTT = 1.7V (dashed guide lines). The region above the line is labeled 'SSTT PIN VOLTAGE OPERATING RANGE'.\n",
+    "evidence": "PDF p19 Figure 3 (render): the y-axis is FB (V) 0-0.6 below the break and DIE TEMP (°C) 25-150 above it (not FB up to 1.5V); the x-axis has a break between 0.6 and 1.2V; there is one solid line (no dashed temperature line), and the dashed lines are guides at 0.5V, 25°C/1.2V and 150°C/1.7V. 'DIE TEMP (°C)' is the upper axis label, not a point label.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p19-fig3-drawing-number-caption",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 19,
+    "old": "Figure 3: Soft-Start and Temperature Monitor Operation. A graph with SSTT (V) on the x-axis, from 0 to 0.6 and, after an axis break, from 1.2 to 1.7. The y-axis is split by a break: the lower part is FB (V) from 0 to 0.6, the upper part is DIE TEMP (°C) from 25 to 150. A single solid red line rises from the origin; the lower part, labeled 'SOFT-START AND TRACKING', has FB equal to SSTT up to 0.5V (dashed guide lines at 0.5V), and the upper part, labeled 'TEMP MONITOR ~4mV/°C', runs from 25°C at SSTT = 1.2V to 150°C at SSTT = 1.7V (dashed guide lines). The region above the line is labeled 'SSTT PIN VOLTAGE OPERATING RANGE'.\n\nFigure 3. Soft-Start and Temperature Monitor Operation\n",
+    "new": "Figure 3: Soft-Start and Temperature Monitor Operation. A graph with SSTT (V) on the x-axis, from 0 to 0.6 and, after an axis break, from 1.2 to 1.7. The y-axis is split by a break: the lower part is FB (V) from 0 to 0.6, the upper part is DIE TEMP (°C) from 25 to 150. A single solid red line rises from the origin; the lower part, labeled 'SOFT-START AND TRACKING', has FB equal to SSTT up to 0.5V (dashed guide lines at 0.5V), and the upper part, labeled 'TEMP MONITOR ~4mV/°C', runs from 25°C at SSTT = 1.2V to 150°C at SSTT = 1.7V (dashed guide lines). The region above the line is labeled 'SSTT PIN VOLTAGE OPERATING RANGE'.\n\n3313 F03\n\n**Figure 3. Soft-Start and Temperature Monitor Operation**\n",
+    "evidence": "PDF p19 prints the drawing number '3313 F03' under Figure 3 and the caption in bold, as Figure 2 (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p19-pgood-curly-apostrophe",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 19,
+    "old": "When the LTC3313's output voltage",
+    "new": "When the LTC3313’s output voltage",
+    "evidence": "PDF p19 prints a curly apostrophe (U+2019) in 'LTC3313’s output voltage' (pdftotext + PyMuPDF).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p19-ivalley-max-subscript",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 19,
+    "old": "$I_{\\text{VALLEY}}(\\text{MAX})$",
+    "new": "$I_{\\text{VALLEY(MAX)}}$",
+    "evidence": "PDF p19 prints I_VALLEY(MAX) with '(MAX)' inside the subscript (PyMuPDF spans + render), as on p3 and p12.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p20-fig4-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 20,
+    "old": "![Figure 4: Recommended PCB Layout for the LTC3313. This is a detailed PCB layout diagram for the LTC3313 integrated circuit. The central component is the LTC3313 itself, shown with its 19 pins numbered 1 through 19. The layout includes various passive components: input capacitors C<sub>IN1</sub>, C<sub>IN2</sub>, C<sub>IN3</sub>, and C<sub>IN4</sub> connected to the V<sub>IN</sub> pin; a feedback capacitor C<sub>FF</sub> connected to the FB pin; a compensation capacitor C<sub>CS</sub> connected to the CS pin; and a temperature sensor resistor R<sub>T</sub> connected to the RT pin. Output capacitors C<sub>OUT1</sub> and C<sub>OUT2</sub> are connected to the V<sub>OUT</sub> pin. A power inductor L is placed between the V<sub>OUT</sub> pin and the output capacitors. The diagram also shows ground planes (GND) and a note indicating 'GROUND PLANE ON LAYER 2' for the V<sub>IN</sub> area. A dashed line indicates a connection 'TO V<sub>OUT</sub> AND GND REMOTE SENSE'. The diagram is labeled '3313 F04' at the bottom right.](",
+    "new": "![Figure 4: Recommended PCB Layout for the LTC3313. Top-layer layout around the LTC3313 footprint; the pad numbers 1, 5, 6, 9, 10, 14, 15, 18 and the exposed pad 19 (with thermal vias) are marked. A V<sub>IN</sub> copper area surrounds the top and sides of the IC, with the note 'GROUND PLANE ON LAYER 2'. The small-signal components C<sub>FF</sub>, R<sub>A</sub>, R<sub>B</sub>, C<sub>C1</sub>, C<sub>C2</sub>, R<sub>C</sub>, C<sub>SS</sub> and R<sub>T</sub> are placed above the IC, next to pins 15-18. Input capacitors C<sub>IN1</sub> and C<sub>IN5</sub> (left) and C<sub>IN2</sub> (right) sit next to the IC, and the larger C<sub>IN3</sub> and C<sub>IN4</sub> bridge the V<sub>IN</sub> area and the GND areas on each side, which have many vias. The SW pins 6-9 connect to the inductor L, which runs down to the V<sub>OUT</sub> copper at the bottom; output capacitors C<sub>OUT1</sub> and C<sub>OUT2</sub> connect V<sub>OUT</sub> to the GND areas. Two dashed traces from vias near C<sub>FF</sub> and C<sub>IN5</sub> are labeled 'TO V<sub>OUT</sub> AND GND REMOTE SENSE'.](",
+    "evidence": "PDF p20 Figure 4 (render): there is no C_CS component or CS pin (the parts are C_C1, C_C2, R_C, C_SS, R_T, C_FF, R_A, R_B, C_IN1-C_IN5, C_OUT1/2, L); R_T is the frequency-setting resistor, not a temperature sensor; C_IN5 was missing; the inductor goes from the SW pads to V_OUT (not between V_OUT and the output capacitors); only pads 1, 5, 6, 9, 10, 14, 15, 18, 19 are numbered; two dashed remote-sense traces. '3313 F04' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p20-fig4-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 20,
+    "old": "\nFigure 4: Recommended PCB Layout for the LTC3313. This is a detailed PCB layout diagram for the LTC3313 integrated circuit. The central component is the LTC3313 itself, shown with its 19 pins numbered 1 through 19. The layout includes various passive components: input capacitors C<sub>IN1</sub>, C<sub>IN2</sub>, C<sub>IN3</sub>, and C<sub>IN4</sub> connected to the V<sub>IN</sub> pin; a feedback capacitor C<sub>FF</sub> connected to the FB pin; a compensation capacitor C<sub>CS</sub> connected to the CS pin; and a temperature sensor resistor R<sub>T</sub> connected to the RT pin. Output capacitors C<sub>OUT1</sub> and C<sub>OUT2</sub> are connected to the V<sub>OUT</sub> pin. A power inductor L is placed between the V<sub>OUT</sub> pin and the output capacitors. The diagram also shows ground planes (GND) and a note indicating 'GROUND PLANE ON LAYER 2' for the V<sub>IN</sub> area. A dashed line indicates a connection 'TO V<sub>OUT</sub> AND GND REMOTE SENSE'. The diagram is labeled '3313 F04' at the bottom right.\n",
+    "new": "\nFigure 4: Recommended PCB Layout for the LTC3313. Top-layer layout around the LTC3313 footprint; the pad numbers 1, 5, 6, 9, 10, 14, 15, 18 and the exposed pad 19 (with thermal vias) are marked. A V<sub>IN</sub> copper area surrounds the top and sides of the IC, with the note 'GROUND PLANE ON LAYER 2'. The small-signal components C<sub>FF</sub>, R<sub>A</sub>, R<sub>B</sub>, C<sub>C1</sub>, C<sub>C2</sub>, R<sub>C</sub>, C<sub>SS</sub> and R<sub>T</sub> are placed above the IC, next to pins 15-18. Input capacitors C<sub>IN1</sub> and C<sub>IN5</sub> (left) and C<sub>IN2</sub> (right) sit next to the IC, and the larger C<sub>IN3</sub> and C<sub>IN4</sub> bridge the V<sub>IN</sub> area and the GND areas on each side, which have many vias. The SW pins 6-9 connect to the inductor L, which runs down to the V<sub>OUT</sub> copper at the bottom; output capacitors C<sub>OUT1</sub> and C<sub>OUT2</sub> connect V<sub>OUT</sub> to the GND areas. Two dashed traces from vias near C<sub>FF</sub> and C<sub>IN5</sub> are labeled 'TO V<sub>OUT</sub> AND GND REMOTE SENSE'.\n",
+    "evidence": "PDF p20 Figure 4 (render): there is no C_CS component or CS pin (the parts are C_C1, C_C2, R_C, C_SS, R_T, C_FF, R_A, R_B, C_IN1-C_IN5, C_OUT1/2, L); R_T is the frequency-setting resistor, not a temperature sensor; C_IN5 was missing; the inductor goes from the SW pads to V_OUT (not between V_OUT and the output capacitors); only pads 1, 5, 6, 9, 10, 14, 15, 18, 19 are numbered; two dashed remote-sense traces. '3313 F04' is the drawing number.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p20-fig4-drawing-number-caption",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 20,
+    "old": "Figure 4: Recommended PCB Layout for the LTC3313. Top-layer layout around the LTC3313 footprint; the pad numbers 1, 5, 6, 9, 10, 14, 15, 18 and the exposed pad 19 (with thermal vias) are marked. A V<sub>IN</sub> copper area surrounds the top and sides of the IC, with the note 'GROUND PLANE ON LAYER 2'. The small-signal components C<sub>FF</sub>, R<sub>A</sub>, R<sub>B</sub>, C<sub>C1</sub>, C<sub>C2</sub>, R<sub>C</sub>, C<sub>SS</sub> and R<sub>T</sub> are placed above the IC, next to pins 15-18. Input capacitors C<sub>IN1</sub> and C<sub>IN5</sub> (left) and C<sub>IN2</sub> (right) sit next to the IC, and the larger C<sub>IN3</sub> and C<sub>IN4</sub> bridge the V<sub>IN</sub> area and the GND areas on each side, which have many vias. The SW pins 6-9 connect to the inductor L, which runs down to the V<sub>OUT</sub> copper at the bottom; output capacitors C<sub>OUT1</sub> and C<sub>OUT2</sub> connect V<sub>OUT</sub> to the GND areas. Two dashed traces from vias near C<sub>FF</sub> and C<sub>IN5</sub> are labeled 'TO V<sub>OUT</sub> AND GND REMOTE SENSE'.\n\nFigure 4. Recommended PCB Layout for the LTC3313\n",
+    "new": "Figure 4: Recommended PCB Layout for the LTC3313. Top-layer layout around the LTC3313 footprint; the pad numbers 1, 5, 6, 9, 10, 14, 15, 18 and the exposed pad 19 (with thermal vias) are marked. A V<sub>IN</sub> copper area surrounds the top and sides of the IC, with the note 'GROUND PLANE ON LAYER 2'. The small-signal components C<sub>FF</sub>, R<sub>A</sub>, R<sub>B</sub>, C<sub>C1</sub>, C<sub>C2</sub>, R<sub>C</sub>, C<sub>SS</sub> and R<sub>T</sub> are placed above the IC, next to pins 15-18. Input capacitors C<sub>IN1</sub> and C<sub>IN5</sub> (left) and C<sub>IN2</sub> (right) sit next to the IC, and the larger C<sub>IN3</sub> and C<sub>IN4</sub> bridge the V<sub>IN</sub> area and the GND areas on each side, which have many vias. The SW pins 6-9 connect to the inductor L, which runs down to the V<sub>OUT</sub> copper at the bottom; output capacitors C<sub>OUT1</sub> and C<sub>OUT2</sub> connect V<sub>OUT</sub> to the GND areas. Two dashed traces from vias near C<sub>FF</sub> and C<sub>IN5</sub> are labeled 'TO V<sub>OUT</sub> AND GND REMOTE SENSE'.\n\n3313 F04\n\n**Figure 4. Recommended PCB Layout for the LTC3313**\n",
+    "evidence": "PDF p20 prints the drawing number '3313 F04' under Figure 4 and the caption in bold, as Figure 2 (pdftotext + render).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p21-ta02-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 21,
+    "old": "Dual-Phase, 2MHz, 5V to 3.3V, 30A, Forced Continuous Mode\n\n![](",
+    "new": "Dual-Phase, 2MHz, 5V to 3.3V, 30A, Forced Continuous Mode\n\n![Dual-phase LTC3313 schematic: a master phase (0°) and a slave phase (180°) in parallel, 4.5V to 5.5V input, 3.3V 30A output.](",
+    "evidence": "PDF p21 TA02 schematic had an empty alt text; written from the drawing (render, 170 dpi crop).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p21-ta02-desc-labels",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 21,
+    "old": "79e1709a7317ead45379cbb8ff3ba802_img.jpg)",
+    "new": "79e1709a7317ead45379cbb8ff3ba802_img.jpg)\n\nDual-phase LTC3313 schematic. V<sub>IN</sub> = 4.5V TO 5.5V. Each IC has 1μF, 22μF and 0.1μF input capacitors on one side and 0.1μF and 22μF on the other. Master (top, 0°): EN is driven by a 1M/100k divider from V<sub>IN</sub>; RT has 274k to ground; SSTT has 0.1μF to ground; ITH has 3.32k in series with 680pF to ground; SW drives L, 120nH to V<sub>OUT</sub> = 3.3V, 30A; FB connects to a 274k/48.7k divider from V<sub>OUT</sub> with 4.7pF across the 274k; 22μF ×3 output capacitors; PGOOD is the PGOOD output, pulled up to V<sub>OUT</sub> through 100k. Slave (bottom, 180°): EN is tied to V<sub>IN</sub>, FB is tied to V<sub>IN</sub>, SSTT is NC and RT is tied to ground; its MODE/SYNC and ITH pins are connected to the master's MODE/SYNC and ITH, and its PGOOD to the PGOOD net; its SW drives a second L, 120nH to the common V<sub>OUT</sub>, with 22μF ×3 output capacitors.\n\nL = COILCRAFT XGL4018-121MEC\n\n3313 TA02",
+    "evidence": "PDF p21 prints 'L = COILCRAFT XGL4018-121MEC' and the drawing number '3313 TA02' under the schematic (pdftotext + render); both were missing, and the figure had no description. Description written from the drawing (render, 170 dpi crop).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p22-ta03-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 22,
+    "old": "![Schematic diagram of a three-phase power supply using three LTC3313 controllers. The diagram shows three LTC3313 ICs arranged vertically. Each IC has pins for EN, V<sub>IN</sub>, PGOOD, MODE/SYNC, SW, ITH, FB, SSTT, AGND, and PGND. The top IC is configured for 0° phase, the middle for 120°, and the bottom for 240°. Each phase includes an input filter (10µF, 1µF, 22µF, 0.1µF capacitors), a 5.49kΩ resistor to the ITH pin, a 1500pF capacitor to the SSTT pin, and a 100kΩ resistor to the PGOOD pin. The output of each phase consists of a 55nH inductor (L), a 10pF capacitor, an 86.6kΩ resistor, a 432kΩ resistor, and a 47µF x3 capacitor. The output voltage is V<sub>OUT</sub> = 0.6V, 45A. The diagram also includes a reference to L = WURTH 744340300055 and a small label 3313 TA03.](",
+    "new": "![Three-phase LTC3313 schematic: a master phase (0°) and two slave phases (120°, 240°) in parallel, 3.0V to 4.5V input, 0.6V 45A output.](",
+    "evidence": "PDF p22 TA03 schematic (render, 170 dpi crop): the AI alt text said the PGOOD 100k went to the PGOOD pin of each phase (only the master has a 100k pull-up to V_IN), put 5.49k/1500pF on every phase and on SSTT (5.49k + 1500pF are the master ITH compensation; SSTT has 0.1µF), and omitted the slave FB-to-V_IN, NC SSTT and RT dividers.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p22-ta03-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 22,
+    "old": "The diagram illustrates a three-phase power supply circuit using three LTC3313 controllers. Each controller is configured for a specific phase: 0°, 120°, and 240°. The input voltage is  $V_{IN}$  (3.0V TO 4.5V). Each controller has an input filter consisting of a 10µF capacitor, a 1µF capacitor, a 22µF capacitor, and a 0.1µF capacitor. The ITH pin is connected to a 5.49kΩ resistor to ground. The SSTT pin is connected to a 1500pF capacitor to ground. The PGOOD pin is connected to a 100kΩ resistor to ground. The output of each controller consists of a 55nH inductor (L), a 10pF capacitor, an 86.6kΩ resistor, a 432kΩ resistor, and a 47µF x3 capacitor. The output voltage is  $V_{OUT}$  = 0.6V, 45A. The diagram also includes a reference to L = WURTH 744340300055 and a small label 3313 TA03.",
+    "new": "Three-phase LTC3313 schematic. V<sub>IN</sub> = 3.0V TO 4.5V. Each IC has 10μF, 1μF, 22μF and 0.1μF input capacitors on one side and 0.1μF and 22μF on the other, and EN tied to V<sub>IN</sub>. Master (top, 0°): RT has 274k to ground; SSTT has 0.1μF to ground; ITH has 5.49k in series with 1500pF to ground; SW drives L, 55nH to V<sub>OUT</sub> = 0.6V, 45A; FB connects to an 86.6k/432k divider from V<sub>OUT</sub> with 10pF across the 86.6k; 47μF ×3 output capacitors; PGOOD is the PGOOD output, pulled up to V<sub>IN</sub> through 100k. Slaves (120° and 240°): FB is tied to V<sub>IN</sub> and SSTT is NC; RT is set by a divider from V<sub>IN</sub> (243k over 174k for 120°, 174k over 243k for 240°); MODE/SYNC, ITH and PGOOD are connected to the master's; each SW drives its own L, 55nH to the common V<sub>OUT</sub> with 47μF ×3 output capacitors.",
+    "evidence": "PDF p22 TA03 schematic (render, 170 dpi crop): the description said ITH had a 5.49kΩ resistor to ground, SSTT a 1500pF capacitor and PGOOD a 100kΩ resistor to ground on each controller, and listed 86.6k/432k/10pF on every output; the drawing has 5.49k + 1500pF on the shared ITH, 0.1µF on the master SSTT, a 100k PGOOD pull-up to V_IN, the divider only on the master, and slaves with FB = V_IN, SSTT NC and RT dividers.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p22-ta03-alt-repeat",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 22,
+    "old": "\nSchematic diagram of a three-phase power supply using three LTC3313 controllers. The diagram shows three LTC3313 ICs arranged vertically. Each IC has pins for EN, V<sub>IN</sub>, PGOOD, MODE/SYNC, SW, ITH, FB, SSTT, AGND, and PGND. The top IC is configured for 0° phase, the middle for 120°, and the bottom for 240°. Each phase includes an input filter (10µF, 1µF, 22µF, 0.1µF capacitors), a 5.49kΩ resistor to the ITH pin, a 1500pF capacitor to the SSTT pin, and a 100kΩ resistor to the PGOOD pin. The output of each phase consists of a 55nH inductor (L), a 10pF capacitor, an 86.6kΩ resistor, a 432kΩ resistor, and a 47µF x3 capacitor. The output voltage is V<sub>OUT</sub> = 0.6V, 45A. The diagram also includes a reference to L = WURTH 744340300055 and a small label 3313 TA03.\n",
+    "new": "\nThree-phase LTC3313 schematic: a master phase (0°) and two slave phases (120°, 240°) in parallel, 3.0V to 4.5V input, 0.6V 45A output.\n",
+    "evidence": "Repeated alt text under the p22 TA03 schematic; same correction as ltc3313-p22-ta03-alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p23-ta04-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 23,
+    "old": "![Schematic diagram of a four-phase power supply using four LTC3313 controllers. The diagram shows the input filtering, the four controller blocks, the output filtering for each phase, and the output rectification. The first phase is a full-bridge rectifier, while the others are single-phase rectifiers with different phase shifts (0°, 90°, 180°, 270°).](",
+    "new": "![Four-phase LTC3313 schematic: a master phase (0°) and three slave phases (90°, 180°, 270°) in parallel, 3.0V to 5.5V input, 1.2V 60A output.](",
+    "evidence": "PDF p23 TA04 schematic (render, 170 dpi crop): there are no rectifiers (full-bridge or single-phase) in the drawing; the four ICs are a master (0°) and three slave phases (90°, 180°, 270°) of a buck converter.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p23-ta04-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 23,
+    "old": "The schematic diagram illustrates a four-phase power supply design using four LTC3313 controllers. The input stage features a common DC link with a filter consisting of a 10µF capacitor, a 1µF capacitor, a 22µF capacitor, and a 0.1µF capacitor. The input voltage is  $V_{IN}$  (3.0V TO 5.5V). The output stage provides a 1.2V, 60A output with a filter consisting of a 22µF capacitor, a 0.1µF capacitor, and a 22µF capacitor. The output voltage is  $V_{OUT}$  (1.2V, 60A). The four LTC3313 controllers are arranged vertically, each with its own input filtering and output filtering. The first controller (top) is a full-bridge rectifier, with its output connected to the output filter. The second controller is a single-phase rectifier with a 90° phase shift, with its output connected to the output filter. The third controller is a single-phase rectifier with a 180° phase shift, with its output connected to the output filter. The fourth controller is a single-phase rectifier with a 270° phase shift, with its output connected to the output filter. The output filter consists of a 22µF capacitor, a 0.1µF capacitor, and a 22µF capacitor. The output voltage is 1.2V, 60A. The diagram also shows the connection of the controllers to a common input line and a common output line. The first controller's output is connected to the output filter. The second controller's output is connected to the output filter. The third controller's output is connected to the output filter. The fourth controller's output is connected to the output filter. The output filter consists of a 22µF capacitor, a 0.1µF capacitor, and a 22µF capacitor. The output voltage is 1.2V, 60A.",
+    "new": "Four-phase LTC3313 schematic. V<sub>IN</sub> = 3.0V TO 5.5V. Each IC has 10μF, 1μF, 22μF and 0.1μF input capacitors on one side and 0.1μF and 22μF on the other, and EN tied to V<sub>IN</sub>. Master (top, 0°): RT has 274k to ground; SSTT has 0.1μF to ground; ITH has 3.32k in series with 680pF to ground; SW drives L, 80nH to V<sub>OUT</sub> = 1.2V, 60A; FB connects to a 140k/100k divider from V<sub>OUT</sub> with 6.8pF across the 140k; 22μF ×2 output capacitors; PGOOD is the PGOOD output, pulled up to V<sub>IN</sub> through 100k. Slaves (90°, 180°, 270°): FB is tied to V<sub>IN</sub> and SSTT is NC; RT is set from V<sub>IN</sub> by 301k over 100k (90°), tied to ground (180°) and 100k over 301k (270°); MODE/SYNC, ITH and PGOOD are connected to the master's; each SW drives its own L, 80nH to the common V<sub>OUT</sub> with 22μF ×2 output capacitors.",
+    "evidence": "PDF p23 TA04 schematic (render, 170 dpi crop): the description invented a 'full-bridge rectifier' and 'single-phase rectifiers', a 'common DC link' and an output filter of 22µF/0.1µF/22µF, repeated sentences, and omitted the master compensation (3.32k/680pF), the 140k/100k/6.8pF divider, the 22µF ×2 output capacitors per phase, the slave FB/SSTT/RT connections and the shared MODE/SYNC, ITH and PGOOD.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p23-ta04-alt-repeat",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 23,
+    "old": "\nSchematic diagram of a four-phase power supply using four LTC3313 controllers. The diagram shows the input filtering, the four controller blocks, the output filtering for each phase, and the output rectification. The first phase is a full-bridge rectifier, while the others are single-phase rectifiers with different phase shifts (0°, 90°, 180°, 270°).\n",
+    "new": "\nFour-phase LTC3313 schematic: a master phase (0°) and three slave phases (90°, 180°, 270°) in parallel, 3.0V to 5.5V input, 1.2V 60A output.\n",
+    "evidence": "Repeated alt text under the p23 TA04 schematic; same correction as ltc3313-p23-ta04-alt.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3313-p24-ta05-alt",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 24,
+    "old": "![Schematic diagram of a four-phase LTC3313 power supply system. It consists of four LTC3313 controllers in a 2x2 grid. Each controller has an input section with a 10µF, 1µF, 22µF, and 0.1µF capacitor bank. The top-left controller is the master, with its MODE/SYNC pin connected to an EXTERNAL CLOCK. Its ITH pin is connected to a 3.32k resistor and a 680pF capacitor to ground. Its FB pin is connected to a voltage divider (140k and 100k) from VOUT to ground. Its SS TT pin is connected to ground. Its PGOOD pin is connected to a 100k resistor and a 22µF capacitor to ground. Its SW pin is connected to an 80nH inductor (L) and a 6.8pF capacitor to ground. Its AGND and PGND pins are connected to ground. The output of the master is VOUT, 1.2V, 60A. The other three controllers (top-right, bottom-left, bottom-right) are slaves. Their MODE/SYNC pins are connected to the master's SW pin. Their ITH pins are connected to ground. Their FB pins are connected to ground. Their SS TT pins are connected to ground. Their PGOOD pins are connected to 80nH inductors (L) and 22µF capacitors to ground. Their SW pins are connected to 80nH inductors (L) and 22µF capacitors to ground. Their AGND and PGND pins are connected to ground. The output of the slaves is VOUT, 1.2V, 60A. The diagram also shows a 301k resistor and a 100k resistor connected to the FB pin of the top-right controller, and a 301k resistor and a 100k resistor connected to the FB pin of the bottom-right controller. The diagram includes a note: L = COILCRAFT XEL4020-800MEC.](",
+    "new": "![Four-phase LTC3313 schematic driven with an external clock: a master phase (0°) and three slave phases (90°, 180°, 270°) in parallel, 3.0V to 5.5V input, 1.2V 60A output. V<sub>IN</sub> = 3.0V TO 5.5V. Each IC has 10μF, 1μF, 22μF and 0.1μF input capacitors on one side and 0.1μF and 22μF on the other, and EN tied to V<sub>IN</sub>. An EXTERNAL CLOCK drives the MODE/SYNC pins of all four ICs. Master (top, 0°): RT is tied to V<sub>IN</sub>; SSTT has 0.1μF to ground; ITH has 3.32k in series with 680pF to ground; SW drives L, 80nH to V<sub>OUT</sub> = 1.2V, 60A; FB connects to a 140k/100k divider from V<sub>OUT</sub> with 6.8pF across the 140k; 22μF ×2 output capacitors; PGOOD is the PGOOD output, pulled up to V<sub>IN</sub> through 100k. Slaves (90°, 180°, 270°): FB is tied to V<sub>IN</sub> and SSTT is NC; RT is set from V<sub>IN</sub> by 301k over 100k (90°), tied to ground (180°) and 100k over 301k (270°); ITH and PGOOD are connected to the master's; each SW drives its own L, 80nH to the common V<sub>OUT</sub> with 22μF ×2 output capacitors.](",
+    "evidence": "PDF p24 TA05 schematic (render, 170 dpi crop): the four ICs are stacked vertically, not in a 2x2 grid; slave MODE/SYNC pins are driven by the EXTERNAL CLOCK (not by the master's SW pin); slave ITH pins share the master ITH (not grounded), slave FB pins are tied to V_IN (not to ground), SSTT is NC on the slaves and 0.1µF on the master (not grounded); master RT is tied to V_IN; the 100k is a PGOOD pull-up (no 22µF on PGOOD), the 6.8pF is across the 140k (not SW to ground); the 301k/100k dividers are on the slave RT pins.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3313-p24-ta05-desc",
+    "file": "output/ltc3313/ltc3313.md",
+    "page": 24,
+    "old": "\nSchematic diagram of a four-phase LTC3313 power supply system. It consists of four LTC3313 controllers in a 2x2 grid. Each controller has an input section with a 10µF, 1µF, 22µF, and 0.1µF capacitor bank. The top-left controller is the master, with its MODE/SYNC pin connected to an EXTERNAL CLOCK. Its ITH pin is connected to a 3.32k resistor and a 680pF capacitor to ground. Its FB pin is connected to a voltage divider (140k and 100k) from VOUT to ground. Its SS TT pin is connected to ground. Its PGOOD pin is connected to a 100k resistor and a 22µF capacitor to ground. Its SW pin is connected to an 80nH inductor (L) and a 6.8pF capacitor to ground. Its AGND and PGND pins are connected to ground. The output of the master is VOUT, 1.2V, 60A. The other three controllers (top-right, bottom-left, bottom-right) are slaves. Their MODE/SYNC pins are connected to the master's SW pin. Their ITH pins are connected to ground. Their FB pins are connected to ground. Their SS TT pins are connected to ground. Their PGOOD pins are connected to 80nH inductors (L) and 22µF capacitors to ground. Their SW pins are connected to 80nH inductors (L) and 22µF capacitors to ground. Their AGND and PGND pins are connected to ground. The output of the slaves is VOUT, 1.2V, 60A. The diagram also shows a 301k resistor and a 100k resistor connected to the FB pin of the top-right controller, and a 301k resistor and a 100k resistor connected to the FB pin of the bottom-right controller. The diagram includes a note: L = COILCRAFT XEL4020-800MEC.\n",
+    "new": "\nFour-phase LTC3313 schematic driven with an external clock: a master phase (0°) and three slave phases (90°, 180°, 270°) in parallel, 3.0V to 5.5V input, 1.2V 60A output. V<sub>IN</sub> = 3.0V TO 5.5V. Each IC has 10μF, 1μF, 22μF and 0.1μF input capacitors on one side and 0.1μF and 22μF on the other, and EN tied to V<sub>IN</sub>. An EXTERNAL CLOCK drives the MODE/SYNC pins of all four ICs. Master (top, 0°): RT is tied to V<sub>IN</sub>; SSTT has 0.1μF to ground; ITH has 3.32k in series with 680pF to ground; SW drives L, 80nH to V<sub>OUT</sub> = 1.2V, 60A; FB connects to a 140k/100k divider from V<sub>OUT</sub> with 6.8pF across the 140k; 22μF ×2 output capacitors; PGOOD is the PGOOD output, pulled up to V<sub>IN</sub> through 100k. Slaves (90°, 180°, 270°): FB is tied to V<sub>IN</sub> and SSTT is NC; RT is set from V<sub>IN</sub> by 301k over 100k (90°), tied to ground (180°) and 100k over 301k (270°); ITH and PGOOD are connected to the master's; each SW drives its own L, 80nH to the common V<sub>OUT</sub> with 22μF ×2 output capacitors.\n\n3313 TA05\n",
+    "evidence": "Repeated description under the p24 TA05 schematic, same correction as ltc3313-p24-ta05-alt; PDF p24 prints the drawing number '3313 TA05' (pdftotext + render), which was missing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
   }
 ]
