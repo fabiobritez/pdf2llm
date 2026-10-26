@@ -10722,8 +10722,8 @@
     "id": "max31730-p10-fig1-alt",
     "file": "output/max31730/max31730.md",
     "page": 10,
-    "old": "![](img/7801d00a216dc4dc8a7d210dcb5fe3c5_img.jpg)",
-    "new": "![I2C/SMBus format diagrams (description written from the PDF drawing; the frame fields are transcribed in the tables below). Shaded cells are slave transmissions: every ACK in the WRITE-BYTE, MULTIPLE WRITE-BYTE and SEND-BYTE formats; in the READ-BYTE format the three ACKs (after WR, REGISTER and RD) and DATA; in the MULTIPLE READ-BYTE format the ACKs after WR, REGISTER and RD and every DATA byte (the ACKs between data bytes and the final /// are not shaded); in the RECEIVE-BYTE format ACK and DATA.](img/7801d00a216dc4dc8a7d210dcb5fe3c5_img.jpg)",
+    "old": "![](",
+    "new": "![I2C/SMBus format diagrams (description written from the PDF drawing; the frame fields are transcribed in the tables below). Shaded cells are slave transmissions: every ACK in the WRITE-BYTE, MULTIPLE WRITE-BYTE and SEND-BYTE formats; in the READ-BYTE format the three ACKs (after WR, REGISTER and RD) and DATA; in the MULTIPLE READ-BYTE format the ACKs after WR, REGISTER and RD and every DATA byte (the ACKs between data bytes and the final /// are not shaded); in the RECEIVE-BYTE format ACK and DATA.](",
     "evidence": "PDF p10 Figure 1 (render): the image had empty alt text, and which frame cells are shaded (SHADED = SLAVE TRANSMISSION per the legend) is visible only in the drawing; the md tables cannot show it. Shading listed from the drawing.",
     "sources": [
       "pdf-image"
