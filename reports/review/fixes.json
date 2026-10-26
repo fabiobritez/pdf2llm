@@ -14986,5 +14986,698 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-fig55-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": "![Figure 55. DAC Channel Block Diagram. The diagram shows a block diagram of a DAC channel. It starts with an 'INPUT REGISTER' connected to a 'DAC REGISTER'. The 'DAC REGISTER' is controlled by 'REFERENCE_CONTROL_0[SEL]' and 'CHN_VMODE_EN[VMODE_EN_CHx]'. The 'DAC REGISTER' feeds into a 'DAC CORE', which also receives 'REFERENCE_CONTROL_0[SEL]'. The 'DAC CORE' output goes to an 'AMP' (amplifier). The 'AMP' is controlled by 'OUTPUT_OPERATING_MODE_x[MODE_CHx]' and 'OUTPUT_CONTROL_0[RANGE]'. The 'AMP' output is the final output, labeled 'VOUTn/IOUTn'.](",
+    "new": "![Figure 55. DAC Channel Block Diagram (description written from the PDF drawing). INPUT REGISTER → DAC REGISTER → DAC CORE → AMP → switch → V_OUTn/I_OUTn output pin. A 2.5V REF block drives a buffer and a switch controlled by REFERENCE_CONTROL_0[SEL]; the switch output joins the VREF pin node, which feeds the DAC CORE. The AMP is controlled by CHN_VMODE_EN[VMODE_EN_CHx] (top) and OUTPUT_CONTROL_0[RANGE] (bottom); the output switch is controlled by OUTPUT_OPERATING_MODE_x[MODE_CHx].](",
+    "evidence": "PDF p24 Figure 55 (render 250 dpi): the AI text had REFERENCE_CONTROL_0[SEL] and CHN_VMODE_EN controlling the DAC REGISTER, omitted the 2.5V REF block, buffer, reference switch and VREF pin, and had MODE_CHx controlling the AMP instead of the output switch. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-fig55-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": ")\n\nFigure 55. DAC Channel Block Diagram. The diagram shows a block diagram of a DAC channel. It starts with an 'INPUT REGISTER' connected to a 'DAC REGISTER'. The 'DAC REGISTER' is controlled by 'REFERENCE\\_CONTROL\\_0[SEL]' and 'CHN\\_VMODE\\_EN[VMODE\\_EN\\_CHx]'. The 'DAC REGISTER' feeds into a 'DAC CORE', which also receives 'REFERENCE\\_CONTROL\\_0[SEL]'. The 'DAC CORE' output goes to an 'AMP' (amplifier). The 'AMP' is controlled by 'OUTPUT\\_OPERATING\\_MODE\\_x[MODE\\_CHx]' and 'OUTPUT\\_CONTROL\\_0[RANGE]'. The 'AMP' output is the final output, labeled 'VOUTn/IOUTn'.\n",
+    "new": ")\n\nFigure 55. DAC Channel Block Diagram (description written from the PDF drawing). INPUT REGISTER → DAC REGISTER → DAC CORE → AMP → switch → V_OUTn/I_OUTn output pin. A 2.5V REF block drives a buffer and a switch controlled by REFERENCE_CONTROL_0[SEL]; the switch output joins the VREF pin node, which feeds the DAC CORE. The AMP is controlled by CHN_VMODE_EN[VMODE_EN_CHx] (top) and OUTPUT_CONTROL_0[RANGE] (bottom); the output switch is controlled by OUTPUT_OPERATING_MODE_x[MODE_CHx].\n",
+    "evidence": "Same as ad5711r-ad5710r-p24-fig55-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-theory-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": "\n# THEORY OF OPERATION\n",
+    "new": "\n## THEORY OF OPERATION\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): 'THEORY OF OPERATION' is the blue 11pt section title (H2), like the repeated page titles on p25-p27; the md had H1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-idac-channels-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": "\n### IDAC Channels\n",
+    "new": "\n#### IDAC Channels\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): 'IDAC Channels' is a black bold title-case subsection under the caps subsection 'DIGITAL-TO-ANALOG CONVERTER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-vdac-channels-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": "\n### VDAC Channels\n",
+    "new": "\n#### VDAC Channels\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): 'VDAC Channels' is a black bold title-case subsection under the caps subsection 'DIGITAL-TO-ANALOG CONVERTER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-output-voltage-limitation-due-to-pvdd-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": "\n### Output Voltage Limitation Due to PVDD\n",
+    "new": "\n#### Output Voltage Limitation Due to PVDD\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): 'Output Voltage Limitation Due to PVDD' is a black bold title-case subsection under the caps subsection 'DIGITAL-TO-ANALOG CONVERTER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p24-dac-operating-modes-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 24,
+    "old": "\n### DAC Operating Modes\n",
+    "new": "\n#### DAC Operating Modes\n",
+    "evidence": "PDF p24 (PyMuPDF spans + render): 'DAC Operating Modes' is a black bold title-case subsection under the caps subsection 'DIGITAL-TO-ANALOG CONVERTER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p25-fig56-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 25,
+    "old": "![Figure 56: Recommended Switching Between Operating Modes and VDAC/IDAC Modes. The diagram shows a flow between VDAC and IDAC modes. VDAC mode is defined by CHN_VMODE_EN [VMODE_EN_CHn] = 1 AND OUTPUT_OPERATING_MODE_0[MODE_CH_n] = 2'b00. IDAC mode is defined by CHN_VMODE_EN [VMODE_EN_CHn] = 0 AND OUTPUT_OPERATING_MODE_0[MODE_CH_n] = 2'b00. The diagram shows that switching from VDAC to IDAC mode requires setting the DAC register to zero code before switching. Switching from IDAC to VDAC mode is not recommended. The diagram also shows that the DAC register can be loaded with any value, and the DAC register can be set to zero code before switching. The diagram includes a legend: Green double-headed arrow: DAC REGISTER CAN BE LOADED WITH ANY VALUE; Blue double-headed arrow: SET DAC REGISTER TO ZERO CODE BEFORE SWITCHING; Red double-headed arrow: NOT RECOMMENDED.](",
+    "new": "![Figure 56: Recommended Switching Between Operating Modes and VDAC/IDAC Modes (description written from the PDF drawing). A 2 × 2 grid: left column VDAC MODE, right column IDAC MODE. Top left: VDAC MODE, CHN_VMODE_EN [VMODE_EN_CHn] = 1 AND OUTPUT_OPERATING_MODE_0[MODE_CH_n] = 2'b00. Top right: IDAC MODE, CHN_VMODE_EN [VMODE_EN_CHn] = 0 AND OUTPUT_OPERATING_MODE_0[MODE_CH_n] = 2'b00. Bottom left: OUT: 15kΩ TO GND, OUTPUT_OPERATING_MODE_0/1[MODE_CH_n] = 2'b01. Bottom right: OUT: Hi-Z MODE, OUTPUT_OPERATING_MODE_0/1[MODE_CH_n] = 2'b01. Arrows: VDAC MODE ↔ IDAC MODE is blue (set DAC register to zero code before switching); VDAC MODE ↔ OUT: 15kΩ TO GND is green (DAC register can be loaded with any value); IDAC MODE ↔ OUT: Hi-Z MODE is blue; OUT: 15kΩ TO GND ↔ OUT: Hi-Z MODE is green; the two diagonal arrows (VDAC MODE ↔ OUT: Hi-Z MODE and IDAC MODE ↔ OUT: 15kΩ TO GND) are red (not recommended). Legend: green double-headed arrow: DAC REGISTER CAN BE LOADED WITH ANY VALUE; blue double-headed arrow: SET DAC REGISTER TO ZERO CODE BEFORE SWITCHING; red double-headed arrow: NOT RECOMMENDED.](",
+    "evidence": "PDF p25 Figure 56 (render 220 dpi): the AI text said switching from IDAC to VDAC mode is not recommended and omitted the two power-down states (OUT: 15kΩ TO GND, OUT: Hi-Z MODE with MODE_CH_n = 2'b01) and which arrow joins which states; in the drawing the direct VDAC ↔ IDAC switch is blue (zero code first) and only the diagonals are red. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p25-fig56-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 25,
+    "old": ")\n\nFigure 56: Recommended Switching Between Operating Modes and VDAC/IDAC Modes. The diagram shows a flow between VDAC and IDAC modes. VDAC mode is defined by CHN\\_VMODE\\_EN [VMODE\\_EN\\_CHn] = 1 AND OUTPUT\\_OPERATING\\_MODE\\_0[MODE\\_CH\\_n] = 2'b00. IDAC mode is defined by CHN\\_VMODE\\_EN [VMODE\\_EN\\_CHn] = 0 AND OUTPUT\\_OPERATING\\_MODE\\_0[MODE\\_CH\\_n] = 2'b00. The diagram shows that switching from VDAC to IDAC mode requires setting the DAC register to zero code before switching. Switching from IDAC to VDAC mode is not recommended. The diagram also shows that the DAC register can be loaded with any value, and the DAC register can be set to zero code before switching. The diagram includes a legend: Green double-headed arrow: DAC REGISTER CAN BE LOADED WITH ANY VALUE; Blue double-headed arrow: SET DAC REGISTER TO ZERO CODE BEFORE SWITCHING; Red double-headed arrow: NOT RECOMMENDED.\n",
+    "new": ")\n\nFigure 56: Recommended Switching Between Operating Modes and VDAC/IDAC Modes (description written from the PDF drawing). A 2 × 2 grid: left column VDAC MODE, right column IDAC MODE. Top left: VDAC MODE, CHN_VMODE_EN [VMODE_EN_CHn] = 1 AND OUTPUT_OPERATING_MODE_0[MODE_CH_n] = 2'b00. Top right: IDAC MODE, CHN_VMODE_EN [VMODE_EN_CHn] = 0 AND OUTPUT_OPERATING_MODE_0[MODE_CH_n] = 2'b00. Bottom left: OUT: 15kΩ TO GND, OUTPUT_OPERATING_MODE_0/1[MODE_CH_n] = 2'b01. Bottom right: OUT: Hi-Z MODE, OUTPUT_OPERATING_MODE_0/1[MODE_CH_n] = 2'b01. Arrows: VDAC MODE ↔ IDAC MODE is blue (set DAC register to zero code before switching); VDAC MODE ↔ OUT: 15kΩ TO GND is green (DAC register can be loaded with any value); IDAC MODE ↔ OUT: Hi-Z MODE is blue; OUT: 15kΩ TO GND ↔ OUT: Hi-Z MODE is green; the two diagonal arrows (VDAC MODE ↔ OUT: Hi-Z MODE and IDAC MODE ↔ OUT: 15kΩ TO GND) are red (not recommended). Legend: green double-headed arrow: DAC REGISTER CAN BE LOADED WITH ANY VALUE; blue double-headed arrow: SET DAC REGISTER TO ZERO CODE BEFORE SWITCHING; red double-headed arrow: NOT RECOMMENDED.\n",
+    "evidence": "Same as ad5711r-ad5710r-p25-fig56-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p25-switching-flow-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 25,
+    "old": "\n### Recommended Switching Flow: IDAC Mode and VDAC Mode\n",
+    "new": "\n#### Recommended Switching Flow: IDAC Mode and VDAC Mode\n",
+    "evidence": "PDF p25 (PyMuPDF spans + render): 'Recommended Switching Flow: IDAC Mode and VDAC Mode' is a black bold title-case subsection under 'DIGITAL-TO-ANALOG CONVERTER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-subscript-1",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "sense resistor (RSENSE). The relationship",
+    "new": "sense resistor (R<sub>SENSE</sub>). The relationship",
+    "evidence": "PDF p26 (PyMuPDF spans): R_SENSE, I_OUTₓ and T_MEAS are printed with 7.1pt subscripts in the body text (the subscript x of I_OUTₓ is U+2093); the md had them inline.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-subscript-2",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\nRSENSE is the internal sense resistor",
+    "new": "\nR<sub>SENSE</sub> is the internal sense resistor",
+    "evidence": "PDF p26 (PyMuPDF spans): R_SENSE, I_OUTₓ and T_MEAS are printed with 7.1pt subscripts in the body text (the subscript x of I_OUTₓ is U+2093); the md had them inline.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-subscript-3",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "internal sense resistor RSENSE and the measured",
+    "new": "internal sense resistor R<sub>SENSE</sub> and the measured",
+    "evidence": "PDF p26 (PyMuPDF spans): R_SENSE, I_OUTₓ and T_MEAS are printed with 7.1pt subscripts in the body text (the subscript x of I_OUTₓ is U+2093); the md had them inline.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-subscript-4",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "output current IOUTx can be calculated",
+    "new": "output current I<sub>OUTₓ</sub> can be calculated",
+    "evidence": "PDF p26 (PyMuPDF spans): R_SENSE, I_OUTₓ and T_MEAS are printed with 7.1pt subscripts in the body text (the subscript x of I_OUTₓ is U+2093); the md had them inline.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-subscript-5",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\nTMEAS is the measured internal die temperature",
+    "new": "\nT<sub>MEAS</sub> is the measured internal die temperature",
+    "evidence": "PDF p26 (PyMuPDF spans): R_SENSE, I_OUTₓ and T_MEAS are printed with 7.1pt subscripts in the body text (the subscript x of I_OUTₓ is U+2093); the md had them inline.",
+    "sources": [
+      "pymupdf-text",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-pvdd-subscript-x",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\nPVDDx can be measured directly",
+    "new": "\nPVDDₓ can be measured directly",
+    "evidence": "PDF p26 (PyMuPDF text): this sentence prints 'PVDDₓ' with the Unicode subscript x (U+2093); the md had 'PVDDx'.",
+    "sources": [
+      "pymupdf-text",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-voltage-monitor-channels-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\n### Voltage Monitor Channels\n",
+    "new": "\n#### Voltage Monitor Channels\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Voltage Monitor Channels' is a black bold title-case subsection under the caps subsection 'INTEGRATED MULTIPLEXER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-current-monitor-channels-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\n### Current Monitor Channels\n",
+    "new": "\n#### Current Monitor Channels\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Current Monitor Channels' is a black bold title-case subsection under the caps subsection 'INTEGRATED MULTIPLEXER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-die-temperature-monitor-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\n### Die Temperature Monitor\n",
+    "new": "\n#### Die Temperature Monitor\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Die Temperature Monitor' is a black bold title-case subsection under the caps subsection 'INTEGRATED MULTIPLEXER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-supply-voltages-monitor-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\n### Supply Voltages Monitor\n",
+    "new": "\n#### Supply Voltages Monitor\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Supply Voltages Monitor' is a black bold title-case subsection under the caps subsection 'INTEGRATED MULTIPLEXER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p26-integrated-multiplexer-for-multidevice-addressing-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 26,
+    "old": "\n### Integrated Multiplexer for Multidevice Addressing\n",
+    "new": "\n#### Integrated Multiplexer for Multidevice Addressing\n",
+    "evidence": "PDF p26 (PyMuPDF spans + render): 'Integrated Multiplexer for Multidevice Addressing' is a black bold title-case subsection under the caps subsection 'INTEGRATED MULTIPLEXER' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p27-fig57-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 27,
+    "old": "![](2ae3eae1bd80a90f192f568ae246a9a6_img.jpg)",
+    "new": "![Figure 57. MUX_OUT Configuration for Four Devices with Different Device Addresses (description written from the PDF drawing). A MICROCONTROLLER (IOVCC to VCC) drives CS (overbar), SCK, MOSI and MISO, which are shared by the CS, SCK, SDI and SDO pins of four AD5711R/AD5710R devices, IC1 to IC4 (each with IOVCC to VCC and outputs OUT0 to OUT7). Address pins: IC1 A1 and A0 to ground; IC2 A1 to ground, A0 to VCC; IC3 A1 to VCC, A0 to ground; IC4 A1 and A0 to VCC. IC1 provides VREF as an output; IC2 to IC4 receive VREF as an input. The MUX_OUT pins of IC1, IC2, IC3 and IC4 connect to the IN0, IN1, IN2 and IN3 inputs of an AD4698/AD4696 ADC (IOVCC to VCC, REF to VREF).](2ae3eae1bd80a90f192f568ae246a9a6_img.jpg)",
+    "evidence": "PDF p27 Figure 57 (render 300 dpi): the image had empty alt text; added a description of the shared SPI bus, the A1/A0 strapping of IC1-IC4 (00, 01, 10, 11), the VREF connections and the MUX_OUT to AD4698/AD4696 IN0-IN3 wiring, written from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-check-as-printed",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "which can be checked by reading the UPDATE\\_ERR bit",
+    "new": "which can be check by reading the UPDATE\\_ERR bit",
+    "evidence": "PDF p28 (pdftotext): printed 'which can be check by reading the UPDATE_ERR bit' (manufacturer typo, kept as printed); the md had 'checked'.",
+    "sources": [
+      "pdftotext",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-hardware-ldac-column-split",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "the selected input\n\nregister contents are transferred",
+    "new": "the selected input register contents are transferred",
+    "evidence": "PDF p28 (pdftotext + render): the Hardware LDAC paragraph continues from the left column ('...the selected input') into the right column ('register contents are transferred...'); the md split it at the column break.",
+    "sources": [
+      "pdftotext",
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-dac-core-functions-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "\n# DAC CORE FUNCTIONS\n",
+    "new": "\n## DAC CORE FUNCTIONS\n",
+    "evidence": "PDF p28 (PyMuPDF spans + render): 'DAC CORE FUNCTIONS' is the blue 11pt section title (H2), repeated on p29-p31; the md had H1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-ldac-function-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "\n## LDAC FUNCTION\n",
+    "new": "\n### LDAC FUNCTION\n",
+    "evidence": "PDF p28 (PyMuPDF spans + render): 'LDAC FUNCTION' is a black bold caps subsection (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-dac-update-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "\n## DAC UPDATE\n",
+    "new": "\n### DAC UPDATE\n",
+    "evidence": "PDF p28 (PyMuPDF spans + render): 'DAC UPDATE' is a black bold caps subsection (H3); the md had H2.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-hardware-ldac-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "\n### Hardware LDAC\n",
+    "new": "\n#### Hardware LDAC\n",
+    "evidence": "PDF p28 (PyMuPDF spans + render): 'Hardware LDAC' is a black bold title-case subsection under 'LDAC FUNCTION' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p28-software-ldac-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 28,
+    "old": "\n### Software LDAC\n",
+    "new": "\n#### Software LDAC\n",
+    "evidence": "PDF p28 (PyMuPDF spans + render): 'Software LDAC' is a black bold title-case subsection under 'LDAC FUNCTION' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p29-fig58-flowchart",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 29,
+    "old": "```\ngraph TD\n    START([START]) --> CHN_VMODE_EN[WRITE TO CHN_VMODE_EN]\n    CHN_VMODE_EN --> IMMEDIATE_UPDATE{IMMEDIATE UPDATE?}\n    IMMEDIATE_UPDATE -- YES --> OPTION1\n    IMMEDIATE_UPDATE -- NO --> USE_LDAC_TO_UPDATE{USE LDAC TO UPDATE?}\n    USE_LDAC_TO_UPDATE -- YES --> OPTION2\n    USE_LDAC_TO_UPDATE -- NO --> OPTION3\n\n    subgraph OPTION1 [OPTION 1]\n        OPTION1_START[WRITE TO DAC_CHx] --> UPDATE_NEXT_BATCH1{UPDATE NEXT BATCH?}\n        UPDATE_NEXT_BATCH1 -- YES --> OPTION1_START\n        UPDATE_NEXT_BATCH1 -- NO --> END_SPI_TRANSACTION1[END SPI TRANSACTION]\n    end\n\n    subgraph OPTION2 [OPTION 2]\n        OPTION2_START[HW_LDAC_En_0 [HLD_EN_CHx] = 1] --> WRITE_TO_INPUT_CHx2[WRITE TO Input_Chx]\n        WRITE_TO_INPUT_CHx2 --> DONE_WRITE_TO_INPUT_CHx2{DONE WRITING TO ALL TARGET Input_Chx REGISTERS?}\n        DONE_WRITE_TO_INPUT_CHx2 -- YES --> LDAC_ASSERTED[LDAC ASSERTED]\n        LDAC_ASSERTED --> UPDATE_NEXT_BATCH2{UPDATE NEXT BATCH?}\n        UPDATE_NEXT_BATCH2 -- YES --> NEW_SET_OF_DAC_REGISTERS2{NEW SET OF DAC REGISTERS?}\n        NEW_SET_OF_DAC_REGISTERS2 -- YES --> WRITE_TO_INPUT_CHx2\n        UPDATE_NEXT_BATCH2 -- NO --> END_SPI_TRANSACTION2[END SPI TRANSACTION]\n    end\n\n    subgraph OPTION3 [OPTION 3]\n        OPTION3_START[SW_LDAC_En_0 [HLD_EN_CHx] = 1] --> WRITE_TO_INPUT_CHx3[WRITE TO Input_Chx]\n        WRITE_TO_INPUT_CHx3 --> DONE_WRITE_TO_INPUT_CHx3{DONE WRITING TO ALL TARGET Input_Chx REGISTERS?}\n        DONE_WRITE_TO_INPUT_CHx3 -- YES --> SW_LDAC_TRIG_B[SW_LDAC_Trig_B [SLD_TrigB] = 1]\n        SW_LDAC_TRIG_B --> UPDATE_NEXT_BATCH3{UPDATE NEXT BATCH?}\n        UPDATE_NEXT_BATCH3 -- YES --> NEW_SET_OF_DAC_REGISTERS3{NEW SET OF DAC REGISTERS?}\n        NEW_SET_OF_DAC_REGISTERS3 -- YES --> WRITE_TO_INPUT_CHx3\n        UPDATE_NEXT_BATCH3 -- NO --> END_SPI_TRANSACTION3[END SPI TRANSACTION]\n    end\n```\n",
+    "new": "```\ngraph TD\n    START([START]) --> VM[\"WRITE TO CHN_VMODE_EN\"]\n    VM --> IMM{\"IMMEDIATE UPDATE?\"}\n    IMM -- YES --> O1W\n    IMM -- NO --> USE{\"USE LDAC TO UPDATE? (LDAC with overbar)\"}\n    USE -- YES --> O2EN\n    USE -- NO --> O3EN\n\n    subgraph OPTION1 [\"OPTION 1\"]\n        O1W[\"WRITE TO DAC_CHx\"] --> O1N{\"UPDATE NEXT BATCH?\"}\n        O1N -- YES --> O1W\n        O1N -- NO --> O1E[\"END SPI TRANSACTION\"]\n    end\n\n    subgraph OPTION2 [\"OPTION 2\"]\n        O2EN[\"HW_LDAC_En_0 [HLD_EN_CH_x] = 1\"] --> O2W[\"WRITE TO Input_Chx\"]\n        O2W --> O2D{\"DONE WRITING TO ALL TARGET Input_Chx REGISTERS?\"}\n        O2D --> O2W\n        O2D --> O2L[\"LDAC ASSERTED (LDAC with overbar)\"]\n        O2L --> O2N{\"UPDATE NEXT BATCH?\"}\n        O2N -- YES --> O2S{\"NEW SET OF DAC REGISTERS?\"}\n        O2S --> O2W\n        O2N -- NO --> O2E[\"END SPI TRANSACTION\"]\n    end\n\n    subgraph OPTION3 [\"OPTION 3\"]\n        O3EN[\"SW_LDAC_En_0 [HLD_EN_CH_x] = 1\"] --> O3W[\"WRITE TO Input_Chx\"]\n        O3W --> O3D{\"DONE WRITING TO ALL TARGET Input_Chx REGISTERS?\"}\n        O3D --> O3W\n        O3D --> O3T[\"SW_LDAC_Trig_B[SLD_TrigB] = 1\"]\n        O3T --> O3N{\"UPDATE NEXT BATCH?\"}\n        O3N -- YES --> O3S{\"NEW SET OF DAC REGISTERS?\"}\n        O3S --> O3W\n        O3N -- NO --> O3E[\"END SPI TRANSACTION\"]\n    end\n```\n",
+    "evidence": "PDF p29 Figure 58 (render 260 dpi): the transcribed flowchart had 'HLD_EN_CHx' (printed HLD_EN_CH_x), invented YES labels on the unlabeled 'DONE WRITING...' and 'NEW SET OF DAC REGISTERS?' branches, omitted the loop from 'DONE WRITING...' back to WRITE TO Input_Chx, wrote 'SW_LDAC_Trig_B [SLD_TrigB]' (printed without the space) and dropped the LDAC overbars. Option 3 'SW_LDAC_En_0 [HLD_EN_CH_x]' is kept as printed. Rewritten from the drawing (Mermaid labels quoted so the brackets are valid).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p29-fig59-flowchart",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 29,
+    "old": "```\ngraph TD\n    START([START]) --> CHN_VMODE_EN[WRITE TO CHN_VMODE_EN]\n    CHN_VMODE_EN --> IMMEDIATE_UPDATE{IMMEDIATE UPDATE?}\n    IMMEDIATE_UPDATE -- YES --> OPTION4\n    IMMEDIATE_UPDATE -- NO --> USE_LDAC_TO_UPDATE{USE LDAC TO UPDATE?}\n    USE_LDAC_TO_UPDATE -- YES --> OPTION5\n    USE_LDAC_TO_UPDATE -- NO --> OPTION6\n\n    subgraph OPTION4 [OPTION 4]\n        OPTION4_START[Multi_Input_Sel_0 [MI_SEL_CHx] = 1] --> WRITE_TO_MULTI_DAC_CHx[WRITE TO Multi_DAC_CHx]\n        WRITE_TO_MULTI_DAC_CHx --> UPDATE_NEXT_BATCH4_1{UPDATE NEXT BATCH?}\n        UPDATE_NEXT_BATCH4_1 -- YES --> OPTION4_START\n        UPDATE_NEXT_BATCH4_1 -- NO --> END_SPI_TRANSACTION4[END SPI TRANSACTION]\n        UPDATE_NEXT_BATCH4_1 -- YES --> UPDATE_NEXT_BATCH4_2{UPDATE NEXT BATCH?}\n    end\n\n    subgraph OPTION5 [OPTION 5]\n        OPTION5_START[HW_LDAC_En_0 [HLD_EN_CHx] = 1] --> Multi_Input_Sel_0[Multi_Input_Sel_0 [MI_SEL_CHx] = 1]\n        Multi_Input_Sel_0 --> WRITE_TO_INPUT_CHx5[WRITE TO Input_Chx]\n        WRITE_TO_INPUT_CHx5 --> LDAC_ASSERTED[LDAC ASSERTED]\n        LDAC_ASSERTED --> UPDATE_NEXT_BATCH5{UPDATE NEXT BATCH?}\n        UPDATE_NEXT_BATCH5 -- YES --> NEW_SET_OF_DAC_REGISTERS5{NEW SET OF DAC REGISTERS?}\n        NEW_SET_OF_DAC_REGISTERS5 -- YES --> WRITE_TO_INPUT_CHx5\n        UPDATE_NEXT_BATCH5 -- NO --> END_SPI_TRANSACTION5[END SPI TRANSACTION]\n    end\n\n    subgraph OPTION6 [OPTION 6]\n        OPTION6_START[SW_LDAC_En_0 [HLD_EN_CHx] = 1] --> Multi_Input_Sel_0[Multi_Input_Sel_0 [MI_SEL_CHx] = 1]\n        Multi_Input_Sel_0 --> WRITE_TO_INPUT_CHx6[WRITE TO Input_Chx]\n        WRITE_TO_INPUT_CHx6 --> SW_LDAC_TRIG_A[SW_LDAC_Trig_A [SLD_TrigA] = 1]\n        SW_LDAC_TRIG_A --> UPDATE_NEXT_BATCH6{UPDATE NEXT BATCH?}\n        UPDATE_NEXT_BATCH6 -- YES --> NEW_SET_OF_DAC_REGISTERS6{NEW SET OF DAC REGISTERS?}\n        NEW_SET_OF_DAC_REGISTERS6 -- YES --> WRITE_TO_INPUT_CHx6\n        UPDATE_NEXT_BATCH6 -- NO --> END_SPI_TRANSACTION6[END SPI TRANSACTION]\n    end\n```\n",
+    "new": "```\ngraph TD\n    START([START]) --> VM[\"WRITE TO CHN_VMODE_EN\"]\n    VM --> IMM{\"IMMEDIATE UPDATE?\"}\n    IMM -- YES --> O4S\n    IMM -- NO --> USE{\"USE LDAC TO UPDATE? (LDAC with overbar)\"}\n    USE -- YES --> O5EN\n    USE -- NO --> O6EN\n\n    subgraph OPTION4 [\"OPTION 4\"]\n        O4S[\"Multi_Input_Sel_0 [MI_SEL_CH_x] = 1\"] --> O4W[\"WRITE TO Multi_DAC_CHx\"]\n        O4W --> O4N{\"UPDATE NEXT BATCH?\"}\n        O4N -- YES --> O4N2{\"UPDATE NEXT BATCH?\"}\n        O4N2 --> O4S\n        O4N -- NO --> O4E[\"END SPI TRANSACTION\"]\n    end\n\n    subgraph OPTION5 [\"OPTION 5\"]\n        O5EN[\"HW_LDAC_En_0 [HLD_EN_CH_x] = 1\"] --> O5S[\"Multi_Input_Sel_0 [MI_SEL_CH_x] = 1\"]\n        O5S --> O5W[\"WRITE TO Input_Chx\"]\n        O5W --> O5L[\"LDAC ASSERTED (LDAC with overbar)\"]\n        O5L --> O5N{\"UPDATE NEXT BATCH?\"}\n        O5N -- YES --> O5R{\"NEW SET OF DAC REGISTERS?\"}\n        O5R --> O5W\n        O5N -- NO --> O5E[\"END SPI TRANSACTION\"]\n    end\n\n    subgraph OPTION6 [\"OPTION 6\"]\n        O6EN[\"SW_LDAC_En_0 [HLD_EN_CH_x] = 1\"] --> O6S[\"Multi_Input_Sel_0 [MI_SEL_CH_x] = 1\"]\n        O6S --> O6W[\"WRITE TO Input_Chx\"]\n        O6W --> O6T[\"SW_LDAC_Trig_A(SLD_Trig_A) = 1\"]\n        O6T --> O6N{\"UPDATE NEXT BATCH?\"}\n        O6N -- YES --> O6R{\"NEW SET OF DAC REGISTERS?\"}\n        O6R --> O6W\n        O6N -- NO --> O6E[\"END SPI TRANSACTION\"]\n    end\n```\n",
+    "evidence": "PDF p29 Figure 59 (render 260 dpi): Option 4 in the md had an extra 'UPDATE NEXT BATCH? YES → END' style tangle (both YES branches from the same diamond, no loop back to Multi_Input_Sel_0 through the second 'UPDATE NEXT BATCH?' diamond as printed); field names are printed MI_SEL_CH_x / HLD_EN_CH_x, Option 6 trigger is 'SW_LDAC_Trig_A(SLD_Trig_A) = 1', and the NEW SET OF DAC REGISTERS? branches are unlabeled. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig60-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "![Timing diagram for Option 1 showing CS, SDI, and SCLK signals for writing to the DAC_CH0 register.](",
+    "new": "![Timing diagram for Option 1 (description written from the PDF drawing): CS (overbar) goes low for one frame; SDI carries X, W (overbar), ADDR(0xD3), DATA@0xD3, DATA@0xD2, X. INSTRUCTION PHASE spans the W bit and ADDR(0xD3); DATA PHASE spans the two data bytes.](",
+    "evidence": "PDF p30 Figure 60 (render 300 dpi): the diagram has no SCLK trace (only CS and SDI); the AI alt text listed SCLK. Rewritten from the drawing with the printed field labels.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig60-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": ")\n\nTiming diagram for Option 1 showing CS, SDI, and SCLK signals for writing to the DAC\\_CH0 register.\n",
+    "new": ")\n\nTiming diagram for Option 1 (description written from the PDF drawing): CS (overbar) goes low for one frame; SDI carries X, W (overbar), ADDR(0xD3), DATA@0xD3, DATA@0xD2, X. INSTRUCTION PHASE spans the W bit and ADDR(0xD3); DATA PHASE spans the two data bytes.\n",
+    "evidence": "Same as ad5711r-ad5710r-p30-fig60-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig61-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "![Timing diagram for Option 2 showing CS, SDI, LDAC, and SCLK signals for writing to INPUT_CH7 to INPUT_CH0 registers with hardware LDAC.](",
+    "new": "![Timing diagram for Option 2 (description written from the PDF drawing), CS, SDI and LDAC (CS and LDAC with overbars) in three rows. First frame: SDI X, W, HW_LDAC_En_0,ADDR(0xD0), DATA@0xD0, X (WRITE TO HW_LDAC_En_0, then HW_LDAC_En_0(SW_En_Ch7:SW_En_Ch0) as printed). Second frame, stream mode: X, W, ADDR(0xF9), DATA@0xF9, DATA@0xF8 (WRITE TO Input_Ch7, Input_Ch7 (Input_Val)), DATA@0xF7, DATA@0xF6 (Input_Ch6 (Input_Val)), continuing with DATA@0xED, DATA@0xEC (Input_Ch1 (Input_Val)), DATA@0xEB, DATA@0xEA (Input_Ch0 (Input_Val)), X. LDAC stays high during the stream except short low pulses drawn after the Input_Ch6, Input_Ch1 and Input_Ch0 data, and CS returns high at the end.](",
+    "evidence": "PDF p30 Figure 61 (render 300 dpi): the diagram has no SCLK trace (only CS and SDI and LDAC); the AI alt text listed SCLK. Rewritten from the drawing with the printed field labels.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig61-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": ")\n\nTiming diagram for Option 2 showing CS, SDI, LDAC, and SCLK signals for writing to INPUT\\_CH7 to INPUT\\_CH0 registers with hardware LDAC.\n",
+    "new": ")\n\nTiming diagram for Option 2 (description written from the PDF drawing), CS, SDI and LDAC (CS and LDAC with overbars) in three rows. First frame: SDI X, W, HW_LDAC_En_0,ADDR(0xD0), DATA@0xD0, X (WRITE TO HW_LDAC_En_0, then HW_LDAC_En_0(SW_En_Ch7:SW_En_Ch0) as printed). Second frame, stream mode: X, W, ADDR(0xF9), DATA@0xF9, DATA@0xF8 (WRITE TO Input_Ch7, Input_Ch7 (Input_Val)), DATA@0xF7, DATA@0xF6 (Input_Ch6 (Input_Val)), continuing with DATA@0xED, DATA@0xEC (Input_Ch1 (Input_Val)), DATA@0xEB, DATA@0xEA (Input_Ch0 (Input_Val)), X. LDAC stays high during the stream except short low pulses drawn after the Input_Ch6, Input_Ch1 and Input_Ch0 data, and CS returns high at the end.\n",
+    "evidence": "Same as ad5711r-ad5710r-p30-fig61-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig62-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "![Timing diagram for Option 3 showing CS, SDI, and SCLK signals for writing to INPUT_CH7 and INPUT_CH6 registers with software LDAC.](",
+    "new": "![Timing diagram for Option 3 (description written from the PDF drawing), CS (overbar) and SDI in three frames. First: X, W (overbar), ADDR(0xD1), DATA@0xD1, X (WRITE TO SW_LDAC_En_0, then SW_LDAC_En_0(SW_En_Ch7:SW_En_Ch0)). Second, stream mode: X, W, ADDR(0xF9), DATA@0xF9, DATA@0xF8, DATA@0xF7, DATA@0xF6 (WRITE TO Input_Ch7, Input_Ch7(Input_Val), Input_Ch6(Input_Val)). Third: X, W, ADDR(0xE9), DATA@0xE9, X (WRITE TO SW_LDAC_Trig_B, then SW_LDAC_Trig_B(SLD_Trig_B)).](",
+    "evidence": "PDF p30 Figure 62 (render 300 dpi): the diagram has no SCLK trace (only CS and SDI); the AI alt text listed SCLK. Rewritten from the drawing with the printed field labels.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig62-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": ")\n\nTiming diagram for Option 3 showing CS, SDI, and SCLK signals for writing to INPUT\\_CH7 and INPUT\\_CH6 registers with software LDAC.\n",
+    "new": ")\n\nTiming diagram for Option 3 (description written from the PDF drawing), CS (overbar) and SDI in three frames. First: X, W (overbar), ADDR(0xD1), DATA@0xD1, X (WRITE TO SW_LDAC_En_0, then SW_LDAC_En_0(SW_En_Ch7:SW_En_Ch0)). Second, stream mode: X, W, ADDR(0xF9), DATA@0xF9, DATA@0xF8, DATA@0xF7, DATA@0xF6 (WRITE TO Input_Ch7, Input_Ch7(Input_Val), Input_Ch6(Input_Val)). Third: X, W, ADDR(0xE9), DATA@0xE9, X (WRITE TO SW_LDAC_Trig_B, then SW_LDAC_Trig_B(SLD_Trig_B)).\n",
+    "evidence": "Same as ad5711r-ad5710r-p30-fig62-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig63-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "![Timing diagram for Option 4 showing CS, SDI, and SCLK signals for writing to MULTI_DAC_CHn registers in stream mode.](",
+    "new": "![Timing diagram for Option 4 (description written from the PDF drawing), CS (overbar) and SDI. SDI carries X, W (overbar), ADDR(0xE4) (WRITE TO Multi_DAC_Sel_0), then DATA@0xE4 (Multi_DAC_Sel_0 (MD_Sel_Ch_7: MD_Sel_Ch_0)), DATA@0xE3, DATA@0xE2 (Multi_DAC_Ch (Multi_DAC_Val)), marked LOOP 1; the stream continues with DATA@0xE4, DATA@0xE3, DATA@0xE2 (LOOP 2), then X as CS returns high.](",
+    "evidence": "PDF p30 Figure 63 (render 300 dpi): the diagram has no SCLK trace (only CS and SDI); the AI alt text listed SCLK. Rewritten from the drawing with the printed field labels.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig63-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": ")\n\nTiming diagram for Option 4 showing CS, SDI, and SCLK signals for writing to MULTI\\_DAC\\_CHn registers in stream mode.\n",
+    "new": ")\n\nTiming diagram for Option 4 (description written from the PDF drawing), CS (overbar) and SDI. SDI carries X, W (overbar), ADDR(0xE4) (WRITE TO Multi_DAC_Sel_0), then DATA@0xE4 (Multi_DAC_Sel_0 (MD_Sel_Ch_7: MD_Sel_Ch_0)), DATA@0xE3, DATA@0xE2 (Multi_DAC_Ch (Multi_DAC_Val)), marked LOOP 1; the stream continues with DATA@0xE4, DATA@0xE3, DATA@0xE2 (LOOP 2), then X as CS returns high.\n",
+    "evidence": "Same as ad5711r-ad5710r-p30-fig63-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig60-caption-dac-ch0",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "Figure 60. Option 1 Example: Write to the DAC\\_CH0 Register",
+    "new": "Figure 60. Option 1 Example: Write to the DAC\\_Ch0 Register",
+    "evidence": "PDF p30 (pdftotext): the Figure 60 caption prints 'DAC_Ch0'; the md had 'DAC_CH0'.",
+    "sources": [
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-fig61-caption-ldac-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "Registers, Hardware LDAC Enabled, Stream Mode",
+    "new": "Registers, Hardware $\\overline{\\text{LDAC}}$ Enabled, Stream Mode",
+    "evidence": "PDF p30 (render + vector overline above the word): LDAC in the Figure 61 caption has an overbar.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option2-heading-ldac-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "### Option 2 (Controlled Update, Unique Data, Hardware LDAC, and Single and Multiple Channels)",
+    "new": "#### Option 2 (Controlled Update, Unique Data, Hardware $\\overline{\\text{LDAC}}$, and Single and Multiple Channels)",
+    "evidence": "PDF p30 (render + vector overline): 'LDAC' in the Option 2 heading has an overbar; the heading is a black bold title-case subsection under 'DAC UPDATE' (H4), the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option2-ldac-overbars",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "The LDAC is asserted at the end of the stream updating the DAC registers and the DAC output (if the correct LDAC timing is observed).",
+    "new": "The $\\overline{\\text{LDAC}}$ is asserted at the end of the stream updating the DAC registers and the DAC output (if the correct $\\overline{\\text{LDAC}}$ timing is observed).",
+    "evidence": "PDF p30 (render + vector overlines): both LDAC words in this sentence carry an overbar.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option4-cs-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "and repeats the process, until CS is deasserted.",
+    "new": "and repeats the process, until $\\overline{\\text{CS}}$ is deasserted.",
+    "evidence": "PDF p30 (render + vector overline): CS in 'until CS is deasserted' has an overbar.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option1-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "\n### Option 1 (Immediate Update, Unique Data, No LDAC, and Single and Multiple Channels)\n",
+    "new": "\n#### Option 1 (Immediate Update, Unique Data, No LDAC, and Single and Multiple Channels)\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): the Option 1 title is a black bold title-case subsection under the caps subsection 'DAC UPDATE' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option3-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "\n### Option 3 (Controlled Update, Unique Data, Software LDAC, and Single and Multiple Channels)\n",
+    "new": "\n#### Option 3 (Controlled Update, Unique Data, Software LDAC, and Single and Multiple Channels)\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): the Option 3 title is a black bold title-case subsection under the caps subsection 'DAC UPDATE' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option4-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "\n### Option 4 (Immediate Update, Same Data, No LDAC, and Multiple Channels)\n",
+    "new": "\n#### Option 4 (Immediate Update, Same Data, No LDAC, and Multiple Channels)\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): the Option 4 title is a black bold title-case subsection under the caps subsection 'DAC UPDATE' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p30-option5-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 30,
+    "old": "\n### Option 5 (Controlled Update, Same Data, Hardware LDAC, and Multiple Channels)\n",
+    "new": "\n#### Option 5 (Controlled Update, Same Data, Hardware LDAC, and Multiple Channels)\n",
+    "evidence": "PDF p30 (PyMuPDF spans + render): the Option 5 title is a black bold title-case subsection under the caps subsection 'DAC UPDATE' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p31-fig64-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 31,
+    "old": "![Timing diagram for Option 5 showing CS, SDI, and LDAC signals with annotations for HW_LDAC_en_0, WRITE TO Multi_Input_Sel_0, and LOOP 1/2.](",
+    "new": "![Timing diagram for Option 5 (description written from the PDF drawing), CS, SDI and LDAC (CS and LDAC with overbars) in three rows. First frame: X, W (overbar), HW_LDAC_En_0, ADDR(0xD0), DATA@0xD0, X (WRITE TO HW_LDAC_En_0, then HW_LDAC_En_0(HW_En_Ch7:HW_En_Ch0)). Second frame: X, W, ADDR(0xE8) (WRITE TO Multi_Input_Sel_0), DATA@0xE8 (Multi_Input_Sel_0(MI_Sel_Ch_7:MI_Sel_Ch_0)), DATA@0xE7, DATA@0xE6 (Multi_Input_Ch(Multi_Input_Val)), marked LOOP 1, with an LDAC low pulse at the end of the loop. The stream continues with DATA@0xE8, DATA@0xE7, DATA@0xE6 (LOOP 2), then X as CS returns high, followed by another LDAC low pulse.](",
+    "evidence": "PDF p31 Figure 64 (render): the AI alt text gave only 'annotations for HW_LDAC_en_0 ... LOOP 1/2' (printed HW_LDAC_En_0); the frames, register addresses and LDAC pulses were missing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p31-fig64-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 31,
+    "old": ")\n\nTiming diagram for Option 5 showing CS, SDI, and LDAC signals with annotations for HW\\_LDAC\\_en\\_0, WRITE TO Multi\\_Input\\_Sel\\_0, and LOOP 1/2.\n",
+    "new": ")\n\nTiming diagram for Option 5 (description written from the PDF drawing), CS, SDI and LDAC (CS and LDAC with overbars) in three rows. First frame: X, W (overbar), HW_LDAC_En_0, ADDR(0xD0), DATA@0xD0, X (WRITE TO HW_LDAC_En_0, then HW_LDAC_En_0(HW_En_Ch7:HW_En_Ch0)). Second frame: X, W, ADDR(0xE8) (WRITE TO Multi_Input_Sel_0), DATA@0xE8 (Multi_Input_Sel_0(MI_Sel_Ch_7:MI_Sel_Ch_0)), DATA@0xE7, DATA@0xE6 (Multi_Input_Ch(Multi_Input_Val)), marked LOOP 1, with an LDAC low pulse at the end of the loop. The stream continues with DATA@0xE8, DATA@0xE7, DATA@0xE6 (LOOP 2), then X as CS returns high, followed by another LDAC low pulse.\n",
+    "evidence": "Same as ad5711r-ad5710r-p31-fig64-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p31-fig65-alt",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 31,
+    "old": "![Timing diagram for Option 6 showing CS, SDI, and LDAC signals with annotations for SW_LDAC_en_0, WRITE TO Multi_Input_Sel_0, and LOOP 1/2.](",
+    "new": "![Timing diagram for Option 6 (description written from the PDF drawing), CS (overbar) and SDI only (no LDAC trace) in three rows. First frame: X, W (overbar), SW_LDAC_En_0, ADDR(0xD1), DATA@0xD1, X (WRITE TO SW_LDAC_En_0, then SW_LDAC_En_0(SW_En_Ch7:SW_En_Ch0)). Second frame: X, W, ADDR(0xE8) (WRITE TO Multi_Input_Sel_0), DATA@0xE8 (Multi_Input_Sel_0(MI_Sel_Ch_7:MI_Sel_Ch_0)), DATA@0xE7, DATA@0xE6 (Multi_Input_Ch(Multi_Input_Val)), DATA@0xE5 (SW_LDAC_Trig_A(SLD_Trig_A)), marked LOOP 1. The stream continues with DATA@0xE8, DATA@0xE7, DATA@0xE6, DATA@0xE5 (LOOP 2), then X as CS returns high.](",
+    "evidence": "PDF p31 Figure 65 (render): the diagram has no LDAC trace (the software LDAC is the write of DATA@0xE5 to SW_LDAC_Trig_A in each loop); the AI alt text listed an LDAC signal. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p31-fig65-desc",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 31,
+    "old": ")\n\nTiming diagram for Option 6 showing CS, SDI, and LDAC signals with annotations for SW\\_LDAC\\_en\\_0, WRITE TO Multi\\_Input\\_Sel\\_0, and LOOP 1/2.\n",
+    "new": ")\n\nTiming diagram for Option 6 (description written from the PDF drawing), CS (overbar) and SDI only (no LDAC trace) in three rows. First frame: X, W (overbar), SW_LDAC_En_0, ADDR(0xD1), DATA@0xD1, X (WRITE TO SW_LDAC_En_0, then SW_LDAC_En_0(SW_En_Ch7:SW_En_Ch0)). Second frame: X, W, ADDR(0xE8) (WRITE TO Multi_Input_Sel_0), DATA@0xE8 (Multi_Input_Sel_0(MI_Sel_Ch_7:MI_Sel_Ch_0)), DATA@0xE7, DATA@0xE6 (Multi_Input_Ch(Multi_Input_Val)), DATA@0xE5 (SW_LDAC_Trig_A(SLD_Trig_A)), marked LOOP 1. The stream continues with DATA@0xE8, DATA@0xE7, DATA@0xE6, DATA@0xE5 (LOOP 2), then X as CS returns high.\n",
+    "evidence": "Same as ad5711r-ad5710r-p31-fig65-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p31-valid-ldac-overbar",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 31,
+    "old": "the update is initiated by providing a valid LDAC pulse.",
+    "new": "the update is initiated by providing a valid $\\overline{\\text{LDAC}}$ pulse.",
+    "evidence": "PDF p31 (render + vector overline): LDAC in 'a valid LDAC pulse' has an overbar.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ad5711r-ad5710r-p31-option6-heading-level",
+    "file": "output/ad5711r-ad5710r/ad5711r-ad5710r.md",
+    "page": 31,
+    "old": "\n### Option 6 (Controlled Update, Same Data, Software LDAC, and Multiple Channels)\n",
+    "new": "\n#### Option 6 (Controlled Update, Same Data, Software LDAC, and Multiple Channels)\n",
+    "evidence": "PDF p31 (PyMuPDF spans + render): the Option 6 title is a black bold title-case subsection under 'DAC UPDATE' (H4); the md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
