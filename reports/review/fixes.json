@@ -18500,5 +18500,187 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p31-page-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 31,
+    "old": "\n#### PAGE Data Contents\n",
+    "new": "\n**PAGE Data Contents**\n",
+    "evidence": "PDF p31 (PyMuPDF spans + render): 'PAGE Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p32-write-protect-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 32,
+    "old": "\n#### WRITE\\_PROTECT Data Contents\n",
+    "new": "\n**WRITE\\_PROTECT Data Contents**\n",
+    "evidence": "PDF p32 (PyMuPDF spans + render): 'WRITE_PROTECT Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p32-write-protect-pin-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 32,
+    "old": "\n### Write Protect Pin\n",
+    "new": "\n#### Write Protect Pin\n",
+    "evidence": "PDF p32 (PyMuPDF spans + render): 'Write Protect Pin' is a LinearHelvCond-Bold 11.7pt title-case subhead (H4 per the ltc2975 convention), md had H3.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p32-mfr-page-ff-mask-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 32,
+    "old": "is in use.\n\n#### MFR\\_PAGE\\_FF\\_MASK Data Contents\n",
+    "new": "is in use.\n\n**MFR\\_PAGE\\_FF\\_MASK Data Contents**\n",
+    "evidence": "PDF p32 (PyMuPDF spans + render): 'MFR_PAGE_FF_MASK Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p33-mfr-page-ff-mask-data-contents-cont-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 33,
+    "old": "\n#### MFR\\_PAGE\\_FF\\_MASK Data Contents\n",
+    "new": "\n**MFR\\_PAGE\\_FF\\_MASK Data Contents**\n",
+    "evidence": "PDF p33 (PyMuPDF spans + render): 'MFR_PAGE_FF_MASK Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p33-mfr-i2c-base-address-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 33,
+    "old": "\n#### MFR\\_I2C\\_BASE\\_ADDRESS Data Contents\n",
+    "new": "\n**MFR\\_I2C\\_BASE\\_ADDRESS Data Contents**\n",
+    "evidence": "PDF p33 (PyMuPDF spans + render): 'MFR_I2C_BASE_ADDRESS Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p34-mfr-command-plus-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 34,
+    "old": "\n#### MFR\\_COMMAND\\_PLUS Data Contents\n",
+    "new": "\n**MFR\\_COMMAND\\_PLUS Data Contents**\n",
+    "evidence": "PDF p34 (PyMuPDF spans + render): 'MFR_COMMAND_PLUS Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p34-mfr-data-plus0-and-mfr-data-plus1-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 34,
+    "old": "\n#### MFR\\_DATA\\_PLUS0 and MFR\\_DATA\\_PLUS1 Data Contents\n",
+    "new": "\n**MFR\\_DATA\\_PLUS0 and MFR\\_DATA\\_PLUS1 Data Contents**\n",
+    "evidence": "PDF p34 (PyMuPDF spans + render): 'MFR_DATA_PLUS0 and MFR_DATA_PLUS1 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p34-mfr-status-plus0-and-mfr-status-plus1-data-contents-caption",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 34,
+    "old": "\n#### MFR\\_STATUS\\_PLUS0 and MFR\\_STATUS\\_PLUS1 Data Contents\n",
+    "new": "\n**MFR\\_STATUS\\_PLUS0 and MFR\\_STATUS\\_PLUS1 Data Contents**\n",
+    "evidence": "PDF p34 (PyMuPDF spans + render): 'MFR_STATUS_PLUS0 and MFR_STATUS_PLUS1 Data Contents' is a table caption (LinearHelvCond-Bold 9.7pt), not a section heading; md had it as a #### heading. Bold caption paragraph per the ltc2975 convention.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p35-pmbus-command-description-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 35,
+    "old": "{34}------------------------------------------------\n\n## **PMBUS COMMAND DESCRIPTION**\n",
+    "new": "{34}------------------------------------------------\n\n## PMBUS COMMAND DESCRIPTION\n",
+    "evidence": "PDF p35 (PyMuPDF spans + render): running section title 'PMBUS COMMAND DESCRIPTION' (LinearBauhaus 18pt) printed plain, as on the other pages; md had '## **PMBUS COMMAND DESCRIPTION**'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p35-reading-energy-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 35,
+    "old": "\n#### **Reading Energy Using MFR\\_COMMAND\\_PLUS and MFR\\_DATA\\_PLUS0**\n",
+    "new": "\n#### Reading Energy Using MFR\\_COMMAND\\_PLUS and MFR\\_DATA\\_PLUS0\n",
+    "evidence": "PDF p35 (PyMuPDF spans + render): heading 'Reading Energy Using MFR_COMMAND_PLUS and MFR_DATA_PLUS0' is printed as a LinearHelvCond-Bold 11.7pt subhead; md wrapped it in ** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p35-peek-operation-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 35,
+    "old": "\n#### **Peek Operation Using Mfr\\_data\\_plus0**\n",
+    "new": "\n#### Peek Operation Using Mfr\\_data\\_plus0\n",
+    "evidence": "PDF p35 (PyMuPDF spans + render): heading 'Peek Operation Using Mfr_data_plus0' is printed as a LinearHelvCond-Bold 11.7pt subhead; md wrapped it in ** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p35-enabling-disabling-poke-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 35,
+    "old": "\n#### **Enabling and Disabling Poke Operations**\n",
+    "new": "\n#### Enabling and Disabling Poke Operations\n",
+    "evidence": "PDF p35 (PyMuPDF spans + render): heading 'Enabling and Disabling Poke Operations' is printed as a LinearHelvCond-Bold 11.7pt subhead; md wrapped it in ** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p35-poke-operation-heading",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 35,
+    "old": "\n#### **Poke Operation Using Mfr\\_data\\_plus0**\n",
+    "new": "\n#### Poke Operation Using Mfr\\_data\\_plus0\n",
+    "evidence": "PDF p35 (PyMuPDF spans + render): heading 'Poke Operation Using Mfr_data_plus0' is printed as a LinearHelvCond-Bold 11.7pt subhead; md wrapped it in ** emphasis.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
