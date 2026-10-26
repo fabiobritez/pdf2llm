@@ -190,3 +190,30 @@ Not changed / open:
 - Structure-only oddities were left: `###### Page` / `### Page` headings in the revision history, the p23 equation (5) number inline after the last bullet, `# DDF0008A` as H1 on p44, and the p28 figure-label dump (other figures have none).
 - p29 Fig 48: it is ambiguous whether the REF trace or only the GND trace reaches the ground via in the drawing. The description was not changed there.
 - Figure descriptions remain AI text. They now agree with the drawings on connections and dimension meanings, but approximate curve levels (for example "about 25 nV/√Hz") are still estimates. Read values from the image/PDF.
+
+### lt1965fb full page-by-page review (2026-10-26)
+
+Scope: all 22 PDF pages of `lt1965fb.pdf`. For each page: rendered image (`tools/review/render_pages.py`), `pdftotext -layout`, and PyMuPDF word rows (x positions under MIN/TYP/MAX/UNITS, ● positions, spans for sub/superscripts) were compared with the `{N-1}` section of `output/lt1965fb/lt1965fb.md`. The EC tables (p4, p5) match the PDF cell by cell, including where ● is present or absent: H-grade rows have no ●, as printed. Abs Max (p2), the order tables (p2, p3), the thermal tables (p15) and Related Parts (p22) were checked row by row.
+82 new fixes, all `lt1965fb-p*` ids in `fixes.json` (5 medium, 77 low). Description fixes have two entries each (`-alt` for the image alt text, `-desc` for the repeated paragraph). `replay_fixes.py` reproduces the md exactly.
+
+| Page(s) | Finding | Fix ids (prefix) | Severity |
+|---|---|---|---|
+| 1 | Title block 'LT1965 Series / 1.1A, Low Noise, Low Dropout Linear Regulator' was missing; the md started at FEATURES | `lt1965fb-p1-title-missing` | medium |
+| 3 | Part marking for LT1965EMS8E-3.3 / LT1965IMS8E-3.3: md had LDMD (the DFN marking); the PDF prints LTDMF | `lt1965fb-p3-ms8e-3.3-marking-*` | medium |
+| 18 | MS8E dimension lists were AI guesses: wrong meanings, 0.53 ±0.152 repeated in four views, and 1.68 ±0.102, 3.20 – 3.45, 4.90 ±0.152, 3.00 (NOTE 4), 0.18, 0.22 – 0.38, 0.1016 ±0.0508 missing. Replaced by the printed labels grouped by view | `lt1965fb-p18-ms8e-dimension-lists` | medium |
+| 20 | TO-220 dimension names wrong for most labels (.460 – .500 vs .330 – .370, .230 – .270, .135 – .165, ...). Values unchanged | `lt1965fb-p20-to220-dimension-meanings` | medium |
+| 1, 8, 11-13, 16, 17, 22 | Drawing numbers missing: 1965 TA01, G19-G26, F01-F06, TA03, TA04, plus `(DD8) DFN 0509 REV C` and 'BOTTOM VIEW—EXPOSED PAD' (p6/p7 G numbers were already present) | `*-drawing-number`, `lt1965fb-p17-dd8-drawing-id` | low |
+| 7, 8, 10 | Curve descriptions: G15-G18 load labels lacked the printed asterisks; G14 is the adjustable LT1965, not 'the general family'; G23/G24 have no peak at 2V; G25 is not linear and starts below 1mA; G35 '0.5P-P'; G37 had an invented load-current dependence and was missing its printed conditions; G38 µV/√Hz and LT1965-1.5 curve; G41 load step timing; G42 'Soft Start' and SHDN step time | `lt1965fb-p7-*`, `lt1965fb-p8-g2*-desc*`, `lt1965fb-p10-*` | low |
+| 11, 12, 17, 22 | Circuit descriptions contradicted the drawings: Fig 1 SENSE path (Kelvin connection) and GND return; Fig 2 output capacitor; the paralleling circuit (R1/R2 are input sense resistors, R6/R7 the ADJ divider, C2 the output capacitor, C3 op-amp feedback); TA04 was missing C2 and VIN > 2.7V | `lt1965fb-p11-fig1-desc*`, `lt1965fb-p12-fig2-desc*`, `lt1965fb-p17-ta03-paralleling-desc*`, `lt1965fb-p22-ta04-desc*` | low |
+| 13, 17, 19 | Figure 4 Y5V end point; DD8 and DD5 package descriptions had wrong dimension meanings and misprinted mm tolerances (`+.0305`, `+.0203`, `±.0305`; PDF: +0.305, +0.203, ±0.305), and the thick-paste pad layout had labels taken from DETAIL A | `lt1965fb-p13-fig4-*`, `lt1965fb-p17-dd8-desc*`, `lt1965fb-p19-dd5-*` | low |
+| 11, 12, 16, 17, 18, 22 | Typography as printed: R_P (capital P), Fig 2 equation R2/R1 not subscripted, DD8 Note 1 `M0-229` (digit zero), MS8E notes inch marks `(.006")`, curly “A” in Related Parts. A sentence split across the p16 columns ('9V clamp / voltage') was rejoined | `lt1965fb-p11-sense-rp-subscript`, `lt1965fb-p12-fig2-eq-*`, `lt1965fb-p17-dd8-note1-*`, `lt1965fb-p18-ms8e-notes-*`, `lt1965fb-p22-related-*`, `lt1965fb-p16-adj-clamp-*` | low |
+
+No error found on p2, p4, p5, p6, p9, p14, p15 or p21. The earlier p4/p5 fixes still hold.
+After the fixes: `validate.py --all` reports lt1965fb OK, with word/number coverage going from 99.5/99.2% to 99.9/100.0% and geometry 63 / 0 / 0. `check_llm_fidelity.py`: lt1965fb has 0 spec-table failures and the numeric subset is True. `relocate_images.py --check lt1965fb`: OK. `check_struct_tables.py`: unchanged. `unittest` test_validate / test_llm_compact / test_struct_tables: OK (64 tests).
+`lt1965fb.llm.md` was regenerated with `tools/llm_compact.py lt1965fb`. Every summary claim in `reports/llm/summaries/lt1965fb.md` was re-checked against the corrected md (p1, p2, p4, p5, p11, p12); none needed a change.
+
+Not changed / open:
+- p1 trademark line `LT, LT, LTC, LTM, ...`: the first item is the Linear logo glyph in the PDF, which Datalab rendered as 'LT'. Left as is.
+- Repo-wide conventions were kept: hyphen for the en dash (–40°C), Greek μ next to µ, SHDN overbars dropped in headings and tables, and running headers/footers omitted (the p21 'Information furnished by Linear Technology…' disclaimer and the p22 address/copyright footer included; other LTC sheets omit them too).
+- Structure-only oddities: `## LT1965 Series` running-header headings, `## Thermal Considerations` at H2 while sibling subsections are H3, `###### **NOTE:**` on p17.
+- Figure descriptions are still AI text. They now agree with the drawings on connections, labels and dimension meanings, but approximate curve levels (for example Fig 6 "approximately 5.5mA at 9V", G29 "minimum around 75°C") are estimates. Read values from the image/PDF.
