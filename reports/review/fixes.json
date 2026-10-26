@@ -9648,5 +9648,369 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p7-g17-line-styles-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 7,
+    "old": "![Graph of VOUT Load Regulation. The y-axis is 'VOUT (V)' from 1.188 to 1.212. The x-axis is 'LOAD CURRENT (A)' on a log scale from 1m to 2. The legend shows curves for VOUT = 1.2V and different VIN values: VIN = 5.5V (solid red), VIN = 5.0V (dashed blue), VIN = 3.3V (dotted green), and VIN = 2.25V (dash-dot orange).](",
+    "new": "![Graph of VOUT Load Regulation. The y-axis is 'VOUT (V)' from 1.188 to 1.212. The x-axis is 'LOAD CURRENT (A)' on a log scale from 1m to 2. The legend shows curves for VOUT = 1.2V and different VIN values: VIN = 5.5V (solid red), VIN = 5.0V (dashed blue), VIN = 3.3V (short-dashed green), and VIN = 2.25V (dotted orange).](",
+    "evidence": "PDF p7 G17 legend (render): V_IN = 3.3V is a short-dashed green line and V_IN = 2.25V a dotted orange line, as in G16; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p7-g17-line-styles-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 7,
+    "old": "\nGraph of VOUT Load Regulation. The y-axis is 'VOUT (V)' from 1.188 to 1.212. The x-axis is 'LOAD CURRENT (A)' on a log scale from 1m to 2. The legend shows curves for VOUT = 1.2V and different VIN values: VIN = 5.5V (solid red), VIN = 5.0V (dashed blue), VIN = 3.3V (dotted green), and VIN = 2.25V (dash-dot orange).\n",
+    "new": "\nGraph of VOUT Load Regulation. The y-axis is 'VOUT (V)' from 1.188 to 1.212. The x-axis is 'LOAD CURRENT (A)' on a log scale from 1m to 2. The legend shows curves for VOUT = 1.2V and different VIN values: VIN = 5.5V (solid red), VIN = 5.0V (dashed blue), VIN = 3.3V (short-dashed green), and VIN = 2.25V (dotted orange).\n",
+    "evidence": "PDF p7 G17 legend (render): V_IN = 3.3V is a short-dashed green line and V_IN = 2.25V a dotted orange line, as in G16; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g25-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=1.8V, VIN=2.25V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1uH, L DCR = 20mΩ. 3315ab G25](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=1.8V, VIN=2.25V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1µH, L DCR = 20mΩ.](",
+    "evidence": "PDF p8 G25 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g25-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=1.8V, VIN=2.25V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1uH, L DCR = 20mΩ. 3315ab G25\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=1.8V, VIN=2.25V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1µH, L DCR = 20mΩ.\n\n3315ab G25\n",
+    "evidence": "PDF p8 G25 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G25' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g26-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=1.8V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1uH, L DCR = 20mΩ. 3315ab G26](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=1.8V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1µH, L DCR = 20mΩ.](",
+    "evidence": "PDF p8 G26 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g26-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=1.8V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1uH, L DCR = 20mΩ. 3315ab G26\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=1.8V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1µH, L DCR = 20mΩ.\n\n3315ab G26\n",
+    "evidence": "PDF p8 G26 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G26' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g27-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=1.8V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1uH, L DCR = 20mΩ. 3315ab G27](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=1.8V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1µH, L DCR = 20mΩ.](",
+    "evidence": "PDF p8 G27 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g27-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=1.8V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1uH, L DCR = 20mΩ. 3315ab G27\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=1.8V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1µH, L DCR = 20mΩ.\n\n3315ab G27\n",
+    "evidence": "PDF p8 G27 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G27' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g28-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=2.5V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G28](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=2.5V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.](",
+    "evidence": "PDF p8 G28 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g28-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=2.5V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G28\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=2.5V, VIN=3.3V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.\n\n3315ab G28\n",
+    "evidence": "PDF p8 G28 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G28' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g29-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=2.5V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G29](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=2.5V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.](",
+    "evidence": "PDF p8 G29 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g29-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=2.5V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G29\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=2.5V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.\n\n3315ab G29\n",
+    "evidence": "PDF p8 G29 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G29' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g30-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=3.3V, VIN=4.2V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G30](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=3.3V, VIN=4.2V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.](",
+    "evidence": "PDF p8 G30 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g30-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=3.3V, VIN=4.2V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G30\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=3.3V, VIN=4.2V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.\n\n3315ab G30\n",
+    "evidence": "PDF p8 G30 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G30' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g31-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "![Graph of Efficiency vs Load Current for VOUT=3.3V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G31](",
+    "new": "![Graph of Efficiency vs Load Current for VOUT=3.3V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.](",
+    "evidence": "PDF p8 G31 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p8-g31-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 8,
+    "old": "\nGraph of Efficiency vs Load Current for VOUT=3.3V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green).参数: fsw = 2MHz, L = 1.2uH, L DCR = 23mΩ. 3315ab G31\n",
+    "new": "\nGraph of Efficiency vs Load Current for VOUT=3.3V, VIN=5.5V. The x-axis is Load Current (A) on a log scale from 1m to 2. The y-axis is Efficiency (%) from 0 to 100. Three curves are shown: BURST MODE (solid red), PULSE SKIP (dashed blue), and FORCED CONTINUOUS (dashed green). Parameters: f<sub>SW</sub> = 2MHz, L = 1.2µH, L DCR = 23mΩ.\n\n3315ab G31\n",
+    "evidence": "PDF p8 G31 legend (render): the AI text contained the Chinese word '参数' ('parameters'), wrote 'fsw' and 'uH' for the printed f_SW and µH, and carried the drawing number inside the description. Drawing number '3315ab G31' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g32-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "![Oscilloscope plot for Transient Response, Pulse Skip Mode. It shows three traces: I_LOAD (red), I_L (green), and V_OUT (blue). The I_LOAD trace shows a step from 0.1A to 1.5A. The I_L trace shows a corresponding step. The V_OUT trace shows a temporary dip followed by a recovery. Scale: 1A/DIV for I_LOAD and I_L, 50mV/DIV for V_OUT, 10μs/DIV for time base. Reference: 3315ab G32.](",
+    "new": "![Oscilloscope plot for Transient Response, Pulse Skip Mode. It shows three traces: I_LOAD (red), I_L (green), and V_OUT (blue). The I_LOAD trace steps from 0.1A to 1.5A and back (LOAD STEP: 0.1A TO 1.5A, 5A/µs). The I_L trace (switching ripple band) follows the step up and down. V_OUT dips at the load step up and overshoots at the load release, recovering after each. Scale: 1A/DIV for I_LOAD and I_L, 50mV/DIV for V_OUT, 10μs/DIV for time base.](",
+    "evidence": "PDF p9 G32 (render): the printed 'LOAD STEP: 0.1A TO 1.5A, 5A/µs' slew rate and the V_OUT overshoot at the load release were missing; 'Reference: 3315ab G32' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g32-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "\nOscilloscope plot for Transient Response, Pulse Skip Mode. It shows three traces: I\\_LOAD (red), I\\_L (green), and V\\_OUT (blue). The I\\_LOAD trace shows a step from 0.1A to 1.5A. The I\\_L trace shows a corresponding step. The V\\_OUT trace shows a temporary dip followed by a recovery. Scale: 1A/DIV for I\\_LOAD and I\\_L, 50mV/DIV for V\\_OUT, 10μs/DIV for time base. Reference: 3315ab G32.\n",
+    "new": "\nOscilloscope plot for Transient Response, Pulse Skip Mode. It shows three traces: I\\_LOAD (red), I\\_L (green), and V\\_OUT (blue). The I\\_LOAD trace steps from 0.1A to 1.5A and back (LOAD STEP: 0.1A TO 1.5A, 5A/µs). The I\\_L trace (switching ripple band) follows the step up and down. V\\_OUT dips at the load step up and overshoots at the load release, recovering after each. Scale: 1A/DIV for I\\_LOAD and I\\_L, 50mV/DIV for V\\_OUT, 10μs/DIV for time base.\n\n3315ab G32\n",
+    "evidence": "PDF p9 G32 (render): the printed 'LOAD STEP: 0.1A TO 1.5A, 5A/µs' slew rate and the V_OUT overshoot at the load release were missing; 'Reference: 3315ab G32' was AI text. Drawing number '3315ab G32' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g33-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "![Oscilloscope plot for Transient Response, FC Mode. It shows three traces: I_LOAD (red), I_L (green), and V_OUT (blue). The I_LOAD trace shows a step from 0.1A to 1.5A. The I_L trace shows a corresponding step. The V_OUT trace shows a temporary dip followed by a recovery. Scale: 1A/DIV for I_LOAD and I_L, 50mV/DIV for V_OUT, 10μs/DIV for time base. Reference: 3315ab G33.](",
+    "new": "![Oscilloscope plot for Transient Response, FC Mode. It shows three traces: I_LOAD (red), I_L (green), and V_OUT (blue). The I_LOAD trace steps from 0.1A to 1.5A and back (LOAD STEP: 0.1A TO 1.5A, 5A/µs). The I_L trace (switching ripple band) follows the step up and down. V_OUT dips at the load step up and overshoots at the load release, recovering after each. Scale: 1A/DIV for I_LOAD and I_L, 50mV/DIV for V_OUT, 10μs/DIV for time base.](",
+    "evidence": "PDF p9 G33 (render): the printed 'LOAD STEP: 0.1A TO 1.5A, 5A/µs' slew rate and the V_OUT overshoot at the load release were missing; 'Reference: 3315ab G33' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g33-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "\nOscilloscope plot for Transient Response, FC Mode. It shows three traces: I\\_LOAD (red), I\\_L (green), and V\\_OUT (blue). The I\\_LOAD trace shows a step from 0.1A to 1.5A. The I\\_L trace shows a corresponding step. The V\\_OUT trace shows a temporary dip followed by a recovery. Scale: 1A/DIV for I\\_LOAD and I\\_L, 50mV/DIV for V\\_OUT, 10μs/DIV for time base. Reference: 3315ab G33.\n",
+    "new": "\nOscilloscope plot for Transient Response, FC Mode. It shows three traces: I\\_LOAD (red), I\\_L (green), and V\\_OUT (blue). The I\\_LOAD trace steps from 0.1A to 1.5A and back (LOAD STEP: 0.1A TO 1.5A, 5A/µs). The I\\_L trace (switching ripple band) follows the step up and down. V\\_OUT dips at the load step up and overshoots at the load release, recovering after each. Scale: 1A/DIV for I\\_LOAD and I\\_L, 50mV/DIV for V\\_OUT, 10μs/DIV for time base.\n\n3315ab G33\n",
+    "evidence": "PDF p9 G33 (render): the printed 'LOAD STEP: 0.1A TO 1.5A, 5A/µs' slew rate and the V_OUT overshoot at the load release were missing; 'Reference: 3315ab G33' was AI text. Drawing number '3315ab G33' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g34-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "![Oscilloscope plot for Transient Response, Burst Mode Operation. It shows three traces: I_LOAD (red), I_L (green), and V_OUT (blue). The I_LOAD trace shows a step from 0.1A to 1.5A. The I_L trace shows a burst of pulses during the load step. The V_OUT trace shows a temporary dip followed by a recovery. Scale: 1A/DIV for I_LOAD and I_L, 50mV/DIV for V_OUT, 10μs/DIV for time base. Reference: 3315ab G34.](",
+    "new": "![Oscilloscope plot for Transient Response, Burst Mode Operation. It shows three traces: I_LOAD (red), I_L (green), and V_OUT (blue). The I_LOAD trace steps from 0.1A to 1.5A and back (LOAD STEP: 0.1A TO 1.5A, 5A/µs). At 0.1A the I_L trace shows separate burst pulses and V_OUT a sawtooth ripple; during the 1.5A step I_L switches continuously. V_OUT dips at the load step up and overshoots at the load release. Scale: 1A/DIV for I_LOAD and I_L, 50mV/DIV for V_OUT, 10μs/DIV for time base.](",
+    "evidence": "PDF p9 G34 (render): the burst pulses in I_L occur at the 0.1A load before and after the step, not during it (I_L is continuous at 1.5A); the V_OUT burst ripple, the overshoot at release and the printed 5A/µs slew rate were missing; 'Reference: 3315ab G34' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g34-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "\nOscilloscope plot for Transient Response, Burst Mode Operation. It shows three traces: I\\_LOAD (red), I\\_L (green), and V\\_OUT (blue). The I\\_LOAD trace shows a step from 0.1A to 1.5A. The I\\_L trace shows a burst of pulses during the load step. The V\\_OUT trace shows a temporary dip followed by a recovery. Scale: 1A/DIV for I\\_LOAD and I\\_L, 50mV/DIV for V\\_OUT, 10μs/DIV for time base. Reference: 3315ab G34.\n",
+    "new": "\nOscilloscope plot for Transient Response, Burst Mode Operation. It shows three traces: I\\_LOAD (red), I\\_L (green), and V\\_OUT (blue). The I\\_LOAD trace steps from 0.1A to 1.5A and back (LOAD STEP: 0.1A TO 1.5A, 5A/µs). At 0.1A the I\\_L trace shows separate burst pulses and V\\_OUT a sawtooth ripple; during the 1.5A step I\\_L switches continuously. V\\_OUT dips at the load step up and overshoots at the load release. Scale: 1A/DIV for I\\_LOAD and I\\_L, 50mV/DIV for V\\_OUT, 10μs/DIV for time base.\n\n3315ab G34\n",
+    "evidence": "PDF p9 G34 (render): the burst pulses in I_L occur at the 0.1A load before and after the step, not during it (I_L is continuous at 1.5A); the V_OUT burst ripple, the overshoot at release and the printed 5A/µs slew rate were missing; 'Reference: 3315ab G34' was AI text. Drawing number '3315ab G34' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g35-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "![Oscilloscope plot for Startup Transient, Pulse Skip Mode. It shows four traces: EN (red), V_OUT (blue), I_L (green), and PGOOD (orange). The EN signal transitions from low to high. The V_OUT signal ramps up. The I_L signal shows a small initial spike. The PGOOD signal transitions from low to high. Scale: 2V/DIV for EN, 500mV/DIV for V_OUT, 500mA/DIV for I_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R_LOAD = 120Ω. Reference: 3315ab G35.](",
+    "new": "![Oscilloscope plot for Startup Transient, Pulse Skip Mode. It shows four traces: EN (red), V_OUT (blue), I_L (green), and PGOOD (orange). EN steps from low to high. After a short delay V_OUT shows a small step and then ramps linearly up to its final level. After a single spike at the start of switching, I_L shows switching current during the ramp that drops slightly when the ramp ends. PGOOD goes from low to high shortly after V_OUT reaches its final level. Scale: 2V/DIV for EN, 500mV/DIV for V_OUT, 500mA/DIV for I_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R_LOAD = 120Ω.](",
+    "evidence": "PDF p9 G35 (render): I_L is not only a 'small initial spike', it carries switching current through the soft-start ramp; PGOOD rises after V_OUT reaches regulation; 'Reference: 3315ab G35' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g35-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "\nOscilloscope plot for Startup Transient, Pulse Skip Mode. It shows four traces: EN (red), V\\_OUT (blue), I\\_L (green), and PGOOD (orange). The EN signal transitions from low to high. The V\\_OUT signal ramps up. The I\\_L signal shows a small initial spike. The PGOOD signal transitions from low to high. Scale: 2V/DIV for EN, 500mV/DIV for V\\_OUT, 500mA/DIV for I\\_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R\\_LOAD = 120Ω. Reference: 3315ab G35.\n",
+    "new": "\nOscilloscope plot for Startup Transient, Pulse Skip Mode. It shows four traces: EN (red), V\\_OUT (blue), I\\_L (green), and PGOOD (orange). EN steps from low to high. After a short delay V\\_OUT shows a small step and then ramps linearly up to its final level. After a single spike at the start of switching, I\\_L shows switching current during the ramp that drops slightly when the ramp ends. PGOOD goes from low to high shortly after V\\_OUT reaches its final level. Scale: 2V/DIV for EN, 500mV/DIV for V\\_OUT, 500mA/DIV for I\\_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R\\_LOAD = 120Ω.\n\n3315ab G35\n",
+    "evidence": "PDF p9 G35 (render): I_L is not only a 'small initial spike', it carries switching current through the soft-start ramp; PGOOD rises after V_OUT reaches regulation; 'Reference: 3315ab G35' was AI text. Drawing number '3315ab G35' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g36-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "![Oscilloscope plot for Startup Transient, FC Mode. It shows four traces: EN (red), V_OUT (blue), I_L (green), and PGOOD (orange). The EN signal transitions from low to high. The V_OUT signal ramps up. The I_L signal shows a small initial spike. The PGOOD signal transitions from low to high. Scale: 2V/DIV for EN, 500mV/DIV for V_OUT, 500mA/DIV for I_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R_LOAD = 120Ω. Reference: 3315ab G36.](",
+    "new": "![Oscilloscope plot for Startup Transient, FC Mode. It shows four traces: EN (red), V_OUT (blue), I_L (green), and PGOOD (orange). EN steps from low to high. After a short delay V_OUT shows a small step and then ramps linearly up to its final level. After a single spike at the start of switching, I_L shows switching current during the ramp; after the ramp ends the forced continuous ripple band becomes wider and extends below zero. PGOOD goes from low to high shortly after V_OUT reaches its final level. Scale: 2V/DIV for EN, 500mV/DIV for V_OUT, 500mA/DIV for I_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R_LOAD = 120Ω.](",
+    "evidence": "PDF p9 G36 (render): I_L is not only a 'small initial spike', it carries switching current through the soft-start ramp and widens below zero in FC mode after the ramp; PGOOD rises after V_OUT reaches regulation; 'Reference: 3315ab G36' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g36-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "\nOscilloscope plot for Startup Transient, FC Mode. It shows four traces: EN (red), V\\_OUT (blue), I\\_L (green), and PGOOD (orange). The EN signal transitions from low to high. The V\\_OUT signal ramps up. The I\\_L signal shows a small initial spike. The PGOOD signal transitions from low to high. Scale: 2V/DIV for EN, 500mV/DIV for V\\_OUT, 500mA/DIV for I\\_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R\\_LOAD = 120Ω. Reference: 3315ab G36.\n",
+    "new": "\nOscilloscope plot for Startup Transient, FC Mode. It shows four traces: EN (red), V\\_OUT (blue), I\\_L (green), and PGOOD (orange). EN steps from low to high. After a short delay V\\_OUT shows a small step and then ramps linearly up to its final level. After a single spike at the start of switching, I\\_L shows switching current during the ramp; after the ramp ends the forced continuous ripple band becomes wider and extends below zero. PGOOD goes from low to high shortly after V\\_OUT reaches its final level. Scale: 2V/DIV for EN, 500mV/DIV for V\\_OUT, 500mA/DIV for I\\_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R\\_LOAD = 120Ω.\n\n3315ab G36\n",
+    "evidence": "PDF p9 G36 (render): I_L is not only a 'small initial spike', it carries switching current through the soft-start ramp and widens below zero in FC mode after the ramp; PGOOD rises after V_OUT reaches regulation; 'Reference: 3315ab G36' was AI text. Drawing number '3315ab G36' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g37-alt",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "![Oscilloscope plot for Startup Transient, Burst Mode. It shows four traces: EN (red), V_OUT (blue), I_L (green), and PGOOD (orange). The EN signal transitions from low to high. The V_OUT signal ramps up. The I_L signal shows a burst of pulses during the startup ramp. The PGOOD signal transitions from low to high. Scale: 2V/DIV for EN, 500mV/DIV for V_OUT, 500mA/DIV for I_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R_LOAD = 120Ω. Reference: 3315ab G37.](",
+    "new": "![Oscilloscope plot for Startup Transient, Burst Mode. It shows four traces: EN (red), V_OUT (blue), I_L (green), and PGOOD (orange). EN steps from low to high. After a short delay V_OUT shows a small step and then ramps linearly up to its final level. After a single spike at the start of switching, I_L shows switching current during the ramp; after the ramp ends I_L changes to separate burst pulses. PGOOD goes from low to high shortly after V_OUT reaches its final level. Scale: 2V/DIV for EN, 500mV/DIV for V_OUT, 500mA/DIV for I_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R_LOAD = 120Ω.](",
+    "evidence": "PDF p9 G37 (render): the I_L burst pulses appear after the soft-start ramp ends, not during it (during the ramp I_L switches continuously); 'Reference: 3315ab G37' was AI text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3315a-p9-g37-desc",
+    "file": "output/ltc3315a/ltc3315a.md",
+    "page": 9,
+    "old": "\nOscilloscope plot for Startup Transient, Burst Mode. It shows four traces: EN (red), V\\_OUT (blue), I\\_L (green), and PGOOD (orange). The EN signal transitions from low to high. The V\\_OUT signal ramps up. The I\\_L signal shows a burst of pulses during the startup ramp. The PGOOD signal transitions from low to high. Scale: 2V/DIV for EN, 500mV/DIV for V\\_OUT, 500mA/DIV for I\\_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R\\_LOAD = 120Ω. Reference: 3315ab G37.\n",
+    "new": "\nOscilloscope plot for Startup Transient, Burst Mode. It shows four traces: EN (red), V\\_OUT (blue), I\\_L (green), and PGOOD (orange). EN steps from low to high. After a short delay V\\_OUT shows a small step and then ramps linearly up to its final level. After a single spike at the start of switching, I\\_L shows switching current during the ramp; after the ramp ends I\\_L changes to separate burst pulses. PGOOD goes from low to high shortly after V\\_OUT reaches its final level. Scale: 2V/DIV for EN, 500mV/DIV for V\\_OUT, 500mA/DIV for I\\_L, 5V/DIV for PGOOD, 200μs/DIV for time base. R\\_LOAD = 120Ω.\n\n3315ab G37\n",
+    "evidence": "PDF p9 G37 (render): the I_L burst pulses appear after the soft-start ramp ends, not during it (during the ramp I_L switches continuously); 'Reference: 3315ab G37' was AI text. Drawing number '3315ab G37' printed under the figure added as text.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
