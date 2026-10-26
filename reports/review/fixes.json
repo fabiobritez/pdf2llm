@@ -6801,5 +6801,486 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p1-title-missing",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 1,
+    "old": "{0}------------------------------------------------\n\n# 5V, 6A Synchronous Step-Down Silent Switcher in 2mm x 2mm LQFN\n",
+    "new": "{0}------------------------------------------------\n\n# LTC3309A\n\n# 5V, 6A Synchronous Step-Down Silent Switcher in 2mm x 2mm LQFN\n",
+    "evidence": "PDF p1 header prints the part number 'LTC3309A' above the subtitle (pdftotext + render); the md started at the subtitle.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc3309a-p1-ta01a-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 1,
+    "old": "![Circuit diagram of a high efficiency, 2MHz, 1.2V 6A step-down converter using the LTC3309A. The input voltage is 2.5V to 5.5V. The output is 1.2V at 6A. The circuit includes a 220nH inductor, a 33μF capacitor, and a 10μF capacitor. The LTC3309A is shown in a 12-lead LQFN package. The diagram also shows the connection to a 3309A TA01a board.](",
+    "new": "![Circuit diagram of a high efficiency, 2MHz, 1.2V 6A step-down converter using the LTC3309A. The input voltage is 2.5V to 5.5V, decoupled by 10μF and 1μF 0201 capacitors on each side of the IC; EN, MODE/SYNC and RT are tied to the V_IN rail. The two SW pins drive a 220nH inductor to the 1.2V, 6A output, which has 33μF x2 output capacitors. FB connects to a 140k/100k divider from V_OUT to AGND, with a 10pF capacitor across the 140k resistor; a 10nF capacitor connects V_IN to AGND. PGOOD is an output, PGND goes to ground, and f_OSC = 2MHz.](",
+    "evidence": "PDF p1 TA01a schematic (render, 300 dpi crop): the AI description listed a single 33µF capacitor (PDF: 33µF x2), omitted the 140k/100k divider, 10pF, 10nF and 1µF 0201 parts, invented a 'connection to a 3309A TA01a board' (TA01a is the drawing number) and an LQFN package drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p1-ta01a-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 1,
+    "old": "\nCircuit diagram of a high efficiency, 2MHz, 1.2V 6A step-down converter using the LTC3309A. The input voltage is 2.5V to 5.5V. The output is 1.2V at 6A. The circuit includes a 220nH inductor, a 33μF capacitor, and a 10μF capacitor. The LTC3309A is shown in a 12-lead LQFN package. The diagram also shows the connection to a 3309A TA01a board.\n",
+    "new": "\nCircuit diagram of a high efficiency, 2MHz, 1.2V 6A step-down converter using the LTC3309A. The input voltage is 2.5V to 5.5V, decoupled by 10μF and 1μF 0201 capacitors on each side of the IC; EN, MODE/SYNC and RT are tied to the V_IN rail. The two SW pins drive a 220nH inductor to the 1.2V, 6A output, which has 33μF x2 output capacitors. FB connects to a 140k/100k divider from V_OUT to AGND, with a 10pF capacitor across the 140k resistor; a 10nF capacitor connects V_IN to AGND. PGOOD is an output, PGND goes to ground, and f_OSC = 2MHz.\n",
+    "evidence": "PDF p1 TA01a schematic (render, 300 dpi crop): the AI description listed a single 33µF capacitor (PDF: 33µF x2), omitted the 140k/100k divider, 10pF, 10nF and 1µF 0201 parts, invented a 'connection to a 3309A TA01a board' (TA01a is the drawing number) and an LQFN package drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p1-ta01a-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 1,
+    "old": "\nEfficiency and Power Loss in Burst Mode Operation\n",
+    "new": "\n3309A TA01a\n\nEfficiency and Power Loss in Burst Mode Operation\n",
+    "evidence": "PDF p1 prints the drawing number '3309A TA01a' under the schematic (pdftotext + render); the md kept '3309A TA01b' of the plot but dropped this one.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p1-ta01b-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 1,
+    "old": "![Graph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for the LTC3309A in Burst Mode Operation. The efficiency curve (red) starts at approximately 80% at 0.001A and rises to about 90% at 1A. The power loss curve (blue) starts at approximately 0.001W at 0.001A and rises to about 0.5W at 1A. The graph is labeled with V_IN = 3.3V, V_OUT = 1.2V, f_SW = 2 MHz, and COILCRAFT XEL3515-221. The x-axis is Load Current (A) on a log scale from 0.001 to 6. The left y-axis is Efficiency (%) from 0 to 100. The right y-axis is Power Loss (W) on a log scale from 0.0001 to 10.](",
+    "new": "![Graph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for the LTC3309A in Burst Mode Operation. The efficiency curve (red) starts at approximately 80% at 0.001A, is near 90% from about 0.01A, peaks at a few amps and falls off toward 6A. The power loss curve (blue) rises steadily with load current over the whole range. The graph is labeled with V_IN = 3.3V, V_OUT = 1.2V, f_SW = 2 MHz, and COILCRAFT XEL3515-221. The x-axis is Load Current (A) on a log scale from 0.001 to 6. The left y-axis is Efficiency (%) from 0 to 100. The right y-axis is Power Loss (W) on a log scale from 0.0001 to 10.](",
+    "evidence": "PDF p1 TA01b plot (render): the power-loss curve is at about 0.0003W at 1mA and about 0.2W at 1A (not 0.001W / 0.5W), and efficiency peaks above 90% then drops toward 6A. Estimated levels replaced by the curve shape; read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p1-ta01b-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 1,
+    "old": "\nGraph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for the LTC3309A in Burst Mode Operation. The efficiency curve (red) starts at approximately 80% at 0.001A and rises to about 90% at 1A. The power loss curve (blue) starts at approximately 0.001W at 0.001A and rises to about 0.5W at 1A. The graph is labeled with V\\_IN = 3.3V, V\\_OUT = 1.2V, f\\_SW = 2 MHz, and COILCRAFT XEL3515-221. The x-axis is Load Current (A) on a log scale from 0.001 to 6. The left y-axis is Efficiency (%) from 0 to 100. The right y-axis is Power Loss (W) on a log scale from 0.0001 to 10.\n",
+    "new": "\nGraph showing Efficiency (%) and Power Loss (W) versus Load Current (A) for the LTC3309A in Burst Mode Operation. The efficiency curve (red) starts at approximately 80% at 0.001A, is near 90% from about 0.01A, peaks at a few amps and falls off toward 6A. The power loss curve (blue) rises steadily with load current over the whole range. The graph is labeled with V\\_IN = 3.3V, V\\_OUT = 1.2V, f\\_SW = 2 MHz, and COILCRAFT XEL3515-221. The x-axis is Load Current (A) on a log scale from 0.001 to 6. The left y-axis is Efficiency (%) from 0 to 100. The right y-axis is Power Loss (W) on a log scale from 0.0001 to 10.\n",
+    "evidence": "PDF p1 TA01b plot (render): the power-loss curve is at about 0.0003W at 1mA and about 0.2W at 1A (not 0.001W / 0.5W), and efficiency peaks above 90% then drops toward 6A. Estimated levels replaced by the curve shape; read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p3-en-leakage-condition-as-printed",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 3,
+    "old": "| EN Pin Leakage                                             | V <sub>EN</sub> = 0.5V ",
+    "new": "| EN Pin Leakage                                             | V <sub>EN</sub> =0.5V  ",
+    "evidence": "PDF p3 EC table, EN Pin Leakage condition prints 'VEN =0.5V' with no space after '=' (pdftotext + PDF words); kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p4-note2-column-split",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 4,
+    "old": "temperature consistent with\n\nthese specifications",
+    "new": "temperature consistent with these specifications",
+    "evidence": "PDF p4 Note 2: the sentence 'the maximum ambient temperature consistent with these specifications is determined...' continues across the column break (pdftotext + render); the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g01-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nFeedback Voltage vs. Temperature graph\n",
+    "new": "\n\n3309A G01\n\nFeedback Voltage vs. Temperature graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g02-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nMinimum On-Time vs. Input Voltage graph\n",
+    "new": "\n\n3309A G02\n\nMinimum On-Time vs. Input Voltage graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g03-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nMinimum On-Time vs. Temperature graph\n",
+    "new": "\n\n3309A G03\n\nMinimum On-Time vs. Temperature graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g04-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nSwitch On Resistance vs. Input Voltage graph\n",
+    "new": "\n\n3309A G04\n\nSwitch On Resistance vs. Input Voltage graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g05-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nSwitch On Resistance vs. Temperature graph\n",
+    "new": "\n\n3309A G05\n\nSwitch On Resistance vs. Temperature graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g06-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nDefault Switching Frequency vs. Input Voltage graph\n",
+    "new": "\n\n3309A G06\n\nDefault Switching Frequency vs. Input Voltage graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g07-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nDefault Switching Frequency vs. Temperature graph\n",
+    "new": "\n\n3309A G07\n\nDefault Switching Frequency vs. Temperature graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g08-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nSwitching Frequency vs. RT graph\n",
+    "new": "\n\n3309A G08\n\nSwitching Frequency vs. RT graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g09-drawing-number",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "\n\nRT Switching Frequency vs. Temperature graph\n",
+    "new": "\n\n3309A G09\n\nRT Switching Frequency vs. Temperature graph\n",
+    "evidence": "PDF p5 prints a drawing number under each plot (3309A G01 ... 3309A G09; pdftotext + render); the md dropped them on this page (p6/p7 keep G10-G27).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g01-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "Graph showing Feedback Voltage (mV) vs. Temperature (°C). The feedback voltage is relatively stable around 500 mV from -50°C to 75°C, then decreases to approximately 498 mV at 150°C.",
+    "new": "Graph showing Feedback Voltage (mV) vs. Temperature (°C). The feedback voltage rises slightly from about 499.3 mV at -50°C to a maximum near 501 mV around 50°C, then decreases to approximately 498 mV at 150°C.",
+    "evidence": "PDF p5 G01 (render): the curve starts below 500 mV at -50°C and peaks near 501 mV at about 50°C; 'stable around 500 mV from -50°C to 75°C' hid the rise and the peak. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g02-desc-start-voltage",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "All curves show a decreasing trend as input voltage increases from 2V to 5.5V.",
+    "new": "All curves show a decreasing trend as input voltage increases from 2.25V to 5.5V.",
+    "evidence": "PDF p5 G02 (render): the x-axis starts at 2V but the curves start at 2.25V (the minimum V_IN).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g04-desc-start-voltage",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "Both show a decreasing trend as input voltage increases from 2V to 5.5V.",
+    "new": "Both show a decreasing trend as input voltage increases from 2.25V to 5.5V.",
+    "evidence": "PDF p5 G04 (render): the x-axis starts at 2V but the curves start at 2.25V (the minimum V_IN).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p5-g06-desc-start-voltage",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 5,
+    "old": "The frequency increases linearly from approximately 1.96 MHz at 2V to 2.06 MHz at 5.5V.",
+    "new": "The frequency increases almost linearly from approximately 1.96 MHz at 2.25V to 2.06 MHz at 5.5V.",
+    "evidence": "PDF p5 G06 (render): the x-axis starts at 2V but the curves start at 2.25V (the minimum V_IN).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p6-g10-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "![Graph of Switch Current Limits vs Temperature. PMOS IPEAKMAX increases from ~9.0A to ~10.0A. NMOS IVALLEYMAX decreases from ~7.8A to ~7.5A.](",
+    "new": "![Graph of Switch Current Limits vs Temperature. PMOS IPEAKMAX increases from ~9.0A to ~10.0A. NMOS IVALLEYMAX decreases slightly from ~7.9A to ~7.65A.](",
+    "evidence": "PDF p6 G10 (render): the NMOS IVALLEYMAX curve starts just below 7.9A at -50°C and ends above 7.5A (about 7.65A) at 150°C, not 7.8A to 7.5A. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p6-g10-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 6,
+    "old": "\nGraph of Switch Current Limits vs Temperature. PMOS IPEAKMAX increases from ~9.0A to ~10.0A. NMOS IVALLEYMAX decreases from ~7.8A to ~7.5A.\n",
+    "new": "\nGraph of Switch Current Limits vs Temperature. PMOS IPEAKMAX increases from ~9.0A to ~10.0A. NMOS IVALLEYMAX decreases slightly from ~7.9A to ~7.65A.\n",
+    "evidence": "PDF p6 G10 (render): the NMOS IVALLEYMAX curve starts just below 7.9A at -50°C and ends above 7.5A (about 7.65A) at 150°C, not 7.8A to 7.5A. Read values from the image/PDF.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g20-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing VOUT load regulation in a 1.2V application. The x-axis is ILOAD (A) from 0 to 6. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different VIN values: VIN = 2.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 5V (dotted green).](",
+    "new": "![Graph showing VOUT load regulation in a 1.2V application. The x-axis is ILOAD (A) from 0 to 6. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different VIN values: VIN = 2.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 5V (dashed green).](",
+    "evidence": "PDF p7 G20 legend (render): the V_IN = 5V curve is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g20-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing VOUT load regulation in a 1.2V application. The x-axis is ILOAD (A) from 0 to 6. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different VIN values: VIN = 2.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 5V (dotted green).\n",
+    "new": "\nGraph showing VOUT load regulation in a 1.2V application. The x-axis is ILOAD (A) from 0 to 6. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different VIN values: VIN = 2.5V (solid red), VIN = 3.3V (dashed blue), and VIN = 5V (dashed green).\n",
+    "evidence": "PDF p7 G20 legend (render): the V_IN = 5V curve is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g21-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing VOUT line regulation in a 1.2V application. The x-axis is INPUT VOLTAGE (V) from 2.5 to 5.5. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different ILOAD values: ILOAD = 0A (solid red), ILOAD = 3A (dashed blue), and ILOAD = 6A (dotted green).](",
+    "new": "![Graph showing VOUT line regulation in a 1.2V application. The x-axis is INPUT VOLTAGE (V) from 2.5 to 5.5. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different ILOAD values: ILOAD = 0A (solid red), ILOAD = 3A (dashed blue), and ILOAD = 6A (dashed green).](",
+    "evidence": "PDF p7 G21 legend (render): the I_LOAD = 6A curve is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g21-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing VOUT line regulation in a 1.2V application. The x-axis is INPUT VOLTAGE (V) from 2.5 to 5.5. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different ILOAD values: ILOAD = 0A (solid red), ILOAD = 3A (dashed blue), and ILOAD = 6A (dotted green).\n",
+    "new": "\nGraph showing VOUT line regulation in a 1.2V application. The x-axis is INPUT VOLTAGE (V) from 2.5 to 5.5. The y-axis is VOUT (V) from 1.190 to 1.210. Three curves are shown for different ILOAD values: ILOAD = 0A (solid red), ILOAD = 3A (dashed blue), and ILOAD = 6A (dashed green).\n",
+    "evidence": "PDF p7 G21 legend (render): the I_LOAD = 6A curve is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g22-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing efficiency versus ILOAD for VIN = 2.5V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.](",
+    "new": "![Graph showing efficiency versus ILOAD for VIN = 2.5V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dashed green), 1.2V (dotted orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.](",
+    "evidence": "PDF p7 G22 legend (render): V_OUT = 1.0V is short-dashed green and V_OUT = 1.2V is dotted orange; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g22-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing efficiency versus ILOAD for VIN = 2.5V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.\n",
+    "new": "\nGraph showing efficiency versus ILOAD for VIN = 2.5V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dashed green), 1.2V (dotted orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.\n",
+    "evidence": "PDF p7 G22 legend (render): V_OUT = 1.0V is short-dashed green and V_OUT = 1.2V is dotted orange; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g23-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing efficiency versus ILOAD for VIN = 3.3V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.](",
+    "new": "![Graph showing efficiency versus ILOAD for VIN = 3.3V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dashed green), 1.2V (dotted orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.](",
+    "evidence": "PDF p7 G23 legend (render): V_OUT = 1.0V is short-dashed green and V_OUT = 1.2V is dotted orange; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g23-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing efficiency versus ILOAD for VIN = 3.3V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dotted green), 1.2V (dash-dot orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.\n",
+    "new": "\nGraph showing efficiency versus ILOAD for VIN = 3.3V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 0.5V (solid red), 0.75V (dashed blue), 1.0V (dashed green), 1.2V (dotted orange), and 1.8V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.\n",
+    "evidence": "PDF p7 G23 legend (render): V_OUT = 1.0V is short-dashed green and V_OUT = 1.2V is dotted orange; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g24-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing efficiency versus ILOAD for VIN = 5.0V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 1.0V (solid red), 1.2V (dashed blue), 1.8V (dotted green), 2.5V (dash-dot orange), and 3.3V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.](",
+    "new": "![Graph showing efficiency versus ILOAD for VIN = 5.0V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 1.0V (solid red), 1.2V (dashed blue), 1.8V (dashed green), 2.5V (dotted orange), and 3.3V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.](",
+    "evidence": "PDF p7 G24 legend (render): V_OUT = 1.8V is short-dashed green and V_OUT = 2.5V is dotted orange; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g24-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing efficiency versus ILOAD for VIN = 5.0V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 1.0V (solid red), 1.2V (dashed blue), 1.8V (dotted green), 2.5V (dash-dot orange), and 3.3V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.\n",
+    "new": "\nGraph showing efficiency versus ILOAD for VIN = 5.0V in burst mode. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 50 to 100. Curves are shown for VOUT = 1.0V (solid red), 1.2V (dashed blue), 1.8V (dashed green), 2.5V (dotted orange), and 3.3V (dotted black). conditions: fSW = 2MHz, COILCRAFT XEL3515-221.\n",
+    "evidence": "PDF p7 G24 legend (render): V_OUT = 1.8V is short-dashed green and V_OUT = 2.5V is dotted orange; there is no dash-dot line.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g25-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing efficiency versus switching frequency for VIN = 3.3V to VOUT = 1.2V, ILOAD = 3A. The x-axis is SWITCHING FREQUENCY (MHz) from 1 to 3.0. The y-axis is Efficiency (%) from 87 to 92. Curves are shown for L = 150nH (solid red), 220nH (dashed blue), and 350nH (dotted green). COILCRAFT XEL3515 SERIES.](",
+    "new": "![Graph showing efficiency versus switching frequency for VIN = 3.3V to VOUT = 1.2V, ILOAD = 3A. The x-axis is SWITCHING FREQUENCY (MHz) from 1 to 3.0. The y-axis is Efficiency (%) from 87 to 92. Curves are shown for L = 150nH (solid red), 220nH (dashed blue), and 350nH (dashed green). COILCRAFT XEL3515 SERIES.](",
+    "evidence": "PDF p7 G25 legend (render): L = 350nH is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g25-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing efficiency versus switching frequency for VIN = 3.3V to VOUT = 1.2V, ILOAD = 3A. The x-axis is SWITCHING FREQUENCY (MHz) from 1 to 3.0. The y-axis is Efficiency (%) from 87 to 92. Curves are shown for L = 150nH (solid red), 220nH (dashed blue), and 350nH (dotted green). COILCRAFT XEL3515 SERIES.\n",
+    "new": "\nGraph showing efficiency versus switching frequency for VIN = 3.3V to VOUT = 1.2V, ILOAD = 3A. The x-axis is SWITCHING FREQUENCY (MHz) from 1 to 3.0. The y-axis is Efficiency (%) from 87 to 92. Curves are shown for L = 150nH (solid red), 220nH (dashed blue), and 350nH (dashed green). COILCRAFT XEL3515 SERIES.\n",
+    "evidence": "PDF p7 G25 legend (render): L = 350nH is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g27-line-styles-alt",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "![Graph showing efficiency versus ILOAD for VIN = 3.3V to VOUT = 1.2V, fSW = 2MHz. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 0 to 100. Curves are shown for BURST (solid red), PULSE SKIP (dashed blue), and FC (dotted green). conditions: COILCRAFT XEL3515-221.](",
+    "new": "![Graph showing efficiency versus ILOAD for VIN = 3.3V to VOUT = 1.2V, fSW = 2MHz. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 0 to 100. Curves are shown for BURST (solid red), PULSE SKIP (dashed blue), and FC (dashed green). conditions: COILCRAFT XEL3515-221.](",
+    "evidence": "PDF p7 G27 legend (render): FC is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc3309a-p7-g27-line-styles-desc",
+    "file": "output/ltc3309a/ltc3309a.md",
+    "page": 7,
+    "old": "\nGraph showing efficiency versus ILOAD for VIN = 3.3V to VOUT = 1.2V, fSW = 2MHz. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 0 to 100. Curves are shown for BURST (solid red), PULSE SKIP (dashed blue), and FC (dotted green). conditions: COILCRAFT XEL3515-221.\n",
+    "new": "\nGraph showing efficiency versus ILOAD for VIN = 3.3V to VOUT = 1.2V, fSW = 2MHz. The x-axis is ILOAD (A) on a log scale from 0.001 to 6. The y-axis is Efficiency (%) from 0 to 100. Curves are shown for BURST (solid red), PULSE SKIP (dashed blue), and FC (dashed green). conditions: COILCRAFT XEL3515-221.\n",
+    "evidence": "PDF p7 G27 legend (render): FC is short-dashed green, not dotted.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
