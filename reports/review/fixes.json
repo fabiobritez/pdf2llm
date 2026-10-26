@@ -28311,5 +28311,161 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p29-title-block",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 29,
+    "old": "{28}------------------------------------------------\n\n![LAND PATTERN EXAMPLE",
+    "new": "{28}------------------------------------------------\n\n### EXAMPLE BOARD LAYOUT\n\nRSV0016A\n\nUQFN - 0.55 mm max height\n\nULTRA THIN QUAD FLATPACK - NO LEAD\n\n![LAND PATTERN EXAMPLE",
+    "evidence": "PDF p29 title block 'RSV0016A / EXAMPLE BOARD LAYOUT / UQFN - 0.55 mm max height / ULTRA THIN QUAD FLATPACK - NO LEAD' was missing (added as for tps63802 p36).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p29-land-pattern-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 29,
+    "old": "![LAND PATTERN EXAMPLE for UQFN package. The diagram shows a 4x4 grid of rectangular pads. Pad 1 is at the top left, pad 16 at the top right, pad 5 at the bottom left, and pad 8 at the bottom right. Pad 13 is at the top right of the central 2x2 area, and pad 12 is at the top right of the central 2x2 area. Dimensions are provided: (0.7) for the top pad width, 16X (0.2) for the top pad pitch, 12X (0.4) for the middle pad pitch, 15X (0.6) for the bottom pad pitch, and (1.6) for the total width. Symmetry lines are indicated with 'SYMM' and a centerline symbol. A note 'SEE SOLDER MASK DETAIL' points to the top right pad. A note '(R0.05) TYP' points to the top left pad.](474a819357587e34949a3e110ff19b30_img.jpg)\n\nLAND PATTERN EXAMPLE for UQFN package. The diagram shows a 4x4 grid of rectangular pads. Pad 1 is at the top left, pad 16 at the top right, pad 5 at the bottom left, and pad 8 at the bottom right. Pad 13 is at the top right of the central 2x2 area, and pad 12 is at the top right of the central 2x2 area. Dimensions are provided: (0.7) for the top pad width, 16X (0.2) for the top pad pitch, 12X (0.4) for the middle pad pitch, 15X (0.6) for the bottom pad pitch, and (1.6) for the total width. Symmetry lines are indicated with 'SYMM' and a centerline symbol. A note 'SEE SOLDER MASK DETAIL' points to the top right pad. A note '(R0.05) TYP' points to the top left pad.",
+    "new": "![LAND PATTERN EXAMPLE for the RSV0016A UQFN (description written from the drawing; dimensions in mm, for reference). Sixteen rounded-rectangle pads around the edge, no center pad: pads 1-4 on the left (1 at the top), 5-8 along the bottom (5 at the left), 9-12 on the right (9 at the bottom) and 13-16 along the top (16 at the left). Pad 1 is longer, (0.7); the other pads are 15X (0.6) long; all are 16X (0.2) wide with (R0.05) TYP corners; pitch 12X (0.4). (1.6) between the left and right pad centerlines, (2.4) between the top and bottom pad centerlines. SYMM centerlines in both directions; 'SEE SOLDER MASK DETAIL' points to pad 13.](474a819357587e34949a3e110ff19b30_img.jpg)\n\nLAND PATTERN EXAMPLE for the RSV0016A UQFN (description written from the drawing; dimensions in mm, for reference). Sixteen rounded-rectangle pads around the edge, no center pad: pads 1-4 on the left (1 at the top), 5-8 along the bottom (5 at the left), 9-12 on the right (9 at the bottom) and 13-16 along the top (16 at the left). Pad 1 is longer, (0.7); the other pads are 15X (0.6) long; all are 16X (0.2) wide with (R0.05) TYP corners; pitch 12X (0.4). (1.6) between the left and right pad centerlines, (2.4) between the top and bottom pad centerlines. SYMM centerlines in both directions; 'SEE SOLDER MASK DETAIL' points to pad 13.",
+    "evidence": "PDF p29 land pattern: the pads are a perimeter ring (1-4 left, 5-8 bottom, 9-12 right, 13-16 top), not a '4x4 grid' with a 'central 2x2 area'; 16X (0.2) is the pad width and 15X (0.6) the pad length, not pitches; (0.7) is the pad 1 length; (2.4) was omitted. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p29-solder-mask-details-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 29,
+    "old": "![SOLDER MASK DETAILS diagram. It shows two cross-sectional views of a pad. The left view, labeled 'NON SOLDER MASK DEFINED (PREFERRED)', shows a green pad with a blue border. A dimension of '0.05 MAX ALL AROUND' is shown between the pad and the border. Labels include 'EXPOSED METAL', 'METAL EDGE', and 'SOLDER MASK OPENING'. The right view, labeled 'SOLDER MASK DEFINED', shows a green pad with a dashed blue border. A dimension of '0.05 MIN ALL AROUND' is shown between the pad and the border. Labels include 'EXPOSED METAL', 'METAL UNDER SOLDER MASK', and 'SOLDER MASK OPENING'.](f0a97d0d3818a253c1d2a009966081b1_img.jpg)\n\nSOLDER MASK DETAILS diagram. It shows two cross-sectional views of a pad. The left view, labeled 'NON SOLDER MASK DEFINED (PREFERRED)', shows a green pad with a blue border. A dimension of '0.05 MAX ALL AROUND' is shown between the pad and the border. Labels include 'EXPOSED METAL', 'METAL EDGE', and 'SOLDER MASK OPENING'. The right view, labeled 'SOLDER MASK DEFINED', shows a green pad with a dashed blue border. A dimension of '0.05 MIN ALL AROUND' is shown between the pad and the border. Labels include 'EXPOSED METAL', 'METAL UNDER SOLDER MASK', and 'SOLDER MASK OPENING'.",
+    "new": "![SOLDER MASK DETAILS (description written from the drawing): two top views of a single pad. NON SOLDER MASK DEFINED (PREFERRED): the solder mask opening (outer outline) surrounds the metal pad with 0.05 MAX ALL AROUND; labels EXPOSED METAL, METAL EDGE, SOLDER MASK OPENING. SOLDER MASK DEFINED: the metal (dashed outline) extends under the mask beyond the solder mask opening by 0.05 MIN ALL AROUND; labels EXPOSED METAL, METAL UNDER SOLDER MASK, SOLDER MASK OPENING.](f0a97d0d3818a253c1d2a009966081b1_img.jpg)\n\nSOLDER MASK DETAILS (description written from the drawing): two top views of a single pad. NON SOLDER MASK DEFINED (PREFERRED): the solder mask opening (outer outline) surrounds the metal pad with 0.05 MAX ALL AROUND; labels EXPOSED METAL, METAL EDGE, SOLDER MASK OPENING. SOLDER MASK DEFINED: the metal (dashed outline) extends under the mask beyond the solder mask opening by 0.05 MIN ALL AROUND; labels EXPOSED METAL, METAL UNDER SOLDER MASK, SOLDER MASK OPENING.",
+    "evidence": "PDF p29 solder mask details: these are top views of one pad, not 'cross-sectional views'; in the SMD view the dashed outline is the metal under the mask. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p30-title-heading-level",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 30,
+    "old": "{29}------------------------------------------------\n\n#### EXAMPLE STENCIL DESIGN\n",
+    "new": "{29}------------------------------------------------\n\n### EXAMPLE STENCIL DESIGN\n",
+    "evidence": "PDF p30 title block: 'EXAMPLE STENCIL DESIGN' set at the same level as the p29 'EXAMPLE BOARD LAYOUT' title (### as in tps63802 p35-p37).",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p30-stencil-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 30,
+    "old": "![Solder paste stencil design for a UQFN package. The diagram shows a 4x4 grid of rectangular apertures. The top-left pin (1) is labeled with dimensions 16X (0.2) and 12X (0.4). The bottom-left pin (5) is labeled with 15X (0.6). The right side of the grid is labeled with SYMM and a centerline symbol. The overall width is (1.6) and the overall height is (2.4). Pin numbers 1, 4, 5, 8, 9, 12, 13, and 16 are indicated. A note (R0.05) TYP points to the rounded corners of the apertures.](744acfe8d4e31bcf03f95714c2f6e567_img.jpg)\n\nSolder paste stencil design for a UQFN package. The diagram shows a 4x4 grid of rectangular apertures. The top-left pin (1) is labeled with dimensions 16X (0.2) and 12X (0.4). The bottom-left pin (5) is labeled with 15X (0.6). The right side of the grid is labeled with SYMM and a centerline symbol. The overall width is (1.6) and the overall height is (2.4). Pin numbers 1, 4, 5, 8, 9, 12, 13, and 16 are indicated. A note (R0.05) TYP points to the rounded corners of the apertures.",
+    "new": "![SOLDER PASTE EXAMPLE for the RSV0016A UQFN (description written from the drawing; dimensions in mm, for reference). Sixteen rounded-rectangle apertures, one per pad, in the same perimeter arrangement as the land pattern: 1-4 on the left (1 at the top), 5-8 along the bottom, 9-12 on the right, 13-16 along the top (16 at the left). Aperture 1 is (0.7) long, the others 15X (0.6); all 16X (0.2) wide with (R0.05) TYP corners; pitch 12X (0.4); (1.6) between the left and right aperture centerlines and (2.4) between the top and bottom aperture centerlines. SYMM centerlines in both directions.](744acfe8d4e31bcf03f95714c2f6e567_img.jpg)\n\nSOLDER PASTE EXAMPLE for the RSV0016A UQFN (description written from the drawing; dimensions in mm, for reference). Sixteen rounded-rectangle apertures, one per pad, in the same perimeter arrangement as the land pattern: 1-4 on the left (1 at the top), 5-8 along the bottom, 9-12 on the right, 13-16 along the top (16 at the left). Aperture 1 is (0.7) long, the others 15X (0.6); all 16X (0.2) wide with (R0.05) TYP corners; pitch 12X (0.4); (1.6) between the left and right aperture centerlines and (2.4) between the top and bottom aperture centerlines. SYMM centerlines in both directions.",
+    "evidence": "PDF p30 stencil: perimeter apertures (not a '4x4 grid'); 16X (0.2) is the aperture width, 15X (0.6) the length and (0.7) the aperture 1 length; (1.6)/(2.4) are centerline spacings, not 'overall width/height'. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p31-dgv-outline-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 31,
+    "old": "The figure shows the mechanical dimensions for the DGV (R-PDSO-G\\*\\*) package. The top view shows a 24-pin package with pin 1 at the bottom left and pin 12 at the bottom right. The body width is labeled 'A'. Dimensions for the body width are 4,50 / 4,30 and 6,60 / 6,20. The pin pitch is 0,40. The pin length is 0,23 / 0,13. A position tolerance of 0,07 (M) is specified for the pin locations. The side view shows the package height as 1,20 MAX and the pin height as 0,15 / 0,05. The seating plane is indicated. A detail view shows the pin profile with a gage plane, a 0°-8° angle, and dimensions 0,16 NOM, 0,25, 0,75 / 0,50. A flatness tolerance of 0,08 is specified for the seating plane.",
+    "new": "The figure shows the DGV (R-PDSO-G\\*\\*) package outline, 24 pins shown (description written from the drawing; dimensions in mm). Top view: pins 1-12 along the bottom (1 at the left) and 13-24 along the top (24 at the left), pin 1 marked by a circle on the body. Body length A along the pin rows (value per pin count in the table below). Body width 4,50 / 4,30, width across the leads 6,60 / 6,20. Lead pitch 0,40 (boxed), lead width 0,23 / 0,13 with a position tolerance 0,07 Ⓜ. Side view: height 1,20 MAX, standoff 0,15 / 0,05, coplanarity 0,08 to the Seating Plane. Lead detail: 0,16 NOM lead thickness, Gage Plane 0,25 above the seating plane, lead angle 0°–8°, foot length 0,75 / 0,50.",
+    "evidence": "PDF p31 DGV drawing: A is the body length along the pin rows (per the PINS ** table), not the body width; 0,23/0,13 is the lead width, not the 'pin length'; 0,15/0,05 is the standoff; 0,08 is a coplanarity (profile) tolerance, not flatness; 0,16 NOM is the lead thickness, 0,25 the gage plane height and 0,75/0,50 the foot length. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p32-pw-outline-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 32,
+    "old": "The drawing shows a 16-pin TSSOP surface-mount package outline with the following dimension details:\n\n- Top View:**\n  - Body width (including leads): 6.6 / 6.2 TYP\n  - Body length: 5.1 / 4.9 (NOTE 3)\n  - Body width (plastic body): 4.5 / 4.3 (NOTE 4)\n  - Lead pitch: 14X 0.65 (total span 2X 4.55)\n  - Lead width: 16X 0.30 / 0.17 with positional tolerance of 0.1(M) | C | A | B\n  - PIN 1 INDEX AREA indicated in corner.\n  - Datum references A and B.\n- End / Side View:**\n  - Overall height: 1.2 MAX\n  - Seating Plane Datum C with flatness / coplanarity 0.1 C\n  - Body draft angle: 4X (0° - 12°)\n  - Lead thickness / standoff detail reference: (0.15) TYP\n  - Reference to SEE DETAIL A\n- Detail A (Typical Lead Form):**\n  - Gage plane offset: 0.25\n  - Lead foot flat length: 0.75 / 0.50\n  - Lead angle: 0° - 8°\n  - Lead thickness at base: 0.15 / 0.05",
+    "new": "The drawing shows the PW0016A 16-pin TSSOP package outline (description written from the drawing; dimensions in mm):\n\n- Top view: pins 1-8 on the left side (1 at the top) and 9-16 on the right side (16 at the top), PIN 1 INDEX AREA in the upper-left corner of the body. Width across the leads 6.6 / 6.2 TYP; body length 5.1 / 4.9 (NOTE 3, datum A); body width 4.5 / 4.3 (NOTE 4, datum B). Lead pitch 14X 0.65 (boxed), 2X 4.55 (boxed) between the pin 1 and pin 8 (and pin 9 and pin 16) centerlines. Lead width 16X 0.30 / 0.17 with position tolerance 0.1 Ⓜ C A B.\n- End view: height 1.2 MAX, body draft 4X (0° -12° ), coplanarity 0.1 C to the SEATING PLANE (datum C).\n- Side view: lead thickness (0.15) TYP; SEE DETAIL A.\n- DETAIL A (TYPICAL, scale 20X): GAGE PLANE 0.25 (boxed), standoff 0.15 / 0.05, foot length 0.75 / 0.50, lead angle 0° -8°.",
+    "evidence": "PDF p32 PW0016A outline: (0.15) TYP is the lead thickness and 0.15/0.05 in Detail A is the standoff (the AI text had them swapped); 0.1 C is a coplanarity frame, not flatness; the bullets had stray '**'. Rewritten from the drawing and the PDF text layer.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p32-pw-3d-alt",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 32,
+    "old": "![A 3D rendering of a black integrated circuit (IC) component with 16 pins, arranged in two rows of eight. The pins are silver-colored and extend from the bottom of the black rectangular body.]",
+    "new": "![A 3D rendering of the black 16-pin TSSOP package with two rows of eight silver gull-wing leads along its long sides.]",
+    "evidence": "PDF p32 title-block rendering: the leads are gull-wing leads on the two long sides, not extending 'from the bottom'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p32-pw-3d-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 32,
+    "old": "\n\nA 3D rendering of a black integrated circuit (IC) component with 16 pins, arranged in two rows of eight. The pins are silver-colored and extend from the bottom of the black rectangular body.\n",
+    "new": "\n\nA 3D rendering of the black 16-pin TSSOP package with two rows of eight silver gull-wing leads along its long sides.\n",
+    "evidence": "PDF p32 title-block rendering: the leads are gull-wing leads on the two long sides, not extending 'from the bottom'.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p33-pw-land-pattern-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 33,
+    "old": "![LAND PATTERN EXAMPLE diagram showing a top-down view of a TSSOP package layout. The package is 5.8 mm wide and 16 mm long. It features 8 pins on each side, numbered 1-8 on the left and 9-16 on the right. Dimensions include 16X (1.5) for pin pitch, 16X (0.45) for pad pitch, and 14X (0.65) for the central pad pitch. Symmetry lines (SYMM) are shown horizontally and vertically. A note indicates (R0.05) TYP for the corner radius of the pads.](3e2a8dc8c5537dbe703cdcb0e21e4e1b_img.jpg)\n\nLAND PATTERN EXAMPLE diagram showing a top-down view of a TSSOP package layout. The package is 5.8 mm wide and 16 mm long. It features 8 pins on each side, numbered 1-8 on the left and 9-16 on the right. Dimensions include 16X (1.5) for pin pitch, 16X (0.45) for pad pitch, and 14X (0.65) for the central pad pitch. Symmetry lines (SYMM) are shown horizontally and vertically. A note indicates (R0.05) TYP for the corner radius of the pads.",
+    "new": "![LAND PATTERN EXAMPLE for the PW0016A TSSOP (description written from the drawing; dimensions in mm, for reference). Two columns of eight rounded-rectangle pads: 1-8 on the left (1 at the top), 9-16 on the right (16 at the top). Pads 16X (1.5) long and 16X (0.45) wide with (R0.05) TYP corners; pitch 14X (0.65); (5.8) between the left and right pad centerlines. SYMM centerlines in both directions.](3e2a8dc8c5537dbe703cdcb0e21e4e1b_img.jpg)\n\nLAND PATTERN EXAMPLE for the PW0016A TSSOP (description written from the drawing; dimensions in mm, for reference). Two columns of eight rounded-rectangle pads: 1-8 on the left (1 at the top), 9-16 on the right (16 at the top). Pads 16X (1.5) long and 16X (0.45) wide with (R0.05) TYP corners; pitch 14X (0.65); (5.8) between the left and right pad centerlines. SYMM centerlines in both directions.",
+    "evidence": "PDF p33 land pattern: 16X (1.5) is the pad length and 16X (0.45) the pad width (not pitches), 14X (0.65) is the pitch and (5.8) the spacing between the pad-column centerlines; the AI text invented a '5.8 mm wide and 16 mm long' package. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p33-pw-nsmd-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 33,
+    "old": "![Solder mask detail diagram for 'NON-SOLDER MASK DEFINED (PREFERRED)'. It shows a rectangular pad with a green border representing the exposed metal. A blue line indicates the 'SOLDER MASK OPENING' which is slightly larger than the pad. Labels include 'SOLDER MASK OPENING', 'METAL', 'EXPOSED METAL', and '0.05 MAX ALL AROUND'.](dbbc0baac7341cda76cc4f8355dce23f_img.jpg)\n\nSolder mask detail diagram for 'NON-SOLDER MASK DEFINED (PREFERRED)'. It shows a rectangular pad with a green border representing the exposed metal. A blue line indicates the 'SOLDER MASK OPENING' which is slightly larger than the pad. Labels include 'SOLDER MASK OPENING', 'METAL', 'EXPOSED METAL', and '0.05 MAX ALL AROUND'.",
+    "new": "![Solder mask detail 'NON-SOLDER MASK DEFINED (PREFERRED)' (description written from the drawing): top view of one pad; the SOLDER MASK OPENING (outer outline) surrounds the METAL pad with 0.05 MAX ALL AROUND, so the whole pad is EXPOSED METAL.](dbbc0baac7341cda76cc4f8355dce23f_img.jpg)\n\nSolder mask detail 'NON-SOLDER MASK DEFINED (PREFERRED)' (description written from the drawing): top view of one pad; the SOLDER MASK OPENING (outer outline) surrounds the METAL pad with 0.05 MAX ALL AROUND, so the whole pad is EXPOSED METAL.",
+    "evidence": "PDF p33: in the NSMD detail the outer (green) outline is the solder mask opening and the inner (blue) outline the metal; the AI text had the colors and roles swapped. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ts3a5018-p33-pw-smd-description",
+    "file": "output/ts3a5018/ts3a5018.md",
+    "page": 33,
+    "old": "![Solder mask detail diagram for 'SOLDER MASK DEFINED'. It shows a rectangular pad with a green border representing the exposed metal. A blue dashed line indicates the 'SOLDER MASK OPENING' which is slightly smaller than the pad. Labels include 'METAL UNDER SOLDER MASK', 'SOLDER MASK OPENING', 'EXPOSED METAL', and '0.05 MIN ALL AROUND'.](b904ac2472cab80892d1e783e6230d6e_img.jpg)\n\nSolder mask detail diagram for 'SOLDER MASK DEFINED'. It shows a rectangular pad with a green border representing the exposed metal. A blue dashed line indicates the 'SOLDER MASK OPENING' which is slightly smaller than the pad. Labels include 'METAL UNDER SOLDER MASK', 'SOLDER MASK OPENING', 'EXPOSED METAL', and '0.05 MIN ALL AROUND'.",
+    "new": "![Solder mask detail 'SOLDER MASK DEFINED' (description written from the drawing): top view of one pad; the metal (dashed outline, METAL UNDER SOLDER MASK) extends 0.05 MIN ALL AROUND beyond the SOLDER MASK OPENING, which defines the EXPOSED METAL.](b904ac2472cab80892d1e783e6230d6e_img.jpg)\n\nSolder mask detail 'SOLDER MASK DEFINED' (description written from the drawing): top view of one pad; the metal (dashed outline, METAL UNDER SOLDER MASK) extends 0.05 MIN ALL AROUND beyond the SOLDER MASK OPENING, which defines the EXPOSED METAL.",
+    "evidence": "PDF p33: in the SMD detail the dashed outline is the metal under the solder mask and the solid outline the (smaller) solder mask opening; the AI text called the dashed line the opening. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
