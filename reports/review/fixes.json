@@ -24977,5 +24977,83 @@
       "pdftotext"
     ],
     "severity": "low"
+  },
+  {
+    "id": "tps22990-p31-outline-description",
+    "file": "output/tps22990/tps22990.md",
+    "page": 31,
+    "old": "The figure shows the package outline for the DML0010A WSON package. It includes the following views and dimensions:\n\n- Top View:** Shows a rectangular package with a width of 2.1 mm (1.9 mm) and a length of 3.1 mm (2.9 mm). A shaded area in the top-left corner is labeled \"PIN 1 INDEX AREA\".\n- Side View:** Shows the package profile with a maximum height of 0.8 mm. It indicates the \"SEATING PLANE\" and a flatness tolerance of 0.08 relative to the seating plane.\n- Bottom View:** Shows the package from below, including the \"EXPOSED THERMAL PAD\". Dimensions include a width of 1.1 ± 0.1 mm, a total width of 2.6 ± 0.1 mm, and a length of 10 mm. It specifies pin spacing of 0.5 mm (5X) and 0.125 mm (2X). Callouts for pin 1 and pin 6 are shown with position tolerances of 0.1 (Maximum Material Condition) and 0.05 (Maximum Material Condition) relative to datums C, A, and B.\n- End View:** Shows the package from the side with a thickness of 0.05 mm (0.00 to 0.2 mm typical).",
+    "new": "The figure shows the package outline for the DML0010A WSON package (all dimensions in mm):\n\n- Top View: body 2.1/1.9 wide (datum B) and 3.1/2.9 long (datum A); a dotted \"PIN 1 INDEX AREA\" in the top-left corner.\n- Side View: 0.8 MAX height above the \"SEATING PLANE\" (datum C), with a 0.08 C surface-profile tolerance on the terminals.\n- Bottom View: pins 1-5 on the left side and pins 6-10 on the right side; the \"EXPOSED THERMAL PAD\" is 1.1±0.1 wide and 2.6±0.1 long, with a chamfered corner next to pin 1 marked \"PIN 1 ID (OPTIONAL)\". Pin pitch 5X 0.5 (basic); basic dimensions 2 (pins 1 to 5) and 1 (pin 6 to the package centerline), a 0.02 offset at the centerline, and 2X 0.56 (basic) for the pins 8-10 group. Terminal widths 7X 0.29/0.19 and 3X 0.33/0.23, each with a position tolerance of 0.1 Ⓜ C A Ⓢ B Ⓢ and 0.05 Ⓜ (C for the 3X group); terminal lengths 7X 0.35/0.15 and 0.35/0.15, with 2X (0.125) for reference. PKG centerlines are marked in both directions.\n- End View: terminal standoff 0.05/0.00 and (0.2) TYP terminal thickness.",
+    "evidence": "PDF p31 DML0010A outline drawing: the AI text read the pin number '10' as a '10 mm' length, the 0.05/0.00 standoff and (0.2) TYP as a thickness range, gave min/max pairs as '(1.9 mm)' alternatives and position tolerances as applying to pins 1 and 6 only. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps22990-p31-title-block",
+    "file": "output/tps22990/tps22990.md",
+    "page": 31,
+    "old": "{30}------------------------------------------------\n\n![3D perspective view of the WSON package.]",
+    "new": "{30}------------------------------------------------\n\n### PACKAGE OUTLINE\n\nDML0010A\n\nWSON - 0.8 mm max height\n\nPLASTIC SMALL OUTLINE - NO LEAD\n\n![3D perspective view of the WSON package.]",
+    "evidence": "PDF p31 title block 'PACKAGE OUTLINE / DML0010A / WSON - 0.8 mm max height / PLASTIC SMALL OUTLINE - NO LEAD' was missing (p32/p33 carry theirs). The 0.79-pt 'SCALE 4.500' text is invisible and not transcribed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p32-land-pattern-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 32,
+    "old": "![LAND PATTERN EXAMPLE diagram showing a top-down view of a PCB layout for a WSON package. The package area is outlined in red dashed lines. Dimensions include 7X (0.45) for the package width, 7X (0.24) for the package height, 3X (0.45) for the package length, 2X (0.125) for the package width, 3X (0.28) for the package height, 10 for the package width, 2X (0.56) for the package height, (0.02) for the package width, 2X (1) for the package height, (1.1) for the package width, and (1.95) for the package length. Other labels include PKG, (R0.05) TYP, (Ø 0.2) VIA TYP, and 5, 6.]",
+    "new": "![LAND PATTERN EXAMPLE diagram (top view, all dimensions in mm for reference). Pads 1-5 on the left and pads 6 and 7 on the right are rounded rectangles, 7X (0.45) long and 7X (0.24) wide, at 5X (0.5) pitch, corner radius (R0.05) TYP; each has a green solder mask opening around the red metal (non solder mask defined). Pads 8-10 are drawn as one comb-shaped pad: 3X (0.45) long fingers, 3X (0.28) wide, spaced 2X (0.56), with a 2X (0.125) dimension and a (0.02) offset from the PKG centerline. The central thermal pad is (1.1) wide and carries three (Ø 0.2) VIA TYP on the PKG centerline; the thermal pad and pads 8-10 have red dashed metal outlines outside the green solder mask opening (solder mask defined). Other dimensions: (2.6) overall pad-field height, (1.95) between the pad-row centerlines, 2X (1) from the PKG centerline to pin 6 and to the thermal pad edge. Pin numbers 1, 5, 6 and 10 are marked.]",
+    "evidence": "PDF p32 land pattern drawing: the AI text assigned every dimension to 'the package width/height', read pin number 10 as a dimension and said 'red dashed lines' outline the package; pads 8-10 form one comb-shaped solder-mask-defined pad. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p32-land-pattern-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 32,
+    "old": "\n\nLAND PATTERN EXAMPLE diagram showing a top-down view of a PCB layout for a WSON package. The package area is outlined in red dashed lines. Dimensions include 7X (0.45) for the package width, 7X (0.24) for the package height, 3X (0.45) for the package length, 2X (0.125) for the package width, 3X (0.28) for the package height, 10 for the package width, 2X (0.56) for the package height, (0.02) for the package width, 2X (1) for the package height, (1.1) for the package width, and (1.95) for the package length. Other labels include PKG, (R0.05) TYP, (Ø 0.2) VIA TYP, and 5, 6.\n",
+    "new": "\n\nLAND PATTERN EXAMPLE diagram (top view, all dimensions in mm for reference). Pads 1-5 on the left and pads 6 and 7 on the right are rounded rectangles, 7X (0.45) long and 7X (0.24) wide, at 5X (0.5) pitch, corner radius (R0.05) TYP; each has a green solder mask opening around the red metal (non solder mask defined). Pads 8-10 are drawn as one comb-shaped pad: 3X (0.45) long fingers, 3X (0.28) wide, spaced 2X (0.56), with a 2X (0.125) dimension and a (0.02) offset from the PKG centerline. The central thermal pad is (1.1) wide and carries three (Ø 0.2) VIA TYP on the PKG centerline; the thermal pad and pads 8-10 have red dashed metal outlines outside the green solder mask opening (solder mask defined). Other dimensions: (2.6) overall pad-field height, (1.95) between the pad-row centerlines, 2X (1) from the PKG centerline to pin 6 and to the thermal pad edge. Pin numbers 1, 5, 6 and 10 are marked.\n",
+    "evidence": "PDF p32 land pattern drawing: the AI text assigned every dimension to 'the package width/height', read pin number 10 as a dimension and said 'red dashed lines' outline the package; pads 8-10 form one comb-shaped solder-mask-defined pad. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p33-stencil-alt",
+    "file": "output/tps22990/tps22990.md",
+    "page": 33,
+    "old": "![Technical drawing of a solder mask for a WSON package. The drawing shows a central package area (PKG) with exposed metal and solder mask edges. Dimensions are provided for various features, including 7X (0.45), 7X (0.24), 5X (0.5), 2X (1.038), 3X (0.45), 3X (0.28), 2X (0.56), 2X (0.674), and 2X (1.148). Labels include 'SOLDER MASK EDGE, TYP', 'EXPOSED METAL', 'PKG', 'METAL UNDER SOLDER MASK TYP', and '(R0.05) TYP'. The drawing is a top-down view of the package and its surrounding area, showing the layout of the solder mask and the exposed metal areas.]",
+    "new": "![Solder paste (stencil) example for the WSON package, top view, all dimensions in mm for reference; red outlines are the stencil apertures. Pins 1-5 (left) and 6, 7 (right) have rounded-rectangle apertures 7X (0.45) long and 7X (0.24) wide at 5X (0.5) pitch, corner radius (R0.05) TYP. Pads 8-10 have 3X (0.45) by 3X (0.28) apertures spaced 2X (0.56), with a (0.02) offset from the PKG centerline; the copper between them is labeled '2X EXPOSED METAL' and the area around them 'METAL UNDER SOLDER MASK TYP'. The thermal pad paste is split into two apertures, 2X (1.038) wide and 2X (1.148) long, centered 2X (0.674) from the PKG centerline on either side of the middle via; 'EXPOSED METAL TYP' and 'SOLDER MASK EDGE, TYP' (green) mark the thermal pad copper and mask opening, with 'METAL UNDER SOLDER MASK TYP' around it. (1.95) is the distance between the pad-row centerlines.]",
+    "evidence": "PDF p33 stencil drawing: the figure is a SOLDER PASTE EXAMPLE (stencil apertures), not a solder mask drawing; the thermal pad paste is two 1.038 x 1.148 apertures at 0.674 from the centerline. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps22990-p33-stencil-desc",
+    "file": "output/tps22990/tps22990.md",
+    "page": 33,
+    "old": "\n\nTechnical drawing of a solder mask for a WSON package. The drawing shows a central package area (PKG) with exposed metal and solder mask edges. Dimensions are provided for various features, including 7X (0.45), 7X (0.24), 5X (0.5), 2X (1.038), 3X (0.45), 3X (0.28), 2X (0.56), 2X (0.674), and 2X (1.148). Labels include 'SOLDER MASK EDGE, TYP', 'EXPOSED METAL', 'PKG', 'METAL UNDER SOLDER MASK TYP', and '(R0.05) TYP'. The drawing is a top-down view of the package and its surrounding area, showing the layout of the solder mask and the exposed metal areas.\n",
+    "new": "\n\nSolder paste (stencil) example for the WSON package, top view, all dimensions in mm for reference; red outlines are the stencil apertures. Pins 1-5 (left) and 6, 7 (right) have rounded-rectangle apertures 7X (0.45) long and 7X (0.24) wide at 5X (0.5) pitch, corner radius (R0.05) TYP. Pads 8-10 have 3X (0.45) by 3X (0.28) apertures spaced 2X (0.56), with a (0.02) offset from the PKG centerline; the copper between them is labeled '2X EXPOSED METAL' and the area around them 'METAL UNDER SOLDER MASK TYP'. The thermal pad paste is split into two apertures, 2X (1.038) wide and 2X (1.148) long, centered 2X (0.674) from the PKG centerline on either side of the middle via; 'EXPOSED METAL TYP' and 'SOLDER MASK EDGE, TYP' (green) mark the thermal pad copper and mask opening, with 'METAL UNDER SOLDER MASK TYP' around it. (1.95) is the distance between the pad-row centerlines.\n",
+    "evidence": "PDF p33 stencil drawing: the figure is a SOLDER PASTE EXAMPLE (stencil apertures), not a solder mask drawing; the thermal pad paste is two 1.038 x 1.148 apertures at 0.674 from the centerline. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
   }
 ]
