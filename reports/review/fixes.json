@@ -21655,5 +21655,447 @@
       "pymupdf-text"
     ],
     "severity": "low"
+  },
+  {
+    "id": "ltc2975-p96-single-phase-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 96,
+    "old": "\n### Single Phase Design Example\n",
+    "new": "\n#### Single Phase Design Example\n",
+    "evidence": "PDF p96 (PyMuPDF spans): bold title-case 11.7pt subhead (H4), same style as 'Multiphase Design Example' (already H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p96-multiphase-currents-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 96,
+    "old": "\n### Measuring Multiphase Currents\n",
+    "new": "\n#### Measuring Multiphase Currents\n",
+    "evidence": "PDF p96 (PyMuPDF spans): bold title-case 11.7pt subhead (H4), same style as 'Multiphase Design Example' (already H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p96-anti-aliasing-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 96,
+    "old": "\n### Anti-aliasing Filter Considerations\n",
+    "new": "\n#### Anti-aliasing Filter Considerations\n",
+    "evidence": "PDF p96 (PyMuPDF spans): bold title-case 11.7pt subhead (H4), same style as 'Multiphase Design Example' (already H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p96-column-split",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 96,
+    "old": "The current sense waveforms are averaged\n\ntogether prior",
+    "new": "The current sense waveforms are averaged together prior",
+    "evidence": "PDF p96: the sentence 'The current sense waveforms are averaged / together prior to being applied...' continues from the left to the right column; the md split it into two paragraphs.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p96-r40-c10-no-subscript",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 96,
+    "old": "Keep  $R_{40} = R_{50} \\leq 200\\Omega$  to minimize ADC gain errors, and select a value for capacitors  $C_{10}$  and  $C_{20}$  that",
+    "new": "Keep R40 = R50 ≤ 200Ω to minimize ADC gain errors, and select a value for capacitors C10 and C20 that",
+    "evidence": "PDF p96 (PyMuPDF spans: one 11.7pt span per line) and Figure 40 labels: 'R40 = R50 ≤ 200Ω' and 'C10 and C20' are part designators printed at full size, not R with subscript 40/50 or C with subscript 10/20.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p96-fig39-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 96,
+    "old": "\nFigure 39. Multiphase DCR Current Sensing Circuits\n",
+    "new": "\n**Figure 39. Multiphase DCR Current Sensing Circuits**\n",
+    "evidence": "PDF p96: the caption 'Figure 39. Multiphase DCR Current Sensing Circuits' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p97-fig40-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "![Figure 40: Anti-Aliasing Filter on VSENSE Lines. This circuit diagram shows the LTC2975* connected to a DC/DC converter. The LTC2975* has pins V_PWR, V_IN_SNS, V_DAC0, V_SENSEP0, V_SENSEM0, V_OUT_EN0, and GND. The DC/DC converter has pins V_IN, V_OUT, V_FB, SGND, RUN/SS, and GND. The anti-aliasing filter consists of resistors R40, R50, R20, R30, and R10, and capacitors C10, C20, and 0.1µF capacitors on the V_PWR and V_DAC0 pins. A note states: '*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.](",
+    "new": "![Figure 40. Anti-Aliasing Filter on VSENSE Lines (description written from the PDF drawing). The bus 4.5V < V_IBUS < 15V connects to V_PWR and V_IN_SNS of the LTC2975* and to V_IN of the DC/DC CONVERTER. The two V_DD33 pins are tied together with a 0.1µF capacitor to ground; V_DD25 has a 0.1µF capacitor to ground. The anti-aliasing filter: V_SENSEP0 connects through R40 to the positive side of the LOAD and V_SENSEM0 through R50 to its grounded side; C10 (from V_SENSEP0) and C20 (from V_SENSEM0) go to a common ground node. The converter output V_OUT feeds the LOAD; the feedback divider R20 (from V_OUT) / R10 (to SGND) sets V_FB, and V_DAC0 connects through R30 to the V_FB node. V_OUT_EN0 drives RUN/SS. Note: '*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'. Drawing number 2975 F40.](",
+    "evidence": "PDF p97 Figure 40 (render at 200 dpi): the filter is R40/R50 with C10/C20 on the V_SENSE lines; R20, R10 and R30 are the feedback/DAC network, not part of the filter; the two 0.1µF capacitors are on V_DD33 and V_DD25, not on V_PWR and V_DAC0. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p97-fig40-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "\nFigure 40: Anti-Aliasing Filter on VSENSE Lines. This circuit diagram shows the LTC2975\\* connected to a DC/DC converter. The LTC2975\\* has pins V\\_PWR, V\\_IN\\_SNS, V\\_DAC0, V\\_SENSEP0, V\\_SENSEM0, V\\_OUT\\_EN0, and GND. The DC/DC converter has pins V\\_IN, V\\_OUT, V\\_FB, SGND, RUN/SS, and GND. The anti-aliasing filter consists of resistors R40, R50, R20, R30, and R10, and capacitors C10, C20, and 0.1µF capacitors on the V\\_PWR and V\\_DAC0 pins. A note states: '\\*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'.\n",
+    "new": "\nFigure 40. Anti-Aliasing Filter on VSENSE Lines (description written from the PDF drawing). The bus 4.5V < V_IBUS < 15V connects to V_PWR and V_IN_SNS of the LTC2975* and to V_IN of the DC/DC CONVERTER. The two V_DD33 pins are tied together with a 0.1µF capacitor to ground; V_DD25 has a 0.1µF capacitor to ground. The anti-aliasing filter: V_SENSEP0 connects through R40 to the positive side of the LOAD and V_SENSEM0 through R50 to its grounded side; C10 (from V_SENSEP0) and C20 (from V_SENSEM0) go to a common ground node. The converter output V_OUT feeds the LOAD; the feedback divider R20 (from V_OUT) / R10 (to SGND) sets V_FB, and V_DAC0 connects through R30 to the V_FB node. V_OUT_EN0 drives RUN/SS. Note: '*SOME DETAILS OMITTED FOR CLARITY ONLY ONE OF FOUR CHANNELS SHOWN'. Drawing number 2975 F40.\n",
+    "evidence": "Same as ltc2975-p97-fig40-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p97-fig40-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "\nFigure 40. Anti-Aliasing Filter on VSENSE Lines\n",
+    "new": "\n**Figure 40. Anti-Aliasing Filter on VSENSE Lines**\n",
+    "evidence": "PDF p97: the caption 'Figure 40. Anti-Aliasing Filter on VSENSE Lines' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p97-fig41-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "\nFigure 41. Sensing Negative Voltages\n",
+    "new": "\n**Figure 41. Sensing Negative Voltages**\n",
+    "evidence": "PDF p97: the caption 'Figure 41. Sensing Negative Voltages' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p97-sensing-negative-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "\n### Sensing Negative Voltages\n",
+    "new": "\n#### Sensing Negative Voltages\n",
+    "evidence": "PDF p97 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p97-can-be-be-as-printed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "negative supply value can be expressed as:",
+    "new": "negative supply value can be be expressed as:",
+    "evidence": "PDF p97 (pdftotext + render): the text prints 'value can be / be expressed as:' with 'be' repeated across the line break; manufacturer typo kept as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p97-dc1613-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "\n### Connecting the DC1613 USB to I<sup>2</sup>C/SMBus/PMBus Controller to the LTC2975 in System\n",
+    "new": "\n#### Connecting the DC1613 USB to I<sup>2</sup>C/SMBus/PMBus Controller to the LTC2975 in System\n",
+    "evidence": "PDF p97 (PyMuPDF spans): bold title-case 11.7pt subhead (H4).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p97-rev-d-footer-removed",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 97,
+    "old": "stored to the LTC2975's EEPROM.\n\nRev. D\n",
+    "new": "stored to the LTC2975's EEPROM.\n",
+    "evidence": "PDF p97: 'Rev. D' is the running footer printed on every page (6.3pt, above the bottom rule), not content; it leaked into the md on this page.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p98-accurate-dcr-heading-level",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 98,
+    "old": "\n## ACCURATE DCR TEMPERATURE COMPENSATION\n",
+    "new": "\n### ACCURATE DCR TEMPERATURE COMPENSATION\n",
+    "evidence": "PDF p98 (PyMuPDF spans): 'ACCURATE DCR TEMPERATURE COMPENSATION' is a LinearHelvCond-Bold 11.7pt caps subsection (H3), not the running section title.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p98-fig42-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 98,
+    "old": "![Circuit diagram showing ADI Controller Connections for LTC2975 when V_PWR is used. The diagram includes an isolated 3.3V source connected to an I2C/SMBus/PMBus controller. This controller is connected to an LTC2975* chip. Power is supplied to the LTC2975 via V_PWR (4.5V to 15V) and VDD33 (3.3V) pins. The LTC2975 is also connected to other LTC power system managers via SCL, SDA, and SHARE_CLK pins. Pull-up resistors (150k, 49.9k, 10k, 10k, 5.49k) and capacitors (0.1μF) are shown. A note indicates to repeat the outlined circuit for every LTC2975.](",
+    "new": "![Figure 42. ADI Controller Connections When V_PWR Is Used (description written from the PDF drawing). A 4-pin connector TO LTC USB TO I2C/SMBUS/PMBUS CONTROLLER carries ISOLATED 3.3V, SCL, GND (grounded) and SDA. Inside the dashed outline (REPEAT OUTLINED CIRCUIT FOR EVERY LTC2975): the 4.5V TO 15V bus feeds V_PWR of the LTC2975* (0.1µF to ground) and a 49.9k/150k divider to ground whose midpoint drives the gate of an NTS4173P P-channel MOSFET; the MOSFET passes the ISOLATED 3.3V to the two V_DD33 pins (tied together, 0.1µF to ground); V_DD25 has 0.1µF to ground; WP and GND are grounded. Outside the outline, the V_DD33 node (MOSFET output) has pull-ups 10k to SCL, 10k to SDA and 5.49k to SHARE_CLK; the ISOLATED 3.3V line, SCL, SDA, SHARE_CLK and the 4.5V TO 15V line continue TO/FROM OTHER LTC POWER SYSTEM MANAGERS. Note: '*PIN CONNECTIONS OMITTED FOR CLARITY'.](",
+    "evidence": "PDF p98 Figure 42 (render at 200 dpi): 150k and 49.9k are the NTS4173P gate divider from the 4.5V-15V bus, not pull-ups; V_DD33 is fed from the controller's ISOLATED 3.3V through the NTS4173P; the connector goes to the controller rather than an isolated source feeding a controller. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p98-fig42-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 98,
+    "old": "\nCircuit diagram showing ADI Controller Connections for LTC2975 when V\\_PWR is used. The diagram includes an isolated 3.3V source connected to an I2C/SMBus/PMBus controller. This controller is connected to an LTC2975\\* chip. Power is supplied to the LTC2975 via V\\_PWR (4.5V to 15V) and VDD33 (3.3V) pins. The LTC2975 is also connected to other LTC power system managers via SCL, SDA, and SHARE\\_CLK pins. Pull-up resistors (150k, 49.9k, 10k, 10k, 5.49k) and capacitors (0.1μF) are shown. A note indicates to repeat the outlined circuit for every LTC2975.\n",
+    "new": "\nFigure 42. ADI Controller Connections When V_PWR Is Used (description written from the PDF drawing). A 4-pin connector TO LTC USB TO I2C/SMBUS/PMBUS CONTROLLER carries ISOLATED 3.3V, SCL, GND (grounded) and SDA. Inside the dashed outline (REPEAT OUTLINED CIRCUIT FOR EVERY LTC2975): the 4.5V TO 15V bus feeds V_PWR of the LTC2975* (0.1µF to ground) and a 49.9k/150k divider to ground whose midpoint drives the gate of an NTS4173P P-channel MOSFET; the MOSFET passes the ISOLATED 3.3V to the two V_DD33 pins (tied together, 0.1µF to ground); V_DD25 has 0.1µF to ground; WP and GND are grounded. Outside the outline, the V_DD33 node (MOSFET output) has pull-ups 10k to SCL, 10k to SDA and 5.49k to SHARE_CLK; the ISOLATED 3.3V line, SCL, SDA, SHARE_CLK and the 4.5V TO 15V line continue TO/FROM OTHER LTC POWER SYSTEM MANAGERS. Note: '*PIN CONNECTIONS OMITTED FOR CLARITY'.\n",
+    "evidence": "Same as ltc2975-p98-fig42-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p98-fig42-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 98,
+    "old": "\nFigure 42. ADI Controller Connections When V<sub>PWR</sub> Is Used\n",
+    "new": "\n**Figure 42. ADI Controller Connections When V<sub>PWR</sub> Is Used**\n",
+    "evidence": "PDF p98: the Figure 42 caption is printed in LinearHelvCond-Bold 9.7pt like the other figure captions (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p99-fig43-description-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 99,
+    "old": "![Schematic diagram of ADI Controller Connections. The LTC4412 ideal diode controller is connected to a SYSTEM 3.3V rail. Its SENSE pin connects to the isolated 3.3V rail, and its GATE pin drives an NTS4173P MOSFET. The LTC2975* controller is connected to the isolated 3.3V rail and an OR'D 3.3V rail. It has pins for V_PWR, V_DD33, V_DD25, SCL, SDA, SHARE_CLK, WP, and GND. The isolated 3.3V rail is connected to an I²C/SMBUS/PMBUS controller. The OR'D 3.3V rail is connected to other LTC power system managers. 0.1µF capacitors are connected from the isolated 3.3V rail to ground. A note states: *PIN CONNECTIONS OMITTED FOR CLARITY. NOTE: LTC CONTROLLER I²C CONNECTIONS ARE OPTO-ISOLATED. ISOLATED 3.3V FROM LTC CONTROLLER CAN BE BACK DRIVEN AND WILL ONLY DRAW <10µA. ISOLATED 3.3V CURRENT LIMIT IS 100mA.](",
+    "new": "![Figure 43. ADI Controller Connections When LTC2975 Is Powered Directly from 3.3V (description written from the PDF drawing). SYSTEM 3.3V passes through an NTS4173P P-channel MOSFET to the OR'D 3.3V rail. An LTC4412 IDEAL DIODE controller has V_IN on SYSTEM 3.3V, SENSE on the OR'D 3.3V rail, GATE driving the NTS4173P gate, GND and CTL grounded, and STAT unconnected. The OR'D 3.3V rail feeds V_PWR and both V_DD33 pins of the LTC2975* (0.1µF to ground); V_DD25 has 0.1µF to ground; WP and GND are grounded. A 4-pin connector TO LTC USB TO I2C/SMBUS/PMBUS CONTROLLER carries ISOLATED 3.3V (tied to the OR'D 3.3V rail), SCL, GND (grounded) and SDA. Three pull-up resistors from the OR'D 3.3V rail go to SCL, SDA and SHARE_CLK, which run to the LTC2975* pins; the OR'D 3.3V, SCL, SDA and SHARE_CLK lines continue TO/FROM OTHER LTC POWER SYSTEM MANAGERS. Notes: '*PIN CONNECTIONS OMITTED FOR CLARITY'; 'NOTE: LTC CONTROLLER I2C CONNECTIONS ARE OPTO-ISOLATED / ISOLATED 3.3V FROM LTC CONTROLLER CAN BE BACK DRIVEN AND WILL ONLY DRAW <10µA / ISOLATED 3.3V CURRENT LIMIT IS 100mA'. Drawing number 2975 F43.](",
+    "evidence": "PDF p99 Figure 43 (render at 200 dpi): the LTC4412 SENSE pin is on the OR'D 3.3V rail (not the isolated rail); the 0.1µF capacitors are on V_DD33 and V_DD25 (not from the isolated rail); V_PWR/V_DD33 are on the OR'D 3.3V rail; the three pull-ups to SCL/SDA/SHARE_CLK and the LTC4412 V_IN/GND/CTL/STAT connections were missing. Rewritten from the drawing.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p99-fig43-description-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 99,
+    "old": "\nSchematic diagram of ADI Controller Connections. The LTC4412 ideal diode controller is connected to a SYSTEM 3.3V rail. Its SENSE pin connects to the isolated 3.3V rail, and its GATE pin drives an NTS4173P MOSFET. The LTC2975\\* controller is connected to the isolated 3.3V rail and an OR'D 3.3V rail. It has pins for V\\_PWR, V\\_DD33, V\\_DD25, SCL, SDA, SHARE\\_CLK, WP, and GND. The isolated 3.3V rail is connected to an I²C/SMBUS/PMBUS controller. The OR'D 3.3V rail is connected to other LTC power system managers. 0.1µF capacitors are connected from the isolated 3.3V rail to ground. A note states: \\*PIN CONNECTIONS OMITTED FOR CLARITY. NOTE: LTC CONTROLLER I²C CONNECTIONS ARE OPTO-ISOLATED. ISOLATED 3.3V FROM LTC CONTROLLER CAN BE BACK DRIVEN AND WILL ONLY DRAW <10µA. ISOLATED 3.3V CURRENT LIMIT IS 100mA.\n",
+    "new": "\nFigure 43. ADI Controller Connections When LTC2975 Is Powered Directly from 3.3V (description written from the PDF drawing). SYSTEM 3.3V passes through an NTS4173P P-channel MOSFET to the OR'D 3.3V rail. An LTC4412 IDEAL DIODE controller has V_IN on SYSTEM 3.3V, SENSE on the OR'D 3.3V rail, GATE driving the NTS4173P gate, GND and CTL grounded, and STAT unconnected. The OR'D 3.3V rail feeds V_PWR and both V_DD33 pins of the LTC2975* (0.1µF to ground); V_DD25 has 0.1µF to ground; WP and GND are grounded. A 4-pin connector TO LTC USB TO I2C/SMBUS/PMBUS CONTROLLER carries ISOLATED 3.3V (tied to the OR'D 3.3V rail), SCL, GND (grounded) and SDA. Three pull-up resistors from the OR'D 3.3V rail go to SCL, SDA and SHARE_CLK, which run to the LTC2975* pins; the OR'D 3.3V, SCL, SDA and SHARE_CLK lines continue TO/FROM OTHER LTC POWER SYSTEM MANAGERS. Notes: '*PIN CONNECTIONS OMITTED FOR CLARITY'; 'NOTE: LTC CONTROLLER I2C CONNECTIONS ARE OPTO-ISOLATED / ISOLATED 3.3V FROM LTC CONTROLLER CAN BE BACK DRIVEN AND WILL ONLY DRAW <10µA / ISOLATED 3.3V CURRENT LIMIT IS 100mA'. Drawing number 2975 F43.\n",
+    "evidence": "Same as ltc2975-p99-fig43-description-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "ltc2975-p99-fig43-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 99,
+    "old": "\nFigure 43. ADI Controller Connections When LTC2975 Is Powered Directly from 3.3V\n",
+    "new": "\n**Figure 43. ADI Controller Connections When LTC2975 Is Powered Directly from 3.3V**\n",
+    "evidence": "PDF p99: the caption 'Figure 43. ADI Controller Connections When LTC2975 Is Powered Directly from 3.3V' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p99-fig44-inductor-label-alt",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 99,
+    "old": "![Thermal image of a DC/DC converter. The left side shows a thermal map with temperature labels: Switcher (35.9), Inductor (31.5), and Ts (29.8). A color scale on the right ranges from 23.0 to 37.0 °C. The right side shows a photograph of the PCB with labels for LTC3601, INDuctor, and TEMPERATURE SENSOR.](",
+    "new": "![Thermal image of a DC/DC converter. The left side shows a thermal map with temperature labels: Switcher (35.9), Inductor (31.5), and Ts (29.8). A color scale on the right ranges from 23.0 to 37.0 °C. The right side shows a photograph of the PCB with labels for LTC3601, INDUCTOR, and TEMPERATURE SENSOR.](",
+    "evidence": "PDF p99 Figure 44 (render): the photo label is 'INDUCTOR' in capitals, not 'INDuctor'.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p99-fig44-inductor-label-desc",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 99,
+    "old": "\nThermal image of a DC/DC converter. The left side shows a thermal map with temperature labels: Switcher (35.9), Inductor (31.5), and Ts (29.8). A color scale on the right ranges from 23.0 to 37.0 °C. The right side shows a photograph of the PCB with labels for LTC3601, INDuctor, and TEMPERATURE SENSOR.\n",
+    "new": "\nThermal image of a DC/DC converter. The left side shows a thermal map with temperature labels: Switcher (35.9), Inductor (31.5), and Ts (29.8). A color scale on the right ranges from 23.0 to 37.0 °C. The right side shows a photograph of the PCB with labels for LTC3601, INDUCTOR, and TEMPERATURE SENSOR.\n",
+    "evidence": "Same as ltc2975-p99-fig44-inductor-label-alt (repeated description paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p99-fig44-caption-bold",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 99,
+    "old": "\nFigure 44. Thermal Image of a DC/DC Converter Showing the Difference Between the Actual Inductor Temperature and the Temperature Sensing Point\n",
+    "new": "\n**Figure 44. Thermal Image of a DC/DC Converter Showing the Difference Between the Actual Inductor Temperature and the Temperature Sensing Point**\n",
+    "evidence": "PDF p99: the caption 'Figure 44. Thermal Image of a DC/DC Converter Showing the Difference Between the Actual Inductor Temperature and the Temperature Sensing Point' is printed in LinearHelvCond-Bold 9.7pt like the other figure captions; the md had it as plain text (convention: bold caption paragraph).",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-1",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "$$R_I = R_0 (1 + \\alpha [T_S - T_{REF} + \\theta_{IS} V_{DCR} I_{OUT}]) \\quad (1.2)$$",
+    "new": "$$R_I = R0 (1 + \\alpha [T_S - T_{REF} + \\theta_{IS} V_{DCR} I_{OUT}]) \\quad (1.2)$$",
+    "evidence": "PDF p100 (PyMuPDF spans + 300 dpi render): the indices in R0, R1, R2, I1, I2, T1, T2, P1, P2, V1, V2, a1, a2 are printed at full size on the baseline (e.g. 'R0 (1 + α [TS – TREF ...', 'R0 = (R2 – R1)(P2 + P1)...', 'from I1R1 to I2R1', 'a1 + a2t'), unlike the real subscripts T_S, T_I, T_REF, θ_IS, R_K, P_K, which are kept. The md subscripted them.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-2",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "In these equations,  $V_{DCR}$  is the inductor DC voltage drop,  $I_{OUT}$  is the RMS value of the output current,  $R_0$  is the inductor DC resistance at the reference temperature  $T_{REF}$  and  $\\alpha$  is the temperature coefficient of the resistance. Since most inductors are made of copper, we can expect a temperature coefficient close to  $\\alpha_{CU} = 3900 \\text{ ppm/}^\\circ\\text{C}$ . For a given  $\\alpha$ , the remaining parameters  $\\theta_{IS}$  and  $R_0$  can be calibrated at a single temperature using only two load currents:",
+    "new": "In these equations,  $V_{DCR}$  is the inductor DC voltage drop,  $I_{OUT}$  is the RMS value of the output current,  $R0$  is the inductor DC resistance at the reference temperature  $T_{REF}$  and  $\\alpha$  is the temperature coefficient of the resistance. Since most inductors are made of copper, we can expect a temperature coefficient close to  $\\alpha_{CU} = 3900 \\text{ ppm/}^\\circ\\text{C}$ . For a given  $\\alpha$ , the remaining parameters  $\\theta_{IS}$  and  $R0$  can be calibrated at a single temperature using only two load currents:",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-3",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "$$R_0 = \\frac{(R_2 - R_1)(P_2 + P_1) - (R_2 + R_1)(P_2 - P_1)}{\\alpha(T_2 - T_1)(P_2 + P_1) - (P_2 - P_1)(2 + \\alpha[T_1 + T_2 - 2T_{REF}])} \\quad (1.3)$$",
+    "new": "$$R0 = \\frac{(R2 - R1)(P2 + P1) - (R2 + R1)(P2 - P1)}{\\alpha(T2 - T1)(P2 + P1) - (P2 - P1)(2 + \\alpha[T1 + T2 - 2T_{REF}])} \\quad (1.3)$$",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-4",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "$$\\theta_{IS} = \\frac{1}{\\alpha R_0} \\frac{\\alpha(R_1 + R_2)(T_2 - T_1) - (R_2 - R_1)(2 + \\alpha[T_1 + T_2 - 2T_{REF}])}{\\alpha(T_2 - T_1)(P_2 + P_1) - (P_2 - P_1)(2 + \\alpha[T_1 + T_2 - 2T_{REF}])} \\quad (1.4)$$",
+    "new": "$$\\theta_{IS} = \\frac{1}{\\alpha R0} \\frac{\\alpha(R1 + R2)(T2 - T1) - (R2 - R1)(2 + \\alpha[T1 + T2 - 2T_{REF}])}{\\alpha(T2 - T1)(P2 + P1) - (P2 - P1)(2 + \\alpha[T1 + T2 - 2T_{REF}])} \\quad (1.4)$$",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-5",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "The inductor resistance,  $R_K = V_{DCR(K)}/I_{OUT(K)}$ , power dissipation  $P_K = V_{DCR(K)} I_{OUT(K)}$  and the sensed temperature  $T_K$ , ( $K = 1, 2$ ) are recorded for each load current. To increase the accuracy in calculating  $\\theta_{IS}$ , the two load currents should be chosen around  $I_1 = 10\\%$  and  $I_2 = 90\\%$  of the current range of the system.",
+    "new": "The inductor resistance,  $R_K = V_{DCR(K)}/I_{OUT(K)}$ , power dissipation  $P_K = V_{DCR(K)} I_{OUT(K)}$  and the sensed temperature  $T_K$ , ( $K = 1, 2$ ) are recorded for each load current. To increase the accuracy in calculating  $\\theta_{IS}$ , the two load currents should be chosen around  $I1 = 10\\%$  and  $I2 = 90\\%$  of the current range of the system.",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-6",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "The inductor thermal time constant  $\\tau$  models the first order thermal response of the inductor and allows accurate DCR compensation during load transients. During a transition from low to high load current, the inductor resistance increases due to the self-heating. If we apply a single load step from the low current  $I_1$  to the higher current  $I_2$ , the voltage across the inductor will change instantaneously from  $I_1 R_1$  to  $I_2 R_1$  and then slowly approach  $I_2 R_2$ . Here  $R_1$  is the steady state resistance at the given temperature and load current  $I_1$ , and  $R_2$  is the slightly higher DC resistance at  $I_2$ , due to the inductor self-heating. Note that the electrical time constant  $\\tau_{EL} = L/R$  is several orders of magnitude shorter than the thermal one, and “instantaneous” is relative to the thermal time constant. The two settled regions give us the data sets ( $I_1, T_1, R_1, P_1$ ) and ( $I_2, T_2, R_2, P_2$ ) and the two-point calibration technique (1.3-1.4) is used to extract the steady-state parameters  $\\theta_{IS}$  and  $R_0$  (given a previously characterized average  $\\alpha$ ). The relative current error calculated using the steady-state expression (1.2) will peak immediately after the load step, and then decay to zero with the inductor thermal time constant  $\\tau$ .",
+    "new": "The inductor thermal time constant  $\\tau$  models the first order thermal response of the inductor and allows accurate DCR compensation during load transients. During a transition from low to high load current, the inductor resistance increases due to the self-heating. If we apply a single load step from the low current  $I1$  to the higher current  $I2$ , the voltage across the inductor will change instantaneously from  $I1 R1$  to  $I2 R1$  and then slowly approach  $I2 R2$ . Here  $R1$  is the steady state resistance at the given temperature and load current  $I1$ , and  $R2$  is the slightly higher DC resistance at  $I2$ , due to the inductor self-heating. Note that the electrical time constant  $\\tau_{EL} = L/R$  is several orders of magnitude shorter than the thermal one, and “instantaneous” is relative to the thermal time constant. The two settled regions give us the data sets ( $I1, T1, R1, P1$ ) and ( $I2, T2, R2, P2$ ) and the two-point calibration technique (1.3-1.4) is used to extract the steady-state parameters  $\\theta_{IS}$  and  $R0$  (given a previously characterized average  $\\alpha$ ). The relative current error calculated using the steady-state expression (1.2) will peak immediately after the load step, and then decay to zero with the inductor thermal time constant  $\\tau$ .",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-7",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "$$\\frac{\\Delta I}{I}(t) = \\alpha \\theta_{IS} (V_2 \\cdot I_2 - V_1 \\cdot I_1) e^{-t/\\tau} \\quad (1.5)$$",
+    "new": "$$\\frac{\\Delta I}{I}(t) = \\alpha \\theta_{IS} (V2 \\cdot I2 - V1 \\cdot I1) e^{-t/\\tau} \\quad (1.5)$$",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-8",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "The time constant  $\\tau$  is calculated from the slope of the best-fit line  $y = \\ln(\\Delta I/I) = a_1 + a_2 t$ :",
+    "new": "The time constant  $\\tau$  is calculated from the slope of the best-fit line  $y = \\ln(\\Delta I/I) = a1 + a2 t$ :",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-9",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "$$\\tau = -\\frac{1}{a_2} \\quad (1.6)$$",
+    "new": "$$\\tau = -\\frac{1}{a2} \\quad (1.6)$$",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "ltc2975-p100-index-not-subscript-10",
+    "file": "output/ltc2975/ltc2975.md",
+    "page": 100,
+    "old": "In summary, a single load current step is all that is needed to calibrate the DCR current measurement. The stable portions of the response give us the thermal resistance  $\\theta_{IS}$  and nominal DC resistance  $R_0$ , and the settling characteristic is used to measure the inductor thermal time constant  $\\tau$ .",
+    "new": "In summary, a single load current step is all that is needed to calibrate the DCR current measurement. The stable portions of the response give us the thermal resistance  $\\theta_{IS}$  and nominal DC resistance  $R0$ , and the settling characteristic is used to measure the inductor thermal time constant  $\\tau$ .",
+    "evidence": "Same as ltc2975-p100-index-not-subscript-1.",
+    "sources": [
+      "pdf-image",
+      "pymupdf-text"
+    ],
+    "severity": "low"
   }
 ]
