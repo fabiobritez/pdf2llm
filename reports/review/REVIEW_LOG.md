@@ -546,3 +546,33 @@ Not changed / open:
 - Invisible 0.8-pt 'SCALE 4.000' on p39 not transcribed; running headers/footers, 'PACKAGE OPTION ADDENDUM'/'PACKAGE MATERIALS INFORMATION' page headers, dates and the p42 'IMPORTANT NOTICE' footer label omitted as in the other datasheets. D0xx graph tags are only present where the conversion had them (Figures 38-43) plus the added p1 graph.
 - Repo-wide conventions kept: LaTeX for the equations and for the Table 9 / p21 Table 7 conditions, μ/µ as converted, '|' separators dropped in the packaging table, Datalab's short alt-text repetition after the outline/land-pattern/stencil/box descriptions, `- (1)` footnotes.
 - Figure descriptions remain AI text where not rewritten; the schematics, block diagrams, Figure 7, Figure 9, layout and package drawings and all graph and scope descriptions were rewritten from the drawings, giving shapes and curve order only. Read values from the image/PDF.
+
+### tps63802 full page-by-page review (2026-10-26)
+
+Scope: all 38 PDF pages of `tps63802.pdf`, one page at a time, in two sessions (p1-p24 in a session that stopped at the usage limit, commits 9117ac4, fef1668, 4ed6c16; p25-p38 and the regeneration in a second one). Each page was checked as a rendered image (200 dpi page, 300 dpi halves, 250-400 dpi crops of the package drawings and embedded scope screenshots at native resolution) and as `pdftotext -layout` output / PyMuPDF words, against the `{N-1}` section of `output/tps63802/tps63802.md`. The uncommitted p25/p26/p28 edits left by the first session were re-checked against the captures and kept.
+87 new fixes (`tps63802-p*` ids added after 399676f; 6 medium, 81 low). `replay_fixes.py` reproduces the md exactly. No EC, ROC, Abs Max, packaging, tape-and-reel or box table value was wrong.
+
+| Page(s) | Finding | Fix ids (prefix) | Severity |
+|---|---|---|---|
+| 1, 9, 17 | Schematics and block diagram rewritten from the drawings: typical application (EN tied to VIN, PG pull-up line, no invented resistor values), functional block diagram (current comparator, PG open drain), Figure 10-1 (no diode, R3 goes to VIN) | `-p1-*`, `-p9-*`, `-p17-*` | medium, low |
+| 10-16 | Figures 9-1, 9-4 to 9-10 rewritten from the drawings (stray Chinese words, V_EA is not a peak current limit, flat T_COM phases); a running header that had leaked into the text removed | `-p10..p16-*` | low |
+| 8, 18-26 | Graph and scope descriptions: curve order and shapes only, channel assignments and scales from the screen legends (Figure 10-20 is Ch2 IL / Ch3 L1 / Ch4 L2, not 'Ch2 L1 ... Ch4 IL'), load-release overshoot, PFM ripple, cursor boxes, start-up IL ramp and PG timing; no values read off the curves; the printed conditions under Figures 10-2 to 10-7 added | `-p8-*`, `-p18..p26-fig*-description`, `-p2*-*-conditions*` | low |
+| 4-7, 12-20 | As printed: I(Q;VIN) and EC symbols with semicolons, Abs Max pin names full-size, ROC T_J condition, capital Θ, Equation 2 Iout/Vin full-size, Table 10-5/10-6 units plain, errata 'considerd', 'revers', 'loose', 'versus.', 'TPS63802 .' | `-p4..p7-*`, `-p12..p20-*` | low |
+| 29 | 'QFN/SON Package FAQs' is an italic link line, not an h5 heading | `-p29-faq-link-not-heading` | low |
+| 33, 34 | `**` removed inside the tape-and-reel headings; REEL DIMENSIONS (W1 is dimensioned across the reel side view, not by a horizontal line) and TAPE DIMENSIONS (K0 is the pocket depth on the side profile, not 'edge to first pocket') descriptions | `-p33-*`, `-p34-heading-box-no-emphasis` | low |
+| 35-37 | DLA0010A title blocks (PACKAGE OUTLINE / EXAMPLE BOARD LAYOUT / EXAMPLE STENCIL DESIGN) were missing. Outline description rewritten (the AI text called the bottom view a 'front view' and invented a '10 mm' height, a '2 mm' pitch, a '0.5 mm pin diameter' and a 'table of tolerances'); land pattern and stencil descriptions rewritten (pad numbers 1/6/10 had been listed as dimensions; pad 8 is printed through two apertures); 'METAL UNDER SOLDER MASK' label; ℄ and position symbols instead of ⌀; datum B label; note 5 number | `-p35-*`, `-p36-*`, `-p37-*` | medium, low |
+| 25, 28 | Figure 10-20 'MODE = Low (as printed)' for a PWM capture; Figure 12-1 caption bold | `-p25-fig10-20-description`, `-p28-fig12-1-caption-bold` | low |
+
+No content error found on p2, p27, p30, p31 (packaging table and footnotes), p32 (blank addendum page) or p38.
+After the fixes: `validate.py --all` reports tps63802 OK (was REVIEW): word/number coverage 95.7/92.7% → 96.2/93.3%, 1 → 0 text-loss pages, geometry 48 / 0 / 3 / 86 unchanged, 0 table issues. Other checks:
+- `check_llm_fidelity.py`: tps63802 0 spec-table failures (10 tables, 365 cells), numeric subset True.
+- `relocate_images.py --check tps63802`: OK (57 images). `check_struct_tables.py`: 1 table, 11 rows, all ok.
+- `unittest` test_validate / test_llm_compact / test_struct_tables: OK (64 tests). `test_reviewed_false_positive_samples` looked for the old 'VPG,rising' fragment; the md now has 'V_{PG;rising}' as printed (PDF word 'VPG;rising'), so the test fragment was updated.
+
+`tps63802.llm.md` was regenerated with `tools/llm_compact.py tps63802`. Every summary claim in `reports/llm/summaries/tps63802.md` was re-checked against the corrected md (p1, p4-p7, p9, p10): 2 A at V_I ≥ 2.3 V, 1.3-5.5 V input with > 1.8 V start-up, 1.8-5.2 V output, 11 µA / 45 nA / 600 nA, 500 mV ±1% FB, 5 A / 3.8 A current limits, 2.1/1.4/1.6 MHz, 0.3% / 0.1% regulation, package, 21.5 mm², -40 to 125 °C T_J, pin functions and control loop. One addition: the summary cites the p9 '3-cycle buck-boost' operation; it now notes that the p1 description says '4-cycle' (both kept as printed).
+
+Not changed / open:
+- Manufacturer inconsistencies kept as printed: '4-cycle' (p1) vs '3-cycle' (p9) buck-boost operation; 'MODE = Low' under the PWM Figure 10-20 capture; 'V_IN = 4.3' without unit in the p7 switching-frequency row; 'tr =1 µs' spacing in Figure 10-27.
+- Running headers/footers, 'PACKAGE OPTION ADDENDUM'/'PACKAGE MATERIALS INFORMATION' page headers, dates and the p38 'IMPORTANT NOTICE' footer label omitted as in the other datasheets. The Figure 12-1 layout description is generic but not wrong and was kept.
+- Repo-wide conventions kept: LaTeX for symbols and some condition lines, '( $V_{IN}$ )' spacing in the WEBENCH steps, '|' separators dropped in the packaging table, `**` in the IMPORTANT NOTICE heading, Datalab's short alt-text repetition after the tape-and-reel, box and solder-mask drawings (so `llm_compact.py` keeps those repeats, as in tps63070).
+- Figure descriptions remain AI text where not rewritten; read values from the image/PDF.

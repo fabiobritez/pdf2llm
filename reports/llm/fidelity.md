@@ -124,13 +124,13 @@ Before figure deduplication (diagnostic only): source numeric tokens 2894, compa
 
 ## tps63802
 
-Spec tables: 10; rows: 82; nonempty cells checked: 364; failures: 0.
+Spec tables: 10; rows: 82; nonempty cells checked: 365; failures: 0.
 
-Whole document after permitted figure deduplication: source numeric tokens 1934, compact 1935; equal: False; source subset: True.
+Whole document after permitted figure deduplication: source numeric tokens 2001, compact 2002; equal: False; source subset: True.
 
 - Extra numeric tokens: {'271': 1}.
 
-Before figure deduplication (diagnostic only): source numeric tokens 2162, compact 1935; equal: False; source subset: False.
+Before figure deduplication (diagnostic only): source numeric tokens 2633, compact 2002; equal: False; source subset: False.
 
 ## ts3a5018
 

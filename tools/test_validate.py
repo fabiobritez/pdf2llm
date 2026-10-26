@@ -223,7 +223,7 @@ class GeometryTests(unittest.TestCase):
             ('lt1965fb', 4, 'Dropout Voltage'),
             ('tps22990', 6, 'ISD, VBIAS'),
             ('tps22990', 7, 'VIN = 2.5 V'),
-            ('tps63802', 6, 'VPG,rising'),
+            ('tps63802', 6, 'VPG;rising'),
             ('ltc2975', 7, 'TUEVS'),
             ('max31730', 2, 'Remote Temperature Accuracy'),
             ('max31730', 3, 'Local Temperature Accuracy'),
