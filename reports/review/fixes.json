@@ -25639,7 +25639,7 @@
       "pdf-image",
       "pdftotext"
     ],
-    "severity": "low"
+    "severity": "medium"
   },
   {
     "id": "tps63070-p22-fig20-description",
@@ -25652,7 +25652,7 @@
       "pdf-image",
       "pdftotext"
     ],
-    "severity": "low"
+    "severity": "medium"
   },
   {
     "id": "tps63070-p22-fig21-description",
@@ -25665,7 +25665,7 @@
       "pdf-image",
       "pdftotext"
     ],
-    "severity": "low"
+    "severity": "medium"
   },
   {
     "id": "tps63070-p22-fig22-description",
@@ -25674,6 +25674,188 @@
     "old": "![Figure 22: Maximum Load Current vs Input Voltage (Vout = 9 V)](ddb844682aae27128b6dab421b23b81a_img.jpg)\n\nFigure 22 is a line graph showing Max Output Current (A) on the y-axis (ranging from 0 to 4.5) versus Input Voltage (V) on the x-axis (ranging from 2 to 16). The graph is labeled 'Vout = 9 V' and 'after start-up with PG = high'. It contains four curves for different temperatures: -40°C (black), 25°C (red), 85°C (grey), and 125°C (blue). The maximum load current increases with input voltage, peaking at approximately 4.2 A at 10 V. The 25°C curve consistently shows the highest current, while the -40°C curve shows the lowest.\n\nFigure 22: Maximum Load Current vs Input Voltage (Vout = 9 V)\n\nFigure 22. Maximum Load Current vs Input Voltage\n",
     "new": "![Figure 22: Maximum Load Current vs Input Voltage, Vout = 9 V, after start-up with PG = high. Max Output Current (A) from 0 to 4.5 versus Input Voltage (V) from 2 to 16, one curve per junction temperature -40°C (black), 25°C (red), 85°C (gray) and 125°C (blue). The maximum load current rises with input voltage to a peak and then decreases slowly; the -40°C curve is highest, followed by 25°C and 85°C, and the 125°C curve is lowest. Read values from the image/PDF.](ddb844682aae27128b6dab421b23b81a_img.jpg)\n\nFigure 22: Maximum Load Current vs Input Voltage, Vout = 9 V, after start-up with PG = high. Max Output Current (A) from 0 to 4.5 versus Input Voltage (V) from 2 to 16, one curve per junction temperature -40°C (black), 25°C (red), 85°C (gray) and 125°C (blue). The maximum load current rises with input voltage to a peak and then decreases slowly; the -40°C curve is highest, followed by 25°C and 85°C, and the 125°C curve is lowest. Read values from the image/PDF.\n\nVout = 9 V\n\nafter start-up with PG = high\n\n**Figure 22. Maximum Load Current vs Input Voltage**\n",
     "evidence": "PDF p22 Figure 22 (rendered page and the figure image): the AI text said the 25°C curve is highest and the -40°C curve lowest; -40°C is highest and 125°C lowest. The printed text under the graph ('Vout = 9 V', 'after start-up with PG = high') was only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p23-fig23-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 23,
+    "old": "![Oscilloscope screenshot showing load transient response for Vout = 7V and Vin = 4.2V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100.0mA to 1.000A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 310.3mV, Mean 6.932V, High 1.000A, Low 100.0mA. Timebase: 200µs, 500MS/s, 1M points.](50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)\n\nOscilloscope screenshot showing load transient response for Vout = 7V and Vin = 4.2V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100.0mA to 1.000A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 310.3mV, Mean 6.932V, High 1.000A, Low 100.0mA. Timebase: 200µs, 500MS/s, 1M points.\n\n**Figure 23. Load Transient Response**\n",
+    "new": "![Figure 23: Load Transient Response, oscilloscope capture, Vout = 7 V, PFM, Vin = 4.2V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (500mA/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.](50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)\n\nFigure 23: Load Transient Response, oscilloscope capture, Vout = 7 V, PFM, Vin = 4.2V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (500mA/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.\n\nVout = 7 V\n\nPFM\n\nVin = 4.2V\n\n**Figure 23. Load Transient Response**\n",
+    "evidence": "PDF p23 Figure 23 (page render and 300-dpi crops of the screenshot readouts): the AI text only mentioned a dip (the overshoot at the load release was missing) and listed the screen readouts as 'measurement data'; the readouts are low-resolution raster text and several were misread on this page, so they are no longer transcribed. The printed conditions under the capture ('Vout = 7 V', 'PFM', 'Vin = 4.2V') were only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p23-fig24-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 23,
+    "old": "![Oscilloscope screenshot showing load transient response for Vout = 7V and Vin = 12V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 200.0mA to 1.800A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 307.1mV, Mean 6.919V, High 1.800A, Low 200.0mA. Timebase: 200µs, 500MS/s, 1M points.](65a9654ccb3d0d452378b0f4c0c392f7_img.jpg)\n\nOscilloscope screenshot showing load transient response for Vout = 7V and Vin = 12V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 200.0mA to 1.800A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 307.1mV, Mean 6.919V, High 1.800A, Low 200.0mA. Timebase: 200µs, 500MS/s, 1M points.\n\n**Figure 24. Load Transient Response**\n",
+    "new": "![Figure 24: Load Transient Response, oscilloscope capture, Vout = 7 V, PFM, Vin = 12V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (1.00 A/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.](65a9654ccb3d0d452378b0f4c0c392f7_img.jpg)\n\nFigure 24: Load Transient Response, oscilloscope capture, Vout = 7 V, PFM, Vin = 12V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (1.00 A/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.\n\nVout = 7 V\n\nPFM\n\nVin = 12V\n\n**Figure 24. Load Transient Response**\n",
+    "evidence": "PDF p23 Figure 24 (page render and 300-dpi crops of the screenshot readouts): the AI text missed the overshoot at the load release and gave the VOUT Mean readout as 6.919V, which is not legible with certainty in the raster screenshot (6.91x). The printed conditions under the capture ('Vout = 7 V', 'PFM', 'Vin = 12V') were only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p23-fig25-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 23,
+    "old": "![Oscilloscope screenshot showing load transient response for Vout = 9V and Vin = 4.2V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100.0mA to 1.000A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 476.3mV, Mean 9.925V, High 1.000A, Low 100.0mA. Timebase: 200µs, 500MS/s, 1M points.](ebb257e664fc85a1eb4d6534842794bb_img.jpg)\n\nOscilloscope screenshot showing load transient response for Vout = 9V and Vin = 4.2V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 100.0mA to 1.000A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 476.3mV, Mean 9.925V, High 1.000A, Low 100.0mA. Timebase: 200µs, 500MS/s, 1M points.\n\n**Figure 25. Load Transient Response**\n",
+    "new": "![Figure 25: Load Transient Response, oscilloscope capture, Vout = 9 V, PFM, Vin = 4.2V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (500mA/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.](ebb257e664fc85a1eb4d6534842794bb_img.jpg)\n\nFigure 25: Load Transient Response, oscilloscope capture, Vout = 9 V, PFM, Vin = 4.2V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (500mA/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.\n\nVout = 9 V\n\nPFM\n\nVin = 4.2V\n\n**Figure 25. Load Transient Response**\n",
+    "evidence": "PDF p23 Figure 25 (page render and 300-dpi crops of the screenshot readouts): the AI text gave the VOUT Mean readout as 9.925V; the screenshot reads 9.025 V (Vout = 9 V), and the Peak-Peak readout (476.3mV in the AI text) is not legible with certainty. The printed conditions under the capture ('Vout = 9 V', 'PFM', 'Vin = 4.2V') were only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p23-fig26-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 23,
+    "old": "![Oscilloscope screenshot showing load transient response for Vout = 9V and Vin = 12V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 200.0mA to 1.800A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 327.9mV, Mean 9.916V, High 1.800A, Low 200.0mA. Timebase: 200µs, 500MS/s, 1M points.](4a0acd64a680ef89f832de06989e2544_img.jpg)\n\nOscilloscope screenshot showing load transient response for Vout = 9V and Vin = 12V. The top trace is VOUT and the bottom trace is output current. The output current steps up from 200.0mA to 1.800A. The VOUT trace shows a small dip and recovery. Measurement data: Peak-Peak 327.9mV, Mean 9.916V, High 1.800A, Low 200.0mA. Timebase: 200µs, 500MS/s, 1M points.\n\n**Figure 26. Load Transient Response**\n",
+    "new": "![Figure 26: Load Transient Response, oscilloscope capture, Vout = 9 V, PFM, Vin = 12V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (1.00 A/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.](4a0acd64a680ef89f832de06989e2544_img.jpg)\n\nFigure 26: Load Transient Response, oscilloscope capture, Vout = 9 V, PFM, Vin = 12V. Channel 2 VOUT (200mV/div) is on top and channel 3 output current (1.00 A/div) at the bottom, 200µs/div. The output current steps from its low level to its high level and back. VOUT dips at the load step-up and recovers, and overshoots briefly at the load step-down; before the step-up and after the step-down VOUT shows a wider ripple band. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of the output current) are part of the image; read their values from the image/PDF.\n\nVout = 9 V\n\nPFM\n\nVin = 12V\n\n**Figure 26. Load Transient Response**\n",
+    "evidence": "PDF p23 Figure 26 (page render and 300-dpi crops of the screenshot readouts): the AI text gave the VOUT Mean readout as 9.916V; the screenshot reads 9.016 V. The printed conditions under the capture ('Vout = 9 V', 'PFM', 'Vin = 12V') were only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p23-fig27-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 23,
+    "old": "![Oscilloscope screenshot showing line transient response for Vout = 7V and Io = 1A. The top trace is VOUT and the bottom trace is VIN. The VIN trace shows a step change. The VOUT trace remains stable. Measurement data: Peak-Peak 205.3mV, Mean 6.913V, High 9.080V, Low 5.080V. Timebase: 1.00ms, 100MS/s, 1M points. Mode=PFM.](7978d5099076a93ea7969446444502f8_img.jpg)\n\nOscilloscope screenshot showing line transient response for Vout = 7V and Io = 1A. The top trace is VOUT and the bottom trace is VIN. The VIN trace shows a step change. The VOUT trace remains stable. Measurement data: Peak-Peak 205.3mV, Mean 6.913V, High 9.080V, Low 5.080V. Timebase: 1.00ms, 100MS/s, 1M points. Mode=PFM.\n\n**Figure 27. Line Transient Response**\n",
+    "new": "![Figure 27: Line Transient Response, oscilloscope capture, Vout = 7 V, PFM, Io = 1A. Channel 2 VOUT (200mV/div) is on top and channel 1 VIN (2.00 V/div) at the bottom, 1.00ms/div, with a 'Mode=PFM' annotation. VIN steps up and back down; VOUT stays flat apart from a short spike at each VIN edge. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of VIN) are part of the image; read their values from the image/PDF.](7978d5099076a93ea7969446444502f8_img.jpg)\n\nFigure 27: Line Transient Response, oscilloscope capture, Vout = 7 V, PFM, Io = 1A. Channel 2 VOUT (200mV/div) is on top and channel 1 VIN (2.00 V/div) at the bottom, 1.00ms/div, with a 'Mode=PFM' annotation. VIN steps up and back down; VOUT stays flat apart from a short spike at each VIN edge. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of VIN) are part of the image; read their values from the image/PDF.\n\nVout = 7 V\n\nPFM\n\nIo = 1A\n\n**Figure 27. Line Transient Response**\n",
+    "evidence": "PDF p23 Figure 27 (page render and 300-dpi crops of the screenshot readouts): the AI text said VOUT 'remains stable' without the spikes at the VIN edges and listed the screen readouts as measurement data. The printed conditions under the capture ('Vout = 7 V', 'PFM', 'Io = 1A') were only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p23-fig28-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 23,
+    "old": "![Oscilloscope screenshot showing line transient response for Vout = 9V and Io = 1A. The top trace is VOUT and the bottom trace is VIN. The VIN trace shows a step change. The VOUT trace remains stable. Measurement data: Peak-Peak 73.03mV, Mean 8.999V, High 12.00V, Low 8.080V. Timebase: 1.00ms, 100MS/s, 1M points. Mode=PFM.](d2dc2b36f329aa2f40404059f0d62bc5_img.jpg)\n\nOscilloscope screenshot showing line transient response for Vout = 9V and Io = 1A. The top trace is VOUT and the bottom trace is VIN. The VIN trace shows a step change. The VOUT trace remains stable. Measurement data: Peak-Peak 73.03mV, Mean 8.999V, High 12.00V, Low 8.080V. Timebase: 1.00ms, 100MS/s, 1M points. Mode=PFM.\n\n**Figure 28. Line Transient Response**\n",
+    "new": "![Figure 28: Line Transient Response, oscilloscope capture, Vout = 9 V, PFM, Io = 1A. Channel 2 VOUT (100mV/div) is on top and channel 1 VIN (2.00 V/div) at the bottom, 1.00ms/div, with a 'Mode=PFM' annotation. VIN steps up and back down; VOUT stays flat apart from a short spike at each VIN edge. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of VIN) are part of the image; read their values from the image/PDF.](d2dc2b36f329aa2f40404059f0d62bc5_img.jpg)\n\nFigure 28: Line Transient Response, oscilloscope capture, Vout = 9 V, PFM, Io = 1A. Channel 2 VOUT (100mV/div) is on top and channel 1 VIN (2.00 V/div) at the bottom, 1.00ms/div, with a 'Mode=PFM' annotation. VIN steps up and back down; VOUT stays flat apart from a short spike at each VIN edge. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, High and Low of VIN) are part of the image; read their values from the image/PDF.\n\nVout = 9 V\n\nPFM\n\nIo = 1A\n\n**Figure 28. Line Transient Response**\n",
+    "evidence": "PDF p23 Figure 28 (page render and 300-dpi crops of the screenshot readouts): the AI text gave the VOUT Peak-Peak readout as 73.03mV; the screenshot reads 75.03mV. The printed conditions under the capture ('Vout = 9 V', 'PFM', 'Io = 1A') were only inside the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "tps63070-p24-fig29-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot for Figure 29 showing VOUT and Inductor current for PFM mode at Vin = 5V, Vout = 7V, Io = 0.3A.](06ccd604e7eac77c7a5a323b6a913f15_img.jpg)\n\nFigure 29 shows an oscilloscope capture of the TPS63070 in PFM mode. The top trace is VOUT, showing a triangular ripple. The bottom trace is the Inductor current, showing a sawtooth waveform. The settings are: 50.0mV/2% vertical scale, 500mA horizontal scale, 10.0µs timebase, 5.0GS/s, 1M points. The measured values are: Peak-Peak 66.01mV, Mean 6.954V, Mean 447.7mA.\n\nOscilloscope screenshot for Figure 29 showing VOUT and Inductor current for PFM mode at Vin = 5V, Vout = 7V, Io = 0.3A.\n\nFigure 29. Output Voltage Ripple\n",
+    "new": "![Figure 29: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 7 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](06ccd604e7eac77c7a5a323b6a913f15_img.jpg)\n\nFigure 29: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 7 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 5V; Vout = 7 V\n\nPFM\n\nIo = 0.3A\n\n**Figure 29. Output Voltage Ripple**\n",
+    "evidence": "PDF p24 Figure 29 (page render): the AI text called the 50.0mV and 500mA channel scales a 'vertical scale' and a 'horizontal scale' and transcribed the low-resolution screen readouts as measured values; description rewritten from the capture without readout values. The printed conditions under the capture were only in the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p24-fig30-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot for Figure 30 showing VOUT and Inductor current for PWM mode at Vin = 5V, Vout = 7V, Io = 1A.](a1a474be12b8992842992294b1d18592_img.jpg)\n\nFigure 30 shows an oscilloscope capture of the TPS63070 in PWM mode. The top trace is VOUT, showing a triangular ripple. The bottom trace is the Inductor current, showing a triangular waveform. The settings are: 50.0mV/2% vertical scale, 200mA horizontal scale, 1.00µs timebase, 5.0GS/s, 1M points. The measured values are: Peak-Peak 34.00mV, Mean 6.906V, Mean 1.538A.\n\nOscilloscope screenshot for Figure 30 showing VOUT and Inductor current for PWM mode at Vin = 5V, Vout = 7V, Io = 1A.\n\nFigure 30. Output Voltage Ripple\n",
+    "new": "![Figure 30: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 7 V, PWM, Io = 1A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (200mA/div) at the bottom, 1.00µs/div. The inductor current is a continuous triangular waveform at the switching frequency; VOUT shows a small ripple at the same frequency. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](a1a474be12b8992842992294b1d18592_img.jpg)\n\nFigure 30: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 7 V, PWM, Io = 1A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (200mA/div) at the bottom, 1.00µs/div. The inductor current is a continuous triangular waveform at the switching frequency; VOUT shows a small ripple at the same frequency. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 5V; Vout = 7 V\n\nPWM\n\nIo = 1A\n\n**Figure 30. Output Voltage Ripple**\n",
+    "evidence": "PDF p24 Figure 30 (page render): the AI text called the 50.0mV and 200mA channel scales a 'vertical scale' and a 'horizontal scale' and said VOUT shows a 'triangular ripple' and transcribed the low-resolution screen readouts as measured values; description rewritten from the capture without readout values. The printed conditions under the capture were only in the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p24-fig31-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot for Figure 31 showing VOUT and Inductor current for PFM mode at Vin = 12V, Vout = 7V, Io = 0.3A.](ab6316c825b60543e705763f0ba8edf7_img.jpg)\n\nFigure 31 shows an oscilloscope capture of the TPS63070 in PFM mode. The top trace is VOUT, showing a triangular ripple. The bottom trace is the Inductor current, showing a sawtooth waveform. The settings are: 50.0mV/2% vertical scale, 500mA horizontal scale, 10.0µs timebase, 5.0GS/s, 1M points. The measured values are: Peak-Peak 68.00mV, Mean 6.944V, Mean 299.9mA.\n\nOscilloscope screenshot for Figure 31 showing VOUT and Inductor current for PFM mode at Vin = 12V, Vout = 7V, Io = 0.3A.\n\nFigure 31. Output Voltage Ripple\n",
+    "new": "![Figure 31: Output Voltage Ripple, oscilloscope capture, Vin = 12V; Vout = 7 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](ab6316c825b60543e705763f0ba8edf7_img.jpg)\n\nFigure 31: Output Voltage Ripple, oscilloscope capture, Vin = 12V; Vout = 7 V, PFM, Io = 0.3A. Channel 2 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 12V; Vout = 7 V\n\nPFM\n\nIo = 0.3A\n\n**Figure 31. Output Voltage Ripple**\n",
+    "evidence": "PDF p24 Figure 31 (page render): the AI text called the 50.0mV and 500mA channel scales a 'vertical scale' and a 'horizontal scale' and transcribed the low-resolution screen readouts as measured values; description rewritten from the capture without readout values. The printed conditions under the capture were only in the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p24-fig32-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot for Figure 32 showing VOUT and Inductor current for PFM mode at Vin = 5V, Vout = 9V, Io = 0.1A.](87dfa94e14e0a4089d677c36b602c793_img.jpg)\n\nFigure 32 shows an oscilloscope capture of the TPS63070 in PFM mode. The top trace is VOUT, showing a triangular ripple. The bottom trace is the Inductor current, showing a sawtooth waveform. The settings are: 50.0mV/2% vertical scale, 500mA horizontal scale, 10.0µs timebase, 1.0GS/s, 100k points. The measured values are: Peak-Peak 47.99mV, Mean 9.053V, Mean 210.1mA.\n\nOscilloscope screenshot for Figure 32 showing VOUT and Inductor current for PFM mode at Vin = 5V, Vout = 9V, Io = 0.1A.\n\nFigure 32. Output Voltage Ripple\n",
+    "new": "![Figure 32: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 9 V, PFM, Io = 0.1A. Channel 3 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](87dfa94e14e0a4089d677c36b602c793_img.jpg)\n\nFigure 32: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 9 V, PFM, Io = 0.1A. Channel 3 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 5V; Vout = 9 V\n\nPFM\n\nIo = 0.1A\n\n**Figure 32. Output Voltage Ripple**\n",
+    "evidence": "PDF p24 Figure 32 (page render): the AI text called the 50.0mV and 500mA channel scales a 'vertical scale' and a 'horizontal scale' and transcribed the low-resolution screen readouts as measured values; description rewritten from the capture without readout values. The printed conditions under the capture were only in the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p24-fig33-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot for Figure 33 showing VOUT and Inductor current for PWM mode at Vin = 5V, Vout = 9V, Io = 0.5A.](d5640a7cb211b32c79c762be27247adf_img.jpg)\n\nFigure 33 shows an oscilloscope capture of the TPS63070 in PWM mode. The top trace is VOUT, showing a triangular ripple. The bottom trace is the Inductor current, showing a triangular waveform. The settings are: 50.0mV/2% vertical scale, 500mA horizontal scale, 1.00µs timebase, 5.0GS/s, 100k points. The measured values are: Peak-Peak 34.01mV, Mean 8.988V, Mean 969.5mA.\n\nOscilloscope screenshot for Figure 33 showing VOUT and Inductor current for PWM mode at Vin = 5V, Vout = 9V, Io = 0.5A.\n\nFigure 33. Output Voltage Ripple\n",
+    "new": "![Figure 33: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 9 V, PWM, Io = 0.5A. Channel 3 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 1.00µs/div. The inductor current is a continuous triangular waveform at the switching frequency; VOUT shows a small ripple at the same frequency. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](d5640a7cb211b32c79c762be27247adf_img.jpg)\n\nFigure 33: Output Voltage Ripple, oscilloscope capture, Vin = 5V; Vout = 9 V, PWM, Io = 0.5A. Channel 3 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 1.00µs/div. The inductor current is a continuous triangular waveform at the switching frequency; VOUT shows a small ripple at the same frequency. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 5V; Vout = 9 V\n\nPWM\n\nIo = 0.5A\n\n**Figure 33. Output Voltage Ripple**\n",
+    "evidence": "PDF p24 Figure 33 (page render): the AI text called the 50.0mV and 500mA channel scales a 'vertical scale' and a 'horizontal scale' and said VOUT shows a 'triangular ripple' and transcribed the low-resolution screen readouts as measured values; description rewritten from the capture without readout values. The printed conditions under the capture were only in the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p24-fig34-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 24,
+    "old": "![Oscilloscope screenshot for Figure 34 showing VOUT and Inductor current for PFM mode at Vin = 12V, Vout = 9V, Io = 0.1A.](faff597c28a922cfcd18d2bce4f91d3e_img.jpg)\n\nFigure 34 shows an oscilloscope capture of the TPS63070 in PFM mode. The top trace is VOUT, showing a triangular ripple. The bottom trace is the Inductor current, showing a sawtooth waveform. The settings are: 50.0mV/2% vertical scale, 500mA horizontal scale, 10.0µs timebase, 1.0GS/s, 100k points. The measured values are: Peak-Peak 53.59mV, Mean 9.055V, Mean 84.51mA.\n\nOscilloscope screenshot for Figure 34 showing VOUT and Inductor current for PFM mode at Vin = 12V, Vout = 9V, Io = 0.1A.\n\nFigure 34. Output Voltage Ripple\n",
+    "new": "![Figure 34: Output Voltage Ripple, oscilloscope capture, Vin = 12V; Vout = 9 V, PFM, Io = 0.1A. Channel 3 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.](faff597c28a922cfcd18d2bce4f91d3e_img.jpg)\n\nFigure 34: Output Voltage Ripple, oscilloscope capture, Vin = 12V; Vout = 9 V, PFM, Io = 0.1A. Channel 3 VOUT (50.0mV/div) is on top and channel 4 inductor current (500mA/div) at the bottom, 10.0µs/div. The inductor current flows in bursts of switching pulses separated by intervals without current; VOUT rises during each burst and falls between bursts, giving a sawtooth-like ripple. The on-screen measurement readouts (Peak-Peak and Mean of VOUT, Mean of the inductor current) are part of the image; read their values from the image/PDF.\n\nVin = 12V; Vout = 9 V\n\nPFM\n\nIo = 0.1A\n\n**Figure 34. Output Voltage Ripple**\n",
+    "evidence": "PDF p24 Figure 34 (page render): the AI text called the 50.0mV and 500mA channel scales a 'vertical scale' and a 'horizontal scale' and transcribed the low-resolution screen readouts as measured values; description rewritten from the capture without readout values. The printed conditions under the capture were only in the AI description; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p25-fig35-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 25,
+    "old": "![Oscilloscope screenshot showing start-up timing for Vin = 4.5V, Vout = 7V, and Io = 0.5A. The plot shows Enable, VOUT, and PC signals. The VOUT signal ramps up from 0V to 7V after the Enable signal goes high. The PC signal transitions from low to high after the VOUT signal reaches its target voltage. The time scale is 200µs and the voltage scale is 2.10V.](cb74fd9f5ec715dd3e2e325b864b48bc_img.jpg)\n\nVin = 4.5V; Vout = 7 V      PFM      Io = 0.5A\n\nOscilloscope screenshot showing start-up timing for Vin = 4.5V, Vout = 7V, and Io = 0.5A. The plot shows Enable, VOUT, and PC signals. The VOUT signal ramps up from 0V to 7V after the Enable signal goes high. The PC signal transitions from low to high after the VOUT signal reaches its target voltage. The time scale is 200µs and the voltage scale is 2.10V.\n\n**Figure 35. Start-up Timing**\n",
+    "new": "![Figure 35: Start-up Timing, oscilloscope capture, Vin = 4.5V; Vout = 7 V, PFM, Io = 0.5A. Channel 1 Enable (5.00 V/div) on top, channel 2 VOUT (2.00 V/div) in the middle and channel 3 PG (2.00 V/div) at the bottom, 200µs/div. Enable steps high at the trigger point; after a short delay VOUT ramps up smoothly and levels off at its final value, and PG steps from low to high when VOUT has reached its final level. The on-screen readouts (High and Low of VOUT) are part of the image; read their values from the image/PDF.](cb74fd9f5ec715dd3e2e325b864b48bc_img.jpg)\n\nFigure 35: Start-up Timing, oscilloscope capture, Vin = 4.5V; Vout = 7 V, PFM, Io = 0.5A. Channel 1 Enable (5.00 V/div) on top, channel 2 VOUT (2.00 V/div) in the middle and channel 3 PG (2.00 V/div) at the bottom, 200µs/div. Enable steps high at the trigger point; after a short delay VOUT ramps up smoothly and levels off at its final value, and PG steps from low to high when VOUT has reached its final level. The on-screen readouts (High and Low of VOUT) are part of the image; read their values from the image/PDF.\n\nVin = 4.5V; Vout = 7 V\n\nPFM\n\nIo = 0.5A\n\n**Figure 35. Start-up Timing**\n",
+    "evidence": "PDF p25 Figure 35 (page render): the AI text called the PG channel 'PC', gave the 2.10 V trigger level as the 'voltage scale' and the VOUT end value as a reading; description rewritten from the capture. The printed conditions line was kept as three items like the other figures; caption bold as printed.",
+    "sources": [
+      "pdf-image",
+      "pdftotext"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "tps63070-p25-fig36-description",
+    "file": "output/tps63070/tps63070.md",
+    "page": 25,
+    "old": "![Oscilloscope screenshot showing start-up timing for Vin = 7V, Vout = 9V, and Io = 0.5A. The plot shows Enable, VOUT, and PC signals. The VOUT signal ramps up from 0V to 9V after the Enable signal goes high. The PC signal transitions from low to high after the VOUT signal reaches its target voltage. The time scale is 400µs and the voltage scale is 2.00V.](0245dc88c1db93181871e732bc0655dd_img.jpg)\n\nVin = 7V; Vout = 9 V      PFM      Io = 0.5A\n\nOscilloscope screenshot showing start-up timing for Vin = 7V, Vout = 9V, and Io = 0.5A. The plot shows Enable, VOUT, and PC signals. The VOUT signal ramps up from 0V to 9V after the Enable signal goes high. The PC signal transitions from low to high after the VOUT signal reaches its target voltage. The time scale is 400µs and the voltage scale is 2.00V.\n\n**Figure 36. Start-up Timing**\n",
+    "new": "![Figure 36: Start-up Timing, oscilloscope capture, Vin = 7V; Vout = 9 V, PFM, Io = 0.5A. Channel 1 Enable (5.00 V/div) on top, channel 2 VOUT (5.00 V/div) in the middle and channel 3 PG (5.00 V/div) at the bottom, 400µs/div. Enable steps high at the trigger point; after a short delay VOUT ramps up smoothly and levels off at its final value, and PG steps from low to high when VOUT has reached its final level. The on-screen readouts (High and Low of VOUT) are part of the image; read their values from the image/PDF.](0245dc88c1db93181871e732bc0655dd_img.jpg)\n\nFigure 36: Start-up Timing, oscilloscope capture, Vin = 7V; Vout = 9 V, PFM, Io = 0.5A. Channel 1 Enable (5.00 V/div) on top, channel 2 VOUT (5.00 V/div) in the middle and channel 3 PG (5.00 V/div) at the bottom, 400µs/div. Enable steps high at the trigger point; after a short delay VOUT ramps up smoothly and levels off at its final value, and PG steps from low to high when VOUT has reached its final level. The on-screen readouts (High and Low of VOUT) are part of the image; read their values from the image/PDF.\n\nVin = 7V; Vout = 9 V\n\nPFM\n\nIo = 0.5A\n\n**Figure 36. Start-up Timing**\n",
+    "evidence": "PDF p25 Figure 36 (page render): the AI text called the PG channel 'PC', gave the 2.00 V trigger level as the 'voltage scale' and the VOUT end value as a reading; description rewritten from the capture. The printed conditions line was kept as three items like the other figures; caption bold as printed.",
     "sources": [
       "pdf-image",
       "pdftotext"
